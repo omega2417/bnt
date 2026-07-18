@@ -1,0 +1,24 @@
+{
+  "title": "AEGIS-RF: Hybrid Bayesian Wi-Fi Spatial Identification in Critical Information Infrastructure",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "MIT",
+  "version": "1.0.0",
+  "language": "ukr",
+  "description": "<p><strong>AEGIS-RF</strong> (Adversary-rEsistant Geolocation &amp; Integrity for wi-fi Signals) is a demonstrative, fully reproducible software package for hybrid Bayesian spatial identification of IEEE 802.11 (Wi-Fi) sources in critical information infrastructure (CII).</p><p>It fuses an <strong>RSSI radiomap</strong> with <strong>FTM/RTT ranging</strong>, provides <strong>robust inference</strong> against adversarial manipulation (evil twin, deceptive ranging, deauthentication), performs <strong>critical-zone attribution</strong>, and emits <strong>Spatial Attribution Records</strong> for SOC/SIEM/SOAR integration.</p><p>The package contains a modular <code>src/</code> library, a pytest reproducibility suite (metrics reproduce to 4 decimals at a fixed seed), and two Jupyter/Colab notebooks (modular and self-contained). <em>All numeric results are demonstrative: they characterise a synthetic generative model, not field measurements.</em> Applied project for Chapter 1 of the thesis.</p>",
+  "keywords": [
+    "Wi-Fi localization",
+    "RSSI fingerprinting",
+    "FTM/RTT ranging",
+    "Bayesian sensor fusion",
+    "critical information infrastructure",
+    "adversarial robustness",
+    "spatial attribution",
+    "SOC/SIEM/SOAR",
+    "reproducibility"
+  ],
+  "creators": [
+    {"name": "The AEGIS-RF authors"}
+  ],
+  "notes": "Demonstrative synthetic model for methodology illustration and reproducibility verification; not for operational use without validation on real data."
+}

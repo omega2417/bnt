@@ -1,0 +1,10 @@
+# Згенеровані ноутбуком артефакти / notebook-generated artifacts
+data/
+results/
+figures/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/

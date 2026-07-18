@@ -1,0 +1,9 @@
+# Згенеровані артефакти / generated artifacts
+results/
+figures/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
