@@ -1,0 +1,49 @@
+cff-version: 1.2.0
+message: "Якщо ви використовуєте цей пакет, будь ласка, цитуйте статтю нижче."
+title: "ASF-UAV-Warning — reproducibility package for agentic multisensor UAV detection"
+abstract: >-
+  Demonstrative Monte Carlo model of an agentic multisensor system for early
+  unmanned aircraft detection and public warning. Synthetic generative model,
+  three decision architectures (single radar, static fusion, agentic fusion),
+  metrics with bootstrap confidence intervals, and reproducibility tests.
+type: software
+license: MIT
+version: "1.0.0"
+authors:
+  - family-names: Korchenko
+    given-names: O.
+  - family-names: Prokopovych-Tkachenko
+    given-names: D.
+  - family-names: Desiatko
+    given-names: A.
+  - family-names: Azarov
+    given-names: I.
+  - family-names: Galushchenko
+    given-names: O.
+  - family-names: Mormul
+    given-names: M.
+keywords:
+  - UAV detection
+  - multisensor fusion
+  - agentic systems
+  - Monte Carlo simulation
+  - reproducibility
+preferred-citation:
+  type: article
+  title: "Agentic Multisensor System for Early Unmanned Aircraft Detection and Public Warning"
+  year: 2026
+  journal: "Artificial Intelligence"
+  issn: "2710-1673"
+  authors:
+    - family-names: Korchenko
+      given-names: O.
+    - family-names: Prokopovych-Tkachenko
+      given-names: D.
+    - family-names: Desiatko
+      given-names: A.
+    - family-names: Azarov
+      given-names: I.
+    - family-names: Galushchenko
+      given-names: O.
+    - family-names: Mormul
+      given-names: M.
