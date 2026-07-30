@@ -1,0 +1,46 @@
+{
+  "upload_type": "software",
+  "title": "UST-Fuse Engine: Uncertainty-Aware Spatiotemporal Radar Fusion Framework (S2)",
+  "version": "1.0.0",
+  "language": "eng",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "PLACEHOLDER, Author",
+      "affiliation": "PLACEHOLDER Affiliation",
+      "orcid": "0000-0000-0000-0000"
+    }
+  ],
+  "description": "UST-Fuse Engine (software component S2) is the reference C++17 implementation of the Uncertainty-Aware Spatiotemporal Radar Fusion method for detecting, classifying and tracking small unmanned aerial vehicles. It ingests synchronised radar measurements and produces continuously-maintained tracks, each carrying an object class, a calibrated classification probability and separate estimates of epistemic and aleatoric uncertainty. The pipeline performs normalisation and angular encoding, computes an integral measurement-quality index, applies two-level (temporal and cross-feature) attention, classifies with an ensemble of heteroscedastic models followed by temperature scaling, and performs probabilistic multi-target association that blends a kinematic likelihood with a semantic compatibility coefficient (attenuated under high epistemic uncertainty) while adaptively inflating the measurement-noise covariance from the measurement quality. Reference software accompanying the manuscript on Uncertainty-Aware Spatiotemporal Radar Fusion (UST-Fuse). Part 2 of 3 (S1, S2, S3).",
+  "keywords": [
+    "sensor fusion",
+    "uncertainty quantification",
+    "epistemic uncertainty",
+    "aleatoric uncertainty",
+    "attention",
+    "multi-target tracking",
+    "probabilistic data association",
+    "Kalman filter",
+    "radar",
+    "UAV detection",
+    "C++"
+  ],
+  "related_identifiers": [
+    {
+      "relation": "isPartOf",
+      "identifier": "UST-Fuse reproducible software suite (S1, S2, S3)",
+      "scheme": "other"
+    },
+    {
+      "relation": "isDerivedFrom",
+      "identifier": "RadarTwin-UAV (S1)",
+      "scheme": "other"
+    },
+    {
+      "relation": "isSourceOf",
+      "identifier": "FuseMetrics-Lab (S3)",
+      "scheme": "other"
+    }
+  ],
+  "notes": "Depends only on the C++ standard library; compiles with g++ -std=c++17 and runs on OnlineGDB. Consumes the corpus produced by RadarTwin-UAV (S1) and produces the result files scored by FuseMetrics-Lab (S3). Replace the creators block with the real author metadata before publishing on Zenodo."
+}

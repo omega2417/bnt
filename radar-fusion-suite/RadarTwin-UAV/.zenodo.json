@@ -1,0 +1,39 @@
+{
+  "upload_type": "software",
+  "title": "RadarTwin-UAV: Synthetic Radar Scenario and Digital Twin Generator for small-UAV detection (S1)",
+  "version": "1.0.0",
+  "language": "eng",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "PLACEHOLDER, Author",
+      "affiliation": "PLACEHOLDER Affiliation",
+      "orcid": "0000-0000-0000-0000"
+    }
+  ],
+  "description": "RadarTwin-UAV (software component S1) is a self-contained C++17 digital twin that generates reproducible synthetic radar corpora for the detection, classification and multi-target tracking of small unmanned aerial vehicles. It models the motion of UAVs, birds and other aerial objects, a radar sensor (range, azimuth, elevation, radial velocity, SNR, clutter, observation completeness and micro-Doppler), clutter, missed detections and measurement errors. It supports individual, simultaneous, sequential and combined multi-target scenarios and emits fully-labelled ground truth together with the scenario configuration, random seed and run metadata (CSV/JSON). Reference software accompanying the manuscript on Uncertainty-Aware Spatiotemporal Radar Fusion (UST-Fuse). Part 1 of 3 (S1, S2, S3).",
+  "keywords": [
+    "radar",
+    "digital twin",
+    "synthetic data",
+    "UAV detection",
+    "counter-UAS",
+    "micro-Doppler",
+    "multi-target tracking",
+    "reproducibility",
+    "C++"
+  ],
+  "related_identifiers": [
+    {
+      "relation": "isPartOf",
+      "identifier": "UST-Fuse reproducible software suite (S1, S2, S3)",
+      "scheme": "other"
+    },
+    {
+      "relation": "isSourceOf",
+      "identifier": "UST-Fuse-Engine (S2)",
+      "scheme": "other"
+    }
+  ],
+  "notes": "Depends only on the C++ standard library; compiles with g++ -std=c++17 and runs on OnlineGDB. Replace the creators block with the real author metadata before publishing on Zenodo."
+}

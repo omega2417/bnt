@@ -1,0 +1,13 @@
+# build artefacts
+*.o
+*.out
+/radartwin
+/ustfuse
+/fusemetrics
+# generated data / results
+*.csv
+*.json
+!.zenodo.json
+*.svg
+*.tex
+*.parquet

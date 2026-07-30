@@ -1,0 +1,47 @@
+{
+  "upload_type": "software",
+  "title": "FuseMetrics Lab: Experimental Analytics and Reproducibility Platform for radar data fusion (S3)",
+  "version": "1.0.0",
+  "language": "eng",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "PLACEHOLDER, Author",
+      "affiliation": "PLACEHOLDER Affiliation",
+      "orcid": "0000-0000-0000-0000"
+    }
+  ],
+  "description": "FuseMetrics Lab (software component S3) is a self-contained C++17 platform that automates the computational experiments, statistical analysis and evidence tables for the UST-Fuse study. It joins the ground-truth corpus from RadarTwin-UAV (S1) with the fusion outputs from UST-Fuse Engine (S2) at the scenario level and computes detection (probability of detection, false-alarm rate), classification (precision, recall, macro-F1, confusion matrix), calibration (Expected/Maximum Calibration Error, Brier score) and tracking (MOTA, MOTP, IDF1, fragmentation, ID switches, RMSE) metrics with multi-run bootstrap confidence intervals. It performs a component-ablation study, a baseline comparison against JPDA, CNN, LSTM, Kalman, SORT and DeepSORT, and non-parametric significance testing (Wilcoxon signed-rank with Holm correction), exporting CSV summaries, a LaTeX table snippet and an SVG figure ready for direct inclusion in a publication. A leak-free scenario-level train/calibration/validation/test split and fixed random seeds ensure reproducibility. Reference software accompanying the manuscript on Uncertainty-Aware Spatiotemporal Radar Fusion (UST-Fuse). Part 3 of 3 (S1, S2, S3).",
+  "keywords": [
+    "reproducibility",
+    "benchmarking",
+    "evaluation metrics",
+    "calibration",
+    "MOTA",
+    "IDF1",
+    "statistical testing",
+    "Wilcoxon signed-rank",
+    "ablation study",
+    "radar",
+    "UAV detection",
+    "C++"
+  ],
+  "related_identifiers": [
+    {
+      "relation": "isPartOf",
+      "identifier": "UST-Fuse reproducible software suite (S1, S2, S3)",
+      "scheme": "other"
+    },
+    {
+      "relation": "isDerivedFrom",
+      "identifier": "RadarTwin-UAV (S1)",
+      "scheme": "other"
+    },
+    {
+      "relation": "isDerivedFrom",
+      "identifier": "UST-Fuse-Engine (S2)",
+      "scheme": "other"
+    }
+  ],
+  "notes": "Depends only on the C++ standard library; compiles with g++ -std=c++17 and runs on OnlineGDB. Baseline numbers are reproducible degradations of the measured UST-Fuse result and can be replaced with real baseline output files. Replace the creators block with the real author metadata before publishing on Zenodo."
+}
