@@ -1,0 +1,6 @@
+association_overtakes_encoder_at_N=1
+p95_slope_us_per_target=0.5212
+p95_intercept_us=2.2883
+extrapolated_max_targets_p95_under_100ms=191874
+update_interval_ms=100
+measured_max_targets_observed=24

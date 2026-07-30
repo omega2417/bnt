@@ -1,0 +1,3 @@
+category,epistemic_mean,epistemic_std,aleatoric_mean,aleatoric_std,n_seeds
+correct,0.01290,0.00018,0.17605,0.00216,30
+incorrect,0.01675,0.00070,0.25527,0.00307,30

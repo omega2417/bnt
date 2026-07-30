@@ -1,0 +1,10 @@
+full,correct,0.01289,0.17781,119605
+full,incorrect,0.01631,0.25188,12571
+no_uncertainty,correct,0.00000,0.16302,118147
+no_uncertainty,incorrect,0.00000,0.24345,14029
+no_cross_attn,correct,0.01841,0.19940,103600
+no_cross_attn,incorrect,0.02007,0.22605,28576
+no_quality,correct,0.01211,0.26102,119577
+no_quality,incorrect,0.01590,0.29205,12599
+no_semantic,correct,0.01289,0.17781,119605
+no_semantic,incorrect,0.01631,0.25188,12571

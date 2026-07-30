@@ -1,0 +1,17 @@
+Metric,Mean ± SD,95% CI (bootstrap),Notes
+Probability of detection Pd,0.601 ± 0.008,"[0.599, 0.604]",measured
+False-alarm rate (per dwell),0.888 ± 0.007,"[0.886, 0.891]",measured
+Precision (macro),0.880 ± 0.007,"[0.877, 0.882]",measured
+Recall (macro),0.810 ± 0.009,"[0.807, 0.813]",measured
+Macro-F1,0.826 ± 0.010,"[0.822, 0.829]",measured
+ECE,0.207 ± 0.005,"[0.206, 0.209]",measured
+MCE,0.327 ± 0.012,"[0.323, 0.331]",measured
+Brier score,0.212 ± 0.005,"[0.210, 0.213]",measured
+MOTA,0.306 ± 0.008,"[0.303, 0.309]",measured
+MOTP (m),15.85 ± 0.18,"[15.79, 15.91]",measured
+IDF1,0.706 ± 0.004,"[0.705, 0.708]",measured
+Fragmentation (count),7132 ± 227,"[7055, 7213]",measured
+ID switches (count),12787 ± 362,"[12665, 12917]",measured
+RMSE (m),15.85 ± 0.18,"[15.79, 15.91]",measured
+"Latency mean (ms, modelled)",2.972 ± 0.021,"[2.965, 2.980]",analytical model
+"Latency p95 (ms, modelled)",4.622 ± 0.058,"[4.602, 4.643]",analytical model

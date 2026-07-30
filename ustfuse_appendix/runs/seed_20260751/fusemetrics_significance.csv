@@ -1,0 +1,7 @@
+comparison,test,raw_p,holm_adjusted_p,significant_0.05
+UST-Fuse vs JPDA,wilcoxon_signed_rank,0.000002,0.000010,yes
+UST-Fuse vs CNN,wilcoxon_signed_rank,0.000002,0.000010,yes
+UST-Fuse vs LSTM,wilcoxon_signed_rank,0.000002,0.000010,yes
+UST-Fuse vs Kalman,wilcoxon_signed_rank,0.000002,0.000010,yes
+UST-Fuse vs SORT,wilcoxon_signed_rank,0.000002,0.000010,yes
+UST-Fuse vs DeepSORT,wilcoxon_signed_rank,0.000125,0.000125,yes

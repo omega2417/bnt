@@ -1,0 +1,15 @@
+Comparison,Metric,raw p,Holm p,sig.,abs Δ,rel Δ%
+B7 (no uncertainty),macro_f1,1.863e-09,1.304e-08,yes,+0.0260,+3.25
+B4 (no semantic),macro_f1,1,1,no,+0.0000,+0.00
+- quality,macro_f1,1.759e-05,7.036e-05,yes,+0.0012,+0.15
+- cross-feature attn,macro_f1,1.733e-06,8.667e-06,yes,+0.0909,+12.37
+- ensemble,macro_f1,1.863e-09,1.304e-08,yes,+0.0260,+3.25
+- temperature,macro_f1,0.006472,0.01941,yes,+0.0001,+0.01
+- covariance inflation,macro_f1,1,1,no,+0.0000,+0.00
+B7 (no uncertainty),id_switches,1,1,no,+0.0000,+0.00
+B4 (no semantic),id_switches,0.3173,1,no,+0.2667,+0.00
+- quality,id_switches,1.733e-06,1.212e-05,yes,+1863.1667,+17.06
+- cross-feature attn,id_switches,1,1,no,+0.0000,+0.00
+- ensemble,id_switches,1,1,no,+0.0000,+0.00
+- temperature,id_switches,1,1,no,+0.0000,+0.00
+- covariance inflation,id_switches,1.731e-06,1.212e-05,yes,-2516.6000,-16.44

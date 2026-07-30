@@ -1,0 +1,7 @@
+Method,MOTA (%),IDF1 (%),Fragmentation,ID switches,RMSE (m)
+B3 — Kalman + NN [42] †,26.0,55.1,16404,30689,26.94
+B4 — kinematic-only JPDA [12],30.6,70.6,7132,12787,15.85
+B5 — SORT [36] †,26.9,56.5,14264,26853,23.77
+B6 — DeepSORT [37] †,27.5,63.5,10698,20459,18.23
+B7 — proposed w/o uncertainty,30.6,70.6,7132,12787,15.85
+UST-Fuse (proposed),30.6,70.6,7132,12787,15.85

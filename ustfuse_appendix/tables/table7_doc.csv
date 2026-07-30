@@ -1,0 +1,9 @@
+Configuration,F1,ΔF1,ECE,ΔECE,Fragmentation,ΔFrag,ID switches,ΔIDSW
+Full framework,0.826,—,0.207,—,7132,—,12787,—
+- data quality score (uniform q),0.825,-0.001,0.201,-0.007,7015,-117,10924,-1863
+- temporal attention (mean pooling),n/a,—,n/a,—,n/a,—,n/a,—
+- cross-feature attention (equal β),0.735,-0.091,0.234,+0.026,7132,+0,12787,+0
+- ensemble (single head),0.800,-0.026,0.184,-0.024,7132,+0,12787,+0
+- temperature scaling,0.826,-0.000,0.141,-0.066,7132,+0,12787,+0
+- semantic association factor ψ,0.826,+0.000,0.207,+0.000,7132,-0,12787,-0
+- covariance inflation (fixed R),0.826,+0.000,0.207,+0.000,7037,-95,15304,+2517

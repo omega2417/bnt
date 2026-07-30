@@ -1,0 +1,5 @@
+Method,ECE,MCE,Mean confidence,Mean accuracy,Overconfidence gap,provenance
+B1 — CNN on Doppler [9],0.394,0.523,0.94 (emu),0.80 (emu),0.140,emulated
+B7 — proposed w/o uncertainty,0.116,0.218,0.772,0.905,-0.133,measured
+"Proposed, ensemble only (no temp. scaling)",0.141,0.261,0.772,0.905,-0.133,measured
+"UST-Fuse (proposed, calibrated)",0.207,0.327,0.703,0.905,-0.202,measured

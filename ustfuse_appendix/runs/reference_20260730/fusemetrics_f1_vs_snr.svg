@@ -1,0 +1,29 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='520' height='320'>
+<rect width='520' height='320' fill='white'/>
+<text x='260' y='18' font-family='sans-serif' font-size='14' text-anchor='middle'>Classification accuracy vs SNR (FuseMetrics Lab / S3)</text>
+<line x1='60' y1='270' x2='500' y2='270' stroke='black'/>
+<line x1='60' y1='30' x2='60' y2='270' stroke='black'/>
+<text x='280' y='308' font-family='sans-serif' font-size='12' text-anchor='middle'>SNR (dB)</text>
+<text x='16' y='150' font-family='sans-serif' font-size='12' text-anchor='middle' transform='rotate(-90 16 150)'>Accuracy</text>
+<circle cx='87' cy='270' r='3' fill='#1f77b4'/>
+<circle cx='142' cy='270' r='3' fill='#1f77b4'/>
+<circle cx='197' cy='95' r='3' fill='#1f77b4'/>
+<circle cx='252' cy='94' r='3' fill='#1f77b4'/>
+<circle cx='307' cy='69' r='3' fill='#1f77b4'/>
+<circle cx='362' cy='59' r='3' fill='#1f77b4'/>
+<circle cx='417' cy='44' r='3' fill='#1f77b4'/>
+<circle cx='472' cy='34' r='3' fill='#1f77b4'/>
+<polyline points='87,270 142,270 197,95 252,94 307,69 362,59 417,44 472,34 ' fill='none' stroke='#1f77b4' stroke-width='2'/>
+<line x1='60' y1='270' x2='500' y2='270' stroke='#eee'/>
+<text x='52' y='274' font-family='sans-serif' font-size='10' text-anchor='end'>0.0</text>
+<line x1='60' y1='222' x2='500' y2='222' stroke='#eee'/>
+<text x='52' y='226' font-family='sans-serif' font-size='10' text-anchor='end'>0.2</text>
+<line x1='60' y1='174' x2='500' y2='174' stroke='#eee'/>
+<text x='52' y='178' font-family='sans-serif' font-size='10' text-anchor='end'>0.4</text>
+<line x1='60' y1='126' x2='500' y2='126' stroke='#eee'/>
+<text x='52' y='130' font-family='sans-serif' font-size='10' text-anchor='end'>0.6</text>
+<line x1='60' y1='77' x2='500' y2='77' stroke='#eee'/>
+<text x='52' y='81' font-family='sans-serif' font-size='10' text-anchor='end'>0.8</text>
+<line x1='60' y1='30' x2='500' y2='30' stroke='#eee'/>
+<text x='52' y='34' font-family='sans-serif' font-size='10' text-anchor='end'>1.0</text>
+</svg>

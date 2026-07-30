@@ -1,0 +1,45 @@
+{
+  "pd_pct": 60.1,
+  "pd_ci": [
+    59.9,
+    60.4
+  ],
+  "macro_f1": 0.826,
+  "macro_f1_sd": 0.01,
+  "macro_f1_ci": [
+    0.822,
+    0.829
+  ],
+  "ece": 0.207,
+  "ece_sd": 0.005,
+  "ece_ci": [
+    0.206,
+    0.209
+  ],
+  "mce": 0.327,
+  "brier": 0.212,
+  "far": 0.888,
+  "far_sd": 0.007,
+  "precision": 0.88,
+  "recall": 0.81,
+  "mota_pct": 30.6,
+  "idf1_pct": 70.6,
+  "fragmentation": 7132,
+  "id_switches": 12787,
+  "rmse": 15.85,
+  "motp": 15.85,
+  "far_reduction_pct": 16.7,
+  "frag_reduction_pct": 33.3,
+  "dF1_cross": 0.091,
+  "dF1_ensemble": 0.026,
+  "dECE_temp": -0.066,
+  "dIDSW_covinfl": 2517,
+  "dIDSW_quality": -1863,
+  "dF1_uncertainty": 0.026,
+  "n_reps": 30,
+  "n_scen": 400,
+  "seeds": [
+    20260730,
+    20260759
+  ]
+}

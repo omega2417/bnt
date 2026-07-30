@@ -1,0 +1,29 @@
+comparison,metric,test,raw_p,holm_adjusted_p,significant_0.05,abs_diff,rel_diff_pct
+UST-Fuse vs B7 (no uncertainty),macro_f1,wilcoxon_signed_rank,1.863e-09,1.304e-08,yes,+0.0260,+3.25
+UST-Fuse vs B4 (no semantic),macro_f1,wilcoxon_signed_rank,1,1,no,+0.0000,+0.00
+UST-Fuse vs - quality,macro_f1,wilcoxon_signed_rank,1.759e-05,7.036e-05,yes,+0.0012,+0.15
+UST-Fuse vs - cross-feature attn,macro_f1,wilcoxon_signed_rank,1.733e-06,8.667e-06,yes,+0.0909,+12.37
+UST-Fuse vs - ensemble,macro_f1,wilcoxon_signed_rank,1.863e-09,1.304e-08,yes,+0.0260,+3.25
+UST-Fuse vs - temperature,macro_f1,wilcoxon_signed_rank,0.006472,0.01941,yes,+0.0001,+0.01
+UST-Fuse vs - covariance inflation,macro_f1,wilcoxon_signed_rank,1,1,no,+0.0000,+0.00
+UST-Fuse vs B7 (no uncertainty),ece,wilcoxon_signed_rank,1.731e-06,1.006e-05,yes,+0.0913,+78.65
+UST-Fuse vs B4 (no semantic),ece,wilcoxon_signed_rank,1,1,no,+0.0000,+0.00
+UST-Fuse vs - quality,ece,wilcoxon_signed_rank,1.719e-06,1.006e-05,yes,+0.0067,+3.32
+UST-Fuse vs - cross-feature attn,ece,wilcoxon_signed_rank,1.863e-09,1.304e-08,yes,-0.0263,-11.26
+UST-Fuse vs - ensemble,ece,wilcoxon_signed_rank,1.732e-06,1.006e-05,yes,+0.0236,+12.84
+UST-Fuse vs - temperature,ece,wilcoxon_signed_rank,1.676e-06,1.006e-05,yes,+0.0660,+46.66
+UST-Fuse vs - covariance inflation,ece,wilcoxon_signed_rank,1,1,no,+0.0000,+0.00
+UST-Fuse vs B7 (no uncertainty),id_switches,wilcoxon_signed_rank,1,1,no,+0.0000,+0.00
+UST-Fuse vs B4 (no semantic),id_switches,wilcoxon_signed_rank,0.3173,1,no,+0.2667,+0.00
+UST-Fuse vs - quality,id_switches,wilcoxon_signed_rank,1.733e-06,1.212e-05,yes,+1863.1667,+17.06
+UST-Fuse vs - cross-feature attn,id_switches,wilcoxon_signed_rank,1,1,no,+0.0000,+0.00
+UST-Fuse vs - ensemble,id_switches,wilcoxon_signed_rank,1,1,no,+0.0000,+0.00
+UST-Fuse vs - temperature,id_switches,wilcoxon_signed_rank,1,1,no,+0.0000,+0.00
+UST-Fuse vs - covariance inflation,id_switches,wilcoxon_signed_rank,1.731e-06,1.212e-05,yes,-2516.6000,-16.44
+UST-Fuse vs B7 (no uncertainty),mota,wilcoxon_signed_rank,1,1,no,+0.0000,+0.00
+UST-Fuse vs B4 (no semantic),mota,wilcoxon_signed_rank,1,1,no,+0.0000,+0.00
+UST-Fuse vs - quality,mota,wilcoxon_signed_rank,1.727e-06,1.036e-05,yes,-0.0679,-18.17
+UST-Fuse vs - cross-feature attn,mota,wilcoxon_signed_rank,1,1,no,+0.0000,+0.00
+UST-Fuse vs - ensemble,mota,wilcoxon_signed_rank,1,1,no,+0.0000,+0.00
+UST-Fuse vs - temperature,mota,wilcoxon_signed_rank,1,1,no,+0.0000,+0.00
+UST-Fuse vs - covariance inflation,mota,wilcoxon_signed_rank,1.863e-09,1.304e-08,yes,+0.1096,+55.86

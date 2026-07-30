@@ -1,0 +1,17 @@
+metric,point_estimate,mean,std,ci95_low,ci95_high
+probability_of_detection,0.5948,0.5908,0.0220,0.5829,0.5987
+false_alarm_rate,0.8855,,,,
+precision,0.8895,,,,
+recall,0.8245,,,,
+macro_f1,0.8421,0.8544,0.0182,0.8479,0.8609
+ece,0.2152,0.2127,0.0091,0.2094,0.2159
+mce,0.3405,,,,
+brier,0.2018,,,,
+mota,0.3048,0.3310,0.0164,0.3251,0.3369
+motp_m,15.5206,,,,
+idf1,0.7014,,,,
+fragmentation,6765.0000,,,,
+id_switches,12082.0000,,,,
+rmse_m,15.5206,,,,
+latency_mean_ms,2.9380,,,,
+latency_p95_ms,4.5606,,,,

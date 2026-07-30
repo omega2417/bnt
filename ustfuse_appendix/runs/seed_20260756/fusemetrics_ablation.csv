@@ -1,0 +1,9 @@
+configuration,macro_f1,mota,ece,pd
+full UST-Fuse,0.8276,0.2949,0.2156,0.6087
+- quality index,0.7866,0.2429,0.2396,0.5777
+- temporal attention,0.7916,0.2339,0.2336,0.5967
+- cross-feature attention,0.7986,0.2709,0.2306,0.6007
+- ensemble,0.8056,0.2849,0.2626,0.6047
+- temperature calibration,0.8246,0.2929,0.2766,0.6077
+- semantic association,0.8096,0.2169,0.2216,0.6067
+- adaptive covariance,0.8166,0.2499,0.2246,0.5897

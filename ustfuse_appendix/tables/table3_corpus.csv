@@ -1,0 +1,17 @@
+Property,Value / range
+Scenario families,Individual / Simultaneous / Sequential / Combined (100 / 100 / 100 / 100)
+Number of scenarios,400 per repetition (30 repetitions)
+Total radar dwells (scenario-frames),"89,180 (reference seed); 217,932 ground-truth target-dwell rows"
+Total measurements,"203,464 (reference seed); mean 203,125 +/- 2,910 over 30 seeds"
+Total target-tracks (trajectories),"1,151 (reference seed); ~1,150 per seed"
+Target classes,"UAV, BIRD, OTHER (3 classes)"
+Class balance (trajectories),UAV:BIRD:OTHER = 696:300:155 ~ 0.605 : 0.261 : 0.135
+Maximum simultaneous targets,6
+Target velocity,instantaneous 0-119 m/s (nominal cruise 4-80 m/s)
+Target altitude,5-399 m (nominal cruise 20-399 m)
+Approach direction,full 360 deg azimuth (-180..180 deg)
+Manoeuvre types,"straight, weaving, hover, diving"
+Signal-to-noise ratio,approx -6 to 66 dB (bulk of detections -5..30 dB)
+Clutter intensity lambda,0.8 false alarms per dwell (Poisson); ~71k false alarms/seed
+Observation completeness rho,0.70-1.00 per detection; trajectory-level 0.40-1.00 (incl. missed dwells)
+Measurement update rate,10 Hz (dwell interval 0.1 s)
