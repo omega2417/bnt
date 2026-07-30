@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Robust Latent-Drift Compensation with FTM Anchoring (Section 3.5 reference implementation)"
+abstract: >-
+  Single-file C++17 reference implementation of Section 3.5 (drift compensation
+  and FTM anchoring of the radiomap) of a dissertation on hybrid Bayesian
+  tactical spatial identification of Wi-Fi signal sources: latent-drift Kalman
+  predict/update with a Huber robust step, immutable base radiomap,
+  trusted-update gate separating quarantine from update, and EIG-based anchor
+  selection. The Kalman gain is computed by a stable Cholesky solve.
+type: software
+authors:
+  - family-names: "[Surname]"
+    given-names: "[Given name]"
+    # Replace the placeholder author before publishing on Zenodo.
+license: MIT
+keywords:
+  - "Wi-Fi localization"
+  - "Kalman filter"
+  - "robust estimation"
+  - "radiomap drift"
+  - "FTM RTT anchoring"
+  - "IEEE 802.11az"
+  - "C++"
+version: "1.0.0"
+date-released: "2026-07-30"

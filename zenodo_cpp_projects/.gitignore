@@ -1,0 +1,7 @@
+# build artifacts
+app
+adaptive_weighting
+bayesian_posterior
+drift_ftm_anchoring
+*.o
+*.out

@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Bayesian Spatial Posterior with MAP/HPD and Zonal Mass (Section 3.4 reference implementation)"
+abstract: >-
+  Single-file C++17 reference implementation of Section 3.4 (Bayesian posterior
+  and MAP/HPD estimation) of a dissertation on hybrid Bayesian tactical spatial
+  identification of Wi-Fi signal sources: grid recursive inference in the
+  log-domain, modality-factorized RSSI+FTM likelihood, MAP, local modes, HPD
+  region, zonal posterior mass, out-of-map state and uncertainty budget.
+type: software
+authors:
+  - family-names: "[Surname]"
+    given-names: "[Given name]"
+    # Replace the placeholder author before publishing on Zenodo.
+license: MIT
+keywords:
+  - "Wi-Fi localization"
+  - "Bayesian posterior"
+  - "MAP estimation"
+  - "HPD region"
+  - "FTM RTT"
+  - "IEEE 802.11"
+  - "C++"
+version: "1.0.0"
+date-released: "2026-07-30"

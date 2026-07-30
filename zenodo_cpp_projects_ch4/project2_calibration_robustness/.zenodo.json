@@ -1,0 +1,16 @@
+{
+  "title": "Uncertainty Calibration and Robustness Evaluation (Section 4.5 reference implementation)",
+  "upload_type": "software",
+  "description": "<p>Single-file C++17 reference implementation of Section 4.5 (uncertainty calibration and robustness) of a dissertation on hybrid Bayesian tactical spatial identification of Wi-Fi signal sources. Part A evaluates probabilistic calibration of a zonal decision probability: NLL, Brier score with the Murphy reliability-resolution-uncertainty decomposition, expected and maximum calibration error on adaptive (equal-count) bins, calibration slope/intercept via logistic regression, an ASCII reliability diagram, and temperature scaling fitted on a validation split (before/after comparison). Part B builds a degradation curve over a stress sweep with relative degradation, area under the degradation curve, the danger breakpoint (decision-tier transition) and the recovery time back into the calibration envelope (graceful degradation). No external dependencies; runs as-is on OnlineGDB. Synthetic illustration, not empirical results; operating points are to_be_validated.</p>",
+  "license": "MIT",
+  "access_right": "open",
+  "language": "eng",
+  "keywords": [
+    "calibration", "expected calibration error", "Brier score", "temperature scaling",
+    "reliability diagram", "robustness", "graceful degradation", "Wi-Fi localization", "C++", "OnlineGDB"
+  ],
+  "creators": [
+    { "name": "[Author of the dissertation — replace before publishing]", "affiliation": "" }
+  ],
+  "notes": "Reference software supplement to Chapter 4. Compile with: g++ -std=c++17 -O2 src/main.cpp -o calibration_robustness"
+}

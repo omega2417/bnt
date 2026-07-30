@@ -1,0 +1,7 @@
+# build artifacts
+app
+localization_metrics
+calibration_robustness
+baselines_stats
+*.o
+*.out

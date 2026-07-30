@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Localization-Quality Evaluation for Spatial Attribution (Section 4.4 reference implementation)"
+abstract: >-
+  Single-file C++17 reference implementation of Section 4.4 (localization-quality
+  evaluation) of a dissertation on hybrid Bayesian tactical spatial identification
+  of Wi-Fi signal sources: MAE/median/RMSE/MAD/trimmed mean, empirical CDF and
+  P90/P95, zonal correctness, availability, HPD coverage and sharpness, zonal
+  Brier and NLL, block-bootstrap confidence intervals and trajectory-aware
+  aggregation.
+type: software
+authors:
+  - family-names: "[Surname]"
+    given-names: "[Given name]"
+    # Replace the placeholder author before publishing on Zenodo.
+license: MIT
+keywords:
+  - "Wi-Fi localization"
+  - "evaluation metrics"
+  - "HPD coverage"
+  - "block bootstrap"
+  - "IEEE 802.11"
+  - "C++"
+version: "1.0.0"
+date-released: "2026-07-30"
