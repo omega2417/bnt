@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Adaptive Sensor Weighting for Tactical Spatial Attribution (Section 3.3 reference implementation)"
+abstract: >-
+  Single-file C++17 reference implementation of Section 3.3 (Adaptive Sensor
+  Weighting) of a dissertation on hybrid Bayesian tactical spatial
+  identification of Wi-Fi signal sources: product-form normalized weight,
+  four canonical quality components, trust-domain caps, rate limiter,
+  hysteresis, emergency exclusion, weight trace and reason codes.
+type: software
+authors:
+  - family-names: "[Surname]"
+    given-names: "[Given name]"
+    # Replace the placeholder author before publishing on Zenodo.
+license: MIT
+keywords:
+  - "Wi-Fi localization"
+  - "sensor weighting"
+  - "Bayesian inference"
+  - "trust domains"
+  - "IEEE 802.11"
+  - "C++"
+version: "1.0.0"
+date-released: "2026-07-30"

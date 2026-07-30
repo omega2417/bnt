@@ -1,0 +1,28 @@
+{
+  "title": "Robust Latent-Drift Compensation with FTM Anchoring (Section 3.5 reference implementation)",
+  "upload_type": "software",
+  "description": "<p>Single-file C++17 reference implementation of Section 3.5 (drift compensation and FTM anchoring of the radiomap) of a dissertation on hybrid Bayesian tactical spatial identification of Wi-Fi signal sources. A low-dimensional latent-drift overlay is estimated by a Kalman predict/update (eq. 3.16-3.18) with a component-wise Huber robust influence function (eq. 3.19), while the approved base radiomap stays immutable (Figure 3.6). A trusted-update gate (eq. 3.20) separates quarantine from update, and the next FTM responder is chosen by expected information gain (eq. 3.21). The Kalman gain is computed by a stable Cholesky solve (no explicit matrix inverse); suppressed residuals are retained as anomaly evidence; coordinate uncertainty is propagated into the innovation covariance. The demonstration injects a spoofed RSSI (Huber rejects it) and an unverified-incident gate closure (quarantine). No external dependencies; runs as-is on OnlineGDB. Operating points are to_be_validated. Analytical illustration, not empirical data.</p>",
+  "license": "MIT",
+  "access_right": "open",
+  "language": "eng",
+  "keywords": [
+    "Wi-Fi localization",
+    "Kalman filter",
+    "robust estimation",
+    "Huber loss",
+    "radiomap drift",
+    "FTM RTT anchoring",
+    "expected information gain",
+    "IEEE 802.11az",
+    "spatial attribution",
+    "C++",
+    "OnlineGDB"
+  ],
+  "creators": [
+    {
+      "name": "[Author of the dissertation — replace before publishing]",
+      "affiliation": ""
+    }
+  ],
+  "notes": "Reference software supplement to Chapter 3. Compile with: g++ -std=c++17 -O2 src/main.cpp -o drift_ftm_anchoring"
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Bayesian Spatial Posterior with MAP/HPD and Zonal Mass (Section 3.4 reference implementation)",
+  "upload_type": "software",
+  "description": "<p>Single-file C++17 reference implementation of Section 3.4 (Bayesian posterior and MAP/HPD estimation) of a dissertation on hybrid Bayesian tactical spatial identification of Wi-Fi signal sources. Grid-based recursive Bayesian inference in the log-domain with log-sum-exp normalization (eq. 3.6-3.9), modality-factorized likelihood (eq. 3.7) combining robust Huber RSSI blocks and an LOS/NLOS FTM/RTT mixture (Section 3.5.6) with availability masks. Produces MAP (eq. 3.11), local modes, HPD region (eq. 3.12), zonal posterior mass (eq. 3.13), an explicit out-of-map state (eq. 3.14), entropy, model evidence and an uncertainty budget. A 'fingerprint twins' demonstration (Section 3.4.10) shows fusion as a normalized product rather than an average of coordinates. No external dependencies; runs as-is on OnlineGDB. Operating points are to_be_validated. Analytical illustration, not empirical data.</p>",
+  "license": "MIT",
+  "access_right": "open",
+  "language": "eng",
+  "keywords": [
+    "Wi-Fi localization",
+    "Bayesian posterior",
+    "MAP estimation",
+    "HPD region",
+    "log-sum-exp",
+    "fingerprint twins",
+    "FTM RTT",
+    "IEEE 802.11",
+    "spatial attribution",
+    "C++",
+    "OnlineGDB"
+  ],
+  "creators": [
+    {
+      "name": "[Author of the dissertation — replace before publishing]",
+      "affiliation": ""
+    }
+  ],
+  "notes": "Reference software supplement to Chapter 3. Compile with: g++ -std=c++17 -O2 src/main.cpp -o bayesian_posterior"
+}

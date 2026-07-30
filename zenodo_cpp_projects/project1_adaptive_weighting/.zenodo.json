@@ -1,0 +1,27 @@
+{
+  "title": "Adaptive Sensor Weighting for Tactical Spatial Attribution (Section 3.3 reference implementation)",
+  "upload_type": "software",
+  "description": "<p>Single-file C++17 reference implementation of Section 3.3 (Adaptive Sensor Weighting) of a dissertation on hybrid Bayesian tactical spatial identification of Wi-Fi signal sources. Implements the product-form normalized weight w_s = m_s &middot; &pi;_s &middot; &gamma;_s &middot; &kappa;_s &middot; &rho;_s (eq. 3.1) with the four canonical quality components (provenance, geometric informativeness via a log-det Fisher-information increment, calibration validity, completeness), constrained projection onto the policy-admissible set (eq. 3.5), trust-domain caps, rate limiter, hysteresis, emergency exclusion, a full weight trace and machine-readable reason codes. No external dependencies; runs as-is on OnlineGDB. Operating points are declared to_be_validated. Analytical illustration, not empirical data.</p>",
+  "license": "MIT",
+  "access_right": "open",
+  "language": "eng",
+  "keywords": [
+    "Wi-Fi localization",
+    "sensor weighting",
+    "Bayesian inference",
+    "trust domains",
+    "provenance",
+    "zero trust",
+    "IEEE 802.11",
+    "spatial attribution",
+    "C++",
+    "OnlineGDB"
+  ],
+  "creators": [
+    {
+      "name": "[Author of the dissertation — replace before publishing]",
+      "affiliation": ""
+    }
+  ],
+  "notes": "Reference software supplement to Chapter 3. Compile with: g++ -std=c++17 -O2 src/main.cpp -o adaptive_weighting"
+}
