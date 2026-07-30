@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Baseline Localizers and Paired Statistical Comparison (Section 4.3 reference implementation)"
+abstract: >-
+  Single-file C++17 reference implementation of Section 4.3 (baseline methods and
+  the statistical comparison plan) of a dissertation on hybrid Bayesian tactical
+  spatial identification of Wi-Fi signal sources: trilateration, WKNN and
+  probabilistic fingerprinting baselines on a synthetic radiomap, compared with
+  block-bootstrap confidence intervals, the Wilcoxon signed-rank test,
+  Hodges-Lehmann estimator, McNemar test, Cliff's delta, Holm-Bonferroni control
+  and Friedman/Nemenyi analysis.
+type: software
+authors:
+  - family-names: "[Surname]"
+    given-names: "[Given name]"
+    # Replace the placeholder author before publishing on Zenodo.
+license: MIT
+keywords:
+  - "indoor localization"
+  - "baselines"
+  - "bootstrap"
+  - "Wilcoxon signed-rank"
+  - "Friedman Nemenyi"
+  - "C++"
+version: "1.0.0"
+date-released: "2026-07-30"

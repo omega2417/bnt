@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Uncertainty Calibration and Robustness Evaluation (Section 4.5 reference implementation)"
+abstract: >-
+  Single-file C++17 reference implementation of Section 4.5 (uncertainty
+  calibration and robustness) of a dissertation on hybrid Bayesian tactical
+  spatial identification of Wi-Fi signal sources: NLL, Brier score with Murphy
+  decomposition, expected/maximum calibration error on adaptive bins,
+  calibration slope/intercept, temperature scaling, and degradation curves with
+  breakpoint and recovery time.
+type: software
+authors:
+  - family-names: "[Surname]"
+    given-names: "[Given name]"
+    # Replace the placeholder author before publishing on Zenodo.
+license: MIT
+keywords:
+  - "calibration"
+  - "expected calibration error"
+  - "temperature scaling"
+  - "robustness"
+  - "Wi-Fi localization"
+  - "C++"
+version: "1.0.0"
+date-released: "2026-07-30"

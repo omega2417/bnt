@@ -1,0 +1,16 @@
+{
+  "title": "Baseline Localizers and Paired Statistical Comparison (Section 4.3 reference implementation)",
+  "upload_type": "software",
+  "description": "<p>Single-file C++17 reference implementation of Section 4.3 (baseline methods and the statistical comparison plan) of a dissertation on hybrid Bayesian tactical spatial identification of Wi-Fi signal sources. On a synthetic statistical radiomap it evaluates four localizers on identical inputs: RSSI path-loss trilateration, WKNN fingerprinting, a probabilistic Horus/Roos-style estimator, and a proposed robust variant. Paired errors (grouped in session/site blocks) feed the full plan of Section 4.3.8: block bootstrap 95% confidence intervals of MAE and of paired differences, the Wilcoxon signed-rank test with a Hodges-Lehmann median difference, the McNemar test on paired zonal-correct proportions, Cliff's delta effect size, Holm-Bonferroni multiplicity control, and a Friedman statistic with a Nemenyi critical difference. It demonstrates that a statistically significant MAE difference can have a negligible effect size, so lower MAE alone is not a scientific claim. No external dependencies; runs as-is on OnlineGDB. Synthetic illustration, not empirical results; operating points are to_be_validated.</p>",
+  "license": "MIT",
+  "access_right": "open",
+  "language": "eng",
+  "keywords": [
+    "indoor localization", "baselines", "WKNN", "trilateration", "bootstrap",
+    "Wilcoxon signed-rank", "McNemar", "Friedman Nemenyi", "effect size", "C++", "OnlineGDB"
+  ],
+  "creators": [
+    { "name": "[Author of the dissertation — replace before publishing]", "affiliation": "" }
+  ],
+  "notes": "Reference software supplement to Chapter 4. Compile with: g++ -std=c++17 -O2 src/main.cpp -o baselines_stats"
+}

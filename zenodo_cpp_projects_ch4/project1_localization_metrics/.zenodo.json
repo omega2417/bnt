@@ -1,0 +1,16 @@
+{
+  "title": "Localization-Quality Evaluation for Spatial Attribution (Section 4.4 reference implementation)",
+  "upload_type": "software",
+  "description": "<p>Single-file C++17 reference implementation of Section 4.4 (localization-quality evaluation) of a dissertation on hybrid Bayesian tactical spatial identification of Wi-Fi signal sources. Computes the full metric panel: central error (MAE, median, RMSE, MAD, trimmed mean), empirical CDF/CCDF and P50/P75/P90/P95/P99, zonal correctness, availability and time-to-localize, HPD coverage at 50/80/90/95% with area and sharpness-conditional-on-coverage, zonal Brier score and NLL, block-bootstrap 95% confidence intervals (resampling session/site blocks, not frames), and trajectory-aware aggregation. The demonstration contrasts a well-calibrated arm with an over-confident one to show that point accuracy is separated from posterior honesty. No external dependencies; runs as-is on OnlineGDB. Synthetic illustration, not empirical results; operating points are to_be_validated.</p>",
+  "license": "MIT",
+  "access_right": "open",
+  "language": "eng",
+  "keywords": [
+    "Wi-Fi localization", "evaluation metrics", "HPD coverage", "CDF P95",
+    "block bootstrap", "calibration", "Brier score", "IEEE 802.11", "C++", "OnlineGDB"
+  ],
+  "creators": [
+    { "name": "[Author of the dissertation — replace before publishing]", "affiliation": "" }
+  ],
+  "notes": "Reference software supplement to Chapter 4. Compile with: g++ -std=c++17 -O2 src/main.cpp -o localization_metrics"
+}
