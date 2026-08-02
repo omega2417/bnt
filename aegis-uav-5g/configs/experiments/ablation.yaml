@@ -1,0 +1,59 @@
+# Fast, fully reproducible smoke campaign: exercises the whole pipeline and
+# emits every table/figure in a couple of minutes.  Uses 3 seeds.
+name: ablation
+run_group: ablation
+scenario: configs/scenarios/smoke.yaml
+attacks_dir: configs/attacks
+
+ada:
+  window_length_s: 2.0
+  window_stride_s: 1.0
+  hidden_sizes: [32]
+  latent_dim: 8
+  learning_rate: 0.001
+  batch_size: 128
+  max_epochs: 40
+  kappa: 3.0
+  alpha: 0.05
+  ewma_warmup: 15
+
+tca:
+  temporal_gap_s: 2.0
+  severity_floor: 0.55
+  modality_weights: {telemetry: 0.34, network: 0.33, behaviour: 0.33}
+
+aaa:
+  classifier: hist_gradient_boosting
+  calibration: isotonic
+  hierarchical: true
+
+rsa:
+  lambda1: 0.5
+  lambda2: 0.7
+  pi_min: 0.55
+  policy_file: configs/policies/response_matrix.yaml
+
+pea:
+  max_retries: 1
+  enforcement_latency_ms: 15.0
+
+dataset:
+  scenario: configs/scenarios/smoke.yaml
+  missions_per_class: 3
+  seeds: [0, 1, 2]
+  train_frac: 0.6
+  val_frac: 0.2
+  test_frac: 0.2
+
+fleet_sizes: [5, 10]
+ablations: [no_cross_vehicle, no_fusion, no_hierarchy, no_safe_mask, no_calibration]
+sensitivity:
+  kappa: [2.0, 3.0, 4.0]
+  alpha: [0.03, 0.05, 0.10]
+  window_length_s: [1.0, 2.0, 5.0]
+  severity_floor: [0.2, 0.3, 0.4]
+  w_telemetry: [0.2, 0.34, 0.5]
+  lambda1: [0.3, 0.5, 0.7]
+  lambda2: [0.5, 0.7, 0.9]
+  pi_min: [0.5, 0.55, 0.6]
+experiments: [detection, attribution, response, ablation, sensitivity, scalability]

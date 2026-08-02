@@ -1,0 +1,30 @@
+name: smoke
+fleet_size: 6
+mission_duration_s: 120
+export_period_s: 1.0
+area_size_m: 1000.0
+phases:
+  - {name: takeoff, fraction: 0.1}
+  - {name: transit, fraction: 0.3}
+  - {name: loiter,  fraction: 0.4}
+  - {name: return,  fraction: 0.2}
+telemetry:
+  gnss_satellites: 12
+  gnss_hdop: 0.9
+  gnss_noise_m: 1.5
+  battery_drain_per_s: 0.02
+  rssi_dbm_mean: -62.0
+  sinr_db_mean: 18.0
+network:
+  base_packets_per_s: 40.0
+  base_bytes_per_packet: 220.0
+  base_rtt_ms: 25.0
+  base_jitter_ms: 4.0
+  base_packet_loss: 0.01
+  routing_control_rate: 2.0
+  neighbour_churn: 0.05
+  fanet_radio_range_m: 350.0
+behaviour:
+  command_rate: 1.5
+  session_rate: 0.05
+  auth_failure_rate: 0.01

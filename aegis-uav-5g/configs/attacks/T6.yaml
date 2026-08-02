@@ -1,0 +1,9 @@
+# T6 Compromised GCS - abnormal command activity, atypical multi-UAV control.
+attack:
+  id: T6
+  enabled: true
+  onset_s: 45
+  duration_s: 45
+  intensity: 0.6
+  target_uavs: [0, 1, 2]
+  profile: sudden

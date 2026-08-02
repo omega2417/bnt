@@ -1,0 +1,9 @@
+# T5 Lateral movement - scanning, fan-out, repeated auth failures, peer pivoting.
+attack:
+  id: T5
+  enabled: true
+  onset_s: 50
+  duration_s: 40
+  intensity: 0.55
+  target_uavs: [2]
+  profile: gradual

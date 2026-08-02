@@ -1,0 +1,9 @@
+# T4 Malicious routing - route manipulation / blackhole / grayhole.
+attack:
+  id: T4
+  enabled: true
+  onset_s: 45
+  duration_s: 45
+  intensity: 0.6
+  target_uavs: [4]
+  profile: gradual

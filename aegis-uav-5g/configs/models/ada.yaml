@@ -1,0 +1,11 @@
+# Anomaly Detection Agent - three per-modality autoencoders + adaptive EWMA.
+window_length_s: 2.0
+window_stride_s: 1.0
+hidden_sizes: [64, 32]
+latent_dim: 12
+learning_rate: 0.001
+batch_size: 128
+max_epochs: 60
+kappa: 3.0        # EWMA threshold multiplier  theta = mu + kappa*sigma
+alpha: 0.05       # EWMA adaptation rate
+ewma_warmup: 20

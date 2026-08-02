@@ -1,0 +1,74 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aegis-uav-5g"
+version = "0.1.0"
+description = "Reproducible Agentic AI Testbed for Detection, Attribution and Containment of Cyberattacks in 5G-Enabled UAV Networks"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Aegis-UAV-5G Contributors" }]
+keywords = [
+  "agentic-ai", "uav", "5g", "fanet", "intrusion-detection",
+  "attack-attribution", "autonomous-containment", "explainable-security",
+]
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.1",
+  "scipy>=1.11",
+  "scikit-learn>=1.4",
+  "matplotlib>=3.8",
+  "pyyaml>=6.0",
+  "pydantic>=2.5",
+  "pyarrow>=14.0",
+  "psutil>=5.9",
+  "joblib>=1.3",
+]
+
+[project.optional-dependencies]
+# Level-2 external validation / heavier ML stack (not required for the Level-1 MVP).
+torch = ["torch>=2.2"]
+tuning = ["optuna>=3.5"]
+graph = ["networkx>=3.2"]
+tracking = ["mlflow>=2.10"]
+dev = ["pytest>=8.0", "pytest-cov>=4.1", "ruff>=0.4", "mypy>=1.9"]
+
+[project.scripts]
+aegis = "aegis_uav.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+aegis_uav = ["py.typed"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "W"]
+ignore = ["E501", "E702", "E741"]
+
+[tool.mypy]
+python_version = "3.11"
+mypy_path = "src"
+files = ["src/aegis_uav"]
+ignore_missing_imports = true
+warn_unused_ignores = false
+disallow_untyped_defs = false
+check_untyped_defs = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = [
+  "slow: marks slow end-to-end tests",
+]
+
+[tool.coverage.run]
+source = ["aegis_uav"]
+branch = true

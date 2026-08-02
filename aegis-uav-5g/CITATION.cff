@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+title: >-
+  Aegis-UAV-5G: Reproducible Agentic AI Testbed for Detection, Attribution
+  and Containment of Cyberattacks in 5G-Enabled UAV Networks
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - name: "Aegis-UAV-5G Contributors"
+version: 0.1.0
+license: MIT
+repository-code: "https://github.com/omega2417/bnt/tree/main/aegis-uav-5g"
+keywords:
+  - agentic AI
+  - UAV
+  - 5G
+  - FANET
+  - intrusion detection
+  - attack attribution
+  - autonomous containment
+references:
+  - type: article
+    title: >-
+      Agentic Artificial Intelligence for Autonomous Detection, Attribution,
+      and Containment of Cyberattacks in 5G-Enabled UAV Networks
+    authors:
+      - name: "Manuscript authors"
+    status: submitted

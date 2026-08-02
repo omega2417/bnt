@@ -1,0 +1,61 @@
+# Full publication campaign.  Slow (20 seeds, 20-UAV missions, 30 missions/class).
+# Reproduces every table and figure of the manuscript from scratch.
+name: paper_v1
+run_group: paper_v1
+scenario: configs/scenarios/base_20_uav.yaml
+attacks_dir: configs/attacks
+
+ada:
+  window_length_s: 2.0
+  window_stride_s: 1.0
+  hidden_sizes: [64, 32]
+  latent_dim: 12
+  learning_rate: 0.001
+  batch_size: 128
+  max_epochs: 60
+  kappa: 3.0
+  alpha: 0.05
+  ewma_warmup: 20
+  max_train_windows: 5000
+
+tca:
+  temporal_gap_s: 2.0
+  severity_floor: 0.30
+  modality_weights: {telemetry: 0.34, network: 0.33, behaviour: 0.33}
+
+aaa:
+  classifier: hist_gradient_boosting
+  calibration: isotonic
+  hierarchical: true
+  benign_ratio: 4.0
+
+rsa:
+  lambda1: 0.5
+  lambda2: 0.7
+  pi_min: 0.55
+  policy_file: configs/policies/response_matrix.yaml
+
+pea:
+  max_retries: 1
+  enforcement_latency_ms: 15.0
+
+dataset:
+  scenario: configs/scenarios/base_20_uav.yaml
+  missions_per_class: 30
+  seeds: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]
+  train_frac: 0.6
+  val_frac: 0.2
+  test_frac: 0.2
+
+fleet_sizes: [5, 10, 20, 40, 80]
+ablations: [no_cross_vehicle, no_fusion, no_hierarchy, no_safe_mask, no_calibration, no_counterfactual_origin]
+sensitivity:
+  kappa: [2.0, 2.5, 3.0, 3.5, 4.0]
+  alpha: [0.01, 0.03, 0.05, 0.10, 0.20]
+  window_length_s: [1.0, 2.0, 5.0, 10.0]
+  severity_floor: [0.2, 0.3, 0.4]
+  w_telemetry: [0.2, 0.34, 0.5]
+  lambda1: [0.3, 0.5, 0.7]
+  lambda2: [0.5, 0.7, 0.9]
+  pi_min: [0.5, 0.55, 0.6]
+experiments: [detection, attribution, response, ablation, sensitivity, scalability]
