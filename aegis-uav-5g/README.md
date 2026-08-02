@@ -73,10 +73,18 @@ aegis campaign --config configs/experiments/paper_v1.yaml   # or: make paper
 # Rebuild only the report artifacts from existing metrics:
 aegis report --run-group smoke
 
+# Map every manuscript [DATA REQUIRED] item to its computed value + evidence file:
+aegis manuscript-map --run-group smoke     # -> artifacts/tables/smoke/manuscript_data_map.{md,json}
+
 # Individual building blocks:
 aegis simulate      --config configs/scenarios/base_20_uav.yaml --attack configs/attacks/T1.yaml
 aegis build-dataset --config configs/experiments/dataset_v1.yaml
 ```
+
+Illustrative outputs of the `smoke` campaign are checked in under
+[`docs/example_results/`](docs/example_results/) so you can see the generated
+tables and the manuscript data map without running anything. For the Zenodo-ready
+release procedure see [`docs/DATA_AVAILABILITY.md`](docs/DATA_AVAILABILITY.md).
 
 ### Docker (one command, full pipeline)
 
