@@ -71,11 +71,23 @@ def _cmd_experiment_subset(args: argparse.Namespace, experiments: list[str]) -> 
 
 def _cmd_report(args: argparse.Namespace) -> int:
     from .config import project_root
+    from .reporting.manuscript import build_manuscript_map
     from .reporting.report import build_report
 
     out = project_root() / "artifacts"
     report_dir = build_report(args.run_group, out)
+    build_manuscript_map(args.run_group, out)
     print(f"Report rebuilt from metrics -> {report_dir}")
+    return 0
+
+
+def _cmd_manuscript_map(args: argparse.Namespace) -> int:
+    from .config import project_root
+    from .reporting.manuscript import build_manuscript_map
+
+    out = project_root() / "artifacts"
+    path = build_manuscript_map(args.run_group, out)
+    print(f"Manuscript data map -> {path}")
     return 0
 
 
@@ -105,6 +117,11 @@ def build_parser() -> argparse.ArgumentParser:
     sp = sub.add_parser("report", help="Rebuild report artifacts from metrics")
     sp.add_argument("--run-group", required=True)
     sp.set_defaults(func=_cmd_report)
+
+    sp = sub.add_parser("manuscript-map",
+                        help="Map manuscript [DATA REQUIRED] items to computed values")
+    sp.add_argument("--run-group", required=True)
+    sp.set_defaults(func=_cmd_manuscript_map)
 
     return p
 

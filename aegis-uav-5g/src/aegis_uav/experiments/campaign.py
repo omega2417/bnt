@@ -84,9 +84,11 @@ def run_campaign(config_path: str, output_root: Path | None = None) -> Path:
     if "scalability" in exp.experiments:
         _run_scalability(metrics_dir, scenario, exp, seeds[0])
 
-    # ---- Build report artifacts ------------------------------------------- #
+    # ---- Build report artifacts + manuscript data map --------------------- #
+    from ..reporting.manuscript import build_manuscript_map
     from ..reporting.report import build_report
     report_dir = build_report(exp.run_group, out)
+    build_manuscript_map(exp.run_group, out)
     log.info("campaign %s done -> %s", exp.run_group, report_dir)
     return report_dir
 

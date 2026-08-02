@@ -95,3 +95,14 @@ def test_reporting_from_synthetic_metrics(tmp_path):
     assert (report_dir / "table_3_detection.md").exists()
     assert (tmp_path / "figures" / rg / "fig_4_confusion_matrix.png").exists()
     assert (tmp_path / "figures" / rg / "fig_5_latency.svg").exists()
+
+    # Manuscript data map ties [DATA REQUIRED] items to computed values.
+    from aegis_uav.reporting.manuscript import build_manuscript_map
+
+    map_path = build_manuscript_map(rg, tmp_path)
+    assert map_path.exists()
+    import json as _json
+    items = _json.loads((report_dir / "manuscript_data_map.json").read_text())
+    labels = {r["manuscript_item"] for r in items}
+    assert "Feature vector dimension d" in labels
+    assert any(l.startswith("Detection F1 - fused_framework") for l in labels)
