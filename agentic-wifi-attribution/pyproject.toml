@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "awa-core"
+version = "0.1.0"
+description = "Agentic Wi-Fi Spatial Attribution Readiness Platform — reproducible reference core (RSSI + FTM/RTT + 802.11bf fusion, explainable Bayesian localisation, readiness assessment, SAR)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "AWA reference-core contributors" }]
+keywords = [
+  "indoor-localization", "wi-fi", "rssi", "ftm", "rtt", "802.11bf",
+  "wlan-sensing", "bayesian-localization", "digital-twin", "agentic-ai",
+  "federated-learning", "technology-readiness", "trl", "soc", "siem", "soar",
+  "critical-information-infrastructure", "reproducibility",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Security",
+]
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+  "matplotlib>=3.7",
+  "jsonschema>=4.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "jupyter", "nbconvert"]
+
+[project.urls]
+Homepage = "https://github.com/omega2417/bnt"
+Repository = "https://github.com/omega2417/bnt"
+
+[tool.setuptools]
+packages = [
+  "awa", "awa.telemetry", "awa.localization", "awa.agents",
+  "awa.readiness", "awa.evidence", "awa.digital_twin",
+]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]

@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/awa/schemas/sar.schema.json",
+  "title": "Spatial Attribution Record (SAR)",
+  "description": "Machine-readable, hash-anchored evidentiary record produced per incident (prompt Module 12). Contains no real CII coordinates.",
+  "type": "object",
+  "required": [
+    "incident_id", "entity_id", "site_id", "time_window",
+    "data_schema_version", "map_crs", "MAP", "zone_posterior",
+    "HPD_geometry", "HPD_mass", "uncertainty_metrics", "RSSI_posterior",
+    "modality_consistency", "missing_modalities", "quality_components",
+    "drift_state", "threat_state", "anomaly_score", "model_version",
+    "radiomap_version", "calibration_version", "policy_version",
+    "provenance_hash", "recommended_action", "decision_tier",
+    "human_review_status", "readiness_profile", "created_at", "signature"
+  ],
+  "properties": {
+    "incident_id": {"type": "string"},
+    "entity_id": {"type": "string", "description": "Pseudonymised source id"},
+    "site_id": {"type": "string"},
+    "time_window": {
+      "type": "array", "items": {"type": "string"},
+      "minItems": 2, "maxItems": 2
+    },
+    "data_schema_version": {"type": "string"},
+    "map_crs": {"type": "string"},
+    "MAP": {
+      "type": "array", "items": {"type": "number"},
+      "minItems": 2, "maxItems": 2,
+      "description": "Maximum-a-posteriori coordinate [x, y] in map_crs"
+    },
+    "zone_posterior": {
+      "type": "object",
+      "additionalProperties": {"type": "number", "minimum": 0, "maximum": 1}
+    },
+    "HPD_geometry": {"type": "object"},
+    "HPD_mass": {"type": "number", "minimum": 0, "maximum": 1},
+    "uncertainty_metrics": {"type": "object"},
+    "RSSI_posterior": {"type": ["object", "null"]},
+    "FTM_posterior": {"type": ["object", "null"]},
+    "WLAN_sensing_context": {"type": ["object", "null"]},
+    "modality_consistency": {
+      "type": "object",
+      "required": ["status"],
+      "properties": {
+        "status": {"enum": ["CONSISTENT", "UNCERTAIN", "CONFLICT"]}
+      }
+    },
+    "sensor_contributions": {
+      "type": "object",
+      "additionalProperties": {"type": "number"}
+    },
+    "missing_modalities": {"type": "array", "items": {"type": "string"}},
+    "quality_components": {"type": "object"},
+    "drift_state": {"type": "object"},
+    "threat_state": {"type": "object"},
+    "anomaly_score": {"type": "number", "minimum": 0, "maximum": 1},
+    "model_version": {"type": "string"},
+    "radiomap_version": {"type": "string"},
+    "digital_twin_version": {"type": ["string", "null"]},
+    "calibration_version": {"type": "string"},
+    "policy_version": {"type": "string"},
+    "playbook_version": {"type": ["string", "null"]},
+    "evidence_references": {"type": "array", "items": {"type": "string"}},
+    "recommended_action": {"type": "string"},
+    "decision_tier": {"type": "integer", "minimum": 0, "maximum": 6},
+    "human_review_status": {
+      "enum": ["not_required", "pending", "approved", "rejected"]
+    },
+    "readiness_profile": {"type": "object"},
+    "created_at": {"type": "string"},
+    "provenance_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "signature": {"type": "string"}
+  },
+  "additionalProperties": true
+}

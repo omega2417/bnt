@@ -1,0 +1,41 @@
+{
+  "title": "Agentic Wi-Fi Spatial Attribution Readiness Platform — Reproducible Reference Core and Colab Notebooks",
+  "description": "<p>Reproducible reference implementation of the core scientific machinery of an <em>Agentic Wi-Fi Spatial Attribution Readiness Platform for Critical Information Infrastructure</em>. The package provides explainable Bayesian localisation that fuses three modalities (RSSI fingerprinting, FTM/RTT ranging, and IEEE 802.11bf WLAN sensing) with robust likelihoods and an explicit missing-modality mask; uncertainty quantification (posterior, highest-posterior-density region, entropy, sharpness, zone probabilities, multimodality, calibration); cross-modal consistency scoring (HPD overlap, MAP Mahalanobis distance, Jensen-Shannon divergence) yielding CONSISTENT / UNCERTAIN / CONFLICT; a lightweight digital twin of the radio environment for synthetic telemetry, drift injection and twin-residual threat cues; a ten-agent event-driven orchestrator; a Technology / Commercialisation / Integration / Operational Readiness (TRL/CRL/IRL/OR) model with non-compensatory gate rules; and a hash-anchored, machine-readable Spatial Attribution Record (SAR) for SOC/SIEM/SOAR.</p><p>Two Google Colab notebooks are included: (1) an <strong>autonomous</strong> notebook that installs its own dependencies and runs the full pipeline from scratch, and (2) a <strong>pre-computed</strong> notebook with saved computations and visualisations (posterior heatmaps, HPD regions, calibration and readiness plots, adversarial-scenario comparison).</p><p><strong>Note:</strong> all telemetry is synthetic; the artefact contains no real coordinates or configurations of any critical information infrastructure. No experimental performance advantage is claimed without data; limitations are documented.</p>",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "MIT",
+  "version": "0.1.0",
+  "language": "eng",
+  "keywords": [
+    "indoor localization",
+    "Wi-Fi",
+    "RSSI fingerprinting",
+    "FTM/RTT",
+    "IEEE 802.11bf",
+    "WLAN sensing",
+    "Bayesian localization",
+    "uncertainty quantification",
+    "digital twin",
+    "agentic AI",
+    "federated learning",
+    "technology readiness level",
+    "TRL/CRL/IRL",
+    "spatial attribution",
+    "SOC SIEM SOAR",
+    "critical information infrastructure",
+    "reproducible research"
+  ],
+  "creators": [
+    {
+      "name": "AWA reference-core contributors"
+    }
+  ],
+  "notes": "Synthetic data only. Reference/research artefact; not a production system. See README.md for reproducibility and limitations.",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/omega2417/bnt",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+# Runtime dependencies for the awa reference core.
+# Pinned with lower bounds; the code is tested with the versions in the
+# right-hand comments.  Colab already ships numpy/scipy/matplotlib.
+numpy>=1.24          # tested: 2.4.6
+scipy>=1.10          # tested: 1.17.1
+matplotlib>=3.7      # tested: 3.11.1  (notebooks / visualisation only)
+jsonschema>=4.0      # tested: 4.26.0  (SAR / ReadinessProfile validation)
+
+# Development / testing (optional):
+#   pytest>=7.0

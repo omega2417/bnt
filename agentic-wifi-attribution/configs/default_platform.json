@@ -1,0 +1,45 @@
+{
+  "grid": {
+    "x_min": 0.0,
+    "x_max": 40.0,
+    "y_min": 0.0,
+    "y_max": 25.0,
+    "resolution": 0.5
+  },
+  "path_loss": {
+    "p0_dbm": -40.0,
+    "d0_m": 1.0,
+    "path_loss_exp": 2.8,
+    "shadow_sigma_db": 4.0,
+    "min_rssi_dbm": -95.0
+  },
+  "rssi": {
+    "sigma_db": 4.0,
+    "student_t_dof": 4.0,
+    "use_student_t": true,
+    "contamination_eps": 0.02
+  },
+  "ftm": {
+    "sigma_los_m": 1.0,
+    "sigma_nlos_m": 4.0,
+    "nlos_bias_m": 3.0,
+    "nlos_prob": 0.25,
+    "max_range_m": 60.0
+  },
+  "sensing": {
+    "motion_weight": 0.5,
+    "provenance_floor": 0.3
+  },
+  "fusion": {
+    "hpd_mass": 0.95,
+    "multimodality_rel_threshold": 0.5,
+    "consistency_overlap_uncertain": 0.3,
+    "consistency_overlap_conflict": 0.05,
+    "consistency_mahalanobis_uncertain": 2.5,
+    "consistency_mahalanobis_conflict": 4.0
+  },
+  "data_schema_version": "sar-1.0.0",
+  "model_version": "awa-core-0.1.0",
+  "calibration_version": "synthetic-cal-0.1.0",
+  "policy_version": "policy-demo-0.1.0"
+}

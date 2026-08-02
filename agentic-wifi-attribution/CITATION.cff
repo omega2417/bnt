@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using these metadata."
+title: "Agentic Wi-Fi Spatial Attribution Readiness Platform — Reproducible Reference Core and Colab Notebooks"
+version: "0.1.0"
+date-released: "2026-08-02"
+license: MIT
+type: software
+abstract: >-
+  Reproducible reference implementation of the core scientific machinery of an
+  Agentic Wi-Fi Spatial Attribution Readiness Platform for Critical Information
+  Infrastructure: explainable Bayesian localisation fusing RSSI, FTM/RTT and
+  IEEE 802.11bf WLAN sensing with robust likelihoods and a missing-modality
+  mask; uncertainty quantification and HPD regions; cross-modal consistency;
+  a digital twin for synthetic telemetry and adversarial scenarios; a
+  ten-agent orchestrator; a TRL/CRL/IRL/Operational readiness model with
+  non-compensatory gate rules; and a hash-anchored Spatial Attribution Record.
+  Ships two Google Colab notebooks (autonomous and pre-computed). Uses
+  synthetic data only.
+authors:
+  - name: "AWA reference-core contributors"
+keywords:
+  - "indoor localization"
+  - "Wi-Fi"
+  - "RSSI fingerprinting"
+  - "FTM/RTT"
+  - "IEEE 802.11bf"
+  - "Bayesian localization"
+  - "digital twin"
+  - "agentic AI"
+  - "technology readiness level"
+  - "spatial attribution"
+  - "critical information infrastructure"
+  - "reproducible research"
+repository-code: "https://github.com/omega2417/bnt"

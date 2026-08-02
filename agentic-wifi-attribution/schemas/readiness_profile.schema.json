@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/awa/schemas/readiness_profile.schema.json",
+  "title": "ReadinessProfile",
+  "description": "Integrated technology-readiness profile with non-compensatory gate rules (prompt Module 11.5).",
+  "type": "object",
+  "required": [
+    "system_id", "TRL", "CRL", "IRL", "OperationalReadiness",
+    "evidence_completeness", "blocking_gaps", "gate_findings",
+    "production_ready", "recommended_actions", "residual_risk"
+  ],
+  "properties": {
+    "system_id": {"type": "string"},
+    "TRL": {"type": "integer", "minimum": 1, "maximum": 9},
+    "CRL": {"type": "integer", "minimum": 1, "maximum": 9},
+    "IRL": {"type": "integer", "minimum": 1, "maximum": 9},
+    "OperationalReadiness": {"type": "integer", "minimum": 1, "maximum": 9},
+    "claimed": {
+      "type": "object",
+      "additionalProperties": {"type": "integer", "minimum": 1, "maximum": 9}
+    },
+    "evidence_completeness": {"type": "number", "minimum": 0, "maximum": 1},
+    "blocking_gaps": {"type": "array", "items": {"type": "string"}},
+    "gate_findings": {"type": "array", "items": {"type": "string"}},
+    "production_ready": {"type": "boolean"},
+    "recommended_actions": {"type": "array", "items": {"type": "string"}},
+    "residual_risk": {"enum": ["low", "medium", "high"]}
+  },
+  "additionalProperties": true
+}
