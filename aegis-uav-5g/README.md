@@ -86,6 +86,14 @@ Illustrative outputs of the `smoke` campaign are checked in under
 tables and the manuscript data map without running anything. For the Zenodo-ready
 release procedure see [`docs/DATA_AVAILABILITY.md`](docs/DATA_AVAILABILITY.md).
 
+### Google Colab
+
+[`notebooks/aegis_uav_5g_colab.ipynb`](notebooks/aegis_uav_5g_colab.ipynb) runs
+the whole pipeline in the browser — simulate a mission, inject an attack, run the
+five-agent pipeline, and render the confusion matrix, detection table and latency
+inline; an optional cell runs the full `smoke` campaign. Open it in Colab via
+**File → Upload notebook** (or from GitHub if the repo is public).
+
 ### Docker (one command, full pipeline)
 
 ```bash
