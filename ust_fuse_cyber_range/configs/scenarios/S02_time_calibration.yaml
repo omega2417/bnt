@@ -1,0 +1,23 @@
+scenario_id: S02_time_calibration
+title: Time calibration stress (clock drift)
+description: Exaggerated sensor clock drift to exercise ЛР-1 calibration.
+duration_s: 150.0
+truth_rate_hz: 20.0
+n_targets: 2
+uav_classes:
+- multirotor
+- fixedwing
+trajectory_kinds:
+- orbit
+- orbit
+crossing: false
+weather: clear
+clutter_scale: 1.0
+noise_scale: 1.0
+pd_scale: 1.0
+faults: []
+red_team: []
+tags:
+- clock
+- sync
+lab: ЛР-1

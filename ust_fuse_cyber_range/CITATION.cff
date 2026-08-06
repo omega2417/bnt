@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "UST-Fuse Cyber Range Digital Twin"
+abstract: >-
+  A budget, virtual-first digital twin of the UST-Fuse hybrid multi-sensor UAV
+  detection and tracking range. It emulates radar / EO-IR / RF-SDR / acoustic
+  sensors, time synchronisation, network transport and fault injection; runs two
+  fusion pipelines (naive Reference vs Full UST-Fuse) over identical immutable
+  RAW data; provides a multi-target Kalman tracker, a metrics engine (detection,
+  tracking, calibration, paired statistics), a visualisation suite and
+  field-trial style reports, with full experiment provenance for reproducibility.
+type: software
+version: 1.0.0
+date-released: 2026-08-06
+license: MIT
+repository-code: "https://github.com/omega2417/bnt"
+keywords:
+  - digital twin
+  - cyber range
+  - sensor fusion
+  - multi-target tracking
+  - UAV
+  - counter-UAS
+  - reproducibility
+  - domain randomization
+  - uncertainty calibration
+authors:
+  - family-names: "Prokopovych-Tkachenko"
+    given-names: "Dmytro"
+    affiliation: "University of Customs and Finance, Dnipro, Ukraine"
+  - name: "UST-Fuse Cyber Range contributors"

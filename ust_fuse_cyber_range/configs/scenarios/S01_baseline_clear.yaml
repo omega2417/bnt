@@ -1,0 +1,25 @@
+scenario_id: S01_baseline_clear
+title: Baseline — clear weather, 3 targets
+description: 'Reference mission: three cooperative UAVs, clear sky, no faults.'
+duration_s: 120.0
+truth_rate_hz: 20.0
+n_targets: 3
+uav_classes:
+- multirotor
+- fpv
+- fixedwing
+trajectory_kinds:
+- orbit
+- ingress
+- lemniscate
+crossing: false
+weather: clear
+clutter_scale: 1.0
+noise_scale: 1.0
+pd_scale: 1.0
+faults: []
+red_team: []
+tags:
+- baseline
+- fusion
+lab: ЛР-3

@@ -1,0 +1,25 @@
+scenario_id: S07_domain_night
+title: Domain shift — night operations
+description: 'Night profile: EO degraded, RF/radar relatively better (ЛР-6).'
+duration_s: 130.0
+truth_rate_hz: 20.0
+n_targets: 3
+uav_classes:
+- multirotor
+- silent_glider
+- fpv
+trajectory_kinds:
+- orbit
+- orbit
+- ingress
+crossing: false
+weather: night
+clutter_scale: 1.0
+noise_scale: 1.0
+pd_scale: 1.0
+faults: []
+red_team: []
+tags:
+- domain
+- weather
+lab: ЛР-6

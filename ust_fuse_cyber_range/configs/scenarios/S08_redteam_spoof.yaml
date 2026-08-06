@@ -1,0 +1,32 @@
+scenario_id: S08_redteam_spoof
+title: Red-team — spoofed telemetry
+description: Injected false detections near true targets (section 5 red-team).
+duration_s: 140.0
+truth_rate_hz: 20.0
+n_targets: 3
+uav_classes:
+- multirotor
+- fpv
+- fixedwing
+trajectory_kinds:
+- orbit
+- ingress
+- lemniscate
+crossing: false
+weather: haze
+clutter_scale: 1.0
+noise_scale: 1.0
+pd_scale: 1.0
+faults:
+- kind: spoof
+  sensor: RAD-1
+  t0: 30.0
+  t1: 110.0
+  count: 60
+  offset_m: 60.0
+red_team:
+- spoofed_telemetry
+tags:
+- redteam
+- security
+lab: ЛР-5

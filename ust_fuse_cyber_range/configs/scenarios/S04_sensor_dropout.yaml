@@ -1,0 +1,29 @@
+scenario_id: S04_sensor_dropout
+title: Fault tolerance — radar dropout
+description: Radar goes dark 50–90 s; fusion must coast on passive sensors.
+duration_s: 140.0
+truth_rate_hz: 20.0
+n_targets: 3
+uav_classes:
+- multirotor
+- fpv
+- fixedwing
+trajectory_kinds:
+- orbit
+- ingress
+- orbit
+crossing: false
+weather: clear
+clutter_scale: 1.0
+noise_scale: 1.0
+pd_scale: 1.0
+faults:
+- kind: sensor_dropout
+  sensor: RAD-1
+  t0: 50.0
+  t1: 90.0
+red_team: []
+tags:
+- faults
+- robustness
+lab: ЛР-5

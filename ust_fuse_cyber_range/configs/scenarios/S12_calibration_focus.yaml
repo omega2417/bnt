@@ -1,0 +1,26 @@
+scenario_id: S12_calibration_focus
+title: Uncertainty calibration mission
+description: Mixed difficulty to populate the reliability diagram (ЛР-7).
+duration_s: 160.0
+truth_rate_hz: 20.0
+n_targets: 4
+uav_classes:
+- multirotor
+- fpv
+- fixedwing
+- silent_glider
+trajectory_kinds:
+- orbit
+- ingress
+- lemniscate
+- hover_dash
+crossing: false
+weather: haze
+clutter_scale: 1.0
+noise_scale: 1.0
+pd_scale: 1.0
+faults: []
+red_team: []
+tags:
+- calibration
+lab: ЛР-7

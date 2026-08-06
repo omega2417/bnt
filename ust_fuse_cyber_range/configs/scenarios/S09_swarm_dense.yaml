@@ -1,0 +1,31 @@
+scenario_id: S09_swarm_dense
+title: Dense swarm — 6 targets
+description: Six mixed-class UAVs, high clutter — capacity stress.
+duration_s: 150.0
+truth_rate_hz: 20.0
+n_targets: 6
+uav_classes:
+- multirotor
+- fpv
+- fixedwing
+- multirotor
+- fpv
+- silent_glider
+trajectory_kinds:
+- orbit
+- ingress
+- lemniscate
+- orbit
+- hover_dash
+- orbit
+crossing: true
+weather: haze
+clutter_scale: 1.6
+noise_scale: 1.0
+pd_scale: 1.0
+faults: []
+red_team: []
+tags:
+- swarm
+- capacity
+lab: ЛР-4

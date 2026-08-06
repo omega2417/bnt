@@ -1,0 +1,27 @@
+scenario_id: S03_multitarget_crossing
+title: Multi-target crossing (ID-switch stress)
+description: Trajectories forced to cross near the origin (ЛР-4).
+duration_s: 140.0
+truth_rate_hz: 20.0
+n_targets: 4
+uav_classes:
+- multirotor
+- multirotor
+- fpv
+- fpv
+trajectory_kinds:
+- lemniscate
+- lemniscate
+- orbit
+- ingress
+crossing: true
+weather: clear
+clutter_scale: 1.0
+noise_scale: 1.0
+pd_scale: 1.0
+faults: []
+red_team: []
+tags:
+- tracking
+- association
+lab: ЛР-4

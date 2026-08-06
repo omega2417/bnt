@@ -1,0 +1,30 @@
+scenario_id: S05_packet_loss
+title: Fault tolerance — network packet loss
+description: 30% global packet loss between 40 s and 100 s.
+duration_s: 140.0
+truth_rate_hz: 20.0
+n_targets: 3
+uav_classes:
+- multirotor
+- fpv
+- fixedwing
+trajectory_kinds:
+- orbit
+- lemniscate
+- ingress
+crossing: false
+weather: clear
+clutter_scale: 1.0
+noise_scale: 1.0
+pd_scale: 1.0
+faults:
+- kind: packet_loss
+  global: true
+  prob: 0.3
+  t0: 40.0
+  t1: 100.0
+red_team: []
+tags:
+- faults
+- network
+lab: ЛР-5

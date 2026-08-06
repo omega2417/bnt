@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ust-fuse-cyber-range"
+version = "1.0.0"
+description = "Budget hybrid cyber-range digital twin for UAV multi-sensor detection/tracking (UST-Fuse), Colab- and Zenodo-ready."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Dmytro Prokopovych-Tkachenko" },
+    { name = "UST-Fuse Cyber Range contributors" },
+]
+keywords = [
+    "digital-twin", "cyber-range", "sensor-fusion", "multi-target-tracking",
+    "kalman-filter", "uav", "counter-uas", "simulation", "reproducibility",
+    "calibration", "domain-randomization", "colab", "zenodo",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "numpy>=1.23",
+    "scipy>=1.9",
+    "matplotlib>=3.6",
+    "pandas>=1.5",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.urls]
+Homepage = "https://github.com/omega2417/bnt"
+Documentation = "https://github.com/omega2417/bnt/tree/main/ust_fuse_cyber_range/docs"
+
+[project.scripts]
+ust-fuse = "ust_fuse.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

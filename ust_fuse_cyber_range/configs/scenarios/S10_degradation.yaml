@@ -1,0 +1,30 @@
+scenario_id: S10_degradation
+title: Sensor degradation — EO noise burst
+description: EO camera noise inflated 3x between 60–110 s (ЛР-5).
+duration_s: 140.0
+truth_rate_hz: 20.0
+n_targets: 3
+uav_classes:
+- multirotor
+- fpv
+- fixedwing
+trajectory_kinds:
+- orbit
+- ingress
+- orbit
+crossing: false
+weather: clear
+clutter_scale: 1.0
+noise_scale: 1.0
+pd_scale: 1.0
+faults:
+- kind: degradation
+  sensor: EO-1
+  t0: 60.0
+  t1: 110.0
+  noise_scale: 3.0
+red_team: []
+tags:
+- faults
+- degradation
+lab: ЛР-5

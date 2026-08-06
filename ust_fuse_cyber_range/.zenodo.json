@@ -1,0 +1,32 @@
+{
+  "title": "UST-Fuse Cyber Range Digital Twin",
+  "description": "<p>A budget, virtual-first <strong>digital twin</strong> of the UST-Fuse hybrid multi-sensor UAV detection/tracking range. The software emulates radar / EO-IR / RF-SDR / acoustic sensors, time synchronisation (clock drift and calibration), network transport and fault injection; it runs two fusion pipelines &mdash; a naive <em>Reference</em> and the <em>Full UST-Fuse</em> &mdash; over identical immutable RAW data, tracks targets with a Kalman multi-target tracker (GNN / JPDA-lite association), and scores detection, tracking (RMSE, OSPA, MOTA, ID switches), calibration (ECE, Brier, reliability, selective risk) and paired statistics (effect size, 95% CI, power). It ships a rich visualisation suite, field-trial style bilingual (Ukrainian/English) reports, twelve built-in scenarios spanning ten lab works (&#1051;&#1056;-1&hellip;&#1051;&#1056;-10), a Colab notebook and full experiment provenance for reproducibility.</p>",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": [
+    "digital twin",
+    "cyber range",
+    "sensor fusion",
+    "multi-target tracking",
+    "Kalman filter",
+    "UAV",
+    "counter-UAS",
+    "reproducibility",
+    "uncertainty calibration",
+    "domain randomization",
+    "Google Colab"
+  ],
+  "creators": [
+    {
+      "name": "Prokopovych-Tkachenko, Dmytro",
+      "affiliation": "University of Customs and Finance, Dnipro, Ukraine"
+    },
+    {
+      "name": "UST-Fuse Cyber Range contributors"
+    }
+  ],
+  "notes": "Budget modification of the UST-Fuse field-range scientific-technical proposal. Synthetic data are labelled as such and are not mixed with field data without an explicit provenance indicator.",
+  "version": "1.0.0",
+  "language": "eng"
+}

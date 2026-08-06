@@ -1,0 +1,24 @@
+scenario_id: S11_silent_glider
+title: Low-observable silent glider
+description: Non-RF-emitting platform invisible to SDR — fusion must rely on radar/EO.
+duration_s: 140.0
+truth_rate_hz: 20.0
+n_targets: 3
+uav_classes:
+- silent_glider
+- multirotor
+- fpv
+trajectory_kinds:
+- ingress
+- orbit
+- lemniscate
+crossing: false
+weather: clear
+clutter_scale: 1.0
+noise_scale: 1.0
+pd_scale: 1.0
+faults: []
+red_team: []
+tags:
+- low_observable
+lab: ЛР-2
