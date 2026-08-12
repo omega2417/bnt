@@ -1,0 +1,21 @@
+# Prescribed sensitivity ranges for the ensemble analysis (manuscript Table A2).
+# These are PRESCRIBED SENSITIVITY RANGES, not experimentally measured
+# uncertainties. Sampling is Latin Hypercube (scipy.stats.qmc).
+ensemble:
+  N: 100
+  horizon_T: 400.0
+  h: 0.05
+  x_cat: 0.6
+  seed: 12345
+ranges:
+  initiating_fault_magnitude: [0.44, 0.66]      # x_s(0) +-20%
+  initiating_rdc: uniform_among_10_RDC
+  initial_backlog: pm_10_percent_of_q_star
+  initial_history_phase: [0.0, 6.283185]        # U(0, 2pi)
+  history_perturbation_amplitude: [0.0, 0.05]   # 0-5% of baseline state
+  fractional_orders_alpha_beta: baseline_pm_0.05
+  propagation_and_backlog_params: baseline_pm_10_percent
+  priority_conflict_params: baseline_pm_10_percent
+  reconfiguration_rates: baseline_pm_10_percent
+  capacity_threshold_xi: baseline_pm_5_percent
+  delays: baseline_pm_20_percent

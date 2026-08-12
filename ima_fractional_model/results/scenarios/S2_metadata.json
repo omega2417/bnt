@@ -1,0 +1,23 @@
+{
+  "name": "S2",
+  "Rc": 1.263710799190382,
+  "catastrophe": false,
+  "T_cat": null,
+  "terminal_cascade_size": 0.0,
+  "n_degraded": 0,
+  "peak_backlog": 0.47994233913884254,
+  "max_dalA": 0.08453658685136899,
+  "relaxation_time": null,
+  "nan_flag": false,
+  "params": {
+    "kappa_scale": 1.6,
+    "xi": 0.75,
+    "alpha": 0.8,
+    "beta_order": 0.8,
+    "seed_node": "RDC1",
+    "seed_magnitude": 0.55,
+    "T": 400.0,
+    "h": 0.05,
+    "x_cat": 0.6
+  }
+}

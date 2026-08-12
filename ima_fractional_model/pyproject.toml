@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ima-fractional-model"
+version = "1.0.0"
+description = "Delayed Fractional-Order Graph Dynamics for Cascade Escalation and Reconfiguration Failure in Integrated Modular Avionics -- synthetic reproducibility model"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+  { name = "Korchenko et al." }
+]
+keywords = ["fractional-order", "integrated modular avionics", "cascade failure",
+            "Caputo derivative", "time delay", "Mittag-Leffler stability",
+            "reconfiguration", "mixed criticality"]
+dependencies = [
+  "numpy>=1.24", "scipy>=1.10", "pandas>=1.5", "matplotlib>=3.6",
+  "networkx>=3.0", "scikit-learn>=1.2", "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7.0"]
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

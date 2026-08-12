@@ -1,0 +1,23 @@
+{
+  "name": "S3",
+  "Rc": 1.263710799190382,
+  "catastrophe": true,
+  "T_cat": 102.75,
+  "terminal_cascade_size": 0.7272727272727273,
+  "n_degraded": 16,
+  "peak_backlog": 4.3762503916591955,
+  "max_dalA": 1.0,
+  "relaxation_time": null,
+  "nan_flag": false,
+  "params": {
+    "kappa_scale": 1.6,
+    "xi": 0.38,
+    "alpha": 0.8,
+    "beta_order": 0.8,
+    "seed_node": "RDC1",
+    "seed_magnitude": 0.55,
+    "T": 400.0,
+    "h": 0.05,
+    "x_cat": 0.6
+  }
+}

@@ -1,0 +1,15 @@
+# Scenario S3 -- Catastrophic escalation (supercritical Rc > 1 and insufficient
+# reconfiguration capacity; xi = 0.38). Global load crosses the capacity
+# threshold, pi -> 1, the suppression loop collapses, and a global cascade
+# develops. Manuscript: Tcat ~= 101.
+name: S3
+description: Catastrophic escalation (Rc > 1, reconfiguration collapses under load)
+kappa_scale: 1.60
+xi: 0.38
+alpha: 0.8
+beta_order: 0.8
+seed_node: RDC1
+seed_magnitude: 0.55
+T: 400.0
+h: 0.05
+x_cat: 0.6

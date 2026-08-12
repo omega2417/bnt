@@ -1,0 +1,14 @@
+# Scenario S1 -- Fault absorption (subcritical, Rc < 1).
+# A single-fault seed in an RDC is absorbed; the system returns to the nominal
+# equilibrium (Theorem 2 regime). Manuscript: Rc = 0.82.
+name: S1
+description: Fault absorption below the cascade threshold (Rc < 1)
+kappa_scale: 0.93        # varkappa (coupling scale), Table 1
+xi: 0.55                 # reconfiguration capacity threshold
+alpha: 0.8
+beta_order: 0.8
+seed_node: RDC1
+seed_magnitude: 0.55     # x_s(0)
+T: 200.0
+h: 0.05
+x_cat: 0.6

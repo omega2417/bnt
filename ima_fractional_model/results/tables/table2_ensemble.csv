@@ -1,0 +1,4 @@
+scenario,catastrophic_runs,P_cat,P_cat_CI,median_Tcat,median_Tcat_CI,IQR_Tcat,median_terminal_cascade
+S1,0/100,0.0,"[0.000, 0.037]",Not reached,n/a,n/a,0.0%
+S2,0/100,0.0,"[0.000, 0.037]",Not reached,n/a,n/a,0.0%
+S3,76/100,0.76,"[0.668, 0.833]",103.0,"[83.0, 134.7]","[50.6, 125.7]",72.7%

@@ -1,0 +1,16 @@
+symbol,value
+n (CPM/SW/RDC),22 (8/4/10)
+DAL A/B/C,4/8/10 nodes
+"alpha, beta (baseline)","0.8, 0.8"
+mu (intrinsic recovery),0.6
+beta_base (transmission),0.256
+gamma (backlog->degradation),0.15
+eta (priority-conflict gain),0.22
+theta (conflict intensity),0.4
+r (reconfig DAL A/B/C),1.6/0.6/0.25
+c (service capacity),1.1
+delta (backlog drain),0.3
+spillover w_ij,0.04
+"kappa, nu (Eq. 6)","14.0, 0.35"
+x_cat (certification threshold),0.6
+"h, T (grid step, horizon)","0.05, 200-400"

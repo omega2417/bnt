@@ -1,0 +1,14 @@
+# Scenario S2 -- Reconfiguration-contained cascade (supercritical Rc > 1 but
+# Health Monitoring/reconfiguration remains effective; xi = 0.75).
+# The cascade is confined; DAL-A does not cross the catastrophic threshold.
+name: S2
+description: Reconfiguration-contained cascade (Rc > 1, reconfiguration effective)
+kappa_scale: 1.60
+xi: 0.75
+alpha: 0.8
+beta_order: 0.8
+seed_node: RDC1
+seed_magnitude: 0.55
+T: 400.0
+h: 0.05
+x_cat: 0.6
