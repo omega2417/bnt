@@ -1,0 +1,12 @@
+# Dataset build config consumed by `aegis build-dataset`.
+name: dataset_v1
+run_group: dataset_v1
+scenario: configs/scenarios/base_20_uav.yaml
+attacks_dir: configs/attacks
+dataset:
+  scenario: configs/scenarios/base_20_uav.yaml
+  missions_per_class: 6
+  seeds: [0, 1, 2]
+  train_frac: 0.6
+  val_frac: 0.2
+  test_frac: 0.2

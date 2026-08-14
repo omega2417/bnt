@@ -1,0 +1,9 @@
+# T3 DoS - surge in PPS/BPS, loss, RTT and session failures.
+attack:
+  id: T3
+  enabled: true
+  onset_s: 50
+  duration_s: 40
+  intensity: 0.7
+  target_uavs: [1]
+  profile: burst

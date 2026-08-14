@@ -1,0 +1,9 @@
+# T2 C2 hijacking / command injection - anomalous command rate/source/session.
+attack:
+  id: T2
+  enabled: true
+  onset_s: 45
+  duration_s: 40
+  intensity: 0.6
+  target_uavs: [3]
+  profile: sudden

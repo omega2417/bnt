@@ -1,0 +1,29 @@
+{
+  "title": "Aegis-UAV-5G: Reproducible Agentic AI Testbed for Detection, Attribution and Containment of Cyberattacks in 5G-Enabled UAV Networks",
+  "description": "A modular, fully reproducible research testbed that generates the complete experimental evidence base (detection/attribution/containment metrics, tables, figures, statistical tests and per-incident explanation objects) for the study of agentic AI for autonomous cyber-defence of 5G-enabled UAV networks. Level-1 synthetic evaluation with a five-agent pipeline (ADA, TCA, AAA, RSA, PEA) over a shared incident blackboard.",
+  "upload_type": "software",
+  "license": "MIT",
+  "keywords": [
+    "agentic AI",
+    "multi-agent systems",
+    "UAV",
+    "5G",
+    "FANET",
+    "intrusion detection",
+    "attack attribution",
+    "autonomous containment",
+    "explainable security",
+    "reproducible research"
+  ],
+  "creators": [
+    { "name": "Aegis-UAV-5G Contributors" }
+  ],
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "identifier": "Agentic Artificial Intelligence for Autonomous Detection, Attribution, and Containment of Cyberattacks in 5G-Enabled UAV Networks",
+      "resource_type": "publication-article"
+    }
+  ]
+}

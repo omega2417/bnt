@@ -1,0 +1,18 @@
+{
+  "run_group": "smoke",
+  "artifacts": [
+    "table_2_parameters",
+    "table_3_detection",
+    "table_4_ablation",
+    "table_5_containment",
+    "table_6_overhead",
+    "fig_4_confusion_matrix",
+    "fig_5_latency",
+    "scalability_plot",
+    "sensitivity_plots",
+    "statistical_tests",
+    "error_analysis"
+  ],
+  "fused_f1_mean": 0.8155083887654394,
+  "fused_auroc_mean": 0.9722137585920193
+}

@@ -1,0 +1,6 @@
+# Attack Attribution Agent - hierarchical calibrated classifier.
+classifier: hist_gradient_boosting
+calibration: isotonic
+hierarchical: true
+max_iter: 200
+n_estimators: 200

@@ -1,0 +1,14 @@
+services:
+  aegis:
+    build: .
+    image: aegis-uav-5g:latest
+    volumes:
+      - ./artifacts:/app/artifacts
+      - ./datasets:/app/datasets
+      - ./configs:/app/configs
+    environment:
+      - MPLBACKEND=Agg
+      - PYTHONHASHSEED=0
+    # Override with e.g.:
+    #   docker compose run --rm aegis aegis campaign --config configs/experiments/paper_v1.yaml
+    command: ["aegis", "campaign", "--config", "configs/experiments/smoke.yaml"]

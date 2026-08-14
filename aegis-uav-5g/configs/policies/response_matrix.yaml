@@ -1,0 +1,57 @@
+# Response policy for the RSA (Section 4.5, manuscript Table matrix B/C/D).
+#
+# Qualitative expert levels {low, medium, high} are mapped to numeric benefit
+# values below.  These matrices are expert-defined per mission-safety policy and
+# MUST be documented as such in the paper (they are not learned from test data).
+
+# Qualitative -> numeric mapping for the benefit matrix B(r, a).
+level_values:
+  low: 0.25
+  medium: 0.55
+  high: 0.9
+
+# Benefit B(r, a): expected containment benefit of response r against attack a.
+benefit:
+  T1: {traffic_isolation: low,    route_reconfiguration: medium, session_termination: low,    credential_revocation: low,    secure_channel_migration: medium, escalate: medium}
+  T2: {traffic_isolation: medium, route_reconfiguration: low,    session_termination: high,   credential_revocation: high,   secure_channel_migration: high,   escalate: medium}
+  T3: {traffic_isolation: high,   route_reconfiguration: medium, session_termination: medium, credential_revocation: low,    secure_channel_migration: high,   escalate: medium}
+  T4: {traffic_isolation: high,   route_reconfiguration: high,   session_termination: low,    credential_revocation: medium, secure_channel_migration: medium, escalate: medium}
+  T5: {traffic_isolation: high,   route_reconfiguration: medium, session_termination: high,   credential_revocation: high,   secure_channel_migration: medium, escalate: medium}
+  T6: {traffic_isolation: medium, route_reconfiguration: medium, session_termination: high,   credential_revocation: high,   secure_channel_migration: high,   escalate: high}
+
+# Resource cost C(r) of each response (normalised 0..1).
+cost:
+  traffic_isolation: 0.3
+  route_reconfiguration: 0.4
+  session_termination: 0.2
+  credential_revocation: 0.3
+  secure_channel_migration: 0.5
+  escalate: 0.1
+
+# Mission-disruption risk D(r) of each response (normalised 0..1).
+disruption:
+  traffic_isolation: 0.5
+  route_reconfiguration: 0.4
+  session_termination: 0.3
+  credential_revocation: 0.35
+  secure_channel_migration: 0.45
+  escalate: 0.15
+
+# Safety mask: responses that are never allowed for a given attack class
+# (would harm the protected asset). R_safe(E) = R \ forbidden.
+forbidden:
+  T1: []
+  T2: []
+  T3: []
+  T4: []
+  T5: []
+  T6: []
+
+# Static baseline policy B4: fixed attack -> response map (no utility reasoning).
+static_policy:
+  T1: secure_channel_migration
+  T2: session_termination
+  T3: traffic_isolation
+  T4: route_reconfiguration
+  T5: session_termination
+  T6: credential_revocation
