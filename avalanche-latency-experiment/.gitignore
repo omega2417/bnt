@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+build/
+dist/
+.venv/
+# The raw dataset is regenerable byte for byte from the master seed
+# (`make pipeline`) and is shipped inside the Zenodo archive, so it is not
+# tracked here.  The derived results in `results/` are tracked: they are what
+# a reader looks at first, and their manifest proves they match the data.
+data/raw/
+traces/

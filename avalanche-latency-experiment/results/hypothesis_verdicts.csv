@@ -1,0 +1,4 @@
+hypothesis,statement,rule,evidence,supported
+H1,shorter target pacing lowers the block-wait component,median observed block interval is monotone in the target,C4: 250 ms; C3: 500 ms; C2: 750 ms; C1: 1000 ms,True
+H2,the gain is non-linear and shrinks as queueing grows,"realisation efficiency of C4 vs C1 falls with load, over loads where C1 stays stable",realisation efficiency 95 % at 25 tx/s vs 96 % at 200 tx/s (predicted gain 742 ms from C1 to C4),False
+H3,C4 need not own the tail,another profile matches or beats C4 on mean p99 in at least one stratum,C4 kept the lowest p99 in every stratum,False

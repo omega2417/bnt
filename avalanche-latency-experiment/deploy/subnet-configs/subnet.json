@@ -1,0 +1,7 @@
+// Install as <subnet-config-dir>/<subnetID>.json
+// proposerMinBlockDelay is zeroed so ProposerVM does not add a second
+// pacing floor on top of min-delay-target (ACP-226).
+{
+  "validatorOnly": true,
+  "proposerMinBlockDelay": "0s"
+}

@@ -1,0 +1,20 @@
+# Telemetry scrape configuration for the campaign (protocol Table 8).
+# Node metrics are sampled at 1 s so that CPU, disk and queue depth line up
+# with the per-second resource series the analysis expects.
+global:
+  scrape_interval: 1s
+  evaluation_interval: 5s
+  external_labels:
+    campaign: avalanche-latency
+scrape_configs:
+  - job_name: avalanchego
+    metrics_path: /ext/metrics
+    static_configs:
+      - targets: ["v1:9650", "v2:9650", "v3:9650", "v4:9650", "v5:9650"]
+        labels: {role: validator}
+      - targets: ["r1:9650", "r2:9650"]
+        labels: {role: read_node}
+  - job_name: node_exporter
+    static_configs:
+      - targets: ["v1:9100", "v2:9100", "v3:9100", "v4:9100", "v5:9100",
+                  "r1:9100", "r2:9100"]

@@ -1,0 +1,56 @@
+cff-version: 1.2.0
+message: "If you use this software or dataset, please cite it as below."
+title: "Reproducible field experiment: confirmed-state access latency in a permissioned Avalanche L1"
+abstract: >-
+  Protocol, software and reference dataset for measuring T_visible, the time
+  from submitting a signed transaction until the first independent read node
+  returns the accepted updated state, across five block-production profiles,
+  three topologies and five offered loads on a two-site cyber range. The
+  package contains the executable protocol, the measurement client, a
+  documented reference model, the full statistical plan with paired bootstrap
+  confidence intervals, pre-registered stability rules, and every table and
+  figure of the accompanying article.
+type: software
+version: 1.0.0
+date-released: "2026-08-22"
+license: MIT
+license-url: "https://opensource.org/licenses/MIT"
+repository-code: "[DATA REQUIRED: repository URL]"
+url: "[DATA REQUIRED: Zenodo record URL]"
+doi: "[DATA REQUIRED: Zenodo DOI]"
+authors:
+  - family-names: "[DATA REQUIRED]"
+    given-names: "[DATA REQUIRED]"
+    affiliation: "University of Customs and Finance, Dnipro, Ukraine"
+    orcid: "[DATA REQUIRED: https://orcid.org/0000-0000-0000-0000]"
+keywords:
+  - blockchain
+  - Avalanche
+  - Subnet-EVM
+  - latency
+  - confirmed state
+  - reproducibility
+  - cyber range
+  - paired bootstrap
+references:
+  - type: standard
+    title: "ACP-226: Dynamic Minimum Block Times"
+    authors:
+      - family-names: Buttolph
+        given-names: S.
+      - family-names: Kaplan
+        given-names: M.
+    url: "https://build.avax.network/docs/acps/226-dynamic-minimum-block-times"
+  - type: article
+    title: "Network Threat Detection in IaaS Environments Based on Flow Log Data"
+    authors:
+      - family-names: "Wójcik"
+        given-names: H.
+      - family-names: Roszkowski
+        given-names: M.
+      - family-names: Mycek
+        given-names: A.
+    journal: "Journal of Telecommunications and Information Technology"
+    issue: "3"
+    year: 2026
+    doi: "10.26636/jtit.2026.3.2628"

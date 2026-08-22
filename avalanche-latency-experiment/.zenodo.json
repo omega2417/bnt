@@ -1,0 +1,46 @@
+{
+  "title": "Reproducible field experiment: confirmed-state access latency in a permissioned Avalanche L1",
+  "upload_type": "software",
+  "description": "<p>Protocol, software and reference dataset for measuring <strong>T_visible</strong> — the time from submitting a signed transaction until the first independent read node returns the accepted updated state — in a permissioned Avalanche L1 based on Subnet-EVM, on the two-site cyber range of the University of Customs and Finance.</p><p>The deposition contains: the executable experimental protocol (English and Ukrainian); the measurement client that runs on the load generators; chain and subnet configurations for the five block-production profiles (stock, 1000, 750, 500, 250 ms); the VisibilityProbe smart contract; a documented reference model that produces a dataset in the campaign's exact schema; the complete statistical plan (run-level reduction, paired bootstrap confidence intervals, Holm correction, pre-registered stability rules); every table and figure of the accompanying article, generated from code; SHA-256 manifests; and a Google Colab notebook that reproduces the whole pipeline end to end.</p><p><strong>Provenance.</strong> Any dataset in this deposition labelled <code>provenance = SIMULATED</code> is reference-model output, included so that the analysis pipeline can be executed and audited before the measurement campaign produces raw logs. It is <em>not</em> a measurement of the cyber range and must not be reported as an experimental result. The file <code>protocol/DATA_REQUIRED.md</code> lists every value a real campaign must supply.</p>",
+  "creators": [
+    {
+      "name": "[DATA REQUIRED: Family, Given]",
+      "affiliation": "University of Customs and Finance, Dnipro, Ukraine",
+      "orcid": "[DATA REQUIRED]"
+    }
+  ],
+  "keywords": [
+    "blockchain",
+    "Avalanche",
+    "Subnet-EVM",
+    "ACP-226",
+    "latency",
+    "confirmed state",
+    "reproducibility",
+    "cyber range",
+    "paired bootstrap",
+    "pre-registration"
+  ],
+  "license": "mit",
+  "access_right": "open",
+  "language": "eng",
+  "version": "1.0.0",
+  "related_identifiers": [
+    {
+      "identifier": "https://build.avax.network/docs/acps/226-dynamic-minimum-block-times",
+      "relation": "references",
+      "resource_type": "publication-technicalnote"
+    },
+    {
+      "identifier": "https://build.avax.network/docs/nodes/chain-configs/subnet-evm",
+      "relation": "references",
+      "resource_type": "publication-technicalnote"
+    },
+    {
+      "identifier": "10.26636/jtit.2026.3.2628",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    }
+  ],
+  "notes": "Code is licensed under MIT; data, figures and documentation under CC BY 4.0. Built with `python -m alp package`, which produces a byte-reproducible archive."
+}

@@ -1,0 +1,4 @@
+topology,c_best,max_sustainable_tps,p99_mean_ms,cpu_p95_pct,equivalent_candidates,reason
+T0_local,C4,400,278.066667,38.429443,C4,lowest mean p99
+T1_vpn,C4,400,344.800000,38.442408,C4,lowest mean p99
+T2_three_region_emulated,C3,400,793.000000,29.591495,C3,lowest mean p99

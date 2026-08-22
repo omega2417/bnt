@@ -1,0 +1,10 @@
+# Analysis pipeline, Colab notebook and tests.
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+matplotlib>=3.7
+
+# Field campaign only: the measurement client that talks to the chain.
+# Not needed to reproduce the analysis, so it is optional here.
+# web3>=6.15
+# eth-account>=0.11

@@ -1,0 +1,16 @@
+\begin{table}[t]
+\caption{Campaign arithmetic, equations (1)-(4). Provenance: DERIVED.  Not a measurement of the cyber range.}
+\label{tab:table_campaign_arithmetic}
+\centering
+\begin{tabular}{lrrrrrr}
+\hline
+quantity & formula & expansion & value & unit & equation & value\_class \\
+\hline
+N\_runs & N\_C * N\_T * N\_lambda * N\_r & 5 * 3 * 5 * 3 & 225.00 & runs & 1 & DERIVED \\
+t\_run & warmup + measure + drain & 5 + 20 + 5 & 30.00 & s & 2 & DERIVED \\
+T\_wall,min & N\_runs * t\_run & 225 * 30 & 6750.00 & s & 3 & DERIVED \\
+T\_wall,min & N\_runs * t\_run / 3600 & 6750 / 3600 & 1.88 & h & 3 & DERIVED \\
+N\_TX & measure\_s * sum(lambda) * N\_C * N\_T * N\_r & 20 * 775 * 5 * 3 * 3 & 697500.00 & tx & 4 & DERIVED \\
+\hline
+\end{tabular}
+\end{table}

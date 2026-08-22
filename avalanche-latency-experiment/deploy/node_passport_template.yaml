@@ -1,0 +1,27 @@
+# Per-node passport (protocol Table 7).  One file per host, committed with
+# the campaign.  Every value below is DATA REQUIRED: the analysis refuses to
+# label a dataset MEASURED while any of them is empty.
+node_id: ""            # NodeID-...
+role: ""               # validator | read_node
+site: ""               # A | B
+hostname: ""
+cpu: ""                # model, cores, base/boost clock
+ram_gib: ""
+disk: ""               # model, interface, NVMe/SSD, filesystem
+nic: ""                # model, negotiated speed, MTU
+os_distribution: ""
+os_kernel: ""
+avalanchego_version: ""
+avalanchego_commit: ""
+subnet_evm_version: ""
+subnet_evm_commit: ""
+network_upgrade: ""
+chain_id: ""
+subnet_id: ""
+blockchain_id: ""
+genesis_sha256: ""
+gas_limit: ""
+fee_config: ""
+clock_source: ""       # chrony/NTP server
+clock_max_offset_ms: ""
+notes: ""

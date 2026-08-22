@@ -1,0 +1,13 @@
+// Chain config for profile C0_stock.
+// Install as ~/.avalanchego/configs/chains/<blockchainID>/config.json
+// C0 is the unchanged configuration of the deployed version: it sets no
+// min-delay-target, so the platform default applies. Record the observed
+// interval instead of assuming one.
+{
+  "allow-unfinalized-queries": false,
+  "metrics-expensive-enabled": true,
+  "log-json-format": true,
+  "state-sync-enabled": false,
+  "pruning-enabled": true,
+  "commit-interval": 4096
+}

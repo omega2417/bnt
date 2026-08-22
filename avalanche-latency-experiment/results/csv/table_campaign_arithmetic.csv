@@ -1,0 +1,6 @@
+quantity,formula,expansion,value,unit,equation,value_class
+N_runs,N_C * N_T * N_lambda * N_r,5 * 3 * 5 * 3,225.000000,runs,1,DERIVED
+t_run,warmup + measure + drain,5 + 20 + 5,30.000000,s,2,DERIVED
+"T_wall,min",N_runs * t_run,225 * 30,6750.000000,s,3,DERIVED
+"T_wall,min",N_runs * t_run / 3600,6750 / 3600,1.880000,h,3,DERIVED
+N_TX,measure_s * sum(lambda) * N_C * N_T * N_r,20 * 775 * 5 * 3 * 3,697500.000000,tx,4,DERIVED
