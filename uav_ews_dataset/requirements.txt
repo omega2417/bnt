@@ -1,0 +1,12 @@
+# Runtime dependencies of the uavews pipeline.
+# Deliberately small: numpy, pandas and PyYAML are the only hard requirements,
+# pyarrow is needed for the canonical Parquet tables, and matplotlib only for the
+# report figures. Everything else - the DCT, the normal quantile function, the
+# PNG codec, the Monte-Carlo null - is implemented in the package so that the
+# release can be regenerated years from now without chasing a dependency tree.
+numpy>=1.24
+pandas>=2.0
+pyarrow>=12.0
+PyYAML>=6.0
+matplotlib>=3.7   # figures only
+pytest>=7.0       # tests only

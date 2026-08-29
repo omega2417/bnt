@@ -1,0 +1,52 @@
+# Controlled vocabularies. These are the only values the validator accepts in
+# the corresponding fields; anything else is a schema violation, not a warning.
+# Taken directly from Tables 4 and 5 of the manuscript.
+
+event_kind: [controlled_flight, verified_observation, weak_observation, negative_control]
+
+modality: [takeoff_event, public_warning, mobile_report, mobile_sensor, image, video, audio]
+
+access_tier: [open, controlled, metadata_only, withdrawn]
+
+missing_reason: [not_observed, sensor_unavailable, withheld_privacy, corrupted, not_applicable]
+
+evidence_tier: [controlled_ground_truth, expert_verified, weak_public_report]
+
+adjudication_status: [not_required, pending, accepted, revised, excluded]
+
+vehicle_presence: [present, absent, uncertain]
+
+movement_direction: [approaching, receding, lateral_stationary, uncertain]
+
+# [[FINAL PLATFORM TAXONOMY]] - provisional; frozen at first major release.
+platform_class: [multirotor_micro, multirotor_small, fixed_wing_small, hybrid_vtol, unknown]
+
+# [[DISTANCE BINS]] - metres, target-to-zone-boundary, provisional.
+distance_interval: ["0-100", "100-300", "300-700", "700-1500", "1500+", unknown]
+
+hard_negative_type: [bird, helicopter, ground_vehicle, wind, anthropogenic_noise, other]
+
+quality_flag:
+  - missing_channel
+  - clipping
+  - silence
+  - low_snr
+  - snr_not_measurable
+  - blur
+  - over_exposure
+  - under_exposure
+  - corruption
+  - speech_detected
+  - sync_out_of_tolerance
+  - near_duplicate
+
+sync_method: [ptp, ntp, gnss_pps, asynchronous_declared]
+
+provenance_activity:
+  - capture
+  - transformation
+  - review
+  - adjudication
+  - deidentification
+  - integrity_verification
+  - release

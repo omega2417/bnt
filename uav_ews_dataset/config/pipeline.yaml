@@ -1,0 +1,163 @@
+# Release-specific parameters for the UAV early-warning dataset pipeline.
+#
+# Every key below corresponds to a bracketed placeholder in the Data Descriptor
+# manuscript. The values shipped here are REHEARSAL DEFAULTS: they are the
+# parameters used to exercise the pipeline on the synthetic dry-run corpus and
+# to size the field trials. They are engineering settings, not measurements.
+# Before a real release each value must be re-derived from the deposited data
+# and from the instrument calibration record, and the manuscript placeholder
+# must be filled from `report/validation_report.json`, never from this file.
+
+release:
+  dataset_title: "Multisource Multimodal Spatiotemporal sUAV Early-Warning Dataset"
+  dataset_version: "0.1.0-rehearsal"      # [[DATASET_VERSION]]
+  doi: null                                # [[DATASET DOI]] - assigned at deposit
+  open_tier_license: null                  # [[OPEN-TIER LICENSE]] - set by institution
+  controlled_tier_terms: null
+  public_spatial_resolution_m: 1000        # [[PUBLIC_SPATIAL_RESOLUTION]] cell edge
+  rotation_policy_days: 30                 # [[ROTATION_POLICY]] for source_id rotation
+  semantic_versioning: true
+
+zone:
+  # Generalized warning zone in a local East-North metric frame (metres).
+  # Real deployments load the operational polygon from the controlled tier;
+  # only the coarsened polygon is ever written to the open tier.
+  name: "ZONE-A"
+  polygon_en_m:
+    - [-1200.0, -900.0]
+    - [ 1200.0, -900.0]
+    - [ 1500.0,  600.0]
+    - [    0.0, 1400.0]
+    - [-1500.0,  600.0]
+
+kinematics:
+  delta_t_s: 2.0             # [[DELTA_T]] evaluation stride for the direction test
+  epsilon_m: null            # [[EPSILON_DISTANCE]]; null => derive from uncertainty
+  epsilon_sigma_multiplier: 3.0   # k in eps = k * sqrt(2) * sigma_d  (see docs)
+  groundtruth_rate_hz: 5.0   # [[GROUND-TRUTH RATE]]
+  groundtruth_sigma_h_m: 0.35     # horizontal 1-sigma of the reference system
+  groundtruth_sigma_v_m: 0.60     # vertical 1-sigma
+  min_track_duration_s: 20.0
+
+windows:
+  pre_event_s: 30.0          # [[PRE_EVENT_DURATION]]
+  post_event_s: 30.0         # [[POST_EVENT_DURATION]]
+  window_span_s: 10.0        # analysis window length inside an event
+  window_hop_s: 5.0
+
+synchronization:
+  min_overlap_s: 1.0         # [[MINIMUM OVERLAP]] required for association
+  min_overlap_fraction: 0.5
+  # An absolute overlap requirement alone is wrong for short observations: a
+  # single still frame has a support of a few tens of milliseconds and can never
+  # accumulate a second of overlap with anything, so an absolute-only rule
+  # silently refuses to associate every image in the corpus. The association
+  # passes when EITHER the absolute overlap is met OR this fraction of the
+  # shorter of the two intervals is covered.
+  sync_tolerance_ms: 250.0   # [[SYNC TOLERANCE]] for the pass/fail statistic
+  clock_uncertainty_ms:      # 1-sigma offset uncertainty assumed per source class
+    site_ptp: 5.0
+    site_ntp: 40.0
+    mobile: 1500.0
+    external_public: 60000.0
+  uncertainty_expansion_k: 2.0    # interval half-width = k * sigma before overlap test
+
+annotation:
+  n_annotators: 3            # [[N_ANNOTATORS]]
+  qualification_threshold: 0.80   # [[QUALIFICATION THRESHOLD]] on adjudicated set
+  confidence_threshold: 0.60      # [[CONFIDENCE THRESHOLD]] below which review is forced
+  boundary_tolerance_s: 1.5       # [[BOUNDARY TOLERANCE]]
+  expert_review_rule: "two_independent_reviews"   # [[EXPERT_REVIEW_RULE]]
+
+splits:
+  train: 0.60
+  val: 0.15
+  test: 0.25
+  temporal_gap_days: 7       # [[TEMPORAL_GAP]] embargo between time-holdout blocks
+  near_duplicate_max_hamming: 4
+  # Radius, in bits of the 64-bit perceptual hash, within which two media objects
+  # are treated as the same content for partitioning. Calibrated on the rehearsal
+  # corpus: true re-encodes separated by at most 2 bits, unrelated objects by at
+  # least 12, so 4 sits in the gap with margin on both sides. Recalibrate against
+  # the first real campaign before the first public release - the gap depends on
+  # the scene content, not only on the hash.
+
+quality_gates:
+  # Acceptance rules enforced by the release gates. A gate failure is recorded,
+  # never silently dropped.
+  schema_pass_rate_min: 1.00
+  checksum_pass_rate_min: 1.00
+  median_completeness_min: 0.95
+  p05_completeness_min: 0.80
+  sync_p95_ms_max: 250.0
+  exact_duplicate_rate_max: 0.00
+  near_duplicate_rate_max: 0.05
+  cross_modal_consistency_min: 0.90
+  krippendorff_alpha_min: 0.67
+  privacy_residual_findings_max: 0
+
+field_trial:
+  # Parameters for planning the campaigns that will replace the rehearsal corpus.
+  target_detection_rate: 0.90     # p1 the trial is powered to demonstrate
+  null_detection_rate: 0.75       # p0 the trial must exclude
+  alpha: 0.05
+  power: 0.80
+  expected_run_loss_rate: 0.15    # runs voided by weather, safety, or sensor fault
+  decision_latency_s: 4.0         # operator decision budget
+  dissemination_latency_s: 6.0    # alert dissemination budget
+  required_actionable_lead_s: 30.0
+
+detectability:
+  # PLANNING ASSUMPTIONS, not measurements. They exist so that the field-trial
+  # geometry can be computed before any hardware is deployed, and so that the
+  # rehearsal corpus has a physically coherent relation between distance and
+  # signal quality. Each value is replaced by a site calibration measurement
+  # during the first trial campaign, and the planning curves are recomputed.
+  acoustic:
+    reference_distance_m: 1.0
+    source_level_db_at_ref:        # broadband level assumed at 1 m, per class
+      multirotor_micro: 68.0
+      multirotor_small: 75.0
+      fixed_wing_small: 72.0
+      hybrid_vtol: 77.0
+    atmospheric_absorption_db_per_m: 0.004   # mid-band, temperate, ~50% RH
+    ambient_noise_db:
+      rural_night: 30.0
+      rural_day: 40.0
+      periurban: 48.0
+      urban: 55.0
+    detector_processing_gain_db: 22.0
+    # Gain of the harmonic-set matched filter used by the acoustic front end:
+    # stacking the blade-pass fundamental with its harmonics and integrating over
+    # a multi-second window recovers a tonal buried well below the broadband
+    # noise floor. Without this term the model predicts detection ranges of tens
+    # of metres, which contradicts reported acoustic sUAV detection performance;
+    # with it the predicted range lands in the few-hundred-metre band. The value
+    # is an assumption to be replaced by the measured ROC of the deployed
+    # detector during the first calibration campaign.
+    detection_snr_db: 6.0          # post-gain SNR at which the detector is usable
+  visual:
+    sensor_width_px: 1920
+    horizontal_fov_deg: 12.0
+    target_span_m:                 # characteristic longest dimension, per class
+      multirotor_micro: 0.30
+      multirotor_small: 0.55
+      fixed_wing_small: 1.40
+      hybrid_vtol: 1.20
+    detection_min_px: 3.0          # apparent extent needed to declare a detection
+    recognition_min_px: 8.0        # apparent extent needed to attempt platform class
+  kinematics_planning:
+    closing_speed_ms:              # planning speeds for the warning-time budget
+      slow: 8.0
+      nominal: 15.0
+      fast: 25.0
+
+flight_matrix:
+  # Factors crossed by the controlled-flight campaigns. The trial-design module
+  # reports how many cells this implies and how many runs each cell needs.
+  platform_class: [multirotor_micro, multirotor_small, fixed_wing_small, hybrid_vtol]
+  approach_geometry: [straight_in, oblique, orbit, overflight]
+  speed_band: [slow, nominal, fast]
+  altitude_band: [low, medium, high]
+  illumination: [day, dusk, night]
+  background: [sky, treeline, built]
