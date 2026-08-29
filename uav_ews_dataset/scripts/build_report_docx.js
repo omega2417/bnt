@@ -288,7 +288,7 @@ push(
 push(
   H('1  Purpose and scope', 1),
   H('1.1  What this document is', 2),
-  P('The Data Descriptor states a data model, five equations, a validation framework, and a set of release tiers. It states them as requirements. This document reports the software project that implements those requirements as running code, explains each calculation to the level of detail needed to reproduce or dispute it, shows what the implementation produces on a controlled rehearsal corpus, and turns the resulting numbers into a concrete plan for the field trials that will replace that corpus with measurements.'),
+  P('The Data Descriptor states a data model, a validation framework, and a set of release tiers, and defines six numbered equations of which the first five govern curation; the sixth is a baseline scoring rule that this pipeline does not compute. It states them as requirements. This document reports the software project that implements those requirements as running code, explains each calculation to the level of detail needed to reproduce or dispute it, shows what the implementation produces on a controlled rehearsal corpus, and turns the resulting numbers into a concrete plan for the field trials that will replace that corpus with measurements.'),
   P('It is written for three readers. An engineer who has to extend or re-run the pipeline needs Sections 2 to 7. A reviewer who wants to check that the manuscript’s equations were implemented as stated needs Section 5. A trials officer planning the first campaign needs Section 9 and the findings in Section 10.'),
 
   H('1.2  What the software does', 2),
@@ -298,7 +298,7 @@ push(
   numbered('It prepares the field trials. Acoustic and visual detection ranges are computed from declared physical assumptions, converted into an operational warning-time budget, and combined with a statistical power calculation to size the flight matrix.'),
 
   H('1.3  What it deliberately does not do', 2),
-  P('It makes no predictive claim. There are no baseline models here, no accuracy figures, and no comparison against other datasets. The manuscript is explicit that baselines exist to verify usability rather than to demonstrate superiority, and the pipeline stops at the point where a usable, documented, leakage-resistant dataset exists.'),
+  P('It makes no predictive claim. There are no baseline models here, no accuracy figures, and no comparison against other datasets. The baseline tasks, their evaluation units and their required metrics are specified in Section 3.11 of the manuscript, and the manuscript is explicit that they exist to verify usability rather than to demonstrate superiority. This pipeline stops where a usable, documented, leakage-resistant dataset exists; the evaluation manifests of Section 7 are what it hands to that protocol.'),
   P('It also invents nothing. Where a value must come from an institution, an instrument, or a measurement — a DOI, a licence, a camera model, an ethics approval — the configuration carries an explicit null and the packaging step emits a requires_completion list rather than a plausible placeholder. A package that quietly supplies its own licence is worse than one that admits it has none.'),
 );
 

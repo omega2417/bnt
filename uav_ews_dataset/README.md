@@ -90,6 +90,24 @@ empirical dataset will need.
 plus a synthetic rehearsal; filing it as a dataset would present a rehearsal
 corpus as measurements.
 
+## Manuscript inserts
+
+`scripts/build_manuscript_section_docx.py` renders Section 3.12 (Software
+Implementation) in the manuscript's own MDPI styles, by using the manuscript as
+the template and replacing only the body — so styles, numbering, headers, line
+numbering and page setup are the manuscript's own, not approximations.
+
+```bash
+python scripts/build_manuscript_section_docx.py ManV1.docx           # standalone insert
+python scripts/build_manuscript_section_docx.py ManV1.docx --merge \
+    -o docs/ManV1_with_Section_3_12.docx                             # placed copy
+```
+
+Merge mode anchors each insertion on text unique to the paragraph it follows and
+raises rather than guessing if an anchor is missing. It also renumbers the
+Abbreviations table from 10 to 12, which is the only existing caption the
+addition disturbs.
+
 ## Layout
 
 ```
