@@ -65,6 +65,31 @@ manuscript's bracketed placeholders. `validation_report.json` carries a
 release is a lookup rather than a transcription - and it carries a
 `PROVENANCE_WARNING` making the distinction explicit.
 
+## Zenodo deposit
+
+`scripts/build_zenodo_package.py` assembles the deposit archive from a pipeline
+run: the code, the rehearsal release package, the raw corpus (so every published
+digest can be verified against actual bytes), the figures, the validation report,
+and the engineering report, plus deposit-level metadata and a top-level integrity
+manifest.
+
+```bash
+python -m uavews.cli all --out build
+npm run report
+python scripts/build_zenodo_package.py          # -> dist/uavews-<version>-zenodo.zip
+```
+
+The archive deliberately ships with **no licence file and no `license` key** in
+`.zenodo.json`: choosing one is the depositing institution's decision, not the
+packager's. `DEPOSIT_CHECKLIST.md` inside the archive says so, warns that Zenodo
+defaults to CC-BY-4.0 when nothing is chosen, and lists the remaining items —
+related identifiers, co-authors, and the separate restricted-access record the
+empirical dataset will need.
+
+`upload_type` is `software`, not `dataset`. What is deposited is the pipeline
+plus a synthetic rehearsal; filing it as a dataset would present a rehearsal
+corpus as measurements.
+
 ## Layout
 
 ```

@@ -630,11 +630,37 @@ push(
 );
 
 /* ---- 8. validation results ---- */
+/* Gate commentary is keyed by gate name and emitted only for gates that
+   actually failed, so the prose cannot contradict the table beside it. An
+   earlier version stated the pass count and the failure list in hand-written
+   text; a later run produced a fourth failure and the two disagreed. */
+const FAILED = REPORT.gates.filter(g => g.status === 'FAIL');
+const N_PASS = String(REPORT.gates.length - FAILED.length);
+const N_FAIL_WORD = ['no', 'single', 'two', 'three', 'four', 'five', 'six'][FAILED.length] || String(FAILED.length);
+const GATE_NOTE = {
+  exact_duplicate_rate: {
+    lead: g => 'Exact duplicate rate, ' + pct(g.observed, 2) + ' against a zero-tolerance rule. ',
+    body: 'Two pairs of byte-identical audio objects, all four flagged silence. They are the re-encoded copies the corpus injects, and the injection made them byte-identical rather than merely similar: a recording that is already silence, requantized at a coarser step, is still exactly zero. The gate is right to be zero-tolerance — an exact duplicate is an ingestion defect and not a judgement call — and it is right to have fired here. The finding is also a reminder that degenerate content behaves differently from ordinary content throughout the pipeline, which is why the perceptual grouping of Section 5.7.1 excludes it and matches such objects on the digest alone.',
+  },
+  near_duplicate_rate: {
+    lead: g => 'Near-duplicate rate, ' + pct(g.observed, 2) + ' against a 5 % rule. ',
+    body: 'The rehearsal corpus deliberately injects re-encoded copies at roughly a 7 % rate, so this gate is expected to fail and its failure is the evidence that the perceptual grouping works. The largest group contains ' + REPORT.duplicates.largest_group + ' objects, which is the diagnostic that matters: a grouping that were over-merging would show large groups and a plausible-looking rate at the same time.',
+  },
+  cross_modal_consistency: {
+    lead: g => 'Cross-modal consistency, ' + pct(g.observed, 2) + ' against a 90 % rule. ',
+    body: 'A marginal failure, and a real property of the corpus: simulated contributors misreport direction with a probability that grows with distance. The confusion matrix in Figure ' + FIG_AGREEMENT + ' shows the errors are concentrated in the small lateral/stationary class rather than in the approaching-versus-receding distinction that matters operationally. The correct response is to examine the matrix, not to move the threshold.',
+  },
+  krippendorff_alpha: {
+    lead: g => 'Krippendorff’s α on presence, ' + n(g.observed, 3) + ' against a 0.67 rule. ',
+    body: 'The clearest of the failures. Simulated annotators are correct with a probability that depends on how good the evidence was, so events near the detection limit generate genuine disagreement. An α at this level would not support a released label set, and the operational conclusion for the field trials is that the annotation protocol — handbook, qualification threshold, and rater count — must be strengthened and re-measured before any release, not that the floor should be lowered.',
+  },
+};
+
 push(
   H('8  Validation results on the rehearsal corpus', 1),
   P('The gates below are policy, not physics: they are the acceptance rules a release manager sets, and they are expected to change between versions while the metric definitions must not. That is why the pipeline computes numbers and compares them, and never bakes a verdict into a metric.'),
   ...figure('fig12_gates.png',
-    'Release gates applied to the rehearsal corpus. Eight of eleven pass. The three failures are discussed below; each is a property of the rehearsal corpus rather than a defect in the computation, and each demonstrates the corresponding gate doing its job.', ++FIG),
+    'Release gates applied to the rehearsal corpus. ' + N_PASS + ' of ' + REPORT.gates.length + ' pass. The ' + N_FAIL_WORD + ' failures are discussed below; each is a property of the rehearsal corpus rather than a defect in the computation, and each demonstrates the corresponding gate doing its job.', ++FIG),
   caption('Release gate results. A failed gate produces a documented decision — repair, exclusion, metadata-only, or controlled access — never a silent discard.', ++TAB),
   table(
     ['Gate', 'Observed', 'Rule', 'Status', 'Basis'],
@@ -645,13 +671,12 @@ push(
       { text: g.status, bold: true, color: g.status === 'pass' ? GOOD : WARN },
       g.basis]),
     [2.6, 1.5, 1.2, 1, 3.4]),
-  H('8.1  The three failing gates', 2),
-  RP([['Near-duplicate rate, ' + pct(M.near_duplicate_rate, 2) + ' against a 5 % rule. ', { bold: true }],
-      'The rehearsal corpus deliberately injects re-encoded copies at roughly a 7 % rate, so this gate is expected to fail and its failure is the evidence that the perceptual grouping works. The largest group contains ' + REPORT.duplicates.largest_group + ' objects, which is the diagnostic that matters: a grouping that were over-merging would show large groups and a plausible-looking rate simultaneously.']),
-  RP([['Cross-modal consistency, ' + pct(M.cross_modal_consistency, 2) + ' against a 90 % rule. ', { bold: true }],
-      'A marginal failure, and a real property of the corpus: simulated contributors misreport direction with a probability that grows with distance. The confusion matrix in Figure ' + FIG_AGREEMENT + ' shows the errors are concentrated in the small lateral/stationary class rather than in the approaching-versus-receding distinction that matters operationally. The correct response is to examine the matrix, not to move the threshold.']),
-  RP([['Krippendorff’s α on presence, ' + n(M.krippendorff_alpha, 3) + ' against a 0.67 rule. ', { bold: true }],
-      'The clearest of the three. Simulated annotators are correct with a probability that depends on how good the evidence was, so events near the detection limit generate genuine disagreement. An α of ' + n(M.krippendorff_alpha, 2) + ' would not support a released label set, and the operational conclusion for the field trials is that the annotation protocol — handbook, qualification threshold, and rater count — must be strengthened and re-measured before any release, not that the floor should be lowered.']),
+  H('8.1  The failing gates', 2),
+  P('The discussion below is generated from the gate results, so it covers exactly the gates that failed on this run and no others.'),
+  ...FAILED.map(g => RP([
+    [GATE_NOTE[g.gate] ? GATE_NOTE[g.gate].lead(g) : g.gate + ', observed ' + n(g.observed, 4) + ' against a rule of ' + g.rule + '. ', { bold: true }],
+    GATE_NOTE[g.gate] ? GATE_NOTE[g.gate].body : 'No prepared commentary exists for this gate; it must be reviewed manually before release.',
+  ])),
   H('8.2  What passing means and does not mean', 2),
   P('Structural validation, completeness, integrity, synchronization, and the leakage audit all pass at their configured rules. Those are necessary conditions, not evidence of scientific quality. A record can pass structural validation while failing media-quality or evidence-quality validation, which is precisely why quality flags are multi-valued and why nothing in the pipeline collapses the dimensions into a single score.'),
   P('The integrity result deserves separate mention because its target is 100 % and not a quality figure to be reported and accepted. Anything less means a released object is not the object the manifest describes, and the release cannot ship until the discrepancy is explained. On this corpus ' + n(100 * M.checksum_pass_rate, 1) + ' % of released files match their published digest.'),
@@ -761,7 +786,7 @@ push(
 push(
   pageBreak(),
   H('10  Findings and recommended actions', 1),
-  P('The rehearsal surfaced seven issues worth carrying forward. Five are defects that were found and fixed — recorded here because each would have produced plausible, wrong numbers rather than an error, and because the same class of defect will recur. Two are open and require a decision.'),
+  P('The rehearsal surfaced seven issues worth carrying forward. Five are defects that were found and fixed — recorded here because each would have produced plausible, wrong numbers rather than an error, and because the same class of defect will recur. Two are open and require a decision. The gate failures of Section 8.1 are not repeated here: they are the gates working, not defects.'),
   caption('Findings from the rehearsal. Severity is judged by how likely the defect was to pass unnoticed.', ++TAB),
   table(
     ['#', 'Finding', 'Status', 'Action'],
