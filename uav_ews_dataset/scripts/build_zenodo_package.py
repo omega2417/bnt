@@ -34,8 +34,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-TITLE = ("uavews: dataset formation, validation and field-trial preparation "
-         "pipeline for a multisource multimodal sUAV early-warning dataset")
+TITLE = ("uavews: Dataset Formation, Technical Validation and Field-Trial "
+         "Planning for Small-UAV Early Warning")
+
+#: One-sentence form, for CITATION.cff and any listing that shows a subtitle.
+TAGLINE = ("Versioned curation, validation and packaging pipeline for a "
+           "multisource, multimodal spatiotemporal early-warning dataset on "
+           "small unmanned aerial vehicles, with a synthetic rehearsal release.")
 
 CREATORS = [{
     "name": "Prokopovych-Tkachenko, Dmytro",
@@ -93,44 +98,71 @@ def zenodo_json(version: str, metrics: dict, coverage: dict) -> dict:
         "title": TITLE,
         "creators": CREATORS,
         "description": (
-            "<p><strong>What this is.</strong> An executable implementation of the "
-            "data model, the five equations, the technical-validation framework and "
-            "the tiered-release policy set out in the Data Descriptor "
-            "<em>Building and Validating a Multisource, Multimodal Spatiotemporal "
-            "Dataset for Early Warning of Approaching Small Unmanned Aerial "
-            "Vehicles</em>. The pipeline normalizes four heterogeneous source "
-            "streams into an event-centered model, computes kinematic ground truth, "
-            "associates observations with synchronized windows under an "
-            "uncertainty-expanded overlap rule, adjudicates labels across three "
-            "evidence tiers, validates the result against configured release gates, "
-            "builds leakage-resistant evaluation manifests, and emits an RO-Crate "
-            "package with DataCite and PROV-O metadata and a SHA-256 integrity "
-            "manifest. It also sizes the field trials that are to replace the "
-            "rehearsal corpus with measurements.</p>"
-            "<p><strong>What the numbers are not.</strong> The release package and "
-            "the validation report in this record are computed from a "
-            "<em>synthetic rehearsal corpus</em> generated with a fixed seed. They "
-            "exist to demonstrate that the computations are correct, that the "
-            "release gates fire on defects, and that the whole chain is reproducible "
-            "before any hardware is deployed. <em>No value in this record is a "
-            "measurement</em>, and none may be transcribed into the manuscript's "
-            "bracketed placeholders. The empirical dataset will be deposited as a "
-            "separate Zenodo record and linked to this one.</p>"
-            f"<p><strong>Contents.</strong> Rehearsal release: {metrics['n_events']} "
-            f"events, {metrics['n_observations']} observations, "
-            f"{metrics['n_media_objects']} media objects, "
-            f"{metrics['n_labels_released']} released labels, covering "
-            f"{coverage['collection_start_utc'][:10]} to "
-            f"{coverage['collection_end_utc'][:10]}. Source code (18 modules, 54 "
-            "tests), the raw synthetic corpus so that every published digest can be "
-            "verified against actual bytes, 16 figures, a machine-readable "
-            "validation report, and a 12-section engineering report in DOCX "
-            "describing every calculation with a worked numeric example.</p>"
-            "<p><strong>Reproducing.</strong> "
-            "<code>pip install -r code/requirements.txt</code> then "
-            "<code>PYTHONPATH=code/src python -m uavews.cli all --out build</code>. "
-            "Canonical tables and split manifests reproduce byte-for-byte; only the "
-            "three files carrying wall-clock timestamps differ between runs.</p>"
+            "<p><strong>uavews</strong> is the versioned curation, validation and "
+            "packaging pipeline for a multisource, multimodal spatiotemporal dataset "
+            "on the early warning of approaching small unmanned aerial vehicles. It "
+            "normalizes four heterogeneous source streams &mdash; takeoff indications "
+            "from a controlled area, public warning events, voluntary mobile reports, "
+            "and visual and acoustic records from authorized monitoring sites &mdash; "
+            "into one event-centered model, and carries every record through ten "
+            "stages: ingestion, window construction, uncertainty-expanded association, "
+            "derivation of kinematic ground truth, conflict adjudication across three "
+            "evidence tiers, de-identification and access tiering, technical "
+            "validation, leakage-resistant partitioning, packaging, and application of "
+            "the release gates. Each stage records a PROV-O activity, and every "
+            "released file carries a SHA-256 digest.</p>"
+
+            "<p>Reported quantities are measured rather than declared. Boundary "
+            "distance and warning time are derived from the reference trajectory, with "
+            "a direction dead-band computed from the positional uncertainty and "
+            "enforced as a floor. Synchronization error is evaluated on the marker that "
+            "opens each run, and sources that cannot observe a marker report their "
+            "declared uncertainty and a null measurement rather than a fabricated one. "
+            "Media quality is computed from the released bytes: the acoustic estimator "
+            "is referred to the same in-band noise power the propagation model "
+            "predicts, declares its own sensitivity bound, and returns a null instead "
+            "of reporting noise as a weak detection. Duplicate rate is evaluated over "
+            "perceptual object groups, and every evaluation manifest is audited against "
+            "its own stated constraint rather than a generic one.</p>"
+
+            "<p><strong>The release in this record is a rehearsal, not a measurement "
+            "campaign.</strong> The corpus it contains is synthetic, generated from a "
+            "fixed seed, and carries deliberately injected defects &mdash; redelivered "
+            "upstream events, re-encoded media, gross clock offsets, dropped channels, "
+            "clipped and silent audio, incidental speech, annotator disagreement near "
+            "the detection limit &mdash; so that each release gate is confirmed to fire "
+            "on the condition it is meant to detect, before any hardware is deployed. "
+            "<em>No value it produces is a measurement</em>, and none may be "
+            "transcribed into the bracketed placeholders of the accompanying Data "
+            "Descriptor. The empirical dataset will be deposited as a separate record "
+            "and linked to this one.</p>"
+
+            "<p>The archive contains the source code (23 modules, 54 tests), the "
+            "parameter file and controlled vocabularies with which the release was "
+            "produced, the raw corpus so that every published digest can be verified "
+            "against actual bytes, the deposit-shaped RO-Crate package with DataCite "
+            "and PROV-O metadata, a machine-readable validation report, 16 figures, and "
+            "a twelve-section engineering report stating every calculation with a "
+            "worked numeric example. The rehearsal release covers "
+            f"{metrics['n_events']} events "
+            f"({coverage['event_kind_counts'].get('controlled_flight', 0)} controlled "
+            "flights, "
+            f"{coverage['event_kind_counts'].get('verified_observation', 0) + coverage['event_kind_counts'].get('weak_observation', 0)} "
+            "observational episodes and "
+            f"{coverage['event_kind_counts'].get('negative_control', 0)} hard negatives "
+            "across five confounder families), "
+            f"{metrics['n_observations']} observations, "
+            f"{metrics['n_media_objects']} media objects and "
+            f"{metrics['n_labels_released']} released labels. Canonical tables and split "
+            "manifests reproduce byte-for-byte across runs; the three files that differ "
+            "all carry wall-clock timestamps.</p>"
+
+            "<p>The package also sizes the campaigns that are to replace the rehearsal "
+            "corpus, computing acoustic and visual detection ranges from declared "
+            "physical assumptions, the operational warning-time budget those ranges "
+            "buy, and the number of sorties the flight matrix requires. Reproduce with "
+            "<code>pip install -r code/requirements.txt</code> and "
+            "<code>PYTHONPATH=code/src python -m uavews.cli all --out build</code>.</p>"
         ),
         "keywords": KEYWORDS,
         "access_right": "open",
@@ -213,12 +245,11 @@ authors:
 keywords:
 {chr(10).join('  - "' + k + '"' for k in KEYWORDS)}
 abstract: >-
-  Executable implementation of the data model, calculations and technical
-  validation of a Data Descriptor for a multisource, multimodal spatiotemporal
-  dataset for early warning of approaching small unmanned aerial vehicles. The
-  archive additionally contains a synthetic rehearsal release, generated with a
-  fixed seed, that exercises every pipeline stage and every release gate. No
-  value in the rehearsal release is a measurement.
+  {TAGLINE} Implements the data model, the curation equations, the
+  technical-validation framework and the tiered-release policy of the
+  accompanying Data Descriptor. The rehearsal release included in the archive is
+  synthetic and generated from a fixed seed; it exercises every pipeline stage
+  and every release gate, and no value it produces is a measurement.
 # license: deliberately unset - see DEPOSIT_CHECKLIST.md
 # doi: add once Zenodo has minted it, then re-upload this file
 """
