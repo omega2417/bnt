@@ -24,6 +24,31 @@ import pandas as pd
 from . import config, pipeline, simulate, trialdesign, viz
 
 
+def _clean(obj):
+    """Replace NaN and infinities with null before serialization.
+
+    ``json.dumps`` emits bare ``NaN`` and ``Infinity`` tokens by default. They
+    are not valid JSON, so every strict parser - including the one that builds
+    the engineering report - rejects the file. Missing statistics are genuinely
+    absent here (a modality with no measurable synchronization error has no
+    median), so null is also the correct representation, not merely the
+    parseable one.
+    """
+    import math
+    if isinstance(obj, dict):
+        return {k: _clean(v) for k, v in obj.items()}
+    if isinstance(obj, (list, tuple)):
+        return [_clean(v) for v in obj]
+    if isinstance(obj, float) and not math.isfinite(obj):
+        return None
+    if hasattr(obj, "item") and not isinstance(obj, (str, bytes)):
+        try:
+            return _clean(obj.item())
+        except Exception:
+            return obj
+    return obj
+
+
 def _json_default(o):
     if isinstance(o, (pd.DataFrame,)):
         return o.to_dict(orient="records")
@@ -103,8 +128,8 @@ def write_report(result, cfg, out_root: Path) -> Path:
     }
     path = Path(out_root) / "report" / "validation_report.json"
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(report, indent=2, default=_json_default),
-                    encoding="utf-8")
+    path.write_text(json.dumps(_clean(report), indent=2, default=_json_default,
+                               allow_nan=False), encoding="utf-8")
     return path
 
 

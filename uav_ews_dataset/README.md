@@ -35,6 +35,23 @@ writes the deposit-shaped RO-Crate package, renders every figure, and emits
 Other commands: `generate` (corpus only), `run` (pipeline only), `figures`,
 `plan` (field-trial sizing, needs no data).
 
+## The engineering report
+
+`docs/UAV_EWS_Dataset_Engineering_Report.docx` is the companion document to the
+Data Descriptor: it states each calculation, works a numeric example through
+from the rehearsal run, shows the sixteen figures, reports the release gates,
+and turns the detectability and power calculations into a field-trial plan.
+
+It is generated, not written by hand. Every quantitative statement in it is read
+from `build/report/validation_report.json`, so it cannot drift from the run that
+produced it:
+
+```bash
+npm install                       # docx (one dependency)
+python -m uavews.cli all --out build
+npm run report                    # -> build/UAV_EWS_Dataset_Engineering_Report.docx
+```
+
 ## What the numbers are and are not
 
 `uavews.simulate` produces a **synthetic rehearsal corpus**. It exists so that
