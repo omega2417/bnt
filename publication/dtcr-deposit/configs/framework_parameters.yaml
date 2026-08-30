@@ -1,0 +1,113 @@
+# Actual experimental parameters of the DTCR framework.
+#
+# This file replaces the "illustrative value" column of manuscript Table 1.
+# Every value here is the value the analysis code actually consumes; nothing in
+# this file is illustrative. Manuscript Table 1 is retained for symbol
+# definitions only, and the revised manuscript cites this file as the source of
+# the operating point.
+
+metadata:
+  release: "v1.0.0"
+  parameter_set_id: "dtcr-op-2026-07"
+  applies_to_scenarios: [S1, S2, S3, S4]
+
+digital_twin:
+  epsilon_sync: 0.08          # tolerance of Eq. (1); above it an asset is stale
+  epsilon_div_guard: 1.0e-6   # epsilon of Eq. (1), prevents division by zero
+  sync_period_s: 1.0
+  stale_asset_policy: "exclude_from_autonomous_recovery"
+
+trust:                        # Eq. (2)-(3)
+  alpha: 0.40                 # integrity component c_i
+  beta: 0.35                  # provenance component q_i
+  gamma: 0.25                 # behavioural component b_i
+  rho: 0.60                   # temporal memory of Eq. (3)
+  initial_trust: 1.00
+  update_period_s: 5.0
+
+integrity_audit:              # Eq. (4)-(5)
+  block_size_bytes: 4096
+  blocks_per_replica_l: 10000
+  challenged_blocks_r: 59
+  target_detection_probability_eta: 0.95
+  assumed_corruption_fraction: 0.05
+  audit_cadence_s: 30
+  hash: "BLAKE2b-256 over 4 KiB blocks; homomorphic tag over the prime-order group of Curve25519"
+  nonce_bits: 128
+  challenge_rng: "HMAC-DRBG(SHA-256), seeded per audit round from the verifier's HSM"
+
+anomaly:                      # Eq. (6)-(7)
+  feature_vector_dimension_p: 9
+  features:
+    - mqtt_messages_per_s
+    - mqtt_interarrival_cv
+    - tcp_syn_rate_per_s
+    - tcp_established_connections
+    - cpu_utilisation_pct
+    - resident_memory_mb
+    - egress_kbps
+    - control_command_rate_per_min
+    - provenance_hop_count
+  normal_window_s: 1800       # baseline estimation window
+  calibration_window_s: 900   # held out from the baseline window
+  test_separation: "baseline / calibration / evaluation are disjoint in time"
+  covariance_shrinkage: 0.05  # Sigma + shrinkage * tr(Sigma)/p * I
+  score_mapping: "chi2_cdf"   # corrected Eq. (7); "legacy_exp" reproduces the printed form
+  gaussian_check: "Kolmogorov-Smirnov against chi2_p on the calibration window"
+
+risk:                         # Eq. (8)-(11)
+  local_aggregation: "additive"   # selected by AUC; "product" is the printed Eq. (8)
+  additive_weights: {w_a: 0.45, w_t: 0.35, w_at: 0.20}
+  criticality_s:
+    sensor: 0.30
+    edge_broker: 0.65
+    analytics: 0.75
+    civil_service: 1.00
+  lambda: 0.45                # damping factor
+  W_normalisation: "column-stochastic on outgoing influence mass"
+  theta: 0.35                 # orchestration trigger threshold on the propagated score
+  theta_domain_note: >
+    After column normalisation and with lambda = 0.45 the propagated score is
+    bounded by 1/(1-lambda) = 1.818, so theta is defined on [0, 1.818] and not
+    on [0, 1]. The propagated score is an exposure index, not a probability.
+
+orchestration:                # Eq. (12)-(13)
+  mu1_cpu: 0.20
+  mu2_net: 0.15
+  mu3_disruption: 0.25
+  policy_violation: "hard constraint (candidate rejected), not a finite penalty"
+  tau_min_host_trust:
+    sensor: 0.50
+    edge_broker: 0.70
+    analytics: 0.75
+    civil_service: 0.85
+  action_simulation_horizon_s: 120
+  orchestration_cycle_period_s: 5
+  candidate_actions: [isolate, rate_limit, revoke_identity, migrate, restart, restore_validated_state]
+  solver: "exhaustive enumeration over the affected subgraph (<= 64 candidates)"
+  solver_tolerance: 1.0e-9
+  solver_timeout_s: 2.0
+  tie_breaking: "lowest disruption, then lowest compute overhead, then action name"
+  revalidation: "policy re-checked against live state immediately before enforcement"
+  rollback: "automatic on failed recovery validation within 2 orchestration cycles"
+
+resilience:                   # Eq. (15), (18)-(19)
+  rto_s: 300.0
+  a_min: 0.95
+  a_max: 1.00
+  hold_interval_s: 30.0
+  sampling_interval_s: 1.0
+  integration_window: "[t_dis, t_dis + 2*RTO]"
+
+experiment:
+  repetitions_per_cell: 20
+  scenarios: [S1, S2, S3, S4]
+  arms: [baseline, framework]
+  schedule: "interleaved matched pairs; arms alternate within a repetition block"
+  randomisation_seed: 20260731
+  washout_s: 300
+  reset: "full redeploy of the edge namespace and twin state between repetitions"
+  censoring_rule: >
+    A run whose availability never satisfies the hold condition inside the
+    observation window is recorded with recovery_censored = 1 and excluded from
+    the mean while being reported in the run count.

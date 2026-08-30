@@ -1,0 +1,25 @@
+scenario: S1
+name: compromised_edge_identity
+target:
+  asset: dtcr:edge-02
+  service: edge-control
+  endpoint: "https://edge-02.lab:6443"
+attacker:
+  host: attacker.lab
+  initial_privilege: "valid but leaked service-account token, no host root"
+  credential: "leaked-token (provisioned per run by setup, revoked at teardown)"
+payload:
+  action: "issue unauthorised actuator command sequence via the control API"
+  command: "POST /api/v1/actuators/valve-07 {\"state\":\"open\",\"override\":true}"
+  repeat: 12
+  interval_s: 5
+intensity:
+  commands_per_minute: 12
+duration_s: 90
+ground_truth_onset: "driver logs the epoch of the first accepted command"
+success_criterion: "an unauthorised command is executed and persists > 30 s without revocation"
+expected_defensive_action: "revoke token, isolate identity, restore validated configuration"
+reset:
+  - "revoke the run's service-account token"
+  - "restore edge-02 configuration from the validated baseline snapshot"
+  - "washout 300 s"

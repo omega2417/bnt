@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "If you use this deposit, please cite both the software/data record and the article."
+title: "DTCR: reproducibility deposit for a digital-twin-enabled cyber-resilience framework"
+abstract: >-
+  Analysis pipeline, configuration, attack recipes and reference dataset for the
+  digital-twin-enabled cyber-resilience framework for secure edge-cloud
+  orchestration and data integrity. The release contains the reference
+  implementation of the trust, audit, anomaly, dependency-risk, orchestration and
+  resilience models, the statistical analysis that produces every reported effect,
+  and the scripts that regenerate every figure. The data directory of this release
+  contains a synthetic reference dataset; see PROVENANCE.md.
+type: software
+version: "1.0.0"
+date-released: "2026-08-30"
+license: MIT
+license-url: "https://opensource.org/licenses/MIT"
+repository-code: "https://github.com/REPLACE-WITH-REPOSITORY-URL"
+doi: "10.5281/zenodo.PLACEHOLDER"
+keywords:
+  - digital twin
+  - cyber resilience
+  - edge-cloud orchestration
+  - data integrity
+  - normalized resilience index
+  - reproducibility
+authors:
+  - family-names: "[TO BE COMPLETED]"
+    given-names: "[TO BE COMPLETED]"
+    affiliation: "[TO BE COMPLETED]"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+references:
+  - type: article
+    title: >-
+      Digital-Twin-Enabled Cyber-Resilience Framework for Secure Edge-Cloud
+      Orchestration and Data Integrity in Distributed Smart-Region Infrastructure
+    authors:
+      - family-names: "[TO BE COMPLETED]"
+        given-names: "[TO BE COMPLETED]"
+    journal: "Electronics"
+    year: 2026
+    doi: "10.3390/electronicsXXXXXXX"

@@ -1,0 +1,44 @@
+# Cloud tier: 3 VMs, 8 vCPU / 16 GB each, Kubernetes v1.30.
+# Nodes carry the labels the orchestrator's admissibility check reads.
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dtcr
+  labels:
+    pod-security.kubernetes.io/enforce: restricted
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dtcr-node-attributes
+  namespace: dtcr
+data:
+  # node_id: security_label, capacity (cpu, ram_mb, storage_mb, net_kbps), domain
+  nodes.yaml: |
+    cloud-01: {security_label: 3, cpu: 8,  ram_mb: 16384, storage_mb: 204800, net_kbps: 1000000, domain: d0}
+    cloud-02: {security_label: 3, cpu: 8,  ram_mb: 16384, storage_mb: 204800, net_kbps: 1000000, domain: d0}
+    cloud-03: {security_label: 2, cpu: 8,  ram_mb: 16384, storage_mb: 204800, net_kbps: 1000000, domain: d2}
+    edge-01:  {security_label: 2, cpu: 4,  ram_mb: 8192,  storage_mb: 61440,  net_kbps: 100000,  domain: d1}
+    edge-02:  {security_label: 2, cpu: 4,  ram_mb: 8192,  storage_mb: 61440,  net_kbps: 100000,  domain: d1}
+    edge-03:  {security_label: 1, cpu: 4,  ram_mb: 8192,  storage_mb: 61440,  net_kbps: 100000,  domain: d1}
+    edge-04:  {security_label: 1, cpu: 4,  ram_mb: 8192,  storage_mb: 61440,  net_kbps: 100000,  domain: d2}
+  # workload_id: demand, security_label, tau (min host trust), allowed domains
+  workloads.yaml: |
+    analytics-core:   {cpu: 2.0, ram_mb: 4096, storage_mb: 20480, net_kbps: 40000, security_label: 3, tau: 0.75, domains: [d0]}
+    civil-service-api:{cpu: 1.5, ram_mb: 3072, storage_mb: 10240, net_kbps: 25000, security_label: 3, tau: 0.85, domains: [d0, d1]}
+    edge-broker:      {cpu: 1.0, ram_mb: 2048, storage_mb: 8192,  net_kbps: 30000, security_label: 2, tau: 0.70, domains: [d1]}
+    telemetry-ingest: {cpu: 0.5, ram_mb: 1024, storage_mb: 4096,  net_kbps: 15000, security_label: 1, tau: 0.50, domains: [d1, d2]}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dtcr-dependency-graph
+  namespace: dtcr
+data:
+  # Weighted adjacency: w[i][j] > 0 means j depends on i. Consumed by dtcr.risk.
+  edges.csv: |
+    source,target,weight
+    telemetry-ingest,edge-broker,0.70
+    edge-broker,analytics-core,0.80
+    edge-broker,civil-service-api,0.40
+    analytics-core,civil-service-api,0.60

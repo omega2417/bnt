@@ -1,0 +1,17 @@
+scenario,corruption_fraction,observation_unit,tp,fn,tn,fp,n,nominal_tpr,nominal_tnr,data_origin
+S1,0.01,challenged_telemetry_block,95,6,888,12,1001,0.9248,0.99038,synthetic_reference
+S1,0.05,challenged_telemetry_block,136,10,896,4,1046,0.94226,0.99038,synthetic_reference
+S1,0.1,challenged_telemetry_block,193,9,889,11,1102,0.96408,0.99038,synthetic_reference
+S1,0.2,challenged_telemetry_block,314,1,890,10,1215,0.99936,0.99038,synthetic_reference
+S2,0.01,challenged_telemetry_block,253,17,889,11,1170,0.94841,0.98589,synthetic_reference
+S2,0.05,challenged_telemetry_block,382,8,885,15,1290,0.96621,0.98589,synthetic_reference
+S2,0.1,challenged_telemetry_block,531,9,890,10,1440,0.98845,0.98589,synthetic_reference
+S2,0.2,challenged_telemetry_block,840,0,889,11,1740,0.99936,0.98589,synthetic_reference
+S3,0.01,challenged_telemetry_block,64,4,894,6,968,0.90741,0.99294,synthetic_reference
+S3,0.05,challenged_telemetry_block,88,10,892,8,998,0.92461,0.99294,synthetic_reference
+S3,0.1,challenged_telemetry_block,128,7,894,6,1035,0.94612,0.99294,synthetic_reference
+S3,0.2,challenged_telemetry_block,206,4,895,5,1110,0.98913,0.99294,synthetic_reference
+S4,0.01,challenged_telemetry_block,73,6,891,9,979,0.92977,0.99166,synthetic_reference
+S4,0.05,challenged_telemetry_block,109,5,891,9,1014,0.9473,0.99166,synthetic_reference
+S4,0.1,challenged_telemetry_block,152,6,895,5,1058,0.96921,0.99166,synthetic_reference
+S4,0.2,challenged_telemetry_block,245,0,896,4,1145,0.99936,0.99166,synthetic_reference

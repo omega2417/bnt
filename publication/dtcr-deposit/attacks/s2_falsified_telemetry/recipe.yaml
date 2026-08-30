@@ -1,0 +1,39 @@
+scenario: S2
+name: falsified_telemetry
+target:
+  asset: dtcr:telemetry-ingest
+  stream: "dtcr/sensor-07/telemetry"
+  broker: "ssl://mosquitto.lab:8883"
+attacker:
+  host: attacker.lab
+  initial_privilege: "sensor-07 client identity plus an on-path position"
+# Four sub-cases evaluated and reported SEPARATELY (see ../../THREAT_MODEL.md §4).
+subcases:
+  replay:
+    description: "re-publish a previously valid, correctly signed record"
+    expected_detection: "sequence number outside the replay window"
+    covered_by: "sequence + replay window"
+  injection:
+    description: "publish a record under an unauthenticated identity"
+    expected_detection: "mTLS / provenance signature failure"
+    covered_by: "mTLS + provenance"
+  modification_in_transit:
+    description: "flip payload bytes of a signed block on the wire"
+    expected_detection: "homomorphic hash challenge failure"
+    covered_by: "audit sampling (Eq. 4)"
+  semantic_falsification:
+    description: "authenticated sensor-07 publishes a plausible but false value"
+    expected_detection: "anomaly detector + cross-sensor redundancy + physics check"
+    covered_by: "NOT the integrity layer; partial coverage only"
+intensity:
+  tampered_messages: 60
+  interval_s: 2
+duration_s: 120
+ground_truth_onset: "driver logs the epoch of the first tampered publish"
+success_criterion: "a falsified value is consumed by an analytics decision"
+expected_defensive_action: "quarantine records, retrieve validated replica, lower source trust"
+reset:
+  - "flush broker retained messages for the stream"
+  - "restore replica from validated snapshot"
+  - "reset sensor-07 trust to initial"
+  - "washout 300 s"

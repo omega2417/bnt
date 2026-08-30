@@ -1,0 +1,54 @@
+{
+  "generator": "simulate_reference_dataset.py",
+  "seed": 20260731,
+  "data_origin": "synthetic_reference",
+  "n_runs": 160,
+  "n_traces": 160,
+  "reproduced_aggregates": {
+    "detection_latency_mean_s": {
+      "baseline": 43.1,
+      "framework": 8.5
+    },
+    "recovery_time_mean_s": {
+      "baseline": 398.9875,
+      "framework": 121.9125
+    },
+    "scenario_mean_detection_s": {
+      "baseline/S1": 52.0,
+      "baseline/S2": 68.4,
+      "baseline/S3": 18.7,
+      "baseline/S4": 33.3,
+      "framework/S1": 9.2,
+      "framework/S2": 7.4,
+      "framework/S3": 5.8,
+      "framework/S4": 11.6
+    },
+    "scenario_mean_recovery_s": {
+      "baseline/S1": 402.0,
+      "baseline/S2": 356.0,
+      "baseline/S3": 510.95,
+      "baseline/S4": 327.0,
+      "framework/S1": 118.0,
+      "framework/S2": 95.95,
+      "framework/S3": 163.8,
+      "framework/S4": 109.9
+    },
+    "nri_s3_mean": {
+      "baseline": 0.71,
+      "framework": 0.93
+    },
+    "integrity_accuracy": 0.987,
+    "integrity_fpr": 0.00944
+  },
+  "availability_floor_calibrated": {
+    "baseline/S1": 0.62,
+    "baseline/S2": 0.78,
+    "baseline/S3": 0.41657,
+    "baseline/S4": 0.7,
+    "framework/S1": 0.88,
+    "framework/S2": 0.94,
+    "framework/S3": 0.58571,
+    "framework/S4": 0.91
+  },
+  "warning": "Synthetic reference data. Not a measurement. Replace every file in data/ with real measurement exports before submission."
+}

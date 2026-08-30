@@ -1,0 +1,65 @@
+{
+  "_comment": "Eclipse Ditto 3.5 thing definitions for the four modelled assets. Each thing carries the attributes the framework reads: criticality s_i, security label, minimum host trust tau_i, and its dependencies.",
+  "things": [
+    {
+      "thingId": "dtcr:telemetry-ingest",
+      "definition": "dtcr:Asset:1.0.0",
+      "attributes": {
+        "tier": "edge", "type": "sensor_gateway",
+        "criticality_s": 0.30, "security_label": 1, "tau_min_host_trust": 0.50,
+        "domains": ["d1", "d2"], "depends_on": []
+      },
+      "features": {
+        "trust": {"properties": {"c": 1.0, "q": 1.0, "b": 1.0, "T": 1.0}},
+        "risk": {"properties": {"a": 0.0, "R_local": 0.0, "R_propagated": 0.0}},
+        "sync": {"properties": {"e_i": 0.0, "stale": false}}
+      }
+    },
+    {
+      "thingId": "dtcr:edge-broker",
+      "definition": "dtcr:Asset:1.0.0",
+      "attributes": {
+        "tier": "edge", "type": "message_broker",
+        "criticality_s": 0.65, "security_label": 2, "tau_min_host_trust": 0.70,
+        "domains": ["d1"], "depends_on": [{"source": "dtcr:telemetry-ingest", "weight": 0.70}]
+      },
+      "features": {
+        "trust": {"properties": {"c": 1.0, "q": 1.0, "b": 1.0, "T": 1.0}},
+        "risk": {"properties": {"a": 0.0, "R_local": 0.0, "R_propagated": 0.0}},
+        "sync": {"properties": {"e_i": 0.0, "stale": false}}
+      }
+    },
+    {
+      "thingId": "dtcr:analytics-core",
+      "definition": "dtcr:Asset:1.0.0",
+      "attributes": {
+        "tier": "cloud", "type": "analytics_service",
+        "criticality_s": 0.75, "security_label": 3, "tau_min_host_trust": 0.75,
+        "domains": ["d0"], "depends_on": [{"source": "dtcr:edge-broker", "weight": 0.80}]
+      },
+      "features": {
+        "trust": {"properties": {"c": 1.0, "q": 1.0, "b": 1.0, "T": 1.0}},
+        "risk": {"properties": {"a": 0.0, "R_local": 0.0, "R_propagated": 0.0}},
+        "sync": {"properties": {"e_i": 0.0, "stale": false}}
+      }
+    },
+    {
+      "thingId": "dtcr:civil-service-api",
+      "definition": "dtcr:Asset:1.0.0",
+      "attributes": {
+        "tier": "cloud", "type": "civil_service",
+        "criticality_s": 1.00, "security_label": 3, "tau_min_host_trust": 0.85,
+        "domains": ["d0", "d1"],
+        "depends_on": [
+          {"source": "dtcr:edge-broker", "weight": 0.40},
+          {"source": "dtcr:analytics-core", "weight": 0.60}
+        ]
+      },
+      "features": {
+        "trust": {"properties": {"c": 1.0, "q": 1.0, "b": 1.0, "T": 1.0}},
+        "risk": {"properties": {"a": 0.0, "R_local": 0.0, "R_propagated": 0.0}},
+        "sync": {"properties": {"e_i": 0.0, "stale": false}}
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "_comment": "Ditto connectivity: MQTT source for telemetry, HTTP target for the orchestrator. Credentials are supplied at deploy time and are never stored in this deposit.",
+  "id": "dtcr-mqtt-source",
+  "connectionType": "mqtt-5",
+  "connectionStatus": "open",
+  "uri": "ssl://mosquitto.dtcr.svc:8883",
+  "validateCertificates": true,
+  "sources": [
+    {
+      "addresses": ["dtcr/+/telemetry"],
+      "consumerCount": 2,
+      "qos": 1,
+      "authorizationContext": ["nginx:dtcr-ingest"],
+      "headerMapping": {
+        "provenance": "{{ header:provenance }}",
+        "sequence": "{{ header:sequence }}",
+        "signature": "{{ header:signature }}"
+      }
+    }
+  ],
+  "targets": [
+    {
+      "address": "http://orchestrator.dtcr.svc:8080/events",
+      "topics": ["_/_/things/twin/events?filter=exists(features/risk)"],
+      "authorizationContext": ["nginx:dtcr-orchestrator"]
+    }
+  ],
+  "specificConfig": {"clientId": "dtcr-ditto", "cleanSession": "false"}
+}

@@ -1,0 +1,44 @@
+# K3s edge cluster configuration (4 x Raspberry Pi 5, 8 GB).
+# Applied with: k3s server --config /etc/rancher/k3s/config.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dtcr-edge-config
+  namespace: dtcr
+data:
+  cluster.yaml: |
+    write-kubeconfig-mode: "0600"
+    tls-san: [edge-01.lab, edge-02.lab, edge-03.lab, edge-04.lab]
+    disable: [traefik, servicelb]
+    kube-apiserver-arg:
+      - "audit-log-path=/var/log/k3s/audit.log"
+      - "audit-log-maxage=30"
+      - "audit-policy-file=/etc/rancher/k3s/audit-policy.yaml"
+    kubelet-arg:
+      - "eviction-hard=memory.available<200Mi"
+    node-label:
+      - "dtcr.io/tier=edge"
+      - "dtcr.io/security-label=2"      # lattice level consumed by Eq. (13)
+      - "dtcr.io/domain=d1"
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: dtcr-edge-quota
+  namespace: dtcr
+spec:
+  hard:
+    requests.cpu: "12"
+    requests.memory: 24Gi
+    limits.cpu: "14"
+    limits.memory: 28Gi
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: dtcr-edge-default-deny
+  namespace: dtcr
+spec:
+  # Zero-trust default: nothing talks to anything unless a policy admits it.
+  podSelector: {}
+  policyTypes: [Ingress, Egress]

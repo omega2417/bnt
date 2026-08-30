@@ -1,0 +1,33 @@
+# Suricata configuration fragment for the edge nodes. Full defaults elsewhere.
+vars:
+  address-groups:
+    EDGE_NET: "[10.42.1.0/24]"
+    CLOUD_NET: "[10.42.0.0/24]"
+    BROKER_NET: "[10.42.1.10/32]"
+    OPERATOR_NET: "[10.42.9.0/24]"
+    HOME_NET: "[10.42.0.0/16]"
+
+af-packet:
+  - interface: eth0
+    cluster-id: 99
+    cluster-type: cluster_flow
+    defrag: yes
+
+outputs:
+  - eve-log:
+      enabled: yes
+      filetype: regular
+      filename: /var/log/suricata/eve.json
+      types: [alert, flow, stats, http, tls]
+      # Alert timestamps feed detection latency, so precision matters.
+      pcap-file: false
+
+detect-engine:
+  - profile: medium
+
+default-rule-path: /etc/suricata/rules
+rule-files:
+  - dtcr.rules
+  - suricata.rules
+
+# Clocks are synchronised by chrony before every run; see PROTOCOL.md.

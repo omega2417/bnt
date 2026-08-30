@@ -1,0 +1,68 @@
+{
+  "data_origin": "synthetic_reference",
+  "n_per_cell": 20,
+  "detection_latency_s": {
+    "baseline_mean": 43.100025,
+    "baseline_ci95": [
+      37.402095793658816,
+      48.79795420634119
+    ],
+    "framework_mean": 8.4999625,
+    "framework_ci95": [
+      7.836275597965506,
+      9.163649402034494
+    ],
+    "relative_reduction_pct": 80.27852072011558,
+    "hedges_g": 1.8892313907964486,
+    "p_value": 1.3869114099041126e-19
+  },
+  "recovery_time_s": {
+    "baseline_mean": 398.9875,
+    "baseline_ci95": [
+      374.55453075856855,
+      423.4204692414315
+    ],
+    "framework_mean": 121.9125,
+    "framework_ci95": [
+      114.12719831650558,
+      129.69780168349442
+    ],
+    "relative_reduction_pct": 69.44453147028416,
+    "hedges_g": 3.3843428395828816,
+    "p_value": 4.418960193028464e-40
+  },
+  "nri_S3": {
+    "baseline_mean": 0.7100000000000001,
+    "baseline_ci95": [
+      0.6884503962408525,
+      0.7315496037591477
+    ],
+    "framework_mean": 0.9299995000000001,
+    "framework_ci95": [
+      0.9243809035211503,
+      0.9356180964788499
+    ],
+    "relative_gain_pct": 30.985845070422535,
+    "deficit_reduction_pct": 75.86189655172416
+  },
+  "integrity_pooled": {
+    "n": 18311,
+    "accuracy": 0.9870023483152204,
+    "accuracy_ci95": [
+      0.9852566686016234,
+      0.9885437347543339
+    ],
+    "recall": 0.973919713628228,
+    "precision": 0.9655259822560203,
+    "specificity": 0.9905555555555555,
+    "f1": 0.9697046843177188,
+    "mcc": 0.9614458191904299,
+    "fpr": 0.009444444444444445,
+    "fpr_ci95": [
+      0.007990303689428593,
+      0.011160244420205941
+    ]
+  },
+  "overhead_max_relative_pct_eq17": 5.800039817713507,
+  "overhead_max_share_of_capacity_pct": 0.2969946428571433
+}

@@ -1,0 +1,30 @@
+scenario: S3
+name: syn_flood_dos
+target:
+  asset: dtcr:civil-service-api
+  host: edge-01.lab
+  port: 8443
+  protocol: "TCP (HTTPS listener)"
+attacker:
+  host: attacker.lab
+  tool: "hping3 3.0.0-alpha-2"
+# Replaces the vague "SYN/ACK flood" of the manuscript with an exact profile.
+attack:
+  type: "TCP SYN flood (half-open)"
+  tcp_flags: "S"
+  source_ports: "randomised (--rand-source)"
+  destination_port: 8443
+  packet_size_bytes: 120
+  rate_pps: 25000
+  number_of_flows: "single source host, randomised source addresses"
+intensity:
+  packets_per_second: 25000
+  sustained: true
+duration_s: 180
+ground_truth_onset: "driver logs the epoch of the first flood packet"
+success_criterion: "civil-service API availability below 0.95 for > 60 s"
+expected_defensive_action: "rate limit, isolate target, migrate dependent workload, restore service"
+reset:
+  - "clear conntrack table on edge-01"
+  - "remove any rate-limit rules installed during the run"
+  - "washout 300 s"
