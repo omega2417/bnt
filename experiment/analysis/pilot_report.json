@@ -1,0 +1,234 @@
+{
+  "gate": "Gate 3 - pilot complete, protocol frozen",
+  "n_pilot_runs": 120,
+  "cells": 24,
+  "runs_per_cell": 5,
+  "censored_restore_runs": 28,
+  "detection_rate": {
+    "A0": {
+      "S1": 0.0,
+      "S2": 0.0,
+      "S3": 1.0,
+      "S4": 0.0
+    },
+    "A1": {
+      "S1": 0.0,
+      "S2": 0.0,
+      "S3": 1.0,
+      "S4": 0.0
+    },
+    "A2": {
+      "S1": 1.0,
+      "S2": 0.2,
+      "S3": 1.0,
+      "S4": 0.0
+    },
+    "A3": {
+      "S1": 1.0,
+      "S2": 0.2,
+      "S3": 1.0,
+      "S4": 0.6
+    },
+    "A4": {
+      "S1": 1.0,
+      "S2": 1.0,
+      "S3": 1.0,
+      "S4": 1.0
+    },
+    "A5": {
+      "S1": 1.0,
+      "S2": 1.0,
+      "S3": 1.0,
+      "S4": 1.0
+    }
+  },
+  "eq12_scale_diagnostic": {
+    "absolute_risk_range_over_cost_range": {
+      "median": 0.9447877575929629,
+      "min": 0.3637154150357448,
+      "max": 1.2732480588471422,
+      "note": "values far from 1 mean one term of the printed Eq. (12) dominates"
+    }
+  },
+  "power_analysis": {
+    "H1": {
+      "spec": {
+        "metric": "detected",
+        "kind": "proportion",
+        "ref": "A0",
+        "test": "A5",
+        "scope": "all"
+      },
+      "per_scenario": {
+        "S1": {
+          "p_ref": 0.0,
+          "p_test": 1.0,
+          "mde": 0.25,
+          "n_for_mde": 27
+        },
+        "S2": {
+          "p_ref": 0.0,
+          "p_test": 1.0,
+          "mde": 0.25,
+          "n_for_mde": 27
+        },
+        "S3": {
+          "p_ref": 1.0,
+          "p_test": 1.0,
+          "mde": 0.25,
+          "n_for_mde": 27
+        },
+        "S4": {
+          "p_ref": 0.0,
+          "p_test": 1.0,
+          "mde": 0.25,
+          "n_for_mde": 27
+        }
+      },
+      "n_required_max": 27
+    },
+    "H2": {
+      "spec": {
+        "metric": "containment_latency",
+        "kind": "paired",
+        "ref": "A1",
+        "test": "A5",
+        "scope": "all"
+      },
+      "per_scenario": {
+        "S1": {
+          "sd_diff": NaN,
+          "dz": NaN,
+          "n_required": null
+        },
+        "S2": {
+          "sd_diff": NaN,
+          "dz": NaN,
+          "n_required": null
+        },
+        "S3": {
+          "sd_diff": 0.0,
+          "dz": Infinity,
+          "n_required": 2
+        },
+        "S4": {
+          "sd_diff": 269.5093018054929,
+          "dz": 0.055656706093304434,
+          "n_required": 2535
+        }
+      },
+      "n_required_max": 2535
+    },
+    "H3": {
+      "spec": {
+        "metric": "detected",
+        "kind": "proportion",
+        "ref": "A3",
+        "test": "A5",
+        "scope": [
+          "S2"
+        ]
+      },
+      "per_scenario": {
+        "S2": {
+          "p_ref": 0.2,
+          "p_test": 1.0,
+          "mde": 0.25,
+          "n_for_mde": 54
+        }
+      },
+      "n_required_max": 54
+    },
+    "H4": {
+      "spec": {
+        "metric": "policy_violation",
+        "kind": "proportion",
+        "ref": "A2",
+        "test": "A5",
+        "scope": [
+          "S4"
+        ]
+      },
+      "per_scenario": {
+        "S4": {
+          "p_ref": 1.0,
+          "p_test": 0.0,
+          "mde": 0.25,
+          "n_for_mde": 27
+        }
+      },
+      "n_required_max": 27
+    },
+    "H5": {
+      "spec": {
+        "metric": "fp_rate_holdout",
+        "kind": "noninferiority",
+        "ref": "A0",
+        "test": "A5",
+        "scope": "all",
+        "margin": 0.02
+      },
+      "per_scenario": {
+        "S1": {
+          "sd_diff": 0.0013944333775567953,
+          "dz": 14.342743312012695,
+          "n_required": 2
+        },
+        "S2": {
+          "sd_diff": 0.0012977009585331423,
+          "dz": 15.411871177630186,
+          "n_required": 2
+        },
+        "S3": {
+          "sd_diff": 0.0009771699499632296,
+          "dz": 20.467268770138286,
+          "n_required": 2
+        },
+        "S4": {
+          "sd_diff": 0.0,
+          "dz": Infinity,
+          "n_required": 2
+        }
+      },
+      "n_required_max": 2
+    },
+    "H6": {
+      "spec": {
+        "metric": "whatif_abs_err",
+        "kind": "one_sample",
+        "ref": null,
+        "test": "A5",
+        "scope": "all",
+        "tolerance": 0.1
+      },
+      "per_scenario": {
+        "S1": {
+          "mean": 0.03158631180175736,
+          "sd": 0.010984908777408155,
+          "tolerance": 0.1
+        },
+        "S2": {
+          "mean": 0.01726164322704382,
+          "sd": 0.012864650513346518,
+          "tolerance": 0.1
+        },
+        "S3": {
+          "mean": 0.11586218291874792,
+          "sd": 0.02277740030496124,
+          "tolerance": 0.1
+        },
+        "S4": {
+          "mean": 0.024574622813053778,
+          "sd": 0.02609555992588845,
+          "tolerance": 0.1
+        }
+      },
+      "n_required_max": null
+    }
+  },
+  "n_confirmatory_per_cell": 54,
+  "underpowered_contrasts": {
+    "H2": 2535
+  },
+  "declaration": "n_confirmatory_per_cell is the maximum feasible requirement across primary endpoints, floored at the protocol minimum of 20. Contrasts listed under underpowered_contrasts are reported with confidence intervals and explicitly flagged as underpowered; no significance claim is made for them."
+}

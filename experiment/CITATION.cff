@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this deposit, please cite it as below."
+title: "DTCR: reference implementation, frozen protocol and software-in-the-loop evaluation of a digital-twin cyber-resilience framework"
+abstract: >-
+  Reference implementation of the digital-twin cyber-resilience (DTCR) framework,
+  a frozen pre-registered experimental protocol for the UMSF laboratory cyber
+  range, and a 1296-run software-in-the-loop confirmatory campaign that verifies
+  the implementation and documents ten reproducible defects in the corresponding
+  manuscript. The physical cyber-range campaign has NOT been executed: all
+  deposited runs carry data_origin = simulation and none of them measures physical
+  hardware.
+type: software
+version: 2.0.0-experiment
+date-released: "2026-08-30"
+license:
+  - MIT
+  - CC-BY-4.0
+repository-code: "https://github.com/omega2417/bnt"
+keywords:
+  - digital twin
+  - cyber resilience
+  - edge-cloud orchestration
+  - data integrity
+  - anomaly detection
+  - reproducibility
+  - pre-registration
+authors:
+  - name: "University of Customs and Finance (UMSF), Laboratory Cyber Range"
+    city: Dnipro
+    country: UA
+# Replace the placeholder author entry above with the individual authors,
+# ORCIDs and CRediT roles before depositing. Add the Zenodo version DOI as
+# `doi:` once the record is created.

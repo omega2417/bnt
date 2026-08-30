@@ -1,3 +1,15 @@
+> **Looking for the DTCR cyber-resilience code cited in the manuscript?**
+> It is in **[`experiment/`](experiment/)** — start with
+> [`experiment/README.md`](experiment/README.md) and
+> [`experiment/docs/EXPERIMENT_REPORT.md`](experiment/docs/EXPERIMENT_REPORT.md).
+>
+> The rest of this repository is an unrelated fork of the Bayes Net Toolbox for
+> MATLAB. A reader following the manuscript's repository link landed here and found
+> no `dtcr` package; that is defect C10 in
+> [`experiment/docs/manuscript_corrections.md`](experiment/docs/manuscript_corrections.md).
+
+---
+
 Bayes Net Toolbox for Matlab
 
 Written by Kevin Murphy, 1997--2014. Last updated: 28 June 2014.

@@ -1,0 +1,182 @@
+# ============================================================================
+# Pre-registration - Digital-Twin Cyber-Resilience (DTCR) evaluation
+# UMSF cyber range / software-in-the-loop reference campaign
+#
+# FROZEN: 2026-08-30, after the calibration pilot (Gate 3), before the first
+# confirmatory run. Any change after this point is a protocol deviation and is
+# recorded in docs/EXPERIMENT_REPORT.md, section "Deviations".
+#
+# SCOPE WARNING. This file governs the SOFTWARE-IN-THE-LOOP campaign executed in
+# an isolated container. It is simultaneously the frozen protocol for the
+# physical UMSF cyber-range campaign, which has NOT been executed: Gate 0
+# (authorization, isolation, safety) and Gate 1 (inventory) are open. No value
+# produced under data_origin = simulation may be reported as a measurement of
+# the physical testbed.
+# ============================================================================
+
+meta:
+  title: "Digital-twin-enabled cyber-resilience framework: controlled evaluation"
+  protocol_version: "1.0.0"
+  frozen_utc: "2026-08-30"
+  implementation: "dtcr 2.0.0-experiment"
+  physical_campaign_status: "NOT EXECUTED - blocked at Gate 0/Gate 1"
+
+provenance:
+  allowed_data_origin_values: [real_testbed_confirmatory, real_testbed_pilot,
+                               simulation, simulation_pilot, synthetic]
+  confirmatory_analysis_admits: [real_testbed_confirmatory]
+  this_campaign_produces: [simulation, simulation_pilot]
+  rule: >
+    analysis/audit_provenance.py fails the build if any row whose data_origin is not
+    real_testbed_confirmatory is used to support a claim about the physical testbed.
+    The SIL campaign is reported under its own heading and never merged with
+    physical-testbed results.
+
+environment:
+  assets: 20            # 12 sensors, 4 edge, 3 cloud, 1 civil service
+  dependency_edges: 20
+  graph_type: directed acyclic (spectral radius of lambda*W^T is 0 by construction)
+  sampling_interval_s: 0.5
+  baseline_calibration_window_s: 240      # used to estimate mu, Sigma, IDS threshold
+  holdout_window_s: 60                    # clean, never used for calibration
+  attack_onset_s: 300
+  observation_end_s: 1200
+
+detector:
+  feature_dimension_p: 9
+  features: [pkt_in_rate, bytes_in_rate, conn_new_rate, cpu_util, mem_util,
+             iowait, msg_jitter, seq_gap_rate, app_latency]
+  ids_visible_features: [pkt_in_rate, bytes_in_rate, conn_new_rate]
+  mahalanobis_threshold: "chi2 quantile at 1 - nominal_fpr with df = p = 9"
+  nominal_fpr_per_sample: 0.01
+  chi2_9_threshold_value: 21.666
+  covariance_estimator: "sample correlation shrunk towards I, then rescaled by SD"
+  shrinkage: 0.10
+  shrinkage_scale: correlation      # NOT raw covariance - see finding F-05
+  anomaly_score: "a_i = F_chi2_p(d_i^2)"     # replaces the printed Eq. (7); see C3
+  anomaly_averaging_window_samples: 20
+  persistence_k: 3                  # consecutive exceedances required to fire
+  ids_threshold_rule: "empirical (1 - nominal_fpr) quantile of max|z| on the calibration window"
+
+trust:
+  alpha: 0.40
+  beta: 0.35
+  gamma: 0.25
+  rho: 0.60
+  healthy_asset_trust: 0.97
+  minimum_host_trust_tau: 0.60
+
+graph_risk:
+  lambda: 0.45
+  W_normalization: column          # zero columns (in-degree 0) are left at zero
+  theta: 0.05
+  local_risk: "R_i = a_i * (1 - T_i) * s_i (multiplicative, as printed in Eq. 8)"
+  convergence_check: "spectral radius of lambda*W^T must be < 1; recorded per run"
+
+orchestration:
+  mu: [0.35, 0.35, 0.30]
+  risk_term: "relative residual risk = R'(x)/R'(no action)"   # see finding F-04
+  constraints_are_hard: true
+  constraint_dimensions: [capacity, security_label, host_trust]
+  capacity: vector over (cpu, ram, net)
+  candidate_actions: [isolate_target, migrate_dependent, rate_limit,
+                      restore_validated_replica, revoke_identity, deny_and_reschedule]
+
+integrity_audit:
+  messages_per_cycle: 20
+  challenges_per_cycle: 2           # operational budget = 10% sampling
+  reference_replica_blocks: 10000
+  target_detection_probability_eta: 0.95
+  r_min_rule: "ceil(ln(1-eta)/ln(1-d/l))  (Eq. 5)"
+
+resilience:
+  A_min: 0.95
+  hold_interval_s: 30
+  RTO_s: 300
+  nri_window: "[t_detect, t_detect + 2*RTO], clipped to the trace"
+
+parameterized_model_assumptions:      # NOT measurements - carry the sensitivity analysis
+  alert_latency_s: 1.0
+  actuation_latency_s: 8.0
+  validation_latency_s: 15.0
+  rollback_latency_s: 20.0
+  playbook_decision_latency_s: 8.0
+  operator_response_lognormal_median_s: 180.0
+  operator_response_lognormal_sigma: 0.50
+  manual_placement_review_median_s: 420.0
+  availability_depth: {S1: 0.25, S2: 0.10, S3: 0.70, S4: 0.15}
+  degradation_ramp_s: 20.0
+  recovery_tau_s: 25.0
+  residual_floor: 0.03
+
+design:
+  arms: [A0, A1, A2, A3, A4, A5]
+  scenarios: [S1, S2, S3, S4]
+  blocking: "the (scenario, repetition) seed fixes the world; all six arms see it"
+  randomization_seed: 20260830
+  randomization: "block order shuffled; arm order permuted inside each block"
+  pilot_reps_per_cell: 5
+  confirmatory_reps_per_cell: 54        # from the Gate-3 power analysis, floor 20
+  confirmatory_runs_total: 1296
+  exclusion_rules:
+    - "a run is excluded only if the executor raised, or a configuration hash mismatched"
+    - "non-detection and non-recovery are CENSORED, never excluded"
+    - "no run is removed after its outcome has been seen"
+
+hypotheses:
+  H1:
+    statement: "The full system detects incidents that an IDS-plus-manual baseline misses."
+    primary_endpoint: detection rate (per run, per scenario)
+    contrast: A0 vs A5
+    direction: A5 > A0
+    mde: 0.25
+    test: "risk difference with Newcombe hybrid-score interval"
+    secondary: "detection latency among detected runs; censoring reported separately"
+  H2:
+    statement: "The full system shortens containment relative to an automated playbook without a twin."
+    primary_endpoint: containment_latency
+    contrast: A1 vs A5
+    direction: A5 < A1
+    mde_s: 15.0
+    test: "paired Wilcoxon signed-rank per scenario, Hedges g and Cliff delta"
+    note: "UNDERPOWERED in S4 (n required 2535). Reported with CI, no significance claim."
+  H3:
+    statement: "Integrity and provenance evidence expose telemetry tampering that a statistical detector cannot."
+    primary_endpoint: detection rate in S2
+    contrast: A3 vs A5
+    direction: A5 > A3
+    mde: 0.25
+    test: "risk difference with Newcombe hybrid-score interval"
+    secondary: "out-of-sample false-positive rate must not rise beyond the H5 margin"
+  H4:
+    statement: "Graph risk propagation and what-if planning reduce policy violations and improve impact localisation."
+    primary_endpoint: policy-violation rate in S4
+    contrast: A2 vs A5
+    direction: A5 < A2
+    mde: 0.25
+    secondary: [blast_recall (A4 vs A5), whatif_abs_err]
+  H5:
+    statement: "The full system does not degrade the false-positive rate beyond a pre-set margin and has a measurable, bounded resource cost."
+    primary_endpoint: fp_rate_holdout
+    contrast: A5 vs A0
+    type: non-inferiority
+    margin: 0.02
+    secondary: "orchestrator CPU time per decision, absolute and relative to A0"
+  H6:
+    statement: "The twin's what-if prediction agrees with the realised relative residual risk within a pre-set tolerance."
+    primary_endpoint: whatif_abs_err (A5)
+    tolerance: 0.10
+    test: "one-sample mean with bootstrap CI against the tolerance"
+
+statistics:
+  alpha: 0.05
+  multiplicity: "Holm over the family {H1, H2, H3, H4, H5}"
+  paired_tests: "Wilcoxon signed-rank on complete pairs"
+  intervals: "percentile bootstrap (10000 resamples) for means; Wilson/Newcombe for proportions"
+  effect_sizes: [Hedges g, Cliff delta, risk difference]
+  no_pooling_rule: "scenarios are never averaged into a single number without per-scenario tables"
+  censoring: "reported as counts; time metrics analysed on complete pairs only"
+  sensitivity:
+    - "operator response median varied over {90, 180, 360} s"
+    - "actuation latency varied over {4, 8, 16} s"
+    - "all valid runs vs complete-case only"

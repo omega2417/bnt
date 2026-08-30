@@ -1,0 +1,121 @@
+{
+  "checks": [
+    {
+      "name": "provenance/no-forbidden-origin",
+      "status": "PASS",
+      "detail": "origins present: ['simulation']"
+    },
+    {
+      "name": "provenance/physical-testbed-claims-are-empty",
+      "status": "PASS",
+      "detail": "0 rows carry real_testbed_confirmatory; every physical-testbed claim in the report is therefore marked BLOCKED, not measured"
+    },
+    {
+      "name": "provenance/single-origin-per-table",
+      "status": "PASS",
+      "detail": "a results table must not mix origins; found ['simulation']"
+    },
+    {
+      "name": "counts/rows-match-randomization-plan",
+      "status": "PASS",
+      "detail": "runs.csv=1296  plan=1296"
+    },
+    {
+      "name": "counts/every-planned-run-present",
+      "status": "PASS",
+      "detail": "0 planned runs missing"
+    },
+    {
+      "name": "counts/balanced-cells",
+      "status": "PASS",
+      "detail": "cell sizes: [54]"
+    },
+    {
+      "name": "counts/no-duplicate-run-ids",
+      "status": "PASS",
+      "detail": "0 duplicates"
+    },
+    {
+      "name": "integrity/raw-bundle-present",
+      "status": "PASS",
+      "detail": "0 missing"
+    },
+    {
+      "name": "integrity/raw-bundle-sha256",
+      "status": "PASS",
+      "detail": "0 mismatched"
+    },
+    {
+      "name": "integrity/sha256-column-populated",
+      "status": "PASS",
+      "detail": "every row must carry a 64-hex digest"
+    },
+    {
+      "name": "parameters/protocol-matches-implementation",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "parameters/chi2-threshold-uses-p-9",
+      "status": "PASS",
+      "detail": "chi2_9(0.99) = 21.666; a p=2 threshold would be 9.210"
+    },
+    {
+      "name": "recomputation/nri-from-stored-trace",
+      "status": "PASS",
+      "detail": "worst |recomputed - stored| = 1.88e-03 over 30 S3 runs (subsampled trace, tolerance 5e-3)"
+    },
+    {
+      "name": "recomputation/restore-not-before-containment",
+      "status": "PASS",
+      "detail": "service restoration cannot precede containment"
+    },
+    {
+      "name": "recomputation/detection-not-before-attack",
+      "status": "PASS",
+      "detail": "t_detect >= t_attack"
+    },
+    {
+      "name": "censoring/no-silent-drops",
+      "status": "PASS",
+      "detail": "318 runs are right-censored and are reported as censored, not excluded; 0 runs excluded"
+    },
+    {
+      "name": "censoring/every-exclusion-has-a-reason",
+      "status": "PASS",
+      "detail": "0 exclusions without a reason"
+    },
+    {
+      "name": "deliverables/no-placeholders",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "freshness/artifacts-newer-than-data",
+      "status": "PASS",
+      "detail": "stale: []"
+    },
+    {
+      "name": "manuscript/every-legacy-number-adjudicated",
+      "status": "PASS",
+      "detail": "unadjudicated: []"
+    },
+    {
+      "name": "report/quoted-numbers-recomputable",
+      "status": "PASS",
+      "detail": "8 headline values recomputed and matched"
+    },
+    {
+      "name": "report/cpu-ratio-inside-declared-band",
+      "status": "PASS",
+      "detail": "measured x7.10, report declares [5.5, 9.0]"
+    },
+    {
+      "name": "reproducibility/rerun-is-byte-identical",
+      "status": "PASS",
+      "detail": "12 runs re-executed and matched on every non-volatile column"
+    }
+  ],
+  "failures": [],
+  "verdict": "PASS"
+}
