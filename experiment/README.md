@@ -30,7 +30,7 @@ Start with **`docs/EXPERIMENT_REPORT.md`**.
 |---|---|
 | `dtcr/` | Reference implementation: one module per block of the mathematical model |
 | `harness/` | Environment generator, scenario injectors, arm definitions, run executor, campaign driver |
-| `tests/` | 34 unit checks; several fail against the manuscript's printed equations by design |
+| `tests/` | 37 unit checks; several fail against the manuscript's printed equations by design |
 | `protocol/` | Frozen pre-registration, hypotheses, randomisation plans |
 | `authorization/` | Gate 0 checklist — **unsigned** |
 | `inventory/` | Asset inventory (`PENDING`), status analysis, SIL topology |
