@@ -136,8 +136,8 @@ effect size on fewer than five complete pairs.
 
 **Evidence.** The measured costs do not share a denominator and move in opposite
 directions between arms: orchestration CPU per decision rose from
-~0.13 ms (A0) to ~0.9-1.0 ms (A5), a factor of **5.5-9.0** depending on machine
-load, while the out-of-sample
+~0.13 ms (A0) to ~0.7-1.0 ms (A5), a factor of **5.45 to 7.18** across five
+independent executions on the same machine, while the out-of-sample
 false-positive rate rose from 1.29% to 1.90% (+0.61 pp).
 
 **Correction.** Report each cost with its own numerator, denominator, aggregation

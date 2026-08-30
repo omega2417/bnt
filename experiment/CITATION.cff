@@ -10,6 +10,7 @@ abstract: >-
   deposited runs carry data_origin = simulation and none of them measures physical
   hardware.
 type: software
+doi: "10.5281/zenodo.22181264"
 version: 2.0.0-experiment
 date-released: "2026-08-30"
 license:
@@ -29,5 +30,8 @@ authors:
     city: Dnipro
     country: UA
 # Replace the placeholder author entry above with the individual authors,
-# ORCIDs and CRediT roles before depositing. Add the Zenodo version DOI as
-# `doi:` once the record is created.
+# ORCIDs and CRediT roles before the next release.
+#
+# The `doi:` above is the Zenodo version DOI of release 2.0.0-experiment. Verify
+# in a signed-out browser that it resolves to THIS version and not to the concept
+# ("all versions") record before citing it in the manuscript.

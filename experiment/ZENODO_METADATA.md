@@ -1,5 +1,8 @@
 # Zenodo deposit metadata
 
+**Published record: <https://doi.org/10.5281/zenodo.22181264>** (version `2.0.0-experiment`).
+The fields below are the ones used for that record; keep them in step with it.
+
 Ready to paste. **Do not publish the record until `analysis/audit_provenance.py`
 exits 0** — the archive is built by `analysis/make_zenodo_archive.sh`, which refuses
 to package a failing audit.
@@ -198,7 +201,9 @@ their ORCIDs and CRediT roles before publishing the record.
 
 ## After publication
 
-1. Record the **version DOI** (not the concept DOI) in `CITATION.cff` and in the
-   manuscript's Data Availability statement, with the access date.
+1. The version DOI `10.5281/zenodo.22181264` is recorded in `CITATION.cff` and in
+   `manuscript/manuscript_insert.md`. Confirm in a signed-out browser that it
+   resolves to this version and not to the concept ("all versions") record, then
+   fill the access date in the Data Availability statement.
 2. Verify in a signed-out browser that the repository link in the manuscript shows
    this code and not an unrelated default branch (defect C10).

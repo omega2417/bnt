@@ -196,6 +196,32 @@ def check_manuscript_claims(df: pd.DataFrame) -> None:
            f"unadjudicated: {missing}")
 
 
+def check_doi_consistency() -> None:
+    """The deposited DOI must be identical everywhere it appears.
+
+    This does NOT check that the DOI resolves - the build environment has no
+    network egress. Resolution must be confirmed manually in a signed-out browser
+    before the manuscript is submitted; see manuscript/manuscript_insert.md.
+    """
+    doi_re = re.compile(r"10\.5281/zenodo\.(\d+)")
+    found: dict[str, list[str]] = {}
+    for rel in ("CITATION.cff", "README.md", "ZENODO_METADATA.md",
+                "manuscript/manuscript_insert.md",
+                "docs/issue_evidence_correction_matrix.md"):
+        p = ROOT / rel
+        if not p.exists():
+            continue
+        for m in doi_re.finditer(p.read_text()):
+            found.setdefault(m.group(0), []).append(rel)
+    current = {d: f for d, f in found.items() if d != "10.5281/zenodo.22179426"}
+    record("deposit/doi-is-consistent", len(current) == 1,
+           f"current-release DOIs found: { {d: sorted(set(f)) for d, f in current.items()} }")
+    record("deposit/doi-cited-in-manuscript-insert",
+           bool(current) and "manuscript/manuscript_insert.md"
+           in next(iter(current.values()), []),
+           "the manuscript insert must cite the deposited DOI")
+
+
 def check_determinism(df: pd.DataFrame) -> None:
     """Re-execute a sample of runs and require byte-identical rows.
 
@@ -292,6 +318,7 @@ def main() -> int:
     check_report_numbers(df)
     check_cpu_ratio_band(df)
     check_determinism(df)
+    check_doi_consistency()
 
     width = max(len(c[0]) for c in CHECKS)
     print("\nPROVENANCE AND CONSISTENCY AUDIT")

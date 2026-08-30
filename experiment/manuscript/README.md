@@ -15,6 +15,7 @@ mathematics, specification or scholarly record. That is delivered here.
 
 | Deliverable | File | Depends on physical data? |
 |---|---|---|
+| Ready-to-paste manuscript text citing the deposit | `manuscript_insert.md` | no |
 | Corrected equations and definitions, ready to paste | `corrected_equations.md` | no |
 | Full defect list with quantitative evidence | `../docs/manuscript_corrections.md` | no |
 | Adjudication of every legacy headline number | `../docs/issue_evidence_correction_matrix.md` | no |

@@ -108,12 +108,22 @@
     {
       "name": "report/cpu-ratio-inside-declared-band",
       "status": "PASS",
-      "detail": "measured x7.10, report declares [5.5, 9.0]"
+      "detail": "measured x5.25, report declares [4.0, 10.0]"
     },
     {
       "name": "reproducibility/rerun-is-byte-identical",
       "status": "PASS",
       "detail": "12 runs re-executed and matched on every non-volatile column"
+    },
+    {
+      "name": "deposit/doi-is-consistent",
+      "status": "PASS",
+      "detail": "current-release DOIs found: {'10.5281/zenodo.22181264': ['CITATION.cff', 'README.md', 'ZENODO_METADATA.md', 'manuscript/manuscript_insert.md']}"
+    },
+    {
+      "name": "deposit/doi-cited-in-manuscript-insert",
+      "status": "PASS",
+      "detail": "the manuscript insert must cite the deposited DOI"
     }
   ],
   "failures": [],

@@ -1,5 +1,7 @@
 # DTCR — controlled evaluation of a digital-twin cyber-resilience framework
 
+**Deposit:** <https://doi.org/10.5281/zenodo.22181264> · version `2.0.0-experiment`
+
 Reproducibility deposit for the manuscript *Digital-Twin-Enabled Cyber-Resilience
 Framework for Secure Edge-Cloud Orchestration and Data Integrity in Distributed
 Smart-Region Infrastructure* (`Man-V3`), together with the frozen protocol for the
@@ -85,4 +87,11 @@ worked examples (0.895, 0.910) reproduce exactly.
 
 ## Citing
 
-See `CITATION.cff`.
+```
+DTCR: Digital-Twin Cyber-Resilience Framework - Reference Implementation,
+Pre-Registered Protocol and Software-in-the-Loop Evaluation,
+version 2.0.0-experiment; Zenodo, 2026. https://doi.org/10.5281/zenodo.22181264
+```
+
+See `CITATION.cff` for the machine-readable form. Ready-to-paste manuscript text
+citing this deposit is in `manuscript/manuscript_insert.md`.
