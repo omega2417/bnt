@@ -46,3 +46,7 @@ ACP-SME v0.1 as described in the accompanying article.
   reproducibility tests that assert results fall inside the reported intervals.
 - Zenodo deposition metadata, citation metadata, and reproducibility,
   architecture, parameter and claims-boundary documentation.
+- `docs/AVAILABILITY.md` — ready-to-paste Markdown linking the Zenodo record
+  (DOI 10.5281/zenodo.2220368) and the GitHub repository: data availability
+  statement, software availability section, README badges, citation block and
+  BibTeX.

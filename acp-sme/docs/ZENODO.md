@@ -92,10 +92,20 @@ science; reproducible research; synthetic data
 
 ## Related identifiers
 
-Once the article has a DOI, add it on the Zenodo form as:
-`is supplement to` → the article DOI.
+| Relation | Identifier |
+| --- | --- |
+| `is supplement to` | the article DOI, once minted |
+| `is supplement to` | <https://github.com/omega2417/bnt/tree/master/acp-sme> |
+
+## Assigned DOI
+
+`10.5281/zenodo.2220368` — recorded in `../.zenodo.json`, `../CITATION.cff` and
+`AVAILABILITY.md`. Verify it resolves to this deposit before publication; see the note at
+the top of `AVAILABILITY.md`. Prefer the concept DOI ("Cite all versions") over a
+version-specific DOI so that later releases do not invalidate the printed citation.
 
 ## After deposition
 
 The article's Data availability statement currently reads "available from the corresponding
-author on reasonable request". Replace that with the Zenodo DOI minted for this record.
+author on reasonable request". Replace it with one of the ready-made blocks in
+`AVAILABILITY.md`, which cite both the Zenodo DOI and the GitHub repository.

@@ -36,5 +36,14 @@
     "synthetic data"
   ],
   "notes": "All reported results are synthetic model output. They verify internal behaviour under encoded assumptions and do not demonstrate real-world incident reduction, standards conformity, or certification readiness. No confidential, personal, or real-enterprise data were used.",
-  "access_right": "open"
+  "access_right": "open",
+  "doi": "10.5281/zenodo.2220368",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/omega2417/bnt/tree/master/acp-sme",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
+    }
+  ]
 }

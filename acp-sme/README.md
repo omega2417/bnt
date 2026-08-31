@@ -1,5 +1,10 @@
 # ACP-SME — Adaptive Cybersecurity Protector for SMEs
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2220368.svg)](https://doi.org/10.5281/zenodo.2220368)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/downloads/)
+[![Dependencies: none](https://img.shields.io/badge/dependencies-none-brightgreen.svg)](#requirements)
+
 Reference implementation and reproduction package for:
 
 > Prokopovych-Tkachenko, D. **A Metadata-Driven Adaptive Cybersecurity Protector for SMEs
@@ -141,12 +146,29 @@ No confidential, personal, or real-enterprise data were used, and none are requi
 scenario definitions and parameters are in `src/acp_sme/scenarios.py` and
 `src/acp_sme/simulator.py`, and are dumped machine-readably by `acp-sme params`.
 
-## Citation and deposition
+## Availability
 
-See `CITATION.cff`. Please cite both the article and this software record.
+| | |
+| --- | --- |
+| Archived release (citable) | [10.5281/zenodo.2220368](https://doi.org/10.5281/zenodo.2220368) |
+| Development repository | [github.com/omega2417/bnt](https://github.com/omega2417/bnt/tree/master/acp-sme) |
+| License | MIT (code), CC BY 4.0 (docs and figures) |
 
-`docs/ZENODO.md` holds the ready-to-paste Zenodo deposition metadata — title, abstract,
-keywords and related identifiers — kept in sync with `.zenodo.json` and `CITATION.cff`.
+The Zenodo record is the archived, citable snapshot; GitHub carries ongoing development.
+Cite the DOI in publications.
+
+## Citation
+
+If you use this software, please cite both the article and the software record.
+
+> Prokopovych-Tkachenko, D. (2026). *ACP-SME: A Metadata-Driven Adaptive Cybersecurity
+> Protector for SMEs — Reference Prototype and Reproduction Package* (Version 0.1.0)
+> [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.2220368
+
+Machine-readable metadata is in `CITATION.cff`. `docs/AVAILABILITY.md` holds ready-to-paste
+Markdown for a data availability statement, a software availability section, badges and
+BibTeX; `docs/ZENODO.md` holds the deposition metadata. All three are kept in sync with
+`.zenodo.json`.
 
 ## License
 
