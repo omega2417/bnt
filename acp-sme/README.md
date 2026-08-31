@@ -141,9 +141,12 @@ No confidential, personal, or real-enterprise data were used, and none are requi
 scenario definitions and parameters are in `src/acp_sme/scenarios.py` and
 `src/acp_sme/simulator.py`, and are dumped machine-readably by `acp-sme params`.
 
-## Citation
+## Citation and deposition
 
 See `CITATION.cff`. Please cite both the article and this software record.
+
+`docs/ZENODO.md` holds the ready-to-paste Zenodo deposition metadata — title, abstract,
+keywords and related identifiers — kept in sync with `.zenodo.json` and `CITATION.cff`.
 
 ## License
 

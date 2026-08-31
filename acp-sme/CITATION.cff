@@ -1,17 +1,33 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite both the software and the article."
-title: "ACP-SME: Adaptive Cybersecurity Protector for SMEs (reference prototype)"
+title: "ACP-SME: A Metadata-Driven Adaptive Cybersecurity Protector for SMEs — Reference Prototype and Reproduction Package"
 abstract: >-
-  Reference implementation and reproduction package for ACP-SME, a
-  metadata-driven, privacy-oriented decision-support prototype that tailors an
-  SME cybersecurity profile across NIST CSF 2.0, ISO/IEC 27001:2022 and CIS
-  Controls v8.1 under an explicit resource budget. Includes the Minimum
-  Necessary Metadata Model and its local metadata guard, a typed capability
-  crosswalk, the material-change detector, an exact resource-constrained
-  selector, a hash-chained human-authorized profile ledger, and the seeded
-  synthetic experiment reported in the article. All results are synthetic model
-  output; they do not demonstrate real-world incident reduction, standards
-  conformity or certification readiness.
+  ACP-SME (Adaptive Cybersecurity Protector for SMEs), version 0.1, is a
+  privacy-oriented governance decision-support prototype that keeps a small or
+  medium-sized enterprise's approved cybersecurity profile current as the
+  business itself changes. It is the reference implementation and complete
+  reproduction package for the accompanying article on resource-aware tailoring
+  of NIST CSF 2.0, ISO/IEC 27001:2022 and CIS Controls v8.1.
+
+  The artifact treats an approved profile as a versioned decision object. It
+  implements the Minimum Necessary Metadata Model and its fail-closed local
+  metadata guard, a typed and versioned capability-to-standards crosswalk, a
+  material-change detector combining a weighted profile distance with
+  deterministic critical predicates and a persistence rule, an exact
+  resource-constrained profile selector, a hash-chained human-authorized profile
+  ledger with role separation, and the seeded synthetic experiment over 90
+  traces and 10,800 enterprise-days reported in the article.
+
+  The core artifact, the experiment and the 140 tests run on a bare Python 3.9+
+  standard library with no third-party dependencies; matplotlib is optional and
+  needed only for figures.
+
+  All results are synthetic model output. They verify internal behaviour under
+  encoded assumptions and demonstrate neither real-world incident reduction, nor
+  standards conformity, nor certification readiness. The software cannot
+  implement a safeguard, change an approved profile or accept risk; only an
+  authorized human decision does. No ISO/IEC control text is reproduced.
+
 version: "0.1.0"
 date-released: "2026-08-31"
 license: MIT
