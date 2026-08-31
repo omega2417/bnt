@@ -1,0 +1,52 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software and the article."
+title: "ACP-SME: Adaptive Cybersecurity Protector for SMEs (reference prototype)"
+abstract: >-
+  Reference implementation and reproduction package for ACP-SME, a
+  metadata-driven, privacy-oriented decision-support prototype that tailors an
+  SME cybersecurity profile across NIST CSF 2.0, ISO/IEC 27001:2022 and CIS
+  Controls v8.1 under an explicit resource budget. Includes the Minimum
+  Necessary Metadata Model and its local metadata guard, a typed capability
+  crosswalk, the material-change detector, an exact resource-constrained
+  selector, a hash-chained human-authorized profile ledger, and the seeded
+  synthetic experiment reported in the article. All results are synthetic model
+  output; they do not demonstrate real-world incident reduction, standards
+  conformity or certification readiness.
+version: "0.1.0"
+date-released: "2026-08-31"
+license: MIT
+type: software
+authors:
+  - family-names: "Prokopovych-Tkachenko"
+    given-names: "Dmytro"
+    email: "omega2417@gmail.com"
+    orcid: "https://orcid.org/0000-0002-6590-3898"
+    affiliation: >-
+      Department of Cybersecurity and Information Technologies,
+      University of Customs and Finance, Dnipro 49000, Ukraine
+keywords:
+  - cybersecurity governance
+  - organizational profiles
+  - control prioritization
+  - small and medium-sized enterprises
+  - NIST Cybersecurity Framework 2.0
+  - ISO/IEC 27001:2022
+  - CIS Controls v8.1
+  - digital twins
+  - extended reality
+  - metaverse
+  - privacy by design
+  - human-in-the-loop
+  - cyber resilience
+  - reproducible research
+references:
+  - type: article
+    title: >-
+      A Metadata-Driven Adaptive Cybersecurity Protector for SMEs in
+      Metaverse-Enabled Ecosystems: Resource-Aware Tailoring of NIST CSF 2.0,
+      ISO/IEC 27001:2022, and CIS Controls v8.1
+    authors:
+      - family-names: "Prokopovych-Tkachenko"
+        given-names: "Dmytro"
+        orcid: "https://orcid.org/0000-0002-6590-3898"
+    year: 2026

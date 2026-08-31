@@ -1,0 +1,40 @@
+{
+  "title": "ACP-SME: Adaptive Cybersecurity Protector for SMEs (reference prototype and reproduction package)",
+  "version": "0.1.0",
+  "upload_type": "software",
+  "license": "MIT",
+  "language": "eng",
+  "publication_date": "2026-08-31",
+  "creators": [
+    {
+      "name": "Prokopovych-Tkachenko, Dmytro",
+      "affiliation": "Department of Cybersecurity and Information Technologies, University of Customs and Finance, Dnipro 49000, Ukraine",
+      "orcid": "0000-0002-6590-3898"
+    }
+  ],
+  "description": "<p>Reference implementation and complete reproduction package for the <strong>Adaptive Cybersecurity Protector for SMEs (ACP-SME), version 0.1</strong>, accompanying the article <em>&quot;A Metadata-Driven Adaptive Cybersecurity Protector for SMEs in Metaverse-Enabled Ecosystems: Resource-Aware Tailoring of NIST CSF 2.0, ISO/IEC 27001:2022, and CIS Controls v8.1&quot;</em>.</p><p>ACP-SME treats an SME's approved cybersecurity profile as a versioned decision object. Minimized, locally processed business metadata flags a material change; a typed capability graph explains its relevance across three complementary standards; a constrained exact selector builds a resource-feasible profile delta; and an authorized person decides whether the baseline changes.</p><p><strong>Contents.</strong> The Minimum Necessary Metadata Model (MNMM) and its fail-closed local metadata guard; a typed, directional, versioned capability-to-standards crosswalk; the material-change detector implementing the weighted approved-profile distance, five deterministic critical predicates, a two-of-three persistence rule and a periodic timer; an exact resource-constrained profile selector over all 919 dependency-valid subsets of 14 capabilities; a hash-chained, replayable and rollback-capable human-authorized profile ledger; the seeded synthetic experiment over 90 traces and 10,800 enterprise-days comparing the adaptive loop against static and 30-day-review baselines; the threshold-by-budget sensitivity grid; figure rendering; a worked end-to-end governance walkthrough; and 140 tests mapped to the article's eight artifact requirements.</p><p><strong>Reproducibility.</strong> The core artifact, the full experiment and the entire test suite run on a bare Python 3.9+ standard-library installation with no third-party dependencies; matplotlib is optional and needed only for figures. A single command, <code>acp-sme reproduce</code>, regenerates every reported table, the per-trace outcome data and the figures in under a minute. Every value produced falls inside the confidence interval reported in the article.</p><p><strong>Claims boundary.</strong> ACP-SME is a governance decision-support artifact, not an anti-malware packer, vulnerability scanner, SIEM, autonomous enforcement engine, actuarial loss model or certification system. All results are model output over explicitly synthetic traces: no real enterprise, employee, customer, supplier or incident is represented, and no confidential or personal data were used. Modeled coverage is a capability-demand index, not a probability of avoiding an incident. A standards reference states why a recommendation is relevant; it does not prove conformity or certification readiness. The software cannot implement a safeguard, change an approved profile or accept risk &mdash; only an authorized human decision does, and the code enforces that boundary. No ISO/IEC control text is reproduced; only identifiers and author-generated summaries are cited.</p>",
+  "keywords": [
+    "cybersecurity governance",
+    "organizational profiles",
+    "control prioritization",
+    "small and medium-sized enterprises",
+    "SME",
+    "NIST Cybersecurity Framework 2.0",
+    "ISO/IEC 27001:2022",
+    "CIS Controls v8.1",
+    "digital twins",
+    "extended reality",
+    "metaverse",
+    "Internet of Things",
+    "privacy by design",
+    "data minimization",
+    "human-in-the-loop",
+    "concept drift",
+    "cyber resilience",
+    "design science",
+    "reproducible research",
+    "synthetic data"
+  ],
+  "notes": "All reported results are synthetic model output. They verify internal behaviour under encoded assumptions and do not demonstrate real-world incident reduction, standards conformity, or certification readiness. No confidential, personal, or real-enterprise data were used.",
+  "access_right": "open"
+}
