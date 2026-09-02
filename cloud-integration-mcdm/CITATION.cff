@@ -1,0 +1,74 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software and the associated article."
+title: "cimcdm: Cloud-Integration Multicriteria Decision Model"
+abstract: >-
+  Reference implementation and reproducibility archive for a time-aware,
+  three-objective binary portfolio model that selects distributed
+  information-processing systems for cloud integration. The package reproduces
+  the article's exact enumeration of 262,144 portfolios, its matched NSGA-II /
+  NSGA-III / weighted-sum comparison, its paired Wilcoxon tests with Holm
+  correction, and its 25-cell temporal-rate sensitivity analysis.
+version: "1.0.0"
+date-released: "2026-09-02"
+license: MIT
+type: software
+repository-code: "https://github.com/omega2417/bnt"
+keywords:
+  - cloud integration
+  - distributed information processing
+  - multicriteria optimization
+  - NSGA-II
+  - NSGA-III
+  - Pareto front
+  - sensitivity analysis
+  - reproducibility
+
+authors:
+  - family-names: Torstensson
+    given-names: Olga
+    orcid: "https://orcid.org/0009-0007-2169-6851"
+    affiliation: "School of Information Technology, Halmstad University, Halmstad, Sweden"
+    email: olga.torstensson@hh.se
+  - family-names: Prokopovych-Tkachenko
+    given-names: Dmytro
+    orcid: "https://orcid.org/0000-0002-6590-3898"
+    affiliation: "Department of Cybersecurity and Information Technologies, University of Customs and Finance, Dnipro, Ukraine"
+    email: omega2417@umsf.dp.ua
+  - family-names: Lakhno
+    given-names: Valerii
+    orcid: "https://orcid.org/0000-0001-9695-4543"
+    affiliation: "Department of Computer Systems, Networks and Cybersecurity, National University of Life and Environmental Sciences of Ukraine, Kyiv, Ukraine"
+    email: lva964@nubip.edu.ua
+  - family-names: Desiatko
+    given-names: Alona
+    orcid: "https://orcid.org/0000-0002-2284-3418"
+    affiliation: "Department of Software Engineering and Cybersecurity, State University of Trade and Economics, Kyiv, Ukraine"
+    email: desyatko@knute.edu.ua
+  - family-names: Fedotov
+    given-names: Serhii
+    orcid: "https://orcid.org/0009-0009-7275-0867"
+    affiliation: "Department of Software Engineering and Cybersecurity, State University of Trade and Economics, Kyiv, Ukraine"
+    email: s.fedotov@knute.edu.ua
+
+preferred-citation:
+  type: article
+  title: "Multicriteria Model for Integrating Distributed Systems into Cloud Services"
+  year: 2026
+  journal: "Systems"
+  notes: "Submitted manuscript."
+  authors:
+    - family-names: Torstensson
+      given-names: Olga
+      orcid: "https://orcid.org/0009-0007-2169-6851"
+    - family-names: Prokopovych-Tkachenko
+      given-names: Dmytro
+      orcid: "https://orcid.org/0000-0002-6590-3898"
+    - family-names: Lakhno
+      given-names: Valerii
+      orcid: "https://orcid.org/0000-0001-9695-4543"
+    - family-names: Desiatko
+      given-names: Alona
+      orcid: "https://orcid.org/0000-0002-2284-3418"
+    - family-names: Fedotov
+      given-names: Serhii
+      orcid: "https://orcid.org/0009-0009-7275-0867"

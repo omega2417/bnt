@@ -1,0 +1,6 @@
+# Google Colab already ships compatible NumPy, SciPy, pandas and Matplotlib.
+# Only install what is missing, so the runtime does not need a restart.
+numpy>=1.24
+scipy>=1.10
+pandas>=2.0
+matplotlib>=3.7

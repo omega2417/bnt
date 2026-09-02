@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cimcdm"
+version = "1.0.0"
+description = "Reference implementation of a time-aware three-objective model for integrating distributed systems into cloud services"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = [
+    "cloud integration",
+    "multicriteria optimization",
+    "NSGA-II",
+    "NSGA-III",
+    "Pareto front",
+    "decision support",
+    "reproducibility",
+]
+
+authors = [
+    { name = "Olga Torstensson" },
+    { name = "Dmytro Prokopovych-Tkachenko" },
+    { name = "Valerii Lakhno" },
+    { name = "Alona Desiatko" },
+    { name = "Serhii Fedotov", email = "s.fedotov@knute.edu.ua" },
+]
+
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "pandas>=2.0",
+    "matplotlib>=3.7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+notebook = ["jupyter>=1.0", "ipywidgets>=8.0"]
+
+[project.scripts]
+cimcdm = "cimcdm.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+cimcdm = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

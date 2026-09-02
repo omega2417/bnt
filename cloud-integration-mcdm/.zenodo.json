@@ -1,0 +1,59 @@
+{
+  "title": "cimcdm: Cloud-Integration Multicriteria Decision Model - reproducibility archive",
+  "description": "<p>Reference implementation and reproducibility archive for the article <em>Multicriteria Model for Integrating Distributed Systems into Cloud Services</em>.</p><p>The software implements a time-aware, three-objective binary portfolio model in which benefit accumulation, organizational adaptation and residual risk are explicit functions of time. It reproduces every headline result of the article: exact enumeration of all 262,144 portfolios of the 18-system synthetic benchmark (83,657 feasible, 446 Pareto-optimal, exact hypervolume 0.421543), 30 matched replications of NSGA-II and a reference-direction NSGA-III variant, a 231-weight weighted-sum baseline, paired Wilcoxon signed-rank tests with Holm correction, and a 25-cell sensitivity analysis of the adaptation and economic-benefit accumulation rates.</p><p>The archive ships a self-verifying validation module that re-derives the published numbers and reports pass or fail for each claim, a command-line interface, and a Google Colab notebook that runs the whole study end to end in the browser without local installation.</p>",
+  "upload_type": "software",
+  "license": "MIT",
+  "access_right": "open",
+  "version": "1.0.0",
+  "language": "eng",
+  "creators": [
+    {
+      "name": "Torstensson, Olga",
+      "affiliation": "School of Information Technology, Halmstad University, Halmstad, Sweden",
+      "orcid": "0009-0007-2169-6851"
+    },
+    {
+      "name": "Prokopovych-Tkachenko, Dmytro",
+      "affiliation": "Department of Cybersecurity and Information Technologies, University of Customs and Finance, Dnipro, Ukraine",
+      "orcid": "0000-0002-6590-3898"
+    },
+    {
+      "name": "Lakhno, Valerii",
+      "affiliation": "Department of Computer Systems, Networks and Cybersecurity, National University of Life and Environmental Sciences of Ukraine, Kyiv, Ukraine",
+      "orcid": "0000-0001-9695-4543"
+    },
+    {
+      "name": "Desiatko, Alona",
+      "affiliation": "Department of Software Engineering and Cybersecurity, State University of Trade and Economics, Kyiv, Ukraine",
+      "orcid": "0000-0002-2284-3418"
+    },
+    {
+      "name": "Fedotov, Serhii",
+      "affiliation": "Department of Software Engineering and Cybersecurity, State University of Trade and Economics, Kyiv, Ukraine",
+      "orcid": "0009-0009-7275-0867"
+    }
+  ],
+  "keywords": [
+    "cloud integration",
+    "distributed information processing",
+    "multicriteria optimization",
+    "multi-objective evolutionary algorithms",
+    "NSGA-II",
+    "NSGA-III",
+    "Pareto front",
+    "hypervolume",
+    "IGD+",
+    "sensitivity analysis",
+    "decision support",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/omega2417/bnt",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Synthetic benchmark only. The scenario is generated, not observed in a deployed organization; see the Limitations section of the article and of the README."
+}

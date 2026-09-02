@@ -1,0 +1,6 @@
+# Pinned to the versions reported in Section 2.4 of the article.
+# Newer releases reproduce the same results; the pins exist for exact replication.
+numpy==2.3.5
+scipy==1.17.0
+pandas==2.2.3
+matplotlib==3.10.8
