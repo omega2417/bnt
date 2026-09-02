@@ -7,6 +7,7 @@ Reference implementation and reproducibility archive for:
 > *Systems*, 2026 (submitted manuscript).
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/omega2417/bnt/blob/claude/zenodo-publication-project-sedznh/cloud-integration-mcdm/notebooks/Cloud_Integration_MCDM_Colab.ipynb)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22259414.svg)](https://doi.org/10.5281/zenodo.22259414)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 
@@ -334,7 +335,8 @@ tests that assert the published numbers come back out of the code.
 
 ## Citation
 
-Cite both the software and the article. Machine-readable metadata is in
+Cite both the software and the article. The archived release is deposited at
+Zenodo under **[10.5281/zenodo.22259414](https://doi.org/10.5281/zenodo.22259414)**. Machine-readable metadata is in
 [`CITATION.cff`](CITATION.cff) and [`.zenodo.json`](.zenodo.json).
 
 ```bibtex
@@ -348,12 +350,16 @@ Cite both the software and the article. Machine-readable metadata is in
 }
 
 @software{cimcdm2026,
-  title   = {cimcdm: Cloud-Integration Multicriteria Decision Model},
-  author  = {Torstensson, Olga and Prokopovych-Tkachenko, Dmytro and
-             Lakhno, Valerii and Desiatko, Alona and Fedotov, Serhii},
-  year    = {2026},
-  version = {1.0.0},
-  license = {MIT}
+  title     = {cimcdm: Reference Implementation and Reproducibility Archive for
+               "Multicriteria Model for Integrating Distributed Systems into Cloud Services"},
+  author    = {Torstensson, Olga and Prokopovych-Tkachenko, Dmytro and
+               Lakhno, Valerii and Desiatko, Alona and Fedotov, Serhii},
+  year      = {2026},
+  version   = {1.0.0},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.22259414},
+  url       = {https://doi.org/10.5281/zenodo.22259414},
+  license   = {MIT}
 }
 ```
 
