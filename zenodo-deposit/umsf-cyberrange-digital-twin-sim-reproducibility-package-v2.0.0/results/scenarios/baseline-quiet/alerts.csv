@@ -1,0 +1,1 @@
+run_id,replicate_id,alert_id,step,timestamp_utc,site_id,detector,score,threshold,rule_hits,explanation,correlated_with,recommended_action,approval_required,shadow_mode

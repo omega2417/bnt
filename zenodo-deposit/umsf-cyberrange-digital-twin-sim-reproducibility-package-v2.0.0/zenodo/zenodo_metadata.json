@@ -1,0 +1,64 @@
+{
+  "_instructions": [
+    "Ready-to-paste Zenodo record metadata for release 2.0.0.",
+    "Fields in [BRACKETS] must be replaced with real, verified values only.",
+    "Answer 'No' to the existing-DOI question, press 'Get a DOI now!', paste the",
+    "reserved DOI into README.md, CITATION.cff, CHANGELOG.md and this file, then",
+    "re-run 'make manifests' and re-upload the ZIP before publishing."
+  ],
+  "upload_type": "software",
+  "alternative_upload_type_if_a_dataset_record_is_required": "dataset",
+  "title": "UMSF Cyber-Range Digital Twin: Reproducible SIM Experiment, Synthetic Telemetry, and Provenance-Aware Verification Package (v2.0.0)",
+  "additional_titles": [
+    {
+      "type": "translated-title",
+      "lang": "ukr",
+      "title": "Цифровий двійник кіберполігону УМСФ: відтворюваний SIM-експеримент, синтетична телеметрія та пакет провенанс-орієнтованої верифікації (v2.0.0)"
+    }
+  ],
+  "version": "2.0.0",
+  "publication_date": "[ACTUAL DATE OF FIRST PUBLIC RELEASE, YYYY-MM-DD]",
+  "publisher": "Zenodo",
+  "language": "eng",
+  "access_right": "open",
+  "license_code": "MIT",
+  "license_data_and_documentation": "CC-BY-4.0",
+  "license_note": "Code MIT; synthetic data and documentation CC BY 4.0; file-by-file mapping in LICENSES/README.md. Declare both licences in the record.",
+  "creators": [
+    {
+      "name": "Prokopovych-Tkachenko, Dmytro",
+      "orcid": "0000-0002-6590-3898",
+      "affiliation": "Department of Cybersecurity and Information Technologies, University of Customs and Finance, Dnipro, Ukraine"
+    }
+  ],
+  "_creators_note": "Add further creators only for people with a verified contribution, in the order agreed for the related manuscript. People without an authorship contribution belong under contributors with an exact role, not under creators.",
+  "contributors": [],
+  "keywords": [
+    "cyber range", "digital twin", "critical infrastructure", "cybersecurity",
+    "cyber resilience", "simulation", "synthetic telemetry", "reproducibility",
+    "data provenance", "scenario-based testing", "safety gates", "SIM experiment",
+    "software verification", "UMSF"
+  ],
+  "description_en": "This deposit provides a reproducible software package for a two-site cyber-range digital-twin prototype developed at the University of Customs and Finance, Ukraine. The package supports safe pre-experimental testing of network, energy, telemetry, and cybersecurity scenarios before any transition to EMU, REPLAY, HIL, or physical-test stages.\n\nThe resource includes the version 2.0.0 executable model and source code (66 standard-library-only Python modules), scenario configurations, seed policy, tests, synthetic telemetry, scenario-generated ground truth, alerts, summaries, manifests, a limited eight-point design-of-experiments demonstration, and a demonstration Monte Carlo workflow. In this release 40/40 automated software checks pass and 86/86 reference values of the executable specification are reproduced exactly. Scenario and demonstration SIM runs contain 13,049 dependent time-series records across 8 independent run/replicate units; the full campaign contains 16 run/replicate units including the DoE points.\n\nAll numerical outputs are synthetic model results. The deposit contains no measurements from the physical UMSF cyber range: no parameter is classified as MEASURED, 194 parameters are SYNTHETIC_DEMO, and four remain UNKNOWN and block HIL execution. Reproducibility claims therefore apply to the software artifact and its conformance to the specification, not to physical validity, field performance, or operational deployment.",
+  "description_uk": "Цей депозит містить відтворюваний пакет програмного прототипу цифрового двійника двомайданчикового кіберполігону Університету митної справи та фінансів. Пакет призначений для безпечної передекспериментальної перевірки сценаріїв мережевої, енергетичної, телеметрійної та кібербезпекової поведінки до перенесення дослідів у середовища EMU, REPLAY, HIL або на фізичний стенд.\n\nРесурс охоплює вихідний код і виконувану специфікацію версії 2.0.0, конфігурації сценаріїв, seed-політику, тести, synthetic telemetry, сценарний ground truth, alerts, агреговані summaries, manifests, результати обмеженого DOE та демонстраційного Monte Carlo. У цьому випуску пройдено 40 із 40 автоматичних перевірок і точно відтворено 86 контрольних значень специфікації. У сценарних і демонстраційних SIM-прогонах сформовано 13 049 залежних часових записів.\n\nУсі числові результати є синтетичними виходами програмної моделі. Депозит не містить вимірювань фізичного кіберполігону: статус MEASURED відсутній, 194 параметри мають статус SYNTHETIC_DEMO, а чотири залишаються UNKNOWN і блокують режим HIL. Відтворюваність стосується програмного артефакту та його відповідності специфікації, а не фізичної достовірності мережі, Wi-Fi, VPN, резервного живлення або детекторів.",
+  "notes": "Evidence boundary: synthetic SIM-mode software outputs only. Verification and reproducibility of the software artifact are demonstrated; calibration against, and validation with, the physical cyber range are not.",
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "identifier": "[ARTICLE DOI, ONLY AFTER IT EXISTS]",
+      "resource_type": "publication-article",
+      "_note": "Do not put the article DOI in the existing-DOI field of this upload; they identify different objects."
+    },
+    {
+      "relation": "isDerivedFrom",
+      "identifier": "[STABLE URL OR DOI OF THE EXECUTABLE SPECIFICATION, IF ONE EXISTS]",
+      "resource_type": "publication-technicalnote"
+    }
+  ],
+  "funding": "[GRANT / PROJECT, OR 'Funding not applicable' - real information only]",
+  "communities": [],
+  "_communities_note": "Add a community only after checking its rules. Submitting to a community does not replace the evidence-status description.",
+  "files": [
+    "umsf-cyberrange-digital-twin-sim-reproducibility-package-v2.0.0.zip"
+  ]
+}

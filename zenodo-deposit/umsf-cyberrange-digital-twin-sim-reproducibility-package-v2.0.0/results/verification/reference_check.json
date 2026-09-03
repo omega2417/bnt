@@ -1,0 +1,622 @@
+{
+  "checked_values": 86,
+  "matched": 86,
+  "mismatched": 0,
+  "all_matched": true,
+  "claim": "Software verification and reproducibility against the executable specification. NOT calibration or validation against the physical UMSF cyber range.",
+  "checks": [
+    {
+      "group": "K.3 inventory/evidence",
+      "name": "experiment_id",
+      "expected": "umsf-dt-demo-002",
+      "actual": "umsf-dt-demo-002",
+      "match": true
+    },
+    {
+      "group": "K.3 inventory/evidence",
+      "name": "config_hash",
+      "expected": "4e162d71f4b88bad4e910d57525f5b5365166152bf7fcea468c1b69f8921a740",
+      "actual": "4e162d71f4b88bad4e910d57525f5b5365166152bf7fcea468c1b69f8921a740",
+      "match": true
+    },
+    {
+      "group": "K.3 inventory/evidence",
+      "name": "events",
+      "expected": 10,
+      "actual": 10,
+      "match": true
+    },
+    {
+      "group": "K.3 inventory/evidence",
+      "name": "parameters",
+      "expected": 198,
+      "actual": 198,
+      "match": true
+    },
+    {
+      "group": "K.3 inventory/evidence",
+      "name": "evidence.UNKNOWN",
+      "expected": 4,
+      "actual": 4,
+      "match": true
+    },
+    {
+      "group": "K.3 inventory/evidence",
+      "name": "evidence.SYNTHETIC_DEMO",
+      "expected": 194,
+      "actual": 194,
+      "match": true
+    },
+    {
+      "group": "K.3 inventory/evidence",
+      "name": "evidence.ASSUMED",
+      "expected": 0,
+      "actual": 0,
+      "match": true
+    },
+    {
+      "group": "K.3 inventory/evidence",
+      "name": "evidence.DERIVED",
+      "expected": 0,
+      "actual": 0,
+      "match": true
+    },
+    {
+      "group": "K.3 inventory/evidence",
+      "name": "evidence.VENDOR_SPEC",
+      "expected": 0,
+      "actual": 0,
+      "match": true
+    },
+    {
+      "group": "K.3 inventory/evidence",
+      "name": "evidence.MEASURED",
+      "expected": 0,
+      "actual": 0,
+      "match": true
+    },
+    {
+      "group": "K.3 inventory/evidence",
+      "name": "unknown_parameters",
+      "expected": [
+        "power.site_a.chemistry",
+        "power.site_a.parallel_count",
+        "vpn.mtu",
+        "vpn.protocol"
+      ],
+      "actual": [
+        "power.site_a.chemistry",
+        "power.site_a.parallel_count",
+        "vpn.mtu",
+        "vpn.protocol"
+      ],
+      "match": true
+    },
+    {
+      "group": "K.4 determinism",
+      "name": "deterministic",
+      "expected": true,
+      "actual": true,
+      "match": true
+    },
+    {
+      "group": "K.4 determinism",
+      "name": "replicates_differ",
+      "expected": true,
+      "actual": true,
+      "match": true
+    },
+    {
+      "group": "K.4 determinism",
+      "name": "rows",
+      "expected": 1806,
+      "actual": 1806,
+      "match": true
+    },
+    {
+      "group": "K.5 demonstration run",
+      "name": "gates_passed",
+      "expected": true,
+      "actual": true,
+      "match": true
+    },
+    {
+      "group": "K.5 demonstration run",
+      "name": "rows",
+      "expected": 5422,
+      "actual": 5422,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario baseline-quiet",
+      "name": "duration_s",
+      "expected": 600,
+      "actual": 600,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario baseline-quiet",
+      "name": "rows",
+      "expected": 1204,
+      "actual": 1204,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario baseline-quiet",
+      "name": "availability_a_pct",
+      "expected": 100.0,
+      "actual": 100.0,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario baseline-quiet",
+      "name": "rtt_p95_a_ms",
+      "expected": 19.15,
+      "actual": 19.15,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario baseline-quiet",
+      "name": "rtt_p95_b_ms",
+      "expected": 24.39,
+      "actual": 24.39,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario baseline-quiet",
+      "name": "soc_drop_pct",
+      "expected": -1.5,
+      "actual": -1.5,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario baseline-quiet",
+      "name": "load_shed_steps",
+      "expected": 0,
+      "actual": 0,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario baseline-quiet",
+      "name": "protection_trip_steps",
+      "expected": 0,
+      "actual": 0,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario baseline-quiet",
+      "name": "tp",
+      "expected": 0,
+      "actual": 0,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario baseline-quiet",
+      "name": "fp",
+      "expected": 0,
+      "actual": 0,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario baseline-quiet",
+      "name": "fn",
+      "expected": 0,
+      "actual": 0,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario baseline-quiet",
+      "name": "gates_passed",
+      "expected": true,
+      "actual": true,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario compound-challenge",
+      "name": "duration_s",
+      "expected": 700,
+      "actual": 700,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario compound-challenge",
+      "name": "rows",
+      "expected": 1406,
+      "actual": 1406,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario compound-challenge",
+      "name": "availability_a_pct",
+      "expected": 91.3229,
+      "actual": 91.3229,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario compound-challenge",
+      "name": "rtt_p95_a_ms",
+      "expected": 95.8,
+      "actual": 95.8,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario compound-challenge",
+      "name": "rtt_p95_b_ms",
+      "expected": 99.04,
+      "actual": 99.04,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario compound-challenge",
+      "name": "soc_drop_pct",
+      "expected": 0.84,
+      "actual": 0.84,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario compound-challenge",
+      "name": "load_shed_steps",
+      "expected": 427,
+      "actual": 427,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario compound-challenge",
+      "name": "protection_trip_steps",
+      "expected": 28,
+      "actual": 28,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario compound-challenge",
+      "name": "tp",
+      "expected": 120,
+      "actual": 120,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario compound-challenge",
+      "name": "fp",
+      "expected": 0,
+      "actual": 0,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario compound-challenge",
+      "name": "fn",
+      "expected": 0,
+      "actual": 0,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario compound-challenge",
+      "name": "gates_passed",
+      "expected": true,
+      "actual": true,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario cyber-campaign",
+      "name": "duration_s",
+      "expected": 700,
+      "actual": 700,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario cyber-campaign",
+      "name": "rows",
+      "expected": 1405,
+      "actual": 1405,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario cyber-campaign",
+      "name": "availability_a_pct",
+      "expected": 100.0,
+      "actual": 100.0,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario cyber-campaign",
+      "name": "rtt_p95_a_ms",
+      "expected": 19.28,
+      "actual": 19.28,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario cyber-campaign",
+      "name": "rtt_p95_b_ms",
+      "expected": 24.379,
+      "actual": 24.379,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario cyber-campaign",
+      "name": "soc_drop_pct",
+      "expected": -1.87,
+      "actual": -1.87,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario cyber-campaign",
+      "name": "load_shed_steps",
+      "expected": 0,
+      "actual": 0,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario cyber-campaign",
+      "name": "protection_trip_steps",
+      "expected": 0,
+      "actual": 0,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario cyber-campaign",
+      "name": "tp",
+      "expected": 146,
+      "actual": 146,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario cyber-campaign",
+      "name": "fp",
+      "expected": 0,
+      "actual": 0,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario cyber-campaign",
+      "name": "fn",
+      "expected": 597,
+      "actual": 597,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario cyber-campaign",
+      "name": "gates_passed",
+      "expected": true,
+      "actual": true,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario power-outage",
+      "name": "duration_s",
+      "expected": 1200,
+      "actual": 1200,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario power-outage",
+      "name": "rows",
+      "expected": 2408,
+      "actual": 2408,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario power-outage",
+      "name": "availability_a_pct",
+      "expected": 100.0,
+      "actual": 100.0,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario power-outage",
+      "name": "rtt_p95_a_ms",
+      "expected": 19.191,
+      "actual": 19.191,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario power-outage",
+      "name": "rtt_p95_b_ms",
+      "expected": 24.309,
+      "actual": 24.309,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario power-outage",
+      "name": "soc_drop_pct",
+      "expected": 1.21,
+      "actual": 1.21,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario power-outage",
+      "name": "load_shed_steps",
+      "expected": 797,
+      "actual": 797,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario power-outage",
+      "name": "protection_trip_steps",
+      "expected": 53,
+      "actual": 53,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario power-outage",
+      "name": "tp",
+      "expected": 0,
+      "actual": 0,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario power-outage",
+      "name": "fp",
+      "expected": 0,
+      "actual": 0,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario power-outage",
+      "name": "fn",
+      "expected": 0,
+      "actual": 0,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario power-outage",
+      "name": "gates_passed",
+      "expected": true,
+      "actual": true,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario wan-failover",
+      "name": "duration_s",
+      "expected": 600,
+      "actual": 600,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario wan-failover",
+      "name": "rows",
+      "expected": 1204,
+      "actual": 1204,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario wan-failover",
+      "name": "availability_a_pct",
+      "expected": 100.0,
+      "actual": 100.0,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario wan-failover",
+      "name": "rtt_p95_a_ms",
+      "expected": 24.0025,
+      "actual": 24.0025,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario wan-failover",
+      "name": "rtt_p95_b_ms",
+      "expected": 24.38,
+      "actual": 24.38,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario wan-failover",
+      "name": "soc_drop_pct",
+      "expected": -1.5,
+      "actual": -1.5,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario wan-failover",
+      "name": "load_shed_steps",
+      "expected": 0,
+      "actual": 0,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario wan-failover",
+      "name": "protection_trip_steps",
+      "expected": 0,
+      "actual": 0,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario wan-failover",
+      "name": "tp",
+      "expected": 0,
+      "actual": 0,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario wan-failover",
+      "name": "fp",
+      "expected": 0,
+      "actual": 0,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario wan-failover",
+      "name": "fn",
+      "expected": 0,
+      "actual": 0,
+      "match": true
+    },
+    {
+      "group": "K.6 scenario wan-failover",
+      "name": "gates_passed",
+      "expected": true,
+      "actual": true,
+      "match": true
+    },
+    {
+      "group": "K.7 monte carlo",
+      "name": "metric",
+      "expected": "network.site_a.rtt_p95_ms",
+      "actual": "network.site_a.rtt_p95_ms",
+      "match": true
+    },
+    {
+      "group": "K.7 monte carlo",
+      "name": "replicates",
+      "expected": 5,
+      "actual": 5,
+      "match": true
+    },
+    {
+      "group": "K.7 monte carlo",
+      "name": "stopped_because",
+      "expected": "target_half_width",
+      "actual": "target_half_width",
+      "match": true
+    },
+    {
+      "group": "K.7 monte carlo",
+      "name": "interval.estimate",
+      "expected": 71.8948,
+      "actual": 71.8948,
+      "match": true
+    },
+    {
+      "group": "K.7 monte carlo",
+      "name": "values[0]",
+      "expected": 71.725,
+      "actual": 71.725,
+      "match": true
+    },
+    {
+      "group": "K.7 monte carlo",
+      "name": "values[1]",
+      "expected": 71.68,
+      "actual": 71.68,
+      "match": true
+    },
+    {
+      "group": "K.7 monte carlo",
+      "name": "values[2]",
+      "expected": 72.2515,
+      "actual": 72.2515,
+      "match": true
+    },
+    {
+      "group": "K.7 monte carlo",
+      "name": "values[3]",
+      "expected": 71.905,
+      "actual": 71.905,
+      "match": true
+    },
+    {
+      "group": "K.7 monte carlo",
+      "name": "values[4]",
+      "expected": 71.9125,
+      "actual": 71.9125,
+      "match": true
+    },
+    {
+      "group": "engine source hash",
+      "name": "engine_source_hash",
+      "expected": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
+      "actual": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
+      "match": true,
+      "note": "The specification prints a different, truncated reference hash (925c24c6...). That difference is a byte-level consequence of extracting the code out of Markdown and is documented, not concealed."
+    }
+  ]
+}

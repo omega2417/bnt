@@ -1,0 +1,626 @@
+[
+  {
+    "setting": {
+      "power.site_a.initial_soc_pct": 53.51552156506343,
+      "power.site_a.critical_load_w": 305.7120461261767,
+      "sites.site_a.failover_delay_s": 2,
+      "sites.site_a.baseline.offered_load_mbps": 316.68075876459795,
+      "detector.threshold": 0.3248732269428828,
+      "_block": 0,
+      "_position": 0
+    },
+    "run_dir": "results/doe/doe-000",
+    "summary": {
+      "rows": 1805,
+      "network": {
+        "site_a": {
+          "steps": 903,
+          "availability_pct": 96.124,
+          "rtt_mean_ms": 23.7674,
+          "rtt_p95_ms": 71.96,
+          "rtt_p99_ms": 74.526,
+          "loss_mean_pct": 0.39727,
+          "throughput_mean_mbps": 404.5616,
+          "offered_mean_mbps": 404.8026,
+          "goodput_ratio": 0.9994,
+          "failover_steps": 4,
+          "failover_seconds": 4
+        },
+        "site_b": {
+          "steps": 902,
+          "availability_pct": 100.0,
+          "rtt_mean_ms": 27.2125,
+          "rtt_p95_ms": 76.83,
+          "rtt_p99_ms": 78.75,
+          "loss_mean_pct": 0.35941,
+          "throughput_mean_mbps": 79.5326,
+          "offered_mean_mbps": 79.5027,
+          "goodput_ratio": 1.0004,
+          "failover_steps": 0,
+          "failover_seconds": 0
+        }
+      },
+      "power": {
+        "soc_start_pct": 53.51,
+        "soc_end_pct": 54.39,
+        "soc_drop_pct": -0.88,
+        "soc_min_pct": 53.49,
+        "autonomy_min_mean": 59.345,
+        "autonomy_min_worst": 36.745,
+        "battery_steps": 175,
+        "load_shed_steps": 209,
+        "protection_trip_steps": 14,
+        "temp_max_c": 23.8,
+        "cell_imbalance_max_mv": 85.0
+      },
+      "detection": {
+        "tp": 60,
+        "fp": 0,
+        "tn": 1419,
+        "fn": 291,
+        "precision": 1.0,
+        "recall": 0.1709,
+        "f1": 0.292,
+        "false_alarm_rate_per_1k_steps": 0.0,
+        "recall_wilson": {
+          "p": 0.17094017094017094,
+          "low": 0.13517155240160153,
+          "high": 0.2138334912408509,
+          "n": 351
+        },
+        "detection_latency_steps": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n": 2
+        }
+      }
+    }
+  },
+  {
+    "setting": {
+      "power.site_a.initial_soc_pct": 84.35823765405426,
+      "power.site_a.critical_load_w": 378.4421115412291,
+      "sites.site_a.failover_delay_s": 5,
+      "sites.site_a.baseline.offered_load_mbps": 392.1338021658481,
+      "detector.threshold": 0.6951406081860343,
+      "_block": 0,
+      "_position": 1
+    },
+    "run_dir": "results/doe/doe-001",
+    "summary": {
+      "rows": 1803,
+      "network": {
+        "site_a": {
+          "steps": 903,
+          "availability_pct": 96.124,
+          "rtt_mean_ms": 41.8765,
+          "rtt_p95_ms": 72.726,
+          "rtt_p99_ms": 694.1451,
+          "loss_mean_pct": 0.54735,
+          "throughput_mean_mbps": 501.0542,
+          "offered_mean_mbps": 501.9172,
+          "goodput_ratio": 0.9983,
+          "failover_steps": 11,
+          "failover_seconds": 11
+        },
+        "site_b": {
+          "steps": 900,
+          "availability_pct": 100.0,
+          "rtt_mean_ms": 27.1558,
+          "rtt_p95_ms": 76.595,
+          "rtt_p99_ms": 78.6007,
+          "loss_mean_pct": 0.42759,
+          "throughput_mean_mbps": 81.0082,
+          "offered_mean_mbps": 81.0181,
+          "goodput_ratio": 0.9999,
+          "failover_steps": 0,
+          "failover_seconds": 0
+        }
+      },
+      "power": {
+        "soc_start_pct": 84.35,
+        "soc_end_pct": 85.33,
+        "soc_drop_pct": -0.98,
+        "soc_min_pct": 84.34,
+        "autonomy_min_mean": 93.027,
+        "autonomy_min_worst": 57.666,
+        "battery_steps": 175,
+        "load_shed_steps": 209,
+        "protection_trip_steps": 14,
+        "temp_max_c": 23.7,
+        "cell_imbalance_max_mv": 85.0
+      },
+      "detection": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 1418,
+        "fn": 350,
+        "precision": null,
+        "recall": 0.0,
+        "f1": null,
+        "false_alarm_rate_per_1k_steps": 0.0,
+        "recall_wilson": {
+          "p": 0.0,
+          "low": 0.0,
+          "high": 0.010856440721447879,
+          "n": 350
+        },
+        "detection_latency_steps": {
+          "mean": null,
+          "low": null,
+          "high": null,
+          "n": 0
+        }
+      }
+    }
+  },
+  {
+    "setting": {
+      "power.site_a.initial_soc_pct": 32.38869120084417,
+      "power.site_a.critical_load_w": 173.61888137991326,
+      "sites.site_a.failover_delay_s": 2,
+      "sites.site_a.baseline.offered_load_mbps": 133.3254054915639,
+      "detector.threshold": 0.2546929554585091,
+      "_block": 0,
+      "_position": 2
+    },
+    "run_dir": "results/doe/doe-002",
+    "summary": {
+      "rows": 1806,
+      "network": {
+        "site_a": {
+          "steps": 902,
+          "availability_pct": 96.1197,
+          "rtt_mean_ms": 22.6785,
+          "rtt_p95_ms": 71.6875,
+          "rtt_p99_ms": 73.4612,
+          "loss_mean_pct": 0.326,
+          "throughput_mean_mbps": 167.9508,
+          "offered_mean_mbps": 167.9119,
+          "goodput_ratio": 1.0002,
+          "failover_steps": 4,
+          "failover_seconds": 4
+        },
+        "site_b": {
+          "steps": 904,
+          "availability_pct": 100.0,
+          "rtt_mean_ms": 27.1299,
+          "rtt_p95_ms": 76.7955,
+          "rtt_p99_ms": 78.6934,
+          "loss_mean_pct": 0.37343,
+          "throughput_mean_mbps": 80.3544,
+          "offered_mean_mbps": 80.3113,
+          "goodput_ratio": 1.0005,
+          "failover_steps": 0,
+          "failover_seconds": 0
+        }
+      },
+      "power": {
+        "soc_start_pct": 32.38,
+        "soc_end_pct": 33.21,
+        "soc_drop_pct": -0.83,
+        "soc_min_pct": 32.37,
+        "autonomy_min_mean": 36.371,
+        "autonomy_min_worst": 22.435,
+        "battery_steps": 175,
+        "load_shed_steps": 208,
+        "protection_trip_steps": 14,
+        "temp_max_c": 23.8,
+        "cell_imbalance_max_mv": 85.0
+      },
+      "detection": {
+        "tp": 110,
+        "fp": 0,
+        "tn": 1419,
+        "fn": 242,
+        "precision": 1.0,
+        "recall": 0.3125,
+        "f1": 0.4762,
+        "false_alarm_rate_per_1k_steps": 0.0,
+        "recall_wilson": {
+          "p": 0.3125,
+          "low": 0.2663222105914269,
+          "high": 0.3627260727738765,
+          "n": 352
+        },
+        "detection_latency_steps": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n": 3
+        }
+      }
+    }
+  },
+  {
+    "setting": {
+      "power.site_a.initial_soc_pct": 72.29317370269112,
+      "power.site_a.critical_load_w": 272.17957049900747,
+      "sites.site_a.failover_delay_s": 10,
+      "sites.site_a.baseline.offered_load_mbps": 113.12253113615596,
+      "detector.threshold": 0.35558042382311905,
+      "_block": 0,
+      "_position": 3
+    },
+    "run_dir": "results/doe/doe-003",
+    "summary": {
+      "rows": 1806,
+      "network": {
+        "site_a": {
+          "steps": 904,
+          "availability_pct": 96.1283,
+          "rtt_mean_ms": 25.35,
+          "rtt_p95_ms": 71.853,
+          "rtt_p99_ms": 74.1007,
+          "loss_mean_pct": 0.32853,
+          "throughput_mean_mbps": 142.1619,
+          "offered_mean_mbps": 142.1922,
+          "goodput_ratio": 0.9998,
+          "failover_steps": 20,
+          "failover_seconds": 20
+        },
+        "site_b": {
+          "steps": 902,
+          "availability_pct": 100.0,
+          "rtt_mean_ms": 27.1077,
+          "rtt_p95_ms": 76.7995,
+          "rtt_p99_ms": 78.7275,
+          "loss_mean_pct": 0.36044,
+          "throughput_mean_mbps": 80.3749,
+          "offered_mean_mbps": 80.3255,
+          "goodput_ratio": 1.0006,
+          "failover_steps": 0,
+          "failover_seconds": 0
+        }
+      },
+      "power": {
+        "soc_start_pct": 72.29,
+        "soc_end_pct": 73.3,
+        "soc_drop_pct": -1.01,
+        "soc_min_pct": 72.27,
+        "autonomy_min_mean": 79.894,
+        "autonomy_min_worst": 49.476,
+        "battery_steps": 177,
+        "load_shed_steps": 210,
+        "protection_trip_steps": 14,
+        "temp_max_c": 23.7,
+        "cell_imbalance_max_mv": 85.0
+      },
+      "detection": {
+        "tp": 15,
+        "fp": 0,
+        "tn": 1419,
+        "fn": 337,
+        "precision": 1.0,
+        "recall": 0.0426,
+        "f1": 0.0817,
+        "false_alarm_rate_per_1k_steps": 0.0,
+        "recall_wilson": {
+          "p": 0.04261363636363636,
+          "low": 0.025991880511219555,
+          "high": 0.06911075012232354,
+          "n": 352
+        },
+        "detection_latency_steps": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n": 1
+        }
+      }
+    }
+  },
+  {
+    "setting": {
+      "power.site_a.initial_soc_pct": 40.38210102572765,
+      "power.site_a.critical_load_w": 220.3283231675763,
+      "sites.site_a.failover_delay_s": 5,
+      "sites.site_a.baseline.offered_load_mbps": 228.1457018466208,
+      "detector.threshold": 0.5203006696642567,
+      "_block": 1,
+      "_position": 0
+    },
+    "run_dir": "results/doe/doe-004",
+    "summary": {
+      "rows": 1805,
+      "network": {
+        "site_a": {
+          "steps": 904,
+          "availability_pct": 96.1283,
+          "rtt_mean_ms": 26.5533,
+          "rtt_p95_ms": 72.156,
+          "rtt_p99_ms": 74.5386,
+          "loss_mean_pct": 0.41016,
+          "throughput_mean_mbps": 288.5357,
+          "offered_mean_mbps": 288.8136,
+          "goodput_ratio": 0.999,
+          "failover_steps": 10,
+          "failover_seconds": 10
+        },
+        "site_b": {
+          "steps": 901,
+          "availability_pct": 100.0,
+          "rtt_mean_ms": 27.1687,
+          "rtt_p95_ms": 76.7715,
+          "rtt_p99_ms": 78.7701,
+          "loss_mean_pct": 0.41468,
+          "throughput_mean_mbps": 81.012,
+          "offered_mean_mbps": 80.957,
+          "goodput_ratio": 1.0007,
+          "failover_steps": 0,
+          "failover_seconds": 0
+        }
+      },
+      "power": {
+        "soc_start_pct": 40.37,
+        "soc_end_pct": 41.26,
+        "soc_drop_pct": -0.89,
+        "soc_min_pct": 40.36,
+        "autonomy_min_mean": 45.054,
+        "autonomy_min_worst": 27.848,
+        "battery_steps": 175,
+        "load_shed_steps": 208,
+        "protection_trip_steps": 14,
+        "temp_max_c": 23.7,
+        "cell_imbalance_max_mv": 85.0
+      },
+      "detection": {
+        "tp": 15,
+        "fp": 0,
+        "tn": 1420,
+        "fn": 335,
+        "precision": 1.0,
+        "recall": 0.0429,
+        "f1": 0.0822,
+        "false_alarm_rate_per_1k_steps": 0.0,
+        "recall_wilson": {
+          "p": 0.04285714285714286,
+          "low": 0.026141377677043012,
+          "high": 0.06949879669685219,
+          "n": 350
+        },
+        "detection_latency_steps": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n": 1
+        }
+      }
+    }
+  },
+  {
+    "setting": {
+      "power.site_a.initial_soc_pct": 64.47365381197532,
+      "power.site_a.critical_load_w": 331.5692886248934,
+      "sites.site_a.failover_delay_s": 10,
+      "sites.site_a.baseline.offered_load_mbps": 242.519370970448,
+      "detector.threshold": 0.46819316703200403,
+      "_block": 1,
+      "_position": 1
+    },
+    "run_dir": "results/doe/doe-005",
+    "summary": {
+      "rows": 1807,
+      "network": {
+        "site_a": {
+          "steps": 906,
+          "availability_pct": 96.1369,
+          "rtt_mean_ms": 43.1438,
+          "rtt_p95_ms": 72.6265,
+          "rtt_p99_ms": 494.3787,
+          "loss_mean_pct": 0.41232,
+          "throughput_mean_mbps": 308.0115,
+          "offered_mean_mbps": 308.0378,
+          "goodput_ratio": 0.9999,
+          "failover_steps": 20,
+          "failover_seconds": 20
+        },
+        "site_b": {
+          "steps": 901,
+          "availability_pct": 100.0,
+          "rtt_mean_ms": 27.1337,
+          "rtt_p95_ms": 76.7905,
+          "rtt_p99_ms": 78.7601,
+          "loss_mean_pct": 0.36035,
+          "throughput_mean_mbps": 80.4783,
+          "offered_mean_mbps": 80.4232,
+          "goodput_ratio": 1.0007,
+          "failover_steps": 0,
+          "failover_seconds": 0
+        }
+      },
+      "power": {
+        "soc_start_pct": 64.47,
+        "soc_end_pct": 65.39,
+        "soc_drop_pct": -0.92,
+        "soc_min_pct": 64.45,
+        "autonomy_min_mean": 71.247,
+        "autonomy_min_worst": 44.173,
+        "battery_steps": 177,
+        "load_shed_steps": 210,
+        "protection_trip_steps": 14,
+        "temp_max_c": 23.7,
+        "cell_imbalance_max_mv": 85.0
+      },
+      "detection": {
+        "tp": 15,
+        "fp": 0,
+        "tn": 1422,
+        "fn": 335,
+        "precision": 1.0,
+        "recall": 0.0429,
+        "f1": 0.0822,
+        "false_alarm_rate_per_1k_steps": 0.0,
+        "recall_wilson": {
+          "p": 0.04285714285714286,
+          "low": 0.026141377677043012,
+          "high": 0.06949879669685219,
+          "n": 350
+        },
+        "detection_latency_steps": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n": 1
+        }
+      }
+    }
+  },
+  {
+    "setting": {
+      "power.site_a.initial_soc_pct": 88.90398635319062,
+      "power.site_a.critical_load_w": 200.57403114610412,
+      "sites.site_a.failover_delay_s": 2,
+      "sites.site_a.baseline.offered_load_mbps": 189.211143054129,
+      "detector.threshold": 0.4063404245075152,
+      "_block": 1,
+      "_position": 2
+    },
+    "run_dir": "results/doe/doe-006",
+    "summary": {
+      "rows": 1805,
+      "network": {
+        "site_a": {
+          "steps": 901,
+          "availability_pct": 96.1154,
+          "rtt_mean_ms": 22.7431,
+          "rtt_p95_ms": 71.71,
+          "rtt_p99_ms": 73.512,
+          "loss_mean_pct": 0.32978,
+          "throughput_mean_mbps": 240.1412,
+          "offered_mean_mbps": 240.0173,
+          "goodput_ratio": 1.0005,
+          "failover_steps": 4,
+          "failover_seconds": 4
+        },
+        "site_b": {
+          "steps": 904,
+          "availability_pct": 100.0,
+          "rtt_mean_ms": 27.1319,
+          "rtt_p95_ms": 76.798,
+          "rtt_p99_ms": 78.7054,
+          "loss_mean_pct": 0.35954,
+          "throughput_mean_mbps": 80.7899,
+          "offered_mean_mbps": 80.74,
+          "goodput_ratio": 1.0006,
+          "failover_steps": 0,
+          "failover_seconds": 0
+        }
+      },
+      "power": {
+        "soc_start_pct": 88.9,
+        "soc_end_pct": 89.89,
+        "soc_drop_pct": -0.99,
+        "soc_min_pct": 88.88,
+        "autonomy_min_mean": 98.331,
+        "autonomy_min_worst": 60.753,
+        "battery_steps": 175,
+        "load_shed_steps": 208,
+        "protection_trip_steps": 14,
+        "temp_max_c": 23.7,
+        "cell_imbalance_max_mv": 85.0
+      },
+      "detection": {
+        "tp": 15,
+        "fp": 0,
+        "tn": 1418,
+        "fn": 337,
+        "precision": 1.0,
+        "recall": 0.0426,
+        "f1": 0.0817,
+        "false_alarm_rate_per_1k_steps": 0.0,
+        "recall_wilson": {
+          "p": 0.04261363636363636,
+          "low": 0.025991880511219555,
+          "high": 0.06911075012232354,
+          "n": 352
+        },
+        "detection_latency_steps": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n": 1
+        }
+      }
+    }
+  },
+  {
+    "setting": {
+      "power.site_a.initial_soc_pct": 46.180001332269896,
+      "power.site_a.critical_load_w": 365.69268595123697,
+      "sites.site_a.failover_delay_s": 10,
+      "sites.site_a.baseline.offered_load_mbps": 328.8681558485674,
+      "detector.threshold": 0.5957969070479585,
+      "_block": 1,
+      "_position": 3
+    },
+    "run_dir": "results/doe/doe-007",
+    "summary": {
+      "rows": 1805,
+      "network": {
+        "site_a": {
+          "steps": 903,
+          "availability_pct": 96.124,
+          "rtt_mean_ms": 72.4341,
+          "rtt_p95_ms": 73.06,
+          "rtt_p99_ms": 2219.3408,
+          "loss_mean_pct": 0.48023,
+          "throughput_mean_mbps": 422.881,
+          "offered_mean_mbps": 422.8109,
+          "goodput_ratio": 1.0002,
+          "failover_steps": 20,
+          "failover_seconds": 20
+        },
+        "site_b": {
+          "steps": 902,
+          "availability_pct": 100.0,
+          "rtt_mean_ms": 27.1154,
+          "rtt_p95_ms": 76.5885,
+          "rtt_p99_ms": 78.5497,
+          "loss_mean_pct": 0.34676,
+          "throughput_mean_mbps": 79.8043,
+          "offered_mean_mbps": 79.7877,
+          "goodput_ratio": 1.0002,
+          "failover_steps": 0,
+          "failover_seconds": 0
+        }
+      },
+      "power": {
+        "soc_start_pct": 46.17,
+        "soc_end_pct": 47.05,
+        "soc_drop_pct": -0.88,
+        "soc_min_pct": 46.16,
+        "autonomy_min_mean": 51.287,
+        "autonomy_min_worst": 31.775,
+        "battery_steps": 176,
+        "load_shed_steps": 209,
+        "protection_trip_steps": 14,
+        "temp_max_c": 23.8,
+        "cell_imbalance_max_mv": 85.0
+      },
+      "detection": {
+        "tp": 15,
+        "fp": 0,
+        "tn": 1420,
+        "fn": 335,
+        "precision": 1.0,
+        "recall": 0.0429,
+        "f1": 0.0822,
+        "false_alarm_rate_per_1k_steps": 0.0,
+        "recall_wilson": {
+          "p": 0.04285714285714286,
+          "low": 0.026141377677043012,
+          "high": 0.06949879669685219,
+          "n": 350
+        },
+        "detection_latency_steps": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n": 1
+        }
+      }
+    }
+  }
+]

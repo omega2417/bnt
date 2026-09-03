@@ -1,0 +1,25 @@
+run_id,replicate_id,truth_id,kind,cause,site_id,target,stage,intensity,onset_utc,end_utc,onset_step,end_step,expected_observable,notes
+wan-failover,0,evt-wan1:site_a,injected,link_failure,site_a,site_a,wan_down,step,2026-09-03T09:01:00Z,2026-09-03T09:03:00Z,60,180,"active_wan_id,failover_active,throughput_mbps",params={'link_id': 'A-WAN-1'}
+wan-failover,0,evt-wan2:site_a,injected,link_failure,site_a,site_a,wan_down,step,2026-09-03T09:02:00Z,2026-09-03T09:03:00Z,120,180,"active_wan_id,failover_active,throughput_mbps",params={'link_id': 'A-WAN-2'}
+wan-failover,0,evt-wan3:site_a,injected,link_degradation,site_a,site_a,wan_degrade,linear,2026-09-03T09:03:20Z,2026-09-03T09:05:20Z,200,320,"loss_pct,rtt_ms,wan_capacity_mbps","params={'link_id': 'A-WAN-3', 'capacity_factor': 0.35, 'latency_add_ms': 40, 'loss_add_pct': 2.0}"
+wan-failover,0,transition:active_wan:site_a:62,transition,active_wan:site_a,site_a,active_wan:site_a,A-WAN-1->A-WAN-2,,2026-09-03T09:01:02Z,2026-09-03T09:01:03Z,62,63,active_wan:site_a,
+wan-failover,0,transition:vpn_state:site_a:62,transition,vpn_state:site_a,site_a,vpn_state:site_a,UP->DOWN,,2026-09-03T09:01:02Z,2026-09-03T09:01:03Z,62,63,vpn_state:site_a,
+wan-failover,0,transition:vpn_state:site_b:62,transition,vpn_state:site_b,site_b,vpn_state:site_b,UP->DOWN,,2026-09-03T09:01:02Z,2026-09-03T09:01:03Z,62,63,vpn_state:site_b,
+wan-failover,0,transition:vpn_state:site_a:68,transition,vpn_state:site_a,site_a,vpn_state:site_a,DOWN->RECONNECTING,,2026-09-03T09:01:08Z,2026-09-03T09:01:09Z,68,69,vpn_state:site_a,
+wan-failover,0,transition:vpn_state:site_b:68,transition,vpn_state:site_b,site_b,vpn_state:site_b,DOWN->RECONNECTING,,2026-09-03T09:01:08Z,2026-09-03T09:01:09Z,68,69,vpn_state:site_b,
+wan-failover,0,transition:vpn_state:site_a:69,transition,vpn_state:site_a,site_a,vpn_state:site_a,RECONNECTING->UP,,2026-09-03T09:01:09Z,2026-09-03T09:01:10Z,69,70,vpn_state:site_a,
+wan-failover,0,transition:vpn_state:site_b:69,transition,vpn_state:site_b,site_b,vpn_state:site_b,RECONNECTING->UP,,2026-09-03T09:01:09Z,2026-09-03T09:01:10Z,69,70,vpn_state:site_b,
+wan-failover,0,transition:active_wan:site_a:122,transition,active_wan:site_a,site_a,active_wan:site_a,A-WAN-2->A-WAN-3,,2026-09-03T09:02:02Z,2026-09-03T09:02:03Z,122,123,active_wan:site_a,
+wan-failover,0,transition:vpn_state:site_a:122,transition,vpn_state:site_a,site_a,vpn_state:site_a,UP->DOWN,,2026-09-03T09:02:02Z,2026-09-03T09:02:03Z,122,123,vpn_state:site_a,
+wan-failover,0,transition:vpn_state:site_b:122,transition,vpn_state:site_b,site_b,vpn_state:site_b,UP->DOWN,,2026-09-03T09:02:02Z,2026-09-03T09:02:03Z,122,123,vpn_state:site_b,
+wan-failover,0,transition:vpn_state:site_a:128,transition,vpn_state:site_a,site_a,vpn_state:site_a,DOWN->RECONNECTING,,2026-09-03T09:02:08Z,2026-09-03T09:02:09Z,128,129,vpn_state:site_a,
+wan-failover,0,transition:vpn_state:site_b:128,transition,vpn_state:site_b,site_b,vpn_state:site_b,DOWN->RECONNECTING,,2026-09-03T09:02:08Z,2026-09-03T09:02:09Z,128,129,vpn_state:site_b,
+wan-failover,0,transition:vpn_state:site_a:129,transition,vpn_state:site_a,site_a,vpn_state:site_a,RECONNECTING->UP,,2026-09-03T09:02:09Z,2026-09-03T09:02:10Z,129,130,vpn_state:site_a,
+wan-failover,0,transition:vpn_state:site_b:129,transition,vpn_state:site_b,site_b,vpn_state:site_b,RECONNECTING->UP,,2026-09-03T09:02:09Z,2026-09-03T09:02:10Z,129,130,vpn_state:site_b,
+wan-failover,0,transition:active_wan:site_a:195,transition,active_wan:site_a,site_a,active_wan:site_a,A-WAN-3->A-WAN-1,,2026-09-03T09:03:15Z,2026-09-03T09:03:16Z,195,196,active_wan:site_a,
+wan-failover,0,transition:vpn_state:site_a:195,transition,vpn_state:site_a,site_a,vpn_state:site_a,UP->DOWN,,2026-09-03T09:03:15Z,2026-09-03T09:03:16Z,195,196,vpn_state:site_a,
+wan-failover,0,transition:vpn_state:site_b:195,transition,vpn_state:site_b,site_b,vpn_state:site_b,UP->DOWN,,2026-09-03T09:03:15Z,2026-09-03T09:03:16Z,195,196,vpn_state:site_b,
+wan-failover,0,transition:vpn_state:site_a:201,transition,vpn_state:site_a,site_a,vpn_state:site_a,DOWN->RECONNECTING,,2026-09-03T09:03:21Z,2026-09-03T09:03:22Z,201,202,vpn_state:site_a,
+wan-failover,0,transition:vpn_state:site_b:201,transition,vpn_state:site_b,site_b,vpn_state:site_b,DOWN->RECONNECTING,,2026-09-03T09:03:21Z,2026-09-03T09:03:22Z,201,202,vpn_state:site_b,
+wan-failover,0,transition:vpn_state:site_a:202,transition,vpn_state:site_a,site_a,vpn_state:site_a,RECONNECTING->UP,,2026-09-03T09:03:22Z,2026-09-03T09:03:23Z,202,203,vpn_state:site_a,
+wan-failover,0,transition:vpn_state:site_b:202,transition,vpn_state:site_b,site_b,vpn_state:site_b,RECONNECTING->UP,,2026-09-03T09:03:22Z,2026-09-03T09:03:23Z,202,203,vpn_state:site_b,

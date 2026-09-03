@@ -1,0 +1,20 @@
+--- tests/run_tests.py (upstream, as printed in Appendix J)	2026-09-03 19:12:18.548842644 +0000
++++ tests/run_tests.py	2026-09-03 19:12:18.554293341 +0000
+@@ -17,7 +17,7 @@
+ from pathlib import Path
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+-sys.path.insert(0, str(ROOT))
++sys.path.insert(0, str(ROOT / "src"))
+ 
+ from umsf_twin.adapters.bms_mqtt import parse_bms_payload
+ from umsf_twin.core.bus import EventBus
+@@ -48,7 +48,7 @@
+ from umsf_twin.pipelines.labeling import label_rows
+ from umsf_twin.pipelines.validation import DEFAULT_GATES, run_gates
+ 
+-CONFIG = ROOT / "umsf_twin" / "config" / "inventory" / "demo.json"
++CONFIG = ROOT / "configs" / "inventory" / "demo.json"
+ SHORT = {"duration_s": 180, "events": [
+     {"event_id": "e-wan", "type": "wan_down", "start_s": 30, "end_s": 90,
+      "targets": ["site_a"], "params": {"link_id": "A-WAN-1"}},

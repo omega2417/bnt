@@ -1,0 +1,23 @@
+Reproduction environment of release 2.0.0
+=========================================
+Recorded automatically at packaging time; see manifests/campaign_manifest.json
+for the machine-readable copy.
+
+Python implementation : CPython
+Python version        : 3.11.15
+Operating system      : Linux 6.18.44-fc-v24
+Architecture          : x86_64
+Byte order            : little
+Max unicode           : 1114111
+Filesystem encoding   : utf-8
+Locale (LANG)         : not set
+Timezone (TZ)         : not set (UTC assumed for all recorded timestamps)
+Third-party packages  : none required and none used
+Network access        : not required; the package opens no sockets
+GNU make              : GNU Make 4.3
+
+Minimum supported interpreter: CPython 3.10.
+Cross-platform reproducibility beyond the environment above has not been tested.
+Floating-point results depend on IEEE-754 double arithmetic and on the CPython
+implementation of math functions; a different interpreter or platform may produce
+small numerical differences that are not defects of the model.

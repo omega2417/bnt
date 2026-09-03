@@ -1,0 +1,253 @@
+{
+  "package": {
+    "name": "umsf-cyberrange-digital-twin-sim-reproducibility-package",
+    "version": "2.0.0",
+    "twin_version": "2.0.0",
+    "schema_version": "2.0.0",
+    "evidence_class": "pre-experimental synthetic model",
+    "mode": "SIM",
+    "doi": "[RESERVED-ZENODO-DOI]"
+  },
+  "claim_boundary": "All numerical records in this package are synthetic outputs of a software model. They are not measurements of the physical UMSF cyber range and do not establish WAN/VPN/ATS switchover times, Wi-Fi coverage or capacity, power autonomy, battery thermal behaviour or field detector accuracy.",
+  "generated_at_utc": "2026-09-03T19:24:55.952901Z",
+  "environment": {
+    "python_version": "3.11.15",
+    "implementation": "CPython",
+    "system": "Linux",
+    "machine": "x86_64",
+    "third_party_dependencies": []
+  },
+  "hashes": {
+    "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
+    "engine_source_hash_reference_prior_run": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
+    "engine_source_hash_reference_specification_truncated": "925c24c6",
+    "inventory_config_hash": "4e162d71f4b88bad4e910d57525f5b5365166152bf7fcea468c1b69f8921a740"
+  },
+  "seed_policy": {
+    "base_seed": 20260903,
+    "streams": "named streams derived from (seed, replicate_id, namespace)",
+    "unit_of_analysis": "one software run/replicate"
+  },
+  "campaign": {
+    "scenarios_executed": 5,
+    "demonstration_replicates": 3,
+    "doe_points": 8,
+    "doe_method": "latin hypercube, 5 factors, exploratory only",
+    "monte_carlo_replicates_executed": 5,
+    "automated_software_checks": "40/40 passed",
+    "reference_values_checked": 86,
+    "reference_values_matched": 86,
+    "telemetry_rows_scenarios_and_demo": 13049,
+    "telemetry_rows_all_runs": 27491,
+    "row_dependency_note": "Telemetry rows inside one run are dependent. Row totals are not independent sample sizes."
+  },
+  "provenance_vector": {
+    "stimulus_origin": "scripted_synthetic",
+    "observation_origin": "simulator_output",
+    "label_origin": "scenario_controller",
+    "curation_origin": "automated_pipeline",
+    "analysis_origin": "derived_metric",
+    "forbidden_values_in_this_package": [
+      "measured",
+      "physical_sensor",
+      "cyber_range_instrumentation"
+    ]
+  },
+  "policy_flags": {
+    "external_egress": false,
+    "hardware_writes": false,
+    "hil_available": false,
+    "hil_blocked_by": [
+      "power.site_a.chemistry",
+      "power.site_a.parallel_count",
+      "vpn.mtu",
+      "vpn.protocol"
+    ],
+    "exploit_code_included": false,
+    "threat_modelling_level": "feature-level only"
+  },
+  "runs": [
+    {
+      "run_dir": "results/demo",
+      "run_id": "demo",
+      "experiment_id": "umsf-dt-demo-002",
+      "mode": "SIM",
+      "evidence_class": "synthetic_demo",
+      "replicates": 3,
+      "rows": 5422,
+      "gates_passed": true,
+      "config_hash": "4e162d71f4b88bad4e910d57525f5b5365166152bf7fcea468c1b69f8921a740",
+      "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
+      "manifest_sha256": "1b597ba33dc21582f83584074c6847cc7f981598a6b01c0519eaca1897fa7107"
+    },
+    {
+      "run_dir": "results/doe/doe-000",
+      "run_id": "doe-000",
+      "experiment_id": "umsf-dt-demo-002",
+      "mode": "SIM",
+      "evidence_class": "synthetic_demo",
+      "replicates": 1,
+      "rows": 1805,
+      "gates_passed": true,
+      "config_hash": "dbfeaf7019be9658c2c3d41f7299517e8e3e92e8a3bcfcd88df339f42681cf89",
+      "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
+      "manifest_sha256": "978c2ebdd98700dcaadc34f82d28c983cf835f1a919ed64b06bb89fa21acd65f"
+    },
+    {
+      "run_dir": "results/doe/doe-001",
+      "run_id": "doe-001",
+      "experiment_id": "umsf-dt-demo-002",
+      "mode": "SIM",
+      "evidence_class": "synthetic_demo",
+      "replicates": 1,
+      "rows": 1803,
+      "gates_passed": true,
+      "config_hash": "ffa7b25350c4af02974657b2335de04457bf861eb7e9b712bb405d992396f1ed",
+      "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
+      "manifest_sha256": "71ee7b08a2439c6803e577afaca4c90c257dfae2d93c027abcd1978435e7419b"
+    },
+    {
+      "run_dir": "results/doe/doe-002",
+      "run_id": "doe-002",
+      "experiment_id": "umsf-dt-demo-002",
+      "mode": "SIM",
+      "evidence_class": "synthetic_demo",
+      "replicates": 1,
+      "rows": 1806,
+      "gates_passed": true,
+      "config_hash": "1a79f5f16b51535da35419decca482649876e7842c3ae2a75bd45e3c819bb746",
+      "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
+      "manifest_sha256": "bb1fc3958bfffb3c61d556a77fc17a288f6874f04e43663baa2f4395b2e14b60"
+    },
+    {
+      "run_dir": "results/doe/doe-003",
+      "run_id": "doe-003",
+      "experiment_id": "umsf-dt-demo-002",
+      "mode": "SIM",
+      "evidence_class": "synthetic_demo",
+      "replicates": 1,
+      "rows": 1806,
+      "gates_passed": true,
+      "config_hash": "7f7251dd55a498e5b5cff0ed9d01d50dc2aee54f4f57b9cdb511b55ef29e9ab8",
+      "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
+      "manifest_sha256": "a00ee8604c0ed684cee18102dbc3977a80bf6755e6b3ef84eb7753f521e31ffe"
+    },
+    {
+      "run_dir": "results/doe/doe-004",
+      "run_id": "doe-004",
+      "experiment_id": "umsf-dt-demo-002",
+      "mode": "SIM",
+      "evidence_class": "synthetic_demo",
+      "replicates": 1,
+      "rows": 1805,
+      "gates_passed": true,
+      "config_hash": "0466bdddf3be43978c2e0bc79fc9e94b5530df776bce81e6e6f42d0077cd902a",
+      "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
+      "manifest_sha256": "1433034dc2b3378534fede1f1aed87a8efc9b25ccffb7530cd4d69939ac419de"
+    },
+    {
+      "run_dir": "results/doe/doe-005",
+      "run_id": "doe-005",
+      "experiment_id": "umsf-dt-demo-002",
+      "mode": "SIM",
+      "evidence_class": "synthetic_demo",
+      "replicates": 1,
+      "rows": 1807,
+      "gates_passed": true,
+      "config_hash": "ae1a068e0b60be0e929266e9b2c1237a94c1d887f1a19146b168faead6e1069b",
+      "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
+      "manifest_sha256": "317daa1f2ed28be040bfe7b643f4781b233c90d5973ef9e990208ed46343a68b"
+    },
+    {
+      "run_dir": "results/doe/doe-006",
+      "run_id": "doe-006",
+      "experiment_id": "umsf-dt-demo-002",
+      "mode": "SIM",
+      "evidence_class": "synthetic_demo",
+      "replicates": 1,
+      "rows": 1805,
+      "gates_passed": true,
+      "config_hash": "b7fea0ab1d71ec1ac7bcb41b397adc9f7ec15e525af6675bc041354d497f56e0",
+      "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
+      "manifest_sha256": "15e80b6f59c5874666e3818e0aebd1347101daa41607a52623d7319b177c1ba7"
+    },
+    {
+      "run_dir": "results/doe/doe-007",
+      "run_id": "doe-007",
+      "experiment_id": "umsf-dt-demo-002",
+      "mode": "SIM",
+      "evidence_class": "synthetic_demo",
+      "replicates": 1,
+      "rows": 1805,
+      "gates_passed": true,
+      "config_hash": "b79662661f588e7d4c0f274605cba5e4033a5825cde154a07449e9c373204b1f",
+      "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
+      "manifest_sha256": "ad255dcd44d006e5555bbe57afbb9afa23d2f7b459f43cc595268023f7b6b48f"
+    },
+    {
+      "run_dir": "results/scenarios/baseline-quiet",
+      "run_id": "baseline-quiet",
+      "experiment_id": "baseline-quiet",
+      "mode": "SIM",
+      "evidence_class": "synthetic_demo",
+      "replicates": 1,
+      "rows": 1204,
+      "gates_passed": true,
+      "config_hash": "64370563cd5c765425e4b8bf875ac26b7a126312f56fac252d3045c849113a19",
+      "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
+      "manifest_sha256": "299228f052185c2b5852a7ba568e3f5a394df950d6f3b0532d35afb508253814"
+    },
+    {
+      "run_dir": "results/scenarios/compound-challenge",
+      "run_id": "compound-challenge",
+      "experiment_id": "compound-challenge",
+      "mode": "SIM",
+      "evidence_class": "synthetic_demo",
+      "replicates": 1,
+      "rows": 1406,
+      "gates_passed": true,
+      "config_hash": "8eb0500ae69642d9fba3618b1721feda6fb7159a75db6258f430290654e20212",
+      "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
+      "manifest_sha256": "d2adb35829940821711b2abf3be31fd041fe48882a99485ce8e5904a8a980e1a"
+    },
+    {
+      "run_dir": "results/scenarios/cyber-campaign",
+      "run_id": "cyber-campaign",
+      "experiment_id": "cyber-campaign",
+      "mode": "SIM",
+      "evidence_class": "synthetic_demo",
+      "replicates": 1,
+      "rows": 1405,
+      "gates_passed": true,
+      "config_hash": "372361260f763a2f36aad7a7cf26fe7af429ad13287704589482f70fd5615deb",
+      "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
+      "manifest_sha256": "1d924ca61d28a4809cbf7f9a2d3da9076c2ca1c117c7db33656869155d0727d3"
+    },
+    {
+      "run_dir": "results/scenarios/power-outage",
+      "run_id": "power-outage",
+      "experiment_id": "power-outage",
+      "mode": "SIM",
+      "evidence_class": "synthetic_demo",
+      "replicates": 1,
+      "rows": 2408,
+      "gates_passed": true,
+      "config_hash": "e2dbbb728629a5cb839e541de0722a100c74496fcc92a35f60ae4618a8101088",
+      "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
+      "manifest_sha256": "4bd452915594920ca4105fc3ca02df87016b7071b79e4a47d9cafc17e2f888ca"
+    },
+    {
+      "run_dir": "results/scenarios/wan-failover",
+      "run_id": "wan-failover",
+      "experiment_id": "wan-failover",
+      "mode": "SIM",
+      "evidence_class": "synthetic_demo",
+      "replicates": 1,
+      "rows": 1204,
+      "gates_passed": true,
+      "config_hash": "198020bb458c972c5b51d95f6bd52df03e17064062674a4e35133df95b7ff6a5",
+      "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
+      "manifest_sha256": "2f2161700d1434f70b74e193ec16acd6b39da274da6f6ce4c07f0f965a92dd3e"
+    }
+  ]
+}

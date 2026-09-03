@@ -1,0 +1,16 @@
+run_id,replicate_id,alert_id,step,timestamp_utc,site_id,detector,score,threshold,rule_hits,explanation,correlated_with,recommended_action,approval_required,shadow_mode
+doe-007,0,alert-site_b-405,405,2026-09-03T09:06:45Z,site_b,rules,0.65,0.5957969070479585,scan_rate|lateral,connection/port counters above the benign envelope; asset-to-asset sequence observed,,,1,1
+doe-007,0,alert-site_b-406,406,2026-09-03T09:06:46Z,site_b,rules,0.65,0.5957969070479585,scan_rate|lateral,connection/port counters above the benign envelope; asset-to-asset sequence observed,,,1,1
+doe-007,0,alert-site_b-407,407,2026-09-03T09:06:47Z,site_b,rules,0.65,0.5957969070479585,scan_rate|lateral,connection/port counters above the benign envelope; asset-to-asset sequence observed,,,1,1
+doe-007,0,alert-site_b-408,408,2026-09-03T09:06:48Z,site_b,rules,0.65,0.5957969070479585,scan_rate|lateral,connection/port counters above the benign envelope; asset-to-asset sequence observed,,,1,1
+doe-007,0,alert-site_b-409,409,2026-09-03T09:06:49Z,site_b,rules,0.65,0.5957969070479585,scan_rate|lateral,connection/port counters above the benign envelope; asset-to-asset sequence observed,,,1,1
+doe-007,0,alert-site_b-410,410,2026-09-03T09:06:50Z,site_b,rules,0.65,0.5957969070479585,scan_rate|lateral,connection/port counters above the benign envelope; asset-to-asset sequence observed,,,1,1
+doe-007,0,alert-site_b-411,411,2026-09-03T09:06:51Z,site_b,rules,0.65,0.5957969070479585,scan_rate|lateral,connection/port counters above the benign envelope; asset-to-asset sequence observed,,,1,1
+doe-007,0,alert-site_b-412,412,2026-09-03T09:06:52Z,site_b,rules,0.65,0.5957969070479585,scan_rate|lateral,connection/port counters above the benign envelope; asset-to-asset sequence observed,,,1,1
+doe-007,0,alert-site_b-413,413,2026-09-03T09:06:53Z,site_b,rules,0.65,0.5957969070479585,scan_rate|lateral,connection/port counters above the benign envelope; asset-to-asset sequence observed,,,1,1
+doe-007,0,alert-site_b-414,414,2026-09-03T09:06:54Z,site_b,rules,0.65,0.5957969070479585,scan_rate|lateral,connection/port counters above the benign envelope; asset-to-asset sequence observed,,,1,1
+doe-007,0,alert-site_b-415,415,2026-09-03T09:06:55Z,site_b,rules,0.65,0.5957969070479585,scan_rate|lateral,connection/port counters above the benign envelope; asset-to-asset sequence observed,,,1,1
+doe-007,0,alert-site_b-416,416,2026-09-03T09:06:56Z,site_b,rules,0.65,0.5957969070479585,scan_rate|lateral,connection/port counters above the benign envelope; asset-to-asset sequence observed,,,1,1
+doe-007,0,alert-site_b-417,417,2026-09-03T09:06:57Z,site_b,rules,0.65,0.5957969070479585,scan_rate|lateral,connection/port counters above the benign envelope; asset-to-asset sequence observed,,,1,1
+doe-007,0,alert-site_b-418,418,2026-09-03T09:06:58Z,site_b,rules,0.65,0.5957969070479585,scan_rate|lateral,connection/port counters above the benign envelope; asset-to-asset sequence observed,,,1,1
+doe-007,0,alert-site_b-419,419,2026-09-03T09:06:59Z,site_b,rules,0.65,0.5957969070479585,scan_rate|lateral,connection/port counters above the benign envelope; asset-to-asset sequence observed,,,1,1

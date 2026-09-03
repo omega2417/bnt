@@ -1,0 +1,6 @@
+run_id,replicate_id,truth_id,kind,cause,site_id,target,stage,intensity,onset_utc,end_utc,onset_step,end_step,expected_observable,notes
+cyber-campaign,0,evt-recon:site_b,injected,synthetic_recon,site_b,site_b,recon_burst,step,2026-09-03T09:01:00Z,2026-09-03T09:03:00Z,60,180,scan_rate_pps,"params={'scan_rate_pps': 30, 'unique_ports': 250}"
+cyber-campaign,0,evt-lateral:site_b,injected,synthetic_lateral,site_b,site_b,lateral_sequence,step,2026-09-03T09:02:30Z,2026-09-03T09:05:00Z,150,300,lateral_events,"params={'events_per_step': 1, 'hops': 5}"
+cyber-campaign,0,evt-c2:site_b,injected,synthetic_c2,site_b,site_b,low_rate_c2,step,2026-09-03T09:04:20Z,2026-09-03T09:10:00Z,260,600,c2_beacons,"params={'period_s': 20, 'bytes_per_beacon': 512}"
+cyber-campaign,0,evt-auth:site_a,injected,synthetic_auth_failures,site_a,site_a,wifi_auth_burst,step,2026-09-03T09:05:20Z,2026-09-03T09:07:00Z,320,420,auth_failures,"params={'add_failures_per_step': 30, 'ap_fraction': 0.3}"
+cyber-campaign,0,evt-rogue:site_a,injected,synthetic_bssid,site_a,site_a,rogue_ap_signal,step,2026-09-03T09:06:40Z,2026-09-03T09:08:40Z,400,520,rogue_ap_count,"params={'rogue_count': 2, 'rssi_dbm': -58.0}"

@@ -1,0 +1,204 @@
+{
+  "schema_version": "2.0.0",
+  "experiment_id": "power-outage",
+  "evidence_class": "synthetic_demo",
+  "mode": "SIM",
+  "seed": 20260903,
+  "start_utc": "2026-09-03T09:00:00Z",
+  "duration_s": 1200,
+  "dt_s": 1,
+  "replicates": 1,
+  "source_inventory": {
+    "site_a": "Keenetic Titan; 3x1000 + 2x100 Mbps WAN; CloudKey Gen2; 48 AP; 12 known 1-Gbps uplinks",
+    "site_b": "Keenetic Viva; 2x1000 Mbps WAN; CloudKey Gen1; 6 AP with 100-Mbps uplinks; 25 Kali Linux workstations",
+    "inter_site": "protected VPN; exact protocol, MTU and measured baseline pending inventory",
+    "power": "3 EcoFlow units plus project 48-V 13SxP/BMS/10-A charger/ATS subsystem; capacity pending measurement"
+  },
+  "sites": {
+    "site_a": {
+      "router": "Keenetic Titan",
+      "controller": "UniFi CloudKey Gen2",
+      "ap_count": 48,
+      "known_ap_uplinks": {
+        "1000_mbps": 12,
+        "unknown": 36
+      },
+      "training_workstations": 24,
+      "failover_delay_s": 5,
+      "wan_policy": "primary_backup",
+      "wan_hysteresis_s": 15,
+      "session_survival_pct": 35,
+      "wan_links": [
+        {
+          "id": "A-WAN-1",
+          "capacity_mbps": 1000,
+          "base_rtt_ms": 12,
+          "base_loss_pct": 0.08,
+          "priority": 1,
+          "common_cause_group": "upstream-1"
+        },
+        {
+          "id": "A-WAN-2",
+          "capacity_mbps": 1000,
+          "base_rtt_ms": 15,
+          "base_loss_pct": 0.1,
+          "priority": 2,
+          "common_cause_group": "upstream-1"
+        },
+        {
+          "id": "A-WAN-3",
+          "capacity_mbps": 1000,
+          "base_rtt_ms": 18,
+          "base_loss_pct": 0.12,
+          "priority": 3,
+          "common_cause_group": "upstream-2"
+        },
+        {
+          "id": "A-WAN-4",
+          "capacity_mbps": 100,
+          "base_rtt_ms": 22,
+          "base_loss_pct": 0.18,
+          "priority": 4,
+          "common_cause_group": "lte"
+        },
+        {
+          "id": "A-WAN-5",
+          "capacity_mbps": 100,
+          "base_rtt_ms": 25,
+          "base_loss_pct": 0.2,
+          "priority": 5,
+          "common_cause_group": "lte"
+        }
+      ],
+      "baseline": {
+        "offered_load_mbps": 140,
+        "load_noise_sd": 6,
+        "ar_coefficient": 0.94,
+        "normal_rtt_ms": 14,
+        "clients_mean": 180,
+        "mean_rssi_dbm": -61,
+        "retry_pct": 4.5,
+        "auth_failures_mean": 0.8
+      }
+    },
+    "site_b": {
+      "router": "Keenetic Viva",
+      "controller": "UniFi CloudKey Gen1",
+      "ap_count": 6,
+      "known_ap_uplinks": {
+        "100_mbps": 6
+      },
+      "kali_workstations": 25,
+      "failover_delay_s": 4,
+      "wan_policy": "primary_backup",
+      "wan_hysteresis_s": 12,
+      "session_survival_pct": 40,
+      "wan_links": [
+        {
+          "id": "B-WAN-1",
+          "capacity_mbps": 1000,
+          "base_rtt_ms": 17,
+          "base_loss_pct": 0.1,
+          "priority": 1,
+          "common_cause_group": "b-upstream"
+        },
+        {
+          "id": "B-WAN-2",
+          "capacity_mbps": 1000,
+          "base_rtt_ms": 20,
+          "base_loss_pct": 0.13,
+          "priority": 2,
+          "common_cause_group": "b-upstream"
+        }
+      ],
+      "baseline": {
+        "offered_load_mbps": 55,
+        "load_noise_sd": 3,
+        "ar_coefficient": 0.93,
+        "normal_rtt_ms": 19,
+        "clients_mean": 38,
+        "mean_rssi_dbm": -64,
+        "retry_pct": 6.0,
+        "auth_failures_mean": 0.5
+      }
+    }
+  },
+  "vpn": {
+    "base_overhead_ms": 4,
+    "protocol": "UNINVENTORIED",
+    "mtu": "UNINVENTORIED",
+    "rekey_period_s": 3600
+  },
+  "power": {
+    "site_a": {
+      "model_class": "DEMO_ONLY_13SxP_BEHAVIORAL_SURROGATE",
+      "series_groups_assumed": 13,
+      "parallel_count": "UNINVENTORIED",
+      "chemistry": "UNINVENTORIED",
+      "assumed_cell_nominal_v": 3.7,
+      "voltage_curve_status": "synthetic_demo_conditional",
+      "usable_energy_wh": 2400,
+      "nominal_pack_v": 48.1,
+      "initial_soc_pct": 82,
+      "soh_pct": 92,
+      "critical_soc_pct": 20,
+      "critical_load_w": 220,
+      "path_efficiency": 0.91,
+      "charger_nameplate_max_a": 10,
+      "synthetic_charge_current_limit_a": 4,
+      "synthetic_discharge_current_limit_a": 15,
+      "synthetic_min_terminal_v": 37,
+      "synthetic_min_cell_v": 2.5,
+      "synthetic_max_cell_v": 4.25,
+      "synthetic_electrical_limits_status": "SYNTHETIC_DEMO_ONLY_UNVERIFIED",
+      "charge_limit_status": "SYNTHETIC_DEMO_ONLY_UNVERIFIED",
+      "charger_power_limit_w": 450,
+      "pack_resistance_ohm": 0.09,
+      "ambient_c": 23,
+      "thermal_gain_c_per_w": 0.45,
+      "thermal_tau_s": 1200,
+      "ats_transition_ms": 8,
+      "mains_stable_before_return_s": 60,
+      "recharge_delay_s": 30
+    }
+  },
+  "detector": {
+    "type": "transparent_rule_baseline",
+    "threshold": 0.35,
+    "arms": [
+      "rules",
+      "edge",
+      "edge_correlated"
+    ],
+    "shadow_mode": true
+  },
+  "telemetry": {
+    "defects_enabled": true
+  },
+  "events": [
+    {
+      "event_id": "evt-mains",
+      "type": "mains_loss",
+      "start_s": 60,
+      "end_s": 900,
+      "targets": [
+        "site_a"
+      ],
+      "params": {}
+    },
+    {
+      "event_id": "evt-imbalance",
+      "type": "cell_imbalance",
+      "start_s": 300,
+      "end_s": 900,
+      "targets": [
+        "site_a"
+      ],
+      "params": {
+        "cell_index": 4,
+        "delta_mv": 120
+      }
+    }
+  ],
+  "scenario_note": "\u0422\u0440\u0438\u0432\u0430\u043b\u0430 \u0432\u0442\u0440\u0430\u0442\u0430 \u043c\u0435\u0440\u0435\u0436\u0456 \u0436\u0438\u0432\u043b\u0435\u043d\u043d\u044f: \u043f\u0435\u0440\u0435\u0432\u0456\u0440\u043a\u0430 load shedding \u0456 \u0430\u0432\u0442\u043e\u043d\u043e\u043c\u043d\u043e\u0441\u0442\u0456."
+}

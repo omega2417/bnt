@@ -1,0 +1,19 @@
+[project]
+name = "umsf-cyberrange-twin"
+version = "2.0.0"
+description = "Modular digital twin of the UMSF cyber range (synthetic, pre-experimental)"
+requires-python = ">=3.10"
+dependencies = []                    # standard library only, by design
+license = { text = "see repository LICENSE" }
+
+[project.scripts]
+umsf-twin = "umsf_twin.cli:main"
+
+[project.optional-dependencies]
+# Target-architecture backends of section 7.1. They are NOT required by the
+# reference implementation and are listed so the upgrade path is explicit.
+full = ["helics", "ns3-python", "fmpy", "pybamm", "pydantic>=2", "typer"]
+
+[tool.umsf_twin]
+evidence_class = "pre-experimental synthetic model"
+claim_boundary = "Synthetic model output; not a measurement of the physical range."

@@ -1,0 +1,58 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+title: "UMSF Cyber-Range Digital Twin: Reproducible SIM Experiment, Synthetic Telemetry, and Provenance-Aware Verification Package"
+abstract: >-
+  Reproducible software package for a two-site cyber-range digital-twin
+  prototype developed at the University of Customs and Finance, Ukraine.
+  It contains the version 2.0.0 executable model and source code, scenario
+  configurations, seed policy, tests, synthetic telemetry, scenario-generated
+  ground truth, alerts, summaries, manifests, a limited design-of-experiments
+  demonstration and a demonstration Monte Carlo workflow. All numerical outputs
+  are synthetic results of the SIM-mode software model; the package contains no
+  measurements of the physical cyber range.
+type: software
+version: 2.0.0
+date-released: "[YYYY-MM-DD OF ACTUAL PUBLICATION]"
+doi: "[RESERVED ZENODO DOI]"
+license: MIT
+repository-code: "[PUBLIC CODE URL, IF ANY]"
+keywords:
+  - cyber range
+  - digital twin
+  - critical infrastructure
+  - cybersecurity
+  - cyber resilience
+  - simulation
+  - synthetic telemetry
+  - reproducibility
+  - data provenance
+  - scenario-based testing
+  - safety gates
+  - SIM experiment
+  - software verification
+  - UMSF
+authors:
+  - family-names: Prokopovych-Tkachenko
+    given-names: Dmytro
+    orcid: "https://orcid.org/0000-0002-6590-3898"
+    affiliation: >-
+      Department of Cybersecurity and Information Technologies,
+      University of Customs and Finance, Dnipro, Ukraine
+# Add further creators only for people with a verified contribution, in the
+# order agreed for the related manuscript. Remove this comment before publishing.
+# - family-names: "[FAMILY NAME]"
+#   given-names: "[GIVEN NAME]"
+#   orcid: "[ORCID URL]"
+#   affiliation: "[AFFILIATION]"
+preferred-citation:
+  type: software
+  title: "UMSF Cyber-Range Digital Twin: Reproducible SIM Experiment, Synthetic Telemetry, and Provenance-Aware Verification Package"
+  version: 2.0.0
+  year: 2026
+  publisher:
+    name: Zenodo
+  doi: "[RESERVED ZENODO DOI]"
+  authors:
+    - family-names: Prokopovych-Tkachenko
+      given-names: Dmytro
+      orcid: "https://orcid.org/0000-0002-6590-3898"

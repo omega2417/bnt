@@ -1,0 +1,19 @@
+{
+  "source": "results/verification/validate.json",
+  "parameters": 198,
+  "evidence_histogram": {
+    "UNKNOWN": 4,
+    "SYNTHETIC_DEMO": 194,
+    "ASSUMED": 0,
+    "DERIVED": 0,
+    "VENDOR_SPEC": 0,
+    "MEASURED": 0
+  },
+  "unknown_parameters": [
+    "power.site_a.chemistry",
+    "power.site_a.parallel_count",
+    "vpn.mtu",
+    "vpn.protocol"
+  ],
+  "interpretation": "No parameter is MEASURED or VENDOR_SPEC. The four UNKNOWN parameters block HIL mode by design."
+}

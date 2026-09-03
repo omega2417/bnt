@@ -1,0 +1,207 @@
+{
+  "run_id": "wan-failover",
+  "experiment_id": "wan-failover",
+  "mode": "SIM",
+  "evidence_class": "synthetic_demo",
+  "replicates": 1,
+  "duration_s": 600,
+  "dt_s": 1.0,
+  "config_hash": "198020bb458c972c5b51d95f6bd52df03e17064062674a4e35133df95b7ff6a5",
+  "aggregate": {
+    "rows": 1204,
+    "network": {
+      "site_a": {
+        "steps": 602,
+        "availability_pct": 100.0,
+        "rtt_mean_ms": 19.54,
+        "rtt_p95_ms": 24.0025,
+        "rtt_p99_ms": 25.6455,
+        "loss_mean_pct": 0.09032,
+        "throughput_mean_mbps": 195.5416,
+        "offered_mean_mbps": 195.4221,
+        "goodput_ratio": 1.0006,
+        "failover_steps": 15,
+        "failover_seconds": 15
+      },
+      "site_b": {
+        "steps": 602,
+        "availability_pct": 100.0,
+        "rtt_mean_ms": 22.2265,
+        "rtt_p95_ms": 24.38,
+        "rtt_p99_ms": 25.27,
+        "loss_mean_pct": 0.12264,
+        "throughput_mean_mbps": 77.3684,
+        "offered_mean_mbps": 77.2959,
+        "goodput_ratio": 1.0009,
+        "failover_steps": 0,
+        "failover_seconds": 0
+      }
+    },
+    "power": {
+      "soc_start_pct": 81.99,
+      "soc_end_pct": 83.49,
+      "soc_drop_pct": -1.5,
+      "soc_min_pct": 81.98,
+      "autonomy_min_mean": 92.245,
+      "autonomy_min_worst": 88.21,
+      "battery_steps": 0,
+      "load_shed_steps": 0,
+      "protection_trip_steps": 0,
+      "temp_max_c": 23.4,
+      "cell_imbalance_max_mv": 0.0
+    },
+    "detection": {
+      "tp": 0,
+      "fp": 0,
+      "tn": 1204,
+      "fn": 0,
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "false_alarm_rate_per_1k_steps": 0.0,
+      "recall_wilson": {
+        "p": 0.0,
+        "low": 0.0,
+        "high": 0.0,
+        "n": 0
+      },
+      "detection_latency_steps": {
+        "mean": null,
+        "low": null,
+        "high": null,
+        "n": 0
+      }
+    }
+  },
+  "per_replicate": [
+    {
+      "replicate_id": 0,
+      "rows": 1204,
+      "alerts": 0,
+      "transitions": 21,
+      "summary": {
+        "rows": 1204,
+        "network": {
+          "site_a": {
+            "steps": 602,
+            "availability_pct": 100.0,
+            "rtt_mean_ms": 19.54,
+            "rtt_p95_ms": 24.0025,
+            "rtt_p99_ms": 25.6455,
+            "loss_mean_pct": 0.09032,
+            "throughput_mean_mbps": 195.5416,
+            "offered_mean_mbps": 195.4221,
+            "goodput_ratio": 1.0006,
+            "failover_steps": 15,
+            "failover_seconds": 15
+          },
+          "site_b": {
+            "steps": 602,
+            "availability_pct": 100.0,
+            "rtt_mean_ms": 22.2265,
+            "rtt_p95_ms": 24.38,
+            "rtt_p99_ms": 25.27,
+            "loss_mean_pct": 0.12264,
+            "throughput_mean_mbps": 77.3684,
+            "offered_mean_mbps": 77.2959,
+            "goodput_ratio": 1.0009,
+            "failover_steps": 0,
+            "failover_seconds": 0
+          }
+        },
+        "power": {
+          "soc_start_pct": 81.99,
+          "soc_end_pct": 83.49,
+          "soc_drop_pct": -1.5,
+          "soc_min_pct": 81.98,
+          "autonomy_min_mean": 92.245,
+          "autonomy_min_worst": 88.21,
+          "battery_steps": 0,
+          "load_shed_steps": 0,
+          "protection_trip_steps": 0,
+          "temp_max_c": 23.4,
+          "cell_imbalance_max_mv": 0.0
+        },
+        "detection": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 1204,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "false_alarm_rate_per_1k_steps": 0.0,
+          "recall_wilson": {
+            "p": 0.0,
+            "low": 0.0,
+            "high": 0.0,
+            "n": 0
+          },
+          "detection_latency_steps": {
+            "mean": null,
+            "low": null,
+            "high": null,
+            "n": 0
+          }
+        }
+      }
+    }
+  ],
+  "gates": {
+    "passed": true,
+    "results": [
+      {
+        "gate": "completeness",
+        "passed": true,
+        "value": 100.0,
+        "threshold": 90.0,
+        "detail": ""
+      },
+      {
+        "gate": "time_monotonic",
+        "passed": true,
+        "value": 0,
+        "threshold": 0,
+        "detail": "excluding rows explicitly flagged OUT_OF_ORDER"
+      },
+      {
+        "gate": "duplicate_rate",
+        "passed": true,
+        "value": 0.332,
+        "threshold": 5.0,
+        "detail": ""
+      },
+      {
+        "gate": "soc_continuity",
+        "passed": true,
+        "value": 0.19,
+        "threshold": 0.5,
+        "detail": ""
+      },
+      {
+        "gate": "energy_sign",
+        "passed": true,
+        "value": 0,
+        "threshold": 0,
+        "detail": "discharge must be positive current, charge negative"
+      },
+      {
+        "gate": "voltage_consistency",
+        "passed": true,
+        "value": 0,
+        "threshold": 0,
+        "detail": "pack terminal voltage must lie between 13*Vcell_min and 13*Vcell_max"
+      },
+      {
+        "gate": "gap_blanking",
+        "passed": true,
+        "value": 0,
+        "threshold": 0,
+        "detail": "gap rows must not carry measurements or detector output"
+      }
+    ],
+    "failed_blocking": []
+  },
+  "invariant_notes": [],
+  "claim_boundary": "Synthetic model output. Not a measurement of the physical UMSF cyber range and not a safety authorisation."
+}
