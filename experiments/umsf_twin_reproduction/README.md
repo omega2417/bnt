@@ -13,8 +13,13 @@
    за 3.2 с з першого запуску.
 3. **Кампанія.** 5 сценарних прогонів, демонстраційний прогін на 3 репліки,
    латинський гіперкуб на 8 точок, Monte Carlo з послідовною зупинкою.
-4. **Звіт.** `Звіт_відтворення_експерименту_umsf_twin.docx` (14 сторінок,
-   структура додатка F специфікації) плюс його PDF-рендер.
+4. **Звіт.** Дві версії:
+   - `Звіт_відтворення_експерименту_umsf_twin.docx` — українською, 14 сторінок,
+     структура додатка F специфікації;
+   - `UMSF_twin_reproduction_MDPI.docx` — англійською, 10 сторінок, у стилі
+     рукопису MDPI (Abstract/Keywords, розділи 1–5, front/back matter,
+     нумеровані посилання).
+   Обидві супроводжуються PDF-рендерами.
 
 ## Результат
 
@@ -40,8 +45,12 @@ make scenarios doe mc
 
 Потрібен лише Python 3.10+; зовнішніх залежностей немає за конструкцією.
 
-Для перегенерації звіту: `node tools/gen_report.js results/report_data.json out.docx`
-(потрібен npm-пакет `docx`).
+Для перегенерації звітів (потрібен npm-пакет `docx`):
+
+```bash
+node tools/gen_report.js results/report_data.json out_ua.docx   # українською
+node tools/gen_mdpi.js   results/report_data.json out_en.docx   # англійською, MDPI
+```
 
 ## Склад каталогу
 
@@ -50,7 +59,8 @@ make scenarios doe mc
 | `umsf_twin/` | пакет, вилучений зі специфікації (66 модулів + 8 конфігурацій JSON) |
 | `tests/run_tests.py` | набір із 40 перевірок восьми категорій |
 | `tools/extract_from_spec.py` | вилучення файлів із Markdown-специфікації |
-| `tools/gen_report.js` | генератор звіту DOCX з артефактів прогонів |
+| `tools/gen_report.js` | генератор українського звіту DOCX з артефактів прогонів |
+| `tools/gen_mdpi.js` | генератор англійського рукопису DOCX у стилі MDPI |
 | `results/*.json` | вихід команд `validate`, `verify`, `doe`, `mc` і зведені дані звіту |
 | `results/runs/` | маніфести, зведення, `report.md` і `alerts.csv` кожного прогону |
 | `README.upstream.md` | README пакета з самої специфікації |
