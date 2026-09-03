@@ -1,0 +1,21 @@
+{
+  "experiment_id": "umsf-dt-demo-002",
+  "config_hash": "4e162d71f4b88bad4e910d57525f5b5365166152bf7fcea468c1b69f8921a740",
+  "events": 10,
+  "parameters": 198,
+  "evidence": {
+    "UNKNOWN": 4,
+    "SYNTHETIC_DEMO": 194,
+    "ASSUMED": 0,
+    "DERIVED": 0,
+    "VENDOR_SPEC": 0,
+    "MEASURED": 0
+  },
+  "unknown_parameters": [
+    "power.site_a.chemistry",
+    "power.site_a.parallel_count",
+    "vpn.mtu",
+    "vpn.protocol"
+  ],
+  "invariant_notes": []
+}

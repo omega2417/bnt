@@ -1,0 +1,25 @@
+{
+  "metric": "network.site_a.rtt_p95_ms",
+  "replicates": 5,
+  "stopped_because": "target_half_width",
+  "interval": {
+    "estimate": 71.8948,
+    "low": 71.7354625,
+    "high": 72.07839999999999,
+    "clusters": 5,
+    "normal_approx": {
+      "mean": 71.8948,
+      "low": 71.71834954650912,
+      "high": 72.07125045349089,
+      "n": 5
+    },
+    "suggested_replicates": 1
+  },
+  "values": [
+    71.725,
+    71.68,
+    72.2515,
+    71.905,
+    71.9125
+  ]
+}

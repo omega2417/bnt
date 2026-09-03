@@ -1,0 +1,12 @@
+[
+  {"name": "power.site_a.initial_soc_pct", "low": 25, "high": 95, "unit": "%",
+   "evidence": "SYNTHETIC_DEMO", "group": "power"},
+  {"name": "power.site_a.critical_load_w", "low": 150, "high": 400, "unit": "W",
+   "evidence": "SYNTHETIC_DEMO", "group": "power"},
+  {"name": "sites.site_a.failover_delay_s", "levels": [2, 5, 10], "unit": "s",
+   "evidence": "ASSUMED", "group": "network"},
+  {"name": "sites.site_a.baseline.offered_load_mbps", "low": 80, "high": 400,
+   "unit": "Mbit/s", "evidence": "SYNTHETIC_DEMO", "group": "network"},
+  {"name": "detector.threshold", "low": 0.2, "high": 0.7, "unit": "1",
+   "evidence": "SYNTHETIC_DEMO", "group": "detection"}
+]
