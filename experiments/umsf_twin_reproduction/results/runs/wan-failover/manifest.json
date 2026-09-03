@@ -1,0 +1,157 @@
+{
+  "schema_version": "2.0.0",
+  "run_id": "wan-failover",
+  "experiment_id": "wan-failover",
+  "mode": "SIM",
+  "seed": 20260903,
+  "engine_version": "2.0.0",
+  "created_utc": "2026-09-03T17:39:05.984484Z",
+  "runtime": {
+    "python_version": "3.11.15",
+    "implementation": "CPython",
+    "platform": "Linux-6.18.44-fc-v24-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "hash_randomization_disabled": false
+  },
+  "hashes": {
+    "config": "198020bb458c972c5b51d95f6bd52df03e17064062674a4e35133df95b7ff6a5",
+    "engine_source": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
+    "summary": "89752817bbf9db55de5e57c2a67d719fb023211e33c03f0a1de30f54e9401bd6"
+  },
+  "artifacts": {
+    "telemetry.csv": {
+      "bytes": 405410,
+      "sha256": "416650546bc1f389a76c71f4d6e0929ee85b754ca537c320f99b9eaff5aa1fa9"
+    },
+    "ground_truth.csv": {
+      "bytes": 4693,
+      "sha256": "5f9307e8dfb2ae57bbcf2b995e821551901deb26cd8feff898d118df7324e9a4"
+    },
+    "alerts.csv": {
+      "bytes": 169,
+      "sha256": "bf5a3c1caa9686d392cf8eb782a9b97e0fc4bf90f45847f882a9d3daf96123ac"
+    },
+    "response_audit.json": {
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "parameters.json": {
+      "bytes": 30705,
+      "sha256": "e90764b6e1f27d005be5afb07adf5c10de7c17e6879c2cc13a1d40a4b5e910ad"
+    },
+    "scenario.resolved.json": {
+      "bytes": 6004,
+      "sha256": "cb9466cf74449f7118c76dd23398455154672d09950118d5e64265f47d598f84"
+    },
+    "summary.json": {
+      "bytes": 5326,
+      "sha256": "c689ae56665267192607a6ac9b151a0d80f4ec8b444835b01fdb0c3d0f858c97"
+    }
+  },
+  "parameters": {
+    "evidence_histogram": {
+      "UNKNOWN": 4,
+      "SYNTHETIC_DEMO": 150,
+      "ASSUMED": 0,
+      "DERIVED": 0,
+      "VENDOR_SPEC": 0,
+      "MEASURED": 0
+    },
+    "unknown_count": 4,
+    "unknown_sample": [
+      "power.site_a.chemistry",
+      "power.site_a.parallel_count",
+      "vpn.mtu",
+      "vpn.protocol"
+    ]
+  },
+  "policy": {
+    "mode": "SIM",
+    "allow_external_egress": false,
+    "allow_hardware_writes": false,
+    "hil_approval_ref": null,
+    "max_duration_s": 604800,
+    "max_events": 1000,
+    "max_offered_load_mbps": 10000.0,
+    "max_injected_power_w": 2000.0,
+    "allowed_event_types": [
+      "ap_down",
+      "asset_fault",
+      "cell_imbalance",
+      "charge_start",
+      "clock_skew",
+      "duplicate_storm",
+      "lateral_sequence",
+      "low_rate_c2",
+      "mains_loss",
+      "model_drift",
+      "recon_burst",
+      "rogue_ap_signal",
+      "telemetry_loss",
+      "traffic_burst",
+      "vpn_degrade",
+      "wan_degrade",
+      "wan_down",
+      "wifi_auth_burst"
+    ],
+    "egress_allowlist": [],
+    "retention_days": 365
+  },
+  "gates": {
+    "passed": true,
+    "results": [
+      {
+        "gate": "completeness",
+        "passed": true,
+        "value": 100.0,
+        "threshold": 90.0,
+        "detail": ""
+      },
+      {
+        "gate": "time_monotonic",
+        "passed": true,
+        "value": 0,
+        "threshold": 0,
+        "detail": "excluding rows explicitly flagged OUT_OF_ORDER"
+      },
+      {
+        "gate": "duplicate_rate",
+        "passed": true,
+        "value": 0.332,
+        "threshold": 5.0,
+        "detail": ""
+      },
+      {
+        "gate": "soc_continuity",
+        "passed": true,
+        "value": 0.19,
+        "threshold": 0.5,
+        "detail": ""
+      },
+      {
+        "gate": "energy_sign",
+        "passed": true,
+        "value": 0,
+        "threshold": 0,
+        "detail": "discharge must be positive current, charge negative"
+      },
+      {
+        "gate": "voltage_consistency",
+        "passed": true,
+        "value": 0,
+        "threshold": 0,
+        "detail": "pack terminal voltage must lie between 13*Vcell_min and 13*Vcell_max"
+      },
+      {
+        "gate": "gap_blanking",
+        "passed": true,
+        "value": 0,
+        "threshold": 0,
+        "detail": "gap rows must not carry measurements or detector output"
+      }
+    ],
+    "failed_blocking": []
+  },
+  "notes": [],
+  "manifest_hash": "228b17e92e4559a3b1106550490705699c40d38ef8356793f0b0c8afe56c9f0c"
+}

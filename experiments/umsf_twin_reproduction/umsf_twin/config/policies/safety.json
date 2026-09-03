@@ -1,0 +1,13 @@
+{
+  "mode": "SIM",
+  "allow_external_egress": false,
+  "allow_hardware_writes": false,
+  "hil_approval_ref": "",
+  "max_duration_s": 604800,
+  "max_events": 1000,
+  "max_offered_load_mbps": 10000.0,
+  "max_injected_power_w": 2000.0,
+  "max_replicates": 1000,
+  "egress_allowlist": [],
+  "retention_days": 365
+}
