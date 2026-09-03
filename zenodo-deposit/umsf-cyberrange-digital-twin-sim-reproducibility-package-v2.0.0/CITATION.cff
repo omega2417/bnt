@@ -12,10 +12,10 @@ abstract: >-
   measurements of the physical cyber range.
 type: software
 version: 2.0.0
-date-released: "[YYYY-MM-DD OF ACTUAL PUBLICATION]"
-doi: "[RESERVED ZENODO DOI]"
+date-released: "2026-09-03"   # confirm against the date shown on the Zenodo record
+doi: "10.5281/zenodo.22287426"
 license: MIT
-repository-code: "[PUBLIC CODE URL, IF ANY]"
+repository-code: "https://github.com/omega2417/bnt/tree/claude/zenodo-software-deposit-hdxmbh/zenodo-deposit/umsf-cyberrange-digital-twin-sim-reproducibility-package-v2.0.0"
 keywords:
   - cyber range
   - digital twin
@@ -51,7 +51,7 @@ preferred-citation:
   year: 2026
   publisher:
     name: Zenodo
-  doi: "[RESERVED ZENODO DOI]"
+  doi: "10.5281/zenodo.22287426"
   authors:
     - family-names: Prokopovych-Tkachenko
       given-names: Dmytro

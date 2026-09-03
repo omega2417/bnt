@@ -6,10 +6,12 @@
     "schema_version": "2.0.0",
     "evidence_class": "pre-experimental synthetic model",
     "mode": "SIM",
-    "doi": "[RESERVED-ZENODO-DOI]"
+    "doi": "10.5281/zenodo.22287426",
+    "doi_url": "https://doi.org/10.5281/zenodo.22287426",
+    "repository_code": "https://github.com/omega2417/bnt/tree/claude/zenodo-software-deposit-hdxmbh/zenodo-deposit/umsf-cyberrange-digital-twin-sim-reproducibility-package-v2.0.0"
   },
   "claim_boundary": "All numerical records in this package are synthetic outputs of a software model. They are not measurements of the physical UMSF cyber range and do not establish WAN/VPN/ATS switchover times, Wi-Fi coverage or capacity, power autonomy, battery thermal behaviour or field detector accuracy.",
-  "generated_at_utc": "2026-09-03T19:24:55.952901Z",
+  "generated_at_utc": "2026-09-03T20:50:15.059403Z",
   "environment": {
     "python_version": "3.11.15",
     "implementation": "CPython",
@@ -78,7 +80,7 @@
       "gates_passed": true,
       "config_hash": "4e162d71f4b88bad4e910d57525f5b5365166152bf7fcea468c1b69f8921a740",
       "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
-      "manifest_sha256": "1b597ba33dc21582f83584074c6847cc7f981598a6b01c0519eaca1897fa7107"
+      "manifest_sha256": "64bf33b6d928c664e2f3043714ead1cc3c34b24ae187d67f87a9a0466ec5ffff"
     },
     {
       "run_dir": "results/doe/doe-000",
@@ -91,7 +93,7 @@
       "gates_passed": true,
       "config_hash": "dbfeaf7019be9658c2c3d41f7299517e8e3e92e8a3bcfcd88df339f42681cf89",
       "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
-      "manifest_sha256": "978c2ebdd98700dcaadc34f82d28c983cf835f1a919ed64b06bb89fa21acd65f"
+      "manifest_sha256": "dc6c27b55fb00aee70c9d91742f5d22c6d97d1e7e4122a73c4564a122ed060b6"
     },
     {
       "run_dir": "results/doe/doe-001",
@@ -104,7 +106,7 @@
       "gates_passed": true,
       "config_hash": "ffa7b25350c4af02974657b2335de04457bf861eb7e9b712bb405d992396f1ed",
       "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
-      "manifest_sha256": "71ee7b08a2439c6803e577afaca4c90c257dfae2d93c027abcd1978435e7419b"
+      "manifest_sha256": "e19cdb68c270af8abcf350c8ca4ad8da921d8de9c0b9e318ac0a45f90a004b10"
     },
     {
       "run_dir": "results/doe/doe-002",
@@ -117,7 +119,7 @@
       "gates_passed": true,
       "config_hash": "1a79f5f16b51535da35419decca482649876e7842c3ae2a75bd45e3c819bb746",
       "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
-      "manifest_sha256": "bb1fc3958bfffb3c61d556a77fc17a288f6874f04e43663baa2f4395b2e14b60"
+      "manifest_sha256": "aa267912556182996e00067f33a7301f16b2bbe0a3a8d1cbc276ccd8fcb1efee"
     },
     {
       "run_dir": "results/doe/doe-003",
@@ -130,7 +132,7 @@
       "gates_passed": true,
       "config_hash": "7f7251dd55a498e5b5cff0ed9d01d50dc2aee54f4f57b9cdb511b55ef29e9ab8",
       "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
-      "manifest_sha256": "a00ee8604c0ed684cee18102dbc3977a80bf6755e6b3ef84eb7753f521e31ffe"
+      "manifest_sha256": "b2d84023acbc3d722c8f51e183976b1c8ef458c3b00ed55f31c9a6edaa9d488e"
     },
     {
       "run_dir": "results/doe/doe-004",
@@ -143,7 +145,7 @@
       "gates_passed": true,
       "config_hash": "0466bdddf3be43978c2e0bc79fc9e94b5530df776bce81e6e6f42d0077cd902a",
       "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
-      "manifest_sha256": "1433034dc2b3378534fede1f1aed87a8efc9b25ccffb7530cd4d69939ac419de"
+      "manifest_sha256": "abb1f00d35c5e1ecc32316961adc8ddcdc88e11e2d42b34fcf92e5d23d5ac93c"
     },
     {
       "run_dir": "results/doe/doe-005",
@@ -156,7 +158,7 @@
       "gates_passed": true,
       "config_hash": "ae1a068e0b60be0e929266e9b2c1237a94c1d887f1a19146b168faead6e1069b",
       "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
-      "manifest_sha256": "317daa1f2ed28be040bfe7b643f4781b233c90d5973ef9e990208ed46343a68b"
+      "manifest_sha256": "33261aa03fe3275b3a4f6d1e7e726e1cd390214c075a4982bd34dd35c38d1748"
     },
     {
       "run_dir": "results/doe/doe-006",
@@ -169,7 +171,7 @@
       "gates_passed": true,
       "config_hash": "b7fea0ab1d71ec1ac7bcb41b397adc9f7ec15e525af6675bc041354d497f56e0",
       "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
-      "manifest_sha256": "15e80b6f59c5874666e3818e0aebd1347101daa41607a52623d7319b177c1ba7"
+      "manifest_sha256": "2b22cbbb4aab72a52164f71e12c07405361d3042e04dfc65aba03ffa710ee3fe"
     },
     {
       "run_dir": "results/doe/doe-007",
@@ -182,7 +184,7 @@
       "gates_passed": true,
       "config_hash": "b79662661f588e7d4c0f274605cba5e4033a5825cde154a07449e9c373204b1f",
       "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
-      "manifest_sha256": "ad255dcd44d006e5555bbe57afbb9afa23d2f7b459f43cc595268023f7b6b48f"
+      "manifest_sha256": "0cdb3042923f723d117ba6f9a3dcad16040cf426f74ede02fb7b473cdbfc73cb"
     },
     {
       "run_dir": "results/scenarios/baseline-quiet",
@@ -195,7 +197,7 @@
       "gates_passed": true,
       "config_hash": "64370563cd5c765425e4b8bf875ac26b7a126312f56fac252d3045c849113a19",
       "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
-      "manifest_sha256": "299228f052185c2b5852a7ba568e3f5a394df950d6f3b0532d35afb508253814"
+      "manifest_sha256": "266f370ced59cf6c9306a41a50d57378f269d849dac8f4ac0e6855e03e30b973"
     },
     {
       "run_dir": "results/scenarios/compound-challenge",
@@ -208,7 +210,7 @@
       "gates_passed": true,
       "config_hash": "8eb0500ae69642d9fba3618b1721feda6fb7159a75db6258f430290654e20212",
       "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
-      "manifest_sha256": "d2adb35829940821711b2abf3be31fd041fe48882a99485ce8e5904a8a980e1a"
+      "manifest_sha256": "5b5adc7d8586366ae22ce495220089d45ce264aed6a05f3243131407de83c315"
     },
     {
       "run_dir": "results/scenarios/cyber-campaign",
@@ -221,7 +223,7 @@
       "gates_passed": true,
       "config_hash": "372361260f763a2f36aad7a7cf26fe7af429ad13287704589482f70fd5615deb",
       "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
-      "manifest_sha256": "1d924ca61d28a4809cbf7f9a2d3da9076c2ca1c117c7db33656869155d0727d3"
+      "manifest_sha256": "f8e59e669fed7a1f4180c122c64e5613dc83ae8b975a2fb968f183730893fdb3"
     },
     {
       "run_dir": "results/scenarios/power-outage",
@@ -234,7 +236,7 @@
       "gates_passed": true,
       "config_hash": "e2dbbb728629a5cb839e541de0722a100c74496fcc92a35f60ae4618a8101088",
       "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
-      "manifest_sha256": "4bd452915594920ca4105fc3ca02df87016b7071b79e4a47d9cafc17e2f888ca"
+      "manifest_sha256": "c4f636c72f82d8ce032096788da345c2330da81f01eeba3516a157c26c3603cd"
     },
     {
       "run_dir": "results/scenarios/wan-failover",
@@ -247,7 +249,7 @@
       "gates_passed": true,
       "config_hash": "198020bb458c972c5b51d95f6bd52df03e17064062674a4e35133df95b7ff6a5",
       "engine_source_hash": "2136f8f4be6e300c272a52056e15038260f33d67e0283cadde99939a09b24549",
-      "manifest_sha256": "2f2161700d1434f70b74e193ec16acd6b39da274da6f6ce4c07f0f965a92dd3e"
+      "manifest_sha256": "5c8eff207ab3d96e61fd16055a81dfb6ee9c5498654d61be216cd7dc1187e47c"
     }
   ]
 }

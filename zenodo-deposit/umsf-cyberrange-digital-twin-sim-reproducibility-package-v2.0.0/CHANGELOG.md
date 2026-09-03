@@ -3,7 +3,10 @@
 All notable changes to this deposit. Each Zenodo version is a separate,
 linked record with its own persistent identifier; cite the version you used.
 
-## 2.0.0 — [PUBLICATION DATE]
+## 2.0.0 — 2026-09-03
+
+Published on Zenodo: <https://doi.org/10.5281/zenodo.22287426>
+Source repository: <https://github.com/omega2417/bnt>
 
 First public deposit.
 

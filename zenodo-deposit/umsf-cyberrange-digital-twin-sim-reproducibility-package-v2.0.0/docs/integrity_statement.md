@@ -52,10 +52,21 @@
   `manifests/campaign_manifest.json` so that neither figure is inflated by the
   other.
 
-## Fields left for the author to complete
+## Identifiers recorded in this release
 
-The DOI, the publication date, the final list of co-authors and their
-contributions, the funding statement, the journal and the article DOI are marked
-`[IN BRACKETS]` throughout the package. They are deliberately unfilled: they are
-facts that only the corresponding author can supply, and inventing them would
-defeat the purpose of this deposit.
+* Archive DOI: 10.5281/zenodo.22287426 — supplied by the depositor and written into README.md,
+  CITATION.cff, CHANGELOG.md, the experiment report and zenodo_metadata.json.
+  It was **not verified against the live Zenodo record**, because the packaging
+  environment had no network access to zenodo.org. Whether it is the version DOI
+  or the concept DOI must be confirmed on the record page.
+* Publication date 2026-09-03 is the date the DOI was supplied, not a value read
+  from the record. Confirm it against the record page.
+* Source repository: https://github.com/omega2417/bnt/tree/claude/zenodo-software-deposit-hdxmbh/zenodo-deposit/umsf-cyberrange-digital-twin-sim-reproducibility-package-v2.0.0
+
+## Fields still left for the author to complete
+
+The final list of co-authors and their contributions, the funding statement, the
+journal, and the article DOI remain marked `[IN BRACKETS]` throughout the
+package. They are deliberately unfilled: they are facts that only the
+corresponding author can supply, and inventing them would defeat the purpose of
+this deposit.

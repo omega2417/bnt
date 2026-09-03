@@ -2,7 +2,8 @@
 
 **Пакет:** UMSF Cyber-Range Digital Twin — SIM Reproducibility Package, версія 2.0.0
 **Режим:** SIM (лише програмна симуляція) · **Клас доказовості:** pre-experimental synthetic model
-**Zenodo DOI:** `[ЗАРЕЗЕРВОВАНИЙ DOI]` · **Дата випуску:** `[ФАКТИЧНА ДАТА ПУБЛІКАЦІЇ]`
+**Zenodo DOI:** <https://doi.org/10.5281/zenodo.22287426> · **Дата випуску:** 2026-09-03
+**Репозиторій коду:** <https://github.com/omega2417/bnt/tree/claude/zenodo-software-deposit-hdxmbh/zenodo-deposit/umsf-cyberrange-digital-twin-sim-reproducibility-package-v2.0.0>
 
 > **Межа доказовості.** Усі числа цього звіту є виходами програмної моделі. Вони
 > не є вимірюваннями фізичного кіберполігону УМСФ. Повне формулювання —

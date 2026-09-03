@@ -39,4 +39,4 @@
   ok   [performance] test_step_cost_is_bounded
   ok   [performance] test_rule_engine_is_cheap
 
-40/40 passed in 3.8s
+40/40 passed in 3.7s

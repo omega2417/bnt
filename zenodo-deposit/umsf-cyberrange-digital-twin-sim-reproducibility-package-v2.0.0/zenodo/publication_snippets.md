@@ -1,8 +1,10 @@
 # Ready-to-paste manuscript text
 
-Every snippet below must use the DOI of the **published version** of the Zenodo
-record. Replace `[ZENODO-DOI]` and every other bracketed field with real values
-only. Related manuscript: *Provenance-Aware Cyber-Range Modelling for Critical
+Every snippet below already carries the published archive DOI
+**10.5281/zenodo.22287426** (<https://doi.org/10.5281/zenodo.22287426>) and the source repository
+<https://github.com/omega2417/bnt/tree/claude/zenodo-software-deposit-hdxmbh/zenodo-deposit/umsf-cyberrange-digital-twin-sim-reproducibility-package-v2.0.0>. Any field still in [BRACKETS] must be replaced with a real, verified
+value. Before submission, confirm on the Zenodo record page that this DOI is the
+**version** DOI and not the concept DOI — the article must cite the version used. Related manuscript: *Provenance-Aware Cyber-Range Modelling for Critical
 Infrastructure: A Set-Theoretic Resilience Framework and Reproducible Synthetic
 Evaluation* (working title; the earlier title claiming a controlled two-site
 cyber-range evaluation should not be used while the evidence is SIM-only).
@@ -12,7 +14,7 @@ cyber-range evaluation should not be used while the evidence is SIM-only).
 > The software, scenario configurations, seed policy, synthetic telemetry,
 > scenario-generated ground truth, alerts, summaries, manifests, tests, and
 > analysis scripts supporting this study are available in Zenodo at
-> https://doi.org/[ZENODO-DOI]. All numerical records in this repository are
+> https://doi.org/10.5281/zenodo.22287426. All numerical records in this repository are
 > synthetic outputs of the SIM-mode software model; the repository contains no
 > measurements from the physical UMSF cyber range. The archived release used for
 > this article is version 2.0.0.
@@ -22,7 +24,7 @@ cyber-range evaluation should not be used while the evidence is SIM-only).
 > Програмне забезпечення, конфігурації сценаріїв, seed-політика, синтетична
 > телеметрія, сформований сценарним контролером ground truth, alerts, summaries,
 > manifests, тести та скрипти аналізу, що підтримують це дослідження, доступні в
-> Zenodo за адресою https://doi.org/[ZENODO-DOI]. Усі числові записи репозиторію
+> Zenodo за адресою https://doi.org/10.5281/zenodo.22287426. Усі числові записи репозиторію
 > є синтетичними виходами програмної моделі в режимі SIM; репозиторій не містить
 > вимірювань фізичного кіберполігону УМСФ. У статті використано архівну версію
 > 2.0.0.
@@ -31,13 +33,13 @@ cyber-range evaluation should not be used while the evidence is SIM-only).
 
 > The executable software artifact and the exact configurations used in the
 > reported SIM campaign are archived in Zenodo (version 2.0.0):
-> https://doi.org/[ZENODO-DOI]. The archive includes reproducibility
+> https://doi.org/10.5281/zenodo.22287426. The archive includes reproducibility
 > instructions, automated tests, environment information, and SHA-256 manifests.
 
 ## Supplementary Materials
 
 > Supplementary reproducibility materials are available in Zenodo at
-> https://doi.org/[ZENODO-DOI]. The deposit contains the versioned software
+> https://doi.org/10.5281/zenodo.22287426. The deposit contains the versioned software
 > package, five executed SIM scenarios, a three-replicate demonstration run, an
 > eight-point exploratory DoE, a demonstration Monte Carlo workflow,
 > machine-readable outputs, data dictionaries, and integrity manifests.
@@ -56,7 +58,7 @@ cyber-range evaluation should not be used while the evidence is SIM-only).
 > produced a resolved scenario configuration, telemetry, scenario-generated ground
 > truth, alerts, summary metrics, and a manifest containing configuration, source,
 > environment, and file hashes. The archived artifact is available at
-> https://doi.org/[ZENODO-DOI].
+> https://doi.org/10.5281/zenodo.22287426.
 
 ## Methods — remote organisation of the work
 
@@ -99,7 +101,7 @@ cyber-range evaluation should not be used while the evidence is SIM-only).
 > Prokopovych-Tkachenko, D., [further authors]. (2026). *UMSF Cyber-Range Digital
 > Twin: Reproducible SIM Experiment, Synthetic Telemetry, and Provenance-Aware
 > Verification Package* (Version 2.0.0) [Software]. Zenodo.
-> https://doi.org/[ZENODO-DOI]
+> https://doi.org/10.5281/zenodo.22287426
 
 After publication, copy the citation directly from the Zenodo record page and
 check author order, year, resource type, version and DOI.
@@ -109,6 +111,7 @@ check author order, year, resource type, version and DOI.
 | Object | Relation | When to fill |
 |---|---|---|
 | The article | *Is supplement to* / *Is referenced by* — pick the semantically exact one | after the article DOI exists, or at a later metadata update |
+| The source repository | *Is supplement to* — `https://github.com/omega2417/bnt/tree/claude/zenodo-software-deposit-hdxmbh/zenodo-deposit/umsf-cyberrange-digital-twin-sim-reproducibility-package-v2.0.0` | **already declared** |
 | A previous package version | *Is new version of* | only if a previous published record exists |
 | The executable specification | *Is derived from* / *Is documented by* | if it has a stable DOI or URL |
 | A separate dataset record | *Is supplement to* / *Is part of* | only if code and data are split into two records |

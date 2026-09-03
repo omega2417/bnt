@@ -113,7 +113,12 @@ def main() -> int:
             "schema_version": "2.0.0",
             "evidence_class": "pre-experimental synthetic model",
             "mode": "SIM",
-            "doi": "[RESERVED-ZENODO-DOI]",
+            "doi": "10.5281/zenodo.22287426",
+            "doi_url": "https://doi.org/10.5281/zenodo.22287426",
+            "repository_code": (
+                "https://github.com/omega2417/bnt/tree/"
+                "claude/zenodo-software-deposit-hdxmbh/zenodo-deposit/"
+                "umsf-cyberrange-digital-twin-sim-reproducibility-package-v2.0.0"),
         },
         "claim_boundary": (
             "All numerical records in this package are synthetic outputs of a "

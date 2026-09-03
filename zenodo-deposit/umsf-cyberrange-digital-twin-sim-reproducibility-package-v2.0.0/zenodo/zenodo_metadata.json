@@ -1,10 +1,10 @@
 {
   "_instructions": [
-    "Ready-to-paste Zenodo record metadata for release 2.0.0.",
-    "Fields in [BRACKETS] must be replaced with real, verified values only.",
-    "Answer 'No' to the existing-DOI question, press 'Get a DOI now!', paste the",
-    "reserved DOI into README.md, CITATION.cff, CHANGELOG.md and this file, then",
-    "re-run 'make manifests' and re-upload the ZIP before publishing."
+    "Metadata of the published record 10.5281/zenodo.22287426, release 2.0.0.",
+    "Fields still in [BRACKETS] must be replaced with real, verified values only.",
+    "Confirm on the record page which DOI is the VERSION DOI and which is the CONCEPT DOI;",
+    "cite the version DOI in the article. Metadata can still be edited after publication;",
+    "changed FILES require a New version record, not an edit of this one."
   ],
   "upload_type": "software",
   "alternative_upload_type_if_a_dataset_record_is_required": "dataset",
@@ -17,7 +17,7 @@
     }
   ],
   "version": "2.0.0",
-  "publication_date": "[ACTUAL DATE OF FIRST PUBLIC RELEASE, YYYY-MM-DD]",
+  "publication_date": "2026-09-03",
   "publisher": "Zenodo",
   "language": "eng",
   "access_right": "open",
@@ -34,10 +34,20 @@
   "_creators_note": "Add further creators only for people with a verified contribution, in the order agreed for the related manuscript. People without an authorship contribution belong under contributors with an exact role, not under creators.",
   "contributors": [],
   "keywords": [
-    "cyber range", "digital twin", "critical infrastructure", "cybersecurity",
-    "cyber resilience", "simulation", "synthetic telemetry", "reproducibility",
-    "data provenance", "scenario-based testing", "safety gates", "SIM experiment",
-    "software verification", "UMSF"
+    "cyber range",
+    "digital twin",
+    "critical infrastructure",
+    "cybersecurity",
+    "cyber resilience",
+    "simulation",
+    "synthetic telemetry",
+    "reproducibility",
+    "data provenance",
+    "scenario-based testing",
+    "safety gates",
+    "SIM experiment",
+    "software verification",
+    "UMSF"
   ],
   "description_en": "This deposit provides a reproducible software package for a two-site cyber-range digital-twin prototype developed at the University of Customs and Finance, Ukraine. The package supports safe pre-experimental testing of network, energy, telemetry, and cybersecurity scenarios before any transition to EMU, REPLAY, HIL, or physical-test stages.\n\nThe resource includes the version 2.0.0 executable model and source code (66 standard-library-only Python modules), scenario configurations, seed policy, tests, synthetic telemetry, scenario-generated ground truth, alerts, summaries, manifests, a limited eight-point design-of-experiments demonstration, and a demonstration Monte Carlo workflow. In this release 40/40 automated software checks pass and 86/86 reference values of the executable specification are reproduced exactly. Scenario and demonstration SIM runs contain 13,049 dependent time-series records across 8 independent run/replicate units; the full campaign contains 16 run/replicate units including the DoE points.\n\nAll numerical outputs are synthetic model results. The deposit contains no measurements from the physical UMSF cyber range: no parameter is classified as MEASURED, 194 parameters are SYNTHETIC_DEMO, and four remain UNKNOWN and block HIL execution. Reproducibility claims therefore apply to the software artifact and its conformance to the specification, not to physical validity, field performance, or operational deployment.",
   "description_uk": "Цей депозит містить відтворюваний пакет програмного прототипу цифрового двійника двомайданчикового кіберполігону Університету митної справи та фінансів. Пакет призначений для безпечної передекспериментальної перевірки сценаріїв мережевої, енергетичної, телеметрійної та кібербезпекової поведінки до перенесення дослідів у середовища EMU, REPLAY, HIL або на фізичний стенд.\n\nРесурс охоплює вихідний код і виконувану специфікацію версії 2.0.0, конфігурації сценаріїв, seed-політику, тести, synthetic telemetry, сценарний ground truth, alerts, агреговані summaries, manifests, результати обмеженого DOE та демонстраційного Monte Carlo. У цьому випуску пройдено 40 із 40 автоматичних перевірок і точно відтворено 86 контрольних значень специфікації. У сценарних і демонстраційних SIM-прогонах сформовано 13 049 залежних часових записів.\n\nУсі числові результати є синтетичними виходами програмної моделі. Депозит не містить вимірювань фізичного кіберполігону: статус MEASURED відсутній, 194 параметри мають статус SYNTHETIC_DEMO, а чотири залишаються UNKNOWN і блокують режим HIL. Відтворюваність стосується програмного артефакту та його відповідності специфікації, а не фізичної достовірності мережі, Wi-Fi, VPN, резервного живлення або детекторів.",
@@ -50,6 +60,12 @@
       "_note": "Do not put the article DOI in the existing-DOI field of this upload; they identify different objects."
     },
     {
+      "relation": "isSupplementTo",
+      "identifier": "https://github.com/omega2417/bnt/tree/claude/zenodo-software-deposit-hdxmbh/zenodo-deposit/umsf-cyberrange-digital-twin-sim-reproducibility-package-v2.0.0",
+      "resource_type": "software",
+      "_note": "Source repository of this package. isSupplementTo is the relation Zenodo's own GitHub integration records; use isDerivedFrom or isIdenticalTo instead if that describes the tree more precisely."
+    },
+    {
       "relation": "isDerivedFrom",
       "identifier": "[STABLE URL OR DOI OF THE EXECUTABLE SPECIFICATION, IF ONE EXISTS]",
       "resource_type": "publication-technicalnote"
@@ -60,5 +76,9 @@
   "_communities_note": "Add a community only after checking its rules. Submitting to a community does not replace the evidence-status description.",
   "files": [
     "umsf-cyberrange-digital-twin-sim-reproducibility-package-v2.0.0.zip"
-  ]
+  ],
+  "doi": "10.5281/zenodo.22287426",
+  "doi_url": "https://doi.org/10.5281/zenodo.22287426",
+  "_doi_note": "This is the DOI supplied by the depositor. Zenodo also mints a concept DOI covering all versions; verify on the record page which of the two this is, and cite the version DOI in the manuscript.",
+  "_publication_date_note": "Confirm against the date displayed on the Zenodo record."
 }

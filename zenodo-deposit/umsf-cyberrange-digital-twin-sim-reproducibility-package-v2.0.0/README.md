@@ -1,7 +1,8 @@
 # UMSF Cyber-Range Digital Twin — Reproducible SIM Experiment, Synthetic Telemetry, and Provenance-Aware Verification Package
 
 **Version:** 2.0.0  ·  **Mode:** SIM (simulation only)  ·  **Evidence class:** pre-experimental synthetic model
-**Zenodo DOI:** `[RESERVE THE DOI IN ZENODO, THEN PASTE IT HERE AND RE-RUN make manifests]`
+**Zenodo DOI:** [10.5281/zenodo.22287426](https://doi.org/10.5281/zenodo.22287426)
+**Source repository:** <https://github.com/omega2417/bnt/tree/claude/zenodo-software-deposit-hdxmbh/zenodo-deposit/umsf-cyberrange-digital-twin-sim-reproducibility-package-v2.0.0>
 **Related manuscript DOI:** `[ARTICLE DOI, AFTER ACCEPTANCE]`
 
 Ukrainian title: *Цифровий двійник кіберполігону УМСФ: відтворюваний SIM-експеримент, синтетична телеметрія та пакет провенанс-орієнтованої верифікації (v2.0.0).*
@@ -73,7 +74,7 @@ exploit code and no live targets.
 | `results/run_index.csv` | One row per independent software run/replicate |
 | `data/synthetic/` | Pointer to the record-level synthetic data (see §7) |
 | `manifests/` | Campaign manifest, per-file SHA-256, provenance histogram |
-| `docs/` | Experiment report, evidence boundary, data dictionary, methodological note, integrity statement |
+| `docs/` | Experiment report, evidence boundary, data dictionary, methodological note, integrity statement, **publication insert** |
 | `zenodo/` | Ready-to-paste Zenodo metadata, upload checklist, manuscript snippets |
 | `LICENSES/` | Separate terms for code, synthetic data and documentation |
 | `SHA256SUMS.txt` | SHA-256 of every file, generated last |
@@ -185,12 +186,25 @@ for the file-by-file mapping. **Before publishing the record**, confirm that the
 institutional and funder rights permit these terms; the README grants no rights
 beyond the LICENSE files.
 
-## 10. How to cite
+## 10. Source repository and archive
+
+| Resource | Location |
+|---|---|
+| Archived release (citable, immutable) | <https://doi.org/10.5281/zenodo.22287426> |
+| Source repository | <https://github.com/omega2417/bnt> |
+| This package in the repository | <https://github.com/omega2417/bnt/tree/claude/zenodo-software-deposit-hdxmbh/zenodo-deposit/umsf-cyberrange-digital-twin-sim-reproducibility-package-v2.0.0> |
+| Permalink to the exact commit that produced this release | <https://github.com/omega2417/bnt/tree/92f9f52a12f057a49efe68ce7de7b9b46071383e/zenodo-deposit/umsf-cyberrange-digital-twin-sim-reproducibility-package-v2.0.0> |
+
+Cite the Zenodo DOI, not the repository URL: the repository can change, the
+archived version cannot. Use the repository only to follow development or to
+open an issue.
+
+## 11. How to cite
 
 See `CITATION.cff`. After publication, copy the citation string directly from the
 Zenodo record page and check author order, year, resource type, version and DOI.
 
-## 11. Contact and issues
+## 12. Contact and issues
 
 Corresponding author: Dmytro Prokopovych-Tkachenko, ORCID
 [0000-0002-6590-3898](https://orcid.org/0000-0002-6590-3898), Department of

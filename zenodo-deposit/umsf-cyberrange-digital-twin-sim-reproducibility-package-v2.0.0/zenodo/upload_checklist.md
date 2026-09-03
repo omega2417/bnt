@@ -1,5 +1,8 @@
 # Zenodo upload checklist — release 2.0.0
 
+**Record published:** <https://doi.org/10.5281/zenodo.22287426>
+**Source repository:** <https://github.com/omega2417/bnt/tree/claude/zenodo-software-deposit-hdxmbh/zenodo-deposit/umsf-cyberrange-digital-twin-sim-reproducibility-package-v2.0.0>
+
 Work top to bottom. Publish only when every applicable line is genuinely true.
 Ticks below are the state of the package as delivered; the unticked lines are
 the ones only the corresponding author can close.
@@ -20,7 +23,16 @@ the ones only the corresponding author can close.
       `seed` and `config_hash` (`results/run_index.csv`).
 - [x] `SHA256SUMS.txt` was generated after the last file change and verifies
       with `sha256sum -c SHA256SUMS.txt`.
-- [ ] Re-run `make manifests` after inserting the reserved DOI, then re-zip.
+- [x] DOI inserted into README.md, CITATION.cff, CHANGELOG.md, the experiment
+      report and zenodo_metadata.json; manifests and checksums regenerated;
+      archive rebuilt.
+- [ ] Confirm on the record page which DOI is the **version** DOI and which is
+      the **concept** DOI, and cite the version DOI in the article.
+- [ ] Confirm the record's publication date matches the `2026-09-03` recorded in
+      CITATION.cff and CHANGELOG.md.
+- [ ] If the record was published with an earlier build of the ZIP, upload this
+      rebuilt archive as a **New version** — published files cannot be replaced
+      in place.
 
 ## B. Research integrity — verified in this package
 
