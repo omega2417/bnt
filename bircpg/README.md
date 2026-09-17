@@ -59,6 +59,17 @@ Consequently:
 | §7.4–7.5 | `metrics`, `study` | Endpoints with censoring, paired bootstrap over whole runs, Holm correction |
 | Figure 3 | `figures` | Regenerated from the code, with a CSV table view beside it |
 
+## Where this lives
+
+Source: <https://github.com/omega2417/bnt/tree/claude/publication-zenodo-project-w2iwa0/bircpg>
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/omega2417/bnt/blob/claude/publication-zenodo-project-w2iwa0/bircpg/notebooks/bircpg_colab.ipynb)
+
+The deposition archive is **not** committed — it is built from the sources with
+`python tools/make_archive.py`, which prints its SHA-256. That keeps the archive
+reproducible from any checkout rather than being a binary that can drift from
+the code.
+
 ## Install
 
 ```bash

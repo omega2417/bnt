@@ -18,7 +18,7 @@ abstract: >-
 type: software
 version: 1.0.0
 license: MIT
-repository-code: "REPLACE BEFORE DEPOSITION: public repository URL"
+repository-code: "https://github.com/omega2417/bnt/tree/claude/publication-zenodo-project-w2iwa0/bircpg"
 keywords:
   - potential games
   - computational game theory

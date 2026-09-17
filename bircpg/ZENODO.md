@@ -10,8 +10,12 @@ than leaving them visible.
    `.zenodo.json` (`creators`) and `CITATION.cff` (`authors`, `references`) with
    real names, affiliations and ORCIDs. The manuscript itself still carries
    `[Firstname Lastname]` placeholders, so none could be filled in here.
-2. **Repository URL.** Set `repository-code` in `CITATION.cff` once the code has
-   a public home.
+2. **Repository URL.** `repository-code` in `CITATION.cff` currently points at
+   the working branch,
+   `github.com/omega2417/bnt/tree/claude/publication-zenodo-project-w2iwa0/bircpg`.
+   Update it if the code moves to its own repository or to a merged default
+   branch — a branch URL can disappear, and a citation that rots is worse than
+   one that is obviously provisional.
 3. **Article identifier.** Once the article is assigned a DOI, put it in
    `.zenodo.json` under `related_identifiers` with relation `isSupplementTo`.
    Until then, leave it — Section 7.6 of the manuscript is explicit that a public
