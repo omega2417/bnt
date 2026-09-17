@@ -1,0 +1,6 @@
+# The bircpg core (Sections 4-6, Level I) needs nothing beyond the standard
+# library, by design: exact-arithmetic verification must not depend on a
+# numerical stack.  These are for the figures, the notebook and the tests.
+matplotlib>=3.5
+pandas>=1.3
+pytest>=7.0

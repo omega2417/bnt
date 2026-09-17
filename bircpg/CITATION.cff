@@ -1,0 +1,53 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software, please cite both the software and the
+  manuscript it implements.
+title: >-
+  bircpg: reference implementation of bio-inspired resource-constrained
+  potential games for adaptive coordination in autonomous multi-agent systems
+abstract: >-
+  Implements and verifies the formal model, equilibrium analysis and
+  prospective evaluation protocol of the manuscript "Bio-Inspired
+  Resource-Constrained Potential Games for Adaptive Coordination in
+  Autonomous Multi-Agent Systems". The Level I layer is exact: the
+  potential identity, the approximate-equilibrium certificate and the
+  stationary law are checked in rational arithmetic, and the constructed
+  two-agent example of Section 6 is reproduced exactly. No experiment
+  reported in the manuscript has been executed, and the package makes no
+  empirical performance claim.
+type: software
+version: 1.0.0
+license: MIT
+repository-code: "REPLACE BEFORE DEPOSITION: public repository URL"
+keywords:
+  - potential games
+  - computational game theory
+  - autonomous agents
+  - resource-constrained coordination
+  - bounded rationality
+  - stigmergy
+  - Nash equilibrium
+  - bio-inspired control
+authors:
+  # REPLACE BEFORE DEPOSITION. The manuscript carries placeholder authors;
+  # no name is invented here.
+  - family-names: "REPLACE-BEFORE-DEPOSITION"
+    given-names: "Author One"
+    affiliation: "Department, Institution, City, Country"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: "REPLACE-BEFORE-DEPOSITION"
+    given-names: "Author Two"
+    affiliation: "Department, Institution, City, Country"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+references:
+  - type: article
+    title: >-
+      Bio-Inspired Resource-Constrained Potential Games for Adaptive
+      Coordination in Autonomous Multi-Agent Systems
+    authors:
+      - family-names: "REPLACE-BEFORE-DEPOSITION"
+        given-names: "Author One"
+    status: submitted
+    notes: >-
+      Add the DOI, journal, volume and pages once the article is assigned
+      them. The manuscript itself asserts no DOI.

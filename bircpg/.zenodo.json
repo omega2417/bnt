@@ -1,0 +1,45 @@
+{
+  "upload_type": "software",
+  "title": "bircpg: reference implementation of bio-inspired resource-constrained potential games for adaptive coordination in autonomous multi-agent systems",
+  "version": "1.0.0",
+  "language": "eng",
+  "license": "mit",
+  "access_right": "open",
+  "creators": [
+    {
+      "name": "REPLACE BEFORE DEPOSITION, Author One",
+      "affiliation": "REPLACE BEFORE DEPOSITION: Department, Institution, City, Country",
+      "orcid": "0000-0000-0000-0000"
+    },
+    {
+      "name": "REPLACE BEFORE DEPOSITION, Author Two",
+      "affiliation": "REPLACE BEFORE DEPOSITION: Department, Institution, City, Country",
+      "orcid": "0000-0000-0000-0000"
+    }
+  ],
+  "description": "<p>Reference implementation of the formal model, equilibrium analysis and prospective evaluation protocol of the manuscript <em>Bio-Inspired Resource-Constrained Potential Games for Adaptive Coordination in Autonomous Multi-Agent Systems</em>.</p><p><strong>What this software does.</strong> It implements the finite frozen-context task-allocation game of Section 4 (feasible action sets under energy, computation, memory and latency caps; shared task rewards; congestion externalities; agent-specific separable costs), and verifies its stated results rather than assuming them: the exact-potential identity of Proposition 1 is checked on every feasible unilateral deviation in exact rational arithmetic; the approximate-equilibrium certificate of Proposition 2 and the uncertainty-gated update rule of Equation (8) are implemented with their error allowances explicit; and the stationary law of Proposition 3, together with the potential-loss bound of Corollary 2, is cross-checked against an independently constructed transition matrix via detailed balance. The constructed two-agent example of Section 6, Table 2 and Equation (15) are reproduced exactly, as is Figure 3. A synthetic Level II harness implements the environment generator, the six prespecified conditions, the baselines B1-B5 and the paired-bootstrap analysis plan.</p><p><strong>What this software does not do, and does not claim.</strong> No experiment reported in the manuscript has been executed. Level III (trained controllers, physical platforms, measured latency and energy) is not implemented. Synthetic task success is not robot validation and a modelled energy proxy is not a measured power saving. The package demonstrates no energy saving, no superior coordination and no robust real-world autonomy; those remain hypotheses until the corresponding evaluation is performed. The bundled demonstration study runs at a reduced scale and supports no confirmatory claim; the preregistered design of Section 7.2 is provided separately and must be run as specified before any such claim is made.</p><p>A Colab-ready notebook reproduces every exact result in a few minutes and runs a small Level II study.</p>",
+  "notes": "Deposition checklist: replace the placeholder creators, affiliations and ORCIDs; add the manuscript's DOI under related_identifiers once the article has one; and confirm the funding statement. The manuscript states that a public archive should receive a persistent identifier only after deposition, so no DOI is asserted in this record.",
+  "keywords": [
+    "potential games",
+    "computational game theory",
+    "autonomous agents",
+    "resource-constrained coordination",
+    "bounded rationality",
+    "stigmergy",
+    "Nash equilibrium",
+    "bio-inspired control",
+    "multi-robot task allocation",
+    "log-linear learning",
+    "price of anarchy",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "identifier": "REPLACE BEFORE DEPOSITION: DOI of the article once assigned",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    }
+  ],
+  "communities": []
+}
