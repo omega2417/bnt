@@ -1,0 +1,512 @@
+{
+  "source": "reference list of the accompanying article, transcribed verbatim",
+  "note": "Checked by evoproto.tools.verify_dois against CrossRef. Entries with doi=null are books, reports or web resources without a DOI; verify those by hand.",
+  "references": [
+    {
+      "key": "R1",
+      "number": 1,
+      "citation": "J.M. Benyus, Biomimicry: Innovation Inspired by Nature, William Morrow, New York, 1997.",
+      "title": "Biomimicry: Innovation Inspired by Nature",
+      "doi": null,
+      "flags": []
+    },
+    {
+      "key": "R2",
+      "number": 2,
+      "citation": "J.F.V. Vincent, O.A. Bogatyreva, N.R. Bogatyrev, A. Bowyer, A.-K. Pahl, Biomimetics: its practice and theory, J. R. Soc. Interface 3 (2006) 471–482.",
+      "title": "Biomimetics: its practice and theory",
+      "doi": "10.1098/rsif.2006.0127",
+      "flags": []
+    },
+    {
+      "key": "R3",
+      "number": 3,
+      "citation": "B. Bhushan, Biomimetics: lessons from nature – an overview, Philos. Trans. R. Soc. A 367 (2009) 1445–1486.",
+      "title": "Biomimetics: lessons from nature – an overview",
+      "doi": "10.1098/rsta.2009.0011",
+      "flags": []
+    },
+    {
+      "key": "R4",
+      "number": 4,
+      "citation": "N.F. Lepora, P. Verschure, T.J. Prescott, The state of the art in biomimetics, Bioinspir. Biomim. 8 (2013) 013001.",
+      "title": "The state of the art in biomimetics",
+      "doi": "10.1088/1748-3182/8/1/013001",
+      "flags": []
+    },
+    {
+      "key": "R5",
+      "number": 5,
+      "citation": "P.-E. Fayemi, K. Wanieck, C. Zollfrank, N. Maranzana, A. Aoussat, Biomimetics: process, tools and practice, Bioinspir. Biomim. 12 (2017) 011002.",
+      "title": "Bioinspir. Biomim. 12 (2017) 011002.",
+      "doi": "10.1088/1748-3190/12/1/011002",
+      "flags": []
+    },
+    {
+      "key": "R6",
+      "number": 6,
+      "citation": "Q. Zhu, X. Zhang, J. Luo, Biologically inspired design concept generation using generative pre-trained transformers, arXiv:2212.13196 (2022).",
+      "title": "Biologically inspired design concept generation using generative pre-trained transformers",
+      "doi": "10.48550/arXiv.2212.13196",
+      "flags": []
+    },
+    {
+      "key": "R7",
+      "number": 7,
+      "citation": "L. Makatura, M. Foshey, B. Wang, F. Hähnlein, P. Ma, B. Deng, M. Tjandrasuwita, A. Spielberg, C.E. Owens, P.Y. Chen, A. Zhao, A. Zhu, W.J. Norton, E. Gu, J. Jacob, Y. Li, A. Schulz, W. Matusik, How can large language models help humans in design and manufacturing?, arXiv:2307.14377 (2023).",
+      "title": "How can large language models help humans in design and manufacturing?",
+      "doi": "10.48550/arXiv.2307.14377",
+      "flags": []
+    },
+    {
+      "key": "R8",
+      "number": 8,
+      "citation": "L. Regenwetter, A.H. Nobari, F. Ahmed, Deep generative models in engineering design: a review, J. Mech. Des. 144 (2022) 071704.",
+      "title": "Deep generative models in engineering design: a review",
+      "doi": "10.1115/1.4053859",
+      "flags": []
+    },
+    {
+      "key": "R9",
+      "number": 9,
+      "citation": "A. Hogan, E. Blomqvist, M. Cochez, C. d’Amato, G. de Melo, C. Gutierrez, S. Kirrane, J.E. Labra Gayo, R. Navigli, S. Neumaier, A.-C. Ngonga Ngomo, A. Polleres, S.M. Rashid, A. Rula, L. Schmelzeisen, J. Sequeda, S. Staab, A. Zimmermann, Knowledge graphs, ACM Comput. Surv. 54 (2021) 71.",
+      "title": "ACM Comput. Surv. 54 (2021) 71.",
+      "doi": "10.1145/3447772",
+      "flags": []
+    },
+    {
+      "key": "R10",
+      "number": 10,
+      "citation": "S. Sarica, J. Luo, K.L. Wood, TechNet: technology semantic network based on patent data, Expert Syst. Appl. 142 (2020) 112995.",
+      "title": "TechNet: technology semantic network based on patent data",
+      "doi": "10.1016/j.eswa.2019.112995",
+      "flags": []
+    },
+    {
+      "key": "R11",
+      "number": 11,
+      "citation": "K. Deb, A. Pratap, S. Agarwal, T. Meyarivan, A fast and elitist multiobjective genetic algorithm: NSGA-II, IEEE Trans. Evol. Comput. 6 (2002) 182–197.",
+      "title": "A fast and elitist multiobjective genetic algorithm: NSGA-II",
+      "doi": "10.1109/4235.996017",
+      "flags": []
+    },
+    {
+      "key": "R12",
+      "number": 12,
+      "citation": "E. Zitzler, L. Thiele, Multiobjective evolutionary algorithms: a comparative case study and the strength Pareto approach, IEEE Trans. Evol. Comput. 3 (1999) 257–271.",
+      "title": "Multiobjective evolutionary algorithms: a comparative case study and the strength Pareto approach",
+      "doi": "10.1109/4235.797969",
+      "flags": []
+    },
+    {
+      "key": "R13",
+      "number": 13,
+      "citation": "M.T.M. Emmerich, A.H. Deutz, A tutorial on multiobjective optimization: fundamentals and evolutionary methods, Nat. Comput. 17 (2018) 585–609.",
+      "title": "A tutorial on multiobjective optimization: fundamentals and evolutionary methods",
+      "doi": "10.1007/s11047-018-9685-y",
+      "flags": []
+    },
+    {
+      "key": "R14",
+      "number": 14,
+      "citation": "J. Blank, K. Deb, pymoo: multi-objective optimization in Python, IEEE Access 8 (2020) 89497–89509.",
+      "title": "pymoo: multi-objective optimization in Python",
+      "doi": "10.1109/ACCESS.2020.2990567",
+      "flags": []
+    },
+    {
+      "key": "R15",
+      "number": 15,
+      "citation": "Z. Ji, N. Lee, R. Frieske, T. Yu, D. Su, Y. Xu, E. Ishii, Y.J. Bang, A. Madotto, P. Fung, Survey of hallucination in natural language generation, ACM Comput. Surv. 55 (2023) 248.",
+      "title": "Survey of hallucination in natural language generation",
+      "doi": "10.1145/3571730",
+      "flags": []
+    },
+    {
+      "key": "R16",
+      "number": 16,
+      "citation": "S.J. Gould, R.C. Lewontin, The spandrels of San Marco and the Panglossian paradigm: a critique of the adaptationist programme, Proc. R. Soc. Lond. B 205 (1979) 581–598.",
+      "title": "The spandrels of San Marco and the Panglossian paradigm: a critique of the adaptationist programme",
+      "doi": "10.1098/rspb.1979.0086",
+      "flags": []
+    },
+    {
+      "key": "R17",
+      "number": 17,
+      "citation": "S.J. Gould, E.S. Vrba, Exaptation – a missing term in the science of form, Paleobiology 8 (1982) 4–15.",
+      "title": "Exaptation – a missing term in the science of form",
+      "doi": "10.1017/S0094837300004310",
+      "flags": []
+    },
+    {
+      "key": "R18",
+      "number": 18,
+      "citation": "J. Pearl, Causality: Models, Reasoning, and Inference, second ed., Cambridge University Press, Cambridge, 2009.",
+      "title": "Causality: Models, Reasoning, and Inference",
+      "doi": "10.1017/CBO9780511803161",
+      "flags": []
+    },
+    {
+      "key": "R19",
+      "number": 19,
+      "citation": "J. Peters, D. Janzing, B. Schölkopf, Elements of Causal Inference: Foundations and Learning Algorithms, MIT Press, Cambridge, MA, 2017.",
+      "title": "Elements of Causal Inference: Foundations and Learning Algorithms",
+      "doi": null,
+      "flags": []
+    },
+    {
+      "key": "R20",
+      "number": 20,
+      "citation": "M. Helms, S.S. Vattam, A.K. Goel, Biologically inspired design: process and products, Des. Stud. 30 (2009) 606–622.",
+      "title": "Biologically inspired design: process and products",
+      "doi": "10.1016/j.destud.2009.04.003",
+      "flags": []
+    },
+    {
+      "key": "R21",
+      "number": 21,
+      "citation": "A. Chakrabarti, P. Sarkar, B. Leelavathamma, B.S. Nataraju, A functional representation for aiding biomimetic and artificial inspiration of new ideas, Artif. Intell. Eng. Des. Anal. Manuf. 19 (2005) 113–132.",
+      "title": "A functional representation for aiding biomimetic and artificial inspiration of new ideas",
+      "doi": "10.1017/S0890060405050109",
+      "flags": []
+    },
+    {
+      "key": "R22",
+      "number": 22,
+      "citation": "A.K. Goel, S. Vattam, B. Wiltgen, M. Helms, Cognitive, collaborative, conceptual and creative – four characteristics of the next generation of knowledge-based CAD systems: a study in biologically inspired design, Comput.-Aided Des. 44 (2012) 879–900.",
+      "title": "conceptual and creative – four characteristics of the next generation of knowledge-based CAD systems: a study in biologically inspired design",
+      "doi": "10.1016/j.cad.2011.03.010",
+      "flags": []
+    },
+    {
+      "key": "R23",
+      "number": 23,
+      "citation": "L.H. Shu, K. Ueda, I. Chiu, H. Cheong, Biologically inspired design, CIRP Ann. 60 (2011) 673–693.",
+      "title": "CIRP Ann. 60 (2011) 673–693.",
+      "doi": "10.1016/j.cirp.2011.06.001",
+      "flags": []
+    },
+    {
+      "key": "R24",
+      "number": 24,
+      "citation": "J.K.S. Nagel, R.B. Stone, D.A. McAdams, An engineering-to-biology thesaurus for engineering design, in: Proc. ASME IDETC/CIE 2010, Montreal, 2010, DETC2010-28233.",
+      "title": "An engineering-to-biology thesaurus for engineering design",
+      "doi": "10.1115/DETC2010-28233",
+      "flags": [
+        "VERIFY DOI (flagged in the manuscript)"
+      ]
+    },
+    {
+      "key": "R25",
+      "number": 25,
+      "citation": "J.B. Losos, Convergence, adaptation, and constraint, Evolution 65 (2011) 1827–1840.",
+      "title": "Evolution 65 (2011) 1827–1840.",
+      "doi": "10.1111/j.1558-5646.2011.01289.x",
+      "flags": []
+    },
+    {
+      "key": "R26",
+      "number": 26,
+      "citation": "D.B. Wake, M.H. Wake, C.D. Specht, Homoplasy: from detecting pattern to determining process and mechanism of evolution, Science 331 (2011) 1032–1035.",
+      "title": "Homoplasy: from detecting pattern to determining process and mechanism of evolution",
+      "doi": "10.1126/science.1188545",
+      "flags": []
+    },
+    {
+      "key": "R27",
+      "number": 27,
+      "citation": "C.T. Stayton, The definition, recognition, and interpretation of convergent evolution, and two new measures for quantifying and assessing the significance of convergence, Evolution 69 (2015) 2140–2153.",
+      "title": "and two new measures for quantifying and assessing the significance of convergence",
+      "doi": "10.1111/evo.12729",
+      "flags": []
+    },
+    {
+      "key": "R28",
+      "number": 28,
+      "citation": "K. Arbuckle, C.M. Bennett, M.P. Speed, A simple measure of the strength of convergent evolution, Methods Ecol. Evol. 5 (2014) 685–693.",
+      "title": "A simple measure of the strength of convergent evolution",
+      "doi": "10.1111/2041-210X.12195",
+      "flags": []
+    },
+    {
+      "key": "R29",
+      "number": 29,
+      "citation": "P.C. Wainwright, M.E. Alfaro, D.I. Bolnick, C.D. Hulsey, Many-to-one mapping of form to function: a general principle in organismal design?, Integr. Comp. Biol. 45 (2005) 256–262.",
+      "title": "Many-to-one mapping of form to function: a general principle in organismal design?",
+      "doi": "10.1093/icb/45.2.256",
+      "flags": []
+    },
+    {
+      "key": "R30",
+      "number": 30,
+      "citation": "P.C. Wainwright, Functional versus morphological diversity in macroevolution, Annu. Rev. Ecol. Evol. Syst. 38 (2007) 381–401.",
+      "title": "Functional versus morphological diversity in macroevolution",
+      "doi": "10.1146/annurev.ecolsys.38.091206.095706",
+      "flags": []
+    },
+    {
+      "key": "R31",
+      "number": 31,
+      "citation": "J. Felsenstein, Phylogenies and the comparative method, Am. Nat. 125 (1985) 1–15.",
+      "title": "Phylogenies and the comparative method",
+      "doi": "10.1086/284325",
+      "flags": []
+    },
+    {
+      "key": "R32",
+      "number": 32,
+      "citation": "M. Pagel, Inferring the historical patterns of biological evolution, Nature 401 (1999) 877–884.",
+      "title": "Inferring the historical patterns of biological evolution",
+      "doi": "10.1038/44766",
+      "flags": []
+    },
+    {
+      "key": "R33",
+      "number": 33,
+      "citation": "R.P. Freckleton, P.H. Harvey, M. Pagel, Phylogenetic analysis and comparative data: a test and review of evidence, Am. Nat. 160 (2002) 712–726.",
+      "title": "Phylogenetic analysis and comparative data: a test and review of evidence",
+      "doi": "10.1086/343873",
+      "flags": []
+    },
+    {
+      "key": "R34",
+      "number": 34,
+      "citation": "S.P. Blomberg, T. Garland Jr., A.R. Ives, Testing for phylogenetic signal in comparative data: behavioral traits are more labile, Evolution 57 (2003) 717–745.",
+      "title": "Testing for phylogenetic signal in comparative data: behavioral traits are more labile",
+      "doi": "10.1111/j.0014-3820.2003.tb00285.x",
+      "flags": []
+    },
+    {
+      "key": "R35",
+      "number": 35,
+      "citation": "E. Paradis, J. Claude, K. Strimmer, APE: analyses of phylogenetics and evolution in R language, Bioinformatics 20 (2004) 289–290.",
+      "title": "APE: analyses of phylogenetics and evolution in R language",
+      "doi": "10.1093/bioinformatics/btg412",
+      "flags": []
+    },
+    {
+      "key": "R36",
+      "number": 36,
+      "citation": "L.J. Revell, phytools: an R package for phylogenetic comparative biology (and other things), Methods Ecol. Evol. 3 (2012) 217–223.",
+      "title": "phytools: an R package for phylogenetic comparative biology (and other things)",
+      "doi": "10.1111/j.2041-210X.2011.00169.x",
+      "flags": []
+    },
+    {
+      "key": "R37",
+      "number": 37,
+      "citation": "Z.D. Blount, R.E. Lenski, J.B. Losos, Contingency and determinism in evolution: replaying life’s tape, Science 362 (2018) eaam5979.",
+      "title": "Contingency and determinism in evolution: replaying life’s tape",
+      "doi": "10.1126/science.aam5979",
+      "flags": []
+    },
+    {
+      "key": "R38",
+      "number": 38,
+      "citation": "J. Luo, S. Sarica, K.L. Wood, Guiding data-driven design ideation by knowledge distance, Knowl.-Based Syst. 218 (2021) 106873.",
+      "title": "Guiding data-driven design ideation by knowledge distance",
+      "doi": "10.1016/j.knosys.2021.106873",
+      "flags": []
+    },
+    {
+      "key": "R39",
+      "number": 39,
+      "citation": "P. Lewis, E. Perez, A. Piktus, F. Petroni, V. Karpukhin, N. Goyal, H. Küttler, M. Lewis, W. Yih, T. Rocktäschel, S. Riedel, D. Kiela, Retrieval-augmented generation for knowledge-intensive NLP tasks, in: Adv. Neural Inf. Process. Syst. 33 (NeurIPS 2020), 2020, arXiv:2005.11401.",
+      "title": "Retrieval-augmented generation for knowledge-intensive NLP tasks",
+      "doi": "10.48550/arXiv.2005.11401",
+      "flags": []
+    },
+    {
+      "key": "R40",
+      "number": 40,
+      "citation": "S. Krish, A practical generative design method, Comput.-Aided Des. 43 (2011) 88–100.",
+      "title": "A practical generative design method",
+      "doi": "10.1016/j.cad.2010.09.009",
+      "flags": []
+    },
+    {
+      "key": "R41",
+      "number": 41,
+      "citation": "M.P. Bendsøe, N. Kikuchi, Generating optimal topologies in structural design using a homogenization method, Comput. Methods Appl. Mech. Eng. 71 (1988) 197–224.",
+      "title": "Generating optimal topologies in structural design using a homogenization method",
+      "doi": "10.1016/0045-7825(88)90086-2",
+      "flags": []
+    },
+    {
+      "key": "R42",
+      "number": 42,
+      "citation": "O. Sigmund, A 99 line topology optimization code written in Matlab, Struct. Multidiscip. Optim. 21 (2001) 120–127.",
+      "title": "A 99 line topology optimization code written in Matlab",
+      "doi": "10.1007/s001580050176",
+      "flags": []
+    },
+    {
+      "key": "R43",
+      "number": 43,
+      "citation": "L.J. Gibson, M.F. Ashby, Cellular Solids: Structure and Properties, second ed., Cambridge University Press, Cambridge, 1997.",
+      "title": "Cellular Solids: Structure and Properties",
+      "doi": "10.1017/CBO9781139878326",
+      "flags": []
+    },
+    {
+      "key": "R44",
+      "number": 44,
+      "citation": "M.F. Ashby, Materials Selection in Mechanical Design, fourth ed., Butterworth-Heinemann, Oxford, 2011.",
+      "title": "Materials Selection in Mechanical Design",
+      "doi": null,
+      "flags": []
+    },
+    {
+      "key": "R45",
+      "number": 45,
+      "citation": "A. du Plessis, C. Broeckhoven, I. Yadroitsava, I. Yadroitsev, C.H. Hands, R. Kunju, D. Bhate, Beautiful and functional: a review of biomimetic design in additive manufacturing, Addit. Manuf. 27 (2019) 408–427.",
+      "title": "Beautiful and functional: a review of biomimetic design in additive manufacturing",
+      "doi": "10.1016/j.addma.2019.03.033",
+      "flags": []
+    },
+    {
+      "key": "R46",
+      "number": 46,
+      "citation": "J. Plocher, A. Panesar, Review on design and structural optimisation in additive manufacturing: towards next-generation lightweight structures, Mater. Des. 183 (2019) 108164.",
+      "title": "Review on design and structural optimisation in additive manufacturing: towards next-generation lightweight structures",
+      "doi": "10.1016/j.matdes.2019.108164",
+      "flags": []
+    },
+    {
+      "key": "R47",
+      "number": 47,
+      "citation": "I. Gibson, D. Rosen, B. Stucker, M. Khorasani, Additive Manufacturing Technologies, third ed., Springer, Cham, 2021.",
+      "title": "Additive Manufacturing Technologies",
+      "doi": "10.1007/978-3-030-56127-7",
+      "flags": []
+    },
+    {
+      "key": "R48",
+      "number": 48,
+      "citation": "C.E. Hinchliff, S.A. Smith, J.F. Allman, J.G. Burleigh, R. Chaudhary, L.M. Coghill, K.A. Crandall, J. Deng, B.T. Drew, R. Gazis, K. Gude, D.S. Hibbett, L.A. Katz, H.D. Laughinghouse, E.J. McTavish, P.E. Midford, C.L. Owen, R.H. Ree, J.A. Rees, D.E. Soltis, T. Williams, K.A. Cranston, Synthesis of phylogeny and taxonomy into a comprehensive tree of life, Proc. Natl. Acad. Sci. U.S.A. 112 (2015) 12764–12769.",
+      "title": "Synthesis of phylogeny and taxonomy into a comprehensive tree of life",
+      "doi": "10.1073/pnas.1423041112",
+      "flags": []
+    },
+    {
+      "key": "R49",
+      "number": 49,
+      "citation": "Open Tree of Life Project, Open Tree of Life – documentation and APIs, https://opentreeoflife.github.io/ (accessed 18 September 2026).",
+      "title": "https://opentreeoflife.github.io/ (accessed 18 September 2026).",
+      "doi": null,
+      "flags": []
+    },
+    {
+      "key": "R50",
+      "number": 50,
+      "citation": "M.A. O’Leary, S. Kaufman, MorphoBank: phylophenomics in the “cloud”, Cladistics 27 (2011) 529–537.",
+      "title": "MorphoBank: phylophenomics in the “cloud”",
+      "doi": "10.1111/j.1096-0031.2011.00355.x",
+      "flags": []
+    },
+    {
+      "key": "R51",
+      "number": 51,
+      "citation": "Phoenix Bioinformatics, MorphoBank, https://phoenixbioinfo.org/morphobank/ (accessed 18 September 2026).",
+      "title": "https://phoenixbioinfo.org/morphobank/ (accessed 18 September 2026).",
+      "doi": null,
+      "flags": []
+    },
+    {
+      "key": "R52",
+      "number": 52,
+      "citation": "S.E. Peters, M. McClennen, The Paleobiology Database application programming interface, Paleobiology 42 (2016) 1–7.",
+      "title": "The Paleobiology Database application programming interface",
+      "doi": "10.1017/pab.2015.39",
+      "flags": []
+    },
+    {
+      "key": "R53",
+      "number": 53,
+      "citation": "The Paleobiology Database, https://paleobiodb.org/ (accessed 18 September 2026).",
+      "title": "https://paleobiodb.org/ (accessed 18 September 2026).",
+      "doi": null,
+      "flags": []
+    },
+    {
+      "key": "R54",
+      "number": 54,
+      "citation": "M.D. Wilkinson, M. Dumontier, I.J. Aalbersberg, et al., The FAIR Guiding Principles for scientific data management and stewardship, Sci. Data 3 (2016) 160018.",
+      "title": "The FAIR Guiding Principles for scientific data management and stewardship",
+      "doi": "10.1038/sdata.2016.18",
+      "flags": []
+    },
+    {
+      "key": "R55",
+      "number": 55,
+      "citation": "T. Gebru, J. Morgenstern, B. Vecchione, J.W. Vaughan, H. Wallach, H. Daumé III, K. Crawford, Datasheets for datasets, Commun. ACM 64 (2021) 86–92.",
+      "title": "Commun. ACM 64 (2021) 86–92.",
+      "doi": "10.1145/3458723",
+      "flags": []
+    },
+    {
+      "key": "R56",
+      "number": 56,
+      "citation": "M. Mitchell, S. Wu, A. Zaldivar, P. Barnes, L. Vasserman, B. Hutchinson, E. Spitzer, I.D. Raji, T. Gebru, Model cards for model reporting, in: Proc. Conf. Fairness, Accountability, and Transparency (FAT* ’19), ACM, 2019, pp. 220–229.",
+      "title": "Model cards for model reporting",
+      "doi": "10.1145/3287560.3287596",
+      "flags": []
+    },
+    {
+      "key": "R57",
+      "number": 57,
+      "citation": "S. Vogel, Comparative Biomechanics: Life’s Physical World, second ed., Princeton University Press, Princeton, 2013.",
+      "title": "Comparative Biomechanics: Life’s Physical World",
+      "doi": null,
+      "flags": []
+    },
+    {
+      "key": "R58",
+      "number": 58,
+      "citation": "E. Buckingham, On physically similar systems; illustrations of the use of dimensional equations, Phys. Rev. 4 (1914) 345–376.",
+      "title": "On physically similar systems; illustrations of the use of dimensional equations",
+      "doi": "10.1103/PhysRev.4.345",
+      "flags": []
+    },
+    {
+      "key": "R59",
+      "number": 59,
+      "citation": "M. LaBarbera, Analyzing body size as a factor in ecology and evolution, Annu. Rev. Ecol. Syst. 20 (1989) 97–117.",
+      "title": "Analyzing body size as a factor in ecology and evolution",
+      "doi": "10.1146/annurev.es.20.110189.000525",
+      "flags": []
+    },
+    {
+      "key": "R60",
+      "number": 60,
+      "citation": "F. Wilcoxon, Individual comparisons by ranking methods, Biometrics Bull. 1 (1945) 80–83.",
+      "title": "Individual comparisons by ranking methods",
+      "doi": "10.2307/3001968",
+      "flags": []
+    },
+    {
+      "key": "R61",
+      "number": 61,
+      "citation": "S. Holm, A simple sequentially rejective multiple test procedure, Scand. J. Stat. 6 (1979) 65–70.",
+      "title": "A simple sequentially rejective multiple test procedure",
+      "doi": null,
+      "flags": []
+    },
+    {
+      "key": "R62",
+      "number": 62,
+      "citation": "N. Cliff, Dominance statistics: ordinal analyses to answer ordinal questions, Psychol. Bull. 114 (1993) 494–509.",
+      "title": "Dominance statistics: ordinal analyses to answer ordinal questions",
+      "doi": "10.1037/0033-2909.114.3.494",
+      "flags": []
+    },
+    {
+      "key": "R63",
+      "number": 63,
+      "citation": "B. Efron, Bootstrap methods: another look at the jackknife, Ann. Stat. 7 (1979) 1–26.",
+      "title": "Bootstrap methods: another look at the jackknife",
+      "doi": "10.1214/aos/1176344552",
+      "flags": []
+    }
+  ]
+}

@@ -1,0 +1,5283 @@
+{
+  "cells": [
+    {
+      "arm": "A",
+      "log": [
+        {
+          "best_mass": 0.21475183726850397,
+          "evaluations": 4,
+          "feasible_fraction": 0.0,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.19975798583088344,
+          "evaluations": 8,
+          "feasible_fraction": 0.0,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.18916092221236142,
+          "evaluations": 12,
+          "feasible_fraction": 0.0,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.17996554102141085,
+          "evaluations": 16,
+          "feasible_fraction": 0.0,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.16851330668911516,
+          "evaluations": 20,
+          "feasible_fraction": 0.0,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.16239479472132762,
+          "evaluations": 24,
+          "feasible_fraction": 0.0,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.1551545862980881,
+          "evaluations": 28,
+          "feasible_fraction": 0.0,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.1508402686573795,
+          "evaluations": 32,
+          "feasible_fraction": 0.0,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.13733171344359535,
+          "evaluations": 36,
+          "feasible_fraction": 0.0,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.1245344787206863,
+          "evaluations": 40,
+          "feasible_fraction": 0.0,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.10997474076515805,
+          "evaluations": 44,
+          "feasible_fraction": 0.0,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.11626232358991792,
+          "evaluations": 48,
+          "feasible_fraction": 0.25,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.10774335028175237,
+          "evaluations": 52,
+          "feasible_fraction": 0.0,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.12662462336196997,
+          "evaluations": 56,
+          "feasible_fraction": 0.0,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.1179678470654677,
+          "evaluations": 60,
+          "feasible_fraction": 0.25,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.10100375425899598,
+          "evaluations": 64,
+          "feasible_fraction": 0.25,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.09064803279980357,
+          "evaluations": 68,
+          "feasible_fraction": 0.25,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.0828952174173913,
+          "evaluations": 72,
+          "feasible_fraction": 0.25,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.07518371662092227,
+          "evaluations": 76,
+          "feasible_fraction": 0.25,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.06850563024782719,
+          "evaluations": 80,
+          "feasible_fraction": 0.25,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.06410149778937137,
+          "evaluations": 84,
+          "feasible_fraction": 0.25,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.06011642116285816,
+          "evaluations": 88,
+          "feasible_fraction": 0.25,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.05773181007298395,
+          "evaluations": 92,
+          "feasible_fraction": 0.25,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.05398258367600988,
+          "evaluations": 96,
+          "feasible_fraction": 0.25,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.05139718834700751,
+          "evaluations": 100,
+          "feasible_fraction": 0.25,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.0,
+        "FSR": 0.25,
+        "HV": 0.020411663840053895,
+        "ITS": 12.0,
+        "evaluations": 100.0,
+        "n_pareto": 1.0
+      },
+      "replicate": 0,
+      "seed": 2555887614,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "A",
+      "log": [
+        {
+          "best_mass": 0.22799362463824127,
+          "evaluations": 4,
+          "feasible_fraction": 0.0,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.21262029287265446,
+          "evaluations": 8,
+          "feasible_fraction": 0.0,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.1929337037852844,
+          "evaluations": 12,
+          "feasible_fraction": 0.0,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.18372146510346404,
+          "evaluations": 16,
+          "feasible_fraction": 0.0,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.16730240064534077,
+          "evaluations": 20,
+          "feasible_fraction": 0.0,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.1564975441488415,
+          "evaluations": 24,
+          "feasible_fraction": 0.0,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.1529325999884656,
+          "evaluations": 28,
+          "feasible_fraction": 0.0,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.14580064909558854,
+          "evaluations": 32,
+          "feasible_fraction": 0.0,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.13990942167377324,
+          "evaluations": 36,
+          "feasible_fraction": 0.0,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.13427328948460834,
+          "evaluations": 40,
+          "feasible_fraction": 0.0,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.12746160960335584,
+          "evaluations": 44,
+          "feasible_fraction": 0.0,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.12191288968840808,
+          "evaluations": 48,
+          "feasible_fraction": 0.0,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.11696651596110227,
+          "evaluations": 52,
+          "feasible_fraction": 0.25,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.11250469866421667,
+          "evaluations": 56,
+          "feasible_fraction": 0.25,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.11118346226195124,
+          "evaluations": 60,
+          "feasible_fraction": 0.25,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.11118346226195124,
+          "evaluations": 64,
+          "feasible_fraction": 0.25,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.11118346226195124,
+          "evaluations": 68,
+          "feasible_fraction": 0.25,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.11118346226195124,
+          "evaluations": 72,
+          "feasible_fraction": 0.5,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.10504000525987713,
+          "evaluations": 76,
+          "feasible_fraction": 0.5,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.09712443538102873,
+          "evaluations": 80,
+          "feasible_fraction": 0.5,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.09324745022642683,
+          "evaluations": 84,
+          "feasible_fraction": 0.5,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.09065577742146123,
+          "evaluations": 88,
+          "feasible_fraction": 0.5,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.0888149537661347,
+          "evaluations": 92,
+          "feasible_fraction": 0.5,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.0888149537661347,
+          "evaluations": 96,
+          "feasible_fraction": 0.5,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.0888149537661347,
+          "evaluations": 100,
+          "feasible_fraction": 0.5,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.09750963143712027,
+        "FSR": 0.5,
+        "HV": 0.1698489570614987,
+        "ITS": 13.0,
+        "evaluations": 100.0,
+        "n_pareto": 2.0
+      },
+      "replicate": 1,
+      "seed": 615407463,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "A",
+      "log": [
+        {
+          "best_mass": 0.12720416580303967,
+          "evaluations": 4,
+          "feasible_fraction": 0.0,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.1226680395777269,
+          "evaluations": 8,
+          "feasible_fraction": 0.0,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.12005590924999766,
+          "evaluations": 12,
+          "feasible_fraction": 0.0,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.11686911928684376,
+          "evaluations": 16,
+          "feasible_fraction": 0.25,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.11537129540333413,
+          "evaluations": 20,
+          "feasible_fraction": 0.25,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.11377871686924876,
+          "evaluations": 24,
+          "feasible_fraction": 0.25,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.11212454677004632,
+          "evaluations": 28,
+          "feasible_fraction": 0.25,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.11034555048934391,
+          "evaluations": 32,
+          "feasible_fraction": 0.25,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.10972277948150176,
+          "evaluations": 36,
+          "feasible_fraction": 0.25,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.10972277948150176,
+          "evaluations": 40,
+          "feasible_fraction": 0.25,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.10972277948150176,
+          "evaluations": 44,
+          "feasible_fraction": 0.25,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.10972277948150176,
+          "evaluations": 48,
+          "feasible_fraction": 0.25,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.10972277948150176,
+          "evaluations": 52,
+          "feasible_fraction": 0.5,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.10972277948150176,
+          "evaluations": 56,
+          "feasible_fraction": 0.5,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.10678824716795383,
+          "evaluations": 60,
+          "feasible_fraction": 0.5,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.10401850469887386,
+          "evaluations": 64,
+          "feasible_fraction": 0.5,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.10027365666912534,
+          "evaluations": 68,
+          "feasible_fraction": 0.5,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.0960128414476473,
+          "evaluations": 72,
+          "feasible_fraction": 0.5,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.09406715094838788,
+          "evaluations": 76,
+          "feasible_fraction": 0.5,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.09111531417894143,
+          "evaluations": 80,
+          "feasible_fraction": 0.5,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.08867034423739657,
+          "evaluations": 84,
+          "feasible_fraction": 0.5,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.08867034423739657,
+          "evaluations": 88,
+          "feasible_fraction": 0.5,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.08867034423739657,
+          "evaluations": 92,
+          "feasible_fraction": 0.5,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.08867034423739657,
+          "evaluations": 96,
+          "feasible_fraction": 0.5,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.08867034423739657,
+          "evaluations": 100,
+          "feasible_fraction": 0.5,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.10702778008055026,
+        "FSR": 0.5,
+        "HV": 0.116963375528816,
+        "ITS": 4.0,
+        "evaluations": 100.0,
+        "n_pareto": 2.0
+      },
+      "replicate": 2,
+      "seed": 284334516,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "A",
+      "log": [
+        {
+          "best_mass": 0.23858749122977366,
+          "evaluations": 4,
+          "feasible_fraction": 0.0,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.23187996793358678,
+          "evaluations": 8,
+          "feasible_fraction": 0.0,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.21357934365016348,
+          "evaluations": 12,
+          "feasible_fraction": 0.0,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.1954745782159803,
+          "evaluations": 16,
+          "feasible_fraction": 0.0,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.18102620176527792,
+          "evaluations": 20,
+          "feasible_fraction": 0.0,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.1663678431181278,
+          "evaluations": 24,
+          "feasible_fraction": 0.0,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.14971817560533882,
+          "evaluations": 28,
+          "feasible_fraction": 0.0,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.1378670875362587,
+          "evaluations": 32,
+          "feasible_fraction": 0.0,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.12818565933844905,
+          "evaluations": 36,
+          "feasible_fraction": 0.0,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.11615633882974552,
+          "evaluations": 40,
+          "feasible_fraction": 0.25,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.10759970751880904,
+          "evaluations": 44,
+          "feasible_fraction": 0.25,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.10011003878279026,
+          "evaluations": 48,
+          "feasible_fraction": 0.5,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.09289154050315059,
+          "evaluations": 52,
+          "feasible_fraction": 0.5,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.09063575833139735,
+          "evaluations": 56,
+          "feasible_fraction": 0.5,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.08634794119344917,
+          "evaluations": 60,
+          "feasible_fraction": 0.5,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.08251444938768085,
+          "evaluations": 64,
+          "feasible_fraction": 0.5,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.0770571520450821,
+          "evaluations": 68,
+          "feasible_fraction": 0.5,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.07148999122161519,
+          "evaluations": 72,
+          "feasible_fraction": 0.5,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.06872512972004047,
+          "evaluations": 76,
+          "feasible_fraction": 0.5,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.0685807813132165,
+          "evaluations": 80,
+          "feasible_fraction": 0.5,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.0685807813132165,
+          "evaluations": 84,
+          "feasible_fraction": 0.5,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.0685807813132165,
+          "evaluations": 88,
+          "feasible_fraction": 0.5,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.06853059864169504,
+          "evaluations": 92,
+          "feasible_fraction": 0.5,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.06853059864169504,
+          "evaluations": 96,
+          "feasible_fraction": 0.5,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.06853059864169504,
+          "evaluations": 100,
+          "feasible_fraction": 0.5,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.09983981658040675,
+        "FSR": 0.5,
+        "HV": 0.19071092069579176,
+        "ITS": 10.0,
+        "evaluations": 100.0,
+        "n_pareto": 2.0
+      },
+      "replicate": 3,
+      "seed": 1374745028,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "A",
+      "log": [
+        {
+          "best_mass": 0.3226734360576744,
+          "evaluations": 4,
+          "feasible_fraction": 0.0,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.2933104268392785,
+          "evaluations": 8,
+          "feasible_fraction": 0.0,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.27604758124145995,
+          "evaluations": 12,
+          "feasible_fraction": 0.0,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.23889327378229527,
+          "evaluations": 16,
+          "feasible_fraction": 0.0,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.22406201597208986,
+          "evaluations": 20,
+          "feasible_fraction": 0.0,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.21321938265066967,
+          "evaluations": 24,
+          "feasible_fraction": 0.0,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.19518098978155252,
+          "evaluations": 28,
+          "feasible_fraction": 0.0,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.17819554788866163,
+          "evaluations": 32,
+          "feasible_fraction": 0.0,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.16309092748463025,
+          "evaluations": 36,
+          "feasible_fraction": 0.0,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.1504452284461766,
+          "evaluations": 40,
+          "feasible_fraction": 0.0,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.13638891436913855,
+          "evaluations": 44,
+          "feasible_fraction": 0.0,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.12721526925494137,
+          "evaluations": 48,
+          "feasible_fraction": 0.0,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.11831433294574828,
+          "evaluations": 52,
+          "feasible_fraction": 0.25,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.11176143729713138,
+          "evaluations": 56,
+          "feasible_fraction": 0.25,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.10647373656889678,
+          "evaluations": 60,
+          "feasible_fraction": 0.25,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.10127425389761587,
+          "evaluations": 64,
+          "feasible_fraction": 0.25,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.09941012022385544,
+          "evaluations": 68,
+          "feasible_fraction": 0.25,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.09941012022385544,
+          "evaluations": 72,
+          "feasible_fraction": 0.25,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.09941012022385544,
+          "evaluations": 76,
+          "feasible_fraction": 0.25,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.09941012022385544,
+          "evaluations": 80,
+          "feasible_fraction": 0.25,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.09941012022385544,
+          "evaluations": 84,
+          "feasible_fraction": 0.25,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.09941012022385544,
+          "evaluations": 88,
+          "feasible_fraction": 0.25,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.09941012022385544,
+          "evaluations": 92,
+          "feasible_fraction": 0.25,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.09941012022385544,
+          "evaluations": 96,
+          "feasible_fraction": 0.25,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.09941012022385544,
+          "evaluations": 100,
+          "feasible_fraction": 0.25,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.0,
+        "FSR": 0.25,
+        "HV": 0.12384571509993379,
+        "ITS": 13.0,
+        "evaluations": 100.0,
+        "n_pareto": 1.0
+      },
+      "replicate": 4,
+      "seed": 408840531,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "A",
+      "log": [
+        {
+          "best_mass": 0.27588500521268255,
+          "evaluations": 4,
+          "feasible_fraction": 0.0,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.2587947299762937,
+          "evaluations": 8,
+          "feasible_fraction": 0.0,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.23845054451997935,
+          "evaluations": 12,
+          "feasible_fraction": 0.0,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.2240757147405329,
+          "evaluations": 16,
+          "feasible_fraction": 0.0,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.21562972076773165,
+          "evaluations": 20,
+          "feasible_fraction": 0.0,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.2033632832961633,
+          "evaluations": 24,
+          "feasible_fraction": 0.0,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.1952464455798241,
+          "evaluations": 28,
+          "feasible_fraction": 0.0,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.1880786063714378,
+          "evaluations": 32,
+          "feasible_fraction": 0.0,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.18306969689356636,
+          "evaluations": 36,
+          "feasible_fraction": 0.0,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.1780261594892588,
+          "evaluations": 40,
+          "feasible_fraction": 0.0,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.17250883434239478,
+          "evaluations": 44,
+          "feasible_fraction": 0.0,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.16777753764997083,
+          "evaluations": 48,
+          "feasible_fraction": 0.0,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.16157406143680245,
+          "evaluations": 52,
+          "feasible_fraction": 0.0,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.1535279688315123,
+          "evaluations": 56,
+          "feasible_fraction": 0.0,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.1480426151861306,
+          "evaluations": 60,
+          "feasible_fraction": 0.0,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.14037878832743184,
+          "evaluations": 64,
+          "feasible_fraction": 0.0,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.1355251676018153,
+          "evaluations": 68,
+          "feasible_fraction": 0.0,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.13258089008805893,
+          "evaluations": 72,
+          "feasible_fraction": 0.0,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.1299562242566976,
+          "evaluations": 76,
+          "feasible_fraction": 0.0,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.12872579516316052,
+          "evaluations": 80,
+          "feasible_fraction": 0.0,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.12872579516316052,
+          "evaluations": 84,
+          "feasible_fraction": 0.0,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.12872579516316052,
+          "evaluations": 88,
+          "feasible_fraction": 0.0,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.12872579516316052,
+          "evaluations": 92,
+          "feasible_fraction": 0.0,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.12872579516316052,
+          "evaluations": 96,
+          "feasible_fraction": 0.0,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.12872579516316052,
+          "evaluations": 100,
+          "feasible_fraction": 0.0,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.0,
+        "FSR": 0.0,
+        "HV": 0.0,
+        "ITS": 25.0,
+        "evaluations": 100.0,
+        "n_pareto": 0.0
+      },
+      "replicate": 5,
+      "seed": 509857801,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "A",
+      "log": [
+        {
+          "best_mass": 0.1524316445266824,
+          "evaluations": 4,
+          "feasible_fraction": 0.0,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.14777576613664117,
+          "evaluations": 8,
+          "feasible_fraction": 0.0,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.14332258364793382,
+          "evaluations": 12,
+          "feasible_fraction": 0.0,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.14068702256606114,
+          "evaluations": 16,
+          "feasible_fraction": 0.0,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.13821079010274775,
+          "evaluations": 20,
+          "feasible_fraction": 0.0,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.1372304733412883,
+          "evaluations": 24,
+          "feasible_fraction": 0.0,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.13511783623846133,
+          "evaluations": 28,
+          "feasible_fraction": 0.0,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.13345454717615818,
+          "evaluations": 32,
+          "feasible_fraction": 0.0,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.1315370415118029,
+          "evaluations": 36,
+          "feasible_fraction": 0.0,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.13083455668747845,
+          "evaluations": 40,
+          "feasible_fraction": 0.0,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.13083455668747845,
+          "evaluations": 44,
+          "feasible_fraction": 0.0,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.13083455668747845,
+          "evaluations": 48,
+          "feasible_fraction": 0.0,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.1287282532533453,
+          "evaluations": 52,
+          "feasible_fraction": 0.0,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.12320567816643677,
+          "evaluations": 56,
+          "feasible_fraction": 0.0,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.11972786129473173,
+          "evaluations": 60,
+          "feasible_fraction": 0.25,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.11726555099542699,
+          "evaluations": 64,
+          "feasible_fraction": 0.25,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.11232527047516849,
+          "evaluations": 68,
+          "feasible_fraction": 0.25,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.1085105097112725,
+          "evaluations": 72,
+          "feasible_fraction": 0.25,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.10562598031395821,
+          "evaluations": 76,
+          "feasible_fraction": 0.25,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.10278576668177285,
+          "evaluations": 80,
+          "feasible_fraction": 0.25,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.10278576668177285,
+          "evaluations": 84,
+          "feasible_fraction": 0.25,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.10278576668177285,
+          "evaluations": 88,
+          "feasible_fraction": 0.25,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.10278576668177285,
+          "evaluations": 92,
+          "feasible_fraction": 0.25,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.10278576668177285,
+          "evaluations": 96,
+          "feasible_fraction": 0.25,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.10278576668177285,
+          "evaluations": 100,
+          "feasible_fraction": 0.25,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.0,
+        "FSR": 0.25,
+        "HV": 0.07141092203089981,
+        "ITS": 15.0,
+        "evaluations": 100.0,
+        "n_pareto": 1.0
+      },
+      "replicate": 6,
+      "seed": 1161228173,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "A",
+      "log": [
+        {
+          "best_mass": 0.3924151063673344,
+          "evaluations": 4,
+          "feasible_fraction": 0.0,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.3743743076468108,
+          "evaluations": 8,
+          "feasible_fraction": 0.0,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.35398237041414726,
+          "evaluations": 12,
+          "feasible_fraction": 0.0,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.33368990226113027,
+          "evaluations": 16,
+          "feasible_fraction": 0.0,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.310906662428715,
+          "evaluations": 20,
+          "feasible_fraction": 0.0,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.29922808513934146,
+          "evaluations": 24,
+          "feasible_fraction": 0.0,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.2874164255891209,
+          "evaluations": 28,
+          "feasible_fraction": 0.0,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.26999255391439303,
+          "evaluations": 32,
+          "feasible_fraction": 0.0,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.256926874775891,
+          "evaluations": 36,
+          "feasible_fraction": 0.0,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.2346039816249716,
+          "evaluations": 40,
+          "feasible_fraction": 0.0,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.21901864453252004,
+          "evaluations": 44,
+          "feasible_fraction": 0.0,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.20094322249077334,
+          "evaluations": 48,
+          "feasible_fraction": 0.0,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.18790072604862676,
+          "evaluations": 52,
+          "feasible_fraction": 0.0,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.1829805729895377,
+          "evaluations": 56,
+          "feasible_fraction": 0.0,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.1829805729895377,
+          "evaluations": 60,
+          "feasible_fraction": 0.0,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.1829805729895377,
+          "evaluations": 64,
+          "feasible_fraction": 0.0,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.1829805729895377,
+          "evaluations": 68,
+          "feasible_fraction": 0.0,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.1829805729895377,
+          "evaluations": 72,
+          "feasible_fraction": 0.0,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.1829805729895377,
+          "evaluations": 76,
+          "feasible_fraction": 0.0,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.17764400425755272,
+          "evaluations": 80,
+          "feasible_fraction": 0.0,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.17764400425755272,
+          "evaluations": 84,
+          "feasible_fraction": 0.0,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.17764400425755272,
+          "evaluations": 88,
+          "feasible_fraction": 0.0,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.17764400425755272,
+          "evaluations": 92,
+          "feasible_fraction": 0.0,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.17764400425755272,
+          "evaluations": 96,
+          "feasible_fraction": 0.0,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.17764400425755272,
+          "evaluations": 100,
+          "feasible_fraction": 0.0,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.0,
+        "FSR": 0.0,
+        "HV": 0.0,
+        "ITS": 25.0,
+        "evaluations": 100.0,
+        "n_pareto": 0.0
+      },
+      "replicate": 7,
+      "seed": 4200500600,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "A",
+      "log": [
+        {
+          "best_mass": 0.16550998479547827,
+          "evaluations": 4,
+          "feasible_fraction": 0.0,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.15503467806373014,
+          "evaluations": 8,
+          "feasible_fraction": 0.0,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.15122398590016825,
+          "evaluations": 12,
+          "feasible_fraction": 0.0,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.1458680080556522,
+          "evaluations": 16,
+          "feasible_fraction": 0.0,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.13740481341292085,
+          "evaluations": 20,
+          "feasible_fraction": 0.0,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.1315464236175204,
+          "evaluations": 24,
+          "feasible_fraction": 0.0,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.1268753060953259,
+          "evaluations": 28,
+          "feasible_fraction": 0.0,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.1204241944416148,
+          "evaluations": 32,
+          "feasible_fraction": 0.0,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.11561708560228551,
+          "evaluations": 36,
+          "feasible_fraction": 0.25,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.11201947863983723,
+          "evaluations": 40,
+          "feasible_fraction": 0.25,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.10898975696681129,
+          "evaluations": 44,
+          "feasible_fraction": 0.5,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.10657431131001559,
+          "evaluations": 48,
+          "feasible_fraction": 0.5,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.10334342316762528,
+          "evaluations": 52,
+          "feasible_fraction": 0.5,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.09945846303559747,
+          "evaluations": 56,
+          "feasible_fraction": 0.5,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.09801188391257379,
+          "evaluations": 60,
+          "feasible_fraction": 0.5,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.09559189597382642,
+          "evaluations": 64,
+          "feasible_fraction": 0.5,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.0929969020488535,
+          "evaluations": 68,
+          "feasible_fraction": 0.5,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.09127940987934445,
+          "evaluations": 72,
+          "feasible_fraction": 0.5,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.08900846632900952,
+          "evaluations": 76,
+          "feasible_fraction": 0.5,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.08762579045300017,
+          "evaluations": 80,
+          "feasible_fraction": 0.5,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.08649434847728056,
+          "evaluations": 84,
+          "feasible_fraction": 0.5,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.08578304427262848,
+          "evaluations": 88,
+          "feasible_fraction": 0.5,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.08559107028377873,
+          "evaluations": 92,
+          "feasible_fraction": 0.5,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.08559107028377873,
+          "evaluations": 96,
+          "feasible_fraction": 0.5,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.08559107028377873,
+          "evaluations": 100,
+          "feasible_fraction": 0.5,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.08014431711556859,
+        "FSR": 0.5,
+        "HV": 0.11567782900289454,
+        "ITS": 9.0,
+        "evaluations": 100.0,
+        "n_pareto": 2.0
+      },
+      "replicate": 8,
+      "seed": 3123843690,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "A",
+      "log": [
+        {
+          "best_mass": 0.3968619531318301,
+          "evaluations": 4,
+          "feasible_fraction": 0.0,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.3749358030746147,
+          "evaluations": 8,
+          "feasible_fraction": 0.0,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.3569580544643556,
+          "evaluations": 12,
+          "feasible_fraction": 0.0,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.31335181983832766,
+          "evaluations": 16,
+          "feasible_fraction": 0.0,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.2901986555813095,
+          "evaluations": 20,
+          "feasible_fraction": 0.0,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.27063965248422195,
+          "evaluations": 24,
+          "feasible_fraction": 0.0,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.2513085183782256,
+          "evaluations": 28,
+          "feasible_fraction": 0.0,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.23728137527087068,
+          "evaluations": 32,
+          "feasible_fraction": 0.0,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.2247747300039109,
+          "evaluations": 36,
+          "feasible_fraction": 0.0,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.21244116331963897,
+          "evaluations": 40,
+          "feasible_fraction": 0.0,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.20179919308059094,
+          "evaluations": 44,
+          "feasible_fraction": 0.0,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.19736840092949168,
+          "evaluations": 48,
+          "feasible_fraction": 0.0,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.18587438462957093,
+          "evaluations": 52,
+          "feasible_fraction": 0.0,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.17901397223309307,
+          "evaluations": 56,
+          "feasible_fraction": 0.0,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.1766238022792729,
+          "evaluations": 60,
+          "feasible_fraction": 0.0,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.1766238022792729,
+          "evaluations": 64,
+          "feasible_fraction": 0.0,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.1766238022792729,
+          "evaluations": 68,
+          "feasible_fraction": 0.0,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.1766238022792729,
+          "evaluations": 72,
+          "feasible_fraction": 0.0,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.1766238022792729,
+          "evaluations": 76,
+          "feasible_fraction": 0.0,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.1766238022792729,
+          "evaluations": 80,
+          "feasible_fraction": 0.0,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.1766238022792729,
+          "evaluations": 84,
+          "feasible_fraction": 0.0,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.1766238022792729,
+          "evaluations": 88,
+          "feasible_fraction": 0.0,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.1766238022792729,
+          "evaluations": 92,
+          "feasible_fraction": 0.0,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.1766238022792729,
+          "evaluations": 96,
+          "feasible_fraction": 0.0,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.1766238022792729,
+          "evaluations": 100,
+          "feasible_fraction": 0.0,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.0,
+        "FSR": 0.0,
+        "HV": 0.0,
+        "ITS": 25.0,
+        "evaluations": 100.0,
+        "n_pareto": 0.0
+      },
+      "replicate": 9,
+      "seed": 3141373638,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "B",
+      "log": [
+        {
+          "best_mass": 0.10892553411656505,
+          "evaluations": 80,
+          "feasible_fraction": 0.0,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.10892553411656505,
+          "evaluations": 120,
+          "feasible_fraction": 0.0,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.07218866733074909,
+          "evaluations": 160,
+          "feasible_fraction": 0.0,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.07218866733074909,
+          "evaluations": 200,
+          "feasible_fraction": 0.075,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.06234469512046788,
+          "evaluations": 240,
+          "feasible_fraction": 0.175,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.06234469512046788,
+          "evaluations": 280,
+          "feasible_fraction": 0.275,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.06234469512046788,
+          "evaluations": 320,
+          "feasible_fraction": 0.375,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.06234469512046788,
+          "evaluations": 360,
+          "feasible_fraction": 0.7,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.05571497514229979,
+          "evaluations": 400,
+          "feasible_fraction": 0.925,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.05571497514229979,
+          "evaluations": 440,
+          "feasible_fraction": 1.0,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.05571497514229979,
+          "evaluations": 480,
+          "feasible_fraction": 1.0,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.05571497514229979,
+          "evaluations": 520,
+          "feasible_fraction": 1.0,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.05571497514229979,
+          "evaluations": 560,
+          "feasible_fraction": 1.0,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.05571497514229979,
+          "evaluations": 600,
+          "feasible_fraction": 1.0,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.05571497514229979,
+          "evaluations": 640,
+          "feasible_fraction": 1.0,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.04437360205444615,
+          "evaluations": 680,
+          "feasible_fraction": 1.0,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.04437360205444615,
+          "evaluations": 720,
+          "feasible_fraction": 1.0,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.039713899439271096,
+          "evaluations": 760,
+          "feasible_fraction": 1.0,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.039713899439271096,
+          "evaluations": 800,
+          "feasible_fraction": 1.0,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.039713899439271096,
+          "evaluations": 840,
+          "feasible_fraction": 1.0,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.039713899439271096,
+          "evaluations": 880,
+          "feasible_fraction": 1.0,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.039713899439271096,
+          "evaluations": 920,
+          "feasible_fraction": 1.0,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.039713899439271096,
+          "evaluations": 960,
+          "feasible_fraction": 1.0,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.039713899439271096,
+          "evaluations": 1000,
+          "feasible_fraction": 1.0,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.039713899439271096,
+          "evaluations": 1040,
+          "feasible_fraction": 1.0,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.07393722015275779,
+        "FSR": 1.0,
+        "HV": 0.47720964189072007,
+        "ITS": 4.0,
+        "evaluations": 1040.0,
+        "n_pareto": 33.0
+      },
+      "replicate": 0,
+      "seed": 2757628151,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "B",
+      "log": [
+        {
+          "best_mass": 0.08686766139314901,
+          "evaluations": 80,
+          "feasible_fraction": 0.025,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.1050087413728673,
+          "evaluations": 120,
+          "feasible_fraction": 0.025,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.08913566970580289,
+          "evaluations": 160,
+          "feasible_fraction": 0.05,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.07844230527746512,
+          "evaluations": 200,
+          "feasible_fraction": 0.075,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.06997316382847282,
+          "evaluations": 240,
+          "feasible_fraction": 0.1,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.06997316382847282,
+          "evaluations": 280,
+          "feasible_fraction": 0.225,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.06004148518168965,
+          "evaluations": 320,
+          "feasible_fraction": 0.4,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.06004148518168965,
+          "evaluations": 360,
+          "feasible_fraction": 0.6,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.06004148518168965,
+          "evaluations": 400,
+          "feasible_fraction": 0.95,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.05374451045888095,
+          "evaluations": 440,
+          "feasible_fraction": 1.0,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.04292067803271009,
+          "evaluations": 480,
+          "feasible_fraction": 1.0,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.04292067803271009,
+          "evaluations": 520,
+          "feasible_fraction": 1.0,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.04222885872582716,
+          "evaluations": 560,
+          "feasible_fraction": 1.0,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.04222885872582716,
+          "evaluations": 600,
+          "feasible_fraction": 1.0,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.04222885872582716,
+          "evaluations": 640,
+          "feasible_fraction": 1.0,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.03934710142213145,
+          "evaluations": 680,
+          "feasible_fraction": 1.0,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.03934710142213145,
+          "evaluations": 720,
+          "feasible_fraction": 1.0,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.03934710142213145,
+          "evaluations": 760,
+          "feasible_fraction": 1.0,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.03934710142213145,
+          "evaluations": 800,
+          "feasible_fraction": 1.0,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.03934710142213145,
+          "evaluations": 840,
+          "feasible_fraction": 1.0,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.03934710142213145,
+          "evaluations": 880,
+          "feasible_fraction": 1.0,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.03934710142213145,
+          "evaluations": 920,
+          "feasible_fraction": 1.0,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.03934710142213145,
+          "evaluations": 960,
+          "feasible_fraction": 1.0,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.03934710142213145,
+          "evaluations": 1000,
+          "feasible_fraction": 1.0,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.03934710142213145,
+          "evaluations": 1040,
+          "feasible_fraction": 1.0,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.07324413305985032,
+        "FSR": 1.0,
+        "HV": 0.4746188323142305,
+        "ITS": 1.0,
+        "evaluations": 1040.0,
+        "n_pareto": 40.0
+      },
+      "replicate": 1,
+      "seed": 1871870405,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "B",
+      "log": [
+        {
+          "best_mass": 0.06975069473565942,
+          "evaluations": 80,
+          "feasible_fraction": 0.0,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.06975069473565942,
+          "evaluations": 120,
+          "feasible_fraction": 0.0,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.07697249827571821,
+          "evaluations": 160,
+          "feasible_fraction": 0.025,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.09339460652237076,
+          "evaluations": 200,
+          "feasible_fraction": 0.075,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.05165931837375094,
+          "evaluations": 240,
+          "feasible_fraction": 0.1,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.07013387807708205,
+          "evaluations": 280,
+          "feasible_fraction": 0.175,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.07013387807708205,
+          "evaluations": 320,
+          "feasible_fraction": 0.275,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.06621483163853162,
+          "evaluations": 360,
+          "feasible_fraction": 0.4,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.06621483163853162,
+          "evaluations": 400,
+          "feasible_fraction": 0.55,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.0659248451295252,
+          "evaluations": 440,
+          "feasible_fraction": 0.825,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.0659248451295252,
+          "evaluations": 480,
+          "feasible_fraction": 1.0,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.05408842907718618,
+          "evaluations": 520,
+          "feasible_fraction": 1.0,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.05408842907718618,
+          "evaluations": 560,
+          "feasible_fraction": 1.0,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.044769758281746085,
+          "evaluations": 600,
+          "feasible_fraction": 1.0,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.044769758281746085,
+          "evaluations": 640,
+          "feasible_fraction": 1.0,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.0377295742368925,
+          "evaluations": 680,
+          "feasible_fraction": 1.0,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.0377295742368925,
+          "evaluations": 720,
+          "feasible_fraction": 1.0,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.0377295742368925,
+          "evaluations": 760,
+          "feasible_fraction": 1.0,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.0377295742368925,
+          "evaluations": 800,
+          "feasible_fraction": 1.0,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.0377295742368925,
+          "evaluations": 840,
+          "feasible_fraction": 1.0,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.0377295742368925,
+          "evaluations": 880,
+          "feasible_fraction": 1.0,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.0377295742368925,
+          "evaluations": 920,
+          "feasible_fraction": 1.0,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.0377295742368925,
+          "evaluations": 960,
+          "feasible_fraction": 1.0,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.0377295742368925,
+          "evaluations": 1000,
+          "feasible_fraction": 1.0,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.0377295742368925,
+          "evaluations": 1040,
+          "feasible_fraction": 1.0,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.0883310174139891,
+        "FSR": 1.0,
+        "HV": 0.46702338337686405,
+        "ITS": 3.0,
+        "evaluations": 1040.0,
+        "n_pareto": 29.0
+      },
+      "replicate": 2,
+      "seed": 801814541,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "B",
+      "log": [
+        {
+          "best_mass": 0.07783923590042308,
+          "evaluations": 80,
+          "feasible_fraction": 0.025,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.10249571728488982,
+          "evaluations": 120,
+          "feasible_fraction": 0.025,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.07853992960265041,
+          "evaluations": 160,
+          "feasible_fraction": 0.05,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.07800971832102814,
+          "evaluations": 200,
+          "feasible_fraction": 0.175,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.06982286796004468,
+          "evaluations": 240,
+          "feasible_fraction": 0.4,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.0640397388463491,
+          "evaluations": 280,
+          "feasible_fraction": 0.7,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.05618842685142146,
+          "evaluations": 320,
+          "feasible_fraction": 1.0,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.044579324334704934,
+          "evaluations": 360,
+          "feasible_fraction": 1.0,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.04415245230608821,
+          "evaluations": 400,
+          "feasible_fraction": 1.0,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.04415245230608821,
+          "evaluations": 440,
+          "feasible_fraction": 1.0,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.040844328330961785,
+          "evaluations": 480,
+          "feasible_fraction": 1.0,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.040844328330961785,
+          "evaluations": 520,
+          "feasible_fraction": 1.0,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.040844328330961785,
+          "evaluations": 560,
+          "feasible_fraction": 1.0,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.040844328330961785,
+          "evaluations": 600,
+          "feasible_fraction": 1.0,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.040844328330961785,
+          "evaluations": 640,
+          "feasible_fraction": 1.0,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.040844328330961785,
+          "evaluations": 680,
+          "feasible_fraction": 1.0,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.040844328330961785,
+          "evaluations": 720,
+          "feasible_fraction": 1.0,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.040844328330961785,
+          "evaluations": 760,
+          "feasible_fraction": 1.0,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.040844328330961785,
+          "evaluations": 800,
+          "feasible_fraction": 1.0,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.040844328330961785,
+          "evaluations": 840,
+          "feasible_fraction": 1.0,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.040844328330961785,
+          "evaluations": 880,
+          "feasible_fraction": 1.0,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.040844328330961785,
+          "evaluations": 920,
+          "feasible_fraction": 1.0,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.040844328330961785,
+          "evaluations": 960,
+          "feasible_fraction": 1.0,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.03925387133973834,
+          "evaluations": 1000,
+          "feasible_fraction": 1.0,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.03925387133973834,
+          "evaluations": 1040,
+          "feasible_fraction": 1.0,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.07381998483989308,
+        "FSR": 1.0,
+        "HV": 0.4824531426123783,
+        "ITS": 1.0,
+        "evaluations": 1040.0,
+        "n_pareto": 40.0
+      },
+      "replicate": 3,
+      "seed": 201291020,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "B",
+      "log": [
+        {
+          "best_mass": 0.05451679327038353,
+          "evaluations": 80,
+          "feasible_fraction": 0.05,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.05451679327038353,
+          "evaluations": 120,
+          "feasible_fraction": 0.1,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.06206381678777607,
+          "evaluations": 160,
+          "feasible_fraction": 0.15,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.09270966057405831,
+          "evaluations": 200,
+          "feasible_fraction": 0.3,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.07427776005347504,
+          "evaluations": 240,
+          "feasible_fraction": 0.425,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.07427776005347504,
+          "evaluations": 280,
+          "feasible_fraction": 0.625,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.07427776005347504,
+          "evaluations": 320,
+          "feasible_fraction": 0.925,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.05795429216601204,
+          "evaluations": 360,
+          "feasible_fraction": 1.0,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.05795429216601204,
+          "evaluations": 400,
+          "feasible_fraction": 1.0,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.05795429216601204,
+          "evaluations": 440,
+          "feasible_fraction": 1.0,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.03899794683874054,
+          "evaluations": 480,
+          "feasible_fraction": 1.0,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.03899794683874054,
+          "evaluations": 520,
+          "feasible_fraction": 1.0,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.03899794683874054,
+          "evaluations": 560,
+          "feasible_fraction": 1.0,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.03899794683874054,
+          "evaluations": 600,
+          "feasible_fraction": 1.0,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.03899794683874054,
+          "evaluations": 640,
+          "feasible_fraction": 1.0,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.03866609989163669,
+          "evaluations": 680,
+          "feasible_fraction": 1.0,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.03866609989163669,
+          "evaluations": 720,
+          "feasible_fraction": 1.0,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.03866609989163669,
+          "evaluations": 760,
+          "feasible_fraction": 1.0,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.03866609989163669,
+          "evaluations": 800,
+          "feasible_fraction": 1.0,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.03866609989163669,
+          "evaluations": 840,
+          "feasible_fraction": 1.0,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.03866609989163669,
+          "evaluations": 880,
+          "feasible_fraction": 1.0,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.03866609989163669,
+          "evaluations": 920,
+          "feasible_fraction": 1.0,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.03866609989163669,
+          "evaluations": 960,
+          "feasible_fraction": 1.0,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.03864087355780082,
+          "evaluations": 1000,
+          "feasible_fraction": 1.0,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.03864087355780082,
+          "evaluations": 1040,
+          "feasible_fraction": 1.0,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.07924214175708581,
+        "FSR": 1.0,
+        "HV": 0.48043606126796434,
+        "ITS": 1.0,
+        "evaluations": 1040.0,
+        "n_pareto": 40.0
+      },
+      "replicate": 4,
+      "seed": 818280544,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "B",
+      "log": [
+        {
+          "best_mass": 0.09277093575784738,
+          "evaluations": 80,
+          "feasible_fraction": 0.0,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.06952497769891408,
+          "evaluations": 120,
+          "feasible_fraction": 0.0,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.0930396069809051,
+          "evaluations": 160,
+          "feasible_fraction": 0.025,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.0930396069809051,
+          "evaluations": 200,
+          "feasible_fraction": 0.075,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.09219443946017307,
+          "evaluations": 240,
+          "feasible_fraction": 0.1,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.08188383911010506,
+          "evaluations": 280,
+          "feasible_fraction": 0.2,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.07264951415337594,
+          "evaluations": 320,
+          "feasible_fraction": 0.375,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.053105545839002455,
+          "evaluations": 360,
+          "feasible_fraction": 0.6,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.053105545839002455,
+          "evaluations": 400,
+          "feasible_fraction": 1.0,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.053105545839002455,
+          "evaluations": 440,
+          "feasible_fraction": 1.0,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.053105545839002455,
+          "evaluations": 480,
+          "feasible_fraction": 1.0,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.053105545839002455,
+          "evaluations": 520,
+          "feasible_fraction": 1.0,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.053105545839002455,
+          "evaluations": 560,
+          "feasible_fraction": 1.0,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.0388785792774104,
+          "evaluations": 600,
+          "feasible_fraction": 1.0,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.0388785792774104,
+          "evaluations": 640,
+          "feasible_fraction": 1.0,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.03812499274883528,
+          "evaluations": 680,
+          "feasible_fraction": 1.0,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.03812499274883528,
+          "evaluations": 720,
+          "feasible_fraction": 1.0,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.03812499274883528,
+          "evaluations": 760,
+          "feasible_fraction": 1.0,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.03812499274883528,
+          "evaluations": 800,
+          "feasible_fraction": 1.0,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.038091805204259956,
+          "evaluations": 840,
+          "feasible_fraction": 1.0,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.038091805204259956,
+          "evaluations": 880,
+          "feasible_fraction": 1.0,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.038091805204259956,
+          "evaluations": 920,
+          "feasible_fraction": 1.0,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.038091805204259956,
+          "evaluations": 960,
+          "feasible_fraction": 1.0,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.038091805204259956,
+          "evaluations": 1000,
+          "feasible_fraction": 1.0,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.038091805204259956,
+          "evaluations": 1040,
+          "feasible_fraction": 1.0,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.08728741693290594,
+        "FSR": 1.0,
+        "HV": 0.4788919865333511,
+        "ITS": 3.0,
+        "evaluations": 1040.0,
+        "n_pareto": 40.0
+      },
+      "replicate": 5,
+      "seed": 3031549639,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "B",
+      "log": [
+        {
+          "best_mass": 0.10339718566736768,
+          "evaluations": 80,
+          "feasible_fraction": 0.0,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.0731750503942008,
+          "evaluations": 120,
+          "feasible_fraction": 0.025,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.06239148233614964,
+          "evaluations": 160,
+          "feasible_fraction": 0.075,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.034904865128759385,
+          "evaluations": 200,
+          "feasible_fraction": 0.1,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.05993315208736642,
+          "evaluations": 240,
+          "feasible_fraction": 0.225,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.05993315208736642,
+          "evaluations": 280,
+          "feasible_fraction": 0.4,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.048695003040537484,
+          "evaluations": 320,
+          "feasible_fraction": 0.6,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.05676223822866616,
+          "evaluations": 360,
+          "feasible_fraction": 0.8,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.05663278417866189,
+          "evaluations": 400,
+          "feasible_fraction": 1.0,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.04748116028874623,
+          "evaluations": 440,
+          "feasible_fraction": 1.0,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.04748116028874623,
+          "evaluations": 480,
+          "feasible_fraction": 1.0,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.04075116375119432,
+          "evaluations": 520,
+          "feasible_fraction": 1.0,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.04075116375119432,
+          "evaluations": 560,
+          "feasible_fraction": 1.0,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.03824308119245617,
+          "evaluations": 600,
+          "feasible_fraction": 1.0,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.03824308119245617,
+          "evaluations": 640,
+          "feasible_fraction": 1.0,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.038139234579668446,
+          "evaluations": 680,
+          "feasible_fraction": 1.0,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.038139234579668446,
+          "evaluations": 720,
+          "feasible_fraction": 1.0,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.03809065872561786,
+          "evaluations": 760,
+          "feasible_fraction": 1.0,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.03809065872561786,
+          "evaluations": 800,
+          "feasible_fraction": 1.0,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.03809065872561786,
+          "evaluations": 840,
+          "feasible_fraction": 1.0,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.03809065872561786,
+          "evaluations": 880,
+          "feasible_fraction": 1.0,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.03809065872561786,
+          "evaluations": 920,
+          "feasible_fraction": 1.0,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.03809065872561786,
+          "evaluations": 960,
+          "feasible_fraction": 1.0,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.03809065872561786,
+          "evaluations": 1000,
+          "feasible_fraction": 1.0,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.03809065872561786,
+          "evaluations": 1040,
+          "feasible_fraction": 1.0,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.08157290597966162,
+        "FSR": 1.0,
+        "HV": 0.47809308175888116,
+        "ITS": 2.0,
+        "evaluations": 1040.0,
+        "n_pareto": 40.0
+      },
+      "replicate": 6,
+      "seed": 2032902176,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "B",
+      "log": [
+        {
+          "best_mass": 0.08929851792043385,
+          "evaluations": 80,
+          "feasible_fraction": 0.05,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.08220394890941712,
+          "evaluations": 120,
+          "feasible_fraction": 0.1,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.07791929075229602,
+          "evaluations": 160,
+          "feasible_fraction": 0.175,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.06027865734679077,
+          "evaluations": 200,
+          "feasible_fraction": 0.3,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.06027865734679077,
+          "evaluations": 240,
+          "feasible_fraction": 0.35,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.052110030092325316,
+          "evaluations": 280,
+          "feasible_fraction": 0.6,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.052110030092325316,
+          "evaluations": 320,
+          "feasible_fraction": 0.9,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.052110030092325316,
+          "evaluations": 360,
+          "feasible_fraction": 1.0,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.04036981767277843,
+          "evaluations": 400,
+          "feasible_fraction": 1.0,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.039957119114591794,
+          "evaluations": 440,
+          "feasible_fraction": 1.0,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.039957119114591794,
+          "evaluations": 480,
+          "feasible_fraction": 1.0,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.039957119114591794,
+          "evaluations": 520,
+          "feasible_fraction": 1.0,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.039957119114591794,
+          "evaluations": 560,
+          "feasible_fraction": 1.0,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.039957119114591794,
+          "evaluations": 600,
+          "feasible_fraction": 1.0,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.039957119114591794,
+          "evaluations": 640,
+          "feasible_fraction": 1.0,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.039957119114591794,
+          "evaluations": 680,
+          "feasible_fraction": 1.0,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.038294825194192215,
+          "evaluations": 720,
+          "feasible_fraction": 1.0,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.038294825194192215,
+          "evaluations": 760,
+          "feasible_fraction": 1.0,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.038294825194192215,
+          "evaluations": 800,
+          "feasible_fraction": 1.0,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.038294825194192215,
+          "evaluations": 840,
+          "feasible_fraction": 1.0,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.038294825194192215,
+          "evaluations": 880,
+          "feasible_fraction": 1.0,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.038294825194192215,
+          "evaluations": 920,
+          "feasible_fraction": 1.0,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.038294825194192215,
+          "evaluations": 960,
+          "feasible_fraction": 1.0,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.038294825194192215,
+          "evaluations": 1000,
+          "feasible_fraction": 1.0,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.038294825194192215,
+          "evaluations": 1040,
+          "feasible_fraction": 1.0,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.07816892555392828,
+        "FSR": 1.0,
+        "HV": 0.48206699159385,
+        "ITS": 1.0,
+        "evaluations": 1040.0,
+        "n_pareto": 40.0
+      },
+      "replicate": 7,
+      "seed": 2400174364,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "B",
+      "log": [
+        {
+          "best_mass": 0.06219105992078786,
+          "evaluations": 80,
+          "feasible_fraction": 0.0,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.06219105992078786,
+          "evaluations": 120,
+          "feasible_fraction": 0.0,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.06219105992078786,
+          "evaluations": 160,
+          "feasible_fraction": 0.1,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.06146925475857993,
+          "evaluations": 200,
+          "feasible_fraction": 0.175,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.05780323271821329,
+          "evaluations": 240,
+          "feasible_fraction": 0.225,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.05780323271821329,
+          "evaluations": 280,
+          "feasible_fraction": 0.275,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.05780323271821329,
+          "evaluations": 320,
+          "feasible_fraction": 0.5,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.05780323271821329,
+          "evaluations": 360,
+          "feasible_fraction": 0.775,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.05780323271821329,
+          "evaluations": 400,
+          "feasible_fraction": 1.0,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.04476769965371358,
+          "evaluations": 440,
+          "feasible_fraction": 1.0,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.04476769965371358,
+          "evaluations": 480,
+          "feasible_fraction": 1.0,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.04476769965371358,
+          "evaluations": 520,
+          "feasible_fraction": 1.0,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.043472121488312136,
+          "evaluations": 560,
+          "feasible_fraction": 1.0,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.043472121488312136,
+          "evaluations": 600,
+          "feasible_fraction": 1.0,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.04216257660252555,
+          "evaluations": 640,
+          "feasible_fraction": 1.0,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.04216257660252555,
+          "evaluations": 680,
+          "feasible_fraction": 1.0,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.037907641803064315,
+          "evaluations": 720,
+          "feasible_fraction": 1.0,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.037907641803064315,
+          "evaluations": 760,
+          "feasible_fraction": 1.0,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.037907641803064315,
+          "evaluations": 800,
+          "feasible_fraction": 1.0,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.03765806567529465,
+          "evaluations": 840,
+          "feasible_fraction": 1.0,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.03765806567529465,
+          "evaluations": 880,
+          "feasible_fraction": 1.0,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.03765806567529465,
+          "evaluations": 920,
+          "feasible_fraction": 1.0,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.03765806567529465,
+          "evaluations": 960,
+          "feasible_fraction": 1.0,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.03765806567529465,
+          "evaluations": 1000,
+          "feasible_fraction": 1.0,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.03765806567529465,
+          "evaluations": 1040,
+          "feasible_fraction": 1.0,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.07075349751513173,
+        "FSR": 1.0,
+        "HV": 0.4802062057981482,
+        "ITS": 3.0,
+        "evaluations": 1040.0,
+        "n_pareto": 40.0
+      },
+      "replicate": 8,
+      "seed": 825683842,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "B",
+      "log": [
+        {
+          "best_mass": 0.08546373291178293,
+          "evaluations": 80,
+          "feasible_fraction": 0.025,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.07192426604163933,
+          "evaluations": 120,
+          "feasible_fraction": 0.075,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.07192426604163933,
+          "evaluations": 160,
+          "feasible_fraction": 0.125,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.07906770713597223,
+          "evaluations": 200,
+          "feasible_fraction": 0.15,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.05400320867177923,
+          "evaluations": 240,
+          "feasible_fraction": 0.35,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.061762187995087675,
+          "evaluations": 280,
+          "feasible_fraction": 0.575,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.046726049702469026,
+          "evaluations": 320,
+          "feasible_fraction": 0.875,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.058376249395930425,
+          "evaluations": 360,
+          "feasible_fraction": 1.0,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.0422660382530395,
+          "evaluations": 400,
+          "feasible_fraction": 1.0,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.040043264207064784,
+          "evaluations": 440,
+          "feasible_fraction": 1.0,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.040043264207064784,
+          "evaluations": 480,
+          "feasible_fraction": 1.0,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.040043264207064784,
+          "evaluations": 520,
+          "feasible_fraction": 1.0,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.040043264207064784,
+          "evaluations": 560,
+          "feasible_fraction": 1.0,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.040043264207064784,
+          "evaluations": 600,
+          "feasible_fraction": 1.0,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.040043264207064784,
+          "evaluations": 640,
+          "feasible_fraction": 1.0,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.040043264207064784,
+          "evaluations": 680,
+          "feasible_fraction": 1.0,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.040043264207064784,
+          "evaluations": 720,
+          "feasible_fraction": 1.0,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.040043264207064784,
+          "evaluations": 760,
+          "feasible_fraction": 1.0,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.040043264207064784,
+          "evaluations": 800,
+          "feasible_fraction": 1.0,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.039343616409071434,
+          "evaluations": 840,
+          "feasible_fraction": 1.0,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.039343616409071434,
+          "evaluations": 880,
+          "feasible_fraction": 1.0,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.039343616409071434,
+          "evaluations": 920,
+          "feasible_fraction": 1.0,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.039343616409071434,
+          "evaluations": 960,
+          "feasible_fraction": 1.0,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.038723479455019784,
+          "evaluations": 1000,
+          "feasible_fraction": 1.0,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.038695022763007576,
+          "evaluations": 1040,
+          "feasible_fraction": 1.0,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.07828566707253165,
+        "FSR": 1.0,
+        "HV": 0.481470054586788,
+        "ITS": 1.0,
+        "evaluations": 1040.0,
+        "n_pareto": 40.0
+      },
+      "replicate": 9,
+      "seed": 789407713,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "C",
+      "log": [
+        {
+          "best_mass": 0.09954895182741651,
+          "evaluations": 80,
+          "feasible_fraction": 0.025,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.06856582503898878,
+          "evaluations": 120,
+          "feasible_fraction": 0.15,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.05985985993386077,
+          "evaluations": 160,
+          "feasible_fraction": 0.325,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.05985985993386077,
+          "evaluations": 200,
+          "feasible_fraction": 0.575,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.04946945086690004,
+          "evaluations": 240,
+          "feasible_fraction": 0.9,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.04946945086690004,
+          "evaluations": 280,
+          "feasible_fraction": 1.0,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.04946945086690004,
+          "evaluations": 320,
+          "feasible_fraction": 1.0,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.048029248045718585,
+          "evaluations": 360,
+          "feasible_fraction": 1.0,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.040847233363829234,
+          "evaluations": 400,
+          "feasible_fraction": 1.0,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.040847233363829234,
+          "evaluations": 440,
+          "feasible_fraction": 1.0,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.040847233363829234,
+          "evaluations": 480,
+          "feasible_fraction": 1.0,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.040847233363829234,
+          "evaluations": 520,
+          "feasible_fraction": 1.0,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.039776158910584176,
+          "evaluations": 560,
+          "feasible_fraction": 1.0,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.03975983187199669,
+          "evaluations": 600,
+          "feasible_fraction": 1.0,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.03975983187199669,
+          "evaluations": 640,
+          "feasible_fraction": 1.0,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.03888615973778807,
+          "evaluations": 680,
+          "feasible_fraction": 1.0,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.03888615973778807,
+          "evaluations": 720,
+          "feasible_fraction": 1.0,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.03888615973778807,
+          "evaluations": 760,
+          "feasible_fraction": 1.0,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.03888615973778807,
+          "evaluations": 800,
+          "feasible_fraction": 1.0,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.03888615973778807,
+          "evaluations": 840,
+          "feasible_fraction": 1.0,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.03888615973778807,
+          "evaluations": 880,
+          "feasible_fraction": 1.0,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.03888615973778807,
+          "evaluations": 920,
+          "feasible_fraction": 1.0,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.03888615973778807,
+          "evaluations": 960,
+          "feasible_fraction": 1.0,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.03888615973778807,
+          "evaluations": 1000,
+          "feasible_fraction": 1.0,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.03888615973778807,
+          "evaluations": 1040,
+          "feasible_fraction": 1.0,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.07468134611720531,
+        "FSR": 1.0,
+        "HV": 0.48283621462690746,
+        "ITS": 1.0,
+        "evaluations": 1040.0,
+        "n_pareto": 40.0
+      },
+      "replicate": 0,
+      "seed": 3888562914,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "C",
+      "log": [
+        {
+          "best_mass": 0.055550112082307604,
+          "evaluations": 80,
+          "feasible_fraction": 0.175,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.04421742639087479,
+          "evaluations": 120,
+          "feasible_fraction": 0.45,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.04421742639087479,
+          "evaluations": 160,
+          "feasible_fraction": 0.875,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.04421742639087479,
+          "evaluations": 200,
+          "feasible_fraction": 1.0,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.04421742639087479,
+          "evaluations": 240,
+          "feasible_fraction": 1.0,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.039220928605014124,
+          "evaluations": 280,
+          "feasible_fraction": 1.0,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.039220928605014124,
+          "evaluations": 320,
+          "feasible_fraction": 1.0,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.039220928605014124,
+          "evaluations": 360,
+          "feasible_fraction": 1.0,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.039220928605014124,
+          "evaluations": 400,
+          "feasible_fraction": 1.0,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.039220928605014124,
+          "evaluations": 440,
+          "feasible_fraction": 1.0,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.039220928605014124,
+          "evaluations": 480,
+          "feasible_fraction": 1.0,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.039220928605014124,
+          "evaluations": 520,
+          "feasible_fraction": 1.0,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.039220928605014124,
+          "evaluations": 560,
+          "feasible_fraction": 1.0,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.039220928605014124,
+          "evaluations": 600,
+          "feasible_fraction": 1.0,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.039220928605014124,
+          "evaluations": 640,
+          "feasible_fraction": 1.0,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.039220928605014124,
+          "evaluations": 680,
+          "feasible_fraction": 1.0,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.039220928605014124,
+          "evaluations": 720,
+          "feasible_fraction": 1.0,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.039220928605014124,
+          "evaluations": 760,
+          "feasible_fraction": 1.0,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.039220928605014124,
+          "evaluations": 800,
+          "feasible_fraction": 1.0,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.039220928605014124,
+          "evaluations": 840,
+          "feasible_fraction": 1.0,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.039220928605014124,
+          "evaluations": 880,
+          "feasible_fraction": 1.0,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.039220928605014124,
+          "evaluations": 920,
+          "feasible_fraction": 1.0,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.0386260730480283,
+          "evaluations": 960,
+          "feasible_fraction": 1.0,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.0386260730480283,
+          "evaluations": 1000,
+          "feasible_fraction": 1.0,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.0386260730480283,
+          "evaluations": 1040,
+          "feasible_fraction": 1.0,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.07214886570832296,
+        "FSR": 1.0,
+        "HV": 0.48250685669383053,
+        "ITS": 1.0,
+        "evaluations": 1040.0,
+        "n_pareto": 40.0
+      },
+      "replicate": 1,
+      "seed": 1789303536,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "C",
+      "log": [
+        {
+          "best_mass": 0.12007840332741526,
+          "evaluations": 80,
+          "feasible_fraction": 0.0,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.08153281874513077,
+          "evaluations": 120,
+          "feasible_fraction": 0.0,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.04913572717622126,
+          "evaluations": 160,
+          "feasible_fraction": 0.175,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.04913572717622126,
+          "evaluations": 200,
+          "feasible_fraction": 0.5,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.05011989601944629,
+          "evaluations": 240,
+          "feasible_fraction": 0.925,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.05011989601944629,
+          "evaluations": 280,
+          "feasible_fraction": 1.0,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.05011989601944629,
+          "evaluations": 320,
+          "feasible_fraction": 1.0,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.0402311995489,
+          "evaluations": 360,
+          "feasible_fraction": 1.0,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.0402311995489,
+          "evaluations": 400,
+          "feasible_fraction": 1.0,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.0402311995489,
+          "evaluations": 440,
+          "feasible_fraction": 1.0,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.03947431571869195,
+          "evaluations": 480,
+          "feasible_fraction": 1.0,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.03947431571869195,
+          "evaluations": 520,
+          "feasible_fraction": 1.0,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.03947431571869195,
+          "evaluations": 560,
+          "feasible_fraction": 1.0,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.03947431571869195,
+          "evaluations": 600,
+          "feasible_fraction": 1.0,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.03947431571869195,
+          "evaluations": 640,
+          "feasible_fraction": 1.0,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.03947431571869195,
+          "evaluations": 680,
+          "feasible_fraction": 1.0,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.03947431571869195,
+          "evaluations": 720,
+          "feasible_fraction": 1.0,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.03858300092079117,
+          "evaluations": 760,
+          "feasible_fraction": 1.0,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.03858300092079117,
+          "evaluations": 800,
+          "feasible_fraction": 1.0,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.03822632687665695,
+          "evaluations": 840,
+          "feasible_fraction": 1.0,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.03822632687665695,
+          "evaluations": 880,
+          "feasible_fraction": 1.0,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.03822632687665695,
+          "evaluations": 920,
+          "feasible_fraction": 1.0,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.03822632687665695,
+          "evaluations": 960,
+          "feasible_fraction": 1.0,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.03822632687665695,
+          "evaluations": 1000,
+          "feasible_fraction": 1.0,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.03822632687665695,
+          "evaluations": 1040,
+          "feasible_fraction": 1.0,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.08209711503912911,
+        "FSR": 1.0,
+        "HV": 0.48216275964083927,
+        "ITS": 3.0,
+        "evaluations": 1040.0,
+        "n_pareto": 40.0
+      },
+      "replicate": 2,
+      "seed": 934629686,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "C",
+      "log": [
+        {
+          "best_mass": 0.10177179263418948,
+          "evaluations": 80,
+          "feasible_fraction": 0.025,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.08381050233786239,
+          "evaluations": 120,
+          "feasible_fraction": 0.175,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.08091865034892073,
+          "evaluations": 160,
+          "feasible_fraction": 0.25,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.07180129526507809,
+          "evaluations": 200,
+          "feasible_fraction": 0.525,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.07180129526507809,
+          "evaluations": 240,
+          "feasible_fraction": 0.8,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.059134387423849535,
+          "evaluations": 280,
+          "feasible_fraction": 1.0,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.059134387423849535,
+          "evaluations": 320,
+          "feasible_fraction": 1.0,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.0538612951788203,
+          "evaluations": 360,
+          "feasible_fraction": 1.0,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.041085727151671365,
+          "evaluations": 400,
+          "feasible_fraction": 1.0,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.041085727151671365,
+          "evaluations": 440,
+          "feasible_fraction": 1.0,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.03815114064587811,
+          "evaluations": 480,
+          "feasible_fraction": 1.0,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.03815114064587811,
+          "evaluations": 520,
+          "feasible_fraction": 1.0,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.03815114064587811,
+          "evaluations": 560,
+          "feasible_fraction": 1.0,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.03815114064587811,
+          "evaluations": 600,
+          "feasible_fraction": 1.0,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.03815114064587811,
+          "evaluations": 640,
+          "feasible_fraction": 1.0,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.03815114064587811,
+          "evaluations": 680,
+          "feasible_fraction": 1.0,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.03815114064587811,
+          "evaluations": 720,
+          "feasible_fraction": 1.0,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.03815114064587811,
+          "evaluations": 760,
+          "feasible_fraction": 1.0,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.03815114064587811,
+          "evaluations": 800,
+          "feasible_fraction": 1.0,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.03815114064587811,
+          "evaluations": 840,
+          "feasible_fraction": 1.0,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.03815114064587811,
+          "evaluations": 880,
+          "feasible_fraction": 1.0,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.03815114064587811,
+          "evaluations": 920,
+          "feasible_fraction": 1.0,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.03815114064587811,
+          "evaluations": 960,
+          "feasible_fraction": 1.0,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.03815114064587811,
+          "evaluations": 1000,
+          "feasible_fraction": 1.0,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.03815114064587811,
+          "evaluations": 1040,
+          "feasible_fraction": 1.0,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.07764919689157924,
+        "FSR": 1.0,
+        "HV": 0.4818733146699652,
+        "ITS": 1.0,
+        "evaluations": 1040.0,
+        "n_pareto": 40.0
+      },
+      "replicate": 3,
+      "seed": 4150079716,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "C",
+      "log": [
+        {
+          "best_mass": 0.11043882208965337,
+          "evaluations": 80,
+          "feasible_fraction": 0.025,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.09991575171114396,
+          "evaluations": 120,
+          "feasible_fraction": 0.125,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.08413849414708713,
+          "evaluations": 160,
+          "feasible_fraction": 0.3,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.08171052864784188,
+          "evaluations": 200,
+          "feasible_fraction": 0.55,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.05136819381706061,
+          "evaluations": 240,
+          "feasible_fraction": 0.925,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.05136819381706061,
+          "evaluations": 280,
+          "feasible_fraction": 1.0,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.05136819381706061,
+          "evaluations": 320,
+          "feasible_fraction": 1.0,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.05136819381706061,
+          "evaluations": 360,
+          "feasible_fraction": 1.0,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.04807512140784109,
+          "evaluations": 400,
+          "feasible_fraction": 1.0,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.04807512140784109,
+          "evaluations": 440,
+          "feasible_fraction": 1.0,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.04607432192383598,
+          "evaluations": 480,
+          "feasible_fraction": 1.0,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.04607432192383598,
+          "evaluations": 520,
+          "feasible_fraction": 1.0,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.04607432192383598,
+          "evaluations": 560,
+          "feasible_fraction": 1.0,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.04607432192383598,
+          "evaluations": 600,
+          "feasible_fraction": 1.0,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.04547851505606411,
+          "evaluations": 640,
+          "feasible_fraction": 1.0,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.04547851505606411,
+          "evaluations": 680,
+          "feasible_fraction": 1.0,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.04547851505606411,
+          "evaluations": 720,
+          "feasible_fraction": 1.0,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.04547851505606411,
+          "evaluations": 760,
+          "feasible_fraction": 1.0,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.04536178211129664,
+          "evaluations": 800,
+          "feasible_fraction": 1.0,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.04536178211129664,
+          "evaluations": 840,
+          "feasible_fraction": 1.0,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.043066476028842206,
+          "evaluations": 880,
+          "feasible_fraction": 1.0,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.043066476028842206,
+          "evaluations": 920,
+          "feasible_fraction": 1.0,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.043066476028842206,
+          "evaluations": 960,
+          "feasible_fraction": 1.0,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.04151946091747309,
+          "evaluations": 1000,
+          "feasible_fraction": 1.0,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.04151946091747309,
+          "evaluations": 1040,
+          "feasible_fraction": 1.0,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.060618060877863124,
+        "FSR": 1.0,
+        "HV": 0.4785780254445081,
+        "ITS": 1.0,
+        "evaluations": 1040.0,
+        "n_pareto": 40.0
+      },
+      "replicate": 4,
+      "seed": 1279447868,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "C",
+      "log": [
+        {
+          "best_mass": 0.10220088343826597,
+          "evaluations": 80,
+          "feasible_fraction": 0.025,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.09953991920529058,
+          "evaluations": 120,
+          "feasible_fraction": 0.125,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.0486986527948362,
+          "evaluations": 160,
+          "feasible_fraction": 0.25,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.0486986527948362,
+          "evaluations": 200,
+          "feasible_fraction": 0.5,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.0486986527948362,
+          "evaluations": 240,
+          "feasible_fraction": 0.85,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.052371095277677915,
+          "evaluations": 280,
+          "feasible_fraction": 1.0,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.04535947895554252,
+          "evaluations": 320,
+          "feasible_fraction": 1.0,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.04535947895554252,
+          "evaluations": 360,
+          "feasible_fraction": 1.0,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.04445445023675481,
+          "evaluations": 400,
+          "feasible_fraction": 1.0,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.04445445023675481,
+          "evaluations": 440,
+          "feasible_fraction": 1.0,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.04445445023675481,
+          "evaluations": 480,
+          "feasible_fraction": 1.0,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.03763049368577704,
+          "evaluations": 520,
+          "feasible_fraction": 1.0,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.03763049368577704,
+          "evaluations": 560,
+          "feasible_fraction": 1.0,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.03763049368577704,
+          "evaluations": 600,
+          "feasible_fraction": 1.0,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.03763049368577704,
+          "evaluations": 640,
+          "feasible_fraction": 1.0,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.03763049368577704,
+          "evaluations": 680,
+          "feasible_fraction": 1.0,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.03763049368577704,
+          "evaluations": 720,
+          "feasible_fraction": 1.0,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.03763049368577704,
+          "evaluations": 760,
+          "feasible_fraction": 1.0,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.03763049368577704,
+          "evaluations": 800,
+          "feasible_fraction": 1.0,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.03763049368577704,
+          "evaluations": 840,
+          "feasible_fraction": 1.0,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.03763049368577704,
+          "evaluations": 880,
+          "feasible_fraction": 1.0,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.03763049368577704,
+          "evaluations": 920,
+          "feasible_fraction": 1.0,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.03763049368577704,
+          "evaluations": 960,
+          "feasible_fraction": 1.0,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.03763049368577704,
+          "evaluations": 1000,
+          "feasible_fraction": 1.0,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.03763049368577704,
+          "evaluations": 1040,
+          "feasible_fraction": 1.0,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.08229563964093921,
+        "FSR": 1.0,
+        "HV": 0.4821959449780244,
+        "ITS": 1.0,
+        "evaluations": 1040.0,
+        "n_pareto": 40.0
+      },
+      "replicate": 5,
+      "seed": 787917097,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "C",
+      "log": [
+        {
+          "best_mass": 0.0776624776400011,
+          "evaluations": 80,
+          "feasible_fraction": 0.075,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.06550151378379256,
+          "evaluations": 120,
+          "feasible_fraction": 0.15,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.06096524730717698,
+          "evaluations": 160,
+          "feasible_fraction": 0.35,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.06055768127665248,
+          "evaluations": 200,
+          "feasible_fraction": 0.7,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.05179154146368653,
+          "evaluations": 240,
+          "feasible_fraction": 1.0,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.05179154146368653,
+          "evaluations": 280,
+          "feasible_fraction": 1.0,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.05179154146368653,
+          "evaluations": 320,
+          "feasible_fraction": 1.0,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.04042125575536739,
+          "evaluations": 360,
+          "feasible_fraction": 1.0,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.04033498696458182,
+          "evaluations": 400,
+          "feasible_fraction": 1.0,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.04033498696458182,
+          "evaluations": 440,
+          "feasible_fraction": 1.0,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.04033498696458182,
+          "evaluations": 480,
+          "feasible_fraction": 1.0,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.04033498696458182,
+          "evaluations": 520,
+          "feasible_fraction": 1.0,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.04033498696458182,
+          "evaluations": 560,
+          "feasible_fraction": 1.0,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.04033498696458182,
+          "evaluations": 600,
+          "feasible_fraction": 1.0,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.04033498696458182,
+          "evaluations": 640,
+          "feasible_fraction": 1.0,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.04033498696458182,
+          "evaluations": 680,
+          "feasible_fraction": 1.0,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.04033498696458182,
+          "evaluations": 720,
+          "feasible_fraction": 1.0,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.04033498696458182,
+          "evaluations": 760,
+          "feasible_fraction": 1.0,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.04033498696458182,
+          "evaluations": 800,
+          "feasible_fraction": 1.0,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.038866119591170256,
+          "evaluations": 840,
+          "feasible_fraction": 1.0,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.038866119591170256,
+          "evaluations": 880,
+          "feasible_fraction": 1.0,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.038866119591170256,
+          "evaluations": 920,
+          "feasible_fraction": 1.0,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.038866119591170256,
+          "evaluations": 960,
+          "feasible_fraction": 1.0,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.038866119591170256,
+          "evaluations": 1000,
+          "feasible_fraction": 1.0,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.038866119591170256,
+          "evaluations": 1040,
+          "feasible_fraction": 1.0,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.07195587629817135,
+        "FSR": 1.0,
+        "HV": 0.4820087316971078,
+        "ITS": 1.0,
+        "evaluations": 1040.0,
+        "n_pareto": 40.0
+      },
+      "replicate": 6,
+      "seed": 2879466991,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "C",
+      "log": [
+        {
+          "best_mass": 0.07764673440490263,
+          "evaluations": 80,
+          "feasible_fraction": 0.1,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.04730251920175646,
+          "evaluations": 120,
+          "feasible_fraction": 0.15,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.0525042370942269,
+          "evaluations": 160,
+          "feasible_fraction": 0.3,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.0525042370942269,
+          "evaluations": 200,
+          "feasible_fraction": 0.5,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.048633186830132805,
+          "evaluations": 240,
+          "feasible_fraction": 0.675,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.048633186830132805,
+          "evaluations": 280,
+          "feasible_fraction": 1.0,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.04489868152026923,
+          "evaluations": 320,
+          "feasible_fraction": 1.0,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.04279494903603116,
+          "evaluations": 360,
+          "feasible_fraction": 1.0,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.04279494903603116,
+          "evaluations": 400,
+          "feasible_fraction": 1.0,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.04279494903603116,
+          "evaluations": 440,
+          "feasible_fraction": 1.0,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.04279494903603116,
+          "evaluations": 480,
+          "feasible_fraction": 1.0,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.04279494903603116,
+          "evaluations": 520,
+          "feasible_fraction": 1.0,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.0418124510928526,
+          "evaluations": 560,
+          "feasible_fraction": 1.0,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.0418124510928526,
+          "evaluations": 600,
+          "feasible_fraction": 1.0,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.0418124510928526,
+          "evaluations": 640,
+          "feasible_fraction": 1.0,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.0418124510928526,
+          "evaluations": 680,
+          "feasible_fraction": 1.0,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.0418124510928526,
+          "evaluations": 720,
+          "feasible_fraction": 1.0,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.041240011716274595,
+          "evaluations": 760,
+          "feasible_fraction": 1.0,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.03881819777337404,
+          "evaluations": 800,
+          "feasible_fraction": 1.0,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.03881819777337404,
+          "evaluations": 840,
+          "feasible_fraction": 1.0,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.03881819777337404,
+          "evaluations": 880,
+          "feasible_fraction": 1.0,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.03881819777337404,
+          "evaluations": 920,
+          "feasible_fraction": 1.0,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.03881819777337404,
+          "evaluations": 960,
+          "feasible_fraction": 1.0,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.03881819777337404,
+          "evaluations": 1000,
+          "feasible_fraction": 1.0,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.03881819777337404,
+          "evaluations": 1040,
+          "feasible_fraction": 1.0,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.06276950825430166,
+        "FSR": 1.0,
+        "HV": 0.4786636651361618,
+        "ITS": 1.0,
+        "evaluations": 1040.0,
+        "n_pareto": 40.0
+      },
+      "replicate": 7,
+      "seed": 1309294626,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "C",
+      "log": [
+        {
+          "best_mass": 0.10015262289591859,
+          "evaluations": 80,
+          "feasible_fraction": 0.025,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.09301832705386112,
+          "evaluations": 120,
+          "feasible_fraction": 0.125,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.055911032420372216,
+          "evaluations": 160,
+          "feasible_fraction": 0.25,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.04447843710124063,
+          "evaluations": 200,
+          "feasible_fraction": 0.45,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.04447843710124063,
+          "evaluations": 240,
+          "feasible_fraction": 0.75,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.04447843710124063,
+          "evaluations": 280,
+          "feasible_fraction": 1.0,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.04447843710124063,
+          "evaluations": 320,
+          "feasible_fraction": 1.0,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.04447843710124063,
+          "evaluations": 360,
+          "feasible_fraction": 1.0,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.04403555865588268,
+          "evaluations": 400,
+          "feasible_fraction": 1.0,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.04403555865588268,
+          "evaluations": 440,
+          "feasible_fraction": 1.0,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.0421634864991968,
+          "evaluations": 480,
+          "feasible_fraction": 1.0,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.0421634864991968,
+          "evaluations": 520,
+          "feasible_fraction": 1.0,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.0421634864991968,
+          "evaluations": 560,
+          "feasible_fraction": 1.0,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.04207870452147898,
+          "evaluations": 600,
+          "feasible_fraction": 1.0,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.04207870452147898,
+          "evaluations": 640,
+          "feasible_fraction": 1.0,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.04207870452147898,
+          "evaluations": 680,
+          "feasible_fraction": 1.0,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.04207870452147898,
+          "evaluations": 720,
+          "feasible_fraction": 1.0,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.04207870452147898,
+          "evaluations": 760,
+          "feasible_fraction": 1.0,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.04207870452147898,
+          "evaluations": 800,
+          "feasible_fraction": 1.0,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.04091568324188079,
+          "evaluations": 840,
+          "feasible_fraction": 1.0,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.04033693010474209,
+          "evaluations": 880,
+          "feasible_fraction": 1.0,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.04033693010474209,
+          "evaluations": 920,
+          "feasible_fraction": 1.0,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.04033693010474209,
+          "evaluations": 960,
+          "feasible_fraction": 1.0,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.03844802968249291,
+          "evaluations": 1000,
+          "feasible_fraction": 1.0,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.03803862461494289,
+          "evaluations": 1040,
+          "feasible_fraction": 1.0,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.07712638651890606,
+        "FSR": 1.0,
+        "HV": 0.4816981605892887,
+        "ITS": 1.0,
+        "evaluations": 1040.0,
+        "n_pareto": 40.0
+      },
+      "replicate": 8,
+      "seed": 4159551584,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    },
+    {
+      "arm": "C",
+      "log": [
+        {
+          "best_mass": 0.055543271882722435,
+          "evaluations": 80,
+          "feasible_fraction": 0.025,
+          "generation": 1
+        },
+        {
+          "best_mass": 0.055543271882722435,
+          "evaluations": 120,
+          "feasible_fraction": 0.225,
+          "generation": 2
+        },
+        {
+          "best_mass": 0.046124532191468684,
+          "evaluations": 160,
+          "feasible_fraction": 0.475,
+          "generation": 3
+        },
+        {
+          "best_mass": 0.05271574563422545,
+          "evaluations": 200,
+          "feasible_fraction": 0.85,
+          "generation": 4
+        },
+        {
+          "best_mass": 0.05271574563422545,
+          "evaluations": 240,
+          "feasible_fraction": 1.0,
+          "generation": 5
+        },
+        {
+          "best_mass": 0.05271574563422545,
+          "evaluations": 280,
+          "feasible_fraction": 1.0,
+          "generation": 6
+        },
+        {
+          "best_mass": 0.04040146193637775,
+          "evaluations": 320,
+          "feasible_fraction": 1.0,
+          "generation": 7
+        },
+        {
+          "best_mass": 0.04040146193637775,
+          "evaluations": 360,
+          "feasible_fraction": 1.0,
+          "generation": 8
+        },
+        {
+          "best_mass": 0.03777055022915333,
+          "evaluations": 400,
+          "feasible_fraction": 1.0,
+          "generation": 9
+        },
+        {
+          "best_mass": 0.03777055022915333,
+          "evaluations": 440,
+          "feasible_fraction": 1.0,
+          "generation": 10
+        },
+        {
+          "best_mass": 0.03777055022915333,
+          "evaluations": 480,
+          "feasible_fraction": 1.0,
+          "generation": 11
+        },
+        {
+          "best_mass": 0.03777055022915333,
+          "evaluations": 520,
+          "feasible_fraction": 1.0,
+          "generation": 12
+        },
+        {
+          "best_mass": 0.03777055022915333,
+          "evaluations": 560,
+          "feasible_fraction": 1.0,
+          "generation": 13
+        },
+        {
+          "best_mass": 0.03777055022915333,
+          "evaluations": 600,
+          "feasible_fraction": 1.0,
+          "generation": 14
+        },
+        {
+          "best_mass": 0.03777055022915333,
+          "evaluations": 640,
+          "feasible_fraction": 1.0,
+          "generation": 15
+        },
+        {
+          "best_mass": 0.03777055022915333,
+          "evaluations": 680,
+          "feasible_fraction": 1.0,
+          "generation": 16
+        },
+        {
+          "best_mass": 0.03777055022915333,
+          "evaluations": 720,
+          "feasible_fraction": 1.0,
+          "generation": 17
+        },
+        {
+          "best_mass": 0.03777055022915333,
+          "evaluations": 760,
+          "feasible_fraction": 1.0,
+          "generation": 18
+        },
+        {
+          "best_mass": 0.03777055022915333,
+          "evaluations": 800,
+          "feasible_fraction": 1.0,
+          "generation": 19
+        },
+        {
+          "best_mass": 0.03777055022915333,
+          "evaluations": 840,
+          "feasible_fraction": 1.0,
+          "generation": 20
+        },
+        {
+          "best_mass": 0.03777055022915333,
+          "evaluations": 880,
+          "feasible_fraction": 1.0,
+          "generation": 21
+        },
+        {
+          "best_mass": 0.03777055022915333,
+          "evaluations": 920,
+          "feasible_fraction": 1.0,
+          "generation": 22
+        },
+        {
+          "best_mass": 0.03777055022915333,
+          "evaluations": 960,
+          "feasible_fraction": 1.0,
+          "generation": 23
+        },
+        {
+          "best_mass": 0.03777055022915333,
+          "evaluations": 1000,
+          "feasible_fraction": 1.0,
+          "generation": 24
+        },
+        {
+          "best_mass": 0.03777055022915333,
+          "evaluations": 1040,
+          "feasible_fraction": 1.0,
+          "generation": 25
+        }
+      ],
+      "metrics": {
+        "D": 0.07303620509407284,
+        "FSR": 1.0,
+        "HV": 0.48187460907862734,
+        "ITS": 1.0,
+        "evaluations": 1040.0,
+        "n_pareto": 40.0
+      },
+      "replicate": 9,
+      "seed": 2130326756,
+      "tag": "SYNTHETIC",
+      "task": "T1"
+    }
+  ],
+  "configuration": {
+    "alpha": 0.05,
+    "arms": {
+      "A": "expert biomimetic search (human baseline; SYNTHETIC stand-in here)",
+      "B": "generative design without evolutionary data (uniform prior on D)",
+      "C": "proposed framework (analog-shaped prior p_c and trade-off constraints)"
+    },
+    "bootstrap_resamples": 2000,
+    "contrasts": [
+      "C vs B",
+      "C vs A"
+    ],
+    "generations": 25,
+    "metrics": [
+      "FSR",
+      "HV",
+      "D",
+      "ITS"
+    ],
+    "population": 40,
+    "provenance_tag": "SYNTHETIC",
+    "replicates": 10,
+    "specification": {
+      "acceleration": 49.050000000000004,
+      "assumptions": [
+        "A1 cantilever length 180 mm",
+        "A2 moving payload 2.0 kg",
+        "A3 peak acceleration 5 g",
+        "A4 allowable tip deflection 0.15 mm",
+        "A5 safety factor on yield 2.0",
+        "A6 mass cap 120 g",
+        "A7 AlSi10Mg order-of-magnitude properties [NEEDS INPUT: certified datasheet]"
+      ],
+      "bounds": {
+        "b": [
+          0.01,
+          0.06
+        ],
+        "h": [
+          0.01,
+          0.08
+        ],
+        "rho": [
+          0.05,
+          1.0
+        ],
+        "t": [
+          0.0004,
+          0.004
+        ]
+      },
+      "delta_max": 0.00015,
+      "length": 0.18,
+      "mass_max": 0.12,
+      "modulus": 70000000000.0,
+      "payload": 2.0,
+      "provenance_tag": "MODELED",
+      "rho_solid": 2670.0,
+      "safety_factor": 2.0,
+      "t_min": 0.0004,
+      "tip_load_N": 98.10000000000001,
+      "yield_strength": 230000000.0
+    },
+    "tasks": [
+      "T1"
+    ]
+  },
+  "environment": {
+    "evoproto": "0.1.0",
+    "machine": "x86_64",
+    "packages": {
+      "matplotlib": "3.11.2",
+      "networkx": "3.6.1",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1"
+    },
+    "platform": "Linux-6.18.44-fc-v33-x86_64-with-glibc2.39",
+    "python": "3.11.15"
+  },
+  "statistics": {
+    "T1": [
+      {
+        "bootstrap": {
+          "confidence": 0.95,
+          "high": 0.0,
+          "low": 0.0,
+          "median": 0.0,
+          "n_resamples": 2000.0
+        },
+        "cliffs_delta": {
+          "delta": 0.0,
+          "magnitude": "negligible"
+        },
+        "contrast": "C vs B",
+        "mean_x": 1.0,
+        "mean_y": 1.0,
+        "metric": "FSR",
+        "n_pairs": 10,
+        "p_holm": 1.0,
+        "p_value": 1.0,
+        "significant": false,
+        "statistic": NaN,
+        "task": "T1"
+      },
+      {
+        "bootstrap": {
+          "confidence": 0.95,
+          "high": 0.005626572736187385,
+          "low": -0.0005798279424131247,
+          "median": 0.0023979566179069267,
+          "n_resamples": 2000.0
+        },
+        "cliffs_delta": {
+          "delta": 0.56,
+          "magnitude": "large"
+        },
+        "contrast": "C vs B",
+        "mean_x": 0.481439828255526,
+        "mean_y": 0.47824693817331754,
+        "metric": "HV",
+        "n_pairs": 10,
+        "p_holm": 0.421875,
+        "p_value": 0.130859375,
+        "significant": false,
+        "statistic": 12.0,
+        "task": "T1"
+      },
+      {
+        "bootstrap": {
+          "confidence": 0.95,
+          "high": 0.001366972350079404,
+          "low": -0.010324439639042712,
+          "median": -0.005120619635212771,
+          "n_resamples": 2000.0
+        },
+        "cliffs_delta": {
+          "delta": -0.38,
+          "magnitude": "medium"
+        },
+        "contrast": "C vs B",
+        "mean_x": 0.07343782004404908,
+        "mean_y": 0.07846429102777353,
+        "metric": "D",
+        "n_pairs": 10,
+        "p_holm": 0.421875,
+        "p_value": 0.10546875,
+        "significant": false,
+        "statistic": 11.0,
+        "task": "T1"
+      },
+      {
+        "bootstrap": {
+          "confidence": 0.95,
+          "high": 0.0,
+          "low": -2.0,
+          "median": 0.0,
+          "n_resamples": 2000.0
+        },
+        "cliffs_delta": {
+          "delta": -0.4,
+          "magnitude": "medium"
+        },
+        "contrast": "C vs B",
+        "mean_x": 1.2,
+        "mean_y": 2.0,
+        "metric": "ITS",
+        "n_pairs": 10,
+        "p_holm": 0.421875,
+        "p_value": 0.125,
+        "significant": false,
+        "statistic": 0.0,
+        "task": "T1"
+      },
+      {
+        "bootstrap": {
+          "confidence": 0.95,
+          "high": 1.0,
+          "low": 0.5,
+          "median": 0.75,
+          "n_resamples": 2000.0
+        },
+        "cliffs_delta": {
+          "delta": 1.0,
+          "magnitude": "large"
+        },
+        "contrast": "C vs A",
+        "mean_x": 1.0,
+        "mean_y": 0.275,
+        "metric": "FSR",
+        "n_pairs": 10,
+        "p_holm": 0.015625,
+        "p_value": 0.001953125,
+        "significant": true,
+        "statistic": 0.0,
+        "task": "T1"
+      },
+      {
+        "bootstrap": {
+          "confidence": 0.95,
+          "high": 0.4786636651361618,
+          "low": 0.33933911560936303,
+          "median": 0.38830907062630104,
+          "n_resamples": 2000.0
+        },
+        "cliffs_delta": {
+          "delta": 1.0,
+          "magnitude": "large"
+        },
+        "contrast": "C vs A",
+        "mean_x": 0.481439828255526,
+        "mean_y": 0.08088693832598885,
+        "metric": "HV",
+        "n_pairs": 10,
+        "p_holm": 0.015625,
+        "p_value": 0.001953125,
+        "significant": true,
+        "statistic": 0.0,
+        "task": "T1"
+      },
+      {
+        "bootstrap": {
+          "confidence": 0.95,
+          "high": 0.07331861120768833,
+          "low": -0.022190619688827504,
+          "median": 0.06169378456608239,
+          "n_resamples": 2000.0
+        },
+        "cliffs_delta": {
+          "delta": 0.24,
+          "magnitude": "small"
+        },
+        "contrast": "C vs A",
+        "mean_x": 0.07343782004404908,
+        "mean_y": 0.038452154521364586,
+        "metric": "D",
+        "n_pairs": 10,
+        "p_holm": 0.419921875,
+        "p_value": 0.083984375,
+        "significant": false,
+        "statistic": 10.0,
+        "task": "T1"
+      },
+      {
+        "bootstrap": {
+          "confidence": 0.95,
+          "high": -9.0,
+          "low": -24.0,
+          "median": -12.0,
+          "n_resamples": 2000.0
+        },
+        "cliffs_delta": {
+          "delta": -1.0,
+          "magnitude": "large"
+        },
+        "contrast": "C vs A",
+        "mean_x": 1.2,
+        "mean_y": 15.1,
+        "metric": "ITS",
+        "n_pairs": 10,
+        "p_holm": 0.015625,
+        "p_value": 0.001953125,
+        "significant": true,
+        "statistic": 0.0,
+        "task": "T1"
+      }
+    ],
+    "alpha": 0.05,
+    "correction": "Holm (within task)"
+  }
+}

@@ -1,0 +1,95 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "evoproto"
+version = "0.1.0"
+description = "Reference implementation of an evolution-informed, evidence-gated engineering design framework"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = [
+    "biomimetic design",
+    "evolutionary data",
+    "knowledge graph",
+    "generative design",
+    "multi-objective optimization",
+    "additive manufacturing",
+    "phylogenetic comparative methods",
+    "reproducible research",
+]
+authors = [
+    { name = "Olga Torstensson" },
+    { name = "Yuriy Danyk" },
+    { name = "Dmytro Prokopovych-Tkachenko" },
+]
+maintainers = [
+    { name = "Dmytro Prokopovych-Tkachenko" },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+    "numpy>=1.22",
+    "scipy>=1.8",
+    "networkx>=2.8",
+    "matplotlib>=3.5",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.4",
+]
+notebooks = [
+    "jupyter>=1.0",
+    "ipykernel>=6.0",
+]
+
+[project.scripts]
+evoproto = "evoproto.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/omega2417/bnt/tree/master/evoproto"
+Repository = "https://github.com/omega2417/bnt"
+Archive = "https://doi.org/NEEDS-INPUT-ZENODO-DOI"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+evoproto = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = ["slow: runs a full search or figure pipeline"]
+filterwarnings = ["error::RuntimeWarning"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "C4", "NPY"]
+ignore = ["E741", "B008"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["E501"]
+"src/evoproto/figures.py" = ["E501", "C408"]  # dict(...) is the matplotlib idiom
+
+[tool.coverage.run]
+source = ["evoproto"]
+branch = true

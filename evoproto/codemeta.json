@@ -1,0 +1,55 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "identifier": "evoproto",
+  "name": "evoproto",
+  "description": "Reference implementation of an evolution-informed, evidence-gated engineering design framework: evolutionary-engineering knowledge graph, phylogenetic signal and convergence measures, analog retrieval with transfer uncertainty, constrained multi-objective search, evidence gate with abstention, and a pre-registered three-arm experimental protocol.",
+  "version": "0.1.0",
+  "softwareVersion": "0.1.0",
+  "dateCreated": "2026-09-18",
+  "datePublished": "2026-09-18",
+  "license": "https://spdx.org/licenses/MIT",
+  "programmingLanguage": "Python",
+  "runtimePlatform": "Python 3.9+",
+  "codeRepository": "https://github.com/omega2417/bnt",
+  "developmentStatus": "active",
+  "applicationCategory": "Engineering informatics",
+  "keywords": [
+    "biomimetic design",
+    "evolutionary data",
+    "knowledge graph",
+    "generative design",
+    "multi-objective optimization",
+    "additive manufacturing",
+    "phylogenetic comparative methods"
+  ],
+  "softwareRequirements": [
+    "numpy>=1.22",
+    "scipy>=1.8",
+    "networkx>=2.8",
+    "matplotlib>=3.5"
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Olga",
+      "familyName": "Torstensson",
+      "affiliation": { "@type": "Organization", "name": "Halmstad University" }
+    },
+    {
+      "@type": "Person",
+      "givenName": "Yuriy",
+      "familyName": "Danyk",
+      "affiliation": { "@type": "Organization", "name": "Igor Sikorsky Kyiv Polytechnic Institute" }
+    },
+    {
+      "@type": "Person",
+      "givenName": "Dmytro",
+      "familyName": "Prokopovych-Tkachenko",
+      "affiliation": { "@type": "Organization", "name": "University of Customs and Finance, Dnipro" }
+    }
+  ],
+  "funder": { "@type": "Organization", "name": "Halmstad University, Sweden" },
+  "readme": "https://github.com/omega2417/bnt/blob/master/evoproto/README.md",
+  "issueTracker": "https://github.com/omega2417/bnt/issues"
+}

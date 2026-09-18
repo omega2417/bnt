@@ -1,0 +1,33 @@
+{
+  "title": "evoproto v0.1.0: reference implementation of an evolution-informed, evidence-gated engineering design framework",
+  "description": "<p>Reference implementation accompanying the article <em>From Evolutionary Biology Data to Technological Prototypes: An AI-Driven Engineering Design Framework with an Evidence-Gated Validation Protocol</em>.</p><p>The package implements the evolutionary-engineering knowledge graph (six node types, nine typed edges, homology and convergence mutually exclusive), Blomberg's K, Pagel's lambda and Stayton's C1 with a Brownian null, the analog retrieval score with a transfer-uncertainty measure, a constrained NSGA-II-style search with Deb's constraint domination and exact two-objective hypervolume, the evidence-gated decision rule with an abstention branch, and the three-arm pre-registered protocol with Wilcoxon / Holm / Cliff's delta / bootstrap analysis. It also regenerates every figure of the article from code.</p><p>The bundled pipeline runs in SYNTHETIC mode only: no biological records are redistributed. All numbers produced by the archive are tagged SYNTHETIC or MODELED and support no empirical claim.</p>",
+  "upload_type": "software",
+  "license": "MIT",
+  "access_right": "open",
+  "version": "0.1.0",
+  "language": "eng",
+  "keywords": [
+    "biomimetic design",
+    "evolutionary data",
+    "knowledge graph",
+    "generative design",
+    "multi-objective optimization",
+    "additive manufacturing",
+    "phylogenetic comparative methods",
+    "reproducible research",
+    "pre-registration"
+  ],
+  "creators": [
+    { "name": "Torstensson, Olga", "affiliation": "Halmstad University, Sweden" },
+    { "name": "Danyk, Yuriy", "affiliation": "Igor Sikorsky Kyiv Polytechnic Institute, Ukraine" },
+    { "name": "Prokopovych-Tkachenko, Dmytro", "affiliation": "University of Customs and Finance, Dnipro, Ukraine" }
+  ],
+  "contributors": [
+    { "name": "Prokopovych-Tkachenko, Dmytro", "type": "ProjectLeader", "affiliation": "University of Customs and Finance, Dnipro, Ukraine" }
+  ],
+  "related_identifiers": [
+    { "identifier": "https://github.com/omega2417/bnt", "relation": "isSupplementTo", "scheme": "url" }
+  ],
+  "grants": [],
+  "notes": "Funding: Halmstad University, Sweden. NEEDS INPUT: add the article DOI as a related identifier (relation: isSupplementTo) once the article is accepted, and add ORCIDs for every creator."
+}

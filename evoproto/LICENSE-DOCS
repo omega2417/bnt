@@ -1,0 +1,18 @@
+Documentation, figures and the pre-registration materials in this repository
+(everything under docs/, figures/ and notebooks/) are licensed under the
+Creative Commons Attribution 4.0 International License (CC BY 4.0).
+
+    https://creativecommons.org/licenses/by/4.0/
+
+Attribution: O. Torstensson, Y. Danyk, D. Prokopovych-Tkachenko, "From
+Evolutionary Biology Data to Technological Prototypes: An AI-Driven
+Engineering Design Framework with an Evidence-Gated Validation Protocol",
+reference implementation evoproto v0.1.0.
+
+The software itself (everything under src/, tests/ and scripts/) is licensed
+under the MIT License; see LICENSE.
+
+No third-party biological data are redistributed here. Records retrieved from
+Open Tree of Life, MorphoBank and the Paleobiology Database remain under the
+licenses of those resources and must be redistributed under their terms only;
+see docs/datasheet.md.

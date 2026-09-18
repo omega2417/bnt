@@ -1,0 +1,6 @@
+# Runtime dependencies (loose bounds; see requirements-lock.txt for the exact
+# versions under which the archived results and figures were produced).
+numpy>=1.22
+scipy>=1.8
+networkx>=2.8
+matplotlib>=3.5

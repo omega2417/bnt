@@ -1,0 +1,70 @@
+name: evoproto CI
+
+on:
+  push:
+    paths: ["evoproto/**", ".github/workflows/ci.yml"]
+  pull_request:
+    paths: ["evoproto/**", ".github/workflows/ci.yml"]
+  workflow_dispatch:
+
+defaults:
+  run:
+    working-directory: evoproto
+
+jobs:
+  test:
+    name: tests (python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.10", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev]"
+      - name: Lint
+        run: python -m ruff check src tests scripts
+      - name: Test
+        run: python -m pytest --cov=evoproto --cov-report=term-missing
+
+  reproducibility:
+    name: reproducibility (dry run, figures, archive)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install pinned versions
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements-lock.txt
+          python -m pip install -e .
+      - name: Dry run twice and compare
+        run: |
+          python -m evoproto.cli dryrun --output results/run-a
+          python -m evoproto.cli dryrun --output results/run-b
+          python - <<'PY'
+          import json
+          a = json.load(open("results/run-a/results.json"))
+          b = json.load(open("results/run-b/results.json"))
+          assert [c["metrics"] for c in a["cells"]] == [c["metrics"] for c in b["cells"]], \
+              "two runs disagree: seeding is not reproducible"
+          print("two independent runs agree exactly")
+          PY
+      - name: Regenerate the figures
+        run: python -m evoproto.cli figures --output figures
+      - name: Check the reference list (structure only; CrossRef needs network)
+        run: python -m evoproto.cli verify-dois --offline
+      - name: Build the Zenodo archive
+        run: python scripts/make_zenodo_archive.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: evoproto-zenodo-archive
+          path: evoproto/dist-zenodo/*.zip

@@ -1,0 +1,50 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software and the article."
+title: "evoproto: reference implementation of an evolution-informed, evidence-gated engineering design framework"
+version: 0.1.0
+date-released: "2026-09-18"
+license: MIT
+type: software
+repository-code: "https://github.com/omega2417/bnt"
+url: "https://github.com/omega2417/bnt/tree/master/evoproto"
+abstract: >-
+  evoproto realizes the evolutionary-engineering knowledge graph, the
+  phylogenetic signal and convergence measures, the analog retrieval score with
+  transfer uncertainty, the constrained multi-objective search, the
+  evidence-gated decision rule with abstention, and the three-arm experimental
+  protocol of the accompanying article. The bundled pipeline runs in synthetic
+  mode only; no biological records are distributed with the package.
+keywords:
+  - biomimetic design
+  - evolutionary data
+  - knowledge graph
+  - generative design
+  - multi-objective optimization
+  - additive manufacturing
+  - reproducible research
+authors:
+  - family-names: Torstensson
+    given-names: Olga
+    affiliation: "School of Information Technology, Halmstad University, Halmstad, Sweden"
+    # orcid: "https://orcid.org/NEEDS-INPUT"
+  - family-names: Danyk
+    given-names: Yuriy
+    affiliation: "Department of Information Security, National Technical University of Ukraine 'Igor Sikorsky Kyiv Polytechnic Institute', Kyiv, Ukraine"
+    # orcid: "https://orcid.org/NEEDS-INPUT"
+  - family-names: Prokopovych-Tkachenko
+    given-names: Dmytro
+    affiliation: "Department of Cybersecurity and Information Technologies, University of Customs and Finance, Dnipro, Ukraine"
+    # orcid: "https://orcid.org/NEEDS-INPUT"
+preferred-citation:
+  type: article
+  title: "From Evolutionary Biology Data to Technological Prototypes: An AI-Driven Engineering Design Framework with an Evidence-Gated Validation Protocol"
+  authors:
+    - family-names: Torstensson
+      given-names: Olga
+    - family-names: Danyk
+      given-names: Yuriy
+    - family-names: Prokopovych-Tkachenko
+      given-names: Dmytro
+  year: 2026
+  # journal: "NEEDS INPUT: target Elsevier journal"
+  # doi: "NEEDS INPUT: article DOI once assigned"
