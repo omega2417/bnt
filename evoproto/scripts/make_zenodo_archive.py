@@ -44,10 +44,13 @@ INCLUDE = [
     "tests",
     "docs",
     "examples",
+    "notebooks",
     "scripts",
 ]
 
 EXCLUDE_PARTS = {"__pycache__", ".pytest_cache", ".git", ".ipynb_checkpoints", ".mypy_cache"}
+#: A shipped notebook must carry no stored outputs (size, and stale numbers).
+NOTEBOOKS = ["notebooks/evoproto_walkthrough.ipynb"]
 EXCLUDE_SUFFIXES = {".pyc", ".pyo", ".orig", ".rej"}
 
 
@@ -114,6 +117,29 @@ def build_artifacts(destination: Path) -> List[Path]:
     return produced
 
 
+def check_notebooks() -> bool:
+    """Refuse to ship a notebook that carries stored outputs."""
+    import json
+
+    clean = True
+    for relative in NOTEBOOKS:
+        path = ROOT / relative
+        if not path.exists():
+            print(f"missing notebook: {relative}", file=sys.stderr)
+            clean = False
+            continue
+        with open(path, encoding="utf-8") as handle:
+            notebook = json.load(handle)
+        stored = sum(
+            1 for cell in notebook["cells"]
+            if cell["cell_type"] == "code" and cell.get("outputs")
+        )
+        if stored:
+            print(f"{relative}: {stored} cells carry stored output", file=sys.stderr)
+            clean = False
+    return clean
+
+
 def run_tests() -> bool:
     """Run the test suite; the archive should never ship a failing build."""
     environment = dict(os.environ, PYTHONPATH=str(SRC))
@@ -147,6 +173,10 @@ def main(argv: List[str] | None = None) -> int:
     if stage.exists():
         shutil.rmtree(stage)
     stage.mkdir(parents=True)
+
+    if not check_notebooks():
+        print("notebook check failed; refusing to build the archive", file=sys.stderr)
+        return 1
 
     if not args.skip_tests:
         print("running the test suite ...")

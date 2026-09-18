@@ -33,6 +33,24 @@ Dependencies are deliberately light — NumPy, SciPy, NetworkX, Matplotlib — s
 reviewer can execute the protocol code without proprietary tools. Python 3.9 or
 newer.
 
+## Start here: the walkthrough notebook
+
+[`notebooks/evoproto_walkthrough.ipynb`](notebooks/evoproto_walkthrough.ipynb)
+runs the whole framework end to end with explanations and 17 plots — provenance
+and curation, the knowledge graph drawn as a graph, phylogenetic signal and a
+convergence p-value, analog scoring decomposed term by term, the feasible region
+of the design space, the three search arms, the decision map, the statistical
+plan and the ablations. About two minutes on a free Colab runtime, and it
+installs the package itself.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/omega2417/bnt/blob/claude/software-project-publication-lz9nuu/evoproto/notebooks/evoproto_walkthrough.ipynb)
+
+It is also the quickest way to see the two observations the ablations turned up:
+the sampling correction of Eq. (2) leaves the convergence bonus contributing
+about 1 % of the evidence score, and with uniform edge weights a single
+unsupported edge cannot pull `E` below `τ_E`. Both are properties of the
+specification worth settling in the pre-registration.
+
 ## Run it
 
 ```bash
@@ -43,6 +61,7 @@ evoproto ablation      # Section 7.5: arm C with one source of value removed
 evoproto figures       # regenerate Figs. 1-8 into ./figures
 evoproto verify-dois   # CrossRef check of the reference list (offline by default)
 pytest                 # the test suite
+make notebook          # execute the walkthrough notebook end to end (needs nbclient)
 ```
 
 Every command takes `--out FILE` (or `--outdir`) and emits provenance-tagged
@@ -67,6 +86,7 @@ rather than pretending to have checked it.
 | `evoproto.experiment` | arms × tasks × replicates runner, Wilcoxon signed-rank, Holm, Cliff's δ, bootstrap CI, sample size, dry run, ablations | §7 |
 | `evoproto.figures` | regenerates Figs. 1–8 | — |
 | `evoproto.tools.verify_dois` | CrossRef check of every DOI in the reference list | — |
+| `notebooks/` | the Colab walkthrough: every section of the paper, run and plotted | all |
 
 `docs/paper_mapping.md` maps each numbered equation to the function that
 implements it and to the test that checks it.

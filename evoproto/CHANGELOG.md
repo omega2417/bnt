@@ -36,6 +36,11 @@ First release, accompanying the submission of the article.
 - `evoproto.casestudy`: the EOAT bracket case study end to end.
 - `evoproto.figures`: regeneration of Figs. 1-8 from code.
 - `evoproto.tools.verify_dois`: CrossRef check of the reference list.
+- `notebooks/evoproto_walkthrough.ipynb`: a Colab-ready walkthrough of the whole
+  framework with 17 generated plots, covering every section of the paper, plus
+  two observations it surfaces about the specification (the sampling-weighted
+  convergence bonus contributes ~1 % of the evidence score, and uniform edge
+  weights make a single unsupported edge unable to trigger abstention).
 - Command-line interface `evoproto` and a test suite covering seeding, schema
   enforcement, chain extraction, K / lambda / C1, Pareto and hypervolume, the
-  gate logic and a protocol smoke test.
+  gate logic, a protocol smoke test and the shipped notebook.

@@ -2,11 +2,12 @@
 PYTHON ?= python3
 export PYTHONPATH := src
 
-.PHONY: help install test figures dry-run case-study ablation zenodo clean
+.PHONY: help install test notebook figures dry-run case-study ablation zenodo clean
 
 help:
 	@echo "install    install the package in editable mode with dev extras"
 	@echo "test       run the test suite"
+	@echo "notebook   execute the Colab walkthrough end to end (needs nbclient)"
 	@echo "figures    regenerate Figs. 1-8 into ./figures"
 	@echo "dry-run    run the synthetic protocol dry run (Section 7.7)"
 	@echo "case-study run the EOAT bracket case study (Section 6)"
@@ -18,6 +19,12 @@ install:
 
 test:
 	$(PYTHON) -m pytest -q
+
+notebook:
+	$(PYTHON) -c "import nbformat; from nbclient import NotebookClient; \
+	nb = nbformat.read('notebooks/evoproto_walkthrough.ipynb', as_version=4); \
+	NotebookClient(nb, timeout=900, kernel_name='python3').execute(); \
+	print('notebook executed with no errors')"
 
 figures:
 	$(PYTHON) -m evoproto.cli figures --outdir figures
