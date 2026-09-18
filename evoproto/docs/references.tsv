@@ -1,0 +1,63 @@
+1		J.M. Benyus, Biomimicry: Innovation Inspired by Nature, William Morrow, New York, 1997.
+2	10.1098/rsif.2006.0127	J.F.V. Vincent, O.A. Bogatyreva, N.R. Bogatyrev, A. Bowyer, A.-K. Pahl, Biomimetics: its practice and theory, J. R. Soc. Interface 3 (2006) 471–482.
+3	10.1098/rsta.2009.0011	B. Bhushan, Biomimetics: lessons from nature – an overview, Philos. Trans. R. Soc. A 367 (2009) 1445–1486.
+4	10.1088/1748-3182/8/1/013001	N.F. Lepora, P. Verschure, T.J. Prescott, The state of the art in biomimetics, Bioinspir. Biomim. 8 (2013) 013001.
+5	10.1088/1748-3190/12/1/011002	P.-E. Fayemi, K. Wanieck, C. Zollfrank, N. Maranzana, A. Aoussat, Biomimetics: process, tools and practice, Bioinspir. Biomim. 12 (2017) 011002.
+6	10.48550/arXiv.2212.13196	Q. Zhu, X. Zhang, J. Luo, Biologically inspired design concept generation using generative pre-trained transformers, arXiv:2212.13196 (2022).
+7	10.48550/arXiv.2307.14377	L. Makatura, M. Foshey, B. Wang, F. Hähnlein, P. Ma, B. Deng, M. Tjandrasuwita, A. Spielberg, C.E. Owens, P.Y. Chen, A. Zhao, A. Zhu, W.J. Norton, E. Gu, J. Jacob, Y. Li, A. Schulz, W. Matusik, How can large language models help humans in design and manufacturing?, arXiv:2307.14377 (2023).
+8	10.1115/1.4053859	L. Regenwetter, A.H. Nobari, F. Ahmed, Deep generative models in engineering design: a review, J. Mech. Des. 144 (2022) 071704.
+9	10.1145/3447772	A. Hogan, E. Blomqvist, M. Cochez, C. d’Amato, G. de Melo, C. Gutierrez, S. Kirrane, J.E. Labra Gayo, R. Navigli, S. Neumaier, A.-C. Ngonga Ngomo, A. Polleres, S.M. Rashid, A. Rula, L. Schmelzeisen, J. Sequeda, S. Staab, A. Zimmermann, Knowledge graphs, ACM Comput. Surv. 54 (2021) 71.
+10	10.1016/j.eswa.2019.112995	S. Sarica, J. Luo, K.L. Wood, TechNet: technology semantic network based on patent data, Expert Syst. Appl. 142 (2020) 112995.
+11	10.1109/4235.996017	K. Deb, A. Pratap, S. Agarwal, T. Meyarivan, A fast and elitist multiobjective genetic algorithm: NSGA-II, IEEE Trans. Evol. Comput. 6 (2002) 182–197.
+12	10.1109/4235.797969	E. Zitzler, L. Thiele, Multiobjective evolutionary algorithms: a comparative case study and the strength Pareto approach, IEEE Trans. Evol. Comput. 3 (1999) 257–271.
+13	10.1007/s11047-018-9685-y	M.T.M. Emmerich, A.H. Deutz, A tutorial on multiobjective optimization: fundamentals and evolutionary methods, Nat. Comput. 17 (2018) 585–609.
+14	10.1109/ACCESS.2020.2990567	J. Blank, K. Deb, pymoo: multi-objective optimization in Python, IEEE Access 8 (2020) 89497–89509.
+15	10.1145/3571730	Z. Ji, N. Lee, R. Frieske, T. Yu, D. Su, Y. Xu, E. Ishii, Y.J. Bang, A. Madotto, P. Fung, Survey of hallucination in natural language generation, ACM Comput. Surv. 55 (2023) 248.
+16	10.1098/rspb.1979.0086	S.J. Gould, R.C. Lewontin, The spandrels of San Marco and the Panglossian paradigm: a critique of the adaptationist programme, Proc. R. Soc. Lond. B 205 (1979) 581–598.
+17	10.1017/S0094837300004310	S.J. Gould, E.S. Vrba, Exaptation – a missing term in the science of form, Paleobiology 8 (1982) 4–15.
+18	10.1017/CBO9780511803161	J. Pearl, Causality: Models, Reasoning, and Inference, second ed., Cambridge University Press, Cambridge, 2009.
+19		J. Peters, D. Janzing, B. Schölkopf, Elements of Causal Inference: Foundations and Learning Algorithms, MIT Press, Cambridge, MA, 2017.
+20	10.1016/j.destud.2009.04.003	M. Helms, S.S. Vattam, A.K. Goel, Biologically inspired design: process and products, Des. Stud. 30 (2009) 606–622.
+21	10.1017/S0890060405050109	A. Chakrabarti, P. Sarkar, B. Leelavathamma, B.S. Nataraju, A functional representation for aiding biomimetic and artificial inspiration of new ideas, Artif. Intell. Eng. Des. Anal. Manuf. 19 (2005) 113–132.
+22	10.1016/j.cad.2011.03.010	A.K. Goel, S. Vattam, B. Wiltgen, M. Helms, Cognitive, collaborative, conceptual and creative – four characteristics of the next generation of knowledge-based CAD systems: a study in biologically inspired design, Comput.-Aided Des. 44 (2012) 879–900.
+23	10.1016/j.cirp.2011.06.001	L.H. Shu, K. Ueda, I. Chiu, H. Cheong, Biologically inspired design, CIRP Ann. 60 (2011) 673–693.
+24	10.1115/DETC2010-28233	J.K.S. Nagel, R.B. Stone, D.A. McAdams, An engineering-to-biology thesaurus for engineering design, in: Proc. ASME IDETC/CIE 2010, Montreal, 2010, DETC2010-28233. [[VERIFY DOI]]
+25	10.1111/j.1558-5646.2011.01289.x	J.B. Losos, Convergence, adaptation, and constraint, Evolution 65 (2011) 1827–1840.
+26	10.1126/science.1188545	D.B. Wake, M.H. Wake, C.D. Specht, Homoplasy: from detecting pattern to determining process and mechanism of evolution, Science 331 (2011) 1032–1035.
+27	10.1111/evo.12729	C.T. Stayton, The definition, recognition, and interpretation of convergent evolution, and two new measures for quantifying and assessing the significance of convergence, Evolution 69 (2015) 2140–2153.
+28	10.1111/2041-210X.12195	K. Arbuckle, C.M. Bennett, M.P. Speed, A simple measure of the strength of convergent evolution, Methods Ecol. Evol. 5 (2014) 685–693.
+29	10.1093/icb/45.2.256	P.C. Wainwright, M.E. Alfaro, D.I. Bolnick, C.D. Hulsey, Many-to-one mapping of form to function: a general principle in organismal design?, Integr. Comp. Biol. 45 (2005) 256–262.
+30	10.1146/annurev.ecolsys.38.091206.095706	P.C. Wainwright, Functional versus morphological diversity in macroevolution, Annu. Rev. Ecol. Evol. Syst. 38 (2007) 381–401.
+31	10.1086/284325	J. Felsenstein, Phylogenies and the comparative method, Am. Nat. 125 (1985) 1–15.
+32	10.1038/44766	M. Pagel, Inferring the historical patterns of biological evolution, Nature 401 (1999) 877–884.
+33	10.1086/343873	R.P. Freckleton, P.H. Harvey, M. Pagel, Phylogenetic analysis and comparative data: a test and review of evidence, Am. Nat. 160 (2002) 712–726.
+34	10.1111/j.0014-3820.2003.tb00285.x	S.P. Blomberg, T. Garland Jr., A.R. Ives, Testing for phylogenetic signal in comparative data: behavioral traits are more labile, Evolution 57 (2003) 717–745.
+35	10.1093/bioinformatics/btg412	E. Paradis, J. Claude, K. Strimmer, APE: analyses of phylogenetics and evolution in R language, Bioinformatics 20 (2004) 289–290.
+36	10.1111/j.2041-210X.2011.00169.x	L.J. Revell, phytools: an R package for phylogenetic comparative biology (and other things), Methods Ecol. Evol. 3 (2012) 217–223.
+37	10.1126/science.aam5979	Z.D. Blount, R.E. Lenski, J.B. Losos, Contingency and determinism in evolution: replaying life’s tape, Science 362 (2018) eaam5979.
+38	10.1016/j.knosys.2021.106873	J. Luo, S. Sarica, K.L. Wood, Guiding data-driven design ideation by knowledge distance, Knowl.-Based Syst. 218 (2021) 106873.
+39	10.48550/arXiv.2005.11401	P. Lewis, E. Perez, A. Piktus, F. Petroni, V. Karpukhin, N. Goyal, H. Küttler, M. Lewis, W. Yih, T. Rocktäschel, S. Riedel, D. Kiela, Retrieval-augmented generation for knowledge-intensive NLP tasks, in: Adv. Neural Inf. Process. Syst. 33 (NeurIPS 2020), 2020, arXiv:2005.11401.
+40	10.1016/j.cad.2010.09.009	S. Krish, A practical generative design method, Comput.-Aided Des. 43 (2011) 88–100.
+41	10.1016/0045-7825(88)90086-2	M.P. Bendsøe, N. Kikuchi, Generating optimal topologies in structural design using a homogenization method, Comput. Methods Appl. Mech. Eng. 71 (1988) 197–224.
+42	10.1007/s001580050176	O. Sigmund, A 99 line topology optimization code written in Matlab, Struct. Multidiscip. Optim. 21 (2001) 120–127.
+43	10.1017/CBO9781139878326	L.J. Gibson, M.F. Ashby, Cellular Solids: Structure and Properties, second ed., Cambridge University Press, Cambridge, 1997.
+44		M.F. Ashby, Materials Selection in Mechanical Design, fourth ed., Butterworth-Heinemann, Oxford, 2011.
+45	10.1016/j.addma.2019.03.033	A. du Plessis, C. Broeckhoven, I. Yadroitsava, I. Yadroitsev, C.H. Hands, R. Kunju, D. Bhate, Beautiful and functional: a review of biomimetic design in additive manufacturing, Addit. Manuf. 27 (2019) 408–427.
+46	10.1016/j.matdes.2019.108164	J. Plocher, A. Panesar, Review on design and structural optimisation in additive manufacturing: towards next-generation lightweight structures, Mater. Des. 183 (2019) 108164.
+47	10.1007/978-3-030-56127-7	I. Gibson, D. Rosen, B. Stucker, M. Khorasani, Additive Manufacturing Technologies, third ed., Springer, Cham, 2021.
+48	10.1073/pnas.1423041112	C.E. Hinchliff, S.A. Smith, J.F. Allman, J.G. Burleigh, R. Chaudhary, L.M. Coghill, K.A. Crandall, J. Deng, B.T. Drew, R. Gazis, K. Gude, D.S. Hibbett, L.A. Katz, H.D. Laughinghouse, E.J. McTavish, P.E. Midford, C.L. Owen, R.H. Ree, J.A. Rees, D.E. Soltis, T. Williams, K.A. Cranston, Synthesis of phylogeny and taxonomy into a comprehensive tree of life, Proc. Natl. Acad. Sci. U.S.A. 112 (2015) 12764–12769.
+49		Open Tree of Life Project, Open Tree of Life – documentation and APIs, https://opentreeoflife.github.io/ (accessed 18 September 2026).
+50	10.1111/j.1096-0031.2011.00355.x	M.A. O’Leary, S. Kaufman, MorphoBank: phylophenomics in the “cloud”, Cladistics 27 (2011) 529–537.
+51		Phoenix Bioinformatics, MorphoBank, https://phoenixbioinfo.org/morphobank/ (accessed 18 September 2026).
+52	10.1017/pab.2015.39	S.E. Peters, M. McClennen, The Paleobiology Database application programming interface, Paleobiology 42 (2016) 1–7.
+53		The Paleobiology Database, https://paleobiodb.org/ (accessed 18 September 2026).
+54	10.1038/sdata.2016.18	M.D. Wilkinson, M. Dumontier, I.J. Aalbersberg, et al., The FAIR Guiding Principles for scientific data management and stewardship, Sci. Data 3 (2016) 160018.
+55	10.1145/3458723	T. Gebru, J. Morgenstern, B. Vecchione, J.W. Vaughan, H. Wallach, H. Daumé III, K. Crawford, Datasheets for datasets, Commun. ACM 64 (2021) 86–92.
+56	10.1145/3287560.3287596	M. Mitchell, S. Wu, A. Zaldivar, P. Barnes, L. Vasserman, B. Hutchinson, E. Spitzer, I.D. Raji, T. Gebru, Model cards for model reporting, in: Proc. Conf. Fairness, Accountability, and Transparency (FAT* ’19), ACM, 2019, pp. 220–229.
+57		S. Vogel, Comparative Biomechanics: Life’s Physical World, second ed., Princeton University Press, Princeton, 2013.
+58	10.1103/PhysRev.4.345	E. Buckingham, On physically similar systems; illustrations of the use of dimensional equations, Phys. Rev. 4 (1914) 345–376.
+59	10.1146/annurev.es.20.110189.000525	M. LaBarbera, Analyzing body size as a factor in ecology and evolution, Annu. Rev. Ecol. Syst. 20 (1989) 97–117.
+60	10.2307/3001968	F. Wilcoxon, Individual comparisons by ranking methods, Biometrics Bull. 1 (1945) 80–83.
+61		S. Holm, A simple sequentially rejective multiple test procedure, Scand. J. Stat. 6 (1979) 65–70.
+62	10.1037/0033-2909.114.3.494	N. Cliff, Dominance statistics: ordinal analyses to answer ordinal questions, Psychol. Bull. 114 (1993) 494–509.
+63	10.1214/aos/1176344552	B. Efron, Bootstrap methods: another look at the jackknife, Ann. Stat. 7 (1979) 1–26.

@@ -1,0 +1,47 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software and the paper."
+title: "evoproto: reference implementation of an evidence-gated, evolution-informed engineering design framework"
+version: 0.1.0
+date-released: "2026-09-18"
+license: MIT
+type: software
+abstract: >-
+  Reference implementation of the framework described in "From Evolutionary
+  Biology Data to Technological Prototypes: An AI-Driven Engineering Design
+  Framework with an Evidence-Gated Validation Protocol". It provides the
+  evolutionary-engineering knowledge graph, phylogenetic signal and convergence
+  measures, analog retrieval with a transfer-uncertainty measure, constrained
+  multi-objective search, the evidence gate with its abstention branch, the
+  three-arm experimental protocol with its statistical analysis plan, and the
+  scripts that regenerate every figure of the paper. The package runs in
+  synthetic mode: no biological records are bundled.
+authors:
+  - family-names: Torstensson
+    given-names: Olga
+    affiliation: "School of Information Technology, Halmstad University, Sweden"
+  - family-names: Danyk
+    given-names: Yuriy
+    affiliation: "Department of Information Security, National Technical University of Ukraine 'Igor Sikorsky Kyiv Polytechnic Institute', Kyiv, Ukraine"
+  - family-names: Prokopovych-Tkachenko
+    given-names: Dmytro
+    affiliation: "Department of Cybersecurity and Information Technologies, University of Customs and Finance, Dnipro, Ukraine"
+keywords:
+  - biomimetic design
+  - evolutionary data
+  - knowledge graph
+  - generative design
+  - multi-objective optimization
+  - additive manufacturing
+  - reproducible research
+references:
+  - type: article
+    title: "From Evolutionary Biology Data to Technological Prototypes: An AI-Driven Engineering Design Framework with an Evidence-Gated Validation Protocol"
+    authors:
+      - family-names: Torstensson
+        given-names: Olga
+      - family-names: Danyk
+        given-names: Yuriy
+      - family-names: Prokopovych-Tkachenko
+        given-names: Dmytro
+    year: 2026
+    notes: "Manuscript; the DOI is added once the article is published."
