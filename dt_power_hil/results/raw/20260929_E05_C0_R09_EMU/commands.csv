@@ -1,0 +1,2 @@
+run_id,command_id,action,reason,sent_s,ack_s,effect_s,effect_kind,accepted,reject_reason,retry_of
+20260929_E05_C0_R09_EMU,20260929_E05_C0_R09_EMU-c00000,SET_AUX_ON,schedule,0.0,0.032,0.2,edge,True,,

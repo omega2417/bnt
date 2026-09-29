@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0",
+  "frozen_before_validation": true,
+  "C0": {"description": "schedule only + shared protections"},
+  "C1": {"aux_off_soc": 0.30, "aux_on_soc": 0.40, "minimum_dwell_s": 60},
+  "C2": {"horizon_s": 21600, "step_s": 300, "reserve_soc": 0.30, "return_pred_soc": 0.35, "return_now_soc": 0.40, "minimum_dwell_s": 60,
+          "forecast": "causal exponential smoothing of measured generation (alpha=0.05/min) + known lighting schedule"},
+  "C_oracle": {"description": "C2 logic with perfect future generation profile; information bound only, never mixed with C2"},
+  "stop_soc_reference": 0.20,
+  "epsilon_p_w": 0.5
+}

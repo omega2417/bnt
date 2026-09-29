@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "bench_id": "DT-NODE01-12V",
+  "note": "Datasheet figures are nominal values as published by manufacturers; every value marked verify=true must be re-checked against the datasheet revision / nameplate of the actual unit before a physical run.",
+  "battery": {
+    "part": "LiFePO4 4S1P 12.8 V / 40 Ah pack with integrated 4S BMS (DALY 4S 12V 40A class)",
+    "chemistry": "LiFePO4",
+    "nameplate_voltage_v": 12.8,
+    "nameplate_capacity_ah": 40.0,
+    "charge_voltage_v": 14.2,
+    "bms_overvoltage_v": 14.6,
+    "bms_undervoltage_v": 10.0,
+    "max_charge_current_a": 20.0,
+    "max_discharge_current_a": 40.0,
+    "charge_temp_c": [0.0, 45.0],
+    "discharge_temp_c": [-20.0, 60.0],
+    "verify": true,
+    "emulation_truth": {
+      "capacity_ah_mean": 39.0, "capacity_ah_sd": 0.5,
+      "r0_ohm_mean": 0.018, "r0_ohm_sd": 0.002,
+      "r1_ohm": 0.010, "c1_f": 20000.0,
+      "coulombic_eff": 0.995,
+      "self_discharge_w": 0.0
+    }
+  },
+  "controller": {"part": "Espressif ESP32-S3-DevKitC-1 (ESP32-S3-WROOM-1-N8R8)", "cpu_mhz": 240, "logic_v": 3.3, "supply": "separate 5 V USB from PC UPS, not from test bus"},
+  "generation_g1": {
+    "part": "RIDEN RD6018 programmable DC supply (0-60 V, 0-18 A, Modbus RTU) fed by Mean Well RSP-750-48, + LTC4359 ideal-diode module",
+    "v_max": 60.0, "i_max_a": 18.0, "set_resolution_v": 0.01, "set_resolution_a": 0.01, "cv_setpoint_v": 14.2,
+    "update_period_s": 1.0, "verify": true
+  },
+  "critical_branch": {
+    "dcdc": "Mean Well DDR-60G-12 (in 9-36 V, out 12 V / 5 A)",
+    "node": "MikroTik hAP ac2 router (local HTTP service) + Korad KEL103 electronic load in CP mode as complement to 18 W",
+    "p_terminal_w": 18.0, "eta_mean": 0.90, "eta_sd": 0.01, "dcdc_min_input_v": 9.0, "verify": true
+  },
+  "aux_branch": {
+    "switch": "Bosch 0 332 019 150 automotive relay 12 V/30 A (NO), coil driven by PC817 optocoupler + ULN2003A, 1N4007 flyback",
+    "dcdc": "Mean Well DDR-60G-12",
+    "load": "12 V 30 W LED floodlight",
+    "p_terminal_w": 30.0, "eta_mean": 0.90, "eta_sd": 0.01, "relay_operate_ms": 10.0, "led_softstart_ms": 150.0, "default_state": "OFF", "verify": true
+  },
+  "other_bus_load_w": 0.35,
+  "sensors": {
+    "INA226": {
+      "adc_bits": 16, "shunt_lsb_v": 2.5e-6, "shunt_range_v": 0.08192, "bus_lsb_v": 1.25e-3, "bus_max_v": 36.0,
+      "shunt_offset_max_v": 10e-6, "shunt_gain_err_max": 0.001, "bus_offset_max_v": 7.5e-3, "bus_gain_err_max": 0.001,
+      "shunt_noise_rms_v": 1.5e-6, "bus_noise_rms_v": 1.0e-3, "averaging": 16, "conv_time_ms": 1.1, "verify": true
+    },
+    "INA228": {
+      "adc_bits": 20, "shunt_lsb_v": 312.5e-9, "shunt_range_v": 0.16384, "bus_lsb_v": 195.3125e-6, "bus_max_v": 85.0,
+      "shunt_offset_max_v": 1e-6, "shunt_gain_err_max": 0.0005, "bus_offset_max_v": 5e-3, "bus_gain_err_max": 0.0005,
+      "shunt_noise_rms_v": 0.4e-6, "bus_noise_rms_v": 0.3e-3, "averaging": 64, "conv_time_ms": 1.052, "verify": true
+    },
+    "DS18B20": {"accuracy_c": 0.5, "resolution_c": 0.0625, "range_c": [-10, 85]}
+  },
+  "shunts": {
+    "FL2_50A_75mV": {"r_ohm": 0.0015, "class_tol": 0.005, "tcr_ppm": 50},
+    "FL2_30A_75mV": {"r_ohm": 0.0025, "class_tol": 0.005, "tcr_ppm": 50},
+    "FL2_10A_75mV": {"r_ohm": 0.0075, "class_tol": 0.005, "tcr_ppm": 50}
+  },
+  "channels": {
+    "M0": {"where": "DC bus after generation source", "meter": "INA226", "shunt": "FL2_30A_75mV", "i_expected_a": [0, 18]},
+    "M1": {"where": "battery branch (signed)", "meter": "INA226", "shunt": "FL2_50A_75mV", "i_expected_a": [-20, 10]},
+    "M2": {"where": "critical branch input", "meter": "INA226", "shunt": "FL2_10A_75mV", "i_expected_a": [0, 3]},
+    "M3": {"where": "critical load terminals", "meter": "INA226", "shunt": "FL2_10A_75mV", "i_expected_a": [0, 2]},
+    "M4": {"where": "aux branch input", "meter": "INA226", "shunt": "FL2_10A_75mV", "i_expected_a": [0, 4]},
+    "M5": {"where": "aux load terminals", "meter": "INA226", "shunt": "FL2_10A_75mV", "i_expected_a": [0, 3]},
+    "REF": {"where": "independent battery channel, separate logger (Raspberry Pi 4)", "meter": "INA228", "shunt": "FL2_50A_75mV", "i_expected_a": [-20, 10]}
+  },
+  "calibration_standard": {
+    "part": "Fluke 87V (DCV) + 4-terminal reference shunt with calibration certificate",
+    "u_v_rel_k2": 0.0005, "u_i_rel_k2": 0.0005, "u_i_abs_k2_a": 0.001,
+    "note": "Expanded uncertainties (k=2) are placeholders to be replaced by the certificate values."
+  },
+  "timing": {
+    "sample_hz": 10, "telemetry_period_s": 1, "twin_period_s": 1, "ems_period_s": 60, "telemetry_stale_s": 5,
+    "ack_timeout_s": 2, "command_ttl_ms": 2000, "heartbeat_s": 1, "clock_uncertainty_ms": 15
+  },
+  "network": {"latency_median_ms": 12.0, "latency_sigma": 0.6, "loss_prob": 0.001, "dup_prob": 0.002, "service_check_fail_prob": 0.0002},
+  "protection": {"fuse_battery": "MIDI 40 A (DC rated)", "fuse_gen": "ATO 25 A", "fuse_crit": "ATO 5 A", "fuse_aux": "ATO 7.5 A", "estop": "Blue Sea Systems 6006 m-Series battery switch", "i2c_isolator": "ADuM1250", "network_probe": "Raspberry Pi 4 Model B (mains powered)"}
+}

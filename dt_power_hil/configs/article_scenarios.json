@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "source": "Digital Twin of Power Supply for a Communication Node During Outages (Applied Energy submission), Table 2-3",
+  "common": {
+    "p_light_w": 30.0,
+    "light_hours": 6,
+    "light_on_hour": 18,
+    "eta_ch": 0.95,
+    "eta_dis": 0.95,
+    "dod": 0.85,
+    "k_t": 0.95,
+    "n_aut_days": 2,
+    "psh_design": 1.8,
+    "k_der": 0.75,
+    "margin": 0.2,
+    "psh_14d": [1.8, 1.8, 1.8, 1.8, 1.8, 1.8, 1.8, 1.8, 1.8, 1.8, 0.9, 0.9, 0.9, 0.4],
+    "soc_initial": 1.0,
+    "pv_daylight_start_h": 6,
+    "pv_daylight_end_h": 16
+  },
+  "scenarios": {
+    "S1": {"v_bus": 12, "p_base_w": 18.0,  "eta_dc": 0.90, "battery_ah": 200, "pv_wp": 600},
+    "S2": {"v_bus": 24, "p_base_w": 18.0,  "eta_dc": 0.90, "battery_ah": 100, "pv_wp": 600},
+    "S3": {"v_bus": 48, "p_base_w": 110.0, "eta_dc": 0.92, "battery_ah": 200, "pv_wp": 3000}
+  },
+  "article_reported": {
+    "S1": {"e_load_day": 612, "e_src_day": 680.0,  "e_batt_req": 1772.9, "c_ah": 147.7, "p_pv": 604,  "min_soc": 0.219, "lolh": 0},
+    "S2": {"e_load_day": 612, "e_src_day": 680.0,  "e_batt_req": 1772.9, "c_ah": 73.9,  "p_pv": 604,  "min_soc": 0.219, "lolh": 0},
+    "S3": {"e_load_day": 2820, "e_src_day": 3065.2, "e_batt_req": 7991.4, "c_ah": 166.5, "p_pv": 2725, "min_soc": 0.247, "lolh": 0}
+  }
+}

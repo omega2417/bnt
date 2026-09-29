@@ -1,0 +1,29 @@
+RUN_ID: 20260929_E03_C2_R00_EMU
+SCENARIO_ID: E03
+MODE: sil_hw_emulated  [SIL with emulated hardware (virtual testbed); no physical measurements]
+POLICY: C2
+REPEAT_ID: 0
+PAIR_BLOCK_ID: E03_B00
+OPERATOR: automated (scripts/run_campaign.py)
+START_UTC: model t=0 (emulated)
+END_UTC: model t=7200 s
+START_SOC_REFERENCE: 0.5005
+START_SOC_UNCERTAINTY_PP: 0.4 (1 sigma, preparation procedure)
+START_BATTERY_TEMPERATURE_C: 22.0
+CONFIG_SHA256: 8e3860c064c016fbebb35450c265d7b34f9a5cb1b794e049c09c08d7843cb09c
+FIRMWARE_SHA256: n/a (edge_guard emulated by dtpower/edge_guard.py)
+MODEL_VERSION: dtpower 1.0.0
+PROFILE: 60 W 30 min / 10 W 60 min / 60 W 30 min on the bus; aux scheduled
+CALIBRATION_ID: CAL-B1-E00
+REAL_DURATION_S: 2.5 (wall clock of the emulation)
+MODEL_DURATION_S: 7200
+STOP_REASON: completed
+VALID_COVERAGE_PERCENT: 99.944
+UNKNOWN_DURATION_S: 1.0
+MANUAL_INTERVENTIONS: none
+CRITICAL_SERVICE_EVENTS: 0 failed checks of 7200 (longest streak 0 s)
+RAW_FILES_AND_CHECKSUMS: raw/20260929_E03_C2_R00_EMU/ (see checksums.sha256)
+DEVIATIONS_FROM_PLAN: none
+STATUS: completed
+OPERATOR_REVIEW: n/a (emulated)
+ANALYST_REVIEW: automated metrics; see report

@@ -1,0 +1,14 @@
+{
+ "q_ref_ah": 38.43846731079875,
+ "q_m1_ah": 38.43127053620378,
+ "e_ref_wh": 494.29343995063033,
+ "eta_q_ref": 0.9953185234546631,
+ "eta_q_m1": 0.994997786859607,
+ "discharge_time_h": 3.8433333333333333,
+ "recharge_time_h": 2.091111111111111,
+ "z_true_full": 0.9931680598802187,
+ "z_true_end": 0.012044905852284609,
+ "true_capacity_ah_hidden": 39.172792096032396,
+ "working_interval_fraction_true": 0.9811231540279342,
+ "conditions": "22 C, CC 10 A (0.25C) to 11.2 V, CC-CV 20 A / 14.2 V / tail 2 A"
+}

@@ -1,0 +1,5 @@
+menu "edge_guard"
+    config BROKER_URI
+        string "MQTT broker URI (isolated bench LAN)"
+        default "mqtt://192.168.50.10"
+endmenu

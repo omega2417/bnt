@@ -1,0 +1,5 @@
+run_id,command_id,action,reason,sent_s,ack_s,effect_s,effect_kind,accepted,reject_reason,retry_of
+20260929_E02_C0_R00_EMU,20260929_E02_C0_R00_EMU-c00000,SET_AUX_OFF,schedule,0.0,0.0321,1.0,state_confirmed,True,,
+20260929_E02_C0_R00_EMU,20260929_E02_C0_R00_EMU-c00001,SET_AUX_ON,schedule,900.0,900.0275,900.2,edge,True,,
+20260929_E02_C0_R00_EMU,20260929_E02_C0_R00_EMU-c00002,SET_AUX_OFF,schedule,1800.0,1800.0415,1800.2,edge,True,,
+20260929_E02_C0_R00_EMU,20260929_E02_C0_R00_EMU-c00003,SET_AUX_ON,schedule,2700.0,2700.0403,2700.2,edge,True,,

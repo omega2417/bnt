@@ -1,0 +1,5 @@
+run_id,command_id,action,reason,sent_s,ack_s,effect_s,effect_kind,accepted,reject_reason,retry_of
+20260929_E05_C2_R05_EMU,20260929_E05_C2_R05_EMU-c00000,SET_AUX_OFF,forecast_hold_off,0.0,0.0292,1.0,state_confirmed,True,,
+20260929_E05_C2_R05_EMU,20260929_E05_C2_R05_EMU-c00001,SET_AUX_ON,forecast_return,3720.0,3720.0317,3720.2,edge,True,,
+20260929_E05_C2_R05_EMU,20260929_E05_C2_R05_EMU-c00002,SET_AUX_OFF,forecast_min_below_reserve,5520.0,5520.0759,5520.3,edge,True,,
+20260929_E05_C2_R05_EMU,20260929_E05_C2_R05_EMU-c00003,SET_AUX_ON,forecast_return,17820.0,17820.0191,17820.2,edge,True,,

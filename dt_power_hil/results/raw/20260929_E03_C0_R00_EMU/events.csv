@@ -1,0 +1,3 @@
+run_id,event_id,t_model_s,event_type,value
+20260929_E03_C0_R00_EMU,0,0.0,RUN_START,0.5005293989702898
+20260929_E03_C0_R00_EMU,1,7200.0,RUN_END,completed

@@ -1,0 +1,29 @@
+RUN_ID: 20260929_E05_C_oracle_R05_EMU
+SCENARIO_ID: E05
+MODE: sil_hw_emulated  [SIL with emulated hardware (virtual testbed); no physical measurements]
+POLICY: C_oracle
+REPEAT_ID: 5
+PAIR_BLOCK_ID: E05_B05
+OPERATOR: automated (scripts/run_campaign.py)
+START_UTC: model t=0 (emulated)
+END_UTC: model t=21600 s
+START_SOC_REFERENCE: 0.4475
+START_SOC_UNCERTAINTY_PP: 0.4 (1 sigma, preparation procedure)
+START_BATTERY_TEMPERATURE_C: 22.0
+CONFIG_SHA256: 8e3860c064c016fbebb35450c265d7b34f9a5cb1b794e049c09c08d7843cb09c
+FIRMWARE_SHA256: n/a (edge_guard emulated by dtpower/edge_guard.py)
+MODEL_VERSION: dtpower 1.0.0
+PROFILE: deficit: 40 W 1.5 h / 5 W 3 h / 60 W 1.5 h; 18 W critical + 30 W scheduled aux; stop at SOC_ref 0.20
+CALIBRATION_ID: CAL-B1-E00
+REAL_DURATION_S: 7.6 (wall clock of the emulation)
+MODEL_DURATION_S: 21600
+STOP_REASON: completed
+VALID_COVERAGE_PERCENT: 99.866
+UNKNOWN_DURATION_S: 15.2
+MANUAL_INTERVENTIONS: none
+CRITICAL_SERVICE_EVENTS: 6 failed checks of 21600 (longest streak 1 s)
+RAW_FILES_AND_CHECKSUMS: raw/20260929_E05_C_oracle_R05_EMU/ (see checksums.sha256)
+DEVIATIONS_FROM_PLAN: none
+STATUS: completed
+OPERATOR_REVIEW: n/a (emulated)
+ANALYST_REVIEW: automated metrics; see report

@@ -1,0 +1,212 @@
+[
+ {
+  "channel": "M0",
+  "location": "DC bus after generation source",
+  "meter": "INA226",
+  "shunt": "FL2_30A_75mV",
+  "r_shunt_mohm": 2.5,
+  "i_full_scale_a": 32.768,
+  "i_lsb_ma": 1.0,
+  "v_lsb_mv": 1.25,
+  "v_max_ic_v": 36.0,
+  "i_expected_a": [
+   0,
+   18
+  ],
+  "headroom_pct": 45.068359375,
+  "p_shunt_max_w": 0.81,
+  "u_shunt_max_mv": 45.0,
+  "offset_max_ma": 4.0,
+  "uncal_gain_err_max_pct": 0.6,
+  "calibration_levels_a": [
+   3.6,
+   7.2,
+   10.8,
+   14.4,
+   18.0
+  ],
+  "accept_v_rel_pct": 0.5,
+  "accept_i_rel_pct": 1.0,
+  "accept_i_abs_near_zero_ma": 9.0
+ },
+ {
+  "channel": "M1",
+  "location": "battery branch (signed)",
+  "meter": "INA226",
+  "shunt": "FL2_50A_75mV",
+  "r_shunt_mohm": 1.5,
+  "i_full_scale_a": 54.61333333333334,
+  "i_lsb_ma": 1.6666666666666667,
+  "v_lsb_mv": 1.25,
+  "v_max_ic_v": 36.0,
+  "i_expected_a": [
+   -20,
+   10
+  ],
+  "headroom_pct": 63.37890625,
+  "p_shunt_max_w": 0.6,
+  "u_shunt_max_mv": 30.0,
+  "offset_max_ma": 6.666666666666667,
+  "uncal_gain_err_max_pct": 0.6,
+  "calibration_levels_a": [
+   -20.0,
+   -5.0,
+   1.25,
+   2.5,
+   10.0
+  ],
+  "accept_v_rel_pct": 0.5,
+  "accept_i_rel_pct": 1.0,
+  "accept_i_abs_near_zero_ma": 15.0
+ },
+ {
+  "channel": "M2",
+  "location": "critical branch input",
+  "meter": "INA226",
+  "shunt": "FL2_10A_75mV",
+  "r_shunt_mohm": 7.5,
+  "i_full_scale_a": 10.922666666666668,
+  "i_lsb_ma": 0.33333333333333337,
+  "v_lsb_mv": 1.25,
+  "v_max_ic_v": 36.0,
+  "i_expected_a": [
+   0,
+   3
+  ],
+  "headroom_pct": 72.5341796875,
+  "p_shunt_max_w": 0.0675,
+  "u_shunt_max_mv": 22.5,
+  "offset_max_ma": 1.3333333333333335,
+  "uncal_gain_err_max_pct": 0.6,
+  "calibration_levels_a": [
+   0.6,
+   1.2,
+   1.8,
+   2.4,
+   3.0
+  ],
+  "accept_v_rel_pct": 0.5,
+  "accept_i_rel_pct": 1.0,
+  "accept_i_abs_near_zero_ma": 3.0
+ },
+ {
+  "channel": "M3",
+  "location": "critical load terminals",
+  "meter": "INA226",
+  "shunt": "FL2_10A_75mV",
+  "r_shunt_mohm": 7.5,
+  "i_full_scale_a": 10.922666666666668,
+  "i_lsb_ma": 0.33333333333333337,
+  "v_lsb_mv": 1.25,
+  "v_max_ic_v": 36.0,
+  "i_expected_a": [
+   0,
+   2
+  ],
+  "headroom_pct": 81.689453125,
+  "p_shunt_max_w": 0.03,
+  "u_shunt_max_mv": 15.0,
+  "offset_max_ma": 1.3333333333333335,
+  "uncal_gain_err_max_pct": 0.6,
+  "calibration_levels_a": [
+   0.4,
+   0.8,
+   1.2,
+   1.6,
+   2.0
+  ],
+  "accept_v_rel_pct": 0.5,
+  "accept_i_rel_pct": 1.0,
+  "accept_i_abs_near_zero_ma": 3.0
+ },
+ {
+  "channel": "M4",
+  "location": "aux branch input",
+  "meter": "INA226",
+  "shunt": "FL2_10A_75mV",
+  "r_shunt_mohm": 7.5,
+  "i_full_scale_a": 10.922666666666668,
+  "i_lsb_ma": 0.33333333333333337,
+  "v_lsb_mv": 1.25,
+  "v_max_ic_v": 36.0,
+  "i_expected_a": [
+   0,
+   4
+  ],
+  "headroom_pct": 63.37890625,
+  "p_shunt_max_w": 0.12,
+  "u_shunt_max_mv": 30.0,
+  "offset_max_ma": 1.3333333333333335,
+  "uncal_gain_err_max_pct": 0.6,
+  "calibration_levels_a": [
+   0.8,
+   1.6,
+   2.4,
+   3.2,
+   4.0
+  ],
+  "accept_v_rel_pct": 0.5,
+  "accept_i_rel_pct": 1.0,
+  "accept_i_abs_near_zero_ma": 3.0
+ },
+ {
+  "channel": "M5",
+  "location": "aux load terminals",
+  "meter": "INA226",
+  "shunt": "FL2_10A_75mV",
+  "r_shunt_mohm": 7.5,
+  "i_full_scale_a": 10.922666666666668,
+  "i_lsb_ma": 0.33333333333333337,
+  "v_lsb_mv": 1.25,
+  "v_max_ic_v": 36.0,
+  "i_expected_a": [
+   0,
+   3
+  ],
+  "headroom_pct": 72.5341796875,
+  "p_shunt_max_w": 0.0675,
+  "u_shunt_max_mv": 22.5,
+  "offset_max_ma": 1.3333333333333335,
+  "uncal_gain_err_max_pct": 0.6,
+  "calibration_levels_a": [
+   0.6,
+   1.2,
+   1.8,
+   2.4,
+   3.0
+  ],
+  "accept_v_rel_pct": 0.5,
+  "accept_i_rel_pct": 1.0,
+  "accept_i_abs_near_zero_ma": 3.0
+ },
+ {
+  "channel": "REF",
+  "location": "independent battery channel, separate logger (Raspberry Pi 4)",
+  "meter": "INA228",
+  "shunt": "FL2_50A_75mV",
+  "r_shunt_mohm": 1.5,
+  "i_full_scale_a": 109.22666666666667,
+  "i_lsb_ma": 0.20833333333333334,
+  "v_lsb_mv": 0.1953125,
+  "v_max_ic_v": 85.0,
+  "i_expected_a": [
+   -20,
+   10
+  ],
+  "headroom_pct": 81.689453125,
+  "p_shunt_max_w": 0.6,
+  "u_shunt_max_mv": 30.0,
+  "offset_max_ma": 0.6666666666666666,
+  "uncal_gain_err_max_pct": 0.5499999999999999,
+  "calibration_levels_a": [
+   -20.0,
+   -5.0,
+   1.25,
+   2.5,
+   10.0
+  ],
+  "accept_v_rel_pct": 0.5,
+  "accept_i_rel_pct": 1.0,
+  "accept_i_abs_near_zero_ma": 1.7083333333333335
+ }
+]
