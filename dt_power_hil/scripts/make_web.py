@@ -10,7 +10,6 @@ RES = ROOT / "results"
 S = json.load(open(RES / "summary.json"))
 SER = json.load(open(RES / "series_selected.json"))
 MAN = json.load(open(RES / "manifest.json"))
-TPL = (ROOT / "web" / "template.html").read_text(encoding="utf-8")
 
 
 def ds(s, keys, step=6):
@@ -37,6 +36,8 @@ data = {"acceptance": S["acceptance"], "e05": {"series": e05, "primary": {k: {x:
         "twin": twin, "e11": e11, "timing": S["timing"], "e07": S["e07"], "e10": S["e10"], "calibration": S["calibration"],
         "channels": S["channels"], "capacity": S["capacity"], "sizing": S["sizing"], "runs": runs,
         "manifest": {k: MAN[k] for k in ("n_runs", "python", "numpy", "config_sha256", "wall_time_s", "evidence_class")}}
-out = TPL.replace("/*__DATA__*/null", json.dumps(data, ensure_ascii=False, separators=(",", ":")))
-(ROOT / "web" / "index.html").write_text(out, encoding="utf-8")
-print("web/index.html", len(out) // 1024, "KB")
+payload = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
+for tpl, name in (("template.html", "index.html"), ("template_ua.html", "index_UA.html")):
+    out = (ROOT / "web" / tpl).read_text(encoding="utf-8").replace("/*__DATA__*/null", payload)
+    (ROOT / "web" / name).write_text(out, encoding="utf-8")
+    print(f"web/{name}", len(out) // 1024, "KB")

@@ -1,4 +1,4 @@
-<title>Стенд DT-NODE01</title>
+<title>Bench DT-NODE01</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Unbounded:wght@500;600&display=swap">
@@ -96,118 +96,118 @@ footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-si
 
 <div class="wrap">
 <header class="top">
-  <div class="eyebrow">Цифровий двійник живлення вузла зв’язку · протокол HIL v1.0 · звіт експерименту</div>
-  <h1>Стенд DT-NODE01: програмно-апаратна валідація двійника</h1>
-  <div class="evidence"><span>⚠</span><span><b>Клас доказовості:</b> програмне моделювання з емуляцією апаратури (віртуальний стенд). Батарея, вимірювачі INA226/INA228, MQTT і ESP32 відтворені моделями з паспортними характеристиками реальних елементів. Фізичних вимірювань не виконувалось, тому це не HIL- і не польовий результат.</span></div>
+  <div class="eyebrow">Digital twin of a communication-node power supply · HIL protocol v1.0 · experiment report</div>
+  <h1>Bench DT-NODE01: software–hardware validation of the twin</h1>
+  <div class="evidence"><span>⚠</span><span><b>Evidence class:</b> software simulation with emulated hardware (virtual testbed). The battery, INA226/INA228 meters, MQTT and the ESP32 are reproduced by models with the datasheet characteristics of real components. No physical measurements were made, so this is not a HIL or field result.</span></div>
   <div class="meta" id="meta"></div>
   <div class="kpis" id="kpis"></div>
 </header>
 
-<nav class="jump" aria-label="Розділи">
-  <a href="#summary">Підсумок</a><a href="#e05">Дефіцит E05</a><a href="#twin">Двійник</a><a href="#faults">Відмови</a><a href="#e11">14 діб</a><a href="#hw">Апаратна частина</a><a href="#protocols">Протоколи</a><a href="#sw">Програмна частина</a><a href="#runs">Запуски</a>
+<nav class="jump" aria-label="Sections">
+  <a href="#summary">Summary</a><a href="#e05">Deficit E05</a><a href="#twin">Twin</a><a href="#faults">Faults</a><a href="#e11">14 days</a><a href="#hw">Hardware</a><a href="#protocols">Protocols</a><a href="#sw">Software</a><a href="#runs">Runs</a>
 </nav>
 
 <section id="summary">
-  <div class="sec-head"><div class="eyebrow">Критерії приймання · розд. 17 протоколу</div><h2>Що підтверджено і що ні</h2>
-  <p class="lead">Кількісні критерії H1–H3 виконано на віртуальному стенді. Гіпотеза H4 про перевагу прогнозного керування в досліді з дефіцитом не підтвердилась.</p></div>
-  <div class="tbl"><table id="acc"><thead><tr><th>Об’єкт</th><th>Критерій</th><th>Спостережено</th><th>Статус</th></tr></thead><tbody></tbody></table></div>
-  <div class="panel"><h3>Висновки</h3><ol class="concl" id="concl"></ol></div>
+  <div class="sec-head"><div class="eyebrow">Acceptance criteria · protocol §17</div><h2>What was confirmed and what was not</h2>
+  <p class="lead">The quantitative criteria for H1–H3 were met on the virtual testbed. Hypothesis H4, that predictive control is better, was not supported in the deficit test.</p></div>
+  <div class="tbl"><table id="acc"><thead><tr><th>Object</th><th>Criterion</th><th>Observed</th><th>Status</th></tr></thead><tbody></tbody></table></div>
+  <div class="panel"><h3>Conclusions</h3><ol class="concl" id="concl"></ol></div>
 </section>
 
 <section id="e05">
-  <div class="sec-head"><div class="eyebrow">E05 · керований дефіцит · 10 парних блоків</div><h2>Порівняння політик C0 / C1 / C2</h2>
-  <p class="lead">SOC₀ = 0,45; генерація 40 Вт → 5 Вт → 60 Вт; навантаження 18 Вт + 30 Вт освітлення; запуск зупиняється при SOC_ref = 0,20. Графік показує блок R00.</p></div>
+  <div class="sec-head"><div class="eyebrow">E05 · controlled deficit · 10 paired blocks</div><h2>Comparing policies C0 / C1 / C2</h2>
+  <p class="lead">SOC₀ = 0.45; generation 40 W → 5 W → 60 W; load 18 W + 30 W lighting; a run stops at SOC_ref = 0.20. The chart shows block R00.</p></div>
   <div class="split">
     <div class="panel">
       <div class="legend" id="lg-e05"></div>
       <div class="chart" id="ch-e05"></div>
       <div class="chart" id="ch-e05b"></div>
-      <div class="cap">Верх — SOC за незалежним каналом REF. Низ — доступна генерація (заливка) і стан освітлення за політиками.</div>
+      <div class="cap">Top — SOC from the independent REF channel. Bottom — available generation (fill) and lighting state per policy.</div>
     </div>
     <div class="panel">
-      <h3>Середні за 10 блоками</h3>
-      <div class="tbl" style="border:0"><table id="e05pol"><thead><tr><th>Політика</th><th>Час до межі, год</th><th>Освітлення, Вт·год</th><th>Мін. SOC_ref</th></tr></thead><tbody></tbody></table></div>
-      <h3>Парні контрасти</h3>
-      <div class="tbl" style="border:0"><table id="e05con"><thead><tr><th>Контраст</th><th>Δ</th><th>95% BCa</th><th>p</th></tr></thead><tbody></tbody></table></div>
-      <div class="cap">Час C1, C2 і C_oracle цензуровано на 6 год. p — точний тест зі зміною знака (для первинних — з корекцією Holm). Критична недопоставка дорівнює 0 в усіх 40 запусках.</div>
+      <h3>Means over 10 blocks</h3>
+      <div class="tbl" style="border:0"><table id="e05pol"><thead><tr><th>Policy</th><th>Time to limit, h</th><th>Lighting, Wh</th><th>Min SOC_ref</th></tr></thead><tbody></tbody></table></div>
+      <h3>Paired contrasts</h3>
+      <div class="tbl" style="border:0"><table id="e05con"><thead><tr><th>Contrast</th><th>Δ</th><th>95% BCa</th><th>p</th></tr></thead><tbody></tbody></table></div>
+      <div class="cap">C1, C2 and C_oracle times are censored at 6 h. p is the exact sign-flip test (Holm-corrected for the primary contrasts). Critical unserved energy is 0 in all 40 runs.</div>
     </div>
   </div>
 </section>
 
 <section id="twin">
-  <div class="sec-head"><div class="eyebrow">H1 · точність стану</div><h2>Двійник проти незалежного REF</h2>
-  <p class="lead">Двійник оцінює SOC тільки за каналом M1. REF — окремий шунт, INA228, реєстратор і власна ємність із тесту E09.</p></div>
+  <div class="sec-head"><div class="eyebrow">H1 · state accuracy</div><h2>Twin versus the independent REF</h2>
+  <p class="lead">The twin estimates SOC from channel M1 only. REF has its own shunt, INA228, logger and capacity from test E09.</p></div>
   <div class="grid2">
     <div class="panel">
-      <div class="sel" id="twin-sel" role="group" aria-label="Запуск"></div>
-      <div class="legend"><span><span class="sw" style="background:var(--c0)"></span> SOC_ref (REF)</span><span style="color:var(--ink)"><span class="sw dash"></span> posterior двійника</span><span><span class="sw" style="background:var(--cor)"></span> прихована істина (лише емуляція)</span></div>
+      <div class="sel" id="twin-sel" role="group" aria-label="Run"></div>
+      <div class="legend"><span><span class="sw" style="background:var(--c0)"></span> SOC_ref (REF)</span><span style="color:var(--ink)"><span class="sw dash"></span> twin posterior</span><span><span class="sw" style="background:var(--cor)"></span> hidden truth (emulation only)</span></div>
       <div class="chart" id="ch-twin"></div>
     </div>
     <div class="panel">
-      <h3>Синхронізація і виконання</h3>
+      <h3>Synchronisation and execution</h3>
       <div class="kpis" id="timing" style="margin-top:0;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))"></div>
-      <div class="cap">RTT виміряно на боці ПК. Фізичний ефект — фронт струму M4, зафіксований ESP32 на 10 Гц: реле 10 мс + плавний пуск LED 150 мс + крок дискретизації.</div>
+      <div class="cap">RTT is measured on the PC side. Physical effect = the M4 current edge detected by the ESP32 at 10 Hz: relay 10 ms + LED soft start 150 ms + sampling step.</div>
     </div>
   </div>
 </section>
 
 <section id="faults">
-  <div class="sec-head"><div class="eyebrow">E06 · E07 · E10</div><h2>Відмови зв’язку, датчиків і логіка захистів</h2></div>
+  <div class="sec-head"><div class="eyebrow">E06 · E07 · E10</div><h2>Link loss, sensor faults and protection logic</h2></div>
   <div class="grid2">
-    <div class="tbl"><table id="e07"><thead><tr><th>Збій у копії телеметрії</th><th>Виявлено</th><th>Затримка, с</th><th>Ознака</th></tr></thead><tbody></tbody></table></div>
-    <div class="tbl"><table id="e10"><thead><tr><th>Вектор E10 (edge_guard)</th><th>Результат</th></tr></thead><tbody></tbody></table></div>
+    <div class="tbl"><table id="e07"><thead><tr><th>Fault in the telemetry copy</th><th>Detected</th><th>Latency, s</th><th>Flag</th></tr></thead><tbody></tbody></table></div>
+    <div class="tbl"><table id="e10"><thead><tr><th>E10 vector (edge_guard)</th><th>Result</th></tr></thead><tbody></tbody></table></div>
   </div>
-  <p class="lead">E06: після втрати uplink на 30 с двійник позначив дані простроченими і вимкнув освітлення командою. При двобічній втраті контролер сам перейшов у DEGRADED за watchdog 5 с. Застаріла команда і команда з чужим run_id були відхилені.</p>
+  <p class="lead">E06: after a 30-s uplink loss the twin flagged the data as stale and switched the lighting off by command. On bidirectional loss the controller entered DEGRADED on its own 5-s watchdog. A stale command and a command with a foreign run_id were rejected.</p>
 </section>
 
 <section id="e11">
-  <div class="sec-head"><div class="eyebrow">E11 · 336 модельних годин</div><h2>Чотирнадцять діб S1–S3 і відтворення рукопису</h2>
-  <p class="lead">Аналітичне розмірювання збігається з рукописом точно. MinSOC відрізняється і сильно залежить від неописаних параметрів: порядку днів, ККД і k_T.</p></div>
+  <div class="sec-head"><div class="eyebrow">E11 · 336 model hours</div><h2>Fourteen days of S1–S3 and manuscript reproduction</h2>
+  <p class="lead">The analytical sizing matches the manuscript exactly. MinSOC differs and depends strongly on undocumented parameters: day order, efficiency and k_T.</p></div>
   <div class="split">
     <div class="panel"><div class="legend" id="lg-e11"></div><div class="chart" id="ch-e11"></div>
-      <div class="cap">z_E — частка запасеної енергії. S2 збігається з S1. Штрихові лінії — S1 зі зменшеною батареєю 12,8 В/100 А·год у lockstep-відтворенні з моделлю контролера.</div></div>
+      <div class="cap">z_E is the stored-energy fraction. S2 coincides with S1. Dashed lines — S1 with a down-sized 12.8 V / 100 Ah battery in lockstep replay with the controller model.</div></div>
     <div class="panel">
-      <h3>MinSOC: рукопис і SIL</h3>
-      <div class="tbl" style="border:0"><table id="e11t"><thead><tr><th></th><th>Рукопис</th><th>SIL 1 год</th><th>1 хв</th><th>12,8·k В</th></tr></thead><tbody></tbody></table></div>
-      <h3>S1 100 А·год: хто недоотримує енергію</h3>
+      <h3>MinSOC: manuscript vs SIL</h3>
+      <div class="tbl" style="border:0"><table id="e11t"><thead><tr><th></th><th>Manuscript</th><th>SIL 1 h</th><th>1 min</th><th>12.8·k V</th></tr></thead><tbody></tbody></table></div>
+      <h3>S1 100 Ah: who goes without energy</h3>
       <div class="chart" id="ch-e11b"></div>
-      <div class="cap">Сумарна недопоставка однакова для всіх політик. Керування лише переносить її з критичного навантаження на освітлення.</div>
+      <div class="cap">Total unserved energy is the same for all policies. Control only shifts it from the critical load to the lighting.</div>
     </div>
   </div>
-  <details class="panel"><summary style="cursor:pointer;font-weight:600">Чутливість MinSOC до 18 комбінацій неоднозначних параметрів</summary>
-    <div class="tbl" style="border:0"><table id="recon"><thead><tr><th>Порядок днів</th><th>ККД батареї</th><th>k_T</th><th>S1</th><th>S3</th></tr></thead><tbody></tbody></table></div></details>
+  <details class="panel"><summary style="cursor:pointer;font-weight:600">MinSOC sensitivity across 18 combinations of ambiguous parameters</summary>
+    <div class="tbl" style="border:0"><table id="recon"><thead><tr><th>Day order</th><th>Battery efficiency</th><th>k_T</th><th>S1</th><th>S3</th></tr></thead><tbody></tbody></table></div></details>
 </section>
 
 <section id="hw">
-  <div class="sec-head"><div class="eyebrow">Апаратна частина · реальні елементи</div><h2>Стенд класу 12 В</h2>
-  <p class="lead">Батарея 12,8 В/40 А·год (≈ 512 Вт·год) перевіряє контур і модель, але не відтворює масштаб S1 (12 В/200 А·год). Паспортні характеристики перед фізичним запуском треба звірити з даташитами.</p></div>
-  <div class="tbl"><table><thead><tr><th>Функція</th><th>Елемент</th><th>Характеристики в розрахунках</th></tr></thead><tbody id="bom"></tbody></table></div>
-  <div class="tbl"><table id="chan"><thead><tr><th>Канал</th><th>Вимірювач / шунт</th><th>Шкала, А</th><th>LSB, мА</th><th>Зміщення max, мА</th><th>P шунта, Вт</th><th>Рівні калібрування, А</th></tr></thead><tbody></tbody></table></div>
+  <div class="sec-head"><div class="eyebrow">Hardware · real components</div><h2>12 V bench</h2>
+  <p class="lead">The 12.8 V / 40 Ah battery (≈ 512 Wh) tests the loop and the model but does not reproduce the S1 scale (12 V / 200 Ah). Datasheet characteristics must be verified before a physical run.</p></div>
+  <div class="tbl"><table><thead><tr><th>Function</th><th>Component</th><th>Characteristics used in calculations</th></tr></thead><tbody id="bom"></tbody></table></div>
+  <div class="tbl"><table id="chan"><thead><tr><th>Channel</th><th>Meter / shunt</th><th>Full scale, A</th><th>LSB, mA</th><th>Max offset, mA</th><th>Shunt P, W</th><th>Calibration levels, A</th></tr></thead><tbody></tbody></table></div>
 </section>
 
 <section id="protocols">
-  <div class="sec-head"><div class="eyebrow">Протоколи вимірювань П-1 … П-7</div><h2>Калібрування E00 і ємність E09</h2>
-  <p class="lead">Колонки EMU отримано на емульованих приладах. Для фізичного запуску використовуються ті самі бланки з порожніми колонками ФІЗ (hardware/measurement_protocols.md).</p></div>
+  <div class="sec-head"><div class="eyebrow">Measurement protocols P-1 … P-7</div><h2>Calibration E00 and capacity E09</h2>
+  <p class="lead">EMU columns come from emulated instruments. A physical run uses the same forms with blank PHYS columns (hardware/measurement_protocols.md).</p></div>
   <div class="grid2">
-    <div class="tbl"><table id="cal"><thead><tr><th>Канал</th><th>Нуль, мА</th><th>a</th><th>b, мА</th><th>Залишок верифікації</th><th>≤ 1 %</th></tr></thead><tbody></tbody></table></div>
-    <div class="tbl"><table id="cap"><thead><tr><th>E09 · параметр</th><th>EMU</th></tr></thead><tbody></tbody></table></div>
+    <div class="tbl"><table id="cal"><thead><tr><th>Channel</th><th>Zero, mA</th><th>a</th><th>b, mA</th><th>Verification residual</th><th>≤ 1 %</th></tr></thead><tbody></tbody></table></div>
+    <div class="tbl"><table id="cap"><thead><tr><th>E09 · parameter</th><th>EMU</th></tr></thead><tbody></tbody></table></div>
   </div>
 </section>
 
 <section id="sw">
-  <div class="sec-head"><div class="eyebrow">Програмна частина · dtpower 1.0</div><h2>Програмний проєкт</h2></div>
-  <div class="tbl"><table><thead><tr><th>Модуль</th><th>Призначення</th></tr></thead><tbody id="mods"></tbody></table></div>
-  <div class="panel"><h3>Відтворення</h3>
+  <div class="sec-head"><div class="eyebrow">Software · dtpower 1.0</div><h2>Software project</h2></div>
+  <div class="tbl"><table><thead><tr><th>Module</th><th>Purpose</th></tr></thead><tbody id="mods"></tbody></table></div>
+  <div class="panel"><h3>Reproduction</h3>
     <pre class="mono" style="margin:0;white-space:pre-wrap;font-size:12.5px;color:var(--ink-2)">cd dt_power_hil
-python -m pytest -q tests            # 14 приймальних перевірок (розд. 18.3)
+python -m pytest -q tests            # 14 acceptance checks (protocol §18.3)
 python scripts/run_campaign.py       # E00–E11 → results/ (manifest, raw, protocols, checksums)
 python scripts/make_figures.py && python scripts/make_protocols.py && python scripts/make_report.py && python scripts/make_web.py</pre></div>
 </section>
 
 <section id="runs">
-  <div class="sec-head"><div class="eyebrow">Усі запуски</div><h2>Журнал запусків</h2></div>
-  <div class="sel" id="run-sel" role="group" aria-label="Фільтр сценарію"></div>
-  <div class="tbl"><table id="runt"><thead><tr><th>run_id</th><th>Год</th><th>Зупинка</th><th>Покриття, %</th><th>MAE SOC</th><th>Енергія, %</th><th>Освітлення, Вт·год</th><th>Мін. SOC_ref</th><th>RTT p95, мс</th></tr></thead><tbody></tbody></table></div>
+  <div class="sec-head"><div class="eyebrow">All runs</div><h2>Run log</h2></div>
+  <div class="sel" id="run-sel" role="group" aria-label="Scenario filter"></div>
+  <div class="tbl"><table id="runt"><thead><tr><th>run_id</th><th>h</th><th>Stop</th><th>Coverage, %</th><th>SOC MAE</th><th>Energy, %</th><th>Lighting, Wh</th><th>Min SOC_ref</th><th>RTT p95, ms</th></tr></thead><tbody></tbody></table></div>
 </section>
 
 <footer id="foot"></footer>
@@ -216,41 +216,40 @@ python scripts/make_figures.py && python scripts/make_protocols.py && python scr
 <script>
 const D=/*__DATA__*/null;
 const $=s=>document.querySelector(s);
-const fmt=(x,n=2)=>x==null||Number.isNaN(x)?'—':Number(x).toFixed(n).replace('.',',').replace('-','−');
+const fmt=(x,n=2)=>x==null||Number.isNaN(x)?'—':Number(x).toFixed(n).replace('-','−');
 const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
 const PC={C0:'--c0',C1:'--c1',C2:'--c2',C_oracle:'--cor'};
-const PL={C0:'C0 розклад',C1:'C1 поріг SOC',C2:'C2 прогнозне правило',C_oracle:'C_oracle (межа)'};
+const PL={C0:'C0 schedule',C1:'C1 SOC threshold',C2:'C2 forecast rule',C_oracle:'C_oracle (bound)'};
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
 /* ---------- meta + KPIs ---------- */
 const M=D.manifest, T=D.timing, E=D.e05, PP=E.per_policy;
-$('#meta').innerHTML=[`${M.n_runs} запусків`,`Python ${M.python} · NumPy ${M.numpy}`,`config ${M.config_sha256.slice(0,12)}…`,`кампанія ${fmt(M.wall_time_s,0)} с`].map(x=>`<span class="mono">${x}</span>`).join('');
+$('#meta').innerHTML=[`${M.n_runs} runs`,`Python ${M.python} · NumPy ${M.numpy}`,`config ${M.config_sha256.slice(0,12)}…`,`campaign ${fmt(M.wall_time_s,0)} s`].map(x=>`<span class="mono">${x}</span>`).join('');
 const nr=D.runs.filter(r=>!['E06','E07'].includes(r.scenario_id));
 const maxMae=Math.max(...nr.map(r=>r.mae_soc_pp));
 const passN=D.acceptance.filter(a=>a.pass===true).length;
 const k=[
- {v:`${passN}<small>/ ${D.acceptance.filter(a=>a.pass!==null).length}</small>`,l:'кількісних критеріїв виконано',c:'H4 не підтверджено'},
- {v:`${fmt(maxMae)}<small>в.п.</small>`,l:'макс. MAE SOC проти REF',c:'критерій ≤ 3 в.п.'},
- {v:`${fmt(T.rtt_ms.p95,0)}<small>мс</small>`,l:'RTT команди p95',c:`n = ${T.rtt_ms.n}, критерій ≤ 2000`},
- {v:`${fmt(T.effect_ms.median,0)}<small>мс</small>`,l:'рішення → фронт струму',c:`${T.effect_ms.n} перемикань, 100 % підтверджено`},
- {v:`+${fmt(E.primary.C1_minus_C0.mean,1)}<small>год</small>`,l:'C1 проти C0 до межі SOC 0,20',c:'≥ 6 год, цензуровано'},
+ {v:`${passN}<small>/ ${D.acceptance.filter(a=>a.pass!==null).length}</small>`,l:'quantitative criteria met',c:'H4 not supported'},
+ {v:`${fmt(maxMae)}<small>pp</small>`,l:'max SOC MAE vs REF',c:'criterion ≤ 3 pp'},
+ {v:`${fmt(T.rtt_ms.p95,0)}<small>ms</small>`,l:'command RTT p95',c:`n = ${T.rtt_ms.n}, criterion ≤ 2000`},
+ {v:`${fmt(T.effect_ms.median,0)}<small>ms</small>`,l:'decision → current edge',c:`${T.effect_ms.n} switchings, 100 % confirmed`},
+ {v:`+${fmt(E.primary.C1_minus_C0.mean,1)}<small>h</small>`,l:'C1 vs C0 to the SOC 0.20 limit',c:'≥ 6 h, censored'},
 ];
 $('#kpis').innerHTML=k.map(x=>`<div class="kpi"><div class="v">${x.v}</div><div class="l">${x.l}</div><div class="c">${x.c}</div></div>`).join('');
 
 /* ---------- acceptance ---------- */
-const chip=p=>p===true?'<span class="chip ok"><span class="ic">✓</span>виконано</span>':p===false?'<span class="chip no"><span class="ic">✕</span>не виконано</span>':'<span class="chip na"><span class="ic">?</span>не підтверджено</span>';
-const accUA={'Telemetry (normal runs)':'Телеметрія (штатні запуски)','Gaps > 5 s':'Прогалини > 5 с','Energy model':'Енергетична модель','SOC':'SOC','Command transfer':'Передавання команди','Physical execution':'Фізичне виконання','E06':'E06 втрата зв’язку','E07':'E07 некоректні дані','E10':'E10 захисти','Critical service':'Критичний сервіс','Forecast advantage (C2 vs C1)':'Перевага прогнозу (C2 проти C1)'};
-const critUA={'Telemetry (normal runs)':'≥ 99 % валідних очікуваних пакетів','Gaps > 5 s':'кожна має подію і визначений стан керування','Energy model':'≤ 5 % на ненульовому інтегралі','SOC':'MAE ≤ 3 в.п., максимум ≤ 5 в.п. проти незалежного REF','Command transfer':'p95 RTT ≤ 2 с','Physical execution':'кожна прийнята команда має підтверджений ефект','E06':'прострочення виявлено, резервний стан застосовано','E07':'кожен введений збій позначено','E10':'усі вектори захистів і контракту проходять','Critical service':'немає виявлених відмов у штатних запусках','Forecast advantage (C2 vs C1)':'наперед визначений ефект C2 над C1 з урахуванням освітлення'};
-$('#acc tbody').innerHTML=D.acceptance.map(a=>`<tr><td>${esc(accUA[a.object]||a.object)}</td><td>${esc(critUA[a.object]||a.criterion)}</td><td class="mono" style="font-size:12px">${esc(a.object.startsWith('Forecast')?`час до межі: Δ = 0 (обидві цензуровані); освітлення C2 − C1 = ${fmt(E.secondary['aux_served_wh:C2-C1'].mean,1)} Вт·год`:a.observed)}</td><td>${a.object.startsWith('Forecast')?chip(false):chip(a.pass)}</td></tr>`).join('');
+const chip=(p,y='met',n='not met',u='not supported')=>p===true?`<span class="chip ok"><span class="ic">✓</span>${y}</span>`:p===false?`<span class="chip no"><span class="ic">✕</span>${n}</span>`:`<span class="chip na"><span class="ic">?</span>${u}</span>`;
+const accEN={'Telemetry (normal runs)':'Telemetry (nominal runs)','Gaps > 5 s':'Gaps > 5 s','Energy model':'Energy model','SOC':'SOC','Command transfer':'Command transfer','Physical execution':'Physical execution','E06':'E06 link loss','E07':'E07 invalid data','E10':'E10 protections','Critical service':'Critical service','Forecast advantage (C2 vs C1)':'Forecast advantage (C2 vs C1)'};
+$('#acc tbody').innerHTML=D.acceptance.map(a=>`<tr><td>${esc(accEN[a.object]||a.object)}</td><td>${esc(a.criterion)}</td><td class="mono" style="font-size:12px">${esc(a.object.startsWith('Forecast')?`time to limit: Δ = 0 (both censored); lighting C2 − C1 = ${fmt(E.secondary['aux_served_wh:C2-C1'].mean,1)} Wh`:a.observed)}</td><td>${a.object.startsWith('Forecast')?chip(false):chip(a.pass)}</td></tr>`).join('');
 const concl=[
- `Двійник відстежує SOC за каналом M1 з MAE ≤ ${fmt(maxMae)} в.п. проти незалежного REF і з похибкою енергії ≤ 0,2 %. Критерій H1 виконано.`,
- `Контур «стан → рішення → команда → ACK → фронт струму» працює: ${T.effect_ms.n+T.state_confirmations} прийнятих команд, усі підтверджені вимірюванням, p95 RTT ${fmt(T.rtt_ms.p95,0)} мс (H2, H3).`,
- `Відмови зв’язку й датчиків відпрацьовуються: 5 із 5 ін’єкцій виявлено, хибних позначок 0; при втраті зв’язку освітлення вимикається, критичне навантаження працює далі.`,
- `Порогова політика C1 подовжує роботу до межі SOC_ref = 0,20 з ${fmt(PP.C0.time_to_limit_h.mean,1)} год до понад 6 год ціною ${fmt(-E.secondary['aux_served_wh:C1-C0'].mean,0)} Вт·год освітлення.`,
- `Прогнозне правило C2 з persistence-прогнозом переваги не дало: освітлення на ${fmt(-E.secondary['aux_served_wh:C2-C1'].mean,0)} Вт·год менше, ніж у C1. Оракул показує стелю ≈ ${fmt(E.secondary['aux_served_wh:C_oracle-C2'].mean,0)} Вт·год, тобто вузьке місце — прогноз генерації.`,
- `На 14-добовому профілі зі зменшеною батареєю прогноз попередньої доби допомагає: критична недопоставка знижується з ${fmt(D.e11.replay.C0.e_unserved_critical_wh,0)} до ${fmt(D.e11.replay.C2.e_unserved_critical_wh,0)} Вт·год.`,
- `MinSOC рукопису (0,219 / 0,247) однозначно не відтворюється: SIL дає 0,190 / 0,221, а розкид за неописаними параметрами становить 0,15–0,36.`,
- `Наступний крок — фізична серія за протоколами П-1…П-7 з тим самим кодом у режимі physical: калібрування E00, пілот E01–E05, фіксація порогів, щонайменше 3 повтори C0/C1/C2.`];
+ `The twin tracks SOC from channel M1 with MAE ≤ ${fmt(maxMae)} pp against the independent REF and an energy error ≤ 0.2 %. Criterion H1 is met.`,
+ `The loop “state → decision → command → ACK → current edge” works: ${T.effect_ms.n+T.state_confirmations} accepted commands, all confirmed by measurement, p95 RTT ${fmt(T.rtt_ms.p95,0)} ms (H2, H3).`,
+ `Link and sensor faults are handled: 5 of 5 injections detected, 0 false flags; on link loss the lighting turns off while the critical load keeps running.`,
+ `Threshold policy C1 extends operation to the SOC_ref = 0.20 limit from ${fmt(PP.C0.time_to_limit_h.mean,1)} h to more than 6 h at a cost of ${fmt(-E.secondary['aux_served_wh:C1-C0'].mean,0)} Wh of lighting.`,
+ `Forecast rule C2 with a persistence forecast gave no advantage: ${fmt(-E.secondary['aux_served_wh:C2-C1'].mean,0)} Wh less lighting than C1. The oracle shows a ceiling of ≈ ${fmt(E.secondary['aux_served_wh:C_oracle-C2'].mean,0)} Wh, so the bottleneck is the generation forecast.`,
+ `On the 14-day profile with a smaller battery, a previous-day forecast helps: critical unserved energy falls from ${fmt(D.e11.replay.C0.e_unserved_critical_wh,0)} to ${fmt(D.e11.replay.C2.e_unserved_critical_wh,0)} Wh.`,
+ `The manuscript's MinSOC (0.219 / 0.247) is not reproduced unambiguously: SIL gives 0.190 / 0.221, and the spread over undocumented parameters is 0.15–0.36.`,
+ `Next step: a physical series following protocols P-1…P-7 with the same code in physical mode — calibration E00, pilot E01–E05, threshold freeze, at least 3 repeats of C0/C1/C2.`];
 $('#concl').innerHTML=concl.map(c=>`<li>${c}</li>`).join('');
 
 /* ---------- chart engine ---------- */
@@ -260,21 +259,20 @@ function lineChart(el,o){
   const xs=o.series.flatMap(s=>s.x), x0=o.xMin??Math.min(...xs), x1=o.xMax??Math.max(...xs);
   const y0=o.yMin, y1=o.yMax;
   const X=v=>m.l+(v-x0)/(x1-x0)*iw, Y=v=>m.t+ih-(v-y0)/(y1-y0)*ih;
-  const ns='http://www.w3.org/2000/svg';
   let g=`<g class="grid">`;
   for(const t of o.yTicks){g+=`<line x1="${m.l}" x2="${W-m.r}" y1="${Y(t)}" y2="${Y(t)}"/><text x="${m.l-6}" y="${Y(t)+3.5}" text-anchor="end">${o.yFmt?o.yFmt(t):t}</text>`}
   for(const t of o.xTicks){g+=`<text x="${X(t)}" y="${H-m.b+16}" text-anchor="middle">${o.xFmt?o.xFmt(t):t}</text>`}
   g+=`</g><line class="axis" x1="${m.l}" x2="${W-m.r}" y1="${m.t+ih}" y2="${m.t+ih}"/>`;
-  if(o.xLabel) g+=`<text x="${W-m.r}" y="${H-2}" text-anchor="end">${o.xLabel}</text>`;
   for(const r of (o.refs||[])){g+=`<line x1="${m.l}" x2="${W-m.r}" y1="${Y(r.y)}" y2="${Y(r.y)}" stroke="${css('--ink-3')}" stroke-dasharray="2 3" stroke-width="1"/><text x="${m.l+6}" y="${Y(r.y)-4}">${r.label}</text>`}
   for(const b of (o.bands||[])){g=`<rect x="${X(b.x0)}" y="${m.t}" width="${X(b.x1)-X(b.x0)}" height="${ih}" fill="${css('--line-2')}"/>`+g}
   let paths='';
-  o.series.forEach((s,i)=>{if(s.hidden)return;
+  o.series.forEach(s=>{if(s.hidden)return;
     if(s.area){let d=`M${X(s.x[0])},${Y(y0)}`;s.x.forEach((x,j)=>{if(s.y[j]!=null)d+=`L${X(x)},${Y(s.y[j])}`});d+=`L${X(s.x[s.x.length-1])},${Y(y0)}Z`;paths+=`<path d="${d}" fill="${s.color}" opacity=".22"/>`;return}
     let d='',pen=false;s.x.forEach((x,j)=>{const v=s.y[j];if(v==null){pen=false;return}d+=(pen?'L':'M')+X(x).toFixed(1)+','+Y(v).toFixed(1);pen=true});
     paths+=`<path d="${d}" fill="none" stroke="${s.color}" stroke-width="${s.width||2}" ${s.dash?'stroke-dasharray="5 4"':''} stroke-linejoin="round" stroke-linecap="round"/>`});
   el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${o.aria||''}">${g}${paths}<line class="xh" y1="${m.t}" y2="${m.t+ih}" stroke="${css('--ink-3')}" stroke-width="1" opacity="0"/><g class="dots"></g><rect x="${m.l}" y="${m.t}" width="${iw}" height="${ih}" fill="transparent"/></svg><div class="tip"></div>`;
   const svg=el.querySelector('svg'),tip=el.querySelector('.tip'),xh=svg.querySelector('.xh'),dots=svg.querySelector('.dots');
+  const leave=()=>{tip.classList.remove('on');xh.setAttribute('opacity',0);dots.innerHTML=''};
   const move=ev=>{const r=svg.getBoundingClientRect(),px=(ev.clientX-r.left)/r.width*W;if(px<m.l||px>W-m.r){leave();return}
     const xv=x0+(px-m.l)/iw*(x1-x0);let rows=[],dd='';
     o.series.forEach(s=>{if(s.hidden||s.noTip)return;let bi=0,bd=1e18;s.x.forEach((x,j)=>{const d=Math.abs(x-xv);if(d<bd){bd=d;bi=j}});const v=s.y[bi];if(v==null)return;
@@ -282,7 +280,6 @@ function lineChart(el,o){
     xh.setAttribute('x1',X(xv));xh.setAttribute('x2',X(xv));xh.setAttribute('opacity',.6);dots.innerHTML=dd;
     tip.innerHTML=`<div style="opacity:.7">${o.xFmt?o.xFmt(xv,true):fmt(xv,2)}</div>`+rows.join('<br>');tip.classList.add('on');
     tip.style.left=Math.min(Math.max(ev.clientX-r.left,80),r.width-80)+'px';tip.style.top=(ev.clientY-r.top)+'px'};
-  const leave=()=>{tip.classList.remove('on');xh.setAttribute('opacity',0);dots.innerHTML=''};
   svg.addEventListener('pointermove',move);svg.addEventListener('pointerleave',leave);
 }
 function bars(el,o){
@@ -290,7 +287,7 @@ function bars(el,o){
   const Y=v=>m.t+ih-v/o.yMax*ih, gw=iw/o.groups.length, bw=Math.min(28,gw/(o.keys.length+1));
   let s='';for(const t of o.yTicks)s+=`<g class="grid"><line x1="${m.l}" x2="${W-m.r}" y1="${Y(t)}" y2="${Y(t)}"/><text x="${m.l-6}" y="${Y(t)+3.5}" text-anchor="end">${t}</text></g>`;
   o.groups.forEach((g,i)=>{const cx=m.l+gw*i+gw/2;o.keys.forEach((k,j)=>{const v=g.vals[j],x=cx+(j-(o.keys.length-1)/2)*(bw+2)-bw/2;
-    s+=`<path d="M${x},${Y(0)}V${Y(v)+3}a3,3 0 0 1 3,-3h${bw-6}a3,3 0 0 1 3,3V${Y(0)}Z" fill="${g.color}" opacity="${k.op}"><title>${g.name} · ${k.name}: ${fmt(v,0)} Вт·год</title></path><text x="${x+bw/2}" y="${Y(v)-4}" text-anchor="middle">${fmt(v,0)}</text>`});
+    s+=`<path d="M${x},${Y(0)}V${Y(v)+3}a3,3 0 0 1 3,-3h${bw-6}a3,3 0 0 1 3,3V${Y(0)}Z" fill="${g.color}" opacity="${k.op}"><title>${g.name} · ${k.name}: ${fmt(v,0)} Wh</title></path><text x="${x+bw/2}" y="${Y(v)-4}" text-anchor="middle">${fmt(v,0)}</text>`});
     s+=`<text x="${cx}" y="${H-8}" text-anchor="middle" style="fill:${css('--ink-2')}">${g.name}</text>`});
   el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${o.aria}"><line class="axis" x1="${m.l}" x2="${W-m.r}" y1="${Y(0)}" y2="${Y(0)}"/>${s}</svg>`;
 }
@@ -299,68 +296,67 @@ function bars(el,o){
 const hidden={};
 function drawE05(){
   const S=E.series,pol=['C0','C1','C2','C_oracle'];
-  lineChart($('#ch-e05'),{aria:'SOC_ref E05',h:250,yMin:.15,yMax:.55,yTicks:[.2,.3,.4,.5],yFmt:v=>fmt(v,1),xMin:0,xMax:6,xTicks:[0,1,2,3,4,5,6],xFmt:(v,t)=>t?`t = ${fmt(v,2)} год`:v+' год',
-    refs:[{y:.2,label:'межа 0,20'},{y:.3,label:'резерв 0,30'}],
+  lineChart($('#ch-e05'),{aria:'SOC_ref E05',h:250,yMin:.15,yMax:.55,yTicks:[.2,.3,.4,.5],yFmt:v=>fmt(v,1),xMin:0,xMax:6,xTicks:[0,1,2,3,4,5,6],xFmt:(v,t)=>t?`t = ${fmt(v,2)} h`:v+' h',
+    refs:[{y:.2,label:'limit 0.20'},{y:.3,label:'reserve 0.30'}],
     series:pol.map(p=>({name:p,color:css(PC[p]),x:S[p].t.map(t=>t/3600),y:S[p].soc_ref,dash:p==='C_oracle',hidden:hidden[p]}))});
   const st=[];pol.forEach((p,i)=>st.push({name:p+' LED',color:css(PC[p]),x:S[p].t.map(t=>t/3600),y:S[p].relay.map(v=>v*8+50+i*12),width:1.6,hidden:hidden[p],noTip:true}));
-  lineChart($('#ch-e05b'),{aria:'генерація і стан освітлення',h:150,yMin:0,yMax:100,yTicks:[0,20,40],xMin:0,xMax:6,xTicks:[0,1,2,3,4,5,6],xFmt:(v,t)=>t?`t = ${fmt(v,2)} год`:v+' год',tipFmt:v=>fmt(v,0)+' Вт',
-    series:[{name:'генерація',color:css('--c0'),area:true,x:S.C_oracle.t.map(t=>t/3600),y:S.C_oracle.p_gen_avail},{name:'генерація',color:css('--c0'),x:S.C_oracle.t.map(t=>t/3600),y:S.C_oracle.p_gen_avail,width:1},...st]});
+  lineChart($('#ch-e05b'),{aria:'generation and lighting state',h:150,yMin:0,yMax:100,yTicks:[0,20,40],xMin:0,xMax:6,xTicks:[0,1,2,3,4,5,6],xFmt:(v,t)=>t?`t = ${fmt(v,2)} h`:v+' h',tipFmt:v=>fmt(v,0)+' W',
+    series:[{name:'generation',color:css('--c0'),area:true,x:S.C_oracle.t.map(t=>t/3600),y:S.C_oracle.p_gen_avail},{name:'generation',color:css('--c0'),x:S.C_oracle.t.map(t=>t/3600),y:S.C_oracle.p_gen_avail,width:1},...st]});
 }
 $('#lg-e05').innerHTML=['C0','C1','C2','C_oracle'].map(p=>`<label><input type="checkbox" id="cb-${p}" checked data-p="${p}"><span class="sw ${p==='C_oracle'?'dash':''}" style="background:var(${PC[p]});color:var(${PC[p]})"></span>${PL[p]}</label>`).join('');
 $('#lg-e05').addEventListener('change',e=>{hidden[e.target.dataset.p]=!e.target.checked;drawE05()});
-$('#e05pol tbody').innerHTML=['C0','C1','C2','C_oracle'].map(p=>`<tr><td><span class="sw" style="background:var(${PC[p]})"></span> ${p}</td><td class="n">${fmt(PP[p].time_to_limit_h.mean)}${PP[p].censored?` <span class="pill">${PP[p].censored}/10 ценз.</span>`:''}</td><td class="n">${fmt(PP[p].aux_served_wh.mean,1)}</td><td class="n">${fmt(PP[p].min_soc_ref.mean,3)}</td></tr>`).join('');
-const con=[['C1 − C0 · час до межі, год',E.primary.C1_minus_C0,true],['C2 − C1 · час до межі, год',E.primary.C2_minus_C1,true],['C1 − C0 · освітлення, Вт·год',E.secondary['aux_served_wh:C1-C0']],['C2 − C1 · освітлення, Вт·год',E.secondary['aux_served_wh:C2-C1']],['Oracle − C2 · освітлення, Вт·год',E.secondary['aux_served_wh:C_oracle-C2']],['C2 − C1 · мін. SOC_ref',E.secondary['min_soc_ref:C2-C1']]];
-$('#e05con tbody').innerHTML=con.map(([l,v,pr])=>`<tr><td>${l}${pr?' <span class="pill">первинний</span>':''}</td><td class="n">${fmt(v.mean,v.mean<1&&v.mean>-1?3:1)}</td><td class="n">${fmt(v.ci_lo,2)}…${fmt(v.ci_hi,2)}</td><td class="n">${pr?fmt(v.p_holm,3):fmt(v.p_signflip,3)}</td></tr>`).join('');
+$('#e05pol tbody').innerHTML=['C0','C1','C2','C_oracle'].map(p=>`<tr><td><span class="sw" style="background:var(${PC[p]})"></span> ${p}</td><td class="n">${fmt(PP[p].time_to_limit_h.mean)}${PP[p].censored?` <span class="pill">${PP[p].censored}/10 cens.</span>`:''}</td><td class="n">${fmt(PP[p].aux_served_wh.mean,1)}</td><td class="n">${fmt(PP[p].min_soc_ref.mean,3)}</td></tr>`).join('');
+const con=[['C1 − C0 · time to limit, h',E.primary.C1_minus_C0,true],['C2 − C1 · time to limit, h',E.primary.C2_minus_C1,true],['C1 − C0 · lighting, Wh',E.secondary['aux_served_wh:C1-C0']],['C2 − C1 · lighting, Wh',E.secondary['aux_served_wh:C2-C1']],['Oracle − C2 · lighting, Wh',E.secondary['aux_served_wh:C_oracle-C2']],['C2 − C1 · min SOC_ref',E.secondary['min_soc_ref:C2-C1']]];
+$('#e05con tbody').innerHTML=con.map(([l,v,pr])=>`<tr><td>${l}${pr?' <span class="pill">primary</span>':''}</td><td class="n">${fmt(v.mean,v.mean<1&&v.mean>-1?3:1)}</td><td class="n">${fmt(v.ci_lo,2)}…${fmt(v.ci_hi,2)}</td><td class="n">${pr?fmt(v.p_holm,3):fmt(v.p_signflip,3)}</td></tr>`).join('');
 
 /* ---------- twin ---------- */
 let twinSel=Object.keys(D.twin)[0];
 function drawTwin(){const s=D.twin[twinSel];const lo=Math.min(...s.soc_ref,...s.soc_post),hi=Math.max(...s.soc_ref,...s.soc_post);const y0=Math.floor(lo*20)/20,y1=Math.ceil(hi*20)/20;
   const tmax=s.t[s.t.length-1]/60,step=tmax>90?30:15;const xt=[];for(let t=0;t<=tmax+.1;t+=step)xt.push(t);
   const yt=[];for(let v=y0;v<=y1+1e-9;v+=.05)yt.push(+v.toFixed(2));
-  lineChart($('#ch-twin'),{aria:'точність SOC',h:250,yMin:y0,yMax:y1,yTicks:yt,yFmt:v=>fmt(v,2),xMin:0,xMax:tmax,xTicks:xt,xFmt:(v,t)=>t?`t = ${fmt(v,1)} хв`:v+' хв',
-   series:[{name:'SOC_ref',color:css('--c0'),x:s.t.map(t=>t/60),y:s.soc_ref},{name:'posterior',color:css('--ink'),x:s.t.map(t=>t/60),y:s.soc_post,dash:true,width:1.4},{name:'істина',color:css('--cor'),x:s.t.map(t=>t/60),y:s.soc_true,width:1.2}]})}
+  lineChart($('#ch-twin'),{aria:'SOC accuracy',h:250,yMin:y0,yMax:y1,yTicks:yt,yFmt:v=>fmt(v,2),xMin:0,xMax:tmax,xTicks:xt,xFmt:(v,t)=>t?`t = ${fmt(v,1)} min`:v+' min',
+   series:[{name:'SOC_ref',color:css('--c0'),x:s.t.map(t=>t/60),y:s.soc_ref},{name:'posterior',color:css('--ink'),x:s.t.map(t=>t/60),y:s.soc_post,dash:true,width:1.4},{name:'truth',color:css('--cor'),x:s.t.map(t=>t/60),y:s.soc_true,width:1.2}]})}
 $('#twin-sel').innerHTML=Object.keys(D.twin).map(k=>`<button type="button" aria-pressed="${k===twinSel}" data-k="${k}">${k}</button>`).join('');
 $('#twin-sel').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;twinSel=b.dataset.k;$('#twin-sel').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));drawTwin()});
-$('#timing').innerHTML=[[fmt(T.rtt_ms.median,0),'мс','RTT медіана'],[fmt(T.rtt_ms.p99,0),'мс','RTT p99'],[fmt(T.effect_ms.max,0),'мс','ефект, максимум'],[fmt(Math.min(...nr.map(r=>r.coverage_pct)),2),'%','мін. покриття телеметрії']].map(([v,u,l])=>`<div class="kpi"><div class="v" style="font-size:22px">${v}<small>${u}</small></div><div class="l">${l}</div></div>`).join('');
+$('#timing').innerHTML=[[fmt(T.rtt_ms.median,0),'ms','RTT median'],[fmt(T.rtt_ms.p99,0),'ms','RTT p99'],[fmt(T.effect_ms.max,0),'ms','effect, maximum'],[fmt(Math.min(...nr.map(r=>r.coverage_pct)),2),'%','min telemetry coverage']].map(([v,u,l])=>`<div class="kpi"><div class="v" style="font-size:22px">${v}<small>${u}</small></div><div class="l">${l}</div></div>`).join('');
 
 /* ---------- faults ---------- */
-const FU={offset:'зміщення струму 0,39 А',stuck:'зависання значення',missing:'пропущене поле',impossible:'неможливе значення U = 99 В',sign:'зміна знака струму'};
-$('#e07 tbody').innerHTML=D.e07.table.map(r=>`<tr><td>${FU[r.fault]}</td><td>${r.detected?'<span class="chip ok"><span class="ic">✓</span>виявлено</span>':'<span class="chip no"><span class="ic">✕</span>пропущено</span>'}</td><td class="n">${fmt(r.latency_s,2)}</td><td class="mono" style="font-size:12px">${esc(r.flag)}</td></tr>`).join('');
-const TU={'ON accepted in RUNNING with permissions':'ON приймається в RUNNING','Low pack voltage (12.2 V < 12.4 V) forces OFF':'U < 12,4 В → OFF','ON rejected while local protection active':'ON відхилено при активному захисті','BMS open forces OFF':'BMS розімкнула → OFF','Expired command rejected (TTL, clock bound)':'прострочена команда відхилена','Wrong run_id rejected':'чужий run_id відхилено','Wrong boot_id rejected':'чужий boot_id відхилено','TOGGLE not accepted (non-idempotent)':'TOGGLE не приймається','Duplicate QoS-1 delivery does not re-switch':'дублікат QoS-1 не перемикає','Heartbeat loss > 5 s -> DEGRADED, aux OFF':'heartbeat > 5 с → DEGRADED, OFF','ON rejected in DEGRADED':'ON відхилено в DEGRADED','Synthetic-mode command rejected in physical mode':'команда іншого режиму відхилена'};
-$('#e10 tbody').innerHTML=D.e10.map(r=>`<tr><td>${TU[r.test]||esc(r.test)}</td><td>${r.pass?'<span class="chip ok"><span class="ic">✓</span>PASS</span>':'<span class="chip no"><span class="ic">✕</span>FAIL</span>'}</td></tr>`).join('');
+const FU={offset:'current offset 0.39 A',stuck:'stuck value',missing:'missing field',impossible:'impossible value V = 99 V',sign:'current sign flip'};
+$('#e07 tbody').innerHTML=D.e07.table.map(r=>`<tr><td>${FU[r.fault]}</td><td>${chip(r.detected,'detected','missed')}</td><td class="n">${fmt(r.latency_s,2)}</td><td class="mono" style="font-size:12px">${esc(r.flag)}</td></tr>`).join('');
+$('#e10 tbody').innerHTML=D.e10.map(r=>`<tr><td>${esc(r.test)}</td><td>${chip(r.pass,'PASS','FAIL')}</td></tr>`).join('');
 
 /* ---------- E11 ---------- */
 function drawE11(){const E1=D.e11,x=E1.S1.map((_,i)=>(i+1)/24);
- lineChart($('#ch-e11'),{aria:'14 діб',h:270,yMin:.1,yMax:1.02,yTicks:[.2,.4,.6,.8,1],yFmt:v=>fmt(v,1),xMin:0,xMax:14,xTicks:[0,2,4,6,8,10,12,14],xFmt:(v,t)=>t?`доба ${fmt(v,2)}`:v,bands:[{x0:10,x1:14}],refs:[{y:.15,label:'SOC_min 0,15'}],
-  series:[{name:'S1',color:css('--c0'),x,y:E1.S1},{name:'S3',color:css('--s3'),x,y:E1.S3},{name:'S1 100 А·год C0',color:css('--c0'),x,y:E1.S1_100Ah_C0,dash:true,width:1.3},{name:'S1 100 А·год C2',color:css('--c2'),x,y:E1.S1_100Ah_C2,dash:true,width:1.3}]});
- const R=E1.replay;bars($('#ch-e11b'),{aria:'недопоставка',yMax:600,yTicks:[0,200,400,600],keys:[{name:'критична',op:1},{name:'освітлення',op:.4}],
+ lineChart($('#ch-e11'),{aria:'14 days',h:270,yMin:.1,yMax:1.02,yTicks:[.2,.4,.6,.8,1],yFmt:v=>fmt(v,1),xMin:0,xMax:14,xTicks:[0,2,4,6,8,10,12,14],xFmt:(v,t)=>t?`day ${fmt(v,2)}`:v,bands:[{x0:10,x1:14}],refs:[{y:.15,label:'SOC_min 0.15'}],
+  series:[{name:'S1',color:css('--c0'),x,y:E1.S1},{name:'S3',color:css('--s3'),x,y:E1.S3},{name:'S1 100 Ah C0',color:css('--c0'),x,y:E1.S1_100Ah_C0,dash:true,width:1.3},{name:'S1 100 Ah C2',color:css('--c2'),x,y:E1.S1_100Ah_C2,dash:true,width:1.3}]});
+ const R=E1.replay;bars($('#ch-e11b'),{aria:'unserved energy',yMax:600,yTicks:[0,200,400,600],keys:[{name:'critical',op:1},{name:'lighting',op:.4}],
   groups:['C0','C1','C2'].map(p=>({name:p,color:css(PC[p]),vals:[R[p].e_unserved_critical_wh,R[p].e_unserved_aux_wh]}))})}
-$('#lg-e11').innerHTML=`<span><span class="sw" style="background:var(--c0)"></span>S1 (≡ S2)</span><span><span class="sw" style="background:var(--s3)"></span>S3</span><span style="color:var(--c0)"><span class="sw dash"></span>S1 100 А·год, C0</span><span style="color:var(--c2)"><span class="sw dash"></span>S1 100 А·год, C2</span><span><span class="sw" style="background:var(--c0);opacity:.4;height:8px"></span> суцільна — критична, бліда — освітлення</span>`;
+$('#lg-e11').innerHTML=`<span><span class="sw" style="background:var(--c0)"></span>S1 (≡ S2)</span><span><span class="sw" style="background:var(--s3)"></span>S3</span><span style="color:var(--c0)"><span class="sw dash"></span>S1 100 Ah, C0</span><span style="color:var(--c2)"><span class="sw dash"></span>S1 100 Ah, C2</span><span><span class="sw" style="background:var(--c0);opacity:.4;height:8px"></span> solid — critical, pale — lighting</span>`;
 const art={S1:.219,S2:.219,S3:.247};
 $('#e11t tbody').innerHTML=['S1','S2','S3'].map(s=>{const v=D.e11.sil[s];return `<tr><td>${s}</td><td class="n">${fmt(art[s],3)}</td><td class="n">${fmt(v.min_soc,3)}</td><td class="n">${fmt(v.min_soc_1min,3)}</td><td class="n">${fmt(v.min_soc_nameplate,3)}</td></tr>`}).join('');
-const OU={'late (protocol 10.2)':'пізні (протокол 10.2)','middle':'посередині','early':'на початку'};
+const OU={'late (protocol 10.2)':'late (protocol §10.2)','middle':'middle','early':'early'};
 $('#recon tbody').innerHTML=D.e11.recon.map(r=>`<tr><td>${OU[r.order]}</td><td class="mono" style="font-size:12px">${esc(r.efficiency)}</td><td class="n">${fmt(r.k_t)}</td><td class="n">${fmt(r.min_soc_S1,3)}</td><td class="n">${fmt(r.min_soc_S3,3)}</td></tr>`).join('');
 
 /* ---------- hardware ---------- */
-const BOM=[['Контролер','ESP32-S3-DevKitC-1','2×240 МГц, esp_timer 1 мкс, ESP-MQTT'],['Батарея','LiFePO₄ 4S 12,8 В / 40 А·год + BMS DALY 4S 40 А','CV 14,2 В; OVP 14,6 В; UVP 10,0 В; Iзар ≤ 20 А'],['Генерація G1','RIDEN RD6018 + Mean Well RSP-750-48 + LTC4359','0–60 В / 0–18 А, Modbus; CV 14,2 В, CC = P/U щосекунди'],['DC/DC гілок','Mean Well DDR-60G-12 ×2','вхід 9–36 В, 12 В / 5 А, η ≈ 0,90'],['Критичне навантаження','MikroTik hAP ac² + Korad KEL103 (CP)','разом 18 Вт на клемах'],['Освітлення','LED 12 В / 30 Вт; реле Bosch 0 332 019 150 (NO) + PC817 + ULN2003A','реле ≈ 10 мс, OFF за замовчуванням'],['M0–M5','TI INA226 + шунти FL-2 75 мВ','LSB 2,5 мкВ / 1,25 мВ; ±10 мкВ; ±0,1 %; ≤ 36 В'],['REF','TI INA228 + FL-2 50 А/75 мВ, Raspberry Pi 4','LSB 312,5 нВ; ±1 мкВ; ±0,05 %; ≤ 85 В'],['Температура','DS18B20 ×2','±0,5 °C'],['Захист','MIDI 40 А; ATO 25 / 5 / 7,5 А; Blue Sea 6006; ADuM1250','DC-рейтинг, розв’язка I²C']];
+const BOM=[['Controller','ESP32-S3-DevKitC-1','2×240 MHz, esp_timer 1 µs, ESP-MQTT'],['Battery','LiFePO₄ 4S 12.8 V / 40 Ah + DALY 4S 40 A BMS','CV 14.2 V; OVP 14.6 V; UVP 10.0 V; I_charge ≤ 20 A'],['Generation G1','RIDEN RD6018 + Mean Well RSP-750-48 + LTC4359','0–60 V / 0–18 A, Modbus; CV 14.2 V, CC = P/V every second'],['Branch DC/DC','Mean Well DDR-60G-12 ×2','in 9–36 V, 12 V / 5 A, η ≈ 0.90'],['Critical load','MikroTik hAP ac² + Korad KEL103 (CP)','18 W total at the terminals'],['Lighting','LED 12 V / 30 W; Bosch 0 332 019 150 relay (NO) + PC817 + ULN2003A','relay ≈ 10 ms, OFF by default'],['M0–M5','TI INA226 + FL-2 75 mV shunts','LSB 2.5 µV / 1.25 mV; ±10 µV; ±0.1 %; ≤ 36 V'],['REF','TI INA228 + FL-2 50 A/75 mV, Raspberry Pi 4','LSB 312.5 nV; ±1 µV; ±0.05 %; ≤ 85 V'],['Temperature','DS18B20 ×2','±0.5 °C'],['Protection','MIDI 40 A; ATO 25 / 5 / 7.5 A; Blue Sea 6006; ADuM1250','DC rated, I²C isolation']];
 $('#bom').innerHTML=BOM.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td style="color:var(--ink-2)">${r[2]}</td></tr>`).join('');
-$('#chan tbody').innerHTML=D.channels.map(r=>`<tr><td class="mono">${r.channel}</td><td>${r.meter} / ${fmt(r.r_shunt_mohm,1)} мОм</td><td class="n">${fmt(r.i_full_scale_a,1)}</td><td class="n">${fmt(r.i_lsb_ma,3)}</td><td class="n">±${fmt(r.offset_max_ma,2)}</td><td class="n">${fmt(r.p_shunt_max_w,2)}</td><td class="mono" style="font-size:12px">${r.calibration_levels_a.map(v=>fmt(v,2)).join('; ')}</td></tr>`).join('');
-$('#cal tbody').innerHTML=Object.entries(D.calibration).map(([n,c])=>`<tr><td class="mono">${n}</td><td class="n">${fmt(c.zero_offset_raw_a*1e3,2)}</td><td class="n">${fmt(c.a_i,5)}</td><td class="n">${fmt(c.b_i*1e3,2)}</td><td class="n">${fmt(c.max_verification_rel*100,3)} %</td><td>${chip(c.pass_current)}</td></tr>`).join('');
+$('#chan tbody').innerHTML=D.channels.map(r=>`<tr><td class="mono">${r.channel}</td><td>${r.meter} / ${fmt(r.r_shunt_mohm,1)} mΩ</td><td class="n">${fmt(r.i_full_scale_a,1)}</td><td class="n">${fmt(r.i_lsb_ma,3)}</td><td class="n">±${fmt(r.offset_max_ma,2)}</td><td class="n">${fmt(r.p_shunt_max_w,2)}</td><td class="mono" style="font-size:12px">${r.calibration_levels_a.map(v=>fmt(v,2)).join('; ')}</td></tr>`).join('');
+$('#cal tbody').innerHTML=Object.entries(D.calibration).map(([n,c])=>`<tr><td class="mono">${n}</td><td class="n">${fmt(c.zero_offset_raw_a*1e3,2)}</td><td class="n">${fmt(c.a_i,5)}</td><td class="n">${fmt(c.b_i*1e3,2)}</td><td class="n">${fmt(c.max_verification_rel*100,3)} %</td><td>${chip(c.pass_current,'pass','fail')}</td></tr>`).join('');
 const C=D.capacity;
-$('#cap tbody').innerHTML=[['Q_ref (REF), А·год',fmt(C.q_ref_ah,3)],['Q_M1 (M1), А·год',fmt(C.q_m1_ah,3)],['E_ref, Вт·год',fmt(C.e_ref_wh,1)],['η_Q',fmt(C.eta_q_ref,4)],['Розряд 10 А до 11,2 В, год',fmt(C.discharge_time_h,2)],['Прихована ємність (лише емуляція), А·год',fmt(C.true_capacity_ah_hidden,2)]].map(r=>`<tr><td>${r[0]}</td><td class="n">${r[1]}</td></tr>`).join('');
+$('#cap tbody').innerHTML=[['Q_ref (REF), Ah',fmt(C.q_ref_ah,3)],['Q_M1 (M1), Ah',fmt(C.q_m1_ah,3)],['E_ref, Wh',fmt(C.e_ref_wh,1)],['η_Q',fmt(C.eta_q_ref,4)],['Discharge 10 A to 11.2 V, h',fmt(C.discharge_time_h,2)],['Hidden capacity (emulation only), Ah',fmt(C.true_capacity_ah_hidden,2)]].map(r=>`<tr><td>${r[0]}</td><td class="n">${r[1]}</td></tr>`).join('');
 
 /* ---------- software ---------- */
-const MODS=[['battery','еквівалентна схема LiFePO₄ з прихованими параметрами екземпляра (емульований об’єкт)'],['sensors · calibration','INA226/INA228 + шунт: зміщення, підсилення, шум, LSB, насичення; процедура E00 і бюджет невизначеності'],['capacity','E09: ємність робочого інтервалу і η_Q'],['transport','MQTT: затримка, втрати, дублікати QoS-1, блекаути'],['edge_guard','дзеркало прошивки ESP32: автомат станів, контракт команди, watchdog'],['twin','валідація телеметрії, SOC prior/posterior (EKF), баланс шини'],['forecast · ems','причинний прогноз; політики C0, C1, C2, C_oracle'],['bench · scenarios','оркестрація віртуального стенда; матриця E01–E08'],['energy_sim · sizing · replay','модель рукопису, розмірювання B.4–B.7, E11 з lockstep-контролером'],['stats','BCa bootstrap, точний sign-flip, Holm, Friedman'],['firmware/esp32_edge_guard','ESP-IDF C: 10 Гц INA226, 1 Гц телеметрія, контракт команд (не компілювалось)']];
+const MODS=[['battery','LiFePO₄ equivalent circuit with hidden unit parameters (emulated plant)'],['sensors · calibration','INA226/INA228 + shunt: offset, gain, noise, LSB, saturation; E00 procedure and uncertainty budget'],['capacity','E09: working-interval capacity and η_Q'],['transport','MQTT: latency, loss, QoS-1 duplicates, blackouts'],['edge_guard','mirror of the ESP32 firmware: state machine, command contract, watchdog'],['twin','telemetry validation, SOC prior/posterior (EKF), bus balance'],['forecast · ems','causal forecast; policies C0, C1, C2, C_oracle'],['bench · scenarios','virtual-testbed orchestration; E01–E08 matrix'],['energy_sim · sizing · replay','manuscript model, B.4–B.7 sizing, E11 with lockstep controller'],['stats','BCa bootstrap, exact sign-flip, Holm, Friedman'],['firmware/esp32_edge_guard','ESP-IDF C: 10 Hz INA226, 1 Hz telemetry, command contract (not compiled)']];
 $('#mods').innerHTML=MODS.map(r=>`<tr><td class="mono" style="white-space:nowrap">${r[0]}</td><td>${r[1]}</td></tr>`).join('');
 
 /* ---------- runs ---------- */
-let runF='усі';
-function drawRuns(){const rs=D.runs.filter(r=>runF==='усі'||r.scenario_id===runF);
- $('#runt tbody').innerHTML=rs.map(r=>`<tr><td class="mono" style="font-size:12px">${r.run_id}</td><td class="n">${fmt(r.duration_h,2)}</td><td>${r.stop_reason==='completed'?'завершено':r.stop_reason==='stopped_limit'?'межа SOC':r.stop_reason}</td><td class="n">${fmt(r.coverage_pct,2)}</td><td class="n">${fmt(r.mae_soc_pp,2)}</td><td class="n">${fmt(r.energy_error_pct,2)}</td><td class="n">${fmt(r.aux_served_wh,1)}</td><td class="n">${fmt(r.min_soc_ref,3)}</td><td class="n">${fmt(r.rtt_p95,1)}</td></tr>`).join('')}
-const sc=['усі',...new Set(D.runs.map(r=>r.scenario_id))];
+let runF='all';
+function drawRuns(){const rs=D.runs.filter(r=>runF==='all'||r.scenario_id===runF);
+ $('#runt tbody').innerHTML=rs.map(r=>`<tr><td class="mono" style="font-size:12px">${r.run_id}</td><td class="n">${fmt(r.duration_h,2)}</td><td>${r.stop_reason==='completed'?'completed':r.stop_reason==='stopped_limit'?'SOC limit':r.stop_reason}</td><td class="n">${fmt(r.coverage_pct,2)}</td><td class="n">${fmt(r.mae_soc_pp,2)}</td><td class="n">${fmt(r.energy_error_pct,2)}</td><td class="n">${fmt(r.aux_served_wh,1)}</td><td class="n">${fmt(r.min_soc_ref,3)}</td><td class="n">${fmt(r.rtt_p95,1)}</td></tr>`).join('')}
+const sc=['all',...new Set(D.runs.map(r=>r.scenario_id))];
 $('#run-sel').innerHTML=sc.map(s=>`<button type="button" aria-pressed="${s===runF}" data-s="${s}">${s}</button>`).join('');
 $('#run-sel').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;runF=b.dataset.s;$('#run-sel').querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));drawRuns()});
-$('#foot').innerHTML=`<span>${esc(M.evidence_class)}</span><span>Джерело: dt_power_hil/results/summary.json · звіт: report/DT_HIL_Experiment_Report_Elsevier_UA.docx · протоколи: hardware/measurement_protocols.md</span>`;
+$('#foot').innerHTML=`<span>${esc(M.evidence_class)}</span><span>Source: dt_power_hil/results/summary.json · report: report/DT_HIL_Experiment_Report_Elsevier_EN.docx · protocols: hardware/measurement_protocols.md</span>`;
 
 function drawAll(){drawE05();drawTwin();drawE11()}
 drawAll();drawRuns();
