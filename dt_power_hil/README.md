@@ -12,8 +12,9 @@ Implementation of the protocol “Software–hardware experiment for the digital
 | Hardware: BOM on real components, diagram, installation | `hardware/BOM_and_wiring.md` |
 | Measurement protocols P-1…P-7 | `hardware/measurement_protocols.md`, `results/protocols/` |
 | Elsevier-style report (English) | `report/DT_HIL_Experiment_Report_Elsevier_EN.docx` |
+| Experiment dossier: archive contents, test bench, protocol, results, manuscript integration kit | `report/DT_HIL_Experiment_Dossier_Testbed_EN.docx` |
 | Web dashboard (English) | `web/index.html` |
-| Ukrainian versions | `*_UA.*` files, `scripts/*_ua.py`, `web/template_ua.html` |
+| Ukrainian versions (repository only, not in the English archive) | `*_UA.*` files, `scripts/*_ua.py`, `web/template_ua.html` |
 
 ## Reproduction
 
@@ -21,9 +22,11 @@ Implementation of the protocol “Software–hardware experiment for the digital
 pip install numpy scipy matplotlib python-docx pytest
 python -m pytest -q tests                 # software acceptance checks (protocol §18.3)
 python scripts/run_campaign.py            # E00–E11 → results/ (≈ 80 s on 4 cores)
-python scripts/make_figures.py            # results/figures/*.png|pdf
+python scripts/make_figures.py            # results/figures/fig01–fig09
+python scripts/make_figures_extra.py      # results/figures/fig10–fig13
 python scripts/make_protocols.py          # hardware/measurement_protocols.md
 python scripts/make_report.py             # report/DT_HIL_Experiment_Report_Elsevier_EN.docx
+python scripts/make_experiment_book.py    # report/DT_HIL_Experiment_Dossier_Testbed_EN.docx
 python scripts/make_web.py                # web/index.html (+ web/index_UA.html)
 ```
 
