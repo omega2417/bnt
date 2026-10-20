@@ -1,5 +1,7 @@
 # GoNext — a transpiler for language extensions with Go ecosystem compatibility
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23490820.svg)](https://doi.org/10.5281/zenodo.23490820)
+
 GoNext is an experimental dialect of Go and a source-to-source transpiler
 that lowers its extensions to ordinary Go. Every valid Go file is a valid
 GoNext file with the same meaning; the generated code is compiled, tested,
@@ -149,8 +151,12 @@ package.
 
 ## Citing
 
-If you use GoNext, please cite the software (see [`CITATION.cff`](CITATION.cff);
-the DOI is assigned by Zenodo) and the article.
+If you use GoNext, please cite the software and the article:
+
+> Forkert, P. *GoNext: Transpiler and Reproducibility Package*, Version 1.0.0;
+> Zenodo, 2026. https://doi.org/10.5281/zenodo.23490820
+
+(see also [`CITATION.cff`](CITATION.cff)).
 
 ## License
 

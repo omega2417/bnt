@@ -20,7 +20,8 @@ version: 1.0.0
 date-released: "2026-10-20"
 license: Apache-2.0
 repository-code: "https://github.com/ORGANIZATION/gonext"
-# doi: 10.5281/zenodo.XXXXXXX                         # TODO: assigned by Zenodo
+doi: 10.5281/zenodo.23490820
+url: "https://doi.org/10.5281/zenodo.23490820"
 keywords:
   - transpiler
   - source-to-source compilation
