@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below and cite the accompanying article."
+type: software
+title: "GoNext: Transpiler and Reproducibility Package"
+abstract: >-
+  GoNext is an experimental dialect of Go and a six-stage source-to-source
+  transpiler that implements high-level language extensions (enums with
+  associated data, pattern matching, named and default arguments, extension
+  methods, generic methods, short anonymous functions and uniform function
+  call syntax) by lowering them to ordinary Go, keeping full compatibility
+  with the Go compiler, runtime and ecosystem. The package also contains the
+  micro-experiments, criterion scores, raw benchmark output and analysis
+  scripts of the accompanying article.
+authors:
+  - family-names: Forkert
+    given-names: Pavlo
+    affiliation: "Department of Cybersecurity and Information Technologies, University of Customs and Finance, Dnipro, Ukraine"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"   # TODO: add ORCID
+version: 1.0.0
+date-released: "2026-10-20"
+license: Apache-2.0
+repository-code: "https://github.com/ORGANIZATION/gonext"
+# doi: 10.5281/zenodo.XXXXXXX                         # TODO: assigned by Zenodo
+keywords:
+  - transpiler
+  - source-to-source compilation
+  - Go programming language
+  - language extensions
+  - algebraic data types
+  - pattern matching
+  - garbage collection
+  - domain-specific languages
+  - compiler architecture
+preferred-citation:
+  type: article
+  title: "GoNext: A Transpilation Architecture for Language Extensions with Go Ecosystem Compatibility"
+  authors:
+    - family-names: Forkert
+      given-names: Pavlo
+  journal: Electronics
+  year: 2026
+  status: submitted

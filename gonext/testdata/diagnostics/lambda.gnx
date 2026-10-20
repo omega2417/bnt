@@ -1,0 +1,9 @@
+package diag
+
+func Apply[T, U any](x T, f func(T) U) U { return f(x) }
+
+func use() {
+	f := x => x + 1             // ERROR "cannot infer the parameter types of a short function"
+	_ = f
+	_ = Apply(1, x => 2)        // ERROR "cannot infer the result type of a short function from the untyped constant 2"
+}

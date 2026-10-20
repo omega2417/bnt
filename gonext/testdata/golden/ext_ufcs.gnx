@@ -1,0 +1,23 @@
+// Extension methods with type parameters and pointer receivers, exported
+// extensions and uniform function call syntax.
+package ext
+
+import "strings"
+
+type Counter struct{ n int }
+
+ext func (c *Counter) Inc(by int = 1) { c.n += by }
+
+ext func (s []T) Last[T any]() T { return s[len(s)-1] }
+
+ext func (s string) words() []string { return strings.Fields(s) }
+
+func Join(parts []string, sep string) string { return strings.Join(parts, sep) }
+
+func use() (int, string, string) {
+	var c Counter
+	c.Inc()
+	c.Inc(by: 10)
+	s := "a b c"
+	return c.n, s.words().Last(), s.words().Join(sep: "+")
+}

@@ -1,0 +1,39 @@
+package mixed
+
+import "strings"
+
+// Route is the result of routing a request.
+enum Route {
+	Index
+	User(id string)
+	Static(path string, maxAge int)
+	NotFound
+}
+
+// IsNotFound is called from Go code.
+func (r Route) IsNotFound() bool {
+	return match r { NotFound => true; _ => false }
+}
+
+func route(r Request) Route {
+	parts := strings.Split(strings.Trim(r.Path, "/"), "/")
+	return match parts[0] {
+		""       => Route.Index
+		"users" if len(parts) == 2 => Route.User(parts[1])
+		"static" => static(path: strings.Join(parts[1:], "/"))
+		_        => Route.NotFound
+	}
+}
+
+func static(path string, maxAge int = 3600) Route {
+	return Route.Static(path, maxAge)
+}
+
+func describe(rt Route) string {
+	return match rt {
+		Index               => "index"
+		User(id)            => "user " + id
+		Static(p, age)      => p + " cached " + strings.Repeat("*", age/3600)
+		NotFound            => "not found"
+	}
+}

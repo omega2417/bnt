@@ -1,0 +1,268 @@
+// Program features exercises every GoNext extension. Its output must be
+// identical under all enum representations (differential test).
+package main
+
+import (
+	"errors"
+	"fmt"
+	"strings"
+)
+
+// Expr is a small expression language.
+enum Expr {
+	Num(v float64)
+	Var(name string)
+	Add(l, r *Expr)
+	Mul(l, r *Expr)
+	Neg(x *Expr)
+}
+
+// Token is a lexical token with payloads of many kinds.
+enum Token {
+	EOF
+	Ident(name string)
+	Int(v int64)
+	Flag(on bool)
+	Small(f float32)
+	Bytes(b []byte)
+	Lookup(m map[string]int)
+	Callback(fn func(int) int)
+	Pair(p [2]int)
+	Err(err error)
+}
+
+enum Option[T any] {
+	None
+	Some(v T)
+}
+
+enum Result[T any, E any] {
+	Ok(v T)
+	Fail(e E)
+}
+
+func num(v float64) *Expr { e := Expr.Num(v); return &e }
+
+func eval(e Expr, env map[string]float64) float64 {
+	return match e {
+		Num(v)    => v
+		Var(n)    => env[n]
+		Add(l, r) => eval(*l, env) + eval(*r, env)
+		Mul(l, r) => eval(*l, env) * eval(*r, env)
+		Neg(x)    => -eval(*x, env)
+	}
+}
+
+func show(e Expr) string {
+	return match e {
+		Num(v) if v < 0 => fmt.Sprintf("(%g)", v)
+		Num(v)          => fmt.Sprintf("%g", v)
+		Var(n)          => n
+		Add(l, r)       => "(" + show(*l) + " + " + show(*r) + ")"
+		Mul(l, r)       => show(*l) + "*" + show(*r)
+		Neg(x)          => "-" + show(*x)
+	}
+}
+
+func describe(t Token) string {
+	return match t {
+		EOF             => "eof"
+		Ident(n) if strings.HasPrefix(n, "_") => "private " + n
+		Ident(n)        => "ident " + n
+		Int(v)          => fmt.Sprint("int ", v)
+		Flag(on)        => fmt.Sprint("flag ", on)
+		Small(f)        => fmt.Sprint("small ", f)
+		Bytes(b)        => fmt.Sprintf("bytes %q len=%d cap=%d", b, len(b), cap(b))
+		Lookup(m)       => fmt.Sprint("lookup ", m["a"])
+		Callback(fn)    => fmt.Sprint("callback ", fn(20))
+		Pair(p)         => fmt.Sprint("pair ", p[0]+p[1])
+		Err(err)        => "err " + err.Error()
+	}
+}
+
+func kind(t Token) string {
+	return match t {
+		Ident(_) | Int(_) => "word"
+		EOF               => "end"
+		_                 => "other"
+	}
+}
+
+func classify(n int) string {
+	return match n {
+		0         => "zero"
+		1 | 2 | 3 => "small"
+		_ if n < 0 => "negative"
+		_         => "large"
+	}
+}
+
+func (o Option[T]) orElse(d T) T {
+	return match o {
+		Some(v) => v
+		None    => d
+	}
+}
+
+func divide(a, b int) Result[int, string] {
+	if b == 0 {
+		return Result[int, string].Fail("division by zero")
+	}
+	return Result[int, string].Ok(a / b)
+}
+
+// named and default arguments
+
+type Conn struct {
+	Host    string
+	Port    int
+	Retries int
+	Secure  bool
+}
+
+func dial(host string, port int = 443, retries int = 3, secure bool = true) Conn {
+	return Conn{host, port, retries, secure}
+}
+
+var calls []string
+
+func trace(s string, v int) int { calls = append(calls, s); return v }
+
+type Client struct{ base string }
+
+func (c *Client) get(path string, retries int = 2) string {
+	return fmt.Sprintf("GET %s%s x%d", c.base, path, retries)
+}
+
+// extension methods, generic methods, UFCS
+
+ext func (s []int) sum() int {
+	t := 0
+	for _, v := range s {
+		t += v
+	}
+	return t
+}
+
+ext func (s string) shout(times int = 1) string {
+	return strings.Repeat(strings.ToUpper(s)+"!", times)
+}
+
+ext func (s []T) first[T any]() T { return s[0] }
+
+type List[T any] struct{ items []T }
+
+func Of[T any](xs ...T) List[T] { return List[T]{xs} }
+
+func (l List[T]) map[U any](f func(T) U) List[U] {
+	out := make([]U, len(l.items))
+	for i, v := range l.items {
+		out[i] = f(v)
+	}
+	return List[U]{out}
+}
+
+func (l List[T]) filter(keep func(T) bool) List[T] {
+	var out []T
+	for _, v := range l.items {
+		if keep(v) {
+			out = append(out, v)
+		}
+	}
+	return List[T]{out}
+}
+
+func (l List[T]) fold[A any](init A, f func(A, T) A) A {
+	acc := init
+	for _, v := range l.items {
+		acc = f(acc, v)
+	}
+	return acc
+}
+
+func max3(a, b, c int) int { return max(a, b, c) }
+
+func apply(f func(int) int, x int) int { return f(x) }
+
+func main() {
+	// enums and match
+	e := Expr.Add(num(2), num(3))
+	m := Expr.Mul(&e, num(-4))
+	env := map[string]float64{"x": 10}
+	x := Expr.Var("x")
+	fmt.Println(show(m), "=", eval(m, env))
+	fmt.Println(show(x), "=", eval(x, env))
+
+	toks := []Token{
+		Token.EOF, Ident("_tmp"), Ident("x"), Int(-42), Flag(true), Small(1.5),
+		Bytes([]byte("hey")[:2]), Lookup(map[string]int{"a": 7}),
+		Callback(func(i int) int { return i * 2 }), Pair([2]int{3, 4}),
+		Err(errors.New("boom")),
+	}
+	for _, t := range toks {
+		fmt.Println(describe(t), "/", kind(t))
+	}
+	for _, n := range []int{0, 2, -5, 99} {
+		fmt.Print(classify(n), " ")
+	}
+	fmt.Println()
+
+	o := Option.Some(5)
+	var none Option[int] = Option[int].None
+	fmt.Println(o.orElse(1), none.orElse(1))
+	for _, d := range []int{2, 0} {
+		r := divide(10, d)
+		match r {
+			Ok(v)   => fmt.Println("ok", v)
+			Fail(e) => {
+				msg := strings.ToUpper(e)
+				fmt.Println("fail", msg)
+			}
+		}
+	}
+
+	// match in expression positions
+	label := "value: " + match o { Some(v) => fmt.Sprint(v); None => "none" }
+	fmt.Println(label)
+	ok := len(label) > 100 && match o { Some(_) => true; None => false }
+	fmt.Println(ok)
+	nested := match e {
+		Add(l, _) => match *l {
+			Num(v) => v * 10
+			_      => 0.0
+		}
+		_ => -1.0
+	}
+	fmt.Println(nested)
+
+	// named and default arguments
+	fmt.Println(dial("example.org"))
+	fmt.Println(dial("example.org", retries: 5))
+	fmt.Println(dial(retries: trace("retries", 1), host: "h", port: trace("port", 80)))
+	fmt.Println(calls)
+	c := &Client{base: "https://x"}
+	fmt.Println(c.get("/a"), c.get(retries: 9, path: "/b"))
+	fmt.Println(strings.Repeat(count: 3, s: "ab"))
+
+	// extension methods, generic methods, UFCS, short functions
+	xs := []int{1, 2, 3, 4}
+	fmt.Println(xs.sum(), "go".shout(), "go".shout(times: 2), xs.first())
+	l := Of(1, 2, 3, 4, 5)
+	sq := l.map(x => x * x).filter(x => x%2 == 1)
+	fmt.Println(sq.items)
+	strs := l.map(x => fmt.Sprintf("<%d>", x))
+	fmt.Println(strs.items)
+	total := l.fold(0.5, (acc, x) => acc + float64(x))
+	fmt.Println(total)
+	joined := l.fold("", (acc, x) => {
+		if acc == "" {
+			return fmt.Sprint(x)
+		}
+		return acc + "," + fmt.Sprint(x)
+	})
+	fmt.Println(joined)
+	one := 1
+	fmt.Println(one.max3(7, 3), apply(x => x + 100, 1))
+	var inc func(int) int = x => x + 1
+	fmt.Println(inc(41))
+}

@@ -1,0 +1,15 @@
+package diag
+
+enum Color {
+	Red
+	Green
+	Blue(level int)
+}
+
+func d(c Color) int {
+	return match c {
+		Blue(x, y) => x // ERROR "pattern Blue binds 2 values, variant has 1"
+		Purple(_)  => 0 // ERROR "unknown variant Purple"
+		_          => 0
+	}
+}

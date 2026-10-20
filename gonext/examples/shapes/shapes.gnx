@@ -1,0 +1,53 @@
+// Command shapes is Listing 5 of the GoNext article as a program: an enum
+// with associated data and an exhaustive match, lowered to the compact
+// representation R3 (Listing 6).
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+enum Shape {
+	Circle(r float64)
+	Rect(w, h float64)
+	Triangle(a, b, c float64)
+	Text(s string)
+}
+
+func heron(a, b, c float64) float64 {
+	s := (a + b + c) / 2
+	return math.Sqrt(s * (s - a) * (s - b) * (s - c))
+}
+
+func measure(s Shape) float64 {
+	return match s {
+		Circle(r)         => math.Pi * r * r
+		Rect(w, h)        => w * h
+		Triangle(a, b, c) => heron(a, b, c)
+		Text(s)           => float64(len(s))
+	}
+}
+
+func name(s Shape) string {
+	return match s {
+		Circle(_)         => "circle"
+		Rect(w, h) if w == h => "square"
+		Rect(_, _)        => "rectangle"
+		Triangle(_, _, _) => "triangle"
+		Text(_)           => "text"
+	}
+}
+
+func main() {
+	shapes := []Shape{
+		Shape.Circle(1),
+		Shape.Rect(2, 3),
+		Shape.Rect(2, 2),
+		Shape.Triangle(3, 4, 5),
+		Shape.Text("GoNext"),
+	}
+	for _, s := range shapes {
+		fmt.Printf("%-9s %6.2f\n", name(s), measure(s))
+	}
+}

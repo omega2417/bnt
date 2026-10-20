@@ -1,0 +1,16 @@
+// Listings 3 and 4 of the GoNext article: a generic method and a short
+// anonymous function.
+package list
+
+type List[T any] struct { items []T }
+
+func (l List[T]) map[U any](f func(T) U) List[U] {
+	out := make([]U, len(l.items))
+	for i, v := range l.items { out[i] = f(v) }
+	return List[U]{out}
+}
+
+func double(xs List[int]) List[int] {
+	ys := xs.map(x => x * 2) // xs has type List[int]
+	return ys
+}

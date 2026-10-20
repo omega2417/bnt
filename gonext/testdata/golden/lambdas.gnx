@@ -1,0 +1,48 @@
+// Contextual (bidirectional) typing of short anonymous functions.
+package lambdas
+
+import (
+	"sort"
+	"strconv"
+	"strings"
+)
+
+func Map[T, U any](xs []T, f func(T) U) []U {
+	out := make([]U, 0, len(xs))
+	for _, x := range xs {
+		out = append(out, f(x))
+	}
+	return out
+}
+
+func Each[T any](xs []T, f func(T)) {
+	for _, x := range xs {
+		f(x)
+	}
+}
+
+type Handler struct {
+	Name string
+	Fn   func(string) int
+}
+
+func use(words []string) ([]int, []string, int) {
+	lens := Map(words, w => len(w))                     // parameter from the argument, result from the body
+	strs := Map(lens, n => strconv.Itoa(n) + "!")       // chained inference
+	sort.Slice(words, (i, j) => words[i] < words[j])    // parameters of a Go library function
+	var total int
+	Each(lens, n => { total += n })                     // block body without result
+	var parse func(string) (int, error) = s => strconv.Atoi(s)
+	n, _ := parse("42")
+	h := Handler{Name: "len", Fn: s => len(strings.TrimSpace(s))}
+	return lens, strs, total + n + h.Fn(" ab ")
+}
+
+func adder(k int) func(int) int {
+	return x => x + k // expected type from the result of adder
+}
+
+func explicit() func(int, int) int {
+	f := (a int, b int) => a * b // explicit parameter types
+	return f
+}

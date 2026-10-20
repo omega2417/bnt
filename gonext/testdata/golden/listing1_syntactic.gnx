@@ -1,0 +1,36 @@
+// Listings 1 and 2 of the GoNext article: named and default arguments,
+// an extension method and uniform function call syntax.
+package conn
+
+import "time"
+
+type Conn struct {
+	host    string
+	port    int
+	timeout time.Duration
+	retries int
+}
+
+func dial(host string, port int = 443,
+	timeout time.Duration = 5*time.Second, retries int = 3) Conn {
+	return Conn{host, port, timeout, retries}
+}
+
+ext func (s []int) sum() int {
+	t := 0
+	for _, v := range s { t += v }
+	return t
+}
+
+func max3(a, b, c int) int { return max(a, b, c) }
+
+func host() string { return "example.org" }
+func retries() int  { return 5 }
+
+func use(xs []int, a, b, c int) (Conn, Conn, int, int) {
+	c1 := dial("example.org", retries: 5)        // named + default arguments
+	c2 := dial(retries: retries(), host: host())  // reordered named arguments
+	total := xs.sum()                             // extension method
+	m := a.max3(b, c)                             // UFCS form of max3(a, b, c)
+	return c1, c2, total, m
+}

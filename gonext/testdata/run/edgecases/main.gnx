@@ -1,0 +1,69 @@
+// Program edgecases covers matches in if/switch init statements and else-if
+// conditions, matches inside short functions and short functions inside
+// matches, unit-only enums and matches whose context expects an interface.
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+enum Dir { N; E; S; W }
+
+enum Ev {
+	Key(r rune)
+	Click(x, y int)
+	Resize(w, h int)
+}
+
+type Box struct{ evs []Ev }
+
+func (b *Box) last() Ev { return b.evs[len(b.evs)-1] }
+
+func turn(d Dir) Dir {
+	return match d { N => Dir.E; E => Dir.S; S => Dir.W; W => Dir.N }
+}
+
+func Apply[T, U any](xs []T, f func(T) U) []U {
+	var out []U
+	for _, x := range xs {
+		out = append(out, f(x))
+	}
+	return out
+}
+
+func main() {
+	b := &Box{evs: []Ev{Ev.Key('a'), Ev.Click(1, 2), Ev.Resize(3, 4)}}
+	match b.last() {
+		Resize(w, h) => fmt.Println("resize", w*h)
+		_            => fmt.Println("other")
+	}
+	if x := match b.evs[0] { Key(r) => string(r); _ => "" }; x != "" {
+		fmt.Println("key", x)
+	}
+	x := 5
+	_ = x
+	descs := Apply(b.evs, e => match e {
+		Key(r)       => "k" + string(r)
+		Click(x, y)  => fmt.Sprint("c", x+y)
+		Resize(_, _) => "r"
+	})
+	fmt.Println(strings.Join(descs, ","))
+	fns := Apply([]int{1, 2}, n => match n { 1 => (s string) => s + "!"; _ => s => s + "?" })
+	fmt.Println(fns[0]("a"), fns[1]("b"))
+	d := Dir.N
+	for i := 0; i < 5; i++ {
+		d = turn(d)
+	}
+	fmt.Println(match d { N => "N"; E => "E"; S => "S"; W => "W" })
+	switch y := match d { E => 1; _ => 2 }; y {
+	case 1:
+		fmt.Println("one")
+	default:
+		fmt.Println("two")
+	}
+	if len(descs) > 10 {
+	} else if z := match d { E => true; _ => false }; z {
+		fmt.Println("else-if", z)
+	}
+}

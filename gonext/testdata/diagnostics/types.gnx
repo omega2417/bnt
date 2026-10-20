@@ -1,0 +1,13 @@
+package diag
+
+enum Num {
+	I(v int)
+	S(v string)
+}
+
+func total(n Num) int {
+	return match n {
+		I(v) => v
+		S(v) => v // ERROR "cannot use v .*string.* as int value in assignment"
+	}
+}

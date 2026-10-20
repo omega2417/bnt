@@ -1,0 +1,26 @@
+// Listings 5 and 6 of the GoNext article: an enum with associated data and
+// pattern matching.
+package shape
+
+import "math"
+
+enum Shape {
+	Circle(r float64)
+	Rect(w, h float64)
+	Triangle(a, b, c float64)
+	Text(s string)
+}
+
+func heron(a, b, c float64) float64 {
+	s := (a + b + c) / 2
+	return math.Sqrt(s * (s - a) * (s - b) * (s - c))
+}
+
+func measure(s Shape) float64 {
+	return match s {
+		Circle(r)         => math.Pi * r * r
+		Rect(w, h)        => w * h
+		Triangle(a, b, c) => heron(a, b, c)
+		Text(s)           => float64(len(s))
+	}
+}

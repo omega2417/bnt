@@ -1,0 +1,4 @@
+storage,mode,gc_visible,trials,nodes_per_trial,reclaimed_median,reclaimed_min,reclaimed_max,range
+unsafe.Pointer slot (R3),unsafe_pointer,Yes,10,10000,0.0,0,0,0–0
+Interface value (R1),interface,Yes,10,10000,0.0,0,0,0–0
+uintptr word,uintptr,No,10,10000,10000.0,10000,10000,"10,000–10,000"

@@ -1,0 +1,15 @@
+package main
+
+import (
+	"fmt"
+
+	"example.com/multipkg/geom"
+)
+
+func main() {
+	shapes := geom.Bag[geom.Shape]{Items: []geom.Shape{geom.NewShape_Circle(1), geom.NewShape_Square(2)}}
+	big := shapes.Map(s => geom.Scale(f: 3, s: s))
+	areas := big.Map(s => s.Area())
+	fmt.Printf("%.3f\n", areas.Items.Sum())
+	fmt.Println(len(areas.Map(a => fmt.Sprint(a)).Items))
+}

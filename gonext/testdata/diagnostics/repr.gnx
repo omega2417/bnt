@@ -1,0 +1,9 @@
+package diag
+
+//gonext:repr interface
+enum Light {
+	On
+	Off
+}
+
+func (l Light) String() string { return "light" } // ERROR "cannot have methods"

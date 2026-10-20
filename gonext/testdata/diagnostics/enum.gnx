@@ -1,0 +1,7 @@
+package diag
+
+//gonext:repr compact
+enum Opt[T any] { // ERROR "generic enum Opt supports only the flat representation"
+	No
+	Yes(v T)
+}

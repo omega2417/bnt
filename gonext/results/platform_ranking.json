@@ -1,0 +1,245 @@
+{
+  "method": {
+    "equation_1": "s_hat[p,g] = sum_{c in C_g} s[p,c] / (2 n_g), n_g = 4",
+    "equation_2": "S_p = sum_g w_g s_hat[p,g], sum w_g = 1, w_g >= 0",
+    "dirichlet_alpha": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "n_samples": 100000,
+    "seed": 2026,
+    "rng": "numpy.random.default_rng(2026).dirichlet",
+    "tie_breaking": "stable argsort in platform order of data/platform_scores.csv"
+  },
+  "groups": {
+    "G1": "Execution properties",
+    "G2": "Expressiveness of the host",
+    "G3": "Interoperability",
+    "G4": "Tooling",
+    "G5": "Implementation effort"
+  },
+  "group_scores": {
+    "Go source": {
+      "G1": 1.0,
+      "G2": 0.75,
+      "G3": 1.0,
+      "G4": 1.0,
+      "G5": 1.0
+    },
+    ".NET CIL": {
+      "G1": 0.625,
+      "G2": 0.875,
+      "G3": 1.0,
+      "G4": 0.625,
+      "G5": 0.625
+    },
+    "JavaScript source": {
+      "G1": 0.375,
+      "G2": 0.625,
+      "G3": 1.0,
+      "G4": 0.875,
+      "G5": 0.875
+    },
+    "JVM bytecode": {
+      "G1": 0.625,
+      "G2": 0.5,
+      "G3": 1.0,
+      "G4": 0.625,
+      "G5": 0.75
+    },
+    "BEAM bytecode": {
+      "G1": 0.625,
+      "G2": 0.5,
+      "G3": 0.875,
+      "G4": 0.625,
+      "G5": 0.5
+    },
+    "C source": {
+      "G1": 0.5,
+      "G2": 0.25,
+      "G3": 0.5,
+      "G4": 0.5,
+      "G5": 0.625
+    },
+    "LLVM IR": {
+      "G1": 0.5,
+      "G2": 0.25,
+      "G3": 0.375,
+      "G4": 0.375,
+      "G5": 0.125
+    },
+    "WebAssembly": {
+      "G1": 0.375,
+      "G2": 0.125,
+      "G3": 0.25,
+      "G4": 0.25,
+      "G5": 0.375
+    }
+  },
+  "aggregate_equal_weights": {
+    "Go source": 0.95,
+    ".NET CIL": 0.75,
+    "JavaScript source": 0.75,
+    "JVM bytecode": 0.7,
+    "BEAM bytecode": 0.625,
+    "C source": 0.475,
+    "LLVM IR": 0.325,
+    "WebAssembly": 0.275
+  },
+  "ranking_equal_weights": [
+    "Go source",
+    ".NET CIL",
+    "JavaScript source",
+    "JVM bytecode",
+    "BEAM bytecode",
+    "C source",
+    "LLVM IR",
+    "WebAssembly"
+  ],
+  "share_rank1": {
+    "Go source": 0.98432,
+    ".NET CIL": 0.01568,
+    "JavaScript source": 0.0,
+    "JVM bytecode": 0.0,
+    "BEAM bytecode": 0.0,
+    "C source": 0.0,
+    "LLVM IR": 0.0,
+    "WebAssembly": 0.0
+  },
+  "share_top2": {
+    "Go source": 1.0,
+    ".NET CIL": 0.45761,
+    "JavaScript source": 0.48656,
+    "JVM bytecode": 0.05583,
+    "BEAM bytecode": 0.0,
+    "C source": 0.0,
+    "LLVM IR": 0.0,
+    "WebAssembly": 0.0
+  },
+  "leave_one_group_out": {
+    "G1": {
+      "removed_group": "Execution properties",
+      "ranking": [
+        "Go source",
+        "JavaScript source",
+        ".NET CIL",
+        "JVM bytecode",
+        "BEAM bytecode",
+        "C source",
+        "LLVM IR",
+        "WebAssembly"
+      ],
+      "scores": {
+        "Go source": 0.9375,
+        "JavaScript source": 0.8438,
+        ".NET CIL": 0.7812,
+        "JVM bytecode": 0.7188,
+        "BEAM bytecode": 0.625,
+        "C source": 0.4688,
+        "LLVM IR": 0.2812,
+        "WebAssembly": 0.25
+      },
+      "first": "Go source"
+    },
+    "G2": {
+      "removed_group": "Expressiveness of the host",
+      "ranking": [
+        "Go source",
+        "JavaScript source",
+        "JVM bytecode",
+        ".NET CIL",
+        "BEAM bytecode",
+        "C source",
+        "LLVM IR",
+        "WebAssembly"
+      ],
+      "scores": {
+        "Go source": 1.0,
+        "JavaScript source": 0.7812,
+        "JVM bytecode": 0.75,
+        ".NET CIL": 0.7188,
+        "BEAM bytecode": 0.6562,
+        "C source": 0.5312,
+        "LLVM IR": 0.3438,
+        "WebAssembly": 0.3125
+      },
+      "first": "Go source"
+    },
+    "G3": {
+      "removed_group": "Interoperability",
+      "ranking": [
+        "Go source",
+        ".NET CIL",
+        "JavaScript source",
+        "JVM bytecode",
+        "BEAM bytecode",
+        "C source",
+        "LLVM IR",
+        "WebAssembly"
+      ],
+      "scores": {
+        "Go source": 0.9375,
+        ".NET CIL": 0.6875,
+        "JavaScript source": 0.6875,
+        "JVM bytecode": 0.625,
+        "BEAM bytecode": 0.5625,
+        "C source": 0.4688,
+        "LLVM IR": 0.3125,
+        "WebAssembly": 0.2812
+      },
+      "first": "Go source"
+    },
+    "G4": {
+      "removed_group": "Tooling",
+      "ranking": [
+        "Go source",
+        ".NET CIL",
+        "JavaScript source",
+        "JVM bytecode",
+        "BEAM bytecode",
+        "C source",
+        "LLVM IR",
+        "WebAssembly"
+      ],
+      "scores": {
+        "Go source": 0.9375,
+        ".NET CIL": 0.7812,
+        "JavaScript source": 0.7188,
+        "JVM bytecode": 0.7188,
+        "BEAM bytecode": 0.625,
+        "C source": 0.4688,
+        "LLVM IR": 0.3125,
+        "WebAssembly": 0.2812
+      },
+      "first": "Go source"
+    },
+    "G5": {
+      "removed_group": "Implementation effort",
+      "ranking": [
+        "Go source",
+        ".NET CIL",
+        "JavaScript source",
+        "JVM bytecode",
+        "BEAM bytecode",
+        "C source",
+        "LLVM IR",
+        "WebAssembly"
+      ],
+      "scores": {
+        "Go source": 0.9375,
+        ".NET CIL": 0.7812,
+        "JavaScript source": 0.7188,
+        "JVM bytecode": 0.6875,
+        "BEAM bytecode": 0.6562,
+        "C source": 0.4375,
+        "LLVM IR": 0.375,
+        "WebAssembly": 0.25
+      },
+      "first": "Go source"
+    }
+  },
+  "first_place_unchanged_in_logo": true
+}

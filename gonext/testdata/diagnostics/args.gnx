@@ -1,0 +1,13 @@
+package diag
+
+func dial(host string, port int = 443, retries int = 3) {}
+
+func vf(prefix string, xs ...int) {}
+
+func calls() {
+	dial("a", tries: 1)          // ERROR "unknown parameter name tries"
+	dial("a", port: 1, port: 2)  // ERROR "parameter port given more than once"
+	dial(port: 1, "a")           // ERROR "positional argument after named argument"
+	dial(port: 1)                // ERROR "missing argument for parameter host"
+	vf(prefix: "p", xs: 1)       // ERROR "variadic parameter xs cannot be passed by name"
+}

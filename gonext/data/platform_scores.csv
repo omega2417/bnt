@@ -1,0 +1,161 @@
+platform,group,criterion,score,rationale
+Go source,G1,E1,2,gc compiles ahead of time to native code for all server targets
+Go source,G1,E2,2,concurrent tri-color mark-sweep collector in the runtime
+Go source,G1,E3,2,goroutines and channels built into the language and runtime
+Go source,G1,E4,2,statically linked single binary; millisecond start-up
+Go source,G2,X1,1,generic functions and types exist but methods cannot declare type parameters
+Go source,G2,X2,2,function literals are first-class closures
+Go source,G2,X3,2,interfaces with implicit satisfaction and type switches
+Go source,G2,X4,1,struct layout follows declaration order; unsafe exists but no unions and the GC forbids hiding pointers in integers
+Go source,G3,I1,2,generated code imports any Go package directly
+Go source,G3,I2,2,generated code is ordinary Go callable without bindings
+Go source,G3,I3,2,generated and host code share the same types and heap
+Go source,G3,I4,2,output lives in ordinary Go modules
+Go source,G4,T1,2,output is readable Go; delve and //line directives map to the source
+Go source,G4,T2,2,gofmt; go vet and gopls apply unchanged to the output
+Go source,G4,T3,2,go test with built-in benchmarks and fuzzing
+Go source,G4,T4,2,go/parser; go/ast and go/types are in the standard library
+Go source,G5,C1,2,the unmodified Go compiler is the back end
+Go source,G5,C2,2,Go runtime and collector are reused unchanged
+Go source,G5,C3,2,statically typed imperative extensions map closely onto Go constructs
+Go source,G5,C4,2,Go 1 compatibility promise for language and standard library
+.NET CIL,G1,E1,1,NativeAOT exists but with reflection and dynamic-code restrictions; JIT is the default
+.NET CIL,G1,E2,2,generational collector with background (concurrent) collection
+.NET CIL,G1,E3,1,async/await and thread pool; no runtime-managed lightweight threads
+.NET CIL,G1,E4,1,self-contained single-file publish possible but large; JIT start-up cost
+.NET CIL,G2,X1,2,reified generics including generic methods and value-type instantiation
+.NET CIL,G2,X2,2,delegates and closures are first-class in the type system
+.NET CIL,G2,X3,2,interfaces and virtual dispatch at CIL level
+.NET CIL,G2,X4,1,value types and StructLayout(Explicit) but overlapping object references with scalars is rejected
+.NET CIL,G3,I1,2,generated assemblies reference any .NET library directly
+.NET CIL,G3,I2,2,C# and other CLI languages call generated code directly
+.NET CIL,G3,I3,2,common type system shared by all CLI languages
+.NET CIL,G3,I4,2,NuGet packages and project references
+.NET CIL,G4,T1,1,CIL is decompilable but debugging needs emitted PDB symbols
+.NET CIL,G4,T2,1,Roslyn analyzers target C# source; only IL-level verifiers apply to emitted CIL
+.NET CIL,G4,T3,2,dotnet test and BenchmarkDotNet are standard practice
+.NET CIL,G4,T4,1,Roslyn parses C# only; CIL is handled by System.Reflection.Metadata/Cecil
+.NET CIL,G5,C1,1,a CIL emitter (Reflection.Emit or Cecil) must be written; JIT/AOT codegen is reused
+.NET CIL,G5,C2,2,CLR runtime and collector are reused
+.NET CIL,G5,C3,1,stack-based bytecode: expressions and control flow must be linearized
+.NET CIL,G5,C4,1,ECMA-335 frozen since 2012 while runtime features evolve outside the standard
+JavaScript source,G1,E1,0,JIT-compiled; no ahead-of-time native code for server deployment
+JavaScript source,G1,E2,2,engines provide concurrent and incremental collectors
+JavaScript source,G1,E3,1,single-threaded event loop with async functions; workers do not share memory freely
+JavaScript source,G1,E4,0,requires a Node.js or other engine installation; no self-contained binary by default
+JavaScript source,G2,X1,1,dynamic typing makes generic code trivial but no static parametric types
+JavaScript source,G2,X2,2,first-class closures
+JavaScript source,G2,X3,2,prototype-based dynamic dispatch
+JavaScript source,G2,X4,0,no control over object layout; only typed arrays
+JavaScript source,G3,I1,2,generated code imports any npm module
+JavaScript source,G3,I2,2,host JavaScript calls generated code directly
+JavaScript source,G3,I3,2,single shared object model
+JavaScript source,G3,I4,2,npm packages and ES modules
+JavaScript source,G4,T1,2,readable output with source maps for debuggers
+JavaScript source,G4,T2,2,Prettier and ESLint apply to the output
+JavaScript source,G4,T3,1,several competing test frameworks; node:test only recently standard
+JavaScript source,G4,T4,2,acorn/Babel parsers and the TypeScript compiler API
+JavaScript source,G5,C1,2,engines compile the emitted source
+JavaScript source,G5,C2,2,engine runtime and collector are reused
+JavaScript source,G5,C3,1,static types are erased; numbers are doubles so integer semantics need emulation
+JavaScript source,G5,C4,2,TC39 does not break the web: strong backward compatibility
+JVM bytecode,G1,E1,1,GraalVM native-image exists with closed-world restrictions; JIT is the default
+JVM bytecode,G1,E2,2,concurrent collectors (G1; ZGC; Shenandoah)
+JVM bytecode,G1,E3,2,virtual threads since Java 21
+JVM bytecode,G1,E4,0,needs an installed JRE; slow start-up without native-image
+JVM bytecode,G2,X1,1,erased generics without primitive instantiation
+JVM bytecode,G2,X2,1,lambdas via invokedynamic and functional interfaces rather than function types
+JVM bytecode,G2,X3,2,interfaces and virtual dispatch in bytecode
+JVM bytecode,G2,X4,0,no value types (Valhalla pending); layout is chosen by the VM
+JVM bytecode,G3,I1,2,generated classes call any Java library
+JVM bytecode,G3,I2,2,Java code calls generated classes directly
+JVM bytecode,G3,I3,2,shared object model of the JVM
+JVM bytecode,G3,I4,2,Maven/Gradle artifacts
+JVM bytecode,G4,T1,1,bytecode is decompilable; debugging needs emitted line tables
+JVM bytecode,G4,T2,1,bytecode analyzers such as SpotBugs; source formatters do not apply
+JVM bytecode,G4,T3,2,JUnit and JMH
+JVM bytecode,G4,T4,1,ASM for bytecode; javac tree API covers only Java source
+JVM bytecode,G5,C1,1,a bytecode emitter (e.g. ASM) and stack-map frames must be produced
+JVM bytecode,G5,C2,2,JVM runtime and collectors are reused
+JVM bytecode,G5,C3,1,stack-based bytecode with verifier constraints
+JVM bytecode,G5,C4,2,class-file format strongly backward compatible
+BEAM bytecode,G1,E1,0,bytecode with JIT (BeamAsm); no native executables
+BEAM bytecode,G1,E2,2,per-process collectors run without stopping the world
+BEAM bytecode,G1,E3,2,lightweight processes are the core abstraction
+BEAM bytecode,G1,E4,1,releases bundle ERTS but deployment and start-up are heavier than a static binary
+BEAM bytecode,G2,X1,1,dynamically typed: generic code works but no static parametric types
+BEAM bytecode,G2,X2,2,funs are first-class closures
+BEAM bytecode,G2,X3,1,behaviours and protocols only; no interface-based dispatch in the VM
+BEAM bytecode,G2,X4,0,immutable terms; no layout control or unsafe access
+BEAM bytecode,G3,I1,2,generated modules call Erlang/Elixir libraries
+BEAM bytecode,G3,I2,2,Erlang and Elixir call generated modules
+BEAM bytecode,G3,I3,2,all BEAM languages share the term model
+BEAM bytecode,G3,I4,1,Hex and rebar3/mix integrate but mixed-language builds need extra tooling
+BEAM bytecode,G4,T1,1,generated Core Erlang is readable; debugging needs debug_info chunks
+BEAM bytecode,G4,T2,1,Dialyzer runs on generated code with debug_info; no formatter for bytecode
+BEAM bytecode,G4,T3,2,EUnit and Common Test
+BEAM bytecode,G4,T4,1,erl_parse and compiler modules available; no static type checker library
+BEAM bytecode,G5,C1,1,compiler to Core Erlang or BEAM assembly must be written
+BEAM bytecode,G5,C2,2,ERTS runtime and collectors are reused
+BEAM bytecode,G5,C3,0,functional VM with immutable data: imperative mutable state needs emulation
+BEAM bytecode,G5,C4,1,bytecode format is internal and changes between OTP releases
+C source,G1,E1,2,C compilers produce native code for every target
+C source,G1,E2,0,no managed memory; a collector must be supplied
+C source,G1,E3,0,only OS threads; lightweight concurrency must be built
+C source,G1,E4,2,native static binaries with instant start-up
+C source,G2,X1,0,no parametric polymorphism (macros and void* only)
+C source,G2,X2,0,function pointers without closures
+C source,G2,X3,0,dynamic dispatch must be built from function-pointer tables
+C source,G2,X4,2,full control over layout; unions and pointer casts
+C source,G3,I1,2,calls C libraries directly
+C source,G3,I2,1,callable from C but conventions for generated runtime objects must be documented
+C source,G3,I3,1,structs shared but ownership and memory management conventions differ
+C source,G3,I4,0,no standard package system
+C source,G4,T1,2,readable C debuggable with gdb and #line directives
+C source,G4,T2,1,clang-format and clang-tidy apply but undefined behaviour is hard to rule out
+C source,G4,T3,0,no standard test or benchmark framework
+C source,G4,T4,1,libclang exists but is not part of the standard toolchain
+C source,G5,C1,2,the C compiler is the back end
+C source,G5,C2,0,runtime; collector and scheduler must be written
+C source,G5,C3,1,statically typed and imperative but no memory safety or closures
+C source,G5,C4,2,ISO C standard with long-term stability
+LLVM IR,G1,E1,2,LLVM generates optimized native code
+LLVM IR,G1,E2,0,GC support is only a set of hooks (statepoints); collector must be written
+LLVM IR,G1,E3,0,no concurrency runtime; coroutine intrinsics only
+LLVM IR,G1,E4,2,native static binaries with instant start-up
+LLVM IR,G2,X1,0,no parametric polymorphism; monomorphization by the front end
+LLVM IR,G2,X2,0,no closures; environment passing must be lowered by hand
+LLVM IR,G2,X3,0,dispatch tables must be built by the front end
+LLVM IR,G2,X4,2,full control over layout and pointers
+LLVM IR,G3,I1,1,C ABI calls possible but declarations and ABI lowering must be replicated
+LLVM IR,G3,I2,1,callable through the C ABI only
+LLVM IR,G3,I3,1,data shared at the C ABI level only
+LLVM IR,G3,I4,0,no package system
+LLVM IR,G4,T1,1,textual IR is readable; source-level debugging needs emitted DWARF metadata
+LLVM IR,G4,T2,0,no formatter or static analysis for generated IR beyond the verifier
+LLVM IR,G4,T3,0,no test or benchmark framework for generated programs
+LLVM IR,G4,T4,2,LLVM API parses and verifies IR
+LLVM IR,G5,C1,1,instruction selection is reused but SSA lowering is a back end in itself
+LLVM IR,G5,C2,0,runtime and collector must be written
+LLVM IR,G5,C3,0,large gap: SSA with explicit memory and no high-level types
+LLVM IR,G5,C4,0,IR and C++ API change between releases
+WebAssembly,G1,E1,1,AOT compilation by the host engine; not a native executable
+WebAssembly,G1,E2,1,WasmGC is standardized but not available in every server runtime
+WebAssembly,G1,E3,0,threads proposal limited; no lightweight concurrency
+WebAssembly,G1,E4,1,fast instantiation but a host runtime (wasmtime; wasmer) is required
+WebAssembly,G2,X1,0,no parametric polymorphism
+WebAssembly,G2,X2,0,closures must be encoded with tables and environments
+WebAssembly,G2,X3,0,call_indirect through tables only
+WebAssembly,G2,X4,1,full control inside linear memory but no access to host objects
+WebAssembly,G3,I1,1,host functions only through imports (WASI or component model)
+WebAssembly,G3,I2,1,exports callable by the host with limited types
+WebAssembly,G3,I3,0,data must be marshalled through linear memory
+WebAssembly,G3,I4,0,no package integration with server ecosystems
+WebAssembly,G4,T1,1,WAT text format; DWARF debugging support is partial
+WebAssembly,G4,T2,0,no formatter or static analysis of generated modules
+WebAssembly,G4,T3,0,no standard test framework
+WebAssembly,G4,T4,1,wasm-tools/Binaryen parse and validate modules
+WebAssembly,G5,C1,1,code generation to structured stack bytecode must be written
+WebAssembly,G5,C2,0,runtime (and in most server hosts the collector) must be supplied
+WebAssembly,G5,C3,0,low-level stack machine with linear memory
+WebAssembly,G5,C4,2,W3C standard with a stable binary format

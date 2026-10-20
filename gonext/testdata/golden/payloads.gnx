@@ -1,0 +1,61 @@
+// Slot assignment of the compact representation for payloads of many kinds.
+// Every pointer-carrying payload must end up in a slot that the garbage
+// collector scans.
+package payloads
+
+import (
+	"io"
+	"time"
+)
+
+type Node struct{ next *Node }
+
+type ID int32
+
+enum Value {
+	Nil
+	Bool(b bool)
+	Int(i int, id ID)
+	Float(f float32, g float64)
+	Dur(d time.Duration)
+	Str(s string)
+	Bytes(b []byte)
+	Ptr(n *Node)
+	Map(m map[string]int)
+	Func(f func() error)
+	Reader(r io.Reader)
+	Pair(a [2]string, c complex128)
+}
+
+func size(v Value) int {
+	return match v {
+		Nil             => 0
+		Bool(b) if b    => 1
+		Bool(_)         => 2
+		Int(i, id)      => i + int(id)
+		Float(f, g)     => int(f) + int(g)
+		Dur(d)          => int(d.Seconds())
+		Str(s)          => len(s)
+		Bytes(b)        => len(b) + cap(b)
+		Ptr(n)          => count(n)
+		Map(m)          => len(m)
+		Func(f)         => errs(f)
+		Reader(_)       => -1
+		Pair(a, _)      => len(a[0]) + len(a[1])
+	}
+}
+
+func count(n *Node) int {
+	c := 0
+	for ; n != nil; n = n.next {
+		c++
+	}
+	return c
+}
+
+func errs(f func() error) int {
+	if f() != nil {
+		return 1
+	}
+	return 0
+}

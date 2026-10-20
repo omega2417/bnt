@@ -1,0 +1,270 @@
+// Command calc is a small expression language: a tokenizer and a parser that
+// build an abstract syntax tree of enum values, and an evaluator that uses
+// pattern matching. It shows the kind of DSL for which the GoNext approach
+// is intended.
+package main
+
+import (
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+	"unicode"
+)
+
+enum Tok {
+	Num(v float64)
+	Ident(name string)
+	Op(c byte)
+	LParen
+	RParen
+	End
+}
+
+enum Expr {
+	Lit(v float64)
+	Var(name string)
+	Bin(op byte, l, r *Expr)
+	Call(fn string, arg *Expr)
+}
+
+func lex(src string) ([]Tok, error) {
+	var out []Tok
+	for i := 0; i < len(src); {
+		c := src[i]
+		switch {
+		case c == ' ':
+			i++
+		case unicode.IsDigit(rune(c)) || c == '.':
+			j := i
+			for j < len(src) && (unicode.IsDigit(rune(src[j])) || src[j] == '.') {
+				j++
+			}
+			v, err := strconv.ParseFloat(src[i:j], 64)
+			if err != nil {
+				return nil, err
+			}
+			out = append(out, Tok.Num(v))
+			i = j
+		case unicode.IsLetter(rune(c)):
+			j := i
+			for j < len(src) && unicode.IsLetter(rune(src[j])) {
+				j++
+			}
+			out = append(out, Tok.Ident(src[i:j]))
+			i = j
+		case strings.IndexByte("+-*/^", c) >= 0:
+			out = append(out, Tok.Op(c))
+			i++
+		case c == '(':
+			out = append(out, Tok.LParen)
+			i++
+		case c == ')':
+			out = append(out, Tok.RParen)
+			i++
+		default:
+			return nil, fmt.Errorf("unexpected %q at %d", c, i)
+		}
+	}
+	return append(out, Tok.End), nil
+}
+
+type parser struct {
+	toks []Tok
+	pos  int
+}
+
+func (p *parser) peek() Tok { return p.toks[p.pos] }
+func (p *parser) next() Tok { t := p.toks[p.pos]; p.pos++; return t }
+
+func prec(c byte) int {
+	return match c {
+		'+' | '-' => 1
+		'*' | '/' => 2
+		'^'       => 3
+		_         => 0
+	}
+}
+
+func (p *parser) expr(min int) (*Expr, error) {
+	lhs, err := p.primary()
+	if err != nil {
+		return nil, err
+	}
+	for {
+		op := match p.peek() {
+			Op(c) => c
+			_     => byte(0)
+		}
+		if op == 0 || prec(op) < min {
+			return lhs, nil
+		}
+		p.next()
+		next := prec(op) + 1
+		if op == '^' {
+			next = prec(op) // right associative
+		}
+		rhs, err := p.expr(next)
+		if err != nil {
+			return nil, err
+		}
+		e := Expr.Bin(op, lhs, rhs)
+		lhs = &e
+	}
+}
+
+func (p *parser) primary() (*Expr, error) {
+	var e Expr
+	var err error
+	match p.next() {
+		Num(v) => e = Expr.Lit(v)
+		Ident(n) => {
+			if _, ok := p.peek().paren(); ok {
+				p.next()
+				arg, aerr := p.expr(1)
+				if aerr == nil {
+					aerr = p.expect()
+				}
+				if aerr != nil {
+					return nil, aerr
+				}
+				e = Expr.Call(n, arg)
+			} else {
+				e = Expr.Var(n)
+			}
+		}
+		LParen => {
+			inner, ierr := p.expr(1)
+			if ierr == nil {
+				ierr = p.expect()
+			}
+			if ierr != nil {
+				return nil, ierr
+			}
+			e = *inner
+		}
+		Op(c) if c == '-' => {
+			inner, ierr := p.primary()
+			if ierr != nil {
+				return nil, ierr
+			}
+			e = Expr.Bin('-', lit(0), inner)
+		}
+		_ => err = fmt.Errorf("unexpected token at %d", p.pos-1)
+	}
+	return &e, err
+}
+
+func lit(v float64) *Expr { e := Expr.Lit(v); return &e }
+
+// paren reports whether a token is an opening parenthesis (an extension
+// method on the enum type Tok).
+ext func (t Tok) paren() (struct{}, bool) {
+	return struct{}{}, match t { LParen => true; _ => false }
+}
+
+func (p *parser) expect() error {
+	return match p.next() {
+		RParen => nil
+		_      => fmt.Errorf("expected ) at %d", p.pos-1)
+	}
+}
+
+func eval(e *Expr, env map[string]float64) (float64, error) {
+	var res float64
+	var err error
+	match *e {
+		Lit(v)  => res = v
+		Var(n) => {
+			v, ok := env[n]
+			if !ok {
+				return 0, fmt.Errorf("unknown variable %s", n)
+			}
+			res = v
+		}
+		Bin(op, l, r) => {
+			a, err1 := eval(l, env)
+			b, err2 := eval(r, env)
+			if err1 != nil {
+				return 0, err1
+			}
+			if err2 != nil {
+				return 0, err2
+			}
+			res = apply(op, a, b)
+		}
+		Call(fn, arg) => {
+			x, err1 := eval(arg, env)
+			if err1 != nil {
+				return 0, err1
+			}
+			res, err = call(fn, x)
+		}
+	}
+	return res, err
+}
+
+func apply(op byte, a, b float64) float64 {
+	return match op {
+		'+' => a + b
+		'-' => a - b
+		'*' => a * b
+		'/' => a / b
+		_   => pow(a, b)
+	}
+}
+
+func pow(a, b float64) float64 {
+	r := 1.0
+	for i := 0; i < int(b); i++ {
+		r *= a
+	}
+	return r
+}
+
+func call(fn string, x float64) (float64, error) {
+	var r float64
+	var err error
+	match fn {
+		"sq"  => r = x * x
+		"neg" => r = -x
+		_     => err = fmt.Errorf("unknown function %s", fn)
+	}
+	return r, err
+}
+
+func show(e *Expr) string {
+	return match *e {
+		Lit(v)        => strconv.FormatFloat(v, 'g', -1, 64)
+		Var(n)        => n
+		Bin(op, l, r) => "(" + show(l) + " " + string(op) + " " + show(r) + ")"
+		Call(fn, a)   => fn + "(" + show(a) + ")"
+	}
+}
+
+func main() {
+	inputs := []string{"1 + 2 * 3", "(1 + 2) * 3", "2 ^ 3 ^ 2", "sq(x) - -y", "z + 1"}
+	if len(os.Args) > 1 {
+		inputs = os.Args[1:]
+	}
+	env := map[string]float64{"x": 4, "y": 2}
+	for _, in := range inputs {
+		toks, err := lex(in)
+		if err != nil {
+			fmt.Println("error:", err)
+			continue
+		}
+		p := &parser{toks: toks}
+		e, err := p.expr(1)
+		if err != nil {
+			fmt.Println("error:", err)
+			continue
+		}
+		v, err := eval(e, env)
+		if err != nil {
+			fmt.Printf("%-12s = error: %v\n", in, err)
+			continue
+		}
+		fmt.Printf("%-12s = %-8g %s\n", in, v, show(e))
+	}
+}

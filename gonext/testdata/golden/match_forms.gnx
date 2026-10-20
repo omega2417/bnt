@@ -1,0 +1,78 @@
+// Match expressions in all syntactic positions, guards, alternatives,
+// statement matches with block arms, and matches over constants.
+package forms
+
+import "fmt"
+
+enum Cmd {
+	Quit
+	Say(msg string)
+	Move(dx, dy int)
+}
+
+func next() Cmd { return Cmd.Say("hi") }
+
+func run(c Cmd) (out []string) {
+	match c {
+		Quit => out = append(out, "bye")
+		Say(m) if m == "" => {
+			out = append(out, "(silence)")
+		}
+		Say(m) => {
+			out = append(out, m)
+		}
+		Move(dx, dy) => fmt.Println(dx, dy)
+	}
+	return out
+}
+
+func score(c Cmd) int {
+	x := match c {
+		Move(dx, dy) if dx == 0 && dy == 0 => 0
+		Move(dx, dy) => abs(dx) + abs(dy)
+		Say(_) | Quit => -1
+	}
+	return x
+}
+
+func abs(x int) int {
+	if x < 0 {
+		return -x
+	}
+	return x
+}
+
+func label(n int) string {
+	return match n {
+		0 | 1 => "tiny"
+		2     => "two"
+		_ if n%2 == 0 => "even"
+		_     => "odd"
+	}
+}
+
+func eager(c Cmd) string {
+	// the scrutinee is a call: it is evaluated once
+	return "cmd " + match next() {
+		Say(m) => m
+		_      => "?"
+	}
+}
+
+func lazy(ok bool, c Cmd) bool {
+	// the match is in the right operand of &&: it stays a function literal
+	return ok && match c { Quit => true; _ => false }
+}
+
+func loop(cs []Cmd) int {
+	n := 0
+	// a match in a loop condition stays a function literal
+	for i := 0; i < len(cs) && match cs[i] { Quit => false; _ => true }; i++ {
+		n++
+	}
+	return n
+}
+
+func arg(c Cmd) {
+	fmt.Println("score", score(c), match c { Quit => "q"; _ => "x" })
+}

@@ -1,0 +1,23 @@
+// Generic enums use the flat representation.
+package option
+
+enum Option[T any] {
+	None
+	Some(v T)
+}
+
+func (o Option[T]) Get(def T) T {
+	return match o {
+		Some(v) => v
+		None    => def
+	}
+}
+
+func Find[T comparable](xs []T, x T) Option[int] {
+	for i, v := range xs {
+		if v == x {
+			return Option.Some(i)
+		}
+	}
+	return Option[int].None
+}

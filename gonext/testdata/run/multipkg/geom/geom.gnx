@@ -1,0 +1,48 @@
+// Package geom is a GoNext library used from another package.
+package geom
+
+import "math"
+
+// Shape is exported; other packages construct it with the generated
+// constructors and use its methods.
+//gonext:repr compact
+enum Shape {
+	Circle(r float64)
+	Square(side float64)
+}
+
+// Area is a method on an enum.
+func (s Shape) Area() float64 {
+	return match s {
+		Circle(r)    => math.Pi * r * r
+		Square(side) => side * side
+	}
+}
+
+// Sum is an exported extension method on []float64.
+ext func (xs []float64) Sum() float64 {
+	t := 0.0
+	for _, x := range xs {
+		t += x
+	}
+	return t
+}
+
+// Bag is a generic container with a generic method.
+type Bag[T any] struct{ Items []T }
+
+func (b Bag[T]) Map[U any](f func(T) U) Bag[U] {
+	out := Bag[U]{}
+	for _, x := range b.Items {
+		out.Items = append(out.Items, f(x))
+	}
+	return out
+}
+
+// Scale is called with named arguments from another package.
+func Scale(s Shape, f float64) Shape {
+	return match s {
+		Circle(r)    => Shape.Circle(r * f)
+		Square(side) => Shape.Square(side * f)
+	}
+}

@@ -1,0 +1,66 @@
+package diag
+
+enum Color {
+	Red
+	Green
+	Blue(level int)
+}
+
+func a(c Color) int {
+	return match c { // ERROR "non-exhaustive match on Color: variant Blue not covered"
+		Red   => 1
+		Green => 2
+	}
+}
+
+func b(c Color) int {
+	return match c {
+		_   => 0
+		Red => 1 // ERROR "unreachable match arm"
+	}
+}
+
+func e(c Color) int {
+	return match c { // ERROR "variant Blue not covered \(every arm for it has a guard\)"
+		Blue(x) if x > 0 => x
+		Red | Green => 0
+	}
+}
+
+func f(n int) string {
+	return match n { // ERROR "needs an unguarded wildcard arm"
+		1 => "one"
+	}
+}
+
+func g(c Color) int {
+	return match c {
+		Red => { // ERROR "a block arm is only allowed in a match statement"
+			return 1
+		}
+		_ => 0
+	}
+}
+
+func h(c Color) Color {
+	return Color.Blue() // ERROR "variant Color.Blue takes 1 values, got 0"
+}
+
+func loop(cs []Color) int {
+	n := 0
+	for _, c := range cs {
+		match c {
+			Red => {
+				break // ERROR "unlabeled break in a match arm"
+			}
+			_ => {
+				for {
+					break
+				}
+				n++
+				continue
+			}
+		}
+	}
+	return n
+}
