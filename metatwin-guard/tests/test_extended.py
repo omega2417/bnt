@@ -157,3 +157,80 @@ def det_features():
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestReviewRegressions(unittest.TestCase):
+    """Regression tests for defects found in the v1.0.0 review."""
+
+    def test_average_precision_handles_nan_and_none(self):
+        from metatwin_guard.metrics import average_precision
+        self.assertAlmostEqual(average_precision([1, 0, 1, 0], [0.9, 0.1, 0.8, 0.2]), 1.0)
+        for scores in ([0.5, float("nan"), 0.9, 0.1], [float("nan"), 0.5, 0.9, 0.1], [None, 0.5, 0.9, 0.1]):
+            ap = average_precision([1, 1, 0, 0], scores)
+            self.assertTrue(0.0 <= ap <= 1.0, scores)
+
+    def test_huge_integer_feature_rejected(self):
+        s = make_sensor()
+        guard = fitted_guard(s, 5)
+        ev = make_stream(s, 1, start=50)[0]
+        ev["features"]["rtt_ms"] = 10**400
+        rec = guard.process(ev)
+        self.assertFalse(rec["admitted"])
+        self.assertEqual(rec["reasons"], ["schema:feature_rtt_ms"])
+
+    def test_non_string_event_id_does_not_break_evidence(self):
+        s = make_sensor()
+        guard = fitted_guard(s, 5)
+        for bad_id in (float("nan"), b"x", None, 7):
+            ev = make_stream(s, 1, start=50)[0]
+            ev["event_id"] = bad_id
+            rec = guard.process(ev)
+            self.assertFalse(rec["admitted"])
+            self.assertIsNone(rec["event_id"])
+        self.assertTrue(guard.ledger.verify().valid)
+
+    def test_malformed_ledger_blocks_reported_not_raised(self):
+        led = QuorumEvidenceLedger(seed=5)
+        for i in range(3):
+            led.append({"event_id": f"e{i}"})
+        for mutate in (
+            lambda b: b.pop("body"),
+            lambda b: b.pop("block_hash"),
+            lambda b: b.__setitem__("signatures", None),
+            lambda b: b.__setitem__("body", [1, 2]),
+            lambda b: b["body"].__setitem__("x", float("nan")),
+        ):
+            f = led.tampered_copy()
+            mutate(f.blocks[1])
+            rep = f.verify()
+            self.assertFalse(rep.valid)
+            self.assertTrue(any(e.startswith("block 1") for e in rep.errors), rep.errors)
+        f = led.tampered_copy()
+        f.blocks[1] = "not a block"
+        self.assertFalse(f.verify().valid)
+
+    def test_tampered_copy_is_independent(self):
+        led = QuorumEvidenceLedger(seed=5)
+        led.append({"event_id": "e0"})
+        f = led.tampered_copy()
+        f.append({"event_id": "e1"})
+        self.assertEqual((len(led.blocks), len(led.append_times_ms)), (1, 1))
+
+    def test_modification_rejected_by_hash_or_signature_only(self):
+        from metatwin_guard.benchmark import execute_run
+        res = execute_run("telemetry_modification", 1)
+        injected = [r for r, y in zip(res.records, res.run.labels) if y]
+        self.assertEqual(len(injected), 40)
+        for r in injected:
+            self.assertFalse(r["admitted"])
+            self.assertIn(r["reasons"], (["payload_hash_mismatch"], ["signature_invalid"]))
+        normal_eval = [r for r, y in zip(res.records[res.run.n_baseline:], res.run.labels[res.run.n_baseline:]) if not y]
+        self.assertEqual(len(normal_eval), 200)
+        self.assertTrue(all(r["admitted"] for r in normal_eval))
+
+    def test_strict_timestamp_format(self):
+        from metatwin_guard.events import parse_ts
+        self.assertEqual(parse_ts("2026-08-23T00:00:01.500000Z").microsecond, 500000)
+        for bad in ("2026-08-23T00:00:01Z", "2026-08-23 00:00:01.000000Z", "2026-08-23T00:00:01.000000+00:00", 5):
+            with self.assertRaises(ValueError):
+                parse_ts(bad)

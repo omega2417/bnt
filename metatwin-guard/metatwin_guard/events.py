@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import copy
+import re
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 from typing import Any
@@ -50,8 +51,14 @@ def format_ts(dt: datetime) -> str:
     return dt.astimezone(timezone.utc).strftime(_TS_FMT)
 
 
+_TS_RE = re.compile(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{6}Z\Z")
+
+
 def parse_ts(s: str) -> datetime:
-    return datetime.strptime(s, _TS_FMT).replace(tzinfo=timezone.utc)
+    """Parses the strict envelope format YYYY-MM-DDTHH:MM:SS.ffffffZ (UTC)."""
+    if not isinstance(s, str) or not _TS_RE.match(s):
+        raise ValueError(f"invalid timestamp: {s!r}")
+    return datetime.fromisoformat(s[:-1]).replace(tzinfo=timezone.utc)
 
 
 def payload_hash(features: dict[str, float]) -> str:

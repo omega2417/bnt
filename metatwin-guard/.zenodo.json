@@ -1,7 +1,7 @@
 {
   "upload_type": "software",
   "title": "MetaTwin-Guard: explainable and verifiable digital-twin assurance backend for a two-site cyber range (reference artifact, synthetic benchmark and field protocol)",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publication_date": "2026-10-22",
   "description": "<p>Reference software artifact (Supplementary File S3) for the article <i>An Explainable and Verifiable Digital Twin of a Two-Site Cyber Range for Metaverse Infrastructure Assurance: Software Artifact and Field Protocol</i>. It implements Ed25519 event verification (RFC 8032), SHA-256 payload and source hash chains (FIPS 180-4), replay/sequence checks, an admission-before-state twin invariant, static operational rules, a median/MAD robust explainable anomaly score, an integrity-aware hybrid decision and a 3-of-4 quorum-signed evidence chain (single-process emulation, not a distributed blockchain). Includes unit tests, a deterministic synthetic benchmark (seed 20260823, 6 scenarios x 8 runs, 17,280 events), executed ablation, sensitivity and multi-seed analyses, figures, a Google Colab notebook, the prospective field protocol (S1) and the blank field-data workbook (S2).</p><p><b>Evidence level B only</b>: all results are synthetic software verification; no cyber-range field data are included. Test-fixture keys are deterministic and must never be used in a deployment.</p>",
   "creators": [

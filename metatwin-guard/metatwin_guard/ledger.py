@@ -59,31 +59,42 @@ class QuorumEvidenceLedger:
         self.append_times_ms.append((time.perf_counter() - t0) * 1000.0)
         return block
 
+    def _valid_signatures(self, signatures: dict[str, str], block_hash: str) -> int:
+        """Counts valid registered signatures, stopping once the quorum is reached."""
+        message = bytes.fromhex(block_hash)
+        valid = 0
+        for vid, sig in signatures.items():
+            pub = self.validator_registry.get(vid)
+            if pub is not None and isinstance(sig, str) and verify_hex(pub, sig, message):
+                valid += 1
+                if valid >= self.quorum:
+                    break
+        return valid
+
     def verify(self) -> VerifyReport:
         errors: list[str] = []
         prev = GENESIS_HASH
         for i, b in enumerate(self.blocks):
-            body = b["body"]
-            if body.get("index") != i:
-                errors.append(f"block {i}: index mismatch")
-            if body.get("previous_block_hash") != prev:
-                errors.append(f"block {i}: previous-block hash mismatch")
-            recomputed = hash_obj(body)
-            if recomputed != b["block_hash"]:
-                errors.append(f"block {i}: body hash mismatch")
-            valid_sigs = sum(
-                1
-                for vid, sig in b["signatures"].items()
-                if vid in self.validator_registry
-                and verify_hex(self.validator_registry[vid], sig, bytes.fromhex(recomputed))
-            )
-            if valid_sigs < self.quorum:
-                errors.append(f"block {i}: {valid_sigs}/{self.n_validators} valid signatures < quorum {self.quorum}")
-            prev = b["block_hash"]
+            try:
+                body = b["body"]
+                if body.get("index") != i:
+                    errors.append(f"block {i}: index mismatch")
+                if body.get("previous_block_hash") != prev:
+                    errors.append(f"block {i}: previous-block hash mismatch")
+                recomputed = hash_obj(body)
+                if recomputed != b["block_hash"]:
+                    errors.append(f"block {i}: body hash mismatch")
+                valid_sigs = self._valid_signatures(b["signatures"], recomputed)
+                if valid_sigs < self.quorum:
+                    errors.append(f"block {i}: {valid_sigs}/{self.n_validators} valid signatures < quorum {self.quorum}")
+            except (KeyError, TypeError, AttributeError, ValueError) as exc:
+                errors.append(f"block {i}: malformed ({type(exc).__name__})")
+            prev = b.get("block_hash") if isinstance(b, dict) else None
         return VerifyReport(not errors, len(self.blocks), errors)
 
     def tampered_copy(self) -> "QuorumEvidenceLedger":
         """Deep copy for tamper experiments that keeps the validator registry."""
         other = copy.copy(self)
         other.blocks = copy.deepcopy(self.blocks)
+        other.append_times_ms = list(self.append_times_ms)
         return other

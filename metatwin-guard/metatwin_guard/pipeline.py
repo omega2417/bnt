@@ -59,7 +59,7 @@ class MetaTwinGuard:
         hybrid = hybrid_decision(rule_alert, robust_alert, adm.admitted)
 
         changed = self.twin.apply(event, adm.admitted)
-        if adm.admitted and not self.fitted and event.get("phase") == "baseline":
+        if adm.admitted and not self.fitted and event["phase"] == "baseline":
             self._baseline.append(dict(feats))
 
         sync_ms = None
@@ -67,9 +67,11 @@ class MetaTwinGuard:
             sync_ms = (parse_ts(event["ingest_time_utc"]) - parse_ts(event["event_time_utc"])).total_seconds() * 1000.0
 
         top = [[f, round(c, 6)] for f, c in robust.top] if robust else []
+        state_hash = self.twin.state_hash()
+        get = (lambda k: event.get(k) if isinstance(event.get(k), str) else None) if isinstance(event, dict) else (lambda k: None)
         block = self.ledger.append(
             {
-                "event_id": event.get("event_id") if isinstance(event, dict) else None,
+                "event_id": get("event_id"),
                 "event_payload_hash": received_hash(event),
                 "integrity_admitted": adm.admitted,
                 "integrity_reasons": adm.reasons,
@@ -77,14 +79,14 @@ class MetaTwinGuard:
                 "anomaly_score": round(robust.score, 6) if robust else None,
                 "hybrid_alert": hybrid,
                 "top_contributions": top,
-                "twin_state_hash": self.twin.state_hash(),
+                "twin_state_hash": state_hash,
             }
         )
         return {
-            "event_id": event.get("event_id") if isinstance(event, dict) else None,
-            "sensor_id": event.get("sensor_id") if isinstance(event, dict) else None,
-            "topology_node": event.get("topology_node") if isinstance(event, dict) else None,
-            "phase": event.get("phase") if isinstance(event, dict) else None,
+            "event_id": get("event_id"),
+            "sensor_id": get("sensor_id"),
+            "topology_node": get("topology_node"),
+            "phase": get("phase"),
             "admitted": adm.admitted,
             "reasons": adm.reasons,
             "rules_fired": rules_fired,
@@ -94,7 +96,7 @@ class MetaTwinGuard:
             "hybrid_alert": hybrid,
             "top_contributions": top,
             "state_changed": changed,
-            "state_hash": self.twin.state_hash(),
+            "state_hash": state_hash,
             "sync_latency_ms": sync_ms,
             "append_ms": self.ledger.append_times_ms[-1],
             "block_index": block["body"]["index"],

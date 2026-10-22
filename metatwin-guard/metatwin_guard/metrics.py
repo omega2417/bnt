@@ -24,20 +24,24 @@ def prf(c: dict[str, int]) -> dict[str, float]:
     return {"precision": precision, "recall": recall, "f1": f1, "fp_per_1000_normal": fp_per_1000}
 
 
-def average_precision(labels: Sequence[int], scores: Sequence[float]) -> float:
-    """Step-wise area under the precision-recall curve (AUPRC)."""
+def average_precision(labels: Sequence[int], scores: Sequence[float | None]) -> float:
+    """Step-wise area under the precision-recall curve (AUPRC).
+
+    Missing or NaN scores (events that were never scored) rank last.
+    """
     pos = sum(labels)
     if pos == 0:
         return float("nan")
-    order = sorted(range(len(scores)), key=lambda i: -scores[i])
+    clean = [-math.inf if s is None or math.isnan(s) else float(s) for s in scores]
+    order = sorted(range(len(clean)), key=lambda i: -clean[i])
     tp = fp = 0
     ap = 0.0
     i = 0
     while i < len(order):
         j = i
-        s = scores[order[i]]
+        s = clean[order[i]]
         new_tp = 0
-        while j < len(order) and scores[order[j]] == s:
+        while j < len(order) and (j == i or clean[order[j]] == s):
             if labels[order[j]]:
                 new_tp += 1
             else:

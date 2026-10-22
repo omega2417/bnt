@@ -1,5 +1,6 @@
 """Builds notebooks/MetaTwin_Guard_Colab.ipynb with an embedded copy of the package."""
 import base64
+import gzip
 import io
 import sys
 import tarfile
@@ -11,15 +12,17 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def embedded_package() -> str:
-    buf = io.BytesIO()
-    with tarfile.open(fileobj=buf, mode="w:gz", format=tarfile.PAX_FORMAT) as tar:
-        for sub in ("metatwin_guard", "tests"):
-            for p in sorted((ROOT / sub).glob("*.py")):
-                info = tar.gettarinfo(str(p), arcname=f"{sub}/{p.name}")
-                info.mtime, info.uid, info.gid, info.uname, info.gname = 0, 0, 0, "", ""
-                with p.open("rb") as fh:
-                    tar.addfile(info, fh)
-    return base64.b64encode(buf.getvalue()).decode()
+    """Reproducible base64 tar.gz of the package and tests (fixed mtime/owner/mode)."""
+    raw = io.BytesIO()
+    with gzip.GzipFile(fileobj=raw, mode="wb", mtime=0) as gz:
+        with tarfile.open(fileobj=gz, mode="w", format=tarfile.PAX_FORMAT) as tar:
+            for sub in ("metatwin_guard", "tests"):
+                for p in sorted((ROOT / sub).glob("*.py")):
+                    data = p.read_bytes()
+                    info = tarfile.TarInfo(f"{sub}/{p.name}")
+                    info.size, info.mtime, info.mode = len(data), 0, 0o644
+                    tar.addfile(info, io.BytesIO(data))
+    return base64.b64encode(raw.getvalue()).decode()
 
 
 md = nbf.v4.new_markdown_cell
@@ -59,37 +62,58 @@ benchmark:
 """))
 
 cells.append(md("## 0. Setup\n\nThe package needs only `cryptography` (pre-installed on Colab) and `matplotlib`. "
-                "If the Zenodo zip `MetaTwin-Guard-v1.0.0-zenodo.zip` has been uploaded to `/content`, it is used; otherwise "
-                "the copy of the package embedded below (identical to release 1.0.0) is unpacked."))
+                "If a release zip (`MetaTwin-Guard-v*-zenodo.zip`, any browser-renamed variant) has been uploaded to `/content`, "
+                "it is used; otherwise the copy of the package embedded in the next cell (identical to the release) is unpacked. "
+                "The cell can be re-run safely and prints which copy was imported."))
 cells.append(code("""%pip install -q "cryptography>=42.0.5" matplotlib"""))
-cells.append(code(f'''import base64, io, os, sys, tarfile, zipfile, glob
+cells.append(code(f'''import base64, glob, io, os, shutil, sys, tarfile, zipfile
 from pathlib import Path
 
 EMBEDDED = "{embedded_package()}"
 
-work = Path("metatwin_guard_src")
-zips = sorted(glob.glob("/content/MetaTwin-Guard*.zip")) + sorted(glob.glob("MetaTwin-Guard*.zip"))
-if Path("metatwin_guard/__init__.py").exists():
-    work = Path(".")
-    print("Using package from the current directory")
-elif Path("../metatwin_guard/__init__.py").exists():
-    work = Path("..")
-    print("Using package from the parent directory (repository checkout)")
-elif zips:
-    with zipfile.ZipFile(zips[0]) as z:
-        z.extractall(work)
-    work = next(p.parent for p in work.rglob("metatwin_guard/__init__.py")).resolve()
-    print("Using uploaded Zenodo zip:", zips[0])
-else:
-    work.mkdir(exist_ok=True)
+
+def _extract_zip(zip_path, dest):
+    shutil.rmtree(dest, ignore_errors=True)
+    with zipfile.ZipFile(zip_path) as z:
+        z.extractall(dest)
+    hits = sorted(dest.rglob("metatwin_guard/__init__.py"), key=lambda p: len(p.parts))
+    if not hits:
+        raise FileNotFoundError(f"{{zip_path}} does not contain metatwin_guard/__init__.py")
+    return hits[0].parent.parent  # directory that CONTAINS the package
+
+
+def _extract_embedded(dest):
+    shutil.rmtree(dest, ignore_errors=True)
+    dest.mkdir(parents=True)
     with tarfile.open(fileobj=io.BytesIO(base64.b64decode(EMBEDDED)), mode="r:gz") as tar:
-        tar.extractall(work, **({{"filter": "data"}} if hasattr(tarfile, "data_filter") else {{}}))
-    print("Using the embedded package copy")
-sys.path.insert(0, str(work.resolve()))
-os.environ["PYTHONPATH"] = str(work.resolve()) + os.pathsep + os.environ.get("PYTHONPATH", "")
+        tar.extractall(dest, **({{"filter": "data"}} if hasattr(tarfile, "data_filter") else {{}}))
+    return dest
+
+
+# Any uploaded release zip, also renamed by the browser ("... (1).zip") or prefixed.
+zips = sorted({{*glob.glob("/content/*MetaTwin*Guard*.zip"), *glob.glob("*MetaTwin*Guard*.zip")}})
+if Path("metatwin_guard/__init__.py").exists():
+    work, source = Path("."), "current directory"
+elif Path("../metatwin_guard/__init__.py").exists():
+    work, source = Path(".."), "repository checkout (parent directory)"
+elif zips:
+    work, source = _extract_zip(zips[-1], Path("metatwin_guard_zip")), f"uploaded zip {{zips[-1]}}"
+else:
+    work, source = _extract_embedded(Path("metatwin_guard_src")), "embedded copy"
+work = work.resolve()
+
+# Re-running this cell must switch cleanly to the selected copy.
+for name in [m for m in sys.modules if m == "metatwin_guard" or m.startswith("metatwin_guard.")]:
+    del sys.modules[name]
+sys.path[:] = [p for p in sys.path if not p.rstrip("/").endswith(("metatwin_guard_src", "metatwin_guard_zip"))]
+if str(work) not in sys.path:
+    sys.path.insert(0, str(work))
+os.environ["PYTHONPATH"] = str(work)
 
 import metatwin_guard as mtg, cryptography, platform
-print("metatwin_guard", mtg.__version__, "| cryptography", cryptography.__version__, "| Python", platform.python_version())'''))
+print("Source:", source)
+print("metatwin_guard", mtg.__version__, "from", mtg.__file__)
+print("cryptography", cryptography.__version__, "| Python", platform.python_version())'''))
 cells.append(code("""import json, math, statistics, copy
 from datetime import timedelta
 import matplotlib.pyplot as plt
@@ -239,7 +263,8 @@ cells.append(md("""## 6. Quorum-signed evidence chain
 
 Each block binds the event hash, integrity result and reasons, anomaly score, decision, top contributions and the
 twin-state hash; four validator keys sign the block hash and verification needs ≥ 3 valid signatures."""))
-cells.append(code("""print("chain:", guard.ledger.verify().n_blocks, "blocks, valid =", guard.ledger.verify().valid)
+cells.append(code("""rep = guard.ledger.verify()
+print("chain:", rep.n_blocks, "blocks, valid =", rep.valid)
 print(json.dumps(guard.ledger.blocks[-3]["body"], indent=1)[:900], "…")
 
 tests = {}
@@ -282,16 +307,22 @@ cells.append(code("""ARTICLE_F1 = {"wan_failover": (0.913, 0.880, 0.880), "vpn_d
               "wifi_auth_surge": (0.813, 0.815, 0.815), "power_transition": (0.959, 0.071, 0.893),
               "telemetry_modification": (0.974, 0.931, 0.931), "replay": (0.000, 0.000, 0.879)}
 S = {(r["scenario"], r["mode"]): r for r in summary}
+FEATURE_MODES = ("rules", "robust", "hybrid")
+
+def best_modes(values, tol=0.01):
+    # modes within `tol` of the highest F1 (ties are reported together)
+    top = max(values)
+    return {bm.MODE_LABELS[m] for m, v in zip(FEATURE_MODES, values) if top - v <= tol}
+
 cmp_rows = []
 for sc, art in ARTICLE_F1.items():
+    ours = [S[(sc, m)]["f1_mean"] for m in FEATURE_MODES]
     row = {"Scenario": config.SCENARIO_LABELS[sc]}
-    for m, a in zip(("rules", "robust", "hybrid"), art):
-        row[bm.MODE_LABELS[m]] = f"{S[(sc, m)]['f1_mean']:.3f} (article {a:.3f})"
-    best = lambda vals: max(range(3), key=lambda i: vals[i])
-    row["best mode agrees (±0.01)"] = best([S[(sc, m)]["f1_mean"] for m in ("rules", "robust", "hybrid")]) == best(art) or \\
-        abs(sorted([S[(sc, m)]["f1_mean"] for m in ("rules","robust","hybrid")])[-1] - sorted([S[(sc, m)]["f1_mean"] for m in ("rules","robust","hybrid")])[-2]) < 0.01
+    for m, o, a in zip(FEATURE_MODES, ours, art):
+        row[bm.MODE_LABELS[m]] = f"{o:.3f} (article {a:.3f})"
+    row["best mode (±0.01) agrees"] = bool(best_modes(ours) & best_modes(art))
     cmp_rows.append(row)
-md_table(cmp_rows, ["Scenario", "Rules", "Robust score", "Hybrid", "best mode agrees (±0.01)"])"""))
+md_table(cmp_rows, ["Scenario", "Rules", "Robust score", "Hybrid", "best mode (±0.01) agrees"])"""))
 
 # 8
 cells.append(md("""## 8. Layer ablation — executed
@@ -403,6 +434,8 @@ cells.append(md("""1. **Admission before state works as specified.** Replayed, m
    timings (generator sync latency, sub-millisecond local append) must not be cited as network or blockchain
    performance."""))
 
+for i, c in enumerate(cells):
+    c["id"] = f"cell-{i:02d}"  # deterministic ids keep rebuilds byte-identical
 nb = nbf.v4.new_notebook(cells=cells, metadata={
     "kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"},
     "language_info": {"name": "python"},

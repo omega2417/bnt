@@ -158,10 +158,16 @@ def generate_run(scenario: str, rep: int, master_seed: int = config.MASTER_SEED,
         if not transient:
             healthy.append(ev)
 
-    # Injection window: contiguous block of evaluation slots.
-    start = rng.randint(20, n_eval - n_injected - 20)
-    inj_slots = set(range(start, start + n_injected))
-    accepted_pool: list[dict[str, Any]] = list(run.events)
+    # Injection window: contiguous block of evaluation slots. For telemetry
+    # modification every injected slot is followed by the untampered original,
+    # so the window spans 2 * n_injected slots.
+    if scenario == "telemetry_modification":
+        start = rng.randint(20, n_eval - 2 * n_injected - 20)
+        inj_slots = set(range(start, start + 2 * n_injected, 2))
+    else:
+        start = rng.randint(20, n_eval - n_injected - 20)
+        inj_slots = set(range(start, start + n_injected))
+    pending_original: dict[str, Any] | None = None
 
     for slot in range(n_eval):
         injected = slot in inj_slots
@@ -170,12 +176,18 @@ def generate_run(scenario: str, rep: int, master_seed: int = config.MASTER_SEED,
             x = normal_features(rng, transients=not injected)
             changed = inject(scenario, x, rng) if injected else []
             ev = emit(sid, x, "evaluation")
-            accepted_pool.append(ev)
         elif scenario == "telemetry_modification" and injected:
-            victim = accepted_pool[-1]
-            ch = tamper_changes(victim["features"], rng)
-            ev = tamper_features(victim, ch, fix_payload_hash=rng.random() < 0.5)
+            # An on-path adversary intercepts a fresh signed event and delivers a
+            # modified copy ahead of the original: identifier, sequence and chain
+            # are still valid, so only the payload-hash/signature checks can reject it.
+            x, transient = ordinary(rng)
+            pending_original = emit(rng.choice(sensor_ids), x, "evaluation")
+            ch = tamper_changes(pending_original["features"], rng)
+            ev = tamper_features(pending_original, ch, fix_payload_hash=rng.random() < 0.5)
             changed = sorted(ch)
+        elif pending_original is not None:
+            ev, pending_original = pending_original, None
+            changed = []
         elif scenario == "replay" and injected:
             ev = copy.deepcopy(rng.choice(healthy[: max(1, len(healthy) - 10)]))
             changed = []
@@ -183,7 +195,6 @@ def generate_run(scenario: str, rep: int, master_seed: int = config.MASTER_SEED,
             x, transient = ordinary(rng)
             ev = emit(rng.choice(sensor_ids), x, "evaluation")
             changed = []
-            accepted_pool.append(ev)
             if not transient:
                 healthy.append(ev)
         run.events.append(ev)

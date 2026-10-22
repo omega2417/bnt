@@ -48,7 +48,12 @@ class IntegrityGateway:
             return False, "schema:feature_set"
         for k in config.FEATURES:
             v = feats[k]
-            if isinstance(v, bool) or not isinstance(v, (int, float)) or not math.isfinite(v):
+            if isinstance(v, bool) or not isinstance(v, (int, float)):
+                return False, f"schema:feature_{k}"
+            try:
+                if not math.isfinite(float(v)):
+                    return False, f"schema:feature_{k}"
+            except OverflowError:
                 return False, f"schema:feature_{k}"
         try:
             parse_ts(ev["event_time_utc"])

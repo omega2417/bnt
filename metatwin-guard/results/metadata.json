@@ -75,7 +75,7 @@
     "machine": "x86_64",
     "processor": "x86_64",
     "cryptography": "50.0.1",
-    "metatwin_guard": "1.0.0"
+    "metatwin_guard": "1.0.1"
   },
-  "wall_time_s": 99.76
+  "wall_time_s": 87.73
 }

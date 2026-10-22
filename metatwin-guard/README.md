@@ -37,7 +37,7 @@ Metaverse Infrastructure Assurance: Software Artifact and Field Protocol"*
 
 ```bash
 python3 -m pip install -r requirements.txt
-python3 -m unittest discover tests            # 20 tests (5 core of Table 4 + 15 extended)
+python3 -m unittest discover tests            # 27 tests (5 core of Table 4 + 22 extended/regression)
 python3 -m compileall -q .
 python3 -m metatwin_guard.benchmark --seed 20260823 --out results --extra-seeds 1 2 3 4
 python3 scripts/make_figures.py
@@ -67,9 +67,9 @@ All 48 evidence chains verified; rejected events never changed the twin state.
 | Power transition | Rules | 0.897 ± 0.029 | 1.000 ± 0.000 | 0.946 ± 0.016 | 23.1 |
 | Power transition | Robust score | 0.143 ± 0.075 | 0.038 ± 0.013 | 0.059 ± 0.022 | 48.8 |
 | Power transition | Hybrid | 0.795 ± 0.033 | 1.000 ± 0.000 | 0.886 ± 0.020 | 51.9 |
-| Telemetry modification | Rules | 0.927 ± 0.051 | 1.000 ± 0.000 | 0.962 ± 0.028 | 16.2 |
-| Telemetry modification | Robust score | 0.813 ± 0.054 | 1.000 ± 0.000 | 0.896 ± 0.033 | 46.9 |
-| Telemetry modification | Hybrid | 0.813 ± 0.054 | 1.000 ± 0.000 | 0.896 ± 0.033 | 46.9 |
+| Telemetry modification | Rules | 0.914 ± 0.047 | 1.000 ± 0.000 | 0.954 ± 0.026 | 19.4 |
+| Telemetry modification | Robust score | 0.828 ± 0.036 | 1.000 ± 0.000 | 0.906 ± 0.022 | 41.9 |
+| Telemetry modification | Hybrid | 0.826 ± 0.035 | 1.000 ± 0.000 | 0.904 ± 0.021 | 42.5 |
 | Replay | Rules | 0.000 ± 0.000 | 0.000 ± 0.000 | 0.000 ± 0.000 | 21.9 |
 | Replay | Robust score | 0.000 ± 0.000 | 0.000 ± 0.000 | 0.000 ± 0.000 | 46.9 |
 | Replay | Hybrid | 0.811 ± 0.048 | 1.000 ± 0.000 | 0.895 ± 0.030 | 47.5 |
@@ -91,6 +91,14 @@ dilution for the binary power transition, rules ≥ robust for threshold-crossin
 operational scenarios, sub-millisecond local append time, ≈46 ms vs ≈155–160 ms
 generator sync latency). Report the numbers of the version you actually ran.
 
+All result files are bit-identical across re-runs with the same seed except the
+`append_median_ms` column, which is a wall-clock timing measurement of the host.
+
+In the telemetry-modification scenario an on-path adversary alters a freshly signed
+event and delivers it ahead of the original; identifier, sequence and chain remain
+valid, so only the payload-hash or Ed25519 signature check rejects it, and the original
+is then admitted (see `CHANGELOG.md`, v1.0.1).
+
 Reference environment of this release: see `results/metadata.json`
 (the article's run used CPython 3.11.8 and cryptography 42.0.5).
 
@@ -109,7 +117,7 @@ notebooks/           Google Colab notebook
 
 ## Depositing on Zenodo
 
-Upload `MetaTwin-Guard-v1.0.0-zenodo.zip` (or connect the GitHub repository and
+Upload `MetaTwin-Guard-v1.0.1-zenodo.zip` (or connect the GitHub repository and
 create a release). `.zenodo.json` supplies creators with ORCIDs, keywords, license
 and the article's 22 DOIs as `references` related identifiers. After Zenodo assigns a
 DOI, cite it in the article's *Data and code availability* statement.
