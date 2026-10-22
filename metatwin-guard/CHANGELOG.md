@@ -2,6 +2,9 @@
 
 ## 1.0.1 — 2026-10-22
 
+Archived on Zenodo: https://doi.org/10.5281/zenodo.23557608 (DOI, title, description and
+citation added to README, CITATION.cff, codemeta.json, .zenodo.json and the notebook; no code change).
+
 Fixes from an independent code review; methods and constants are unchanged.
 
 ### Fixed

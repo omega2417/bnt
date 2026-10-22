@@ -1,5 +1,9 @@
 # MetaTwin-Guard — reference artifact (Supplementary File S3)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23557608.svg)](https://doi.org/10.5281/zenodo.23557608)
+
+**Archived release:** https://doi.org/10.5281/zenodo.23557608
+
 Explainable and verifiable digital-twin assurance backend for a documented
 two-site university cyber range. Companion software for the article
 *"An Explainable and Verifiable Digital Twin of a Two-Site Cyber Range for
@@ -115,14 +119,18 @@ notebooks/           Google Colab notebook
 .zenodo.json  CITATION.cff  codemeta.json  references.bib  REFERENCES.md  LICENSE
 ```
 
-## Depositing on Zenodo
+## Zenodo record
 
-Upload `MetaTwin-Guard-v1.0.1-zenodo.zip` (or connect the GitHub repository and
-create a release). `.zenodo.json` supplies creators with ORCIDs, keywords, license
-and the article's 22 DOIs as `references` related identifiers. After Zenodo assigns a
-DOI, cite it in the article's *Data and code availability* statement.
+This release is archived at https://doi.org/10.5281/zenodo.23557608. `.zenodo.json` supplies the title, creators with
+ORCIDs, keywords, license and the article's 22 DOIs as `references` related identifiers.
+
+## How to cite
+
+Korchenko O, Prokopovych-Tkachenko D, Davydenko K, Askerov M, Herasymenko A, Zhurov Y. MetaTwin-Guard v1.0.1: Explainable and Verifiable Digital-Twin Assurance Backend for a Two-Site Cyber Range — Reference Software, Synthetic Benchmark, Colab Notebook and Field Protocol [Software]. Zenodo; 2026. doi: 10.5281/zenodo.23557608
+
+The software accompanies the article cited above (Korchenko et al., *Metaverse*, under review);
+the article's Data and code availability statement and reference [27] point to this DOI.
 
 ## License
 
-Code: MIT (see `LICENSE`). Change `.zenodo.json`/`CITATION.cff` if the authors
-prefer a different license.
+Code: MIT (see `LICENSE`).

@@ -4,7 +4,7 @@
   "name": "MetaTwin-Guard",
   "version": "1.0.1",
   "license": "https://spdx.org/licenses/MIT",
-  "description": "Explainable and verifiable digital-twin assurance backend (reference artifact, evidence level B).",
+  "description": "MetaTwin-Guard v1.0.1: Explainable and Verifiable Digital-Twin Assurance Backend for a Two-Site Cyber Range — Reference Software, Synthetic Benchmark, Colab Notebook and Field Protocol",
   "programmingLanguage": "Python",
   "runtimePlatform": "Python >= 3.10",
   "softwareRequirements": [
@@ -109,5 +109,7 @@
     "https://doi.org/10.1016/j.future.2024.02.015",
     "https://doi.org/10.3390/s23135941",
     "https://doi.org/10.1371/journal.pone.0118432"
-  ]
+  ],
+  "identifier": "https://doi.org/10.5281/zenodo.23557608",
+  "url": "https://doi.org/10.5281/zenodo.23557608"
 }

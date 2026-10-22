@@ -35,6 +35,9 @@ Companion notebook to *An Explainable and Verifiable Digital Twin of a Two-Site 
 Infrastructure Assurance: Software Artifact and Field Protocol* (Korchenko, Prokopovych-Tkachenko, Davydenko,
 Askerov, Herasymenko, Zhurov).
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23557608.svg)](https://doi.org/10.5281/zenodo.23557608)
+**Archived release (code, data, this notebook):** [https://doi.org/10.5281/zenodo.23557608](https://doi.org/10.5281/zenodo.23557608)
+
 The notebook walks through every mechanism of the reference artifact and re-executes the deterministic synthetic
 benchmark:
 
@@ -432,7 +435,9 @@ cells.append(md("""1. **Admission before state works as specified.** Replayed, m
 8. **Boundary.** Nothing here measures WAN switching, VPN recovery, wireless detection, EcoFlow autonomy, distributed-
    ledger behaviour or operator benefit. Those require the gated field protocol (S1) and its workbook (S2); synthetic
    timings (generator sync latency, sub-millisecond local append) must not be cited as network or blockchain
-   performance."""))
+   performance.
+
+**How to cite the software:** Korchenko O, Prokopovych-Tkachenko D, Davydenko K, Askerov M, Herasymenko A, Zhurov Y. MetaTwin-Guard v1.0.1: Explainable and Verifiable Digital-Twin Assurance Backend for a Two-Site Cyber Range — Reference Software, Synthetic Benchmark, Colab Notebook and Field Protocol [Software]. Zenodo; 2026. doi: [10.5281/zenodo.23557608](https://doi.org/10.5281/zenodo.23557608)"""))
 
 for i, c in enumerate(cells):
     c["id"] = f"cell-{i:02d}"  # deterministic ids keep rebuilds byte-identical
