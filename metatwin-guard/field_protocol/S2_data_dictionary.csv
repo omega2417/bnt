@@ -1,0 +1,59 @@
+sheet,column,type,description
+run_gates,run_id,string,Unique run identifier (e.g. D03-A-S5-L50-R02)
+run_gates,date_utc,date,Calendar date of the run (UTC)
+run_gates,site_path,string,Approved site/path identifier (no operational IPs)
+run_gates,authorization_ref,string,Reference to signed authorization (G1)
+run_gates,isolation_checked,bool,Experimental segment and default-deny egress verified (G3)
+run_gates,rollback_checked,bool,Independent rollback path verified (G3)
+run_gates,clock_offset_ms,float,Measured clock offset before run (G6)
+run_gates,operator_go,bool,Operator go decision
+runs,run_id,string,Run identifier
+runs,block_id,string,Day/site/path randomization block
+runs,scenario_id,enum,S0..S7
+runs,load_level_pct,enum,"20, 50 or 80 (% of measured stable throughput)"
+runs,measured_stable_throughput_mbps,float,Separately measured stable throughput of the path
+runs,order_in_block,int,Randomized position within block
+runs,t_baseline_start_utc,datetime,Start of 10-min baseline
+runs,t_injection_start_utc,datetime,Start of perturbation (≤ 5 min)
+runs,t_injection_end_utc,datetime,End of perturbation
+runs,t_recovery_end_utc,datetime,End of 10-min recovery
+runs,artifact_version,string,MetaTwin-Guard version / commit
+runs,config_hash,string,SHA-256 of frozen configuration
+runs,status,enum,valid | invalid | safety_stopped
+events,run_id,string,Run identifier
+events,event_id,string,Envelope event_id
+events,sensor_id,string,Pseudonymous sensor identity
+events,topology_node,string,Twin topology node
+events,source_seq,int,Source-local sequence
+events,event_time_utc,datetime,Event time
+events,ingest_time_utc,datetime,Ingest time
+events,twin_commit_time_utc,datetime,Twin commit time (Eq. 9)
+events,admitted,bool,Integrity admission g(e)
+events,reasons,string,Semicolon-separated rejection reasons
+events,robust_score,float,"A(x), Eq. (5); empty if not evaluated"
+events,rules_fired,string,Semicolon-separated static rules
+events,hybrid_alert,bool,Eq. (7)
+events,top3,string,Top-3 feature contributions
+events,ground_truth_injected,bool,Label from the injection schedule
+events,block_index,int,Evidence-chain block index
+run_endpoints,run_id,string,Run identifier
+run_endpoints,mode,enum,rules | robust | hybrid | integrity_only | rules_integrity
+run_endpoints,tp,int,True positives
+run_endpoints,fp,int,False positives
+run_endpoints,fn,int,False negatives
+run_endpoints,tn,int,True negatives
+run_endpoints,auprc,float,Area under precision-recall curve (continuous score only)
+run_endpoints,false_alerts_per_hour,float,False alerts / normal exposure hours
+run_endpoints,detection_latency_s,float,Eq. (8); empty if censored
+run_endpoints,detection_censored,bool,True if no correct alert in window
+run_endpoints,sync_latency_median_ms,float,Median Eq. (9) over admitted events
+run_endpoints,recovery_time_s,float,Network recovery time
+run_endpoints,evidence_chain_valid,bool,Ledger verification result
+run_endpoints,cpu_pct_p95,float,95th percentile CPU utilization
+run_endpoints,memory_mb_max,float,Peak resident memory
+run_endpoints,storage_growth_mb,float,Evidence/log storage growth
+accountability,run_id,string,Run identifier
+accountability,status,enum,valid | invalid | safety_stopped
+accountability,stop_reason,string,"Stop criterion triggered, if any"
+accountability,replacement_run_id,string,Run scheduled as replacement (original stays listed)
+accountability,notes,string,Free text; no personal data

@@ -1,0 +1,166 @@
+{
+  "upload_type": "software",
+  "title": "MetaTwin-Guard: explainable and verifiable digital-twin assurance backend for a two-site cyber range (reference artifact, synthetic benchmark and field protocol)",
+  "version": "1.0.0",
+  "publication_date": "2026-10-22",
+  "description": "<p>Reference software artifact (Supplementary File S3) for the article <i>An Explainable and Verifiable Digital Twin of a Two-Site Cyber Range for Metaverse Infrastructure Assurance: Software Artifact and Field Protocol</i>. It implements Ed25519 event verification (RFC 8032), SHA-256 payload and source hash chains (FIPS 180-4), replay/sequence checks, an admission-before-state twin invariant, static operational rules, a median/MAD robust explainable anomaly score, an integrity-aware hybrid decision and a 3-of-4 quorum-signed evidence chain (single-process emulation, not a distributed blockchain). Includes unit tests, a deterministic synthetic benchmark (seed 20260823, 6 scenarios x 8 runs, 17,280 events), executed ablation, sensitivity and multi-seed analyses, figures, a Google Colab notebook, the prospective field protocol (S1) and the blank field-data workbook (S2).</p><p><b>Evidence level B only</b>: all results are synthetic software verification; no cyber-range field data are included. Test-fixture keys are deterministic and must never be used in a deployment.</p>",
+  "creators": [
+    {
+      "name": "Korchenko, Oleksandr",
+      "affiliation": "State University of Information and Communication Technologies, Kyiv, Ukraine",
+      "orcid": "0000-0003-3376-0631"
+    },
+    {
+      "name": "Prokopovych-Tkachenko, Dmytro",
+      "affiliation": "State University of Information and Communication Technologies, Kyiv, Ukraine",
+      "orcid": "0000-0002-6590-3898"
+    },
+    {
+      "name": "Davydenko, Kyrylo",
+      "affiliation": "National Technical University \"Dnipro Polytechnic\", Dnipro, Ukraine",
+      "orcid": "0009-0001-9209-1274"
+    },
+    {
+      "name": "Askerov, Mukafat",
+      "affiliation": "State University of Information and Communication Technologies, Kyiv, Ukraine",
+      "orcid": "0009-0000-6611-2732"
+    },
+    {
+      "name": "Herasymenko, Anton",
+      "affiliation": "State University of Information and Communication Technologies, Kyiv, Ukraine",
+      "orcid": "0009-0008-4475-2040"
+    },
+    {
+      "name": "Zhurov, Yurii",
+      "affiliation": "SMB Cybersecurity Advisors, United States of America",
+      "orcid": "0000-0002-8276-2230"
+    }
+  ],
+  "keywords": [
+    "digital twin",
+    "cyber range",
+    "cyber-resilience",
+    "signed telemetry",
+    "explainable anomaly detection",
+    "evidence provenance",
+    "replay attack",
+    "Ed25519",
+    "metaverse"
+  ],
+  "license": "MIT",
+  "access_right": "open",
+  "language": "eng",
+  "related_identifiers": [
+    {
+      "identifier": "10.1016/j.infsof.2022.107145",
+      "relation": "references",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1109/COMST.2022.3202047",
+      "relation": "references",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.6028/NIST.CSWP.29",
+      "relation": "references",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.6028/NIST.SP.800-160v2r1",
+      "relation": "references",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.6028/NIST.SP.800-61r3",
+      "relation": "references",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.6028/NIST.AI.100-1",
+      "relation": "references",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1016/j.bdr.2022.100359",
+      "relation": "references",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1109/LNET.2022.3186589",
+      "relation": "references",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.17487/RFC8032",
+      "relation": "references",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.6028/NIST.FIPS.180-4",
+      "relation": "references",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.3390/app11041809",
+      "relation": "references",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1007/978-3-030-81242-3_17",
+      "relation": "references",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1109/WoWMoM54355.2022.00088",
+      "relation": "references",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1109/MCE.2022.3203202",
+      "relation": "references",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1109/MSEC.2023.3281272",
+      "relation": "references",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.3390/app122412546",
+      "relation": "references",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1109/TDSC.2023.3303888",
+      "relation": "references",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1109/ACCESS.2023.3267548",
+      "relation": "references",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1080/01621459.1993.10476408",
+      "relation": "references",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1016/j.future.2024.02.015",
+      "relation": "references",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.3390/s23135941",
+      "relation": "references",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "10.1371/journal.pone.0118432",
+      "relation": "references",
+      "resource_type": "publication"
+    }
+  ],
+  "notes": "Software-level verification only. Field performance, distributed-ledger behaviour and benefit to metaverse users are not established by this artifact."
+}

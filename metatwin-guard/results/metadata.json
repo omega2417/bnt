@@ -1,0 +1,81 @@
+{
+  "artifact": "MetaTwin-Guard reference implementation",
+  "evidence_level": "B (deterministic synthetic verification; not field data)",
+  "master_seed": 20260823,
+  "extra_seeds": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "scenarios": [
+    "wan_failover",
+    "vpn_degradation",
+    "wifi_auth_surge",
+    "power_transition",
+    "telemetry_modification",
+    "replay"
+  ],
+  "repetitions": 8,
+  "n_baseline": 120,
+  "n_eval": 240,
+  "n_injected": 40,
+  "n_runs": 48,
+  "n_events": 17280,
+  "n_injected_total": 1920,
+  "all_ledgers_valid": true,
+  "detector": {
+    "mad_consistency": 1.4826,
+    "dispersion_floor": 0.25,
+    "z_clip": 20.0,
+    "threshold": 3.2
+  },
+  "static_rules": [
+    [
+      "rtt_ms",
+      ">",
+      180.0
+    ],
+    [
+      "jitter_ms",
+      ">",
+      50.0
+    ],
+    [
+      "loss_pct",
+      ">",
+      5.0
+    ],
+    [
+      "throughput_mbps",
+      "<",
+      8.0
+    ],
+    [
+      "auth_failures",
+      ">",
+      18.0
+    ],
+    [
+      "vpn_status",
+      "<",
+      0.5
+    ],
+    [
+      "power_status",
+      "<",
+      0.5
+    ]
+  ],
+  "quorum": "3-of-4",
+  "environment": {
+    "python": "3.13.16",
+    "implementation": "CPython",
+    "platform": "Linux-6.18.44-fc-v140-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "processor": "x86_64",
+    "cryptography": "50.0.1",
+    "metatwin_guard": "1.0.0"
+  },
+  "wall_time_s": 99.76
+}

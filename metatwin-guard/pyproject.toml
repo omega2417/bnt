@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "metatwin-guard"
+version = "1.0.0"
+description = "Explainable and verifiable digital-twin assurance backend for a two-site cyber range (reference artifact)"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = ["cryptography>=42.0.5"]
+authors = [
+  { name = "Oleksandr Korchenko" }, { name = "Dmytro Prokopovych-Tkachenko" },
+  { name = "Kyrylo Davydenko" }, { name = "Mukafat Askerov" },
+  { name = "Anton Herasymenko" }, { name = "Yurii Zhurov" },
+]
+
+[project.optional-dependencies]
+plots = ["matplotlib>=3.7"]
+workbook = ["openpyxl>=3.1"]
+
+[project.scripts]
+metatwin-benchmark = "metatwin_guard.benchmark:main"
+
+[tool.setuptools]
+packages = ["metatwin_guard"]

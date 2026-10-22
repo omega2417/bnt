@@ -1,0 +1,1 @@
+run_id,mode,tp,fp,fn,tn,auprc,false_alerts_per_hour,detection_latency_s,detection_censored,sync_latency_median_ms,recovery_time_s,evidence_chain_valid,cpu_pct_p95,memory_mb_max,storage_growth_mb

@@ -1,0 +1,175 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "MetaTwin-Guard: explainable and verifiable digital-twin assurance backend for a two-site cyber range"
+version: 1.0.0
+date-released: 2026-10-22
+license: MIT
+type: software
+authors:
+  - family-names: "Korchenko"
+    given-names: "Oleksandr"
+    affiliation: "State University of Information and Communication Technologies, Kyiv, Ukraine"
+    orcid: "https://orcid.org/0000-0003-3376-0631"
+  - family-names: "Prokopovych-Tkachenko"
+    given-names: "Dmytro"
+    affiliation: "State University of Information and Communication Technologies, Kyiv, Ukraine"
+    orcid: "https://orcid.org/0000-0002-6590-3898"
+  - family-names: "Davydenko"
+    given-names: "Kyrylo"
+    affiliation: "National Technical University Dnipro Polytechnic, Dnipro, Ukraine"
+    orcid: "https://orcid.org/0009-0001-9209-1274"
+  - family-names: "Askerov"
+    given-names: "Mukafat"
+    affiliation: "State University of Information and Communication Technologies, Kyiv, Ukraine"
+    orcid: "https://orcid.org/0009-0000-6611-2732"
+  - family-names: "Herasymenko"
+    given-names: "Anton"
+    affiliation: "State University of Information and Communication Technologies, Kyiv, Ukraine"
+    orcid: "https://orcid.org/0009-0008-4475-2040"
+  - family-names: "Zhurov"
+    given-names: "Yurii"
+    affiliation: "SMB Cybersecurity Advisors, United States of America"
+    orcid: "https://orcid.org/0000-0002-8276-2230"
+keywords:
+  - "digital twin"
+  - "cyber range"
+  - "cyber-resilience"
+  - "signed telemetry"
+  - "explainable anomaly detection"
+  - "evidence provenance"
+  - "replay attack"
+  - "Ed25519"
+  - "metaverse"
+references:
+  - type: article
+    title: "Digital-twin-based testing for cyber-physical systems: A systematic literature review"
+    doi: "10.1016/j.infsof.2022.107145"
+    year: 2023
+    authors:
+      - name: "Somers, R. J. et al."
+  - type: article
+    title: "A Survey on Metaverse: Fundamentals, Security, and Privacy"
+    doi: "10.1109/COMST.2022.3202047"
+    year: 2023
+    authors:
+      - name: "Wang, Y. et al."
+  - type: report
+    title: "The NIST Cybersecurity Framework (CSF) 2.0"
+    doi: "10.6028/NIST.CSWP.29"
+    year: 2024
+    authors:
+      - name: "National Institute of Standards and Technology"
+  - type: report
+    title: "Developing Cyber-Resilient Systems: A Systems Security Engineering Approach (SP 800-160 Vol. 2 Rev. 1)"
+    doi: "10.6028/NIST.SP.800-160v2r1"
+    year: 2021
+    authors:
+      - name: "Ross, R. et al."
+  - type: report
+    title: "Incident Response Recommendations and Considerations for Cybersecurity Risk Management (SP 800-61 Rev. 3)"
+    doi: "10.6028/NIST.SP.800-61r3"
+    year: 2025
+    authors:
+      - name: "Nelson, A. et al."
+  - type: report
+    title: "Artificial Intelligence Risk Management Framework (AI RMF 1.0)"
+    doi: "10.6028/NIST.AI.100-1"
+    year: 2023
+    authors:
+      - name: "Tabassi, E."
+  - type: article
+    title: "Evaluating Standard Feature Sets Towards Increased Generalisability and Explainability of ML-Based Network Intrusion Detection"
+    doi: "10.1016/j.bdr.2022.100359"
+    year: 2022
+    authors:
+      - name: "Sarhan, M. et al."
+  - type: article
+    title: "Robust Network Intrusion Detection Through Explainable Artificial Intelligence (XAI)"
+    doi: "10.1109/LNET.2022.3186589"
+    year: 2022
+    authors:
+      - name: "Barnard, P. et al."
+  - type: standard
+    title: "Edwards-Curve Digital Signature Algorithm (EdDSA), RFC 8032"
+    doi: "10.17487/RFC8032"
+    year: 2017
+    authors:
+      - name: "Josefsson, S.; Liusvaara, I."
+  - type: standard
+    title: "Secure Hash Standard (SHS), FIPS PUB 180-4"
+    doi: "10.6028/NIST.FIPS.180-4"
+    year: 2015
+    authors:
+      - name: "National Institute of Standards and Technology"
+  - type: article
+    title: "Cyber Ranges and TestBeds for Education, Training, and Research"
+    doi: "10.3390/app11041809"
+    year: 2021
+    authors:
+      - name: "Chouliaras, N. et al."
+  - type: conference-paper
+    title: "A Digital Twin-Based Cyber Range for SOC Analysts"
+    doi: "10.1007/978-3-030-81242-3_17"
+    year: 2021
+    authors:
+      - name: "Vielberth, M. et al."
+  - type: conference-paper
+    title: "A Digital Twin for the 5G Era: the SPIDER Cyber Range"
+    doi: "10.1109/WoWMoM54355.2022.00088"
+    year: 2022
+    authors:
+      - name: "Rebecchi, F. et al."
+  - type: article
+    title: "Digital Twin-Based Cyber Range for Industrial Internet of Things"
+    doi: "10.1109/MCE.2022.3203202"
+    year: 2023
+    authors:
+      - name: "Zhou, H. et al."
+  - type: article
+    title: "Reconfigurable Digital Twin to Support Research, Education, and Training in the Defense of Critical Infrastructure"
+    doi: "10.1109/MSEC.2023.3281272"
+    year: 2023
+    authors:
+      - name: "Mathur, A. P."
+  - type: article
+    title: "Design and Implementation of Multi-Cyber Range for Cyber Training and Testing"
+    doi: "10.3390/app122412546"
+    year: 2022
+    authors:
+      - name: "Park, M. et al."
+  - type: article
+    title: "Disentangled Orchestration on Cyber Ranges"
+    doi: "10.1109/TDSC.2023.3303888"
+    year: 2024
+    authors:
+      - name: "Fu, Y.; Han, W.; Yuan, D."
+  - type: article
+    title: "Digital Twins for 5G Networks: A Modeling and Deployment Methodology"
+    doi: "10.1109/ACCESS.2023.3267548"
+    year: 2023
+    authors:
+      - name: "Sanz-Rodrigo, M. et al."
+  - type: article
+    title: "Alternatives to the Median Absolute Deviation"
+    doi: "10.1080/01621459.1993.10476408"
+    year: 1993
+    authors:
+      - name: "Rousseeuw, P. J.; Croux, C."
+  - type: article
+    title: "Digital Twins-enabled Zero Touch Network: A smart contract and explainable AI integrated cybersecurity framework"
+    doi: "10.1016/j.future.2024.02.015"
+    year: 2024
+    authors:
+      - name: "Kumar, R. et al."
+  - type: article
+    title: "CICIoT2023: A Real-Time Dataset and Benchmark for Large-Scale Attacks in IoT Environment"
+    doi: "10.3390/s23135941"
+    year: 2023
+    authors:
+      - name: "Neto, E. C. P. et al."
+  - type: article
+    title: "The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets"
+    doi: "10.1371/journal.pone.0118432"
+    year: 2015
+    authors:
+      - name: "Saito, T.; Rehmsmeier, M."
