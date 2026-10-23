@@ -1,0 +1,510 @@
+{
+  "name": "pgmem-synthetic-memory-support",
+  "title": "Синтетичний датасет для оцінювання provenance-governed асистента пам'яті",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0"
+    }
+  ],
+  "description": "Повністю синтетичні дані, згенеровані за рамкою Prokopovych-Tkachenko «Provenance-governed agentic AI for personal knowledge and memory support» (етап 1 протоколу оцінювання). Жоден запис не відповідає реальній людині; розподіли — проєктні припущення, а не емпіричні оцінки.",
+  "synthetic": true,
+  "generator": {
+    "package": "pgmem",
+    "seed": 2026,
+    "participants": 240,
+    "days": 28
+  },
+  "resources": [
+    {
+      "name": "participants",
+      "path": "participants.csv",
+      "format": "csv",
+      "description": "Учасники когорти та метадані, пов'язані з пам'яттю (одна стрічка = одна людина)",
+      "schema": {
+        "fields": [
+          {
+            "name": "participant_id",
+            "type": "string",
+            "description": "Псевдонімізований ідентифікатор",
+            "constraints": {
+              "required": true,
+              "unique": true,
+              "pattern": "P\\d{3}"
+            }
+          },
+          {
+            "name": "age",
+            "type": "integer",
+            "description": "Вік, роки",
+            "constraints": {
+              "minimum": 18,
+              "maximum": 110
+            }
+          },
+          {
+            "name": "age_band",
+            "type": "string",
+            "description": "Вікова група",
+            "constraints": {
+              "enum": [
+                "<50",
+                "50-64",
+                "65-74",
+                "75-84",
+                "85+"
+              ]
+            }
+          },
+          {
+            "name": "sex",
+            "type": "string",
+            "description": "Стать",
+            "constraints": {
+              "enum": [
+                "F",
+                "M"
+              ]
+            }
+          },
+          {
+            "name": "diagnosis",
+            "type": "string",
+            "description": "MCI — помірний когнітивний розлад; mild_dementia — легка деменція; ABI — набуте ураження мозку",
+            "constraints": {
+              "enum": [
+                "MCI",
+                "mild_dementia",
+                "ABI"
+              ]
+            }
+          },
+          {
+            "name": "cdr_global",
+            "type": "number",
+            "description": "Clinical Dementia Rating, глобальна оцінка (порожньо для ABI)",
+            "constraints": {
+              "minimum": 0,
+              "maximum": 3
+            }
+          },
+          {
+            "name": "moca",
+            "type": "integer",
+            "description": "Montreal Cognitive Assessment з поправкою на освіту (0–30)",
+            "constraints": {
+              "minimum": 0,
+              "maximum": 30
+            }
+          },
+          {
+            "name": "education_years",
+            "type": "integer",
+            "description": "Роки освіти",
+            "constraints": {
+              "minimum": 0,
+              "maximum": 30
+            }
+          },
+          {
+            "name": "prmq_prospective",
+            "type": "integer",
+            "description": "PRMQ, проспективна шкала (8–40, більше = частіші збої)",
+            "constraints": {
+              "minimum": 8,
+              "maximum": 40
+            }
+          },
+          {
+            "name": "prmq_retrospective",
+            "type": "integer",
+            "description": "PRMQ, ретроспективна шкала (8–40)",
+            "constraints": {
+              "minimum": 8,
+              "maximum": 40
+            }
+          },
+          {
+            "name": "months_since_diagnosis",
+            "type": "integer",
+            "description": "Місяців від встановлення діагнозу",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "lives_alone",
+            "type": "boolean",
+            "description": "Живе сам(а)"
+          },
+          {
+            "name": "has_trusted_person",
+            "type": "boolean",
+            "description": "Є погоджена довірена особа (R8)"
+          },
+          {
+            "name": "trusted_relation",
+            "type": "string",
+            "description": "Хто довірена особа"
+          },
+          {
+            "name": "device",
+            "type": "string",
+            "description": "Пристрій",
+            "constraints": {
+              "enum": [
+                "smartphone",
+                "tablet",
+                "both"
+              ]
+            }
+          },
+          {
+            "name": "digital_literacy",
+            "type": "integer",
+            "description": "Самооцінка цифрової грамотності (1–5)",
+            "constraints": {
+              "minimum": 1,
+              "maximum": 5
+            }
+          },
+          {
+            "name": "uses_voice",
+            "type": "boolean",
+            "description": "Користується голосовою взаємодією (R6)"
+          },
+          {
+            "name": "sensors_connected",
+            "type": "boolean",
+            "description": "Підключені сенсори (таблетниця, крокомір)"
+          },
+          {
+            "name": "call_log_connected",
+            "type": "boolean",
+            "description": "Підключено журнал дзвінків"
+          },
+          {
+            "name": "language",
+            "type": "string",
+            "description": "Мова інтерфейсу",
+            "constraints": {
+              "enum": [
+                "uk",
+                "en"
+              ]
+            }
+          },
+          {
+            "name": "agrees_to_level_reduction",
+            "type": "boolean",
+            "description": "Згода на зниження стартового рівня підтримки (рівн. 3)"
+          },
+          {
+            "name": "ability_latent",
+            "type": "number",
+            "description": "ЛИШЕ ДЛЯ СИМУЛЯЦІЇ: латентна здатність, з якої генеруються відповіді"
+          }
+        ]
+      }
+    },
+    {
+      "name": "episodes",
+      "path": "episodes.csv",
+      "format": "csv",
+      "description": "Заплановані епізоди завдань (рутини, R1–R4)",
+      "schema": {
+        "fields": [
+          {
+            "name": "episode_id",
+            "type": "string",
+            "description": "Ідентифікатор епізоду",
+            "constraints": {
+              "required": true,
+              "unique": true
+            }
+          },
+          {
+            "name": "participant_id",
+            "type": "string",
+            "description": "Посилання на participants",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "day",
+            "type": "integer",
+            "description": "День спостереження (0–27)",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "task_type",
+            "type": "string",
+            "description": "Тип завдання",
+            "constraints": {
+              "enum": [
+                "medication_morning",
+                "daily_walk",
+                "appointment_prep",
+                "bill_payment",
+                "call_family"
+              ]
+            }
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "Категорія даних для згоди"
+          },
+          {
+            "name": "safety_critical",
+            "type": "boolean",
+            "description": "Завдання, критичне для безпеки"
+          },
+          {
+            "name": "sensorable",
+            "type": "boolean",
+            "description": "Виконання може бути зафіксоване сенсором"
+          },
+          {
+            "name": "scheduled",
+            "type": "datetime",
+            "description": "Запланований час (ISO 8601)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "records",
+      "path": "records.csv",
+      "format": "csv",
+      "description": "Персональна база подій: записи r_i = (c, t, s, κ, σ, v, e), рівняння (1)",
+      "schema": {
+        "fields": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Ідентифікатор запису",
+            "constraints": {
+              "required": true,
+              "unique": true
+            }
+          },
+          {
+            "name": "person_id",
+            "type": "string",
+            "description": "Чий це запис",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "subject",
+            "type": "string",
+            "description": "Ідентичність події"
+          },
+          {
+            "name": "content",
+            "type": "string",
+            "description": "c_i — зміст"
+          },
+          {
+            "name": "time",
+            "type": "datetime",
+            "description": "t_i — час"
+          },
+          {
+            "name": "source",
+            "type": "string",
+            "description": "s_i — джерело/походження (calendar, user_voice, sensor, call_log, carer_entry)"
+          },
+          {
+            "name": "kappa",
+            "type": "number",
+            "description": "κ_i — індикатор довіри (не ймовірність)",
+            "constraints": {
+              "minimum": 0,
+              "maximum": 1
+            }
+          },
+          {
+            "name": "scope",
+            "type": "string",
+            "description": "σ_i — кому дозволено (через кому)"
+          },
+          {
+            "name": "version",
+            "type": "integer",
+            "description": "v_i — версія",
+            "constraints": {
+              "minimum": 1
+            }
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "e_i — доказовий статус",
+            "constraints": {
+              "enum": [
+                "plan",
+                "self_report",
+                "observation",
+                "inference",
+                "disputed"
+              ]
+            }
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "Категорія даних"
+          },
+          {
+            "name": "kind",
+            "type": "string",
+            "description": "Про що запис: scheduled / occurred / content",
+            "constraints": {
+              "enum": [
+                "scheduled",
+                "occurred",
+                "content"
+              ]
+            }
+          },
+          {
+            "name": "value",
+            "type": "string",
+            "description": "Нормалізоване значення твердження"
+          },
+          {
+            "name": "supersedes",
+            "type": "string",
+            "description": "Попередня версія, яку замінює цей запис"
+          },
+          {
+            "name": "active",
+            "type": "boolean",
+            "description": "Поточна версія"
+          },
+          {
+            "name": "disputed",
+            "type": "boolean",
+            "description": "Позначено як спірний"
+          }
+        ]
+      }
+    },
+    {
+      "name": "questions",
+      "path": "questions.csv",
+      "format": "csv",
+      "description": "Запитання до асистента про минуле зі стратами оцінювання",
+      "schema": {
+        "fields": [
+          {
+            "name": "question_id",
+            "type": "string",
+            "description": "Ідентифікатор",
+            "constraints": {
+              "required": true,
+              "unique": true
+            }
+          },
+          {
+            "name": "person_id",
+            "type": "string",
+            "description": "Про кого запитання"
+          },
+          {
+            "name": "stratum",
+            "type": "string",
+            "description": "Страта",
+            "constraints": {
+              "enum": [
+                "answerable_plan",
+                "attendance",
+                "self_report",
+                "unanswerable",
+                "answerable_observation",
+                "contradictory",
+                "stale",
+                "answerable_note",
+                "consent_restricted"
+              ]
+            }
+          },
+          {
+            "name": "requester",
+            "type": "string",
+            "description": "Хто питає (сама людина або trusted:<id>)"
+          },
+          {
+            "name": "subject",
+            "type": "string",
+            "description": "Подія"
+          },
+          {
+            "name": "kind",
+            "type": "string",
+            "description": "Тип твердження"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "Категорія даних"
+          },
+          {
+            "name": "ideal",
+            "type": "string",
+            "description": "Еталонна поведінка",
+            "constraints": {
+              "enum": [
+                "answer",
+                "abstain",
+                "clarify",
+                "refuse"
+              ]
+            }
+          },
+          {
+            "name": "text",
+            "type": "string",
+            "description": "Текст запитання"
+          }
+        ]
+      }
+    },
+    {
+      "name": "reference_history",
+      "path": "reference_history.csv",
+      "format": "csv",
+      "description": "Незалежна еталонна історія (ground truth) для сліпої оцінки тверджень",
+      "schema": {
+        "fields": [
+          {
+            "name": "person_id",
+            "type": "string",
+            "description": "Людина"
+          },
+          {
+            "name": "subject",
+            "type": "string",
+            "description": "Подія"
+          },
+          {
+            "name": "kind",
+            "type": "string",
+            "description": "scheduled / occurred / reported / content"
+          },
+          {
+            "name": "value",
+            "type": "string",
+            "description": "Істинне значення"
+          }
+        ]
+      }
+    }
+  ]
+}

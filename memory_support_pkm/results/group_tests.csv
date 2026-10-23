@@ -1,0 +1,25 @@
+test,outcome,statistic,p_value
+Kruskal–Wallis за діагнозом,TSR,91.17350188104128,1.5919360537297342e-20
+Spearman ρ з moca,TSR,0.7540968817320296,2.3861741584283256e-45
+Spearman ρ з prmq_prospective,TSR,-0.7708515948592116,1.6314702185574e-48
+Spearman ρ з age,TSR,-0.24522510230526692,0.00012406960386520356
+Spearman ρ з digital_literacy,TSR,0.36032568286501704,9.07257584942439e-09
+Mann–Whitney: живе сам(а) vs ні,TSR,8068.5,0.08283771442233995
+Kruskal–Wallis за діагнозом,independence,78.50008422088844,8.993387305520285e-18
+Spearman ρ з moca,independence,0.7381801814903672,1.4358682065853874e-42
+Spearman ρ з prmq_prospective,independence,-0.7421277779616302,3.0684318140706467e-43
+Spearman ρ з age,independence,-0.19865723774205174,0.001985472644398487
+Spearman ρ з digital_literacy,independence,0.32670603664674863,2.2468478861695257e-07
+Mann–Whitney: живе сам(а) vs ні,independence,7861.5,0.17786795964841084
+Kruskal–Wallis за діагнозом,FPR,41.44723615860335,9.996478196747891e-10
+Spearman ρ з moca,FPR,0.5367780348498119,2.598201906761827e-19
+Spearman ρ з prmq_prospective,FPR,-0.5146856786076429,1.2356560560274749e-17
+Spearman ρ з age,FPR,-0.10468507471642954,0.10571536908428886
+Spearman ρ з digital_literacy,FPR,0.22429670334997534,0.0004628804032394116
+Mann–Whitney: живе сам(а) vs ні,FPR,7967.5,0.12228280041329521
+Kruskal–Wallis за діагнозом,coverage,13.379205565188059,0.0012437767246158069
+Spearman ρ з moca,coverage,0.28869534734437596,5.460452006310661e-06
+Spearman ρ з prmq_prospective,coverage,-0.3395236076641777,6.910493187188375e-08
+Spearman ρ з age,coverage,-0.03205579721281363,0.6212068974109441
+Spearman ρ з digital_literacy,coverage,0.06423428921137017,0.3217140313629045
+Mann–Whitney: живе сам(а) vs ні,coverage,6870.5,0.6070011439703531
