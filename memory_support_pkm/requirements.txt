@@ -1,0 +1,10 @@
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+matplotlib>=3.7
+tabulate>=0.9
+nbformat>=5.9
+pytest>=7
+plotly>=5.18
+# optional, for live neural components (pgmem.neural; preinstalled in Colab)
+# torch transformers sentence-transformers sentencepiece

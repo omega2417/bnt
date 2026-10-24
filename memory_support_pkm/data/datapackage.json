@@ -1,0 +1,510 @@
+{
+  "name": "pgmem-synthetic-memory-support",
+  "title": "Synthetic dataset for evaluating a provenance-governed memory assistant",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0"
+    }
+  ],
+  "description": "Fully synthetic data generated from the Prokopovych-Tkachenko framework 'Provenance-governed agentic AI for personal knowledge and memory support' (stage 1 of the evaluation protocol). No record corresponds to a real person; distributions are design assumptions, not empirical estimates.",
+  "synthetic": true,
+  "generator": {
+    "package": "pgmem",
+    "seed": 2026,
+    "participants": 240,
+    "days": 28
+  },
+  "resources": [
+    {
+      "name": "participants",
+      "path": "participants.csv",
+      "format": "csv",
+      "description": "Cohort participants and memory-related metadata (one row = one person)",
+      "schema": {
+        "fields": [
+          {
+            "name": "participant_id",
+            "type": "string",
+            "description": "Pseudonymised identifier",
+            "constraints": {
+              "required": true,
+              "unique": true,
+              "pattern": "P\\d{3}"
+            }
+          },
+          {
+            "name": "age",
+            "type": "integer",
+            "description": "Age, years",
+            "constraints": {
+              "minimum": 18,
+              "maximum": 110
+            }
+          },
+          {
+            "name": "age_band",
+            "type": "string",
+            "description": "Age band",
+            "constraints": {
+              "enum": [
+                "<50",
+                "50-64",
+                "65-74",
+                "75-84",
+                "85+"
+              ]
+            }
+          },
+          {
+            "name": "sex",
+            "type": "string",
+            "description": "Sex",
+            "constraints": {
+              "enum": [
+                "F",
+                "M"
+              ]
+            }
+          },
+          {
+            "name": "diagnosis",
+            "type": "string",
+            "description": "MCI — mild cognitive impairment; mild_dementia — mild dementia; ABI — acquired brain injury",
+            "constraints": {
+              "enum": [
+                "MCI",
+                "mild_dementia",
+                "ABI"
+              ]
+            }
+          },
+          {
+            "name": "cdr_global",
+            "type": "number",
+            "description": "Clinical Dementia Rating, global score (empty for ABI)",
+            "constraints": {
+              "minimum": 0,
+              "maximum": 3
+            }
+          },
+          {
+            "name": "moca",
+            "type": "integer",
+            "description": "Montreal Cognitive Assessment, education-adjusted (0–30)",
+            "constraints": {
+              "minimum": 0,
+              "maximum": 30
+            }
+          },
+          {
+            "name": "education_years",
+            "type": "integer",
+            "description": "Years of education",
+            "constraints": {
+              "minimum": 0,
+              "maximum": 30
+            }
+          },
+          {
+            "name": "prmq_prospective",
+            "type": "integer",
+            "description": "PRMQ prospective subscale (8–40, higher = more frequent failures)",
+            "constraints": {
+              "minimum": 8,
+              "maximum": 40
+            }
+          },
+          {
+            "name": "prmq_retrospective",
+            "type": "integer",
+            "description": "PRMQ retrospective subscale (8–40)",
+            "constraints": {
+              "minimum": 8,
+              "maximum": 40
+            }
+          },
+          {
+            "name": "months_since_diagnosis",
+            "type": "integer",
+            "description": "Months since diagnosis",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "lives_alone",
+            "type": "boolean",
+            "description": "Lives alone"
+          },
+          {
+            "name": "has_trusted_person",
+            "type": "boolean",
+            "description": "Has an agreed trusted person (R8)"
+          },
+          {
+            "name": "trusted_relation",
+            "type": "string",
+            "description": "Relation of the trusted person"
+          },
+          {
+            "name": "device",
+            "type": "string",
+            "description": "Device",
+            "constraints": {
+              "enum": [
+                "smartphone",
+                "tablet",
+                "both"
+              ]
+            }
+          },
+          {
+            "name": "digital_literacy",
+            "type": "integer",
+            "description": "Self-rated digital literacy (1–5)",
+            "constraints": {
+              "minimum": 1,
+              "maximum": 5
+            }
+          },
+          {
+            "name": "uses_voice",
+            "type": "boolean",
+            "description": "Uses voice interaction (R6)"
+          },
+          {
+            "name": "sensors_connected",
+            "type": "boolean",
+            "description": "Sensors connected (pill box, step counter)"
+          },
+          {
+            "name": "call_log_connected",
+            "type": "boolean",
+            "description": "Call log connected"
+          },
+          {
+            "name": "language",
+            "type": "string",
+            "description": "Interface language",
+            "constraints": {
+              "enum": [
+                "uk",
+                "en"
+              ]
+            }
+          },
+          {
+            "name": "agrees_to_level_reduction",
+            "type": "boolean",
+            "description": "Agrees to lowering the starting assistance level (Eq. 3)"
+          },
+          {
+            "name": "ability_latent",
+            "type": "number",
+            "description": "SIMULATION ONLY: latent ability from which responses are generated"
+          }
+        ]
+      }
+    },
+    {
+      "name": "episodes",
+      "path": "episodes.csv",
+      "format": "csv",
+      "description": "Scheduled task episodes (routines, R1–R4)",
+      "schema": {
+        "fields": [
+          {
+            "name": "episode_id",
+            "type": "string",
+            "description": "Episode identifier",
+            "constraints": {
+              "required": true,
+              "unique": true
+            }
+          },
+          {
+            "name": "participant_id",
+            "type": "string",
+            "description": "Reference to participants",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "day",
+            "type": "integer",
+            "description": "Observation day (0–27)",
+            "constraints": {
+              "minimum": 0
+            }
+          },
+          {
+            "name": "task_type",
+            "type": "string",
+            "description": "Task type",
+            "constraints": {
+              "enum": [
+                "medication_morning",
+                "daily_walk",
+                "appointment_prep",
+                "bill_payment",
+                "call_family"
+              ]
+            }
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "Data category used for consent"
+          },
+          {
+            "name": "safety_critical",
+            "type": "boolean",
+            "description": "Safety-critical task"
+          },
+          {
+            "name": "sensorable",
+            "type": "boolean",
+            "description": "Completion can be detected by a sensor"
+          },
+          {
+            "name": "scheduled",
+            "type": "datetime",
+            "description": "Scheduled time (ISO 8601)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "records",
+      "path": "records.csv",
+      "format": "csv",
+      "description": "Personal event base: records r_i = (c, t, s, κ, σ, v, e), Equation (1)",
+      "schema": {
+        "fields": [
+          {
+            "name": "record_id",
+            "type": "string",
+            "description": "Record identifier",
+            "constraints": {
+              "required": true,
+              "unique": true
+            }
+          },
+          {
+            "name": "person_id",
+            "type": "string",
+            "description": "Whose record this is",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "subject",
+            "type": "string",
+            "description": "Event identity"
+          },
+          {
+            "name": "content",
+            "type": "string",
+            "description": "c_i — content"
+          },
+          {
+            "name": "time",
+            "type": "datetime",
+            "description": "t_i — time"
+          },
+          {
+            "name": "source",
+            "type": "string",
+            "description": "s_i — source/provenance (calendar, user_voice, sensor, call_log, carer_entry)"
+          },
+          {
+            "name": "kappa",
+            "type": "number",
+            "description": "κ_i — confidence indicator (not a probability)",
+            "constraints": {
+              "minimum": 0,
+              "maximum": 1
+            }
+          },
+          {
+            "name": "scope",
+            "type": "string",
+            "description": "σ_i — permitted recipients (comma-separated)"
+          },
+          {
+            "name": "version",
+            "type": "integer",
+            "description": "v_i — version",
+            "constraints": {
+              "minimum": 1
+            }
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "e_i — evidence status",
+            "constraints": {
+              "enum": [
+                "plan",
+                "self_report",
+                "observation",
+                "inference",
+                "disputed"
+              ]
+            }
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "Data category"
+          },
+          {
+            "name": "kind",
+            "type": "string",
+            "description": "What the record speaks to: scheduled / occurred / content",
+            "constraints": {
+              "enum": [
+                "scheduled",
+                "occurred",
+                "content"
+              ]
+            }
+          },
+          {
+            "name": "value",
+            "type": "string",
+            "description": "Normalised claim value"
+          },
+          {
+            "name": "supersedes",
+            "type": "string",
+            "description": "Previous version superseded by this record"
+          },
+          {
+            "name": "active",
+            "type": "boolean",
+            "description": "Current version"
+          },
+          {
+            "name": "disputed",
+            "type": "boolean",
+            "description": "Marked as disputed"
+          }
+        ]
+      }
+    },
+    {
+      "name": "questions",
+      "path": "questions.csv",
+      "format": "csv",
+      "description": "Questions to the assistant about the past, with evaluation strata",
+      "schema": {
+        "fields": [
+          {
+            "name": "question_id",
+            "type": "string",
+            "description": "Identifier",
+            "constraints": {
+              "required": true,
+              "unique": true
+            }
+          },
+          {
+            "name": "person_id",
+            "type": "string",
+            "description": "Whom the question is about"
+          },
+          {
+            "name": "stratum",
+            "type": "string",
+            "description": "Stratum",
+            "constraints": {
+              "enum": [
+                "answerable_plan",
+                "attendance",
+                "self_report",
+                "unanswerable",
+                "answerable_observation",
+                "contradictory",
+                "stale",
+                "answerable_note",
+                "consent_restricted"
+              ]
+            }
+          },
+          {
+            "name": "requester",
+            "type": "string",
+            "description": "Who asks (the person or trusted:<id>)"
+          },
+          {
+            "name": "subject",
+            "type": "string",
+            "description": "Event"
+          },
+          {
+            "name": "kind",
+            "type": "string",
+            "description": "Claim kind"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "Data category"
+          },
+          {
+            "name": "ideal",
+            "type": "string",
+            "description": "Reference (ideal) behaviour",
+            "constraints": {
+              "enum": [
+                "answer",
+                "abstain",
+                "clarify",
+                "refuse"
+              ]
+            }
+          },
+          {
+            "name": "text",
+            "type": "string",
+            "description": "Question text"
+          }
+        ]
+      }
+    },
+    {
+      "name": "reference_history",
+      "path": "reference_history.csv",
+      "format": "csv",
+      "description": "Independent reference history (ground truth) for blinded claim scoring",
+      "schema": {
+        "fields": [
+          {
+            "name": "person_id",
+            "type": "string",
+            "description": "Person"
+          },
+          {
+            "name": "subject",
+            "type": "string",
+            "description": "Event"
+          },
+          {
+            "name": "kind",
+            "type": "string",
+            "description": "scheduled / occurred / reported / content"
+          },
+          {
+            "name": "value",
+            "type": "string",
+            "description": "True value"
+          }
+        ]
+      }
+    }
+  ]
+}
