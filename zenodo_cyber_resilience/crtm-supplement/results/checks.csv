@@ -1,0 +1,108 @@
+quantity,computed,published,tolerance,ok,where
+|P_DDoS|,9.0,9.0,0,True,Sec. 3.5
+|P_phish|,7.0,7.0,0,True,Sec. 3.5
+|meet|,4.0,4.0,0,True,Sec. 3.5
+|join|,12.0,12.0,0,True,Sec. 3.5
+Jaccard index (actions),0.3333333333333333,0.3333333333333333,1e-12,True,Sec. 3.5
+|E(P_DDoS)|,26.0,26.0,0,True,Sec. 3.5
+|E(P_phish)|,23.0,23.0,0,True,Sec. 3.5
+|E meet|,13.0,13.0,0,True,Sec. 3.5
+|E join|,36.0,36.0,0,True,Sec. 3.5
+Jaccard index (down-sets),0.3611111111111111,0.361,0.0005,True,Sec. 3.5
+Cor.1 interval length (M3),16.999999999999996,17.0,1e-09,True,Sec. 5.2
+"Cor.1 upper end (M3, min)",27.0,27.0,1e-09,True,Sec. 5.2
+n_ch(4 sharing events),0.4444444444444444,0.444,0.0005,True,Sec. 5.2
+observed metrics,38.0,38.0,0,True,Sec. 5.3 / Fig. 6
+inconsistent linear scores,9.0,9.0,0,True,Abstract / Fig. 6
+inconsistent anchored scores,0.0,0.0,0,True,Theorem 2(a)
+inconsistent linear in UN.S1.A1,2.0,2.0,0,True,Table 6
+inconsistent linear in UN.S2.A1,1.0,1.0,0,True,Table 6
+inconsistent linear in CN.S1.A1,2.0,2.0,0,True,Table 6
+inconsistent linear in CN.S2.A1,2.0,2.0,0,True,Table 6
+inconsistent linear in RE.S1.A2,2.0,2.0,0,True,Table 6
+inconsistent linear in TR.S1.A1,0.0,0.0,0,True,Table 6
+inconsistent linear in TR.S2.A2,0.0,0.0,0,True,Table 6
+grid-check violations (anchored),0.0,0.0,0,True,Sec. 7.1
+UN.S1.A1 gated linear,0.9034967320261438,0.9035,5e-05,True,Table 5
+UN.S1.A1 gated anchored,0.8558333333333333,0.8558,5e-05,True,Table 5
+UN.S1.A1 equal weights linear,0.8371459694989106,0.8371,5e-05,True,Table 5
+UN.S1.A1 equal weights anchored,0.836111111111111,0.8361,5e-05,True,Table 5
+"UN.S1.A1 additive, M1 = 0, linear",0.6534967320261438,0.6535,5e-05,True,Table 5
+"UN.S1.A1 additive, M1 = 0, anchored",0.6058333333333333,0.6058,5e-05,True,Table 5
+"non-compensatory operators, M1 = 0",0.0,0.0,0,True,Sec. 7.3
+difference linear - anchored,0.047663398692810444,0.0477,5e-05,True,Sec. 7.2
+loss of contribution M3,0.04044117647058823,0.0404,5e-05,True,Sec. 7.2
+loss of contribution M4,0.020000000000000018,0.02,5e-05,True,Sec. 7.2
+gain of contribution M5,0.012777777777777777,0.0128,5e-05,True,Sec. 7.2
+C = sum_{q>=2} w_q m_q,0.6534967320261438,0.6535,5e-05,True,Fig. 7
+C_1(S_w),0.75,0.75,1e-12,True,Sec. 6.1
+"one source, gate, linear",0.7159967320261438,0.716,0.0005,True,Sec. 7.3 / Table 4
+"one source, gate, anchored",0.6558333333333334,0.656,0.0005,True,Sec. 7.3
+"one source, power γ=1, linear",0.17899918300653594,0.179,0.0005,True,Sec. 6.2 / Table 4
+"one source, power γ=1, anchored",0.13116666666666668,0.131,0.0005,True,Sec. 7.3
+"one source, capped ϑ=0.5, linear",0.5,0.5,0.0005,True,Table 4
+"one source, capped ϑ=0.5, anchored",0.4,0.4,0.0005,True,Sec. 7.3
+"four sources, capped ϑ=0.5, linear",0.9034967320261438,0.9035,5e-05,True,Sec. 8.1
+"grid min, linear",0.5022222222222222,0.502,0.0005,True,Sec. 7.4
+"grid max, linear",0.9522222222222223,0.952,0.0005,True,Sec. 7.4
+"grid min, anchored",0.515,0.515,0.0005,True,Sec. 7.4
+"grid max, anchored",0.9650000000000001,0.965,0.0005,True,Sec. 7.4
+max |anchored - linear|,0.1004183006535948,0.1,0.0005,True,Sec. 7.4
+margin above 0.9 (linear),0.0034967320261437562,0.0035,5e-05,True,Sec. 7.4
+"τ4 threshold, linear",48.933823529411725,48.9,0.05,True,Sec. 7.4
+"τ3 threshold, linear",27.377777777777755,27.4,0.05,True,Sec. 7.4
+"τ3 threshold, anchored (τ4 = 45)",7.333333333333335,7.3,0.05,True,Sec. 7.4
+"τ4 threshold, anchored (τ3 = 10)",37.500000000000014,37.5,0.05,True,Sec. 7.4
+"exact mean, linear",0.8371459694989106,0.8371,5e-05,True,Sec. 7.5
+"exact sd, linear (α=1)",0.07156026576246084,0.0716,5e-05,True,Sec. 7.5
+"exact mean, anchored",0.8361111111111111,0.8361,5e-05,True,Sec. 7.5
+"exact sd, anchored (α=1)",0.045194562735818504,0.0452,5e-05,True,Sec. 7.5
+MC vs exact mean (linear_alpha1),0.8370285679903434,0.8371459694989106,0.0002,True,Sec. 7.5
+MC vs exact sd (linear_alpha1),0.07150908731271205,0.07156026576246084,0.0002,True,Sec. 7.5
+MC vs exact mean (anchored_alpha1),0.8360126452390352,0.8361111111111111,0.0002,True,Sec. 7.5
+MC vs exact sd (anchored_alpha1),0.04516799969858681,0.045194562735818504,0.0002,True,Sec. 7.5
+"P(high), linear, α=1",0.18486,0.185,0.003,True,Sec. 7.5
+"P(high), anchored, α=1",0.0949,0.095,0.003,True,Sec. 7.5
+"P(high), linear, α=4",0.02888,0.029,0.003,True,Sec. 7.5
+"P(high), anchored, α=4",0.005235,0.005,0.003,True,Sec. 7.5
+"P(<0.7), linear, α=1",0.050225,0.05,0.003,True,Sec. 7.5
+"P(<0.7), anchored, α=1",0.0,0.0,0,True,Prop. 3
+UN.S1.A1 linear,0.9034967320261438,0.9035,5e-05,True,Table 6
+UN.S1.A1 anchored,0.8558333333333333,0.8558,5e-05,True,Table 6
+UN.S2.A1 linear,0.643676901919262,0.6437,5e-05,True,Table 6
+UN.S2.A1 anchored,0.6701585411935056,0.6702,5e-05,True,Table 6
+CN.S1.A1 linear,0.5905065994992378,0.5905,5e-05,True,Table 6
+CN.S1.A1 anchored,0.5884579831932772,0.5885,5e-05,True,Table 6
+CN.S2.A1 linear,0.6172775696822855,0.6173,5e-05,True,Table 6
+CN.S2.A1 anchored,0.5989347961406785,0.5989,5e-05,True,Table 6
+RE.S1.A2 linear,0.7639291465378422,0.7639,5e-05,True,Table 6
+RE.S1.A2 anchored,0.7191666666666666,0.7192,5e-05,True,Table 6
+TR.S1.A1 linear,0.6967213114754098,0.6967,5e-05,True,Table 6
+TR.S1.A1 anchored,0.6816666666666666,0.6817,5e-05,True,Table 6
+TR.S2.A2 linear,0.8035714285714286,0.8036,5e-05,True,Table 6
+TR.S2.A2 anchored,0.7533333333333333,0.7533,5e-05,True,Table 6
+CN.S2.A1 κ,0.9,0.9,1e-12,True,Table 6
+"CN.S2.A1 enclosure low, linear",0.555549812714057,0.556,0.0005,True,Table 6
+"CN.S2.A1 enclosure high, linear",0.655549812714057,0.656,0.0005,True,Table 6
+"CN.S2.A1 enclosure low, anchored",0.5390413165266106,0.539,0.0005,True,Table 6
+"CN.S2.A1 enclosure high, anchored",0.6390413165266106,0.639,0.0005,True,Table 6
+"goal ANT mean, linear",0.7735868169727029,0.774,0.0005,True,Table 6
+"goal ANT min, linear",0.643676901919262,0.644,0.0005,True,Table 6
+"goal WITH mean, linear",0.6038920845907616,0.604,0.0005,True,Table 6
+"goal WITH min, linear",0.5905065994992378,0.591,0.0005,True,Table 6
+"goal REC mean, linear",0.7639291465378422,0.764,0.0005,True,Table 6
+"goal REC min, linear",0.7639291465378422,0.764,0.0005,True,Table 6
+"goal AD mean, linear",0.7501463700234192,0.75,0.0005,True,Table 6
+"goal AD min, linear",0.6967213114754098,0.697,0.0005,True,Table 6
+"goal ANT mean, anchored",0.7629959372634194,0.763,0.0005,True,Table 6
+"goal ANT min, anchored",0.6701585411935056,0.67,0.0005,True,Table 6
+"goal WITH mean, anchored",0.5936963896669778,0.594,0.0005,True,Table 6
+"goal WITH min, anchored",0.5884579831932772,0.588,0.0005,True,Table 6
+"goal REC mean, anchored",0.7191666666666666,0.719,0.0005,True,Table 6
+"goal REC min, anchored",0.7191666666666666,0.719,0.0005,True,Table 6
+"goal AD mean, anchored",0.7175,0.718,0.0005,True,Table 6
+"goal AD min, anchored",0.6816666666666666,0.682,0.0005,True,Table 6
+linear profile dominates anchored,1.0,1.0,0,True,Sec. 7.6
+actions where cap ϑ=0.5 binds (linear),0.0,0.0,0,True,Sec. 7.6
+actions where cap ϑ=0.5 binds (anchored),0.0,0.0,0,True,Sec. 7.6
+N_theta (metrics in scenario),39.0,39.0,0,True,Sec. 7.1

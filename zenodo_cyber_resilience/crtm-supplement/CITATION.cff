@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the article and the software record."
+title: "CRTM — Cyber-Resilience Tuple Model: digital supplement (code, data and interactive notebook)"
+version: 1.0.0
+date-released: 2026-10-27
+license: MIT
+type: software
+authors:
+  - family-names: "[Author One]"
+    affiliation: "Department of Cybersecurity and Information Technologies, University of Customs and Finance, Dnipro, Ukraine"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: "[Author Two]"
+    affiliation: "Department of Cybersecurity and Information Technologies, University of Customs and Finance, Dnipro, Ukraine"
+  - family-names: "[Author Three]"
+    affiliation: "Department of Cybersecurity and Information Technologies, University of Customs and Finance, Dnipro, Ukraine"
+keywords:
+  - cyber resilience
+  - critical infrastructure
+  - cybersecurity assessment
+  - set-theoretic model
+  - non-compensatory aggregation
+  - knockout criterion
+  - linguistic scale
+  - piecewise-linear normalization
+  - resilience metrics
+  - decision support
+preferred-citation:
+  type: article
+  title: "A Set-Theoretic Tuple Model with Level-Consistent Normalization and Non-Compensatory Aggregation for Assessing the Cyber Resilience of Critical Infrastructure"
+  authors:
+    - family-names: "[Author One]"
+    - family-names: "[Author Two]"
+    - family-names: "[Author Three]"
+  journal: "Information"
+  publisher:
+    name: "MDPI"
+  year: 2026

@@ -1,0 +1,7 @@
+q,metric,unit,value,xi,n_ch,lvl_lin,nu,lvl_anc,w,w_n,w_nu,core
+1,Number of TI sources used,sources,4.0,0 1 2 3 4 4,1.0,H,1.0,H,0.25,0.25,0.25,1
+2,TI update frequency,events/day,96.0,1 2 7 25 96 96,1.0,H,1.0,H,0.15,0.15,0.15,0
+3,Time to determine TI relevance,min,25.0,180 179 90 30 10 0,0.9117647058823529,H,0.75,AA,0.25,0.22794117647058823,0.1875,0
+4,Time to disseminate defensive TTPs,min,45.0,240 239 120 60 15 0,0.8666666666666667,AA,0.7666666666666666,AA,0.2,0.17333333333333334,0.15333333333333332,0
+5,External TI sharing frequency,events/month,4.0,0 1 2 4 9 9,0.4444444444444444,A,0.7,AA,0.05,0.022222222222222223,0.034999999999999996,0
+6,Number of monitored threat types,types,4.0,0 1 2 3 5 5,0.8,AA,0.8,AA,0.1,0.08000000000000002,0.08000000000000002,0

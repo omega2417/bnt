@@ -1,0 +1,1652 @@
+{
+  "version": "1.0.0",
+  "seed": 20261027,
+  "mc_samples": 200000,
+  "projections": {
+    "admissible": {
+      "DDoS": true,
+      "phishing": true
+    },
+    "sizes": {
+      "DDoS": 9,
+      "phishing": 7
+    },
+    "meet": [
+      "CN.S1.A1",
+      "TR.S1.A1",
+      "TR.S2.A2",
+      "UN.S1.A1"
+    ],
+    "join_size": 12,
+    "jaccard_actions": 0.3333333333333333,
+    "downset_sizes": [
+      26,
+      23
+    ],
+    "downset_meet": 13,
+    "downset_join": 36,
+    "jaccard_downset": 0.3611111111111111,
+    "poset_size_local_catalog": 36
+  },
+  "corollary1_UN.S1.A1_M3": {
+    "u_interval": [
+      -27.0,
+      -10.0
+    ],
+    "x_interval": {
+      "from": 10.0,
+      "to": 27.0,
+      "closed": "(from, to]"
+    },
+    "length": 16.999999999999996
+  },
+  "affine_consistent_exists": {
+    "UN.S1.A1/M1": false,
+    "UN.S1.A1/M2": false,
+    "UN.S1.A1/M3": false,
+    "UN.S1.A1/M4": false,
+    "UN.S1.A1/M5": false,
+    "UN.S1.A1/M6": false,
+    "UN.S2.A1/M1": false,
+    "UN.S2.A1/M2": false,
+    "UN.S2.A1/M3": false,
+    "CN.S1.A1/M1": false,
+    "CN.S1.A1/M2": false,
+    "CN.S1.A1/M3": false,
+    "CN.S1.A1/M4": false,
+    "CN.S1.A1/M5": false,
+    "CN.S1.A1/M6": false,
+    "CN.S1.A1/M7": false,
+    "CN.S1.A1/M8": false,
+    "CN.S1.A1/M9": false,
+    "CN.S1.A1/M10": false,
+    "CN.S2.A1/M1": false,
+    "CN.S2.A1/M2": false,
+    "CN.S2.A1/M3": false,
+    "CN.S2.A1/M4": false,
+    "CN.S2.A1/M5": false,
+    "CN.S2.A1/M6": false,
+    "CN.S2.A1/M7": false,
+    "CN.S2.A1/M8": false,
+    "CN.S2.A1/M9": false,
+    "CN.S2.A1/M10": false,
+    "RE.S1.A2/M1": false,
+    "RE.S1.A2/M2": false,
+    "RE.S1.A2/M3": false,
+    "RE.S1.A2/M4": false,
+    "RE.S1.A2/M5": false,
+    "RE.S1.A2/M6": false,
+    "TR.S1.A1/M1": false,
+    "TR.S1.A1/M2": false,
+    "TR.S2.A2/M1": false,
+    "TR.S2.A2/M2": false
+  },
+  "consistency": {
+    "observed": 38,
+    "inconsistent_linear": 9,
+    "inconsistent_anchored": 0,
+    "per_action_linear": {
+      "UN.S1.A1": 2,
+      "UN.S2.A1": 1,
+      "CN.S1.A1": 2,
+      "CN.S2.A1": 2,
+      "RE.S1.A2": 2,
+      "TR.S1.A1": 0,
+      "TR.S2.A2": 0
+    }
+  },
+  "grid_check": {
+    "tables": 39,
+    "points_per_table": 20019,
+    "violations": 0
+  },
+  "table5": {
+    "rows": [
+      {
+        "q": 1,
+        "metric": "Number of TI sources used",
+        "unit": "sources",
+        "value": 4.0,
+        "xi": "0 1 2 3 4 4",
+        "n_ch": 1.0,
+        "lvl_lin": "H",
+        "nu": 1.0,
+        "lvl_anc": "H",
+        "w": 0.25,
+        "w_n": 0.25,
+        "w_nu": 0.25,
+        "core": 1
+      },
+      {
+        "q": 2,
+        "metric": "TI update frequency",
+        "unit": "events/day",
+        "value": 96.0,
+        "xi": "1 2 7 25 96 96",
+        "n_ch": 1.0,
+        "lvl_lin": "H",
+        "nu": 1.0,
+        "lvl_anc": "H",
+        "w": 0.15,
+        "w_n": 0.15,
+        "w_nu": 0.15,
+        "core": 0
+      },
+      {
+        "q": 3,
+        "metric": "Time to determine TI relevance",
+        "unit": "min",
+        "value": 25.0,
+        "xi": "180 179 90 30 10 0",
+        "n_ch": 0.9117647058823529,
+        "lvl_lin": "H",
+        "nu": 0.75,
+        "lvl_anc": "AA",
+        "w": 0.25,
+        "w_n": 0.22794117647058823,
+        "w_nu": 0.1875,
+        "core": 0
+      },
+      {
+        "q": 4,
+        "metric": "Time to disseminate defensive TTPs",
+        "unit": "min",
+        "value": 45.0,
+        "xi": "240 239 120 60 15 0",
+        "n_ch": 0.8666666666666667,
+        "lvl_lin": "AA",
+        "nu": 0.7666666666666666,
+        "lvl_anc": "AA",
+        "w": 0.2,
+        "w_n": 0.17333333333333334,
+        "w_nu": 0.15333333333333332,
+        "core": 0
+      },
+      {
+        "q": 5,
+        "metric": "External TI sharing frequency",
+        "unit": "events/month",
+        "value": 4.0,
+        "xi": "0 1 2 4 9 9",
+        "n_ch": 0.4444444444444444,
+        "lvl_lin": "A",
+        "nu": 0.7,
+        "lvl_anc": "AA",
+        "w": 0.05,
+        "w_n": 0.022222222222222223,
+        "w_nu": 0.034999999999999996,
+        "core": 0
+      },
+      {
+        "q": 6,
+        "metric": "Number of monitored threat types",
+        "unit": "types",
+        "value": 4.0,
+        "xi": "0 1 2 3 5 5",
+        "n_ch": 0.8,
+        "lvl_lin": "AA",
+        "nu": 0.8,
+        "lvl_anc": "AA",
+        "w": 0.1,
+        "w_n": 0.08000000000000002,
+        "w_nu": 0.08000000000000002,
+        "core": 0
+      }
+    ],
+    "gate_linear": 0.9034967320261438,
+    "gate_anchored": 0.8558333333333333,
+    "equal_linear": 0.8371459694989106,
+    "equal_anchored": 0.836111111111111,
+    "no_source_additive_linear": 0.6534967320261438,
+    "no_source_additive_anchored": 0.6058333333333333,
+    "no_source_gate": 0.0,
+    "no_source_power": 0.0,
+    "no_source_capped": 0.0,
+    "contribution_change_anchored_minus_linear": {
+      "M1": 0.0,
+      "M2": 0.0,
+      "M3": -0.04044117647058823,
+      "M4": -0.020000000000000018,
+      "M5": 0.012777777777777777,
+      "M6": 0.0
+    }
+  },
+  "knockout": {
+    "linear": {
+      "one_source_m1": 0.25,
+      "gate": 0.7159967320261438,
+      "power_g1": 0.17899918300653594,
+      "capped_0.5": 0.5,
+      "four_sources_capped_0.5": 0.9034967320261438
+    },
+    "anchored": {
+      "one_source_m1": 0.2,
+      "gate": 0.6558333333333334,
+      "power_g1": 0.13116666666666668,
+      "capped_0.5": 0.4,
+      "four_sources_capped_0.5": 0.8558333333333333
+    },
+    "C_rest_linear": 0.6534967320261438,
+    "compensation_capacity_additive": 0.75
+  },
+  "operator_properties": {
+    "additive": {
+      "idempotent": true,
+      "veto": false,
+      "jump_at_core_zero": 2.5000002068509275e-10
+    },
+    "hard_gate": {
+      "idempotent": true,
+      "veto": true,
+      "jump_at_core_zero": 0.6534967322761438
+    },
+    "power": {
+      "idempotent": false,
+      "veto": true,
+      "jump_at_core_zero": 6.534967322761439e-10
+    },
+    "capped": {
+      "idempotent": true,
+      "veto": true,
+      "jump_at_core_zero": 2e-09
+    }
+  },
+  "sensitivity": {
+    "linear": {
+      "min": 0.5022222222222222,
+      "max": 0.9522222222222223
+    },
+    "anchored": {
+      "min": 0.515,
+      "max": 0.9650000000000001
+    },
+    "max_abs_diff": 0.1004183006535948,
+    "margin_linear": 0.0034967320261437562,
+    "linear_tau4_threshold": 48.933823529411725,
+    "linear_tau3_threshold": 27.377777777777755,
+    "anchored_tau3_threshold_at_tau4_45": 7.333333333333335,
+    "anchored_tau4_threshold_at_tau3_10": 37.500000000000014
+  },
+  "dirichlet": {
+    "linear_alpha1": {
+      "alpha": 1,
+      "exact_mean": 0.8371459694989106,
+      "exact_sd": 0.07156026576246084,
+      "mc_mean": 0.8370285679903434,
+      "mc_sd": 0.07150908731271205,
+      "p_high": 0.18486,
+      "p_below_0.7": 0.050225,
+      "levels": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.050225,
+        "4": 0.764915,
+        "5": 0.18486
+      }
+    },
+    "linear_alpha4": {
+      "alpha": 4,
+      "exact_mean": 0.8371459694989106,
+      "exact_sd": 0.037866133392232264,
+      "mc_mean": 0.837169561730997,
+      "mc_sd": 0.037792138456622236,
+      "p_high": 0.02888,
+      "p_below_0.7": 0.001195,
+      "levels": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.001195,
+        "4": 0.969925,
+        "5": 0.02888
+      }
+    },
+    "anchored_alpha1": {
+      "alpha": 1,
+      "exact_mean": 0.8361111111111111,
+      "exact_sd": 0.045194562735818504,
+      "mc_mean": 0.8360126452390352,
+      "mc_sd": 0.04516799969858681,
+      "p_high": 0.0949,
+      "p_below_0.7": 0.0,
+      "levels": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.9051,
+        "5": 0.0949
+      }
+    },
+    "anchored_alpha4": {
+      "alpha": 4,
+      "exact_mean": 0.8361111111111111,
+      "exact_sd": 0.02391471472225654,
+      "mc_mean": 0.8360746175671865,
+      "mc_sd": 0.023892210704717424,
+      "p_high": 0.005235,
+      "p_below_0.7": 0.0,
+      "levels": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.994765,
+        "5": 0.005235
+      }
+    }
+  },
+  "scenario": {
+    "linear": {
+      "actions": {
+        "UN.S1.A1": {
+          "ident": "UN.S1.A1",
+          "goal": "ANT",
+          "status": "ok",
+          "score": 0.9034967320261438,
+          "level": 5,
+          "kappa": 1.0,
+          "lower": 0.9034967320261438,
+          "upper": 0.9034967320261438,
+          "contributions": [
+            0.25,
+            0.15,
+            0.22794117647058823,
+            0.17333333333333334,
+            0.022222222222222223,
+            0.08000000000000002
+          ],
+          "normalized": [
+            1.0,
+            1.0,
+            0.9117647058823529,
+            0.8666666666666667,
+            0.4444444444444444,
+            0.8
+          ],
+          "inconsistent": [
+            2,
+            4
+          ],
+          "level_abbr": "H"
+        },
+        "UN.S2.A1": {
+          "ident": "UN.S2.A1",
+          "goal": "ANT",
+          "status": "ok",
+          "score": 0.643676901919262,
+          "level": 3,
+          "kappa": 1.0,
+          "lower": 0.643676901919262,
+          "upper": 0.643676901919262,
+          "contributions": [
+            0.03711952487008166,
+            0.3333333333333333,
+            0.27322404371584696
+          ],
+          "normalized": [
+            0.111358574610245,
+            1.0,
+            0.819672131147541
+          ],
+          "inconsistent": [
+            0
+          ],
+          "level_abbr": "A"
+        },
+        "CN.S1.A1": {
+          "ident": "CN.S1.A1",
+          "goal": "WITH",
+          "status": "ok",
+          "score": 0.5905065994992378,
+          "level": 3,
+          "kappa": 1.0,
+          "lower": 0.5905065994992378,
+          "upper": 0.5905065994992378,
+          "contributions": [
+            0.03333333333333333,
+            0.0675,
+            0.08823529411764706,
+            0.06557377049180328,
+            0.0625,
+            0.05454545454545454,
+            0.06862745098039216,
+            0.03333333333333333,
+            0.06097560975609756,
+            0.05588235294117647
+          ],
+          "normalized": [
+            0.3333333333333333,
+            0.675,
+            0.8823529411764706,
+            0.6557377049180327,
+            0.625,
+            0.5454545454545454,
+            0.6862745098039216,
+            0.3333333333333333,
+            0.6097560975609756,
+            0.5588235294117647
+          ],
+          "inconsistent": [
+            7,
+            9
+          ],
+          "level_abbr": "A"
+        },
+        "CN.S2.A1": {
+          "ident": "CN.S2.A1",
+          "goal": "WITH",
+          "status": "enclosure",
+          "score": 0.6172775696822855,
+          "level": 3,
+          "kappa": 0.9,
+          "lower": 0.555549812714057,
+          "upper": 0.655549812714057,
+          "contributions": [
+            0.03333333333333333,
+            0.08571428571428572,
+            0.08695652173913043,
+            0.0784313725490196,
+            0.045454545454545456,
+            0.05454545454545454,
+            0.0926829268292683,
+            0.06666666666666667,
+            null,
+            0.011764705882352943
+          ],
+          "normalized": [
+            0.3333333333333333,
+            0.8571428571428571,
+            0.8695652173913043,
+            0.7843137254901961,
+            0.45454545454545453,
+            0.5454545454545454,
+            0.926829268292683,
+            0.6666666666666666,
+            null,
+            0.11764705882352942
+          ],
+          "inconsistent": [
+            6,
+            9
+          ],
+          "level_abbr": "A"
+        },
+        "RE.S1.A2": {
+          "ident": "RE.S1.A2",
+          "goal": "REC",
+          "status": "ok",
+          "score": 0.7639291465378422,
+          "level": 4,
+          "kappa": 1.0,
+          "lower": 0.7639291465378422,
+          "upper": 0.7639291465378422,
+          "contributions": [
+            0.14492753623188404,
+            0.14492753623188404,
+            0.13333333333333333,
+            0.09999999999999999,
+            0.16666666666666666,
+            0.07407407407407407
+          ],
+          "normalized": [
+            0.8695652173913043,
+            0.8695652173913043,
+            0.8,
+            0.6,
+            1.0,
+            0.4444444444444444
+          ],
+          "inconsistent": [
+            2,
+            3
+          ],
+          "level_abbr": "AA"
+        },
+        "TR.S1.A1": {
+          "ident": "TR.S1.A1",
+          "goal": "AD",
+          "status": "ok",
+          "score": 0.6967213114754098,
+          "level": 3,
+          "kappa": 1.0,
+          "lower": 0.6967213114754098,
+          "upper": 0.6967213114754098,
+          "contributions": [
+            0.4098360655737705,
+            0.28688524590163933
+          ],
+          "normalized": [
+            0.819672131147541,
+            0.5737704918032787
+          ],
+          "inconsistent": [],
+          "level_abbr": "A"
+        },
+        "TR.S2.A2": {
+          "ident": "TR.S2.A2",
+          "goal": "AD",
+          "status": "ok",
+          "score": 0.8035714285714286,
+          "level": 4,
+          "kappa": 1.0,
+          "lower": 0.8035714285714286,
+          "upper": 0.8035714285714286,
+          "contributions": [
+            0.4017857142857143,
+            0.4017857142857143
+          ],
+          "normalized": [
+            0.8035714285714286,
+            0.8035714285714286
+          ],
+          "inconsistent": [],
+          "level_abbr": "AA"
+        }
+      },
+      "profile": {
+        "ANT": {
+          "mean": 0.7735868169727029,
+          "min": 0.643676901919262,
+          "level_mean": "AA",
+          "level_min": "A"
+        },
+        "WITH": {
+          "mean": 0.6038920845907616,
+          "min": 0.5905065994992378,
+          "level_mean": "A",
+          "level_min": "A"
+        },
+        "REC": {
+          "mean": 0.7639291465378422,
+          "min": 0.7639291465378422,
+          "level_mean": "AA",
+          "level_min": "AA"
+        },
+        "AD": {
+          "mean": 0.7501463700234192,
+          "min": 0.6967213114754098,
+          "level_mean": "AA",
+          "level_min": "A"
+        }
+      },
+      "N_theta": 39
+    },
+    "anchored": {
+      "actions": {
+        "UN.S1.A1": {
+          "ident": "UN.S1.A1",
+          "goal": "ANT",
+          "status": "ok",
+          "score": 0.8558333333333333,
+          "level": 4,
+          "kappa": 1.0,
+          "lower": 0.8558333333333333,
+          "upper": 0.8558333333333333,
+          "contributions": [
+            0.25,
+            0.15,
+            0.1875,
+            0.15333333333333332,
+            0.034999999999999996,
+            0.08000000000000002
+          ],
+          "normalized": [
+            1.0,
+            1.0,
+            0.75,
+            0.7666666666666666,
+            0.7,
+            0.8
+          ],
+          "inconsistent": [],
+          "level_abbr": "AA"
+        },
+        "UN.S2.A1": {
+          "ident": "UN.S2.A1",
+          "goal": "ANT",
+          "status": "ok",
+          "score": 0.6701585411935056,
+          "level": 3,
+          "kappa": 1.0,
+          "lower": 0.6701585411935056,
+          "upper": 0.6701585411935056,
+          "contributions": [
+            0.08571409674906118,
+            0.3333333333333333,
+            0.25111111111111106
+          ],
+          "normalized": [
+            0.25714229024718355,
+            1.0,
+            0.7533333333333333
+          ],
+          "inconsistent": [],
+          "level_abbr": "A"
+        },
+        "CN.S1.A1": {
+          "ident": "CN.S1.A1",
+          "goal": "WITH",
+          "status": "ok",
+          "score": 0.5884579831932772,
+          "level": 3,
+          "kappa": 1.0,
+          "lower": 0.5884579831932772,
+          "upper": 0.5884579831932772,
+          "contributions": [
+            0.03495798319327731,
+            0.061,
+            0.07800000000000001,
+            0.06849999999999999,
+            0.05500000000000001,
+            0.05,
+            0.06799999999999999,
+            0.04000000000000001,
+            0.057999999999999996,
+            0.07500000000000001
+          ],
+          "normalized": [
+            0.3495798319327731,
+            0.61,
+            0.78,
+            0.6849999999999999,
+            0.55,
+            0.5,
+            0.6799999999999999,
+            0.4,
+            0.58,
+            0.75
+          ],
+          "inconsistent": [],
+          "level_abbr": "A"
+        },
+        "CN.S2.A1": {
+          "ident": "CN.S2.A1",
+          "goal": "WITH",
+          "status": "enclosure",
+          "score": 0.5989347961406785,
+          "level": 3,
+          "kappa": 0.9,
+          "lower": 0.5390413165266106,
+          "upper": 0.6390413165266106,
+          "contributions": [
+            0.03495798319327731,
+            0.07800000000000001,
+            0.07800000000000001,
+            0.07533333333333334,
+            0.04000000000000001,
+            0.05,
+            0.084,
+            0.05875,
+            null,
+            0.04000000000000001
+          ],
+          "normalized": [
+            0.3495798319327731,
+            0.78,
+            0.78,
+            0.7533333333333333,
+            0.4,
+            0.5,
+            0.84,
+            0.5874999999999999,
+            null,
+            0.4
+          ],
+          "inconsistent": [],
+          "level_abbr": "A"
+        },
+        "RE.S1.A2": {
+          "ident": "RE.S1.A2",
+          "goal": "REC",
+          "status": "ok",
+          "score": 0.7191666666666666,
+          "level": 4,
+          "kappa": 1.0,
+          "lower": 0.7191666666666666,
+          "upper": 0.7191666666666666,
+          "contributions": [
+            0.13,
+            0.13,
+            0.10916666666666666,
+            0.11666666666666665,
+            0.16666666666666666,
+            0.06666666666666667
+          ],
+          "normalized": [
+            0.78,
+            0.78,
+            0.655,
+            0.7,
+            1.0,
+            0.4
+          ],
+          "inconsistent": [],
+          "level_abbr": "AA"
+        },
+        "TR.S1.A1": {
+          "ident": "TR.S1.A1",
+          "goal": "AD",
+          "status": "ok",
+          "score": 0.6816666666666666,
+          "level": 3,
+          "kappa": 1.0,
+          "lower": 0.6816666666666666,
+          "upper": 0.6816666666666666,
+          "contributions": [
+            0.37666666666666665,
+            0.305
+          ],
+          "normalized": [
+            0.7533333333333333,
+            0.61
+          ],
+          "inconsistent": [],
+          "level_abbr": "A"
+        },
+        "TR.S2.A2": {
+          "ident": "TR.S2.A2",
+          "goal": "AD",
+          "status": "ok",
+          "score": 0.7533333333333333,
+          "level": 4,
+          "kappa": 1.0,
+          "lower": 0.7533333333333333,
+          "upper": 0.7533333333333333,
+          "contributions": [
+            0.37666666666666665,
+            0.37666666666666665
+          ],
+          "normalized": [
+            0.7533333333333333,
+            0.7533333333333333
+          ],
+          "inconsistent": [],
+          "level_abbr": "AA"
+        }
+      },
+      "profile": {
+        "ANT": {
+          "mean": 0.7629959372634194,
+          "min": 0.6701585411935056,
+          "level_mean": "AA",
+          "level_min": "A"
+        },
+        "WITH": {
+          "mean": 0.5936963896669778,
+          "min": 0.5884579831932772,
+          "level_mean": "A",
+          "level_min": "A"
+        },
+        "REC": {
+          "mean": 0.7191666666666666,
+          "min": 0.7191666666666666,
+          "level_mean": "AA",
+          "level_min": "AA"
+        },
+        "AD": {
+          "mean": 0.7175,
+          "min": 0.6816666666666666,
+          "level_mean": "AA",
+          "level_min": "A"
+        }
+      },
+      "N_theta": 39
+    }
+  },
+  "checks": [
+    {
+      "quantity": "|P_DDoS|",
+      "computed": 9.0,
+      "published": 9.0,
+      "tolerance": 0,
+      "ok": true,
+      "where": "Sec. 3.5"
+    },
+    {
+      "quantity": "|P_phish|",
+      "computed": 7.0,
+      "published": 7.0,
+      "tolerance": 0,
+      "ok": true,
+      "where": "Sec. 3.5"
+    },
+    {
+      "quantity": "|meet|",
+      "computed": 4.0,
+      "published": 4.0,
+      "tolerance": 0,
+      "ok": true,
+      "where": "Sec. 3.5"
+    },
+    {
+      "quantity": "|join|",
+      "computed": 12.0,
+      "published": 12.0,
+      "tolerance": 0,
+      "ok": true,
+      "where": "Sec. 3.5"
+    },
+    {
+      "quantity": "Jaccard index (actions)",
+      "computed": 0.3333333333333333,
+      "published": 0.3333333333333333,
+      "tolerance": 1e-12,
+      "ok": true,
+      "where": "Sec. 3.5"
+    },
+    {
+      "quantity": "|E(P_DDoS)|",
+      "computed": 26.0,
+      "published": 26.0,
+      "tolerance": 0,
+      "ok": true,
+      "where": "Sec. 3.5"
+    },
+    {
+      "quantity": "|E(P_phish)|",
+      "computed": 23.0,
+      "published": 23.0,
+      "tolerance": 0,
+      "ok": true,
+      "where": "Sec. 3.5"
+    },
+    {
+      "quantity": "|E meet|",
+      "computed": 13.0,
+      "published": 13.0,
+      "tolerance": 0,
+      "ok": true,
+      "where": "Sec. 3.5"
+    },
+    {
+      "quantity": "|E join|",
+      "computed": 36.0,
+      "published": 36.0,
+      "tolerance": 0,
+      "ok": true,
+      "where": "Sec. 3.5"
+    },
+    {
+      "quantity": "Jaccard index (down-sets)",
+      "computed": 0.3611111111111111,
+      "published": 0.361,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Sec. 3.5"
+    },
+    {
+      "quantity": "Cor.1 interval length (M3)",
+      "computed": 16.999999999999996,
+      "published": 17.0,
+      "tolerance": 1e-09,
+      "ok": true,
+      "where": "Sec. 5.2"
+    },
+    {
+      "quantity": "Cor.1 upper end (M3, min)",
+      "computed": 27.0,
+      "published": 27.0,
+      "tolerance": 1e-09,
+      "ok": true,
+      "where": "Sec. 5.2"
+    },
+    {
+      "quantity": "n_ch(4 sharing events)",
+      "computed": 0.4444444444444444,
+      "published": 0.444,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Sec. 5.2"
+    },
+    {
+      "quantity": "observed metrics",
+      "computed": 38.0,
+      "published": 38.0,
+      "tolerance": 0,
+      "ok": true,
+      "where": "Sec. 5.3 / Fig. 6"
+    },
+    {
+      "quantity": "inconsistent linear scores",
+      "computed": 9.0,
+      "published": 9.0,
+      "tolerance": 0,
+      "ok": true,
+      "where": "Abstract / Fig. 6"
+    },
+    {
+      "quantity": "inconsistent anchored scores",
+      "computed": 0.0,
+      "published": 0.0,
+      "tolerance": 0,
+      "ok": true,
+      "where": "Theorem 2(a)"
+    },
+    {
+      "quantity": "inconsistent linear in UN.S1.A1",
+      "computed": 2.0,
+      "published": 2.0,
+      "tolerance": 0,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "inconsistent linear in UN.S2.A1",
+      "computed": 1.0,
+      "published": 1.0,
+      "tolerance": 0,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "inconsistent linear in CN.S1.A1",
+      "computed": 2.0,
+      "published": 2.0,
+      "tolerance": 0,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "inconsistent linear in CN.S2.A1",
+      "computed": 2.0,
+      "published": 2.0,
+      "tolerance": 0,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "inconsistent linear in RE.S1.A2",
+      "computed": 2.0,
+      "published": 2.0,
+      "tolerance": 0,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "inconsistent linear in TR.S1.A1",
+      "computed": 0.0,
+      "published": 0.0,
+      "tolerance": 0,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "inconsistent linear in TR.S2.A2",
+      "computed": 0.0,
+      "published": 0.0,
+      "tolerance": 0,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "grid-check violations (anchored)",
+      "computed": 0.0,
+      "published": 0.0,
+      "tolerance": 0,
+      "ok": true,
+      "where": "Sec. 7.1"
+    },
+    {
+      "quantity": "UN.S1.A1 gated linear",
+      "computed": 0.9034967320261438,
+      "published": 0.9035,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Table 5"
+    },
+    {
+      "quantity": "UN.S1.A1 gated anchored",
+      "computed": 0.8558333333333333,
+      "published": 0.8558,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Table 5"
+    },
+    {
+      "quantity": "UN.S1.A1 equal weights linear",
+      "computed": 0.8371459694989106,
+      "published": 0.8371,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Table 5"
+    },
+    {
+      "quantity": "UN.S1.A1 equal weights anchored",
+      "computed": 0.836111111111111,
+      "published": 0.8361,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Table 5"
+    },
+    {
+      "quantity": "UN.S1.A1 additive, M1 = 0, linear",
+      "computed": 0.6534967320261438,
+      "published": 0.6535,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Table 5"
+    },
+    {
+      "quantity": "UN.S1.A1 additive, M1 = 0, anchored",
+      "computed": 0.6058333333333333,
+      "published": 0.6058,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Table 5"
+    },
+    {
+      "quantity": "non-compensatory operators, M1 = 0",
+      "computed": 0.0,
+      "published": 0.0,
+      "tolerance": 0,
+      "ok": true,
+      "where": "Sec. 7.3"
+    },
+    {
+      "quantity": "difference linear - anchored",
+      "computed": 0.047663398692810444,
+      "published": 0.0477,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Sec. 7.2"
+    },
+    {
+      "quantity": "loss of contribution M3",
+      "computed": 0.04044117647058823,
+      "published": 0.0404,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Sec. 7.2"
+    },
+    {
+      "quantity": "loss of contribution M4",
+      "computed": 0.020000000000000018,
+      "published": 0.02,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Sec. 7.2"
+    },
+    {
+      "quantity": "gain of contribution M5",
+      "computed": 0.012777777777777777,
+      "published": 0.0128,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Sec. 7.2"
+    },
+    {
+      "quantity": "C = sum_{q>=2} w_q m_q",
+      "computed": 0.6534967320261438,
+      "published": 0.6535,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Fig. 7"
+    },
+    {
+      "quantity": "C_1(S_w)",
+      "computed": 0.75,
+      "published": 0.75,
+      "tolerance": 1e-12,
+      "ok": true,
+      "where": "Sec. 6.1"
+    },
+    {
+      "quantity": "one source, gate, linear",
+      "computed": 0.7159967320261438,
+      "published": 0.716,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Sec. 7.3 / Table 4"
+    },
+    {
+      "quantity": "one source, gate, anchored",
+      "computed": 0.6558333333333334,
+      "published": 0.656,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Sec. 7.3"
+    },
+    {
+      "quantity": "one source, power γ=1, linear",
+      "computed": 0.17899918300653594,
+      "published": 0.179,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Sec. 6.2 / Table 4"
+    },
+    {
+      "quantity": "one source, power γ=1, anchored",
+      "computed": 0.13116666666666668,
+      "published": 0.131,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Sec. 7.3"
+    },
+    {
+      "quantity": "one source, capped ϑ=0.5, linear",
+      "computed": 0.5,
+      "published": 0.5,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Table 4"
+    },
+    {
+      "quantity": "one source, capped ϑ=0.5, anchored",
+      "computed": 0.4,
+      "published": 0.4,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Sec. 7.3"
+    },
+    {
+      "quantity": "four sources, capped ϑ=0.5, linear",
+      "computed": 0.9034967320261438,
+      "published": 0.9035,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Sec. 8.1"
+    },
+    {
+      "quantity": "grid min, linear",
+      "computed": 0.5022222222222222,
+      "published": 0.502,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Sec. 7.4"
+    },
+    {
+      "quantity": "grid max, linear",
+      "computed": 0.9522222222222223,
+      "published": 0.952,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Sec. 7.4"
+    },
+    {
+      "quantity": "grid min, anchored",
+      "computed": 0.515,
+      "published": 0.515,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Sec. 7.4"
+    },
+    {
+      "quantity": "grid max, anchored",
+      "computed": 0.9650000000000001,
+      "published": 0.965,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Sec. 7.4"
+    },
+    {
+      "quantity": "max |anchored - linear|",
+      "computed": 0.1004183006535948,
+      "published": 0.1,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Sec. 7.4"
+    },
+    {
+      "quantity": "margin above 0.9 (linear)",
+      "computed": 0.0034967320261437562,
+      "published": 0.0035,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Sec. 7.4"
+    },
+    {
+      "quantity": "τ4 threshold, linear",
+      "computed": 48.933823529411725,
+      "published": 48.9,
+      "tolerance": 0.05,
+      "ok": true,
+      "where": "Sec. 7.4"
+    },
+    {
+      "quantity": "τ3 threshold, linear",
+      "computed": 27.377777777777755,
+      "published": 27.4,
+      "tolerance": 0.05,
+      "ok": true,
+      "where": "Sec. 7.4"
+    },
+    {
+      "quantity": "τ3 threshold, anchored (τ4 = 45)",
+      "computed": 7.333333333333335,
+      "published": 7.3,
+      "tolerance": 0.05,
+      "ok": true,
+      "where": "Sec. 7.4"
+    },
+    {
+      "quantity": "τ4 threshold, anchored (τ3 = 10)",
+      "computed": 37.500000000000014,
+      "published": 37.5,
+      "tolerance": 0.05,
+      "ok": true,
+      "where": "Sec. 7.4"
+    },
+    {
+      "quantity": "exact mean, linear",
+      "computed": 0.8371459694989106,
+      "published": 0.8371,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Sec. 7.5"
+    },
+    {
+      "quantity": "exact sd, linear (α=1)",
+      "computed": 0.07156026576246084,
+      "published": 0.0716,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Sec. 7.5"
+    },
+    {
+      "quantity": "exact mean, anchored",
+      "computed": 0.8361111111111111,
+      "published": 0.8361,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Sec. 7.5"
+    },
+    {
+      "quantity": "exact sd, anchored (α=1)",
+      "computed": 0.045194562735818504,
+      "published": 0.0452,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Sec. 7.5"
+    },
+    {
+      "quantity": "MC vs exact mean (linear_alpha1)",
+      "computed": 0.8370285679903434,
+      "published": 0.8371459694989106,
+      "tolerance": 0.0002,
+      "ok": true,
+      "where": "Sec. 7.5"
+    },
+    {
+      "quantity": "MC vs exact sd (linear_alpha1)",
+      "computed": 0.07150908731271205,
+      "published": 0.07156026576246084,
+      "tolerance": 0.0002,
+      "ok": true,
+      "where": "Sec. 7.5"
+    },
+    {
+      "quantity": "MC vs exact mean (anchored_alpha1)",
+      "computed": 0.8360126452390352,
+      "published": 0.8361111111111111,
+      "tolerance": 0.0002,
+      "ok": true,
+      "where": "Sec. 7.5"
+    },
+    {
+      "quantity": "MC vs exact sd (anchored_alpha1)",
+      "computed": 0.04516799969858681,
+      "published": 0.045194562735818504,
+      "tolerance": 0.0002,
+      "ok": true,
+      "where": "Sec. 7.5"
+    },
+    {
+      "quantity": "P(high), linear, α=1",
+      "computed": 0.18486,
+      "published": 0.185,
+      "tolerance": 0.003,
+      "ok": true,
+      "where": "Sec. 7.5"
+    },
+    {
+      "quantity": "P(high), anchored, α=1",
+      "computed": 0.0949,
+      "published": 0.095,
+      "tolerance": 0.003,
+      "ok": true,
+      "where": "Sec. 7.5"
+    },
+    {
+      "quantity": "P(high), linear, α=4",
+      "computed": 0.02888,
+      "published": 0.029,
+      "tolerance": 0.003,
+      "ok": true,
+      "where": "Sec. 7.5"
+    },
+    {
+      "quantity": "P(high), anchored, α=4",
+      "computed": 0.005235,
+      "published": 0.005,
+      "tolerance": 0.003,
+      "ok": true,
+      "where": "Sec. 7.5"
+    },
+    {
+      "quantity": "P(<0.7), linear, α=1",
+      "computed": 0.050225,
+      "published": 0.05,
+      "tolerance": 0.003,
+      "ok": true,
+      "where": "Sec. 7.5"
+    },
+    {
+      "quantity": "P(<0.7), anchored, α=1",
+      "computed": 0.0,
+      "published": 0.0,
+      "tolerance": 0,
+      "ok": true,
+      "where": "Prop. 3"
+    },
+    {
+      "quantity": "UN.S1.A1 linear",
+      "computed": 0.9034967320261438,
+      "published": 0.9035,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "UN.S1.A1 anchored",
+      "computed": 0.8558333333333333,
+      "published": 0.8558,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "UN.S2.A1 linear",
+      "computed": 0.643676901919262,
+      "published": 0.6437,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "UN.S2.A1 anchored",
+      "computed": 0.6701585411935056,
+      "published": 0.6702,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "CN.S1.A1 linear",
+      "computed": 0.5905065994992378,
+      "published": 0.5905,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "CN.S1.A1 anchored",
+      "computed": 0.5884579831932772,
+      "published": 0.5885,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "CN.S2.A1 linear",
+      "computed": 0.6172775696822855,
+      "published": 0.6173,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "CN.S2.A1 anchored",
+      "computed": 0.5989347961406785,
+      "published": 0.5989,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "RE.S1.A2 linear",
+      "computed": 0.7639291465378422,
+      "published": 0.7639,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "RE.S1.A2 anchored",
+      "computed": 0.7191666666666666,
+      "published": 0.7192,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "TR.S1.A1 linear",
+      "computed": 0.6967213114754098,
+      "published": 0.6967,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "TR.S1.A1 anchored",
+      "computed": 0.6816666666666666,
+      "published": 0.6817,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "TR.S2.A2 linear",
+      "computed": 0.8035714285714286,
+      "published": 0.8036,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "TR.S2.A2 anchored",
+      "computed": 0.7533333333333333,
+      "published": 0.7533,
+      "tolerance": 5e-05,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "CN.S2.A1 κ",
+      "computed": 0.9,
+      "published": 0.9,
+      "tolerance": 1e-12,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "CN.S2.A1 enclosure low, linear",
+      "computed": 0.555549812714057,
+      "published": 0.556,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "CN.S2.A1 enclosure high, linear",
+      "computed": 0.655549812714057,
+      "published": 0.656,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "CN.S2.A1 enclosure low, anchored",
+      "computed": 0.5390413165266106,
+      "published": 0.539,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "CN.S2.A1 enclosure high, anchored",
+      "computed": 0.6390413165266106,
+      "published": 0.639,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "goal ANT mean, linear",
+      "computed": 0.7735868169727029,
+      "published": 0.774,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "goal ANT min, linear",
+      "computed": 0.643676901919262,
+      "published": 0.644,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "goal WITH mean, linear",
+      "computed": 0.6038920845907616,
+      "published": 0.604,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "goal WITH min, linear",
+      "computed": 0.5905065994992378,
+      "published": 0.591,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "goal REC mean, linear",
+      "computed": 0.7639291465378422,
+      "published": 0.764,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "goal REC min, linear",
+      "computed": 0.7639291465378422,
+      "published": 0.764,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "goal AD mean, linear",
+      "computed": 0.7501463700234192,
+      "published": 0.75,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "goal AD min, linear",
+      "computed": 0.6967213114754098,
+      "published": 0.697,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "goal ANT mean, anchored",
+      "computed": 0.7629959372634194,
+      "published": 0.763,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "goal ANT min, anchored",
+      "computed": 0.6701585411935056,
+      "published": 0.67,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "goal WITH mean, anchored",
+      "computed": 0.5936963896669778,
+      "published": 0.594,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "goal WITH min, anchored",
+      "computed": 0.5884579831932772,
+      "published": 0.588,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "goal REC mean, anchored",
+      "computed": 0.7191666666666666,
+      "published": 0.719,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "goal REC min, anchored",
+      "computed": 0.7191666666666666,
+      "published": 0.719,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "goal AD mean, anchored",
+      "computed": 0.7175,
+      "published": 0.718,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "goal AD min, anchored",
+      "computed": 0.6816666666666666,
+      "published": 0.682,
+      "tolerance": 0.0005,
+      "ok": true,
+      "where": "Table 6"
+    },
+    {
+      "quantity": "linear profile dominates anchored",
+      "computed": 1.0,
+      "published": 1.0,
+      "tolerance": 0,
+      "ok": true,
+      "where": "Sec. 7.6"
+    },
+    {
+      "quantity": "actions where cap ϑ=0.5 binds (linear)",
+      "computed": 0.0,
+      "published": 0.0,
+      "tolerance": 0,
+      "ok": true,
+      "where": "Sec. 7.6"
+    },
+    {
+      "quantity": "actions where cap ϑ=0.5 binds (anchored)",
+      "computed": 0.0,
+      "published": 0.0,
+      "tolerance": 0,
+      "ok": true,
+      "where": "Sec. 7.6"
+    },
+    {
+      "quantity": "N_theta (metrics in scenario)",
+      "computed": 39.0,
+      "published": 39.0,
+      "tolerance": 0,
+      "ok": true,
+      "where": "Sec. 7.1"
+    }
+  ]
+}

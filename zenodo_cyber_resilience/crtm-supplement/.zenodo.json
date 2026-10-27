@@ -1,0 +1,48 @@
+{
+  "title": "CRTM — Cyber-Resilience Tuple Model: digital supplement to “A Set-Theoretic Tuple Model with Level-Consistent Normalization and Non-Compensatory Aggregation for Assessing the Cyber Resilience of Critical Infrastructure”",
+  "upload_type": "software",
+  "version": "1.0.0",
+  "publication_date": "2026-10-27",
+  "language": "eng",
+  "description": "<p>Reference implementation (Python package <code>crtm</code>), data and an interactive Google Colab notebook accompanying the article published in <i>Information</i> (MDPI). The package implements the set-theoretic data and metric model of a CREF-type assessment hierarchy (injective identifiers, admissible threat-scenario projections and their distributive lattice), level-consistent anchored piecewise-linear normalization, non-compensatory aggregation (hard gate, power discounting, capped knockout operator), interval enclosures for missing metrics and Dirichlet weight uncertainty.</p><p><code>scripts/reproduce.py</code> reproduces every number, table and figure of the illustrative phishing scenario (ATT&amp;CK T1566) at a bank processing center and checks 107 published values; a pytest suite tests the theorems and propositions. A full program-code listing is provided in <code>docs/LISTING.pdf</code>.</p><p>The metric values are illustrative example values from the source study, not field measurements.</p>",
+  "creators": [
+    {
+      "name": "[Author One]",
+      "affiliation": "Department of Cybersecurity and Information Technologies, University of Customs and Finance, Dnipro, Ukraine",
+      "orcid": "0000-0000-0000-0000"
+    },
+    {
+      "name": "[Author Two]",
+      "affiliation": "Department of Cybersecurity and Information Technologies, University of Customs and Finance, Dnipro, Ukraine"
+    },
+    {
+      "name": "[Author Three]",
+      "affiliation": "Department of Cybersecurity and Information Technologies, University of Customs and Finance, Dnipro, Ukraine"
+    }
+  ],
+  "keywords": [
+    "cyber resilience",
+    "critical infrastructure",
+    "cybersecurity assessment",
+    "set-theoretic model",
+    "non-compensatory aggregation",
+    "knockout criterion",
+    "linguistic scale",
+    "piecewise-linear normalization",
+    "resilience metrics",
+    "decision support",
+    "CREF",
+    "MITRE ATT&CK"
+  ],
+  "license": "MIT",
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "identifier": "10.3390/info-XXXXXXX",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    }
+  ],
+  "notes": "Replace the author placeholders, ORCID and the article DOI (10.3390/info-XXXXXXX) before publishing the record. Code under MIT, data and figures under CC BY 4.0."
+}

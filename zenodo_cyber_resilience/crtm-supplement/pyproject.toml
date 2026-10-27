@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crtm"
+version = "1.0.0"
+description = "Cyber-Resilience Tuple Model: level-consistent normalization and non-compensatory aggregation for cyber-resilience assessment"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [{name = "[Author One]"}, {name = "[Author Two]"}, {name = "[Author Three]"}]
+keywords = ["cyber resilience", "critical infrastructure", "CREF", "non-compensatory aggregation",
+            "knockout criterion", "linguistic scale", "normalization", "decision support"]
+dependencies = ["numpy>=1.26", "scipy>=1.11", "matplotlib>=3.8"]
+classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License",
+               "Topic :: Security", "Topic :: Scientific/Engineering :: Mathematics"]
+
+[project.optional-dependencies]
+notebook = ["pandas>=2.0", "ipywidgets>=8.0"]
+dev = ["pytest>=7.4", "nbformat>=5.9", "reportlab>=4.0"]
+
+[tool.setuptools]
+packages = ["crtm"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

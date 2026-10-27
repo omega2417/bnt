@@ -1,0 +1,147 @@
+{
+  "_comment": "Catalog technique sets and scenario projections as shown in Figure 4 of the article (disambiguated technique codes). The full 140-action CREF tabulation (Table S1, stdm_catalog.csv) is curated by the authors and is not reproduced here.",
+  "catalog": {
+    "CN.S1.A1": [
+      "AM",
+      "CA",
+      "SI"
+    ],
+    "CN.S2.A1": [
+      "AM",
+      "CA",
+      "SI"
+    ],
+    "CN.S2.A2": [
+      "AR",
+      "CA"
+    ],
+    "CN.S3.A1": [
+      "SI"
+    ],
+    "RE.S1.A1": [
+      "AM",
+      "CA"
+    ],
+    "RE.S1.A2": [
+      "AM",
+      "SI"
+    ],
+    "RE.S2.A1": [
+      "CP",
+      "RD"
+    ],
+    "UN.S1.A1": [
+      "AM",
+      "CA"
+    ],
+    "UN.S2.A1": [
+      "CP",
+      "CA"
+    ],
+    "UN.S3.A1": [
+      "AM"
+    ],
+    "TR.S1.A1": [
+      "RD",
+      "CP"
+    ],
+    "TR.S2.A2": [
+      "RL",
+      "CP"
+    ]
+  },
+  "descriptions": {
+    "UN.S1.A1": "Use shared threat information",
+    "CN.S2.A1": "Damage assessment after compromise",
+    "CN.S2.A2": "Adaptive reallocation",
+    "RE.S1.A2": "Identify corrupted information",
+    "RE.S2.A1": "Restoration",
+    "TR.S1.A1": "Activity whose description refers to Redundancy (RD)",
+    "TR.S2.A2": "Activity whose description refers to Realignment (RL)"
+  },
+  "goal_of_task": {
+    "UN": "ANT",
+    "CN": "WITH",
+    "RE": "REC",
+    "TR": "AD"
+  },
+  "scenarios": {
+    "DDoS": {
+      "title": "DDoS attack on a banking API (ATT&CK T1498)",
+      "attack_id": "T1498",
+      "actions": {
+        "CN.S1.A1": [
+          "AM",
+          "CA",
+          "SI"
+        ],
+        "CN.S2.A2": [
+          "AR",
+          "CA"
+        ],
+        "CN.S3.A1": [
+          "SI"
+        ],
+        "RE.S1.A1": [
+          "AM",
+          "CA"
+        ],
+        "RE.S2.A1": [
+          "CP",
+          "RD"
+        ],
+        "UN.S1.A1": [
+          "AM",
+          "CA"
+        ],
+        "UN.S3.A1": [
+          "AM"
+        ],
+        "TR.S1.A1": [
+          "RD",
+          "CP"
+        ],
+        "TR.S2.A2": [
+          "RL",
+          "CP"
+        ]
+      }
+    },
+    "phishing": {
+      "title": "Phishing attack on a bank processing center BNK_PAY (ATT&CK T1566)",
+      "attack_id": "T1566",
+      "actions": {
+        "CN.S1.A1": [
+          "AM",
+          "CA",
+          "SI"
+        ],
+        "CN.S2.A1": [
+          "AM",
+          "CA",
+          "SI"
+        ],
+        "RE.S1.A2": [
+          "AM",
+          "SI"
+        ],
+        "UN.S1.A1": [
+          "AM",
+          "CA"
+        ],
+        "UN.S2.A1": [
+          "CP",
+          "CA"
+        ],
+        "TR.S1.A1": [
+          "RD",
+          "CP"
+        ],
+        "TR.S2.A2": [
+          "RL",
+          "CP"
+        ]
+      }
+    }
+  }
+}
