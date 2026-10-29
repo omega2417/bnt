@@ -20,14 +20,16 @@ import zipfile
 from pathlib import Path
 
 ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-ap.add_argument("--sim", required=True, help="DOI of rbaa-sim v1.1.0, e.g. 10.5281/zenodo.1234567")
-ap.add_argument("--val", required=True, help="DOI of rbaa-validation v1.1.0")
-ap.add_argument("--ben", required=True, help="DOI of rbaa-benchmark v1.0.0")
+ap.add_argument("--sim", help="DOI of rbaa-sim v1.1.0, e.g. 10.5281/zenodo.1234567")
+ap.add_argument("--val", help="DOI of rbaa-validation v1.1.0")
+ap.add_argument("--ben", help="DOI of rbaa-benchmark v1.0.0")
 ap.add_argument("--dir", default=".", help="folder with the manuscript and archives (default: current folder)")
 a = ap.parse_args()
 
 MAP = {}
 for tok, doi in (("SIM_DOI", a.sim), ("VAL_DOI", a.val), ("BEN_DOI", a.ben)):
+    if not doi:
+        continue                      # DOIs can be inserted one at a time
     doi = doi.strip().removeprefix("https://doi.org/")
     if not re.fullmatch(r"10\.5281/zenodo\.\d+", doi):
         sys.exit(f"not a Zenodo DOI: {doi!r}")
