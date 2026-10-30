@@ -2,9 +2,13 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it using the metadata below."
 type: software
 title: "Meshtastic Logistics Metadata Collector: open-source software for measuring the operational autonomy of SME logistics over LoRa mesh networks"
-version: 1.0.0
+version: 1.0.1
 date-released: 2026-10-30
 license: MIT
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23796017
+    description: "Zenodo DOI of version 1.0.0"
 # TODO before upload: replace the placeholder authors (and add ORCID iDs)
 authors:
   - family-names: "Lastname"

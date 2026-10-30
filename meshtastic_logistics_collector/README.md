@@ -1,5 +1,7 @@
 # Meshtastic Logistics Metadata Collector
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23796017.svg)](https://doi.org/10.5281/zenodo.23796017)
+
 Software accompanying the manuscript *Strengthening Economic Autonomy in Small and Medium-Sized Enterprise
 Logistics with Meshtastic Mesh Networks: Visual Analytics and Investment Appraisal*.
 
@@ -73,7 +75,7 @@ are personal data: keep `asset_ref` pseudonymised and limit retention (see `docs
 
 ## Citation
 
-See `CITATION.cff`. After the Zenodo deposit, cite the version DOI shown on the record.
+See `CITATION.cff`. Version 1.0.0 is archived on Zenodo: https://doi.org/10.5281/zenodo.23796017. Later versions get their own DOI on the same Zenodo record.
 
 ## License
 
