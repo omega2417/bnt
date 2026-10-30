@@ -3,20 +3,53 @@
   "title": "Meshtastic Logistics Metadata Collector: radio, device and logistics-event metadata and KPIs for SME logistics",
   "version": "1.0.0",
   "publication_date": "2026-10-30",
-  "description": "<p>Python software layer for a private Meshtastic LoRa mesh network used as a backup channel for critical logistics operations of small and medium-sized enterprises (SMEs). It accompanies the manuscript <em>Strengthening Economic Autonomy in Small and Medium-Sized Enterprise Logistics with Meshtastic Mesh Networks: Visual Analytics and Investment Appraisal</em> and turns the model assumptions of that study into quantities that can be measured in a field pilot.</p><ul><li><code>collector.py</code> – gateway collector (USB/TCP or offline replay) that stores packet (L1), device (L2) and logistics-event (L3) metadata in a local SQLite database, works without Internet and keeps a store-and-forward outbox for ERP/TMS synchronisation;</li><li><code>logi_proto.py</code> – 24-byte binary frame with CRC-16/CCITT for EVENT/ACCEPT/DONE/REJECT messages on PRIVATE_APP (port 256);</li><li><code>schema.sql</code> – metadata store schema (L1–L4);</li><li><code>kpi.py</code> – article indicators: channel utilization, flood overhead, position delivery ratio, age of information, actionability η, operational autonomy A<sub>op</sub>, loss reduction R<sub>loss</sub>;</li><li><code>make_replay.py</code>, <code>import_plan.py</code>, <code>run_demo.sh</code>, <code>tests/</code> – reproducible end-to-end run on synthetic data.</li></ul><p><strong>Status:</strong> prototype verified on synthetic data only (no radio hardware, no field measurements); tested with meshtastic-python 2.7.11.</p>",
+  "description": "<p>Python software layer for a private Meshtastic LoRa mesh network used as a backup channel for critical logistics operations of small and medium-sized enterprises (SMEs). It accompanies the manuscript <em>Strengthening Economic Autonomy in Small and Medium-Sized Enterprise Logistics with Meshtastic Mesh Networks: Visual Analytics and Investment Appraisal</em> and turns the model assumptions of that study into quantities that can be measured in a field pilot.</p><ul><li><code>collector.py</code> – gateway collector (USB/TCP or offline replay) that stores packet (L1), device (L2) and logistics-event (L3) metadata in a local SQLite database, works without Internet and keeps a store-and-forward outbox for ERP/TMS synchronisation;</li><li><code>logi_proto.py</code> – 24-byte binary frame with CRC-16/CCITT for EVENT/ACCEPT/DONE/REJECT messages on PRIVATE_APP (port 256);</li><li><code>schema.sql</code> – metadata store schema (L1–L4);</li><li><code>kpi.py</code> – article indicators: channel utilization, flood overhead, position delivery ratio, age of information, actionability η, operational autonomy A<sub>op</sub>, loss reduction R<sub>loss</sub>;</li><li><code>notebooks/meshtastic_logistics_analysis.ipynb</code> – Google Colab notebook with visualisations, step-by-step calculations (LoRa time-on-air, age of information with analytic and Monte Carlo check, η, A<sub>op</sub>, R<sub>loss</sub>, deadline sensitivity) and conclusions;</li><li><code>make_replay.py</code>, <code>import_plan.py</code>, <code>run_demo.sh</code>, <code>tests/</code> – reproducible end-to-end run on synthetic data.</li></ul><p><strong>Status:</strong> prototype verified on synthetic data only (no radio hardware, no field measurements); tested with meshtastic-python 2.7.11.</p>",
   "creators": [
-    {"name": "Lastname, Firstname", "affiliation": "Department of Cybersecurity and Information Technologies, University of Customs and Finance, Dnipro, Ukraine"},
-    {"name": "Lastname, Firstname", "affiliation": "Department of Cybersecurity and Information Technologies, University of Customs and Finance, Dnipro, Ukraine"},
-    {"name": "Lastname, Firstname", "affiliation": "Affiliation 2"}
+    {
+      "name": "Lastname, Firstname",
+      "affiliation": "Department of Cybersecurity and Information Technologies, University of Customs and Finance, Dnipro, Ukraine"
+    },
+    {
+      "name": "Lastname, Firstname",
+      "affiliation": "Department of Cybersecurity and Information Technologies, University of Customs and Finance, Dnipro, Ukraine"
+    },
+    {
+      "name": "Lastname, Firstname",
+      "affiliation": "Affiliation 2"
+    }
   ],
   "access_right": "open",
   "license": "mit",
   "language": "eng",
-  "keywords": ["Meshtastic", "LoRa", "mesh network", "SME logistics", "supply chain resilience", "business continuity", "operational autonomy", "age of information", "metadata collection", "SQLite"],
+  "keywords": [
+    "Meshtastic",
+    "LoRa",
+    "mesh network",
+    "SME logistics",
+    "supply chain resilience",
+    "business continuity",
+    "operational autonomy",
+    "age of information",
+    "metadata collection",
+    "SQLite",
+    "Jupyter notebook"
+  ],
   "related_identifiers": [
-    {"identifier": "10.1109/INFCOM.2012.6195689", "relation": "references", "scheme": "doi"},
-    {"identifier": "10.3390/electronics14122465", "relation": "references", "scheme": "doi"},
-    {"identifier": "https://python.meshtastic.org/", "relation": "requires", "scheme": "url"}
+    {
+      "identifier": "10.1109/INFCOM.2012.6195689",
+      "relation": "references",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.3390/electronics14122465",
+      "relation": "references",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://python.meshtastic.org/",
+      "relation": "requires",
+      "scheme": "url"
+    }
   ],
   "notes": "Synthetic test data only; results are not field measurements. Replace placeholder creators before publishing. After the article is published, add its DOI as related identifier with relation 'isSupplementTo'."
 }

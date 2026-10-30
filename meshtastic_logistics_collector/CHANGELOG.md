@@ -8,4 +8,5 @@ First archived release (Zenodo).
 - `kpi.py`: U, flood overhead, position delivery ratio, AoI, η, A_op, R_loss.
 - `make_replay.py`: synthetic replay log; event ids are now deterministic (fixed seed), so runs are bit-reproducible.
 - `import_plan.py`, `run_demo.sh`: import of planned operations and one-command reproduction.
+- `notebooks/meshtastic_logistics_analysis.ipynb`: Colab-oriented analysis notebook with visualisations, calculations and conclusions.
 - `tests/`: unit and end-to-end tests against `examples/expected_kpi_synthetic.json`.

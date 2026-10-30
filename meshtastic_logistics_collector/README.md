@@ -23,6 +23,7 @@ the model assumptions with measured values.
 | `run_demo.sh` | one-command reproduction on synthetic data |
 | `tests/` | unit and end-to-end tests (standard library `unittest`) |
 | `examples/expected_kpi_synthetic.json` | reference KPI output of the synthetic run |
+| `notebooks/meshtastic_logistics_analysis.ipynb` | Colab-ready analysis notebook: protocol, LoRa airtime, L1–L3 metadata, AoI with analytic and Monte Carlo check, event life cycle, KPIs, deadline sensitivity, link to the break-even threshold, conclusions |
 | `docs/software_proposal_uk.md` | full design document (in Ukrainian): metadata levels, architecture, protocol, data-quality and privacy rules, rollout plan |
 
 ## Requirements
@@ -50,6 +51,14 @@ python3 -m unittest discover -s tests -v
 They check that flood duplicates are separated from delivery, that events move RECEIVED → ACCEPTED → DONE,
 that completion after the deadline is not counted in *η* and *A*ₒₚ, that corrupted frames are rejected by CRC,
 and that every event reaches `sync_outbox`.
+
+## Analysis notebook (Google Colab)
+
+Open `notebooks/meshtastic_logistics_analysis.ipynb` in Jupyter, or upload it to
+[Google Colab](https://colab.research.google.com/) (File → Upload notebook). The first cell finds the package
+next to the notebook, downloads it from `ZIP_URL` (set it to the Zenodo file link), clones the GitHub
+repository, or asks you to upload the release ZIP. It needs only `pandas`, `numpy` and `matplotlib`, which
+Colab already has. The notebook is saved with its outputs, so it can be read without running it.
 
 ## Live use on a gateway
 
