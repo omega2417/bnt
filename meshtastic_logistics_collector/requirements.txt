@@ -1,0 +1,4 @@
+# Only needed for live radio mode (collector.py --serial / --tcp).
+# Replay mode, kpi.py, import_plan.py and the tests use the Python standard library only.
+meshtastic>=2.7.11
+pypubsub
