@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it using the metadata below."
 type: software
-title: "Meshtastic Logistics Metadata Collector: radio, device and logistics-event metadata and KPIs for SME logistics"
+title: "Meshtastic Logistics Metadata Collector: open-source software for measuring the operational autonomy of SME logistics over LoRa mesh networks"
 version: 1.0.0
 date-released: 2026-10-30
 license: MIT
@@ -18,14 +18,11 @@ authors:
     given-names: "Firstname"
     affiliation: "Affiliation 2"
 abstract: >-
-  Python software layer for a private Meshtastic LoRa mesh network used as a backup channel
-  for critical logistics operations of small and medium-sized enterprises. A gateway collector
-  records packet (L1), device (L2) and logistics-event (L3) metadata into a local SQLite store
-  without Internet access; a compact 24-byte binary protocol on PRIVATE_APP (port 256) carries
-  EVENT/ACCEPT/DONE messages; kpi.py computes the indicators of the accompanying article
-  (channel utilization, delivery ratio, age of information, actionability eta, operational
-  autonomy A_op, loss reduction R_loss). A synthetic replay generator allows reproduction
-  without radio hardware. Verified on synthetic data only, not on field measurements.
+  Small and medium-sized logistics enterprises coordinate dispatching, tracking and cold-chain alerts through public cellular networks, so communication outages turn into downtime and cargo losses. A private Meshtastic LoRa mesh network can keep short critical messages flowing without operator infrastructure, but whether it pays off depends on quantities that have to be measured in the field: coverage, message delivery, data freshness and, above all, whether delivered messages lead to operations completed on time.
+
+  This software turns those quantities into measurable indicators. A gateway collector (Python, serial/TCP or offline replay) records packet-level radio metadata (SNR, RSSI, hops, flood duplicates), device telemetry (battery, channel utilisation, airtime) and the life cycle of logistics events into a local SQLite store that works without Internet access and keeps a store-and-forward outbox for later ERP/TMS synchronisation. Events are exchanged as a compact 24-byte binary frame with CRC-16 on the Meshtastic PRIVATE_APP port, with EVENT, ACCEPT and DONE messages sharing one event identifier. A KPI module computes the indicators of the accompanying techno-economic study: channel utilisation, flood overhead, position delivery ratio, age of information, actionability η, operational autonomy A_op and loss reduction R_loss.
+
+  The archive includes a synthetic replay generator, an end-to-end test suite with a reference output, and a Google Colab notebook. The notebook walks step by step through LoRa time-on-air, an analytic and Monte Carlo check of the age of information, the event life cycle, deadline sensitivity and a comparison with the study's break-even threshold. The software has been verified on synthetic data only; the reported numbers are not field measurements, and live radio operation (written against the meshtastic-python 2.7.11 API) still has to be tested on hardware in a pilot. Python 3.11+, standard library only outside live radio mode; MIT licence.
 keywords:
   - Meshtastic
   - LoRa
