@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this package, please cite the article and the package."
+title: "Replication package and online appendix for 'Admission channels and origin diversification in Polish labour migration from 2008 to 2025'"
+version: 1.0.0
+doi: 10.5281/zenodo.XXXXXXX
+date-released: YYYY-MM-DD
+license:
+  - CC-BY-4.0
+  - MIT
+type: dataset
+keywords:
+  - labour migration
+  - admission channels
+  - work permits
+  - employer declarations
+  - Herfindahl-Hirschman index
+  - PPML
+  - Poland
+  - Ukraine
+authors:
+  - family-names: "[Surname]"
+    given-names: "[Given]"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+    affiliation: "[Affiliation]"
+preferred-citation:
+  type: article
+  title: "Admission channels and origin diversification in Polish labour migration from 2008 to 2025"
+  journal: "Journal of Ethnic and Migration Studies"
+  doi: "10.1080/1369183X.XXXX.XXXXXXX"
+  year: YYYY
+  authors:
+    - family-names: "[Surname]"
+      given-names: "[Given]"

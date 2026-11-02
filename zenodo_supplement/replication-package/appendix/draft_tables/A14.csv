@@ -1,0 +1,8 @@
+Item,Value
+Software used for the estimates in the article,[authors: e.g. Stata 18 MP; ppmlhdfe version; reghdfe; ftools - see reviewer comment 1]
+Reference implementation in this package,Python 3.11+ (numpy; pandas; scipy; statsmodels; matplotlib) - see environment/software.md
+Random seed,20261025
+Pairs cluster bootstrap draws,999
+Wild cluster score bootstrap draws,9999 (Rademacher and Webb weights)
+Runtime of run_all,[run] (output/logs/runtime.csv)
+Hardware,[authors]

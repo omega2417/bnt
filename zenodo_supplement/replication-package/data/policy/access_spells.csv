@@ -1,0 +1,10 @@
+iso3,right,start,end,legal_basis,date_precision,verify_note
+BLR,declarations,2006-09-01,NA,Dz.U. 2006 nr 156 poz. 1116,month,"start before panel; retained after Oct 2022"
+RUS,declarations,2006-09-01,2022-10-31,Dz.U. 2006 nr 156 poz. 1116; removed by Dz.U. 2022 poz. 2204,month,"end = 'end of October 2022' (manuscript); enter exact in-force day of poz. 2204"
+UKR,declarations,2006-09-01,NA,Dz.U. 2006 nr 156 poz. 1116,month,"start before panel"
+MDA,declarations,2009-02-01,NA,Dz.U. 2009 nr 21 poz. 114,month,"'February 2009' (manuscript); enter exact in-force day"
+GEO,declarations,2010-12-01,2025-12-01,Dz.U. 2010 nr 236 poz. 1559; removed by Dz.U. 2025 poz. 1617/1622,month,"start 'December 2010' (manuscript) - enter exact in-force day; end 1 Dec 2025 (manuscript)"
+ARM,declarations,2014-01-01,NA,Dz.U. 2013 poz. 1507,month,"'January 2014' (manuscript); confirm 1 Jan 2014"
+MDA,eu_visa_free,2014-04-28,NA,Regulation (EU) No 259/2014; European Commission (2026),day,
+GEO,eu_visa_free,2017-03-28,NA,Regulation (EU) 2017/372; European Commission (2026),day,
+UKR,eu_visa_free,2017-06-11,NA,Regulation (EU) 2017/850; European Commission (2026),day,

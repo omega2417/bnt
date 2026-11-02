@@ -1,0 +1,7 @@
+channel,year_from,year_to,max_months,basis,note
+permits,2008,2025,36,"maximum validity up to 3 years (Table 1)",upper bound; actual validity varies
+declarations,2006,2007,3,"3 of 6 months (Table 1)",
+declarations,2008,2021,6,"6 of 12 months (Table 1)",
+declarations,2022,2025,24,"24 months from Jan 2022 (Dz.U. 2022 poz. 91)",
+seasonal,2018,2025,9,"9 months per calendar year (Table 1)",
+notifications,2022,2025,12,"no fixed maximum: 'while terms of work are unchanged'",AUTHORS TO DECIDE: assumption used for document-month weights; report sensitivity

@@ -1,0 +1,7 @@
+Method,Difference (access minus other),95% interval,p-value (H0: difference = 0),Draws,Note
+Point estimate (Table 3 col. 3: 0.661 - 0.652),0.009,,,,
+Analytic cluster-robust,0.009,[run],[run],,G/(G-1) correction
+Pairs cluster bootstrap (submitted version),0.009,-0.56 to 0.34,,199,superseded; reported in the submitted manuscript
+Pairs cluster bootstrap,0.009,[run],[run],999,percentile interval; unidentified draws reported
+Wild cluster score bootstrap (Rademacher),0.009,[run],[run],9999,null imposed; interval by test inversion
+Wild cluster score bootstrap (Webb),0.009,[run],[run],9999,null imposed; interval by test inversion

@@ -1,0 +1,11 @@
+Panel,Series and window,Level change March 2022,Slope change March 2022,Level change June 2025,Slope change June 2025
+A,"Work permits, Jan 2021-Nov 2025",-42%*** (s.e. [run]),-0.023*** ([run]),-28%*** ([run]),-0.007 ([run])
+A,"Employer declarations, Jan 2021-Nov 2025",-63%*** ([run]),-0.030*** ([run]),-18%*** ([run]),0.087*** ([run])
+A,"Seasonal work permits, Jan 2019-Nov 2025",-86%*** ([run]),0.002 ([run]),-19% ([run]),0.100*** ([run])
+A,"Notifications, Apr 2022-Nov 2025",,,3% ([run]),0.030*** ([run])
+A,"All documents excl. notifications, Jan 2021-Nov 2025",-59%*** ([run]),-0.024*** ([run]),-21%*** ([run]),0.049*** ([run])
+A,"All documents, Jan 2021-Nov 2025",-18%*** ([run]),-0.011* ([run]),-8%*** ([run]),0.044*** ([run])
+B,"Employer declarations, Jan 2015-Dec 2019 (break January 2018)",-39%*** ([run]),-0.023*** ([run]),,
+B,"Work permits, half-yearly 2015H1-2021H2 (break 2018)",[run],[run],,
+A (extended),Window to June 2026 if data are available,[run],[run],[run],[run]
+,"Absolute post-break slopes, pulse and calendar-month effects",[run],,,

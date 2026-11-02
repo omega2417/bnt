@@ -1,0 +1,24 @@
+appendix_table,indicator,group,period,value,unit,source,page,note
+A12,holders of a current work-authorising document,all foreigners,2025-12-31,1241232,persons,MRPiPS (2026),NA,count of document holders
+A12,holders of a current work-authorising document,Ukrainian citizens,2025-12-31,582507,persons,MRPiPS (2026),NA,47% of holders
+A12,foreigners insured in ZUS,all foreigners,2025-12-31,1289000,persons,MRPiPS (2026),15-20,rounded in report
+A12,foreigners insured in ZUS,Ukrainian citizens,2025-12-31,857000,persons,MRPiPS (2026),15-20,66.5% calculated from rounded counts
+A12,foreigners insured in ZUS,all foreigners,2013-12-31,101000,persons,MRPiPS (2026),NA,rounded
+A12,share of foreigners among insured persons,all foreigners,2025-12-31,7.9,percent,MRPiPS (2026),NA,
+A12,residence-and-work permits issued,all foreigners,2025,328000,documents,MRPiPS (2026),NA,rounded; not in the four registers
+A12,residence-and-work permits issued,Ukrainian citizens,2025,251000,documents,MRPiPS (2026),NA,rounded
+A12,employer declarations registered,all foreigners,2019,1640000,documents,MRPiPS registers,NA,ENTER UNROUNDED COUNT (reviewer comment 8)
+A12,persons covered by declarations,all foreigners,2019,1090000,persons,MRPiPS registers,NA,ENTER UNROUNDED COUNT (1.64/1.09 = 1.50 with rounded figures; text says 1.51)
+A12,declarations per person,all foreigners,2025,1.31,ratio,MRPiPS registers,NA,
+A12,declarations not taken up,all foreigners,2023,32,percent of registered,MRPiPS (2025a),NA,employer reports
+A12,declarations not taken up,all foreigners,2024,39,percent of registered,MRPiPS (2025a),NA,employer reports
+A12,declarations not taken up,all foreigners,2025,27,percent of registered,MRPiPS (2026),NA,employer reports
+A12,notifications filed,Ukrainian citizens,2025,1030000,documents,MRPiPS (2026),NA,rounded
+A12,notifications active at year-end,Ukrainian citizens,2025-12-31,445000,documents,MRPiPS (2026),NA,rounded
+A11,work-permit applications,all foreigners,2025H1,148700,applications,MRPiPS (2025b),NA,"over 148,000 (half-year report)"
+A11,work-permit applications,all foreigners,2025H2,151000,applications,MRPiPS (2026),NA,as stated in Section 6.3.2; the annual report gives only the total (almost 300000) - confirm the source of the H2 figure
+A11,work permits issued,all foreigners,2025H2,107000,documents,MRPiPS registers,NA,
+A11,pending cases,all foreigners,2024-12-31,58000,cases,MRPiPS (2025a),NA,
+A11,pending cases,all foreigners,2025-12-31,69500,cases,MRPiPS (2026),NA,
+A11,average processing time,all foreigners,2024,64,days,MRPiPS (2025a),NA,
+A11,average processing time,all foreigners,2025,82,days,MRPiPS (2026),NA,

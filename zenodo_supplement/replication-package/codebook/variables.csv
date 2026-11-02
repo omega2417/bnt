@@ -1,0 +1,45 @@
+file,name,label,type,unit,source,construction
+panel_origin_year.csv,iso3,Origin (citizenship) ISO 3166-1 alpha-3 code,string,,crosswalk,"special codes: XKX Kosovo, XXS stateless, XXU unknown"
+panel_origin_year.csv,polish_name,Citizenship label in MRPiPS tables (Polish),string,,MRPiPS,kept for traceability
+panel_origin_year.csv,year,Calendar year,integer,year,,2008-2025
+panel_origin_year.csv,permits,Work permits issued (types A-E),integer,documents,MRPiPS,annual table; NA never occurs (channel exists in all years)
+panel_origin_year.csv,declarations,Employer declarations registered (entered into the register from 2018),integer,documents,MRPiPS,0 for origins without access; channel exists from 2007
+panel_origin_year.csv,seasonal,Seasonal work permits issued,integer,documents,MRPiPS,NA before 2018 (channel did not exist); 0 = no documents
+panel_origin_year.csv,notifications,Notifications of employment of Ukrainian citizens,integer,documents,MRPiPS,NA before 2022; 0 for non-Ukrainian origins
+panel_origin_year.csv,docs_excl_notif,All documents excluding notifications,integer,documents,derived,permits + declarations + seasonal (channels in operation)
+panel_origin_year.csv,docs_all,All documents (four channels),integer,documents,derived,sum of the channels in operation in the year
+panel_origin_year.csv,channel_available_*,Channel in operation in the year,0/1,,derived,distinguishes structural NA from zero
+halfyear_permits.csv,half,Half-year,integer,1/2,MRPiPS,36 half-years 2008H1-2025H2
+monthly_national.csv,ym,Month,string,YYYY-MM,MRPiPS,permits monthly from 2021
+declaration_persons.csv,persons,Persons covered by declarations,integer,persons,MRPiPS,from 2019
+zus_stock.csv,insured_foreigners,Foreigners insured in ZUS at year end,integer,persons,MRPiPS reports,
+zus_stock.csv,insured_ukrainians,Ukrainian citizens insured in ZUS at year end,integer,persons,MRPiPS reports,
+policy_coding.csv,decl_access_share,Share of the calendar year with access to employer declarations,share 0-1,,legal acts (access_spells.csv),days in force / days in year
+policy_coding.csv,eu_visa_free_share,Share of the year with EU visa freedom (biometric passports),share 0-1,,European Commission (2026),MD 28.04.2014; GE 28.03.2017; UA 11.06.2017
+policy_coding.csv,decl_ever,Ever had declaration access (ARM BLR GEO MDA RUS UKR),0/1,,derived,
+policy_coding.csv,decl_group_2018,Six declaration origins x year >= 2018,0/1,,derived,
+policy_coding.csv,decl_group_2022,Six declaration origins x year >= 2022,0/1,,derived,
+policy_coding.csv,shock_ua2014,Ukraine x year >= 2014,0/1,,derived,annexation of Crimea and war in Donbas
+policy_coding.csv,shock_ua2022,Ukraine x year >= 2022,0/1,,derived,full-scale invasion
+policy_coding.csv,shock_by2021,Belarus x year >= 2021,0/1,,derived,first full year after the 2020 repression
+policy_coding.csv,shock_ru2022,Russia x year >= 2022,0/1,,derived,"war, sanctions, restricted entry"
+panel_covariates.csv,flow_recent,ln(1 + documents in t-1 to t-3),float,log documents,derived,"documents = permits + declarations + seasonal; NA channels counted as 0"
+panel_covariates.csv,flow_older,ln(1 + documents in t-4 to t-6),float,log documents,derived,NA when t-6 < 2008
+panel_covariates.csv,flow_recent_permits,ln(1 + permits in t-1 to t-3),float,log documents,derived,
+panel_covariates.csv,flow_zero,Recent flow equals zero,0/1,,derived,
+panel_covariates.csv,flow_x_access / flow_x_other,Recent flow x (non-)declaration-access group,float,,derived,group = decl_ever
+panel_covariates.csv,ln_presample_mean,ln mean permits 2008-2010 (0 if mean is 0),float,,derived,with presample_mean_zero indicator (Blundell et al. 2002)
+panel_covariates.csv,rel_income_l1,Relative real income RY(j t-1),float,log points,World Bank NY.GDP.PCAP.KD.ZG,"ln I(POL) - ln I(j); I = cumulated real GDP pc growth index, 2006 = 1; lagged one year"
+panel_covariates.csv,rel_income_l2,Relative real income lagged two years,float,log points,World Bank,
+panel_covariates.csv,ppp_gap_l1,ln(PPP GDP pc Poland / origin) t-1,float,log points,World Bank NY.GDP.PCAP.PP.CD,
+panel_covariates.csv,usd_gap_l1,ln(current-USD GDP pc Poland / origin) t-1,float,log points,World Bank NY.GDP.PCAP.CD,
+panel_covariates.csv,unemp_l1,Origin unemployment rate t-1 (ILO modelled),float,percent,World Bank SL.UEM.TOTL.ZS,
+panel_covariates.csv,ln_pop_l1,ln origin population t-1,float,log persons,World Bank SP.POP.TOTL,
+panel_covariates.csv,ln_dist,ln distance Warsaw - origin capital,float,log km,GeoNames,great-circle (haversine) distance
+panel_covariates.csv,contiguity,Shares a land border with Poland,0/1,,crosswalk,
+panel_covariates.csv,former_ussr,Former Soviet republic,0/1,,crosswalk,
+panel_covariates.csv,slavic_language,Slavic official language,0/1,,crosswalk,
+regression_sample.csv,baseline,In the fixed-effects baseline sample (Table 3 col. 2),0/1,,derived,non-missing covariates and not all-zero permits
+regression_sample.csv,excl_UA_BY,Baseline without Ukraine and Belarus,0/1,,derived,
+regression_sample.csv,never_eligible,Baseline origins never eligible for declarations,0/1,,derived,
+regression_sample.csv,comparison70,Comparison origin for the event studies,0/1,,derived,never eligible and >= 500 documents 2008-2025

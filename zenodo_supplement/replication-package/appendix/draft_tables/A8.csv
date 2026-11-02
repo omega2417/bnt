@@ -1,0 +1,13 @@
+Change,Outcome,Effect,p (k/N) as reported,k,N placebo,p (k+1)/(N+1)
+Moldova enters (2009),Work permits,-69%,0.20,[run],[run],[run]
+Moldova enters (2009),All documents excl. notifications,x3.6,0.19,[run],[run],[run]
+Georgia enters (event year 0 = 2011),Work permits,+64%,0.43,[run],[run],[run]
+Georgia enters (event year 0 = 2011),All documents excl. notifications,x7.8,0.01,[run],[run],[run]
+Georgia enters (event year 0 = 2010),Work permits,[run],[run],[run],[run],[run]
+Georgia enters (event year 0 = 2010),All documents excl. notifications,[run],[run],[run],[run],[run]
+Armenia enters (2014),Work permits,-54%,0.33,[run],[run],[run]
+Armenia enters (2014),All documents excl. notifications,x3.9,0.10,[run],[run],[run]
+"Armenia enters (2014), post-Soviet comparison origins",All documents excl. notifications,roughly x2 [run],[run],[run],[run],[run]
+Russia excluded (2022),Work permits,-85%,0.07,[run],[run],[run]
+Russia excluded (2022),All documents excl. notifications,-93%,0.03,[run],[run],[run]
+Event-study coefficients by event year with placebo 2.5th/97.5th percentiles,all cases,[run],,,,

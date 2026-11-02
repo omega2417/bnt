@@ -1,0 +1,15 @@
+Data and documentation in this package (everything except the files in code/ and tests/)
+are licensed under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).
+
+Copyright (c) [year] [Authors]
+
+You are free to share and adapt the material for any purpose, provided that you give
+appropriate credit, provide a link to the licence and indicate if changes were made.
+Full legal code: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Third-party material keeps its own terms:
+  * MRPiPS statistical tables and reports - Polish public-sector information, re-used with
+    attribution (Act of 11 August 2021 on open data and the re-use of public-sector information);
+  * World Bank World Development Indicators - CC BY 4.0;
+  * GeoNames - CC BY 4.0;
+  * REST Countries - see https://restcountries.com/ (project licence MPL 2.0).

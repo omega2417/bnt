@@ -1,0 +1,18 @@
+act_id,dz_u,date_signed,date_in_force,date_precision,provision,effect,used_in,verify_note
+A01,Dz.U. 2006 nr 156 poz. 1116,NA,2006-09,month,"regulation on work without a permit (employer declarations)","declarations introduced for citizens of states bordering Poland (BY, RU, UA); agriculture only; 3 of 6 months",Table 1; access_spells,enter exact dates
+A02,Dz.U. 2007 nr 120 poz. 824,NA,2007-07,month,amending regulation,declarations opened to all sectors,Table 1,enter exact dates
+A03,Dz.U. 2008 nr 17 poz. 106,NA,2008-02,month,amending regulation,maximum period extended from 3 to 6 months within 12 months,Table 1; document_duration,enter exact dates
+A04,Dz.U. 2009 nr 21 poz. 114,NA,2009-02,month,amending regulation,declarations extended to Moldova,access_spells (MDA),enter exact dates
+A05,Dz.U. 2010 nr 236 poz. 1559,NA,2010-12,month,amending regulation,declarations extended to Georgia,access_spells (GEO),enter exact dates
+A06,Dz.U. 2013 poz. 1507,NA,2014-01,month,amending regulation,declarations extended to Armenia,access_spells (ARM),enter exact dates
+A07,Dz.U. 2017 poz. 1543,NA,2018-01-01,day,"amendment of the Act on employment promotion and labour market institutions (implementation of Directive 2014/36/EU)","register of declarations kept by county offices (refusal possible); declarations restricted to non-seasonal work; seasonal work permit; fees",Table 1; ITS 2018 break,enter date signed
+A08,Dz.U. 2017 poz. 2349,NA,2018-01-01,day,implementing regulation (2018 reform),list of states / procedural rules for declarations,Table 1,confirm content and dates
+A09,Dz.U. 2017 poz. 2350,NA,2018-01-01,day,implementing regulation (2018 reform),implementing rules (2018 reform),Legal acts cited,confirm content and dates
+A10,Dz.U. 2022 poz. 91,NA,2022-01-29,day,amendment,maximum period of work on a declaration raised to 24 months,Table 1; document_duration,enter date signed
+A11,Dz.U. 2022 poz. 583,2022-03-12,NA,day,"Act on assistance to citizens of Ukraine, art. 22","notification within 14 days lets any Ukrainian legally in Poland work; free; no decision",Table 1; ITS 2022 break,enter in-force date and retroactive effect
+A12,Dz.U. 2022 poz. 2204,NA,2022-10,month,amending regulation,Russia removed from declaration countries; Belarus retained,access_spells (RUS),enter exact in-force day
+A13,Dz.U. 2024 poz. 854,NA,2024-07,month,amendment,notification deadline shortened from 14 to 7 days,Section 2,enter exact dates
+A14,Dz.U. 2025 poz. 621,2025-03-20,2025-06-01,day,Act on the conditions for admitting foreigners to work in Poland,"labour market test abolished (county lists of excluded occupations); online procedures; contract filing; refusal grounds; fines PLN 3000-50000; quotas",Table 1; ITS 2025 break,
+A15,Dz.U. 2025 poz. 1617,NA,2025-12-01,day,implementing regulation,Georgia removed from declaration countries,access_spells (GEO),confirm which of 1617/1622 removes Georgia and which sets fees
+A16,Dz.U. 2025 poz. 1622,NA,2025-12-01,day,implementing regulation,fees raised,Section 2,see A15
+A17,Dz.U. 2026 poz. 203,2026-01-23,2026-03-05,day,amendment of the Act on assistance to citizens of Ukraine,new notifications only for holders of temporary-protection (UKR) status; outside the 2008-2025 series,Table 1 (note),

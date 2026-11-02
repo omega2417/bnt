@@ -1,0 +1,72 @@
+{
+  "title": "Replication package and online appendix for \"Admission channels and origin diversification in Polish labour migration from 2008 to 2025\"",
+  "upload_type": "dataset",
+  "version": "1.0.0",
+  "language": "eng",
+  "description": "<p>This record contains the replication package and online appendix for the article \"Admission channels and origin diversification in Polish labour migration from 2008 to 2025\" (Journal of Ethnic and Migration Studies, [year], doi:[article DOI]).</p>\n<p>The package harmonises the four work-authorisation series published by the Polish Ministry of Family, Labour and Social Policy (MRPiPS) — work permits, employer declarations, seasonal work permits and notifications of employment of Ukrainian citizens — into an origin-by-year panel for 2008–2025 (164 origins), monthly national series and a half-yearly work-permit series. It also contains the policy coding of declaration access and EU visa freedom, the World Bank and GeoNames covariate snapshots, and the scripts that reproduce all tables and figures in the article: concentration indices (HHI and its inverse), PPML gravity models with origin and year fixed effects, event studies with placebo (permutation) inference, and interrupted time series.</p>\n<p>The unit of observation is an administrative document, not a unique person. The data are aggregated by citizenship and contain no individual-level records.</p>\n<p>Contents: README.md (start here), data/ (raw snapshots, crosswalks, policy coding, derived panels), code/ (numbered scripts and a master script), output/ (tables and figures), appendix/Online_Appendix.pdf (supplementary tables A1–A14), CITATION.cff, licence files.</p>",
+  "creators": [
+    {
+      "name": "[Surname, Given name]",
+      "orcid": "0000-0000-0000-0000",
+      "affiliation": "[Affiliation]"
+    }
+  ],
+  "keywords": [
+    "labour migration",
+    "admission channels",
+    "work permits",
+    "employer declarations",
+    "seasonal work permits",
+    "notifications",
+    "Herfindahl-Hirschman index",
+    "PPML",
+    "event study",
+    "interrupted time series",
+    "Poland",
+    "Ukraine"
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "10.1080/1369183X.XXXX.XXXXXXX",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://psz.praca.gov.pl/rynek-pracy/statystyki-i-analizy/zatrudnianie-cudzoziemcow-w-polsce",
+      "relation": "references",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://api.worldbank.org/v2/",
+      "relation": "references",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://download.geonames.org/export/dump/",
+      "relation": "references",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://restcountries.com/",
+      "relation": "references",
+      "scheme": "url"
+    }
+  ],
+  "dates": [
+    {
+      "type": "Collected",
+      "start": "2026-10-25",
+      "end": "2026-10-25",
+      "description": "download date of the source tables and snapshots"
+    }
+  ],
+  "locations": [
+    {
+      "place": "Poland"
+    }
+  ],
+  "notes": "Data and documentation: CC BY 4.0. Code: MIT License (LICENSE-code.txt). Funding: [grant / No external funding]."
+}

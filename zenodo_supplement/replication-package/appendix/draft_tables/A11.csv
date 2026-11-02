@@ -1,0 +1,12 @@
+Indicator,Group,Period,Value,Source
+Work-permit applications,all foreigners,2025 H1,"148,700",MRPiPS (2025b)
+Work-permit applications,all foreigners,2025 H2,"151,000",[confirm source]
+Work permits issued,all foreigners,2025 H2,"107,000",MRPiPS registers
+"Work permits issued, change on previous year",origins without declaration or notification access,January-May 2025,-11%,MRPiPS registers
+"Work permits issued, change on previous year",origins without declaration or notification access,June-December 2025,-31%,MRPiPS registers
+"Seasonal permits issued, change on previous year",origins without declaration or notification access,2025,[run] (fell),MRPiPS registers
+Pending cases,all foreigners,31 Dec 2024,"58,000",MRPiPS (2025a)
+Pending cases,all foreigners,31 Dec 2025,"69,500",MRPiPS (2026)
+Average processing time (days),all foreigners,2024,64,MRPiPS (2025a)
+Average processing time (days),all foreigners,2025,82,MRPiPS (2026)
+Applications and issuance by access group and half-year,both groups,2024-2025,[run],MRPiPS registers
