@@ -1,0 +1,24 @@
+# tvbnet 0.1.0-rehearsal — release configuration (all values are design assumptions)
+release: "0.1.0-rehearsal"
+seed: 20261107
+replicates: 2
+topologies: [star, tree, partial_mesh, ring, hub_spoke, segmented_dmz]
+families: [confidentiality, availability, intrusion, malware, insider, integrity]
+threat_classes: [EAV, DOS, INT, MAL, INS, TAM]
+layers: [L1_perimeter, L2_network, L3_channel, L4_host, L5_data]
+depth_levels: [2, 3, 4, 5]
+barriers_per_layer: 3
+threats_per_scenario: 8
+l9_factors:
+  effectiveness_mean: [0.55, 0.70, 0.85]
+  input_reliability: [0.60, 0.80, 0.95]
+  impact_multiplier: [0.5, 1.0, 2.0]
+  budget_fraction: [0.15, 0.30, 0.50]
+value_weights: {technical: 0.30, economic: 0.40, security: 0.30}
+asset_value_scale_kcu: 100.0
+coverage_threshold: 0.10
+hop_attenuation: 0.15
+reliability_noise_gain: 1.5
+cost_noise_ratio: 0.33
+split_fractions: [0.60, 0.15, 0.25]
+defects: {D1_range: 20, D2_negative_cost: 15, D3_orphan_fk: 15, D4_duplicate_pk: 20, D5_missing_required: 20, D6_derived_tamper: 25, D7_budget_flag: 10}

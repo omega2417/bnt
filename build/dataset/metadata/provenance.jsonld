@@ -1,0 +1,190 @@
+{
+  "@context": {
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "@graph": [
+    {
+      "@id": "activity:generate_and_derive",
+      "@type": "prov:Activity",
+      "prov:startedAtTime": "2026-11-07T17:39:06.896713+00:00",
+      "prov:endedAtTime": "2026-11-07T17:39:26.158813+00:00",
+      "prov:used": [
+        "config/pipeline.yaml"
+      ],
+      "prov:generated": [
+        "tables/scenarios.parquet",
+        "tables/networks.parquet",
+        "tables/nodes.parquet",
+        "tables/links.parquet",
+        "tables/assets.parquet",
+        "tables/vulnerabilities.parquet",
+        "tables/threats.parquet",
+        "tables/barriers.parquet",
+        "tables/configurations.parquet",
+        "tables/frontier.parquet"
+      ],
+      "prov:wasAssociatedWith": "software:tvbnet/0.1.0-rehearsal",
+      "parameters": "config/pipeline.yaml"
+    },
+    {
+      "@id": "activity:inject_and_validate_raw",
+      "@type": "prov:Activity",
+      "prov:startedAtTime": "2026-11-07T17:39:26.159972+00:00",
+      "prov:endedAtTime": "2026-11-07T17:39:51.169065+00:00",
+      "prov:used": [
+        "tables/scenarios.parquet",
+        "tables/networks.parquet",
+        "tables/nodes.parquet",
+        "tables/links.parquet",
+        "tables/assets.parquet",
+        "tables/vulnerabilities.parquet",
+        "tables/threats.parquet",
+        "tables/barriers.parquet",
+        "tables/configurations.parquet",
+        "tables/frontier.parquet"
+      ],
+      "prov:generated": [
+        "report/validation_report.json#raw"
+      ],
+      "prov:wasAssociatedWith": "software:tvbnet/0.1.0-rehearsal",
+      "parameters": "config/pipeline.yaml"
+    },
+    {
+      "@id": "activity:quarantine_redeliver",
+      "@type": "prov:Activity",
+      "prov:startedAtTime": "2026-11-07T17:39:51.169103+00:00",
+      "prov:endedAtTime": "2026-11-07T17:40:18.218214+00:00",
+      "prov:used": [
+        "raw delivery"
+      ],
+      "prov:generated": [
+        "tables/scenarios.parquet",
+        "tables/networks.parquet",
+        "tables/nodes.parquet",
+        "tables/links.parquet",
+        "tables/assets.parquet",
+        "tables/vulnerabilities.parquet",
+        "tables/threats.parquet",
+        "tables/barriers.parquet",
+        "tables/configurations.parquet",
+        "tables/frontier.parquet"
+      ],
+      "prov:wasAssociatedWith": "software:tvbnet/0.1.0-rehearsal",
+      "parameters": "config/pipeline.yaml"
+    },
+    {
+      "@id": "activity:package",
+      "@type": "prov:Activity",
+      "prov:startedAtTime": "2026-11-07T17:40:52.022188+00:00",
+      "prov:endedAtTime": "2026-11-07T17:40:52.022204+00:00",
+      "prov:used": [
+        "tables/scenarios.parquet",
+        "tables/networks.parquet",
+        "tables/nodes.parquet",
+        "tables/links.parquet",
+        "tables/assets.parquet",
+        "tables/vulnerabilities.parquet",
+        "tables/threats.parquet",
+        "tables/barriers.parquet",
+        "tables/configurations.parquet",
+        "tables/frontier.parquet"
+      ],
+      "prov:generated": [
+        "ro-crate-metadata.json",
+        "checksums_sha256.txt"
+      ],
+      "prov:wasAssociatedWith": "software:tvbnet/0.1.0-rehearsal",
+      "parameters": "config/pipeline.yaml"
+    },
+    {
+      "@id": "tables/scenarios.parquet",
+      "@type": "prov:Entity",
+      "sha256": "ec1c814a98bab2eb47b8eaafd4cd6c3a2ec590219e6457137cd52e304d5389d6",
+      "records": 2592
+    },
+    {
+      "@id": "tables/networks.parquet",
+      "@type": "prov:Entity",
+      "sha256": "a5bcab13a0aeec009f4d0d2b60b122289723e74d8260a3c1e25d077d8d284095",
+      "records": 2592
+    },
+    {
+      "@id": "tables/nodes.parquet",
+      "@type": "prov:Entity",
+      "sha256": "26cf133871b2eb112f424548f4b8547ac0ce001a83fd442fddf1c2b50a6a1e44",
+      "records": 39312
+    },
+    {
+      "@id": "tables/links.parquet",
+      "@type": "prov:Entity",
+      "sha256": "421bf036af35d741d5cc3f468905a3db655c9b1ce5b7a40a96fa99e05c75cf0c",
+      "records": 38016
+    },
+    {
+      "@id": "tables/assets.parquet",
+      "@type": "prov:Entity",
+      "sha256": "e0e5558e0e1b5162ca2e605551022501bda84e7cc1c20b031a13de6688be4a38",
+      "records": 22464
+    },
+    {
+      "@id": "tables/vulnerabilities.parquet",
+      "@type": "prov:Entity",
+      "sha256": "c9c31649458e1be9649477d4d9dcc4f7de5da36341c66c4f7516b5841fc26ca2",
+      "records": 44869
+    },
+    {
+      "@id": "tables/threats.parquet",
+      "@type": "prov:Entity",
+      "sha256": "45d163847222a956ba28ca562629d62c1f988ab0044ec4a42ec0e488e8f77c11",
+      "records": 20736
+    },
+    {
+      "@id": "tables/barriers.parquet",
+      "@type": "prov:Entity",
+      "sha256": "86871a234d557b3587cbc14c3ef39c8ad3dc71d4ec1cdfd484e1c126f4db1aef",
+      "records": 27216
+    },
+    {
+      "@id": "tables/configurations.parquet",
+      "@type": "prov:Entity",
+      "sha256": "622467fbf3b769e561beb06878b33d8b213d6518562d617605454e171f9bf7cc",
+      "records": 23328
+    },
+    {
+      "@id": "tables/frontier.parquet",
+      "@type": "prov:Entity",
+      "sha256": "f00a70a3a6815415da90c10a06949839a8008b83a948f8d5ce3b147fbc89a7d8",
+      "records": 129778
+    },
+    {
+      "@id": "splits/family_holdout.csv",
+      "@type": "prov:Entity",
+      "sha256": "4f2df04f80b25f7749b666ebac09541acc68961b079eab393b41f7706825e58d",
+      "records": 2592
+    },
+    {
+      "@id": "splits/network_holdout.csv",
+      "@type": "prov:Entity",
+      "sha256": "d39951bbfd5a5cde49260ebee81ae894eeec26ae661f3f03eac749e5d7342abc",
+      "records": 2592
+    },
+    {
+      "@id": "splits/compound_holdout.csv",
+      "@type": "prov:Entity",
+      "sha256": "567d46d5630b31ec04ab4f7b5c847654222288d773cb92098494c98120d97ccf",
+      "records": 2592
+    },
+    {
+      "@id": "splits/cell_disjoint.csv",
+      "@type": "prov:Entity",
+      "sha256": "596108da58438331a75cafbed5dc85109eb00c85cef5982d4bbdca8297d93cd0",
+      "records": 2592
+    },
+    {
+      "@id": "splits/budget_extrapolation.csv",
+      "@type": "prov:Entity",
+      "sha256": "21aeac2d84ebcf6756ef92333be166cf039bda121d300780a8d75f08a279c0a8",
+      "records": 2592
+    }
+  ]
+}

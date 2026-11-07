@@ -1,0 +1,35 @@
+{
+  "titles": [
+    {
+      "title": "tvbnet 0.1.0-rehearsal: synthetic dataset for multilayer security and cost-risk trade-offs in data transmission networks"
+    }
+  ],
+  "types": {
+    "resourceTypeGeneral": "Dataset"
+  },
+  "version": "0.1.0-rehearsal",
+  "rightsList": [
+    {
+      "rights": "CC BY 4.0"
+    }
+  ],
+  "publicationYear": 2026,
+  "descriptions": [
+    {
+      "descriptionType": "Other",
+      "description": "SYNTHETIC: all records are generated from a fixed seed; no operational measurement."
+    }
+  ],
+  "relatedIdentifiers": [
+    {
+      "relationType": "IsDerivedFrom",
+      "relatedIdentifierType": "DOI",
+      "relatedIdentifier": "10.5281/zenodo.22166893"
+    },
+    {
+      "relationType": "References",
+      "relatedIdentifierType": "DOI",
+      "relatedIdentifier": "10.3390/data11090247"
+    }
+  ]
+}

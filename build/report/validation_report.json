@@ -1,0 +1,562 @@
+{
+  "release": "0.1.0-rehearsal",
+  "seed": 20261107,
+  "python": "3.13.18",
+  "numpy": "2.5.3",
+  "pandas": "3.0.5",
+  "PROVENANCE_WARNING": "SYNTHETIC REHEARSAL: no row in this package is an operational measurement.",
+  "runtime_generate_s": 19.26212739944458,
+  "design": {
+    "cells": 1296,
+    "scenarios": 2592,
+    "l9_pairwise_balanced": true
+  },
+  "counts": {
+    "scenarios": 2592,
+    "networks": 2592,
+    "nodes": 39312,
+    "links": 38016,
+    "assets": 22464,
+    "vulnerabilities": 44869,
+    "threats": 20736,
+    "barriers": 27216,
+    "configurations": 23328,
+    "frontier": 129778
+  },
+  "gates_raw": [
+    {
+      "gate": "Schema pass rate",
+      "observed": 1.0,
+      "rule": ">=1.000",
+      "status": "Pass"
+    },
+    {
+      "gate": "Median record completeness",
+      "observed": 1.0,
+      "rule": ">=0.950",
+      "status": "Pass"
+    },
+    {
+      "gate": "Fifth-percentile completeness",
+      "observed": 1.0,
+      "rule": ">=0.800",
+      "status": "Pass"
+    },
+    {
+      "gate": "Incomplete required records",
+      "observed": 20.0,
+      "rule": "<=0",
+      "status": "Fail"
+    },
+    {
+      "gate": "Admissible-range violations",
+      "observed": 35.0,
+      "rule": "<=0",
+      "status": "Fail"
+    },
+    {
+      "gate": "Primary-key duplicates",
+      "observed": 20.0,
+      "rule": "<=0",
+      "status": "Fail"
+    },
+    {
+      "gate": "Referential-integrity violations",
+      "observed": 15.0,
+      "rule": "<=0",
+      "status": "Fail"
+    },
+    {
+      "gate": "Max relative recomputation error",
+      "observed": Infinity,
+      "rule": "<=1e-9",
+      "status": "Fail"
+    },
+    {
+      "gate": "Feasibility-flag mismatches",
+      "observed": 14.0,
+      "rule": "<=0",
+      "status": "Fail"
+    },
+    {
+      "gate": "Frontier/dominance violations",
+      "observed": 0.0,
+      "rule": "<=0",
+      "status": "Pass"
+    },
+    {
+      "gate": "Impact-scaling invariance deviation",
+      "observed": 0.0,
+      "rule": "<=1e-9",
+      "status": "Pass"
+    },
+    {
+      "gate": "Manifest leakage violations",
+      "observed": 0.0,
+      "rule": "<=0",
+      "status": "Pass"
+    },
+    {
+      "gate": "Empty evaluation partitions",
+      "observed": 0.0,
+      "rule": "<=0",
+      "status": "Pass"
+    },
+    {
+      "gate": "Checksum pass rate",
+      "observed": 1.0,
+      "rule": ">=1.000",
+      "status": "Pass"
+    }
+  ],
+  "gates_release": [
+    {
+      "gate": "Schema pass rate",
+      "observed": 1.0,
+      "rule": ">=1.000",
+      "status": "Pass"
+    },
+    {
+      "gate": "Median record completeness",
+      "observed": 1.0,
+      "rule": ">=0.950",
+      "status": "Pass"
+    },
+    {
+      "gate": "Fifth-percentile completeness",
+      "observed": 1.0,
+      "rule": ">=0.800",
+      "status": "Pass"
+    },
+    {
+      "gate": "Incomplete required records",
+      "observed": 0.0,
+      "rule": "<=0",
+      "status": "Pass"
+    },
+    {
+      "gate": "Admissible-range violations",
+      "observed": 0.0,
+      "rule": "<=0",
+      "status": "Pass"
+    },
+    {
+      "gate": "Primary-key duplicates",
+      "observed": 0.0,
+      "rule": "<=0",
+      "status": "Pass"
+    },
+    {
+      "gate": "Referential-integrity violations",
+      "observed": 0.0,
+      "rule": "<=0",
+      "status": "Pass"
+    },
+    {
+      "gate": "Max relative recomputation error",
+      "observed": 5.055591598677003e-16,
+      "rule": "<=1e-9",
+      "status": "Pass"
+    },
+    {
+      "gate": "Feasibility-flag mismatches",
+      "observed": 0.0,
+      "rule": "<=0",
+      "status": "Pass"
+    },
+    {
+      "gate": "Frontier/dominance violations",
+      "observed": 0.0,
+      "rule": "<=0",
+      "status": "Pass"
+    },
+    {
+      "gate": "Impact-scaling invariance deviation",
+      "observed": 0.0,
+      "rule": "<=1e-9",
+      "status": "Pass"
+    },
+    {
+      "gate": "Manifest leakage violations",
+      "observed": 0.0,
+      "rule": "<=0",
+      "status": "Pass"
+    },
+    {
+      "gate": "Empty evaluation partitions",
+      "observed": 0.0,
+      "rule": "<=0",
+      "status": "Pass"
+    },
+    {
+      "gate": "Checksum pass rate",
+      "observed": 1.0,
+      "rule": ">=1.000",
+      "status": "Pass"
+    },
+    {
+      "gate": "Injected-defect recall",
+      "observed": 1.0,
+      "rule": ">=1.000",
+      "status": "Pass"
+    },
+    {
+      "gate": "False-positive quarantine flags",
+      "observed": 0.0,
+      "rule": "<=0",
+      "status": "Pass"
+    },
+    {
+      "gate": "Release equivalence to reference digest",
+      "observed": 1.0,
+      "rule": ">=1.000",
+      "status": "Pass"
+    }
+  ],
+  "defect_detection": {
+    "D1_range": {
+      "injected": 20,
+      "detected": 20,
+      "recall": 1.0
+    },
+    "D2_negative_cost": {
+      "injected": 15,
+      "detected": 15,
+      "recall": 1.0
+    },
+    "D3_orphan_fk": {
+      "injected": 15,
+      "detected": 15,
+      "recall": 1.0
+    },
+    "D4_duplicate_pk": {
+      "injected": 20,
+      "detected": 20,
+      "recall": 1.0
+    },
+    "D5_missing_required": {
+      "injected": 20,
+      "detected": 20,
+      "recall": 1.0
+    },
+    "D6_derived_tamper": {
+      "injected": 25,
+      "detected": 25,
+      "recall": 1.0
+    },
+    "D7_budget_flag": {
+      "injected": 10,
+      "detected": 10,
+      "recall": 1.0
+    },
+    "false_positive_flags": 0
+  },
+  "quarantine_counts": {
+    "assets": 20,
+    "vulnerabilities": 20,
+    "threats": 15,
+    "barriers": 35,
+    "configurations": 35
+  },
+  "consistency": {
+    "max_rel_err": 5.055591598677003e-16,
+    "n_checked": 23328,
+    "monotonicity_violations": 0,
+    "dominance_violations": 0
+  },
+  "invariance": {
+    "n": 120,
+    "max_rel_dev": 0.0,
+    "argmin_changes": 0
+  },
+  "manifests": {
+    "family_holdout": {
+      "train": 1728,
+      "validation": 432,
+      "test": 432,
+      "excluded": 0,
+      "groups_used": 36,
+      "violations": 0,
+      "empty_partitions": 0
+    },
+    "network_holdout": {
+      "train": 1728,
+      "validation": 432,
+      "test": 432,
+      "excluded": 0,
+      "groups_used": 36,
+      "violations": 0,
+      "empty_partitions": 0
+    },
+    "compound_holdout": {
+      "train": 648,
+      "validation": 72,
+      "test": 288,
+      "excluded": 1584,
+      "groups_used": 14,
+      "violations": 0,
+      "empty_partitions": 0
+    },
+    "cell_disjoint": {
+      "train": 1554,
+      "validation": 390,
+      "test": 648,
+      "excluded": 0,
+      "groups_used": 36,
+      "violations": 0,
+      "empty_partitions": 0
+    },
+    "budget_extrapolation": {
+      "train": 1384,
+      "validation": 344,
+      "test": 864,
+      "excluded": 0,
+      "groups_used": 36,
+      "violations": 0,
+      "empty_partitions": 0
+    }
+  },
+  "package": {
+    "files": {
+      "tables/scenarios.parquet": 2592,
+      "tables/networks.parquet": 2592,
+      "tables/nodes.parquet": 39312,
+      "tables/links.parquet": 38016,
+      "tables/assets.parquet": 22464,
+      "tables/vulnerabilities.parquet": 44869,
+      "tables/threats.parquet": 20736,
+      "tables/barriers.parquet": 27216,
+      "tables/configurations.parquet": 23328,
+      "tables/frontier.parquet": 129778,
+      "splits/family_holdout.csv": 2592,
+      "splits/network_holdout.csv": 2592,
+      "splits/compound_holdout.csv": 2592,
+      "splits/cell_disjoint.csv": 2592,
+      "splits/budget_extrapolation.csv": 2592
+    },
+    "n_checksummed": 19
+  },
+  "completeness_release": {
+    "scenarios": {
+      "median": 1.0,
+      "p05": 1.0,
+      "min": 1.0
+    },
+    "networks": {
+      "median": 1.0,
+      "p05": 1.0,
+      "min": 1.0
+    },
+    "nodes": {
+      "median": 1.0,
+      "p05": 1.0,
+      "min": 1.0
+    },
+    "links": {
+      "median": 1.0,
+      "p05": 1.0,
+      "min": 1.0
+    },
+    "assets": {
+      "median": 1.0,
+      "p05": 1.0,
+      "min": 1.0
+    },
+    "vulnerabilities": {
+      "median": 1.0,
+      "p05": 1.0,
+      "min": 1.0
+    },
+    "threats": {
+      "median": 1.0,
+      "p05": 1.0,
+      "min": 1.0
+    },
+    "barriers": {
+      "median": 1.0,
+      "p05": 1.0,
+      "min": 1.0
+    },
+    "configurations": {
+      "median": 1.0,
+      "p05": 1.0,
+      "min": 1.0
+    },
+    "frontier": {
+      "median": 1.0,
+      "p05": 1.0,
+      "min": 1.0
+    }
+  },
+  "methods": {
+    "exact": {
+      "median_gap": 0.0,
+      "p95_gap": 8.862272639048384e-17,
+      "share_optimal": 1.0,
+      "median_rrr": 0.3741489615445005,
+      "feasible_share": 1.0
+    },
+    "exact_est": {
+      "median_gap": 0.0,
+      "p95_gap": 0.04731781755792267,
+      "share_optimal": 0.4714506172839506,
+      "median_rrr": 0.377714634704442,
+      "feasible_share": 0.7430555555555556
+    },
+    "full": {
+      "median_gap": -0.17796901397957893,
+      "p95_gap": -0.029357008420471807,
+      "share_optimal": 0.0,
+      "median_rrr": 0.12971551394146247,
+      "feasible_share": 0.0
+    },
+    "greedy": {
+      "median_gap": 8.96730625689135e-17,
+      "p95_gap": 0.056427078753398606,
+      "share_optimal": 0.5281635802469136,
+      "median_rrr": 0.38623227695970963,
+      "feasible_share": 1.0
+    },
+    "greedy_est": {
+      "median_gap": 0.0014455437265289504,
+      "p95_gap": 0.07775673748224844,
+      "share_optimal": 0.3449074074074074,
+      "median_rrr": 0.3854275216972013,
+      "feasible_share": 0.8155864197530864
+    },
+    "layer_uniform": {
+      "median_gap": 0.1789002398760112,
+      "p95_gap": 0.3671103756742199,
+      "share_optimal": 0.08950617283950617,
+      "median_rrr": 0.5722054681189646,
+      "feasible_share": 1.0
+    },
+    "max_effect": {
+      "median_gap": 0.16635344855769926,
+      "p95_gap": 0.4350527844874107,
+      "share_optimal": 0.041666666666666664,
+      "median_rrr": 0.5970496701771524,
+      "feasible_share": 1.0
+    },
+    "none": {
+      "median_gap": 0.6258510384554996,
+      "p95_gap": 0.9496718371912671,
+      "share_optimal": 0.0,
+      "median_rrr": 1.0,
+      "feasible_share": 1.0
+    },
+    "random": {
+      "median_gap": 0.10617491107314965,
+      "p95_gap": 0.36129311782324475,
+      "share_optimal": 0.09297839506172839,
+      "median_rrr": 0.5252565288839118,
+      "feasible_share": 1.0
+    }
+  },
+  "by_reliability": {
+    "0.6": {
+      "median_regret_exact_est": 0.00019196685070164865,
+      "p90_regret_exact_est": 0.050861495212579544,
+      "mean_regret_exact_est": 0.008735054655295095,
+      "median_regret_greedy_est": 0.0034791068678467225,
+      "budget_violation_rate": 0.4201388888888889
+    },
+    "0.8": {
+      "median_regret_exact_est": 0.0,
+      "p90_regret_exact_est": 0.022217776952289745,
+      "mean_regret_exact_est": 0.0028988078480502682,
+      "median_regret_greedy_est": 0.003842262702996306,
+      "budget_violation_rate": 0.2789351851851852
+    },
+    "0.95": {
+      "median_regret_exact_est": 0.0,
+      "p90_regret_exact_est": 0.0013938011456310127,
+      "mean_regret_exact_est": 0.00030024088537097994,
+      "median_regret_greedy_est": 7.57576829233822e-17,
+      "budget_violation_rate": 0.07175925925925926
+    }
+  },
+  "by_budget": {
+    "0.15": 0.5351214147096794,
+    "0.3": 0.33497038007401003,
+    "0.5": 0.21829046650598152
+  },
+  "by_depth": {
+    "2": 0.5876091421570688,
+    "3": 0.4582919598093793,
+    "4": 0.3164859849619947,
+    "5": 0.17899391488179572
+  },
+  "by_effectiveness": {
+    "0.55": 0.4796541171057518,
+    "0.7": 0.3714628255618674,
+    "0.85": 0.2566710816248322
+  },
+  "eta2_log_rrr": {
+    "topology": 0.10287524739858579,
+    "family": 0.024784720916258114,
+    "depth": 0.3026770670264692,
+    "effectiveness_mean": 0.1186777214135978,
+    "input_reliability": 0.0045273538091669605,
+    "impact_multiplier": 0.00571003083557182,
+    "budget_fraction": 0.21385480537705895
+  },
+  "eta2_regret": {
+    "topology": 0.0006323198862040369,
+    "family": 0.00027893863161822344,
+    "depth": 0.0013537724497270792,
+    "effectiveness_mean": 0.00351059261420924,
+    "input_reliability": 0.01836089300838414,
+    "impact_multiplier": 0.0025016888987250234,
+    "budget_fraction": 0.003884252728805218
+  },
+  "exact_indicators": {
+    "ch_coverage": {
+      "median": 1.0,
+      "p05": 0.6334168755221387,
+      "p95": 1.0
+    },
+    "mean_coverage_depth": {
+      "median": 1.6181818181818182,
+      "p05": 0.6916783216783217,
+      "p95": 3.099684280491857
+    },
+    "mean_threat_coverage": {
+      "median": 0.6226199615720042,
+      "p05": 0.2367465433874278,
+      "p95": 0.9462887698850945
+    },
+    "min_threat_coverage": {
+      "median": 0.3639152912903825,
+      "p05": 0.030409776678079776,
+      "p95": 0.8939639326669084
+    },
+    "rosi": {
+      "median": 6.429070617037446,
+      "p05": 1.02090421115018,
+      "p95": 26.421110446028724
+    },
+    "n_selected": {
+      "median": 4.0,
+      "p05": 1.0,
+      "p95": 9.0
+    },
+    "n_layers_used": {
+      "median": 2.0,
+      "p05": 1.0,
+      "p95": 5.0
+    }
+  },
+  "degenerate_budget_share": 0.0,
+  "frontier_size": {
+    "median": 46.0,
+    "min": 9,
+    "max": 162,
+    "total_points": 129778
+  },
+  "baseline_risk": {
+    "median": 472.38858555936815,
+    "p05": 143.2544922090255,
+    "p95": 1455.1420433984651
+  }
+}

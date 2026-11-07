@@ -1,0 +1,543 @@
+@@type: Data Descriptor
+@@header: Data 2026, 11, x FOR PEER REVIEW
+@@title: tvbnet 0.1.0-Rehearsal: A Reproducible Synthetic Dataset and Executable Validation Pipeline for Multilayer Security and Cost–Risk Trade-Offs in Data Transmission Networks
+@@authors: Olga Torstensson ^{1,*}, Dmytro Prokopovych-Tkachenko ^{2,*}, Valerii Magro ^{3}, Vadym Yakovenko ^{4} and Oleksii Aleksieiev ^{5}
+@@affil: ^{1} School of Information Technology, Halmstad University, 301 18 Halmstad, Sweden ;; ^{2} Department of Cybersecurity and Information Technologies, University of Customs and Finance, 49000 Dnipro, Ukraine ;; ^{3} Department of Information Security and Telecommunications, Dnipro University of Technology, 49005 Dnipro, Ukraine; magro.v.i\@nmu.one ;; ^{4} Department of Computer Science and Software Engineering, University of Customs and Finance, 49000 Dnipro, Ukraine; yakovenko.vadim.al\@gmail.com ;; ^{5} Department of System Analysis and Control, Dnipro University of Technology, 49005 Dnipro, Ukraine; aleksieiev.o.m\@nmu.one
+@@corr: ^{*} Correspondence: olga.torstensson\@hh.se (O.T.); omega2417\@umsf.edu.ua (D.P.-T.)
+@@abstract: Reproducible evaluation of protection in data transmission networks requires datasets that connect threats, vulnerabilities, protective barriers, and resource constraints through explicit modeling assumptions. This Data Descriptor presents tvbnet 0.1.0-rehearsal, a software-and-data record that extends the release discipline of the uavews rehearsal to multilayer security. A fixed-seed design crosses six network configurations, six threat-scenario families, and four layer depths with an L9(3^{4}) array for barrier effectiveness, input-information reliability, incident impact, and budget, giving 1296 cells and 2592 scenarios. Each scenario links assets valued through technical, economic, and security indicators to threats, vulnerabilities, and 6–15 candidate barriers; all 24,261,120 barrier subsets were enumerated to derive threat coverage, residual risk, protection cost, Pareto frontiers, and seven selection methods. Ten Parquet tables, five leakage-audited manifests, object-level PROV-O lineage, RO-Crate metadata, and SHA-256 manifests are supplied. All 125 injected defects were detected without false positives, the release reproduced the reference digests, recomputed risks agreed within 5.1 × 10^{−16}, and 17 of 17 gates passed. Greedy selection was optimal in 52.8% of scenarios; at input reliability 0.60, optimization on estimates exceeded the true budget in 42.0% of scenarios. All values are synthetic and model-derived, not operational security measurements.
+@@dataset: tvbnet: Synthetic Threat–Vulnerability–Barrier Dataset and Validation Pipeline for Multilayer Security and Cost–Risk Trade-Offs. Zenodo, 2026. Version-specific DOI: 10.5281/zenodo.XXXXXXXX [to be assigned at deposit]; internal project version: 0.1.0-rehearsal. Predecessor record: https://doi.org/10.5281/zenodo.22166893.
+@@license: Creative Commons Attribution 4.0 International (CC BY 4.0)
+@@keywords: synthetic dataset; data transmission networks; multilayer security; threat coverage; residual risk; information reliability; cost–risk trade-off; data provenance; technical validation; reproducibility
+
+# 1. Summary
+
+Protection of a data transmission network is rarely a single control. Perimeter filtering, segmentation and intrusion detection, link and transport cryptography, host hardening, and data-level controls are stacked so that a threat that passes one barrier still meets another. The quantitative questions that follow are old ones: which threats does a given set of barriers actually cover, how much expected loss remains, what does the protection cost, and which configuration should be chosen when the budget is finite. The threat–object–barrier formulation of Hoffman and Clements [@hoffman,@clements], the layered-defence view usually summarized as overlapping imperfect barriers [@reason], economic investment models [@gordon,@freund], and optimization-based countermeasure selection [@dewri,@viduto,@sawik,@fielder,@kiesling] have all addressed parts of these questions. Risk-management guidance frames the same problem in terms of threat sources, vulnerabilities, likelihood, impact, and control selection [@nist30,@nist53,@iso27005].
+
+What is missing is a reusable data resource for comparing such methods under controlled and declared assumptions. Public network-security datasets record traffic and attacks for detector training [@ring,@cicids,@unsw]; they do not contain barrier catalogues, costs, asset values, or residual-risk targets, and their known labeling and processing defects show how much depends on documented construction [@engelen,@arp]. Published optimization studies, in turn, usually report results for a handful of illustrative networks whose parameter tables are not released as versioned, validated data. A method for selecting protective configurations therefore cannot easily be re-evaluated on the same inputs, nor can its sensitivity to unreliable input estimates be separated from its sensitivity to network structure.
+
+This Descriptor presents tvbnet 0.1.0-rehearsal, a fixed-seed synthetic software-and-data record designed to fill that gap. It is a direct continuation of the uavews 0.1.0-rehearsal record for small-UAV early warning [@uavews,@uavewsZ]. The application domain differs, but the release discipline is carried over and extended: event- (here scenario-) centered tables with stable non-semantic identifiers, explicit separation of model inputs from model-derived outcomes, release gates whose outcomes remain visible, leakage-resistant evaluation manifests, machine-readable provenance, research-object packaging, and checksum manifests [@fair,@rocrate,@provo]. The four limitations disclosed for uavews were treated as requirements for this record (Section 2.1, Table 1).
+
+The resource makes five contributions:
+
+NUM: A scenario-centered schema that links a network configuration, information assets valued from technical, economic, and security indicators, vulnerabilities, threats, and a layered catalogue of candidate barriers to derived measures of threat coverage, residual risk, protection cost, and return on security investment.
+NUM: A balanced design in which six network configurations, six threat-scenario families, and four layer depths are fully crossed with an L9(3^{4}) orthogonal array for barrier effectiveness, input-information reliability, incident impact, and budget [@hedayat], with every barrier subset enumerated so that exact optima and complete cost–risk Pareto frontiers are part of the release.
+NUM: Reliability-perturbed parameter estimates stored beside true values, so that selection on imperfect inputs can be evaluated against the true model through regret and budget-overrun measures.
+NUM: A two-phase technical validation with deliberately injected defects, quarantine, deterministic redelivery, and 17 release gates, including exact recomputation of every derived indicator from its inputs.
+NUM: Five audited manifests organized by scenario family, network configuration, their combination, design cell, and budget level, none of which has an empty partition, together with a software project proposal for turning the prototype into a decision-support platform (Appendix A).
+
+The record makes no claim about the security of any real network, the effectiveness of any commercial control, or the frequency of any real threat. Its numerical outcomes follow from the declared model and parameters; they are reproducible properties of a computational experiment rather than measurements. Synthetic data are useful for exactly this purpose when their generating assumptions are disclosed and their outputs are not presented as observations [@jordon].
+
+# 2. Data Description
+
+## 2.1. Scope, Status, and Relation to uavews
+
+The record is a rehearsal of dataset formation, validation, and packaging for computational experiments on multilayer protection. All tables were computed by `tvbnet` version 0.1.0-rehearsal from the seed 20261107 and the configuration file `config/pipeline.yaml`. No row is an operational measurement; every monetary quantity is expressed in thousands of conventional units (kCU), which are not tied to any currency. A `PROVENANCE_WARNING` field in `report/validation_report.json` repeats this status.
+
+The uavews Descriptor closed by naming four defects scheduled for correction: activity-level rather than object-level provenance, empty validation partitions in location and time holdouts, a reduced experimental design that silently dropped two factors, and a test suite that was deposited but not executed during manuscript preparation [@uavews]. Table 1 shows how each was handled here. The list also records one practice that was kept unchanged, namely that a gate failure is reported rather than repaired by relaxing its threshold.
+
+TABLE **Table 1.** Lessons carried over from uavews 0.1.0-rehearsal and their implementation in tvbnet 0.1.0-rehearsal.
+WIDTHS: 30,35,35
+OPTS: {"alignLeft": true}
+Issue in uavews 0.1.0 | Implementation in tvbnet 0.1.0 | Evidence in this record
+Provenance log listed activities only; *used* and *generated* arrays were empty | Every activity lists used and generated entities; each entity carries a SHA-256 digest and record count; every configuration row stores the digest of its input rows | `metadata/provenance.jsonld`; column `derived_from_digest`
+Location and time holdouts had empty validation partitions (three groups only) | Six families and six network configurations; every manifest has train, validation, and test partitions | Table 9; gate “Empty evaluation partitions” = 0
+Reduced design omitted two configured factors | Structural factors fully crossed; remaining four factors assigned by a pairwise-balanced L9(3^{4}) array; balance verified in code | `design.l9_balance()`; 1296 cells
+Tests deposited but not executed for the manuscript | 20 test functions (25 cases) executed for this Descriptor; all passed | Section 3.10
+Gate failures reported, not relaxed | Kept; gates evaluated on the raw delivery and on the release | Table 8
+ENDTABLE
+
+## 2.2. Package Organization
+
+Table 2 summarizes the deposit. The archive separates source code, configuration, the canonical release, and the report. The canonical release can be regenerated from code and configuration; the report records every computed metric used in this Descriptor, including the gate outcomes on the defect-injected raw delivery.
+
+TABLE **Table 2.** Organization of the deposited package.
+WIDTHS: 32,68
+OPTS: {"alignLeft": true}
+Path | Contents and role
+`code/src/tvbnet/` | Python package: design, generation, risk engine, selection methods, validation, release, packaging, command-line driver (nine modules, 1124 lines)
+`code/tests/` | 20 test functions (25 test cases) for equations, monotonicity, optimality, invariance, defect detection, redelivery, and manifest leakage
+`code/config/pipeline.yaml` | All factor levels, weights, thresholds, noise gains, and defect counts
+`dataset/tables/` | Ten canonical Apache Parquet tables (Table 3)
+`dataset/splits/` | Five CSV evaluation manifests (Section 3.8)
+`dataset/docs/data_dictionary.csv` | Column types, requirement flags, admissible ranges, keys, and table descriptions
+`dataset/metadata/` | DataCite metadata and object-level PROV-O provenance (JSON-LD)
+`dataset/ro-crate-metadata.json` | RO-Crate description of every released file with size and digest
+`dataset/checksums_sha256.txt` | Detached SHA-256 manifest for all released files except itself
+`report/validation_report.json` | Gates (raw and release), defect detection, consistency, invariance, manifest audit, and analyses
+`figures/`, `scripts/` | Figures of this Descriptor and the script that regenerates them
+ENDTABLE
+
+## 2.3. Canonical Tables and Logical Model
+
+The scenario is the principal unit (Figure {F:model}). Every input and output row carries a `scenario_id`; manifest membership is assigned at scenario level and, through the design cell, to both replicates of a cell together. Identifiers are truncated SHA-256 digests of their generating keys and therefore carry no semantic content while remaining stable across runs. Model inputs (scenarios, networks, nodes, links, assets, vulnerabilities, threats, barriers) are kept separate from model-derived outputs (configurations, frontier), so that a user can replace the derived tables with the output of another method without touching the inputs. Table 3 lists record counts and roles.
+
+FIG: fig02_logical_model.png | 16.5 | **Figure {F:model}.** Scenario-centered logical model. Blue entities hold model inputs; orange entities hold model-derived outputs. Solid lines are stored key relations with cardinalities; dashed lines are relations computed by the risk engine (Equations (2) and (3)) and are not stored as keys.
+
+TABLE **Table 3.** Canonical tables in the release. All values are synthetic.
+WIDTHS: 22,22,14,42
+Table | Primary key | Records | Role
+scenarios | scenario_id | 2592 | Design factors, sizes, baseline risk *R*(0), budget *B*, frontier size, input digest
+networks | network_id | 2592 | Topology family, node, link, and segment counts
+nodes | node_id | 39,312 | Gateway, routers, firewalls, switches, and hosts with segment
+links | link_id | 38,016 | Uplink, trunk, mesh, ring, WAN, and access links
+assets | asset_id | 22,464 | Segment, hop count, indicators *T*, *E*, *S*, reliability *r*, value *V*
+vulnerabilities | vuln_id | 44,869 | Asset, exploitability *p*_{*v*}, threat-class mask
+threats | threat_id | 20,736 | Class, origin, rate *λ*, severity *s*, and their estimates
+barriers | barrier_id | 27,216 | Layer, tier, effectiveness *e*, annual cost *c*, scope, and estimates
+configurations | config_id | 23,328 | Nine configurations per scenario and their derived indicators
+frontier | (scenario_id, point) | 129,778 | Exhaustive cost–risk Pareto frontier points
+ENDTABLE
+
+## 2.4. Scenario Design and Corpus Composition
+
+Table 4 lists the design factors. Three structural factors—network configuration, threat-scenario family, and layer depth—are fully crossed (6 × 6 × 4 = 144 combinations), because they determine the size and shape of each scenario and are the natural grouping variables for holdout evaluation. The four remaining factors, each at three levels, are assigned by the standard L9(3^{4}) orthogonal array listed in Appendix B, in which every pair of factors contains every pair of levels exactly once [@hedayat]. This is the same array proposed for the corrected uavews field design [@uavews], here used as a working design rather than a plan. The crossing gives 144 × 9 = 1296 cells; two replicates with independent random draws give 2592 scenarios.
+
+TABLE **Table 4.** Design factors and levels. Levels are modeling assumptions chosen to span contrasting regimes, not estimates for any real network.
+WIDTHS: 26,16,58
+OPTS: {"alignLeft": true}
+Factor | Assignment | Levels
+Network configuration | crossed | star; tree; partial mesh; ring; hub-and-spoke; segmented DMZ (Figure {F:topo})
+Threat-scenario family | crossed | confidentiality (EAV); availability (DOS); intrusion (INT); malware (MAL); insider (INS); integrity (TAM)—dominant class drawn with probability 0.5
+Layer depth *D* | crossed | 2, 3, 4, 5 layers of L1 perimeter, L2 network, L3 channel, L4 host, L5 data
+Mean barrier effectiveness *ē* | L9 column 1 | 0.55; 0.70; 0.85
+Input-information reliability *ρ* | L9 column 2 | 0.60; 0.80; 0.95
+Impact multiplier *k*_{*I*} | L9 column 3 | 0.5; 1.0; 2.0
+Budget fraction *β* | L9 column 4 | 0.15; 0.30; 0.50 of the full catalogue cost
+Replicates | — | 2 independent draws per cell
+ENDTABLE
+
+Each scenario contains 6–10 assets (mean 8.67), eight threats, 1–3 vulnerabilities per asset, and three candidate barriers (basic, standard, and advanced tiers) in each of the *D* layers present, so that *m* = 3*D* ∈ {6, 9, 12, 15}, with 648 scenarios at each value. Threat classes are close to balanced over the whole corpus (16.1–17.2% each) while being strongly unbalanced within each family. Across all assets, the median information value was 43.1 kCU (interquartile range 35.4–51.2 kCU); across all barriers, effectiveness ranged from 0.28 to 0.97 (mean 0.686) and annual cost from 2.25 to 55.6 kCU (median 10.8 kCU). The median unprotected expected loss *R*(0) was 472 kCU per year (5th–95th percentile 143–1455 kCU). These ranges describe the generator, not any real organization.
+
+FIG: fig03_topologies.png | 16.5 | **Figure {F:topo}.** The six network configurations. Diamonds mark the external gateway, open squares routers and switches, the red square the internal firewall of the segmented DMZ, and dots the hosts that carry information assets, coloured by segment. Dashed links are WAN links. Hop counts from the gateway enter the exposure factor of Equation (2).
+
+## 2.5. Derived Indicators
+
+Every configuration row stores the indicators listed in Table 5. Each is a deterministic function of the input rows of its scenario and of the selection bit-string, which is why exact recomputation can serve as a validation gate (Section 3.11.2).
+
+TABLE **Table 5.** Derived indicators stored for each configuration.
+WIDTHS: 28,16,56
+OPTS: {"alignLeft": true}
+Column | Equation | Meaning
+residual_risk_kcu | (5) | Annual expected loss remaining after the selected barriers
+cost_kcu | (6) | Annual protection cost of the selected barriers
+relative_residual_risk | (5) | *R*(*x*)/*R*(0)
+mean_threat_coverage, min_threat_coverage | (7) | Loss-weighted coverage of each threat, averaged and minimized over threats
+ch_coverage | (8) | Share of exposed threat–asset pairs covered by at least one selected barrier (Clements–Hoffman coverage)
+mean_coverage_depth | (8) | Mean number of distinct layers covering an exposed pair
+rosi | (9) | Return on security investment
+optimality_gap | (11) | [*R*(*x*) − *R*(*x*^{*})]/*R*(0); regret for estimate-based methods
+feasible | (6) | Whether the true cost respects the budget *B*
+residual_risk_est_kcu | (5) | Residual risk evaluated with the estimated parameters
+ENDTABLE
+
+# 3. Methods
+
+## 3.1. Pipeline Overview
+
+The pipeline (Figure {F:pipeline}) runs in two halves. Stages G1–G5 build the reference tables: design (G1), generation of networks, assets, vulnerabilities, threats, and barriers (G2), reliability-dependent perturbation of the parameters a planner would have to estimate (G3), enumeration of every barrier subset and selection by seven methods (G4), and derivation of indicators (G5). Stages Q1–P treat those tables as an upstream delivery: a copy receives injected defects (Q1), Phase-1 validation checks structure (V1–V5), flagged rows are quarantined and redelivered by primary key (Q2), Phase-2 validation recomputes derived values (V6–V8), and the release is split and packaged (S/P).
+
+FIG: fig01_pipeline.png | 16.5 | **Figure {F:pipeline}.** Executable pipeline. Upper row: generation of the reference tables. Lower row: injection of defects into a copy, two-phase validation with quarantine and deterministic redelivery, and packaging. Gates are evaluated on both the raw delivery and the release.
+
+## 3.2. Network Configurations and Information Assets
+
+Each topology family is a deterministic graph with an external gateway, intermediate routers or switches, access switches that define segments, and hosts that carry assets (Figure {F:topo}). A breadth-first search from the gateway gives each asset a hop count *h*_{*a*}. Assets receive one of five types and three indicators on [0, 1]: technical criticality *T*_{*a*}, economic value *E*_{*a*}, and security sensitivity *S*_{*a*}, drawn from Beta distributions with a sensitivity increment for database and storage assets. Following the idea that the value of information depends both on what it is used for and on how far it can be trusted [@ahituv,@wang], each asset also receives an information-reliability score *r*_{*a*} ∈ [0.70, 1.00]. Its value is
+
+EQ: *V*_{*a*} = *M* · *r*_{*a*} · (*w*_{*T*}*T*_{*a*} + *w*_{*E*}*E*_{*a*} + *w*_{*S*}*S*_{*a*}), || 1
+
+with *M* = 100 kCU and weights *w*_{*T*} = 0.30, *w*_{*E*} = 0.40, and *w*_{*S*} = 0.30. The reliability *r*_{*a*} describes the asset’s content; it is distinct from the input-information reliability *ρ* of Section 3.5, which describes the planner’s estimates.
+
+## 3.3. Threats, Vulnerabilities, and Multilayer Barriers
+
+Each threat *t* has a class *c*_{*t*} ∈ {EAV, DOS, INT, MAL, INS, TAM}, an origin (internal for INS, external otherwise), an annual rate *λ*_{*t*} drawn from a log-normal distribution with median 1.5, and a severity *s*_{*t*} ∈ (0, 1) drawn from Beta(2, 3). Each vulnerability *v* on an asset has an exploitability *p*_{*v*} ∈ [0.05, 0.60] and a mask of threat classes able to use it. The probability that threat *t* succeeds against asset *a* without protection is
+
+EQ: *p*_{*ta*} = *g*_{*ta*} [1 − ∏_{*v*∈𝒱(*a*,*c*_{*t*})} (1 − *p*_{*v*})], || 2
+
+where 𝒱(*a*, *c*) is the set of vulnerabilities of *a* usable by class *c*, and the exposure factor is *g*_{*ta*} = exp[−*γ*(*h*_{*a*} − 1)] for external threats and *g*_{*ta*} = 1 for internal threats, with hop attenuation *γ* = 0.15. The exposure factor is the only way network topology enters the success probability; it also enters through barrier scope.
+
+A barrier *b* belongs to layer ℓ_{*b*}, has effectiveness *e*_{*b*}, annual cost *c*_{*b*}, and a scope *s*_{*ba*} ∈ {0, 1} over assets. Perimeter barriers cover every asset; network and channel barriers cover one segment (network barriers sometimes two); host and data barriers cover a random subset of assets. Tier offsets of −0.12, 0, and +0.08 around *ē* and cost multipliers of 0.6, 1.0, and 1.8 create the trade-off that makes selection non-trivial. The mitigation that barrier *b* applies to threat *t* on asset *a* is
+
+EQ: *m*_{*bta*} = *e*_{*b*} · *α*(ℓ_{*b*}, *c*_{*t*}) · *s*_{*ba*} · [1 − 𝟙(ℓ_{*b*} = L1 ∧ *t* internal)], || 3
+
+where *α* is the layer–class affinity matrix in Table 6. The indicator term encodes the fact that an insider is already inside the perimeter. The affinity values are declared assumptions of the generator; they describe which kind of control acts on which kind of threat, in the spirit of control catalogues [@nist53], but they are not taken from any catalogue.
+
+TABLE **Table 6.** Layer–class affinity *α*(ℓ, *c*): share of a barrier’s effectiveness that applies to a threat class. Values are generator assumptions.
+WIDTHS: 28,12,12,12,12,12,12
+Layer | EAV | DOS | INT | MAL | INS | TAM
+L1 perimeter | 0.2 | 0.8 | 0.9 | 0.6 | 0.0 | 0.2
+L2 network (segmentation, IDS) | 0.3 | 0.6 | 0.8 | 0.7 | 0.4 | 0.3
+L3 channel (link/transport cryptography) | 1.0 | 0.1 | 0.2 | 0.1 | 0.2 | 0.9
+L4 host (hardening, endpoint detection) | 0.1 | 0.3 | 0.7 | 0.9 | 0.6 | 0.5
+L5 data (encryption at rest, access, integrity) | 0.9 | 0.0 | 0.3 | 0.3 | 0.8 | 0.9
+ENDTABLE
+
+## 3.4. Residual Risk, Cost, Coverage, and Selection
+
+For a selection vector *x* ∈ {0, 1}^{*m*}, barriers act independently and in series, so the probability that threat *t* passes all selected barriers protecting asset *a* is
+
+EQ: *π*_{*ta*}(*x*) = ∏_{*b*} (1 − *m*_{*bta*} *x*_{*b*}). || 4
+
+Independence between barriers is the standard simplification of layered-defence models [@reason,@kordy]; it is a declared assumption of this release and a candidate for relaxation (Appendix A). With impact *I*_{*ta*} = *k*_{*I*} *s*_{*t*} *V*_{*a*}, the residual risk is the annual expected loss
+
+EQ: *R*(*x*) = Σ_{*t*} Σ_{*a*} *λ*_{*t*} *p*_{*ta*} *I*_{*ta*} *π*_{*ta*}(*x*) = Σ_{*t*} Σ_{*a*} *W*_{*ta*} *π*_{*ta*}(*x*), || 5
+
+and the configuration problem is a budgeted selection
+
+EQ: *C*(*x*) = Σ_{*b*} *c*_{*b*} *x*_{*b*},   *x*^{*} = arg min_{*x*} *R*(*x*) subject to *C*(*x*) ≤ *B*,   *B* = *β* Σ_{*b*} *c*_{*b*}. || 6
+
+Equation (6) is a nonlinear knapsack problem [@martello]. Because *m* ≤ 15, the release solves it exactly by enumerating all 2^{*m*} subsets; over the corpus this amounts to 648 × (2^{6} + 2^{9} + 2^{12} + 2^{15}) = 24,261,120 evaluated configurations. The same enumeration yields the complete Pareto frontier of non-dominated (cost, risk) pairs, which is stored in the `frontier` table and makes the release usable for multi-objective methods [@nsga] without a separate solver.
+
+Coverage is reported in two complementary forms. The loss-weighted coverage of threat *t* is
+
+EQ: *κ*_{*t*}(*x*) = 1 − Σ_{*a*} *W*_{*ta*} *π*_{*ta*}(*x*) / Σ_{*a*} *W*_{*ta*}, || 7
+
+and the Clements–Hoffman coverage is the share of exposed pairs (*W*_{*ta*} > 0) for which at least one selected barrier satisfies *m*_{*bta*} ≥ *θ*, with *θ* = 0.10. The coverage depth of a pair counts the distinct layers among such barriers, so that it measures defence in depth directly:
+
+EQ: CH(*x*) = |{(*t*,*a*): ∃*b*, *x*_{*b*} = 1, *m*_{*bta*} ≥ *θ*}| / |{(*t*,*a*): *W*_{*ta*} > 0}|,   depth_{*ta*}(*x*) = |{ℓ_{*b*}: *x*_{*b*} = 1, *m*_{*bta*} ≥ *θ*}|. || 8
+
+The economic return of a configuration follows the usual return-on-security-investment form [@gordon,@freund]:
+
+EQ: ROSI(*x*) = [*R*(0) − *R*(*x*) − *C*(*x*)] / *C*(*x*). || 9
+
+## 3.5. Input-Information Reliability
+
+A planner never knows *λ*_{*t*}, *s*_{*t*}, *e*_{*b*}, and *c*_{*b*} exactly. The release therefore stores, beside each true parameter, an estimate whose dispersion is governed by the scenario’s input-information reliability *ρ*:
+
+EQ: *λ̂*_{*t*} = *λ*_{*t*} exp(*σz* − *σ*^{2}/2),  logit *ê*_{*b*} = logit *e*_{*b*} + *σz*′,  *ĉ*_{*b*} = *c*_{*b*} exp(0.33*σz*″),  *σ* = 1.5(1 − *ρ*), || 10
+
+with independent standard normal draws *z*, *z*′, *z*″ and a severity estimate perturbed with dispersion *σ*/2. Thus *σ* = 0.60, 0.30, and 0.075 at *ρ* = 0.60, 0.80, and 0.95. The mean-preserving form of *λ̂* keeps estimates unbiased on average, so that the effects reported below come from dispersion alone. A configuration *x̂* selected on the estimates is evaluated on the true model through its regret
+
+EQ: regret(*x̂*) = [*R*(*x̂*) − *R*(*x*^{*})] / *R*(0), || 11
+
+and through feasibility of its true cost. Regret can be negative when *x̂* overspends the budget, which is why both measures are stored.
+
+## 3.6. Configuration-Selection Methods
+
+Nine configurations are stored per scenario: the empty selection (`none`, which defines *R*(0)), all barriers regardless of cost (`full`), the exact optimum (`exact`), a greedy method that repeatedly adds the barrier with the largest risk reduction per unit cost that still fits the budget (`greedy`), a defence-in-depth heuristic that buys the cheapest barrier of each layer in order (`layer_uniform`), a method that buys barriers by decreasing nominal effectiveness (`max_effect`), a random maximal feasible selection (`random`), and the exact and greedy methods applied to the estimated parameters (`exact_est`, `greedy_est`). The heuristics stand for decision rules frequently used in practice; they are baselines for future methods, not recommendations.
+
+## 3.7. Defect Injection, Quarantine, and Redelivery
+
+As in uavews, the release process is tested with known defects. A copy of the reference tables receives 125 defects in seven classes: out-of-range effectiveness (D1, 20 rows), negative cost (D2, 15), orphan foreign keys in threats (D3, 15), duplicated asset rows (D4, 20), missing required exploitability values (D5, 20), residual risks inflated by 5% in configurations of real methods (D6, 25), and infeasible configurations flagged as feasible (D7, 10). Defect positions are drawn from a separate fixed seed and never overlap.
+
+Validation is ordered. Phase 1 (V1–V5) checks schema, record completeness against the declared required-field set, admissible ranges, primary-key uniqueness, and referential integrity on all tables. Flagged input rows are quarantined, duplicates are dropped, and the remaining flagged keys are redelivered from the deterministic generator—the synthetic analogue of an upstream redelivery request. Only then does Phase 2 (V6–V8) recompute every derived indicator from the repaired inputs, check Pareto-frontier monotonicity and dominance (no configuration has lower risk than `full` or higher risk than `none`), and test invariance. This order matters: recomputing derived values from corrupted inputs would flag correct derived rows and produce false positives.
+
+## 3.8. Leakage-Resistant Manifests
+
+Scenarios that share a design cell differ only in random draws, and scenarios that share a family or network configuration share structure. Five manifests therefore split at group level and audit their own claim [@kaufman,@roberts]: `family_holdout` holds out one family for testing and one for validation; `network_holdout` does the same for network configurations; `compound_holdout` tests on two families crossed with two configurations, validates on one unseen family–configuration pair, trains on the remaining three-by-three block, and excludes mixed cells; `cell_disjoint` assigns design cells at random in proportions 0.60/0.15/0.25; and `budget_extrapolation` tests on the highest budget fraction and validates on 20% of the lower-budget cells. The audit counts shared values of the claimed grouping variables between the partitions concerned and shared design cells between all partitions.
+
+## 3.9. Packaging, Provenance, and Integrity
+
+The packaging stage writes the ten tables, the manifests, and a data dictionary that is generated from the same schema declaration used by the validator. Provenance is written as PROV-O JSON-LD [@provo] in which each activity—generation and derivation, raw-delivery validation, quarantine and redelivery, and packaging—lists the entities it used and generated, and each released file is an entity with its SHA-256 digest and record count. In addition, each configuration row carries the digest of the four input tables of its scenario, which closes the object-level lineage gap reported for uavews. An RO-Crate description [@rocrate], DataCite metadata with an *IsDerivedFrom* relation to the uavews record, and a detached SHA-256 manifest [@fips] complete the package. As before, digest verification establishes byte integrity, not the scientific validity of the model; distributed audit schemes such as reputation-based collaborative auditing address a different problem [@edic].
+
+## 3.10. Implementation and Reproducibility
+
+The package comprises nine Python modules with 1124 lines, targets Python 3.11 or later (the run reported here used Python 3.13), and depends on NumPy, pandas, PyArrow, and PyYAML, with Matplotlib for figures and pytest for tests. Per-scenario random generators are seeded from the release seed and the scenario identifier, so that results do not depend on the number of worker processes. Generation and exhaustive enumeration took about 19 s with two worker processes on a two-core cloud machine; the complete run, including both validation phases and packaging, took under two minutes.
+
+Unlike the uavews Descriptor, the test suite was executed for this manuscript: 20 test functions, one parameterized over the six topologies, gave 25 test cases, and all 25 passed. They cover pairwise balance of the L9 array, determinism, the identity *R*(empty) = *R*(0), monotonicity of risk under adding barriers, feasibility and optimality of the exact solution, consistency between the frontier and the exact solution, the perimeter bypass of insider threats, impact-scaling invariance, absence of estimation noise at *ρ* = 1, detection of every injected defect without false positives, restoration of the reference tables by redelivery, and absence of manifest leakage. Two complete runs from the same seed produced byte-identical Parquet tables, manifests, and data dictionary; the provenance and checksum files differ only because they contain wall-clock timestamps.
+
+## 3.11. Technical Validation
+
+### 3.11.1. Structural Integrity and Completeness
+
+On the release, all ten tables passed the schema check, and median, fifth-percentile, and minimum record completeness were 1.0 in every table; no range, primary-key, or referential violation remained. On the raw delivery, the same median and fifth-percentile completeness gates also passed, although 20 records lacked a required value. The record-level gate “Incomplete required records” was added for this reason: aggregate completeness thresholds are insensitive to sparse defects, which is a property worth knowing before relying on them in an empirical release [@iso25012].
+
+### 3.11.2. Computational Consistency and Invariance
+
+All 23,328 configuration rows were recomputed from the released inputs. The largest relative deviation of residual risk or cost was 5.1 × 10^{−16}, against a gate of 10^{−9}, and recomputed feasibility agreed in every row. No Pareto frontier violated monotonicity and no configuration violated the dominance bounds. Equation (5) implies that scaling the impact multiplier scales *R*(*x*) by the same factor and leaves *x*^{*} unchanged. This was verified on 120 randomly chosen scenarios: the maximal deviation from exact scaling was 0 and the optimum changed in none of them. The invariance also explains why *k*_{*I*} has almost no main effect on relative residual risk in Section 3.12.
+
+### 3.11.3. Defect Detection
+
+Every injected defect was detected by the check designed for its class, and no correct row was flagged (Table 7, Figure {F:valid}a). After quarantine and redelivery, the digests of all ten released tables equalled those of the reference tables, which shows that the repair restored the reference exactly rather than approximately.
+
+TABLE **Table 7.** Injected defects and their detection on the raw delivery.
+WIDTHS: 26,18,22,12,12,10
+Defect class | Table | Detecting check | Injected | Detected | Recall
+D1 effectiveness out of range | barriers | V3 range | 20 | 20 | 1.0
+D2 negative cost | barriers | V3 range | 15 | 15 | 1.0
+D3 orphan foreign key | threats | V5 referential | 15 | 15 | 1.0
+D4 duplicated primary key | assets | V4 primary key | 20 | 20 | 1.0
+D5 missing required value | vulnerabilities | V2 completeness | 20 | 20 | 1.0
+D6 tampered residual risk | configurations | V6 recompute | 25 | 25 | 1.0
+D7 false feasibility flag | configurations | V6 feasibility | 10 | 10 | 1.0
+Total | — | — | 125 | 125 | 1.0
+FOOTER: False-positive flags: 0. Quarantined keys: assets 20, vulnerabilities 20, threats 15, barriers 35, configurations 35.
+ENDTABLE
+
+### 3.11.4. Release Gates
+
+Table 8 reports the 17 gates. On the raw delivery, six of the 14 applicable gates failed, each for the reason the injected defects predict; the maximal recomputation error was non-finite because scenarios with duplicated assets could not be rebuilt. On the release, all 17 gates passed. The design intent differs from uavews in one respect: there, deliberate defects remained in the released rehearsal and four gates failed; here, the defects live in a separately reported raw delivery, so that the release can serve as a clean reference while the gate system is still shown to fail when it should.
+
+TABLE **Table 8.** Release-gate outcomes on the raw delivery (with injected defects) and on the release.
+WIDTHS: 38,16,14,16,16
+Gate | Rule | Raw delivery | Release (observed) | Release status
+Schema pass rate | ≥1.000 | Pass | 1.000 | Pass
+Median record completeness | ≥0.950 | Pass | 1.000 | Pass
+Fifth-percentile completeness | ≥0.800 | Pass | 1.000 | Pass
+Incomplete required records | ≤0 | Fail (20) | 0 | Pass
+Admissible-range violations | ≤0 | Fail (35) | 0 | Pass
+Primary-key duplicates | ≤0 | Fail (20) | 0 | Pass
+Referential-integrity violations | ≤0 | Fail (15) | 0 | Pass
+Maximal relative recomputation error | ≤10^{−9} | Fail (non-finite) | 5.1 × 10^{−16} | Pass
+Feasibility-flag mismatches | ≤0 | Fail (14) | 0 | Pass
+Frontier and dominance violations | ≤0 | Pass | 0 | Pass
+Impact-scaling invariance deviation | ≤10^{−9} | Pass | 0 | Pass
+Manifest leakage violations | ≤0 | Pass | 0 | Pass
+Empty evaluation partitions | ≤0 | Pass | 0 | Pass
+Checksum pass rate | ≥1.000 | Pass | 1.000 | Pass
+Injected-defect recall | ≥1.000 | n/a | 1.000 | Pass
+False-positive quarantine flags | ≤0 | n/a | 0 | Pass
+Release equivalence to reference digests | ≥1.000 | n/a | 1.000 | Pass
+FOOTER: Feasibility mismatches on the raw delivery (14) exceed the 10 D7 defects because negative costs (D2) also change the recomputed feasibility of four configurations.
+ENDTABLE
+
+FIG: fig11_validation.png | 16.5 | **Figure {F:valid}.** Technical validation. (**a**) Injected defect classes (rows) against the check that detected them (columns); cell labels give detected/injected counts. (**b**) Gate outcomes on the raw delivery and on the release; “n/a” marks gates defined only for the release.
+
+### 3.11.5. Manifest Audit
+
+All five manifests recorded zero violations of their declared constraints and no empty partition (Table 9, Figure {F:splits}). The compound holdout pays for its stricter claim by excluding 1584 scenarios (61.1%) whose family or configuration appears on both sides; the exclusion is part of the reported result.
+
+TABLE **Table 9.** Evaluation-manifest audit (scenario counts).
+WIDTHS: 24,14,13,11,13,13,12
+Manifest | Held-out unit | Train | Validation | Test | Excluded | Violations
+Family holdout | integrity (test); malware (val.) | 1728 | 432 | 432 | 0 | 0
+Network holdout | segmented DMZ (test); ring (val.) | 1728 | 432 | 432 | 0 | 0
+Compound holdout | 2 families × 2 configurations | 648 | 72 | 288 | 1584 | 0
+Cell-disjoint | design cells | 1554 | 390 | 648 | 0 | 0
+Budget extrapolation | *β* = 0.50 (test) | 1384 | 344 | 864 | 0 | 0
+FOOTER: Compound holdout: test = {availability, confidentiality} × {hub-and-spoke, tree}; validation = insider × partial mesh; train = {integrity, intrusion, malware} × {ring, segmented DMZ, star}.
+ENDTABLE
+
+FIG: fig10_splits.png | 16.5 | **Figure {F:splits}.** Partition maps of the five manifests. Each small grid crosses the six families (rows) with the six network configurations (columns); each cell is divided in proportion to the partition shares of its scenarios. Counts below each grid are train/validation/test scenarios.
+
+## 3.12. Model-Behaviour Diagnostics
+
+The following results describe how the generator and the risk model behave across the design. They are reported so that users can judge whether the corpus spans the regimes they need; they are properties of the declared model, not empirical findings about network security.
+
+### 3.12.1. Attenuation Across Layers
+
+Figure {F:cascade} follows one scenario (segmented DMZ, intrusion family, *D* = 5, *β* = 0.30). Its unprotected loss of 281.3 kCU per year falls to 18.3 kCU (6.5%) under the optimal selection of six barriers costing 53.4 kCU against a budget of 54.9 kCU. Adding the selected barriers layer by layer gives 114.2, 92.1, 92.1, 41.4, and 18.3 kCU; the optimum buys no channel barrier, because the intrusion-dominated threat mix gains little from cryptography (Table 6). Selecting all fifteen barriers would reduce the loss to 3.5 kCU at a cost of 183.0 kCU, which illustrates why the budgeted optimum, not maximal protection, is the relevant target. The insider component remains the largest residual after the perimeter, as Equation (3) prescribes.
+
+FIG: fig04_cascade.png | 16.5 | **Figure {F:cascade}.** Example scenario. (**a**) Residual expected loss by threat class after applying the optimally selected barriers of layers L1 to L*k*; numbers give the total. The dashed line shows the same cascade for all fifteen barriers. (**b**) Maximal mitigation max_{*a*} *m*_{*bta*} of each candidate barrier (rows; B, S, A = basic, standard, advanced tier) against each of the eight threats (columns); red outlines mark the selected barriers.
+
+### 3.12.2. Cost–Risk Frontiers and Factor Effects
+
+The exhaustive frontier of the example scenario contains 81 non-dominated points among 32,768 subsets (Figure {F:pareto}a). Across the corpus, frontier size had a median of 46 points (range 9–162) and grew with depth (medians 19, 38, 58, and 82 for *D* = 2–5). Normalized frontiers (Figure {F:pareto}b) show diminishing returns that set in earlier when fewer layers are available: at 30% of catalogue cost the median relative residual risk on the frontier is about 0.17 for five layers and about 0.57 for two.
+
+FIG: fig05_pareto.png | 16.5 | **Figure {F:pareto}.** Cost–risk trade-offs. (**a**) All 2^{15} barrier subsets of the example scenario (grey), the Pareto frontier (black step line), the budget (dashed), and the configurations chosen by six methods. (**b**) Median (line) and interquartile range (band) of normalized frontiers by layer depth; vertical lines mark the three budget fractions.
+
+At the budget, the median relative residual risk of the exact optimum was 0.374 over all scenarios. It fell from 0.535 to 0.335 and 0.218 as *β* increased from 0.15 to 0.30 and 0.50, from 0.588 to 0.179 as depth increased from two to five layers, and from 0.480 to 0.257 as mean effectiveness increased from 0.55 to 0.85 (Figure {F:heat}). The star configuration reached the lowest residual risk at every effectiveness level because its single segment places every asset within the scope of every network and channel barrier. Over all scenarios, the optimum covered every exposed pair in the median scenario (Clements–Hoffman coverage 1.0; 5th percentile 0.63) but with a median coverage depth of only 1.62 layers, used a median of four barriers from two layers, and had a median ROSI of 6.4 (5th–95th percentile 1.0–26.4). The ROSI magnitudes follow from the ratio of asset values to barrier costs chosen for the generator and should not be compared with reported investment returns.
+
+FIG: fig06_heatmaps.png | 16.5 | **Figure {F:heat}.** Median relative residual risk *R*(*x*^{*})/*R*(0) of the exact optimum (**a**) by layer depth and budget fraction and (**b**) by mean barrier effectiveness and network configuration. Darker cells indicate lower residual risk.
+
+Main-effect shares *η*^{2} of the design factors on log_{10} relative residual risk (Figure {F:sens}a) were 0.303 for depth, 0.214 for budget, 0.119 for effectiveness, 0.103 for network configuration, 0.025 for family, 0.006 for the impact multiplier, and 0.005 for input reliability. The near-zero impact effect is the invariance of Section 3.11.2 seen through sampling noise; the near-zero reliability effect is expected, because *ρ* influences only the estimates and not the true optimum. Variance-based indices of higher order [@saltelli] or screening designs [@morris] can be computed from the released tables by users who need interaction effects.
+
+FIG: fig09_sensitivity.png | 16.5 | **Figure {F:sens}.** Main-effect shares *η*^{2} of the seven design factors (**a**) on log_{10} of the relative residual risk of the exact optimum and (**b**) on the regret of exact optimization on estimated parameters. Note the different horizontal scales.
+
+### 3.12.3. Selection Methods
+
+Table 10 and Figure {F:methods} compare the methods with the exact optimum. The greedy ratio rule found the optimum in 52.8% of scenarios and stayed within 1% of *R*(0) in 71.7%, with a 95th-percentile gap of 5.6%. The three practice-style heuristics performed much worse: buying the cheapest barrier in each layer left a median gap of 17.9%, buying by nominal effectiveness 16.6%, and a random maximal selection 10.6%. The defence-in-depth heuristic used more layers than the optimum (median three versus two) and still left more risk, which shows that the number of layers is a poor proxy for protection when budget and scope differ between barriers.
+
+TABLE **Table 10.** Selection methods compared with the exact optimum (2592 scenarios). Gaps are in percent of *R*(0).
+WIDTHS: 20,14,13,13,13,14,13
+Method | Median *R*/*R*(0) | Median gap | Mean gap | 95th pct. gap | Optimal (%) | Feasible (%)
+exact | 0.374 | 0.00 | 0.00 | 0.00 | 100.0 | 100.0
+greedy | 0.386 | 0.00 | 1.12 | 5.64 | 52.8 | 100.0
+layer_uniform | 0.572 | 17.89 | 17.88 | 36.71 | 9.0 | 100.0
+max_effect | 0.597 | 16.64 | 18.96 | 43.51 | 4.2 | 100.0
+random | 0.525 | 10.62 | 13.43 | 36.13 | 9.3 | 100.0
+exact_est | 0.378 | 0.00 | 0.40 | 4.73 | 47.1 | 74.3
+greedy_est | 0.385 | 0.14 | 1.34 | 7.78 | 34.5 | 81.6
+full (no budget) | 0.130 | −17.80 | −20.45 | −2.94 | 0.0 | 0.0
+FOOTER: “Feasible” refers to the true cost; estimate-based methods respect the budget only with respect to their estimated costs.
+ENDTABLE
+
+FIG: fig07_methods.png | 11.5 | **Figure {F:methods}.** Empirical cumulative distribution of the optimality gap for six methods over 2592 scenarios. Negative gaps of estimate-based methods arise only when their true cost exceeds the budget.
+
+### 3.12.4. Unreliable Inputs
+
+Figure {F:rel} and Table 11 show how input reliability affects selection. With exact optimization on estimates, the true optimum was found in 80.3%, 39.1%, and 22.0% of scenarios at *ρ* = 0.95, 0.80, and 0.60. The mean regret remained small (0.03%, 0.29%, and 0.87% of *R*(0)), but the share of selections whose true cost exceeded the budget rose from 7.2% to 27.9% and 42.0%, with a median overspend of 7.0% at *ρ* = 0.60. In this model, the dominant consequence of unreliable estimates is therefore a budget overrun rather than a loss of protection. The greedy method on estimates overran less often (3.6%, 18.3%, and 33.4%) but had higher mean regret at every reliability level. These patterns depend on the noise model of Equation (10) and on the absence of correlation between estimation errors; the stored estimates allow users to test that dependence.
+
+TABLE **Table 11.** Selection on estimated parameters by input-information reliability (864 scenarios per level).
+WIDTHS: 46,18,18,18
+Method / measure | *ρ* = 0.60 | *ρ* = 0.80 | *ρ* = 0.95
+exact_est: optimal (%) | 22.0 | 39.1 | 80.3
+exact_est: mean regret (% of *R*(0)) | 0.87 | 0.29 | 0.03
+exact_est: budget overrun (%) | 42.0 | 27.9 | 7.2
+exact_est: median overspend (%) | 7.0 | 3.3 | 0.6
+greedy_est: optimal (%) | 21.3 | 31.0 | 51.2
+greedy_est: mean regret (% of *R*(0)) | 1.41 | 1.38 | 1.22
+greedy_est: budget overrun (%) | 33.4 | 18.3 | 3.6
+greedy_est: median overspend (%) | 7.3 | 2.8 | 0.6
+ENDTABLE
+
+FIG: fig08_reliability.png | 16.5 | **Figure {F:rel}.** Selection on reliability-perturbed estimates. (**a**) Distribution of regret relative to the true optimum (boxes: interquartile range; whiskers: 1.5 × IQR; diamonds: means). (**b**) Share of selections whose true cost exceeds the budget; labels give the share and, in parentheses, the median overspend of the overrunning selections.
+
+# 4. User Notes
+
+## 4.1. Reproduction and Verification
+
+From the extracted archive root, the workflow used for this Descriptor is:
+
+CODE
+pip install -r code/requirements.txt
+PYTHONPATH=code/src python -m pytest code/tests -q
+PYTHONPATH=code/src python -m tvbnet.cli all --config code/config/pipeline.yaml --out build
+python code/scripts/figures.py
+sha256sum -c dataset/checksums_sha256.txt
+ENDCODE
+
+The second command runs the 25 test cases; the third regenerates every table, manifest, metadata file, and the validation report; the fourth regenerates the figures. Users who derive new tables should cite the version-specific DOI, keep `scenario_id` and `config_id` or publish a mapping, mark synthetic augmentation as such, and publish their split manifests [@gebru,@sandve].
+
+## 4.2. Appropriate Reuse
+
+The record is suitable for benchmarking configuration-selection methods (exact, heuristic, metaheuristic, learning-based) against known optima and frontiers; for studying robustness to unreliable inputs; for testing generalization to unseen threat families, network configurations, or budgets; for teaching quantitative risk assessment and cost–benefit reasoning; and for testing data-engineering tooling such as validators, provenance exporters, and release gates. A learned selector, for example, can be trained on `family_holdout` and evaluated against the stored exact optimum of each test scenario, with regret and overrun reported as in Table 11. The cyber-resilience literature offers complementary availability-based metrics that could be attached to the same scenarios in a future version [@cho].
+
+The record is not suitable for estimating the effectiveness of real controls, threat frequencies, loss magnitudes, or returns on investment; for ranking commercial products; or for certifying the security of any network. The affinity matrix, value weights, cost scales, and noise model are declared assumptions; replacing them with calibrated values is the purpose of the empirical stage described in Appendix A.
+
+## 4.3. Positioning Relative to Existing Resources
+
+Table 12 places the record between two groups of prior work. Network-intrusion datasets contain real or emulated traffic and support detector evaluation; decision models formulate countermeasure selection but usually publish parameters only as part of an article. The comparison is deliberately asymmetric: the traffic datasets support empirical conclusions that tvbnet cannot, and the cited models are richer in specific respects, such as attack-tree structure [@dewri] or game-theoretic and portfolio formulations [@fielder,@kiesling]. tvbnet contributes a released, validated, and versioned parameter space with exact reference solutions. Digital-twin and intrusion-detection testbeds [@elhajj] and declarative placement of secured workloads in cloud–edge infrastructures [@bocci] are complementary sources from which empirical barrier parameters could later be obtained.
+
+TABLE **Table 12.** Positioning of tvbnet 0.1.0-rehearsal. “n/r”: not reported in the cited description; this does not assert that the feature is absent from unpublished material.
+WIDTHS: 20,15,14,15,12,12,12
+Resource | Primary content | Data origin | Barrier catalogue and cost | Residual-risk target | Input reliability | Released splits
+CICIDS2017 [@cicids] | Labeled network flows | Emulated testbed | n/r | n/r | n/r | n/r
+UNSW-NB15 [@unsw] | Labeled network records | Emulated testbed | n/r | n/r | n/r | Train/test files
+Attack-tree hardening [@dewri] | Optimization model | Illustrative network | Yes (in article) | Yes | n/r | n/r
+Multi-objective countermeasures [@viduto] | Optimization model | Illustrative network | Yes (in article) | Yes | n/r | n/r
+Security portfolios [@kiesling] | Simulation-optimization | Case data | Yes (in article) | Yes | n/r | n/r
+tvbnet 0.1.0-rehearsal | Scenarios, barriers, optima, frontiers | Synthetic, fixed seed | Yes (27,216 barriers) | Yes, exact | Yes (*ρ* factor) | Five audited manifests
+ENDTABLE
+
+## 4.4. Limitations
+
+Four limitations should be kept in mind. First, barriers act independently (Equation (4)); real controls can overlap or interfere, and correlated failures would change both optima and frontiers. Second, threats are independent and stationary, with no attack paths or adaptive adversaries; attack-tree or attack–defence graph structures [@kordy] are not represented. Third, enumeration limits the catalogue to fifteen barriers per scenario; larger catalogues will require exact mixed-integer formulations or verified bounds, which are planned for version 0.2.0. Fourth, all parameters, including the affinity matrix and the noise model, are generator assumptions; none has been calibrated against incident records, vulnerability data, or cost ledgers.
+
+# 5. Conclusions
+
+This Descriptor presents tvbnet 0.1.0-rehearsal, a fixed-seed synthetic software-and-data record for multilayer security and cost–risk trade-offs in data transmission networks. Its 2592 scenarios cross six network configurations, six threat families, and four layer depths with an L9(3^{4}) array for effectiveness, input reliability, impact, and budget, and its ten tables connect assets, vulnerabilities, threats, and 27,216 candidate barriers to exact optima, complete Pareto frontiers, and the outcomes of seven selection methods. Validation detected all 125 injected defects without false positives, restored the reference tables exactly, reproduced every derived indicator to within 5.1 × 10^{−16}, and passed all 17 release gates; the five manifests had no leakage and no empty partition.
+
+The diagnostic results characterize the model rather than real networks. Layer depth and budget dominated residual risk; a greedy ratio rule was optimal in about half of the scenarios, while layer-by-layer and effectiveness-first rules left gaps of 17–19% of baseline risk on average; and unreliable inputs mainly caused budget overruns rather than large losses of protection. As a continuation of uavews, the record corrects the four defects disclosed there. Its next version will relax barrier independence, add mixed-integer and multi-objective solvers for larger catalogues, and prepare the calibration interfaces through which a separate empirical record, with its own persistent identifier, can replace the generator assumptions.
+
+BACK: Author Contributions: Conceptualization, D.P.-T. and O.T.; methodology, D.P.-T. and V.M.; software, D.P.-T.; validation, O.T., V.M. and V.Y.; formal analysis, D.P.-T. and O.A.; data curation, D.P.-T. and V.Y.; writing—original draft preparation, D.P.-T.; writing—review and editing, O.T., V.M., V.Y. and O.A.; visualization, D.P.-T.; supervision, O.T. and D.P.-T.; project administration, D.P.-T. All authors have read and agreed to the published version of the manuscript.
+BACK: Funding: This research received no external funding.
+BACK: Institutional Review Board Statement: Not applicable. The record contains programmatically generated synthetic data and no human-participant or operational data.
+BACK: Informed Consent Statement: Not applicable.
+BACK: Data Availability Statement: The software and synthetic data described in this article will be openly available in Zenodo under a version-specific DOI to be assigned at deposit (internal project version 0.1.0-rehearsal), under the CC BY 4.0 license, with an *IsDerivedFrom* relation to the uavews record (https://doi.org/10.5281/zenodo.22166893). The record contains source code, configuration, tests, ten canonical tables, five evaluation manifests, a data dictionary, DataCite, PROV-O, and RO-Crate metadata, the validation report, figures, and checksums. All scenarios, assets, threats, barriers, and outcomes are synthetic.
+BACK: Acknowledgments: During the preparation of this manuscript and of the accompanying software, the authors used Claude (Anthropic, Claude Opus 5.5, accessed in November 2026) for drafting text, writing and testing code, and generating figures. The authors have reviewed and edited the output and take full responsibility for the content of this publication.
+BACK: Conflicts of Interest: The authors declare no conflicts of interest.
+
+## Abbreviations
+
+TABLE The following abbreviations are used in this manuscript:
+WIDTHS: 18,82
+OPTS: {"alignLeft": true, "headerRows": 0}
+CH | Clements–Hoffman (coverage)
+DMZ | Demilitarized zone
+DOS, EAV, INS, INT, MAL, TAM | Threat classes: denial of service, eavesdropping, insider misuse, intrusion, malware, tampering
+IQR | Interquartile range
+kCU | Thousand conventional units
+L1–L5 | Protection layers: perimeter, network, channel, host, data
+MILP | Mixed-integer linear programming
+PROV-O | PROV Ontology
+RO-Crate | Research Object Crate
+ROSI | Return on security investment
+SHA-256 | Secure Hash Algorithm with a 256-bit digest
+ENDTABLE
+
+# Appendix A. Software Project Proposal: tvbnet Decision-Support Platform
+
+## A.1. Goal and Scope
+
+The prototype released here answers a research need: a validated synthetic parameter space with exact reference solutions. The proposed project turns it into a decision-support platform for network operators, security architects, and researchers who must choose protective configurations under budget constraints and with imperfect information. The platform keeps the release discipline of tvbnet and uavews—declared assumptions, versioned records, gates, and provenance—and adds solvers for realistic catalogue sizes, a service interface, interactive exploration of cost–risk frontiers, and calibration interfaces through which synthetic assumptions are replaced by organization-specific data. Table A1 lists the core requirements.
+
+TABLE **Table A1.** Core requirements of the proposed platform.
+WIDTHS: 9,61,30
+OPTS: {"alignLeft": true}
+ID | Requirement | Acceptance criterion
+FR1 | Describe a network, assets, threats, and barrier catalogue in a versioned scenario file | Schema validation with V1–V5 checks; round-trip to Parquet
+FR2 | Compute residual risk, coverage, depth, cost, and ROSI for any selection | Agreement with Equations (1)–(9) within 10^{−9} on the tvbnet release
+FR3 | Solve the budgeted selection exactly for *m* ≤ 15 and by MILP/branch-and-bound for larger *m* | Exact solutions identical to the released `exact` configurations
+FR4 | Compute cost–risk Pareto frontiers (exact for small *m*, NSGA-II approximation otherwise) | Hypervolume ≥ 0.99 of the exact frontier on the release
+FR5 | Robust selection under input reliability (scenario sampling of Equation (10)) | Reports regret and overrun distributions as in Table 11
+FR6 | Explain a selection: attenuation cascade, mitigation matrix, marginal values | Figures {F:cascade} and {F:pareto} reproducible from the API
+FR7 | Export a decision record with provenance and checksums | PROV-O and RO-Crate validated; SHA-256 manifest verifies
+NFR1 | Reproducibility: fixed seeds, pinned dependencies, deterministic outputs | Byte-identical tables in two runs
+NFR2 | Performance: evaluation of 10^{5} selections per second per core for *m* ≤ 20 | Benchmark in continuous integration
+NFR3 | Security of the platform itself: role-based access, audit log, no telemetry by default | Review against the controls in [@nist53]
+ENDTABLE
+
+## A.2. Architecture
+
+The platform is organized in four layers (Figure A1). The data and provenance layer stores scenarios and results in Parquet with an embedded analytical database, records object-level lineage, and packages releases. The service layer contains the scenario service (design and generation), the vectorized risk engine, the optimizer service (exhaustive enumeration, MILP, greedy and heuristic baselines, NSGA-II), and the validation and gate service. The presentation layer exposes a command-line interface, a REST/OpenAPI interface with a client library, report templates, and a dashboard for frontier exploration. The calibration layer, planned from version 0.3, maps incident and loss records, scored vulnerability exposure, control-test results, and cost ledgers onto the model parameters. Deployment may be local or on a cloud–edge infrastructure; reference architectures for digital-twin deployments describe the placement options [@fett].
+
+FIG: fig12_architecture.png | 16.5 | **Figure A1.** Proposed layered architecture of the tvbnet decision-support platform. The released prototype implements the service core, the data and provenance layer, and the command-line interface.
+
+TABLE **Table A2.** Module inventory: implemented in version 0.1.0-rehearsal and planned.
+WIDTHS: 22,48,15,15
+OPTS: {"alignLeft": true}
+Module | Responsibility | Status | Target version
+design | Factor crossing, L9 array, balance check, identifiers | Implemented | 0.1
+generate | Topologies, assets, vulnerabilities, threats, barriers, estimates | Implemented | 0.1
+engine | Equations (1)–(11); enumeration; exact, greedy, heuristics | Implemented | 0.1
+validate | V1–V8 checks; recomputation; invariance | Implemented | 0.1
+release | Defect injection, quarantine, redelivery, manifests, gates | Implemented | 0.1
+package | Parquet, data dictionary, DataCite, PROV-O, RO-Crate, checksums | Implemented | 0.1
+cli | Command-line driver and report | Implemented | 0.1
+solvers.milp | Linearized MILP and branch-and-bound for *m* > 15 | Planned | 0.2
+solvers.moea | NSGA-II frontier approximation with hypervolume check | Planned | 0.2
+model.dependence | Correlated barrier failures; attack-path structure | Planned | 0.2
+api | REST/OpenAPI service, job queue, access control | Planned | 0.2–0.3
+dashboard | Frontier explorer, cascades, what-if budgets | Planned | 0.3
+calibrate | Interfaces for incident, exposure, control-test, and cost data | Planned | 0.3
+ENDTABLE
+
+## A.3. Interfaces
+
+The service interface follows the data model of Figure {F:model}. A scenario is posted as a validated document and receives a `scenario_id`; selections, frontiers, and robustness analyses are computed as jobs whose outputs are configuration and frontier rows with the same columns as the release. Table A3 lists the principal endpoints.
+
+TABLE **Table A3.** Principal service endpoints (proposed).
+WIDTHS: 32,68
+OPTS: {"alignLeft": true}
+Endpoint | Function
+`POST /scenarios` | Validate (V1–V5) and store a scenario; return `scenario_id` and input digest
+`POST /scenarios/{id}/evaluate` | Indicators of Table 5 for one or more selection bit-strings
+`POST /scenarios/{id}/optimize` | Exact or approximate *x*^{*} for a budget; method and solver selectable
+`GET /scenarios/{id}/frontier` | Pareto frontier with selections
+`POST /scenarios/{id}/robust` | Regret and overrun distributions for a reliability level *ρ*
+`GET /releases/{version}` | Package metadata, gates, provenance, and checksums
+ENDTABLE
+
+## A.4. Work Plan, Risks, and Evaluation
+
+The plan comprises seven work packages over 20 months (Figure A2). WP1 and WP2 are completed by the present release. WP3 adds solvers and dependent-barrier models (version 0.2.0, month 7); WP4 delivers the service and dashboard (month 10); WP5 and WP6 add calibration interfaces and a separate empirical pilot record with its own DOI (version 0.3.0, month 14, and month 18); WP7 prepares a public benchmark challenge with frozen manifests and documentation (version 1.0, month 20).
+
+FIG: fig13_roadmap.png | 16.5 | **Figure A2.** Work packages and milestones of the proposed project. Blue: completed in the present release; green: modelling and service work; orange: calibration and empirical work; violet: benchmark and documentation.
+
+TABLE **Table A4.** Principal project risks and mitigations.
+WIDTHS: 32,14,54
+OPTS: {"alignLeft": true}
+Risk | Likelihood | Mitigation
+Calibration data are unavailable or confidential | High | Aggregate-level calibration; access-controlled empirical tier; synthetic release remains the public reference
+Users read synthetic outputs as real-world performance | Medium | Provenance warning in every file; synthetic flag in DataCite; documentation of permitted uses (Section 4.2)
+Exact methods do not scale to large catalogues | Medium | MILP with verified bounds; frontier approximation checked against exact results on the release
+Independence assumption misleads decisions | Medium | Dependence module (WP3) and sensitivity reporting against independence
+Software defects alter released results | Low | Recompute gates, invariance tests, byte-identical reruns, executed test suite
+ENDTABLE
+
+Evaluation of the platform will use the released manifests: any new selector is reported with its gap and overrun distributions on `family_holdout`, `network_holdout`, and `budget_extrapolation`, and any change to the model is reported with the change in exact optima on the frozen release.
+
+# Appendix B. L9(3^{4}) Array
+
+TABLE **Table B1.** L9(3^{4}) array used for the four three-level factors (level codes 1–3, mapped to the levels of Table 4).
+WIDTHS: 16,21,21,21,21
+Row | Effectiveness *ē* | Reliability *ρ* | Impact *k*_{*I*} | Budget *β*
+1 | 1 (0.55) | 1 (0.60) | 1 (0.5) | 1 (0.15)
+2 | 1 (0.55) | 2 (0.80) | 2 (1.0) | 3 (0.50)
+3 | 1 (0.55) | 3 (0.95) | 3 (2.0) | 2 (0.30)
+4 | 2 (0.70) | 1 (0.60) | 2 (1.0) | 2 (0.30)
+5 | 2 (0.70) | 2 (0.80) | 3 (2.0) | 1 (0.15)
+6 | 2 (0.70) | 3 (0.95) | 1 (0.5) | 3 (0.50)
+7 | 3 (0.85) | 1 (0.60) | 3 (2.0) | 3 (0.50)
+8 | 3 (0.85) | 2 (0.80) | 1 (0.5) | 2 (0.30)
+9 | 3 (0.85) | 3 (0.95) | 2 (1.0) | 1 (0.15)
+ENDTABLE

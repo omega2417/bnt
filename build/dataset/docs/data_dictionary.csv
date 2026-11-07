@@ -1,0 +1,101 @@
+table,column,dtype,required,range,primary_key,foreign_key,table_description
+scenarios,scenario_id,str,True,,True,,"One row per synthetic scenario: design factors, structural sizes, baseline risk, budget"
+scenarios,cell_id,str,True,,False,,"One row per synthetic scenario: design factors, structural sizes, baseline risk, budget"
+scenarios,topology,str,True,,False,,"One row per synthetic scenario: design factors, structural sizes, baseline risk, budget"
+scenarios,family,str,True,,False,,"One row per synthetic scenario: design factors, structural sizes, baseline risk, budget"
+scenarios,depth,int64,True,"(2, 5)",False,,"One row per synthetic scenario: design factors, structural sizes, baseline risk, budget"
+scenarios,l9_row,int64,True,"(1, 9)",False,,"One row per synthetic scenario: design factors, structural sizes, baseline risk, budget"
+scenarios,replicate,int64,True,"(1, 99)",False,,"One row per synthetic scenario: design factors, structural sizes, baseline risk, budget"
+scenarios,effectiveness_mean,float64,True,"(0, 1)",False,,"One row per synthetic scenario: design factors, structural sizes, baseline risk, budget"
+scenarios,input_reliability,float64,True,"(0, 1)",False,,"One row per synthetic scenario: design factors, structural sizes, baseline risk, budget"
+scenarios,impact_multiplier,float64,True,"(0, 10)",False,,"One row per synthetic scenario: design factors, structural sizes, baseline risk, budget"
+scenarios,budget_fraction,float64,True,"(0, 1)",False,,"One row per synthetic scenario: design factors, structural sizes, baseline risk, budget"
+scenarios,network_id,str,False,,False,,"One row per synthetic scenario: design factors, structural sizes, baseline risk, budget"
+scenarios,n_assets,int64,False,,False,,"One row per synthetic scenario: design factors, structural sizes, baseline risk, budget"
+scenarios,n_threats,int64,False,,False,,"One row per synthetic scenario: design factors, structural sizes, baseline risk, budget"
+scenarios,n_barriers,int64,False,,False,,"One row per synthetic scenario: design factors, structural sizes, baseline risk, budget"
+scenarios,n_subsets,int64,False,,False,,"One row per synthetic scenario: design factors, structural sizes, baseline risk, budget"
+scenarios,baseline_risk_kcu,float64,True,"(0, None)",False,,"One row per synthetic scenario: design factors, structural sizes, baseline risk, budget"
+scenarios,full_cost_kcu,float64,False,,False,,"One row per synthetic scenario: design factors, structural sizes, baseline risk, budget"
+scenarios,full_residual_risk_kcu,float64,False,,False,,"One row per synthetic scenario: design factors, structural sizes, baseline risk, budget"
+scenarios,budget_kcu,float64,True,"(0, None)",False,,"One row per synthetic scenario: design factors, structural sizes, baseline risk, budget"
+scenarios,frontier_size,int64,False,,False,,"One row per synthetic scenario: design factors, structural sizes, baseline risk, budget"
+scenarios,random_expected_risk_kcu,float64,False,,False,,"One row per synthetic scenario: design factors, structural sizes, baseline risk, budget"
+scenarios,input_digest,str,True,,False,,"One row per synthetic scenario: design factors, structural sizes, baseline risk, budget"
+networks,network_id,str,True,,True,,Network configuration summary per scenario
+networks,scenario_id,str,True,,False,scenarios,Network configuration summary per scenario
+networks,topology,str,False,,False,,Network configuration summary per scenario
+networks,n_nodes,int64,True,"(1, None)",False,,Network configuration summary per scenario
+networks,n_links,int64,True,"(1, None)",False,,Network configuration summary per scenario
+networks,n_segments,int64,True,"(1, None)",False,,Network configuration summary per scenario
+networks,n_assets,int64,False,,False,,Network configuration summary per scenario
+networks,max_hops,int64,False,,False,,Network configuration summary per scenario
+nodes,network_id,str,True,,False,networks,Network nodes
+nodes,node_id,str,True,,True,,Network nodes
+nodes,role,str,True,,False,,Network nodes
+nodes,segment,int64,False,,False,,Network nodes
+links,network_id,str,True,,False,networks,Network links
+links,link_id,str,True,,True,,Network links
+links,u,str,True,,False,nodes,Network links
+links,v,str,True,,False,nodes,Network links
+links,link_kind,str,False,,False,,Network links
+assets,asset_id,str,True,,True,,"Information assets with technical/economic/security indicators, reliability and value"
+assets,scenario_id,str,True,,False,scenarios,"Information assets with technical/economic/security indicators, reliability and value"
+assets,node,str,False,,False,,"Information assets with technical/economic/security indicators, reliability and value"
+assets,segment,int64,True,"(0, None)",False,,"Information assets with technical/economic/security indicators, reliability and value"
+assets,asset_type,str,False,,False,,"Information assets with technical/economic/security indicators, reliability and value"
+assets,hops,int64,True,"(1, None)",False,,"Information assets with technical/economic/security indicators, reliability and value"
+assets,ind_technical,float64,True,"(0, 1)",False,,"Information assets with technical/economic/security indicators, reliability and value"
+assets,ind_economic,float64,True,"(0, 1)",False,,"Information assets with technical/economic/security indicators, reliability and value"
+assets,ind_security,float64,True,"(0, 1)",False,,"Information assets with technical/economic/security indicators, reliability and value"
+assets,info_reliability,float64,True,"(0, 1)",False,,"Information assets with technical/economic/security indicators, reliability and value"
+assets,info_value_kcu,float64,True,"(0, None)",False,,"Information assets with technical/economic/security indicators, reliability and value"
+vulnerabilities,vuln_id,str,True,,True,,Asset vulnerabilities with exploitability and threat-class mask
+vulnerabilities,scenario_id,str,True,,False,scenarios,Asset vulnerabilities with exploitability and threat-class mask
+vulnerabilities,asset_id,str,True,,False,assets,Asset vulnerabilities with exploitability and threat-class mask
+vulnerabilities,exploitability,float64,True,"(0, 1)",False,,Asset vulnerabilities with exploitability and threat-class mask
+vulnerabilities,class_mask,str,True,,False,,Asset vulnerabilities with exploitability and threat-class mask
+threats,threat_id,str,True,,True,,"Threats with class, origin, annual rate, severity and reliability-perturbed estimates"
+threats,scenario_id,str,True,,False,scenarios,"Threats with class, origin, annual rate, severity and reliability-perturbed estimates"
+threats,threat_class,str,True,,False,,"Threats with class, origin, annual rate, severity and reliability-perturbed estimates"
+threats,origin,str,False,,False,,"Threats with class, origin, annual rate, severity and reliability-perturbed estimates"
+threats,rate_per_year,float64,True,"(0, None)",False,,"Threats with class, origin, annual rate, severity and reliability-perturbed estimates"
+threats,severity,float64,True,"(0, 1)",False,,"Threats with class, origin, annual rate, severity and reliability-perturbed estimates"
+threats,rate_est,float64,True,"(0, None)",False,,"Threats with class, origin, annual rate, severity and reliability-perturbed estimates"
+threats,severity_est,float64,True,"(0, 1)",False,,"Threats with class, origin, annual rate, severity and reliability-perturbed estimates"
+barriers,barrier_id,str,True,,True,,"Candidate protective barriers: layer, tier, effectiveness, annual cost, scope, estimates"
+barriers,scenario_id,str,True,,False,scenarios,"Candidate protective barriers: layer, tier, effectiveness, annual cost, scope, estimates"
+barriers,layer,str,False,,False,,"Candidate protective barriers: layer, tier, effectiveness, annual cost, scope, estimates"
+barriers,layer_index,int64,True,"(1, 5)",False,,"Candidate protective barriers: layer, tier, effectiveness, annual cost, scope, estimates"
+barriers,tier,str,False,,False,,"Candidate protective barriers: layer, tier, effectiveness, annual cost, scope, estimates"
+barriers,effectiveness,float64,True,"(0, 1)",False,,"Candidate protective barriers: layer, tier, effectiveness, annual cost, scope, estimates"
+barriers,annual_cost_kcu,float64,True,"(0, None)",False,,"Candidate protective barriers: layer, tier, effectiveness, annual cost, scope, estimates"
+barriers,scope_mask,str,True,,False,,"Candidate protective barriers: layer, tier, effectiveness, annual cost, scope, estimates"
+barriers,effectiveness_est,float64,True,"(0, 1)",False,,"Candidate protective barriers: layer, tier, effectiveness, annual cost, scope, estimates"
+barriers,cost_est,float64,True,"(0, None)",False,,"Candidate protective barriers: layer, tier, effectiveness, annual cost, scope, estimates"
+configurations,config_id,str,True,,True,,Selected protective configurations per method and derived indicators
+configurations,scenario_id,str,True,,False,scenarios,Selected protective configurations per method and derived indicators
+configurations,method,str,True,,False,,Selected protective configurations per method and derived indicators
+configurations,basis,str,False,,False,,Selected protective configurations per method and derived indicators
+configurations,selection_bits,str,True,,False,,Selected protective configurations per method and derived indicators
+configurations,budget_kcu,float64,True,"(0, None)",False,,Selected protective configurations per method and derived indicators
+configurations,feasible,bool,True,,False,,Selected protective configurations per method and derived indicators
+configurations,residual_risk_est_kcu,float64,False,,False,,Selected protective configurations per method and derived indicators
+configurations,residual_risk_kcu,float64,True,"(0, None)",False,,Selected protective configurations per method and derived indicators
+configurations,cost_kcu,float64,True,"(0, None)",False,,Selected protective configurations per method and derived indicators
+configurations,risk_reduction_kcu,float64,False,,False,,Selected protective configurations per method and derived indicators
+configurations,rosi,float64,False,,False,,Selected protective configurations per method and derived indicators
+configurations,ch_coverage,float64,False,"(0, 1)",False,,Selected protective configurations per method and derived indicators
+configurations,mean_coverage_depth,float64,False,,False,,Selected protective configurations per method and derived indicators
+configurations,mean_threat_coverage,float64,False,"(0, 1)",False,,Selected protective configurations per method and derived indicators
+configurations,min_threat_coverage,float64,False,,False,,Selected protective configurations per method and derived indicators
+configurations,n_selected,int64,False,,False,,Selected protective configurations per method and derived indicators
+configurations,n_layers_used,int64,False,,False,,Selected protective configurations per method and derived indicators
+configurations,relative_residual_risk,float64,True,"(0, 1)",False,,Selected protective configurations per method and derived indicators
+configurations,optimality_gap,float64,False,,False,,Selected protective configurations per method and derived indicators
+configurations,derived_from_digest,str,True,,False,,Selected protective configurations per method and derived indicators
+frontier,scenario_id,str,True,,True,scenarios,Cost-risk Pareto frontier points (exhaustive enumeration)
+frontier,point,int64,True,"(0, None)",True,,Cost-risk Pareto frontier points (exhaustive enumeration)
+frontier,cost_kcu,float64,True,"(0, None)",False,,Cost-risk Pareto frontier points (exhaustive enumeration)
+frontier,residual_risk_kcu,float64,True,"(0, None)",False,,Cost-risk Pareto frontier points (exhaustive enumeration)
+frontier,selection_bits,str,False,,False,,Cost-risk Pareto frontier points (exhaustive enumeration)
