@@ -1,0 +1,243 @@
+REFERENCE AUDIT REPORT
+Dissertation: "Methods of Ensuring the Effectiveness of Information Protection Systems
+              for Data Transmission Networks"
+Author: Al-Dalwash Abdullah
+Date of audit: 2026-11-07
+==============================================================================
+
+1. SUMMARY
+----------
+Total references listed: 105 (numbered [1]–[105])
+  - Ukrainian-language references: ~70
+  - Russian-language references: ~3
+  - English-language references: ~25
+  - Mixed (Ukrainian + English title): ~4
+  - Standards / normative documents: ~10
+  - Patents: 2
+  - Legislation / government documents: ~5
+
+References with DOIs: 17
+References without DOIs: 88
+References with URLs (non-DOI): 5
+
+2. GENERAL FORMATTING OBSERVATIONS
+-----------------------------------
+The references do NOT follow a single consistent citation style (neither
+DSTU 8302:2015, APA, IEEE, nor Vancouver). Specific inconsistencies:
+
+a) No explicit numbering in the source text—references appear as continuous
+   paragraphs without [1], [2], … markers (they are implied by order).
+
+b) Author name format is inconsistent:
+   - Some use "Surname I.B." (Ukrainian standard): Хорошко В.О.
+   - Some use full first name then surname: Аблуллах Фоуад Аль-Далваш
+   - Some use Western order: Aaron Don M. Africa, …
+   - Some mix both in the same entry: Oppenheim, A. V., Шафер Р. В.
+     and R. W. Schafer (ref [93])
+
+c) Journal title formatting is inconsistent:
+   - Sometimes in quotes: «Безпека інформації»
+   - Sometimes plain: Наукоємні технології
+   - Sometimes with institution tag: Науковий журнал «Безпека інформації».НАУ
+   - No italicization anywhere
+
+d) Year/volume/issue/pages format varies widely:
+   - "2021.С. 126-131" (no space before С.)
+   - "2022.С. 200-205" vs. "2020. С. 45-55"
+   - "Т. 10. № 1., 2020" (trailing comma+period)
+   - "Vol. 8, № 4. July-August" (mixed Vol./№)
+   - "рр." used instead of "pp." in English entries
+
+e) DOI formatting issues:
+   - Some have a space after "doi.org/ ": https://doi.org/ 10.18372/...
+   - Some use "DOI:" prefix, others embed as URL
+   - Some DOIs appear truncated
+
+f) Page range separators vary: "С. 126-131", "С. 61– 66", "рр. 33 ‒ 56",
+   "pр. 88–101" (note Cyrillic "р" in some, Latin "p" in others).
+
+g) Conference proceedings mix city information inconsistently:
+   "м. Київ. 2021 р., м. Київ, Україна" (city repeated twice in ref [9]).
+
+3. INDIVIDUAL REFERENCE ISSUES
+-------------------------------
+
+Ref [1]: Аблуллах Фоуад Аль-Далваш — author name inverted vs. other entries
+         where it appears as "Аль-Далваш А." DOI appears truncated (ends ...16513,
+         should likely be ...165132).
+
+Ref [2]: Space in DOI URL: "https://doi.org/ 10.18372/..." — invalid.
+         Last author listed as "А. Аль-Далваш" (initial before surname) but
+         other authors use "Surname I.B." format.
+
+Ref [4]: Missing period between author block and title.
+
+Ref [5]: Same issue as [4]. Two URLs provided (DOI + direct PDF link) — unusual.
+
+Ref [7]: Date discrepancy: header says "SITS`2021: 13-та" but then gives
+         "24-26 червня 2020 р." — a 2021-named conference in 2020 is suspicious.
+         Likely a numbering error (SITS'2021 would be in 2021, not 2020).
+
+Ref [9]: City duplicated: "2021 р., м. Київ. 2021 р., м. Київ, Україна."
+
+Ref [14]: Bold formatting applied to this reference only — inconsistent.
+
+Ref [16]: "Наукове періодичне видання" is a description, not part of the
+          journal title. Space missing: "ПНТУ2019" should be "ПНТУ, 2019".
+
+Ref [17]: "стр." used instead of standard "С." (Ukrainian) or "pp." (English).
+
+Ref [18]: Double period: "..С.39– 44" — extra period in sequence.
+
+Ref [19]: "480 с.с" — double "с" (typo for "с.").
+
+Ref [20]: Merged text: "ВинничукС.Д." — missing space after surname.
+          "З агальне" — space in middle of word "Загальне".
+
+Ref [28]: Missing author initials: "Климаш М.М., Пелішок В.О., Михайлевич"
+          — "Михайлевич" has no initials.
+
+Ref [34]: Uses "стр." instead of "С." for Ukrainian publication.
+
+Ref [36]: Suspicious page count: "Радіо-техніка. Енциклопедичний навчальний
+          довідник" listed as only "33 с." — an encyclopedic reference of only
+          33 pages seems implausible. May be a section reference, not full book.
+
+Ref [40]: Incomplete/truncated: "Хорошко В.О., Хохлачова Ю.Є. Оптимізація
+          параметрів систем захисту в мережах передачі інформації. Інформатика
+          та математичні методи в моделюванні. 2013. Т. 3, № 1" — no pages.
+
+Ref [44]: "Рибальський О.В., Хорошко В.О., Шелест О.В., М.Є., Орєхова І.І."
+          — "М.Є." appears to be orphaned initials (missing surname).
+
+Ref [45]: Typo: "нестабфльності" should be "нестабільності" in journal
+          description.
+
+Ref [46]: Broken URL: "Сайт фирмы Acustek Ltd https." then "//www.acustek.com/en"
+          — URL is split across formatting. Also uses Russian "фирмы" instead
+          of Ukrainian "фірми".
+
+Ref [55]: DOI has space: "https://doi.org/ 10.24425/..." — invalid.
+
+Ref [56]: DOI has space: "https://doi.org/ 10.31673/..." — invalid.
+
+Ref [63]: Mixed-language entry: "Oppenheim, A. V., Шафер Р. В. and
+          R. W. Schafer" — same person (Schafer) listed twice, once transliterated
+          to Cyrillic and once in Latin. Should use consistent language.
+
+Ref [65]: Ref concatenates two different sources: Swets book AND
+          "SDR and CR Boost Wireless Communications [Электронный ресурс]..."
+          These should be two separate references.
+
+Ref [67]: Author listed as "Hau C. C." — actual author of that World Scientific
+          book is Chen C. H. (C.H. Chen), not "Hau C.C." Possible
+          transliteration error.
+
+Ref [69]: Broken title: "Hwang S. D. Yu." — likely "Hwang S., D. Yu" or
+          "Hwang S.D., Yu." The "[Text]" marker is unnecessary.
+
+Ref [71]: "Helstrom C. W." — original publication is 1968, not 2013.
+          The 2013 edition is a reprint. The entry does not distinguish.
+
+Ref [72]: IEEE 802.11 standard — no year, no specific amendment version
+          given. Incomplete citation.
+
+Ref [74]: Lewis book: "с." used for English-language book (should be "p.").
+
+Ref [75]: Broken hyphenation: "Technolo- gy" and "Let- ters" — artifacts
+          from copy-paste of hyphenated line breaks.
+
+Ref [78]: Mixed Cyrillic/Latin "рр." in English entries — should be "pp."
+          This affects refs [14], [15], [47], [55], [57], [58], [60], [62],
+          [63], [64], [65], [66], [76], [77], [78], [79], [80], [81], [85],
+          [86], [87], [88], [89], [94], [95].
+
+Ref [86]: "Liptovský Mikuláš, Slovakiya" — "Slovakiya" should be "Slovakia"
+          in English context or "Словаччина" in Ukrainian.
+
+Ref [96]: "Режим доступа:" — Russian, should be "Режим доступу:" (Ukrainian).
+
+4. REFERENCES THAT APPEAR POTENTIALLY PROBLEMATIC
+---------------------------------------------------
+
+a) Ref [7] (SITS`2021 / 2020 date mismatch): The 13th SITS conference
+   is labeled 2021 but dated June 2020. One of these must be wrong.
+
+b) Ref [36] ("33 с." for an encyclopedic reference book): Implausibly
+   short. Likely a misprint.
+
+c) Ref [44] ("М.Є." orphaned initials): Indicates a corrupted author list.
+
+d) Ref [65] (two sources merged into one): Must be split.
+
+e) Ref [67] ("Hau C. C." vs. real author C. H. Chen): Author name may
+   be incorrect.
+
+f) Ref [46] (Acustek site): The "https." is broken and the company
+   website may no longer exist. Access dates of "05.06.2025" are future
+   dates from the document's writing perspective.
+
+g) Ref [55] access date "04.06.2025" for a 2002 regulation — unusual
+   to cite access date for a legislative document.
+
+h) Several references cite access dates of 2019 or 2025 but the
+   underlying content is much older; this is fine for web resources
+   but the formatting should be uniform.
+
+5. DOI FORMATTING ISSUES (all 17 DOIs)
+----------------------------------------
+
+Ref [1]:  https://doi.org/10.18372/2225-5036.27.16513 — possibly truncated
+Ref [2]:  https://doi.org/ 10.18372/2310-5461.55.16902 — SPACE in URL
+Ref [3]:  https://doi.org/10.18372/2225-5036.26.14974 — OK
+Ref [4]:  https://doi.org/10.15276/imms.v10.no1-2.45 — OK
+Ref [5]:  https://doi.org/10.15276/imms.v10.no1-2.84 — OK
+Ref [17]: DOI: 10.18372/2310-5461.59.17944 — uses "DOI:" prefix, not URL
+Ref [22]: https://doi.org/10.28925/2663-4023.2023.22.3138 — OK
+Ref [23]: https://doi.org/10.18372/2310-5461.60.18266 — OK
+Ref [55]: https://doi.org/ 10.24425/bpasts.2023.145682 — SPACE in URL
+Ref [56]: https://doi.org/ 10.31673/2412-4338.2022.026375 — SPACE in URL
+Ref [57]: https://doi.org/10.3390/axioms12121074 — OK
+Ref [58]: https://doi.org/ 10.31673/2409-7292.2023.030202 — SPACE in URL
+Ref [52]: (Ref for Khoroshko/Laptiev 2024 article) — DOI referenced in
+          publication list but not checked in reference section
+
+6. RECOMMENDATIONS FOR FORMATTING
+-----------------------------------
+
+1. ADOPT A SINGLE CITATION STYLE consistently throughout. For a Ukrainian
+   dissertation, DSTU 8302:2015 (Ukrainian bibliographic standard) is
+   recommended. For an English translation, APA 7th or IEEE style is
+   standard in cybersecurity/IT.
+
+2. NUMBER ALL REFERENCES explicitly: [1], [2], …, [105].
+
+3. STANDARDIZE AUTHOR NAMES: Use "Surname, I.B." format for all.
+   For transliteration of Ukrainian names to English, follow the
+   official Ukrainian transliteration standard (KMU Resolution 55/2010).
+
+4. FIX ALL DOI URLS: Remove errant spaces (4 instances found).
+
+5. USE CONSISTENT PAGE ABBREVIATIONS: "pp." for English, "С." for Ukrainian.
+   Do not use Cyrillic "р" in English entries.
+
+6. STANDARDIZE JOURNAL TITLE FORMAT: Italicize journal/book titles.
+   Remove quotation marks unless they are part of the official title.
+
+7. SPLIT REF [65]: Separate the Swets book and the SDR/CR web resource.
+
+8. FIX AUTHOR ERRORS: Ref [44] (orphaned "М.Є."), Ref [28] (missing
+   initials for Михайлевич), Ref [67] (verify author name).
+
+9. REMOVE LINE-BREAK ARTIFACTS: Refs [75], [69] have hyphenated splits.
+
+10. STANDARDIZE ACCESS DATES: Use consistent format "(accessed: DD.MM.YYYY)"
+    and verify all web resources are still reachable.
+
+11. VERIFY DATE in Ref [7]: SITS'2021 cannot have taken place in June 2020.
+
+12. For the English translation: provide English translations of Ukrainian
+    titles in square brackets after the original, per APA convention.
+
+==============================================================================
+END OF AUDIT
