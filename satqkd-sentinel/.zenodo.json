@@ -1,0 +1,23 @@
+{
+  "title": "SatQKD-Sentinel: simulation, telemetry analytics and geostationary-backbone toolkit for satellite QKD networks with optical phased arrays",
+  "upload_type": "software",
+  "version": "2.0.0",
+  "description": "<p>Software accompanying the article <em>AI-Driven Telemetry Analytics for Cybersecurity of Satellite Quantum Key Distribution Networks with a Geostationary Backbone and Optical Phased Arrays</em>. This release contains the complete simulation and analytics pipeline: deterministic link and key-rate model (Equations (1)-(9)), finite-key analysis (Equation (10)), optical phased array model (Equations (12)-(16)), trusted-relay network model (Equations (17)-(22)), geostationary-backbone analysis (Equations (28)-(32)), telemetry simulator for 10 link states (Table 3), 24 physics-informed feature extraction (Equations (25)-(26)), multi-class classifiers (gradient boosting, random forest, logistic regression) and novelty detectors (isolation forest, Mahalanobis), evaluation framework with alarm logic and block policies. Includes a comprehensive Jupyter notebook demonstrating all calculations, visualisations and conclusions. All results are model estimates; no experimental data are included.</p>",
+  "creators": [
+    {"name": "Prokopovych-Tkachenko, Dmytro", "affiliation": "University of Customs and Finance, Dnipro, Ukraine"}
+  ],
+  "keywords": [
+    "quantum key distribution",
+    "satellite constellation",
+    "geostationary backbone",
+    "optical phased array",
+    "telemetry analytics",
+    "anomaly detection",
+    "cybersecurity",
+    "machine learning",
+    "federated learning"
+  ],
+  "license": "MIT",
+  "access_right": "open",
+  "language": "eng"
+}
