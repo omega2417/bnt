@@ -45,11 +45,15 @@ def main():
             raise RuntimeError(f'Cell {number} failed') from error
         print(f'Cell {number}: PASS ({records[-1]["seconds"]} s)',flush=True)
     pngs=sum('image/png' in o.get('data',{}) for c in n.cells for o in c.get('outputs',[]))
-    assert len(records)==34,(len(records),records)
-    assert pngs==13,pngs
-    assert shell.user_ns['TEST_STATUS']['returncode']==0
+    if len(records)!=34:
+        raise RuntimeError(f'Expected 34 code cells, got {len(records)}')
+    if pngs!=13:
+        raise RuntimeError(f'Expected 13 inline PNGs, got {pngs}')
+    if shell.user_ns['TEST_STATUS']['returncode']!=0:
+        raise RuntimeError('Embedded test suite failed')
     archive=Path(shell.user_ns['RESULTS_ZIP'])
-    assert archive.is_file()
+    if not archive.is_file():
+        raise RuntimeError(f'Results archive not found: {archive}')
     n.metadata['execution_verification']={'runner':'verify_colab.py; isolated local IPython, not Google hosted runtime','code_cells':len(records),'pngs':pngs}
     nbformat.write(n,source.with_stem('COLAB_VERIFIED'))
     result={'code_cells':len(records),'inline_pngs':pngs,'results_zip':str(archive),'project_root':str(shell.user_ns['PROJECT_ROOT']),'environment':shell.user_ns['_run_info']['environment']}
