@@ -10,3 +10,6 @@ build/
 .pytest_cache/
 satqkd_2_0_2_*/
 results/satqkd_colab_results.zip
+COLAB_VERIFIED.ipynb
+cell_verification.json
+verification_summary.json
