@@ -3,7 +3,7 @@
 Equations (28)-(33) of the revised article.
 """
 import numpy as np
-from .linkmodel import R_E, R_GEO, H_GEO, MU_E, Link, slant_range
+from .linkmodel import R_E, R_GEO, H_GEO, MU_E
 
 OMEGA_E = 7.2921159e-5      # Earth rotation rate, rad/s
 H_GRAZE = 100e3             # minimum height of an inter-satellite line of sight, m

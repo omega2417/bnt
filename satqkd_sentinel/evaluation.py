@@ -9,7 +9,7 @@ from .linkmodel import Link
 from .telemetry import generate_dataset, STATES, GROUPS
 from .features import extract_features, FEATURE_NAMES, QUANTUM_ONLY
 from .models import (train_classifier, predict, evaluate_classifier,
-                     train_novelty_detector, novelty_predict, novelty_score,
+                     train_novelty_detector, novelty_predict,
                      window_alarm, block_policy, feature_importance)
 
 

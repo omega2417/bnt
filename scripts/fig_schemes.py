@@ -2,7 +2,7 @@
 from pathlib import Path
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-import sys, numpy as np, matplotlib; matplotlib.use("Agg")
+import sys, matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch, Rectangle, FancyArrowPatch
 from matplotlib.lines import Line2D

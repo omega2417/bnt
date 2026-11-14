@@ -6,7 +6,6 @@ import importlib.metadata
 import json
 from pathlib import Path
 import platform
-import sys
 
 import joblib
 import numpy as np

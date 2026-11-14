@@ -6,7 +6,7 @@ following the signature matrix of Table 3 of the article.
 """
 import numpy as np
 import pandas as pd
-from .linkmodel import Link, slant_range, pass_profile, h2
+from .linkmodel import Link, pass_profile, h2
 
 STATES = [
     'nominal',

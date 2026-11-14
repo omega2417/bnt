@@ -12,7 +12,7 @@ try:
 except ImportError:
     Basemap = None
 from satqkd_sentinel import style as S
-from satqkd_sentinel.linkmodel import Link, slant_range, R_E, R_GEO, H_GEO, C_LIGHT
+from satqkd_sentinel.linkmodel import Link, slant_range, R_E, R_GEO
 from satqkd_sentinel.geo import *
 S.apply()
 outdir = sys.argv[1] if len(sys.argv) > 1 else "figures"
