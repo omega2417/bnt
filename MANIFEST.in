@@ -1,0 +1,8 @@
+include README.md README_UK.md CHANGELOG.md VERIFICATION.md LICENSE CITATION.cff Makefile run.py start.sh start.bat requirements*.txt Dockerfile
+recursive-include scripts *.py
+recursive-include tests *.py
+recursive-include notebooks *.ipynb
+
+include COLAB_START.ipynb START_COLAB.md
+recursive-include scripts *.json
+recursive-include verification *.json *.txt

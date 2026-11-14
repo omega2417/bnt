@@ -1,0 +1,3 @@
+make tables figures: exit 0, Basemap not installed.
+Created: geo_table.json; fig_signatures.png; fig_federated.png; fig_constellation.png; fig_sky.png; fig_geo_coverage.png; fig_geo_contact.png; fig_geo_links.png.
+HTML structural validation: 3 valid embedded PNGs, no external script/style/frame dependencies.

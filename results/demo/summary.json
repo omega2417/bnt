@@ -1,0 +1,149 @@
+{
+  "version": "2.0.2",
+  "seed": 42,
+  "mode": "quick",
+  "data_origin": "synthetic simulation",
+  "security_status": "illustrative model; not a composable security proof",
+  "selected_method": "random_forest",
+  "selection_basis": "independent validation passes",
+  "train_passes": 30,
+  "test_passes": 20,
+  "validation_passes": 10,
+  "test_windows": 4747,
+  "macro_f1": 0.8326646776656685,
+  "accuracy": 0.9420686749526016,
+  "block_policies": {
+    "exclude_jamming": {
+      "total_key": 24694356.63077309,
+      "retained_key": 24693674.96134966,
+      "excluded_key": 681.6694234311581,
+      "retained_fraction": 0.9999723957407102
+    },
+    "exclude_all_attacks": {
+      "total_key": 24694356.63077309,
+      "retained_key": 20532145.810475193,
+      "excluded_key": 4162210.820297897,
+      "retained_fraction": 0.8314509309746049
+    },
+    "exclude_all_anomalies": {
+      "total_key": 24694356.63077309,
+      "retained_key": 17012008.680383794,
+      "excluded_key": 7682347.950389296,
+      "retained_fraction": 0.6889026887699569
+    }
+  },
+  "novelty_detectors": {
+    "isolation_forest": {
+      "detection_rate": 0.5272459499263623,
+      "false_positive_rate": 0.006642066420664207,
+      "tp": 1074,
+      "fn": 963,
+      "fp": 18,
+      "tn": 2692
+    },
+    "mahalanobis": {
+      "detection_rate": 1.0,
+      "false_positive_rate": 0.007011070110701107,
+      "tp": 2037,
+      "fn": 0,
+      "fp": 19,
+      "tn": 2691
+    }
+  },
+  "link_budget": [
+    {
+      "elevation_deg": 20,
+      "range_km": 1192.7971987277247,
+      "loss_db": 43.238096900132575,
+      "rate_bps": 2844.467571770068,
+      "qber": 0.020193230768537632
+    },
+    {
+      "elevation_deg": 30,
+      "range_km": 909.4249382619946,
+      "loss_db": 40.460295257634755,
+      "rate_bps": 5973.460304015572,
+      "qber": 0.015430329266969061
+    },
+    {
+      "elevation_deg": 40,
+      "range_km": 741.292866283942,
+      "loss_db": 38.48255414271308,
+      "rate_bps": 9811.587133523853,
+      "qber": 0.01345797473078688
+    },
+    {
+      "elevation_deg": 60,
+      "range_km": 570.5099997481406,
+      "loss_db": 36.02675874755574,
+      "rate_bps": 17803.568845266433,
+      "qber": 0.011970514728731107
+    },
+    {
+      "elevation_deg": 90,
+      "range_km": 500.0,
+      "loss_db": 34.81176071899698,
+      "rate_bps": 23780.976151954124,
+      "qber": 0.01149112834522202
+    }
+  ],
+  "finite_key": [
+    {
+      "eps_max_deg": 25,
+      "K_inf_bits": 618701.3357444091,
+      "K_fin_bits": 217231.64232406553,
+      "ratio": 0.35110905662212083
+    },
+    {
+      "eps_max_deg": 30,
+      "K_inf_bits": 993454.2908492154,
+      "K_fin_bits": 367492.46575643943,
+      "ratio": 0.36991381399369966
+    },
+    {
+      "eps_max_deg": 40,
+      "K_inf_bits": 1674341.4751441611,
+      "K_fin_bits": 651596.5077028368,
+      "ratio": 0.3891658406459376
+    },
+    {
+      "eps_max_deg": 60,
+      "K_inf_bits": 2771828.435675512,
+      "K_fin_bits": 1121502.7234698678,
+      "ratio": 0.4046075540012817
+    },
+    {
+      "eps_max_deg": 90,
+      "K_inf_bits": 3448458.2741956683,
+      "K_fin_bits": 1414443.494019187,
+      "ratio": 0.4101669156339429
+    }
+  ],
+  "coverage": [
+    {
+      "nodes": 3,
+      "coverage_pct": 78.52298577743906,
+      "dual_coverage_pct": 0.6901871226895095
+    },
+    {
+      "nodes": 4,
+      "coverage_pct": 84.55909795684984,
+      "dual_coverage_pct": 21.0756575446341
+    },
+    {
+      "nodes": 6,
+      "coverage_pct": 86.84816299952321,
+      "dual_coverage_pct": 70.19531866024306
+    }
+  ],
+  "environment": {
+    "python": "3.12.14",
+    "satqkd-sentinel": "2.0.2",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "pandas": "2.2.2",
+    "matplotlib": "3.9.2",
+    "scikit-learn": "1.5.2",
+    "joblib": "1.4.2"
+  }
+}

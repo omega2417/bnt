@@ -1,0 +1,16 @@
+{
+  "code_cells": 34,
+  "inline_pngs": 13,
+  "results_zip": "satqkd_colab_results.zip",
+  "project_root": "satqkd_2_0_2_3bi0zw_3",
+  "environment": {
+    "python": "3.12.14",
+    "satqkd-sentinel": "2.0.2",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "pandas": "2.2.2",
+    "matplotlib": "3.9.2",
+    "scikit-learn": "1.5.2",
+    "joblib": "1.4.2"
+  }
+}
