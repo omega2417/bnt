@@ -13,3 +13,4 @@ results/satqkd_colab_results.zip
 COLAB_VERIFIED.ipynb
 cell_verification.json
 verification_summary.json
+satqkd-sentinel-*.zip
