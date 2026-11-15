@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "stingray-security"
+version = "1.0.0"
+description = "Stingray — офлайн-набір для перевірки, лікування і захисту ПК з Windows 10/11"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+dependencies = [
+    "yara-python>=4.3.0",
+    "psutil>=5.9.0",
+    "jinja2>=3.1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+colab = ["yara-python>=4.3.0", "jinja2>=3.1.0"]
+
+[project.scripts]
+stingray = "stingray.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["stingray*"]
