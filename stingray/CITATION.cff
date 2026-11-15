@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: "Stingray — Офлайн-набір для перевірки, лікування і захисту ПК з Windows 10/11"
+message: "If you use this software, please cite it as below."
+type: software
+version: "1.0.0"
+date-released: "2026-11-15"
+license: MIT
+repository-code: "https://github.com/omega2417/bnt"
+keywords:
+  - security
+  - antivirus
+  - malware-detection
+  - yara
+  - windows-hardening
+  - offline-toolkit
+  - ukrainian
+abstract: >-
+  Stingray — офлайн-набір для перевірки, лікування і захисту ПК з
+  Windows 10/11. Працює без інтернету і без встановлення, з флешки,
+  українською. Включає сканер шкідливого ПЗ (хеші MD5/SHA256 + YARA),
+  перевірку стану системи, карантин файлів, налаштування захисту Windows
+  (30+ параметрів) та генерацію HTML-звітів.
