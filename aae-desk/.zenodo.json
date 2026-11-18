@@ -1,0 +1,39 @@
+{
+  "title": "AAE-Desk: accountable agentic evidence preparation for national cyber resilience governance (software prototype)",
+  "upload_type": "software",
+  "version": "0.1.0",
+  "publication_date": "2026-11-18",
+  "access_right": "open",
+  "license": "MIT",
+  "language": "ukr",
+  "creators": [
+    {
+      "name": "Torstensson, Olga",
+      "orcid": "0009-0007-2169-6851",
+      "affiliation": "School of Information Technology, Halmstad University, Sweden"
+    },
+    {
+      "name": "Antypenko, Iryna",
+      "orcid": "0000-0001-9520-4353",
+      "affiliation": "State University of Information and Communication Technologies, Kyiv, Ukraine"
+    },
+    {
+      "name": "Prokopovych-Tkachenko, Dmytro",
+      "orcid": "0000-0002-6590-3898",
+      "affiliation": "University of Customs and Finance, Dnipro, Ukraine"
+    }
+  ],
+  "description": "<p>AAE-Desk is a research prototype that implements the Accountable Agentic Evidence (AAE) model for agent-assisted evidence preparation in national cyber resilience governance. It is intended for public administration bodies: analysts, accountable officials, interagency coordinators and oversight units.</p><p>The software implements four evidence-preparation functions executed by software agents on metadata only (F1 discovery, F2 provenance, F3 appraisal, F4 briefing), three human gates (G1 full-text verification, G2 decision, G3 ex post review), an append-only hash-chained decision record with backward traceability, a RACI role allocation in which agents are never accountable, graduated autonomy zones Z1-Z4 with escalation triggers, interagency evidence bundles, and the indicators of the proposed evaluation design. It also contains the coding of seven cyber resilience and AI governance frameworks against eight accountability design elements.</p><p>Contents: Python package (standard library only, Python 3.10+), web interface and command line, two demonstration scenarios, 30 automated tests, a Google Colab notebook, and the project description (DOCX, in Ukrainian). The user interface and documentation are in Ukrainian.</p><p>Limitations: the agents are deterministic rule-based components, not language models; candidate claims come from a scripted file; discovery uses a local metadata snapshot of 22 records (one synthetic record is labelled as such); there is no authentication. Demonstration indicators are illustrative and are not empirical evidence for the propositions of the underlying study.</p>",
+  "keywords": [
+    "AI agents",
+    "cyber resilience",
+    "public governance",
+    "public accountability",
+    "evidence-informed policy",
+    "metadata",
+    "human oversight",
+    "decision record",
+    "interagency coordination"
+  ],
+  "notes": "Names of persons and the agency in the demonstration scenarios are fictitious."
+}

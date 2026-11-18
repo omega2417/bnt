@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "AAE-Desk: accountable agentic evidence preparation for national cyber resilience governance"
+version: 0.1.0
+date-released: 2026-11-18
+license: MIT
+authors:
+  - family-names: Torstensson
+    given-names: Olga
+    orcid: "https://orcid.org/0009-0007-2169-6851"
+    affiliation: "School of Information Technology, Halmstad University, Sweden"
+  - family-names: Antypenko
+    given-names: Iryna
+    orcid: "https://orcid.org/0000-0001-9520-4353"
+    affiliation: "State University of Information and Communication Technologies, Kyiv, Ukraine"
+  - family-names: Prokopovych-Tkachenko
+    given-names: Dmytro
+    orcid: "https://orcid.org/0000-0002-6590-3898"
+    affiliation: "University of Customs and Finance, Dnipro, Ukraine"
+keywords:
+  - AI agents
+  - cyber resilience
+  - public governance
+  - public accountability
+  - decision record
+  - human oversight
+abstract: >-
+  Research prototype implementing the Accountable Agentic Evidence (AAE) model:
+  agent functions F1-F4 that work on metadata only, human gates G1-G3, an
+  append-only hash-chained decision record, RACI role checks, graduated
+  autonomy zones Z1-Z4 with escalation triggers, and interagency evidence bundles.
