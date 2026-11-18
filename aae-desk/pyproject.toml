@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aae-desk"
+version = "0.1.0"
+description = "Підзвітна агентна підготовка доказів для рішень з національної кіберстійкості (модель AAE)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+aae = "aae.cli:main"
+
+[tool.setuptools]
+packages = ["aae"]
+
+[tool.setuptools.package-data]
+aae = ["data/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

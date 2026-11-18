@@ -1,0 +1,595 @@
+{
+ "snapshot": "2026-11-18",
+ "note": "Локальний знімок метаданих для демонстрації. Записи з synthetic=true вигадані й позначені як демонстраційні.",
+ "records": [
+  {
+   "key": "nis2",
+   "title": "Directive (EU) 2022/2555 on measures for a high common level of cybersecurity across the Union (NIS 2 Directive)",
+   "issuer": "European Parliament and Council",
+   "year": 2022,
+   "type": "law",
+   "index": "eur-lex",
+   "identifier": {
+    "scheme": "celex",
+    "value": "32022L2555"
+   },
+   "jurisdiction": "EU",
+   "status": "current",
+   "superseded_by": null,
+   "keywords": [
+    "nis2",
+    "cybersecurity",
+    "кібербезпека",
+    "кіберстійкість",
+    "management bodies",
+    "керівні органи",
+    "керівництво",
+    "training",
+    "навчання",
+    "risk management",
+    "управління ризиками",
+    "incident reporting",
+    "звітування про інциденти",
+    "інциденти",
+    "information sharing",
+    "обмін інформацією",
+    "транспозиція",
+    "transposition",
+    "критична інфраструктура"
+   ],
+   "url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj",
+   "synthetic": false
+  },
+  {
+   "key": "nis1",
+   "title": "Directive (EU) 2016/1148 concerning measures for a high common level of security of network and information systems (NIS Directive)",
+   "issuer": "European Parliament and Council",
+   "year": 2016,
+   "type": "law",
+   "index": "eur-lex",
+   "identifier": {
+    "scheme": "celex",
+    "value": "32016L1148"
+   },
+   "jurisdiction": "EU",
+   "status": "repealed",
+   "superseded_by": "nis2",
+   "keywords": [
+    "nis",
+    "cybersecurity",
+    "кібербезпека",
+    "incident reporting",
+    "звітування про інциденти",
+    "інциденти",
+    "транспозиція",
+    "transposition",
+    "критична інфраструктура"
+   ],
+   "url": "https://eur-lex.europa.eu/eli/dir/2016/1148/oj",
+   "synthetic": false
+  },
+  {
+   "key": "aiact",
+   "title": "Regulation (EU) 2024/1689 laying down harmonised rules on artificial intelligence (Artificial Intelligence Act)",
+   "issuer": "European Parliament and Council",
+   "year": 2024,
+   "type": "law",
+   "index": "eur-lex",
+   "identifier": {
+    "scheme": "celex",
+    "value": "32024R1689"
+   },
+   "jurisdiction": "EU",
+   "status": "current",
+   "superseded_by": null,
+   "keywords": [
+    "ai act",
+    "artificial intelligence",
+    "штучний інтелект",
+    "ші",
+    "human oversight",
+    "людський нагляд",
+    "logging",
+    "журналювання",
+    "ai literacy",
+    "грамотність",
+    "навчання",
+    "training",
+    "transparency",
+    "прозорість"
+   ],
+   "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+   "synthetic": false
+  },
+  {
+   "key": "csf2",
+   "title": "The NIST Cybersecurity Framework (CSF) 2.0 (NIST CSWP 29)",
+   "issuer": "National Institute of Standards and Technology",
+   "year": 2024,
+   "type": "standard",
+   "index": "nist-csrc",
+   "identifier": {
+    "scheme": "doi",
+    "value": "10.6028/NIST.CSWP.29"
+   },
+   "jurisdiction": "INT",
+   "status": "current",
+   "superseded_by": null,
+   "keywords": [
+    "csf",
+    "cybersecurity framework",
+    "кібербезпека",
+    "govern",
+    "врядування",
+    "roles",
+    "ролі",
+    "awareness",
+    "training",
+    "навчання",
+    "керівництво",
+    "risk management",
+    "управління ризиками"
+   ],
+   "url": "https://doi.org/10.6028/NIST.CSWP.29",
+   "synthetic": false
+  },
+  {
+   "key": "csf2-crossref",
+   "title": "The NIST Cybersecurity Framework (CSF) 2.0",
+   "issuer": "National Institute of Standards and Technology",
+   "year": 2024,
+   "type": "standard",
+   "index": "crossref",
+   "identifier": {
+    "scheme": "doi",
+    "value": "10.6028/nist.cswp.29"
+   },
+   "jurisdiction": "INT",
+   "status": "current",
+   "superseded_by": null,
+   "keywords": [
+    "csf",
+    "cybersecurity framework",
+    "кібербезпека",
+    "govern",
+    "training",
+    "навчання",
+    "risk management"
+   ],
+   "url": "https://doi.org/10.6028/NIST.CSWP.29",
+   "synthetic": false
+  },
+  {
+   "key": "csf11",
+   "title": "Framework for Improving Critical Infrastructure Cybersecurity, Version 1.1",
+   "issuer": "National Institute of Standards and Technology",
+   "year": 2018,
+   "type": "standard",
+   "index": "nist-csrc",
+   "identifier": {
+    "scheme": "doi",
+    "value": "10.6028/NIST.CSWP.04162018"
+   },
+   "jurisdiction": "INT",
+   "status": "superseded",
+   "superseded_by": "csf2",
+   "keywords": [
+    "csf",
+    "cybersecurity framework",
+    "кібербезпека",
+    "критична інфраструктура",
+    "awareness",
+    "training",
+    "навчання",
+    "risk management"
+   ],
+   "url": "https://doi.org/10.6028/NIST.CSWP.04162018",
+   "synthetic": false
+  },
+  {
+   "key": "airmf",
+   "title": "Artificial Intelligence Risk Management Framework (AI RMF 1.0) (NIST AI 100-1)",
+   "issuer": "National Institute of Standards and Technology",
+   "year": 2023,
+   "type": "standard",
+   "index": "nist-csrc",
+   "identifier": {
+    "scheme": "doi",
+    "value": "10.6028/NIST.AI.100-1"
+   },
+   "jurisdiction": "INT",
+   "status": "current",
+   "superseded_by": null,
+   "keywords": [
+    "ai rmf",
+    "artificial intelligence",
+    "штучний інтелект",
+    "ші",
+    "risk management",
+    "управління ризиками",
+    "human oversight",
+    "людський нагляд",
+    "govern",
+    "accountability",
+    "підзвітність"
+   ],
+   "url": "https://doi.org/10.6028/NIST.AI.100-1",
+   "synthetic": false
+  },
+  {
+   "key": "sp800160",
+   "title": "Developing Cyber-Resilient Systems: A Systems Security Engineering Approach (NIST SP 800-160 Vol. 2 Rev. 1)",
+   "issuer": "National Institute of Standards and Technology",
+   "year": 2021,
+   "type": "standard",
+   "index": "nist-csrc",
+   "identifier": {
+    "scheme": "doi",
+    "value": "10.6028/NIST.SP.800-160v2r1"
+   },
+   "jurisdiction": "INT",
+   "status": "current",
+   "superseded_by": null,
+   "keywords": [
+    "cyber resiliency",
+    "cyber resilience",
+    "кіберстійкість",
+    "systems engineering",
+    "resilience techniques"
+   ],
+   "url": "https://doi.org/10.6028/NIST.SP.800-160v2r1",
+   "synthetic": false
+  },
+  {
+   "key": "sp800160-2019",
+   "title": "Developing Cyber Resilient Systems: A Systems Security Engineering Approach (NIST SP 800-160 Vol. 2)",
+   "issuer": "National Institute of Standards and Technology",
+   "year": 2019,
+   "type": "standard",
+   "index": "nist-csrc",
+   "identifier": {
+    "scheme": "doi",
+    "value": "10.6028/NIST.SP.800-160v2"
+   },
+   "jurisdiction": "INT",
+   "status": "superseded",
+   "superseded_by": "sp800160",
+   "keywords": [
+    "cyber resiliency",
+    "cyber resilience",
+    "кіберстійкість",
+    "systems engineering"
+   ],
+   "url": "https://doi.org/10.6028/NIST.SP.800-160v2",
+   "synthetic": false
+  },
+  {
+   "key": "oecd",
+   "title": "Recommendation of the Council on Artificial Intelligence (OECD/LEGAL/0449)",
+   "issuer": "OECD Council",
+   "year": 2024,
+   "type": "recommendation",
+   "index": "oecd-legal",
+   "identifier": {
+    "scheme": "oecd",
+    "value": "OECD/LEGAL/0449"
+   },
+   "jurisdiction": "INT",
+   "status": "current",
+   "superseded_by": null,
+   "keywords": [
+    "oecd",
+    "artificial intelligence",
+    "штучний інтелект",
+    "ші",
+    "accountability",
+    "підзвітність",
+    "traceability",
+    "простежуваність",
+    "human oversight",
+    "людський нагляд"
+   ],
+   "url": "https://legalinstruments.oecd.org/en/instruments/OECD-LEGAL-0449",
+   "synthetic": false
+  },
+  {
+   "key": "ua-strategy",
+   "title": "Стратегія кібербезпеки України (Указ Президента України № 447/2021)",
+   "issuer": "Президент України",
+   "year": 2021,
+   "type": "strategy",
+   "index": "zakon-rada",
+   "identifier": {
+    "scheme": "rada",
+    "value": "447/2021"
+   },
+   "jurisdiction": "UA",
+   "status": "current",
+   "superseded_by": null,
+   "keywords": [
+    "стратегія кібербезпеки",
+    "кібербезпека",
+    "кіберстійкість",
+    "cybersecurity strategy",
+    "взаємодія",
+    "нкцк",
+    "координація",
+    "навчання",
+    "кіберграмотність",
+    "підготовка кадрів",
+    "інциденти",
+    "обмін інформацією",
+    "транспозиція"
+   ],
+   "url": "https://zakon.rada.gov.ua/laws/show/447/2021",
+   "synthetic": false
+  },
+  {
+   "key": "ua-law",
+   "title": "Закон України «Про основні засади забезпечення кібербезпеки України» № 2163-VIII",
+   "issuer": "Верховна Рада України",
+   "year": 2017,
+   "type": "law",
+   "index": "zakon-rada",
+   "identifier": {
+    "scheme": "rada",
+    "value": "2163-19"
+   },
+   "jurisdiction": "UA",
+   "status": "current",
+   "superseded_by": null,
+   "keywords": [
+    "кібербезпека",
+    "закон",
+    "основні засади",
+    "суб'єкти забезпечення кібербезпеки",
+    "критична інфраструктура",
+    "інциденти",
+    "координація",
+    "транспозиція"
+   ],
+   "url": "https://zakon.rada.gov.ua/laws/show/2163-19",
+   "synthetic": false
+  },
+  {
+   "key": "bovens2007",
+   "title": "Analysing and assessing accountability: A conceptual framework",
+   "issuer": "Wiley",
+   "year": 2007,
+   "type": "article",
+   "index": "crossref",
+   "identifier": {
+    "scheme": "doi",
+    "value": "10.1111/j.1468-0386.2007.00378.x"
+   },
+   "jurisdiction": "INT",
+   "status": "current",
+   "superseded_by": null,
+   "keywords": [
+    "accountability",
+    "підзвітність",
+    "forum",
+    "public administration"
+   ],
+   "url": "https://doi.org/10.1111/j.1468-0386.2007.00378.x",
+   "synthetic": false
+  },
+  {
+   "key": "busuioc2021",
+   "title": "Accountable artificial intelligence: Holding algorithms to account",
+   "issuer": "Wiley",
+   "year": 2021,
+   "type": "article",
+   "index": "crossref",
+   "identifier": {
+    "scheme": "doi",
+    "value": "10.1111/puar.13293"
+   },
+   "jurisdiction": "INT",
+   "status": "current",
+   "superseded_by": null,
+   "keywords": [
+    "accountability",
+    "підзвітність",
+    "artificial intelligence",
+    "штучний інтелект",
+    "ші",
+    "algorithms",
+    "людський нагляд"
+   ],
+   "url": "https://doi.org/10.1111/puar.13293",
+   "synthetic": false
+  },
+  {
+   "key": "alonbarkat2023",
+   "title": "Human–AI interactions in public sector decision making: \"Automation bias\" and \"selective adherence\" to algorithmic advice",
+   "issuer": "Oxford University Press",
+   "year": 2023,
+   "type": "article",
+   "index": "crossref",
+   "identifier": {
+    "scheme": "doi",
+    "value": "10.1093/jopart/muac007"
+   },
+   "jurisdiction": "INT",
+   "status": "current",
+   "superseded_by": null,
+   "keywords": [
+    "automation bias",
+    "selective adherence",
+    "human oversight",
+    "людський нагляд",
+    "штучний інтелект",
+    "ші",
+    "public sector"
+   ],
+   "url": "https://doi.org/10.1093/jopart/muac007",
+   "synthetic": false
+  },
+  {
+   "key": "head2016",
+   "title": "Toward more \"evidence-informed\" policy making?",
+   "issuer": "Wiley",
+   "year": 2016,
+   "type": "article",
+   "index": "crossref",
+   "identifier": {
+    "scheme": "doi",
+    "value": "10.1111/puar.12475"
+   },
+   "jurisdiction": "INT",
+   "status": "current",
+   "superseded_by": null,
+   "keywords": [
+    "evidence-informed policy",
+    "доказова політика",
+    "public administration"
+   ],
+   "url": "https://doi.org/10.1111/puar.12475",
+   "synthetic": false
+  },
+  {
+   "key": "dupont2019",
+   "title": "The cyber-resilience of financial institutions: Significance and applicability",
+   "issuer": "Oxford University Press",
+   "year": 2019,
+   "type": "article",
+   "index": "crossref",
+   "identifier": {
+    "scheme": "doi",
+    "value": "10.1093/cybsec/tyz013"
+   },
+   "jurisdiction": "INT",
+   "status": "current",
+   "superseded_by": null,
+   "keywords": [
+    "cyber resilience",
+    "кіберстійкість",
+    "regulation",
+    "financial institutions"
+   ],
+   "url": "https://doi.org/10.1093/cybsec/tyz013",
+   "synthetic": false
+  },
+  {
+   "key": "carr2016",
+   "title": "Public–private partnerships in national cyber-security strategies",
+   "issuer": "Wiley",
+   "year": 2016,
+   "type": "article",
+   "index": "crossref",
+   "identifier": {
+    "scheme": "doi",
+    "value": "10.1111/1468-2346.12504"
+   },
+   "jurisdiction": "INT",
+   "status": "current",
+   "superseded_by": null,
+   "keywords": [
+    "public-private partnership",
+    "national cyber security strategy",
+    "кібербезпека",
+    "критична інфраструктура",
+    "координація"
+   ],
+   "url": "https://doi.org/10.1111/1468-2346.12504",
+   "synthetic": false
+  },
+  {
+   "key": "boin2016",
+   "title": "Designing resilient institutions for transboundary crisis management: A time for public administration",
+   "issuer": "Wiley",
+   "year": 2016,
+   "type": "article",
+   "index": "crossref",
+   "identifier": {
+    "scheme": "doi",
+    "value": "10.1111/padm.12264"
+   },
+   "jurisdiction": "INT",
+   "status": "current",
+   "superseded_by": null,
+   "keywords": [
+    "resilience",
+    "crisis management",
+    "transboundary",
+    "координація",
+    "критична інфраструктура",
+    "інциденти"
+   ],
+   "url": "https://doi.org/10.1111/padm.12264",
+   "synthetic": false
+  },
+  {
+   "key": "madan2023",
+   "title": "AI adoption and diffusion in public administration: A systematic literature review and future research agenda",
+   "issuer": "Elsevier",
+   "year": 2023,
+   "type": "article",
+   "index": "crossref",
+   "identifier": {
+    "scheme": "doi",
+    "value": "10.1016/j.giq.2022.101774"
+   },
+   "jurisdiction": "INT",
+   "status": "current",
+   "superseded_by": null,
+   "keywords": [
+    "ai adoption",
+    "public administration",
+    "штучний інтелект",
+    "ші",
+    "навчання",
+    "компетентність"
+   ],
+   "url": "https://doi.org/10.1016/j.giq.2022.101774",
+   "synthetic": false
+  },
+  {
+   "key": "janssen2020",
+   "title": "Data governance: Organizing data for trustworthy artificial intelligence",
+   "issuer": "Elsevier",
+   "year": 2020,
+   "type": "article",
+   "index": "crossref",
+   "identifier": {
+    "scheme": "doi",
+    "value": "10.1016/j.giq.2020.101493"
+   },
+   "jurisdiction": "INT",
+   "status": "current",
+   "superseded_by": null,
+   "keywords": [
+    "data governance",
+    "trustworthy ai",
+    "штучний інтелект",
+    "ші",
+    "provenance"
+   ],
+   "url": "https://doi.org/10.1016/j.giq.2020.101493",
+   "synthetic": false
+  },
+  {
+   "key": "demo-report",
+   "title": "Огляд готовності органів влади до транспозиції вимог NIS2 (ДЕМОНСТРАЦІЙНИЙ ЗАПИС, вигадане джерело без сталого ідентифікатора)",
+   "issuer": "Демонстраційний аналітичний центр",
+   "year": 2025,
+   "type": "report",
+   "index": "institutional",
+   "identifier": null,
+   "jurisdiction": "UA",
+   "status": "current",
+   "superseded_by": null,
+   "keywords": [
+    "nis2",
+    "транспозиція",
+    "transposition",
+    "кібербезпека",
+    "готовність",
+    "інциденти"
+   ],
+   "url": "",
+   "synthetic": true
+  }
+ ]
+}
