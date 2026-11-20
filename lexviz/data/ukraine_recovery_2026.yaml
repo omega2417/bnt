@@ -1,0 +1,305 @@
+# LexViz dataset S1
+# Structured, provenance-tagged coding of Tables 1 and 2 and Section 3 of the manuscript
+# "Legal Framework for Ukraine's Post-War Recovery and the EU Acquis:
+#  A Comparative Analysis of Public Administration Mechanisms" (Laws, MDPI).
+#
+# Provenance tags:
+#   L  - content of a legal act
+#   EC - assessment of the European Commission
+#   A  - authors' assessment
+#   P  - authors' proposal
+#
+# Edit this file, then run:  lexviz validate <file>  and  lexviz build <file>
+# (on iPad: open run_ipad.py and press Run).
+
+meta:
+  id: ukraine_recovery_2026
+  title: Legal framework for Ukraine's post-war recovery and the EU acquis
+  cutoff: "2026-11-20"
+  version: 0.1.0
+  source: Tables 1-2 and Sections 2-3 of the revised manuscript
+
+provenance:
+  L:  {label: "content of a legal act"}
+  EC: {label: "assessment of the European Commission"}
+  A:  {label: "authors' assessment"}
+  P:  {label: "authors' proposal"}
+
+# Commission's five-level verbal scale, coded ordinally 1..5 (Section 2.6).
+ec_scale:
+  - early stage
+  - some level of preparation
+  - moderately prepared
+  - good level of preparation
+  - well advanced
+
+criteria:
+  C1: Formal alignment
+  C2: Scope of derogation
+  C3: Enforcement
+  C4: Temporal limitation
+
+# ---------------------------------------------------------------- Table 1
+areas:
+  - id: procurement
+    name: Public procurement
+    chapter: 5
+    ec:
+      2025: {level: 2.0, text: some level of preparation, progress: limited progress}
+      2026: {level: 2.5, text: between some and a moderate level of preparation, progress: some progress}
+    authors:
+      rating: partly_aligned
+      C1: {state: largely_met, note: after Law No. 4888-IX}
+      C2: {state: partly_met,  note: exceptions set by Government resolution}
+      C3: {state: partly_met}
+      C4: {state: met_in_form, note: martial law + 90 days}
+
+  - id: state_aid
+    name: State aid
+    chapter: 8
+    ec:
+      2025: {level: 2.0, text: some level of preparation, progress: limited progress}
+      2026: {level: 2.0, text: some level of preparation, progress: limited progress}
+    authors:
+      rating: misaligned
+      C1: {state: partly_met, note: framework law in force}
+      C2: {state: not_met,    note: control suspended for all measures}
+      C3: {state: not_met,    note: no notification duty}
+      C4: {state: not_met,    note: "open-ended; tied to martial law"}
+
+  - id: eia
+    name: Environmental impact assessment
+    chapter: 27
+    ec:
+      2025: {level: 2.0, text: some level of preparation}
+      2026: {level: 2.0, text: some level of preparation, progress: some progress}
+    authors:
+      rating: misaligned
+      C1: {state: met,        note: general regime}
+      C2: {state: not_met,    note: category-wide exemption}
+      C3: {state: partly_met}
+      C4: {state: not_met,    note: reconstruction period undefined}
+
+  - id: regional
+    name: Regional policy
+    chapter: 22
+    ec:
+      2025: {level: 2.0, text: some level of preparation}
+      2026: {level: 2.0, text: some level of preparation, progress: limited progress}
+    authors:
+      rating: partly_aligned
+      C1: {state: partly_met, note: no partnership framework}
+      C2: {state: na}
+      C3: {state: not_met,    note: programme authorities not designated}
+      C4: {state: na}
+
+  - id: anticorruption
+    name: Anti-corruption and whistleblower protection
+    chapter: 23
+    ec:
+      2025: {level: 2.0, text: some level of preparation, progress: limited progress}
+      2026: {level: 2.5, text: between some and a moderate level of preparation, progress: some progress}
+    authors:
+      rating: partly_aligned
+      C1: {state: largely_met}
+      C2: {state: na}
+      C3: {state: met_exposed, note: safeguards rest on ordinary law}
+      C4: {state: na}
+
+# ---------------------------------------------------------------- Figure 1
+design:
+  sources:
+    - {tag: L,  text: "Ukrainian acts in force on 20.11.2026 (zakon.rada.gov.ua): general regimes, wartime derogations, implementing mechanisms", to: [1]}
+    - {tag: L,  text: "EU benchmark acts (EUR-Lex) and approximation obligations: Association Agreement, TFEU; UNCAC", to: [1, 2]}
+    - {tag: EC, text: "European Commission, Ukraine 2025 and 2026 Reports (Chapters 5, 8, 22, 23, 27, 32); CID (EU) 2024/1447", to: [2, 3]}
+    - {tag: "", text: "Scholarly literature on post-conflict recovery, conditionality and enlargement (interpretation only)", to: [discussion]}
+  stages:
+    - {title: "Stage 1 · Doctrinal mapping", text: "Content of Ukrainian and EU acts; versions, provisions, official links"}
+    - {title: "Stage 2 · Comparative test", text: "Provision-by-provision comparison; criteria C1–C4 → rating"}
+    - {title: "Stage 3 · Cause-and-effect matrix", text: "Problem → root cause → provision → EC view → consequence → instrument"}
+  outputs:
+    - {tags: [L],     text: "Section 3.1; Figure 2"}
+    - {tags: [EC, A], text: "Table 1; Figures 3–4"}
+    - {tags: [A, P],  text: "Table 2; Figures 5–8"}
+  discussion: "Section 4 · Discussion"
+  validation: "Validation (Section 2.5): triangulation of the Ukrainian act [L] × the EU benchmark [L] × the Commission's assessment [EC]; the authors' assessment [A] and proposals [P] are always reported separately from [L] and [EC]."
+
+# ---------------------------------------------------------------- Figure 2
+timeline:
+  start: 2014
+  end: 2027.75
+  break_year: 2022          # axis compressed before, expanded after
+  martial_law_from: "2022-02-24"
+  martial_law_label: "Martial law since 24.02.2022 (Law No. 389-VIII regime)"
+  lanes:
+    - {id: eu,         name: "EU benchmarks and accession milestones"}
+    - {id: general,    name: "Ukrainian general regimes"}
+    - {id: derogation, name: "Wartime derogations"}
+    - {id: recovery,   name: "Recovery instruments and alignment steps"}
+  events:
+    - {lane: eu, date: "2014-05", tag: L,  label: "Association Agreement"}
+    - {lane: eu, date: "2022-06", tag: L,  label: "EU candidate status"}
+    - {lane: eu, date: "2024-02", tag: L,  label: "Ukraine Facility (2024/792)"}
+    - {lane: eu, date: "2024-05", tag: L,  label: "Ukraine Plan approved"}
+    - {lane: eu, date: "2024-06", tag: L,  label: "Negotiations opened"}
+    - {lane: eu, date: "2025-11", tag: EC, label: "Ukraine 2025 Report"}
+    - {lane: eu, date: "2026-11", tag: EC, label: "Ukraine 2026 Report"}
+    - {lane: general, date: "2014-07", tag: L, label: "State aid, No. 1555-VII"}
+    - {lane: general, date: "2014-10", tag: L, label: "Corruption prevention, No. 1700-VII"}
+    - {lane: general, date: "2015-02", tag: L, label: "Regional policy, No. 156-VIII"}
+    - {lane: general, date: "2015-12", tag: L, label: "Procurement, No. 922-VIII"}
+    - {lane: general, date: "2017-05", tag: L, label: "EIA, No. 2059-VIII"}
+    - {lane: general, date: "2018-03", tag: L, label: "SEA, No. 2354-VIII"}
+    - {lane: general, date: "2019-10", tag: L, label: "Concessions No. 155-IX; whistleblowers No. 198-IX"}
+    - {lane: derogation, date: "2022-03", tag: L, label: "EIA exemption of restoration works, No. 2132-IX"}
+    - {lane: derogation, date: "2022-10", tag: L, label: "Procurement Peculiarities, CMU No. 1178"}
+    - {lane: derogation, date: "2025-07", tag: L, label: "NABU/SAPO independence curtailed, No. 4555-IX"}
+    - {lane: recovery, date: "2022-03", tag: L, label: "Damage assessment, CMU No. 326"}
+    - {lane: recovery, date: "2022-12", tag: L, label: "DREAM pilot, CMU No. 1268", precision: year}
+    - {lane: recovery, date: "2023-02", tag: L, label: "Housing compensation, No. 2923-IX"}
+    - {lane: recovery, date: "2023-09", tag: L, label: "Declarations restored, No. 3384-IX", precision: year}
+    - {lane: recovery, date: "2025-07", tag: L, label: "Independence restored, No. 4560-IX"}
+    - {lane: recovery, date: "2026-05", tag: L, label: "New Procurement Law, No. 4888-IX"}
+    - {lane: recovery, date: "2026-07", tag: L, label: "DREAM Regulation, CMU No. 945"}
+    - {lane: recovery, date: "2027-03", tag: L, label: "No. 4888-IX applies in full"}
+  spans:
+    - {lane: derogation, from: "2022-02", to: open, tag: L, label: "State aid control suspended (open-ended) →"}
+    - {lane: recovery, from: "2026-06", to: "2027-03", tag: A, label: "three concurrent procurement regimes"}
+
+# ---------------------------------------------------------------- Figure 5
+governance:
+  layers:
+    - {id: eu,       name: "EU and\ninternational", y: 0}
+    - {id: central,  name: "Central\nlevel",         y: 1}
+    - {id: special,  name: "Specialised and\ncontrol bodies", y: 2}
+    - {id: regional, name: "Regional\nlevel",        y: 3}
+    - {id: community,name: "Community\nlevel",       y: 4}
+  digital_layer: {name: "Digital layer", from: 1, to: 3}
+  nodes:
+    - {id: ec,       layer: eu,        x: 3.0, w: 2.6, label: "European Commission\n(reports; Ukraine Facility)", key: true}
+    - {id: donors,   layer: eu,        x: 6.9, w: 2.2, label: "International donors\nand organisations"}
+    - {id: rada,     layer: central,   x: 0.9, w: 1.6, label: "Verkhovna Rada"}
+    - {id: cmu,      layer: central,   x: 3.0, w: 1.9, label: "Cabinet of Ministers", key: true}
+    - {id: min,      layer: central,   x: 6.3, w: 3.3, label: "Ministries: communities and territories,\neconomy, finance, justice"}
+    - {id: anti,     layer: special,   x: 0.9, w: 1.7, label: "NACP · NABU ·\nSAPO · HACC"}
+    - {id: amcu,     layer: special,   x: 2.75, w: 1.1, label: "AMCU"}
+    - {id: bdf,      layer: special,   x: 4.65, w: 1.6, label: "Business Develop-\nment Fund"}
+    - {id: agency,   layer: special,   x: 7.2, w: 1.8, label: "State Agency for\nRestoration"}
+    - {id: regadm,   layer: regional,  x: 4.9, w: 3.6, label: "Regional and military administrations"}
+    - {id: civil,    layer: community, x: 1.1, w: 1.6, label: "Civil society"}
+    - {id: lsg,      layer: community, x: 4.9, w: 3.6, label: "Local self-government bodies"}
+    - {id: prozorro, layer: central,   x: 9.6, w: 1.3, label: "Prozorro", digital: true}
+    - {id: dream,    layer: special,   x: 9.6, w: 1.3, label: "DREAM", digital: true, key: true}
+    - {id: registers,layer: regional,  x: 9.6, w: 1.6, label: "National registers;\npublic finance systems", digital: true}
+  edges:
+    - {from: ec,     to: cmu,      type: conditionality, tag: L,  label: "instalments tied to\nreform steps"}
+    - {from: cmu,    to: min,      type: statutory,      tag: L}
+    - {from: min,    to: bdf,      type: statutory,      tag: L}
+    - {from: rada,   to: anti,     type: unstable,       tag: L,  label: "July 2025: curtailed\n(No. 4555-IX), restored\n(No. 4560-IX)"}
+    - {from: cmu,    to: amcu,     type: missing,        tag: EC, label: "no duty to notify\nnew aid [EC]"}
+    - {from: amcu,   to: bdf,      type: weak,           tag: EC, label: "control partly restored\nfor BDF aid [EC]", label_pos: below}
+    - {from: min,    to: agency,   type: weak,           tag: EC, label: "role in public investment\nmanagement unclear [EC]", label_side: left}
+    - {from: min,    to: regadm,   type: weak,           tag: A,  label: "weak vertical\ncoordination", label_t: 0.78}
+    - {from: regadm, to: lsg,      type: weak,           tag: A,  label: "communities lack powers\nand resources"}
+    - {from: civil,  to: lsg,      type: weak,           tag: A,  label: "participation\nin oversight"}
+    - {from: dream,  to: prozorro, type: statutory,      tag: L,  label: "interaction\n(CMU No. 945)"}
+    - {from: dream,  to: donors,   type: statutory,      tag: L,  label: "reporting\nto donors", label_t: 0.8}
+    - {from: dream,  to: registers,type: data,           tag: EC, label: "limited\nintegration [EC]"}
+    - {from: lsg,    to: dream,    type: data,           tag: EC, label: "local databases:\nlimited integration [EC]", route: direct, label_t: 0.15}
+  notes:
+    - {node: min, side: top, type: weak, tag: A, label: "weak interdepartmental cooperation"}
+
+# ---------------------------------------------------------------- Table 2 / Figures 6-7
+mechanisms:
+  institutional: Institutional
+  legal: Legal and regulatory
+  financial: Financial
+  procedural: Procedural
+
+problems:
+  - id: fragmentation
+    name: Fragmentation of the recovery legal framework
+    root_cause: Accelerated, reactive law-making; dispersed legislative initiative
+    mechanisms: [legal, institutional]
+    tracks: [uf]
+  - id: eia_exemption
+    name: Exemption of restoration works from EIA
+    root_cause: Wartime priority of speed over procedural completeness
+    mechanisms: [legal]
+    tracks: [uf, ch27]
+  - id: state_aid_suspension
+    name: Suspension of State aid control
+    root_cause: Need for rapid support to undertakings under martial law
+    mechanisms: [legal, institutional]
+    tracks: [ch8]
+  - id: anticorruption
+    name: Instability of anti-corruption safeguards
+    root_cause: Independence safeguards rest on ordinary law
+    mechanisms: [legal, institutional]
+    tracks: [uf, ch23]
+
+tracks:
+  uf:   "Ukraine Facility (Plan steps; Art. 5 pre-condition)"
+  ch27: "Chapter 27 (environment)"
+  ch8:  "Chapter 8 (State aid)"
+  ch23: "Chapter 23 (anti-corruption)"
+
+fishbone:
+  effect: "Divergence of recovery legislation from the EU acquis"
+  causes:
+    institutional:
+      - No single body coordinating recovery law-making
+      - Weak vertical coordination (centre–region–community)
+      - Weak interdepartmental (horizontal) cooperation
+      - Unclear mandates of State Agency and Business Development Fund
+    legal:
+      - Accelerated, reactive wartime law-making
+      - Categorical derogations (EIA, State aid)
+      - Concurrent procurement regimes until 24.03.2027
+      - Safeguards of NABU/SAPO in ordinary law
+    financial:
+      - Conditionality → risk of "decorative" compliance
+      - Communities' lost revenue base
+      - Gaps in the 2025 PPP law
+      - Recovery aid granted without compatibility assessment
+    procedural:
+      - Underdeveloped monitoring and evaluation
+      - Divergent damage-assessment methodologies
+      - No unified register of damage
+      - Limited DREAM integration with registers and finance systems
+
+# ---------------------------------------------------------------- Figure 8
+roadmap:
+  note: "Phases are sequential,\nnot to calendar scale."
+  phases:
+    - "I. Under martial law (now)"
+    - "II. End of martial law (+90 days)"
+    - "III. Before accession"
+  rows:
+    - id: procurement
+      name: Public procurement
+      items:
+        - {tag: P, from: 0, to: 0.95, text: "Rules replacing CMU No. 1178 state which regime applies to which contract"}
+        - {tag: L, from: 1, to: 1.75, text: "CMU No. 1178 Peculiarities lapse"}
+      milestone: {tag: L, at: 0.75, text: "24.03.2027: No. 4888-IX applies in full [L] — fixed date, independent of the phases"}
+    - id: state_aid
+      name: State aid
+      items:
+        - {tag: P, from: 0, to: 1.0, text: "Phased lifting of suspension; aid schemes above a threshold first"}
+        - {tag: P, from: 0.3, to: 2.95, text: "Register of recovery-related aid linked to DREAM; AMCU staffing"}
+    - id: eia
+      name: Environmental impact assessment
+      items:
+        - {tag: P, from: 0, to: 0.95, text: "Case-by-case screening (Dir. 2011/92/EU, Art. 2(4)); publish exemption decisions"}
+        - {tag: P, from: 1, to: 1.9, text: "Sunset of exemption linked to end of martial law"}
+        - {tag: P, from: 2, to: 2.95, text: "Reassessment where projects seek EU financing"}
+    - id: anticorruption
+      name: Anti-corruption
+      items:
+        - {tag: P, from: 0, to: 0.95, text: "Mandatory NACP and Venice Commission opinions; Strategy 2026–2030"}
+        - {tag: P, from: 1, to: 2.95, text: "Constitutional entrenchment of NABU and SAPO (Art. 157)"}
+    - id: coordination
+      name: Coordination and DREAM
+      items:
+        - {tag: P, from: 0, to: 2.95, text: "Framework law on post-war recovery; one coordinating body; acquis-compliance check of drafts"}
+        - {tag: EC, from: 0, to: 1.9, text: "Complete DREAM integration with public investment systems"}

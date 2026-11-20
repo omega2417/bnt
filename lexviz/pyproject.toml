@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lexviz"
+version = "0.1.0"
+description = "LexViz: reproducible, provenance-tagged figures for research in public administration and justice"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "EUPL-1.2"}
+dependencies = ["matplotlib>=3.3", "numpy", "PyYAML"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+lexviz = "lexviz.cli:main"
+
+[tool.setuptools]
+packages = ["lexviz", "lexviz.figures"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
