@@ -1,8 +1,8 @@
 """
 Library of transport scenarios for robotic platforms coordinated over Meshtastic.
 
-Each scenario is a :class:`~meshrtc.sim.Config` with a short Ukrainian/English
-description. Run one with ``run_scenario("S04")`` or iterate over ``SCENARIOS``.
+Each scenario is a :class:`~meshrtc.sim.Config` with English (``en``) and Ukrainian (``ua``)
+descriptions. Run one with ``run_scenario("S04")`` or iterate over ``SCENARIOS``.
 """
 from __future__ import annotations
 
@@ -19,48 +19,55 @@ SCENARIOS = {
                    tasks=[dict(site="R3", alt="R6")], seed=11),
         ua="Доставка ліків (інсулін) до пункту R3; стільниковий зв'язок і mesh доступні (режим C0). "
            "ЦКК надсилає контракт TSK, робот звітує квитанцією RCP.",
-        en="Insulin to recipient R3 with cellular and mesh available (regime C0)."),
+        en="Delivery of insulin to recipient site R3 with cellular and mesh service available (regime C0). "
+           "The CC issues a TSK contract; the robot reports an RCP receipt co-signed by the recipient."),
     "S02": dict(
         cfg=Config(name="S02", title="Site closure and re-targeting over the mesh (C1)",
                    H=48, k=4, b=0.0, soc0=0.75, p_close=0, cell_off=True, gnss_denied=False, snow=1.3, temp=-6,
                    tasks=[dict(site="R2", alt="R7")], closures=[dict(t=12.0, site="R2", alt="R7")], seed=12),
         ua="Мобільний зв'язок зник (C1). Пункт R2 закривається на 12-й хв; ЦКК розсилає CLS R2 ALT R7; "
            "SFC перевіряє енергію і перенацілюється (DEC RTG).",
-        en="Cellular lost; R2 closes, CC broadcasts CLS, the SFC re-targets to R7 if feasible."),
+        en="Cellular service is lost (regime C1). Site R2 closes at minute 12; the CC broadcasts CLS R2 ALT R7 "
+           "and the SFC re-targets (DEC RTG) after checking the energy predicate for the alternative."),
     "S03": dict(
         cfg=Config(name="S03", title="Unknown blockages: sense, report, detour",
                    H=24, k=4, b=0.15, cc_known_frac=0.0, soc0=0.7, p_close=0, gnss_denied=False, snow=1.4, temp=-5,
                    tasks=[dict(site="R8", alt="R1")], n_robots=1, seed=13),
         ua="15 % ділянок перекрито (завали, повалені дерева), ЦКК про них не знає. Робот виявляє перекриття "
            "сенсорами, надсилає BLK і переплановує маршрут.",
-        en="Clustered blockages unknown to the CC; the robot senses them, reports BLK and replans."),
+        en="Fifteen per cent of street segments are blocked in clusters (rubble, fallen trees) and unknown to the CC. "
+           "The robot senses each blockage, reports BLK and replans its route."),
     "S04": dict(
         cfg=Config(name="S04", title="Isolated robot with low charge (C3)",
                    H=72, k=0, b=0.05, soc0=0.42, p_close=0, jam_mesh=True, cell_off=True, gnss_denied=False,
                    snow=1.6, temp=-12, tasks=[dict(site="R8", alt="R1")], seed=14),
         ua="Повна ізоляція (C3): мережа і mesh недоступні, заряд 42 %, сніг. Порівняння S1 / S2 / S3: "
            "зупинка при втраті зв'язку, фіксований маршрут, SFC.",
-        en="Full isolation, 42 % charge, heavy snow; compare S1, S2 and S3."),
+        en="Full isolation (regime C3): no cellular or mesh service, 42% charge, heavy snow. Paired comparison of "
+           "S1 stop-on-loss, S2 fixed-route and S3 SFC."),
     "S05": dict(
         cfg=Config(name="S05", title="GNSS denied: localisation guard and cautious mode",
                    H=24, k=4, b=0.05, soc0=0.8, p_close=0, gnss_denied=True, snow=1.3, temp=-4,
                    tasks=[dict(site="R6", alt="R2")], seed=15),
         ua="Супутникова навігація недоступна. Невизначеність положення σ зростає; SFC переходить у "
            "обережний режим (κ = 0.6) і зупиняється з маяком, якщо загубився на 3 перехрестях.",
-        en="GNSS denied; sigma grows, the SFC slows down (kappa = 0.6) and beacon-stops if lost."),
+        en="Satellite navigation is denied. Position uncertainty sigma grows; the SFC enters a cautious mode "
+           "(kappa = 0.6) and executes a beacon-stop if it remains lost for three junctions."),
     "S06": dict(
         cfg=Config(name="S06", title="Fleet shift with intermittent contact (C2): centralized vs agentic",
                    fleet=True, n_robots=4, H=48, k=2, b=0.05, p_close=0, shift=480, seed=516),
         ua="Зміна 8 год, 4 роботи, заявки REQ від пунктів. Централізоване диспетчування проти агентного "
            "(запасні одиниці, DTN-підбір заявок, аукціон BID/LSE).",
-        en="Eight-hour shift, four robots; centralized dispatch vs agentic market with DTN."),
+        en="Eight-hour shift with four robots and REQ messages from recipient sites. Centralized dispatch is compared "
+           "with the agentic policy (spare units, DTN pickup of requests, BID/LSE auction)."),
     "S07": dict(
         cfg=Config(name="S07", title="Relay UGV with a 10 m telescopic mast restores coverage",
                    H=72, k=0, b=0.05, soc0=0.7, p_close=0, cell_off=True, gnss_denied=False, relay=True,
                    snow=1.3, temp=-5, tasks=[dict(site="R7", alt="R2")], seed=17),
         ua="Без ретрансляторів і мобільного зв'язку. Планувальник двійника надсилає RLY роботу-ретранслятору, "
            "який піднімає щоглу 10 м біля маршруту до R7; квитанції доходять швидше.",
-        en="No repeaters, no cellular; the twin planner sends RLY to a relay UGV with a mast."),
+        en="No repeaters and no cellular service. The twin planner sends RLY to a relay UGV, which raises a 10 m "
+           "mast near the route to R7; delivery receipts reach the CC sooner."),
     "S08": dict(
         cfg=Config(name="S08", title="Water multi-drop with heavy load: drop-stop decisions",
                    H=24, k=4, b=0.05, soc0=0.55, p_close=0, gnss_denied=False, snow=1.7, temp=-14,
@@ -68,7 +75,8 @@ SCENARIOS = {
                                          dict(site="R3", alt="R8")], seed=18),
         ua="Розвезення питної води на три пункти, вантаж 30 кг, -14 °C. SFC відкидає останню зупинку "
            "(DEC DRP), якщо разом із поверненням вона не вкладається в енергетичний бюджет.",
-        en="Drinking water to three sites, 30 kg; the SFC drops the last stop when infeasible."),
+        en="Drinking water to three sites with a 30 kg payload at -14 degC. The SFC drops the last stop (DEC DRP) "
+           "when the full chain including the return no longer fits the energy budget."),
     "S09": dict(
         cfg=Config(name="S09", title="Airtime surge: periodic vs event-driven reporting",
                    H=48, k=4, b=0.0, soc0=0.8, p_close=0, cell_off=True, gnss_denied=False, n_robots=6,
@@ -76,7 +84,8 @@ SCENARIOS = {
                    events=[dict(t=60.0, kind="cmd", cmd=pr.RPT(0))], seed=19),
         ua="Шість роботів звітують щохвилини з підтвердженням, шлюз ЦКК вичерпує 1 % duty cycle. "
            "Комунікаційний агент (Comms steward) розсилає RPT 0 - перехід на звіти за подіями.",
-        en="Six robots with acknowledged 1-min reports; the comms steward switches to event-driven."),
+        en="Six robots send acknowledged status reports every minute and the CC gateway approaches its 1% duty "
+           "cycle. The comms steward broadcasts RPT 0 to switch to event-driven reporting."),
     "S10": dict(
         cfg=Config(name="S10", title="Operator recall and risk dial (human on the loop)",
                    H=24, k=4, b=0.05, soc0=0.8, p_close=0, gnss_denied=False, snow=1.3, temp=-5,
@@ -86,7 +95,8 @@ SCENARIOS = {
                            dict(t=45.0, kind="cmd", cmd=pr.RTB(1, 1), dst="U1")], seed=20),
         ua="Оператор підвищує рівень ризику (ZSET 233), тимчасово утримує робота (HLD) і відкликає "
            "його до пункту P1 (RTB) - людина в контурі керування.",
-        en="Operator raises the risk dial, holds the robot, then recalls it to P1."),
+        en="The operator raises the risk level (ZSET 233), holds the robot temporarily (HLD) and recalls it to "
+           "recovery point P1 (RTB): human on the loop."),
 }
 
 

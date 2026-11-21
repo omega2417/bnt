@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
-title: "MeshRTC-Agents: software agents for robotic transport platforms coordinated by short Meshtastic commands"
-version: 1.0.0
+title: "MeshRTC-Agents: Software Agents for Robotic Transport Platforms Coordinated by Short Meshtastic Commands"
+version: 1.1.0
 date-released: 2026-11-21
 license: MIT
 type: software

@@ -1,4 +1,4 @@
-# MeshRTC-Agents 1.0.0
+# MeshRTC-Agents 1.1.0 (English edition)
 
 **Software agents for robotic transport platforms coordinated by short commands over a Meshtastic LoRa mesh** — a synthetic digital twin, ten transport scenarios, a Supervisory Feasibility Controller, fleet-level market and store-carry-forward logic, and four neural modules, with a Google Colab notebook full of visualisations, explanations and schematic diagrams.
 
@@ -8,7 +8,7 @@ Software supplement to: D. Prokopovych-Tkachenko, *Agentic Supervisory Control o
 
 ## Quick start
 
-**Google Colab.** Upload `notebooks/MeshRTC_Agents_Colab.ipynb` to Colab and run all cells. The first cell finds the package; if it is missing, it asks you to upload this zip file (or set `ZENODO_ZIP_URL` once the record is published). Runtime is about 3 minutes on a standard Colab CPU.
+**Google Colab.** Upload `notebooks/MeshRTC_Agents_Colab.ipynb` to Colab and run all cells. The first cell finds the package; if it is missing, it asks you to upload `MeshRTC-Agents-v1.1.0.zip` (or set `ZENODO_ZIP_URL` once the record is published). Runtime is about 3 minutes on a standard Colab CPU.
 
 **Local.**
 
@@ -43,7 +43,7 @@ print(pr.TSK(17, 3, 5, 14*60+20).binary().hex(" "))   # 11 bytes incl. CRC-16
 | `meshrtc/scenarios.py` | ten transport scenarios S01–S10 |
 | `meshrtc/neural.py` | NumPy MLPs: N1 energy deep ensemble, N2 behaviour-cloned policy, N3 mesh-contact predictor, N4 operator intent parser |
 | `meshrtc/experiments.py`, `meshrtc/viz.py` | paired Monte-Carlo experiments, figures, schematic diagrams |
-| `notebooks/MeshRTC_Agents_Colab.ipynb` | executed notebook (Ukrainian text) |
+| `notebooks/MeshRTC_Agents_Colab.ipynb` | executed notebook (English, MDPI style: numbered sections, equations, figures and tables) |
 | `figures/` | 39 figures produced by the notebook |
 | `docs/PROTOCOL.md` | protocol specification |
 
@@ -65,14 +65,15 @@ print(pr.TSK(17, 3, 5, 14*60+20).binary().hex(" "))   # 11 bytes incl. CRC-16
 ## Headline results (synthetic, as produced by the notebook)
 
 * **Protocol.** Binary encoding is 2–4× shorter than text (TSK: 11 B vs 32 B). A routing ACK costs 37.5 / 130 / 477 ms at SHORT_FAST / MEDIUM_FAST / LONG_FAST. With event-driven reporting a dedicated gateway serves ≈60 robots at MEDIUM_FAST, against 4 with acknowledged 1-min reports.
-* **Single missions** (384 paired runs): on-time delivery / robot stranded — S1 35 % / 72 %, S2 83 % / 34 %, **S3 SFC 73 % / 0 %**.
-* **Fleet** (8-h shift, 4 robots, outage age 72 h): the agentic policy raises on-time service from ≈46 % to ≈56 % and halves the time until a request becomes known (≈23 → ≈12 min).
-* **Relay UGV** (S07): receipt latency 11 → 0 min, share of the route with contact 30 → 50 %.
-* **Neural modules.** N1 cuts the RMSE of the energy forecast ratio from 0.19 to 0.14 with calibrated uncertainty (68 % / 95 % inside ±1σ / ±2σ). N2 reproduces SFC decisions with 99.5 % accuracy. In a stress test, a faulty network that always says CONTINUE loses 21 of 45 robots without the shield and none with it. N3 lowers the Brier score of contact prediction from 0.24 to 0.14. N4 maps Ukrainian/English operator text to validated commands and refuses to send when slots are missing or confidence is low.
+* **Single missions** (384 paired runs): on-time delivery / robot stranded — S1 35% / 72%, S2 83% / 34%, **S3 SFC 73% / 0%**.
+* **Fleet** (8-h shift, 4 robots, outage age 72 h): the agentic policy raises on-time service from ≈46% to ≈56% and halves the time until a request becomes known (≈23 → ≈12 min).
+* **Relay UGV** (S07): receipt latency 11 → 0 min, share of the route with contact 30 → 50%.
+* **Neural modules.** N1 cuts the RMSE of the energy forecast ratio from 0.19 to 0.14 with calibrated uncertainty (68% / 95% inside ±1σ / ±2σ). N2 reproduces SFC decisions with 99.5% accuracy. In a stress test, a faulty network that always says CONTINUE loses 21 of 45 robots without the shield and none with it. N3 lowers the Brier score of contact prediction from 0.24 to 0.14. N4 maps Ukrainian/English operator text to validated commands and refuses to send when slots are missing or confidence is low.
 
-## Українською
+## Versions
 
-Пакет і Colab-ноутбук з програмними агентами роботизованих транспортних платформ, які доставляють ліки й воду під час тривалих знеструмлень і координуються **короткими командами через mesh-мережу Meshtastic**. Усередині: протокол із 15 команд (текстове й бінарне кодування, CRC-16, валідатор, ефірний час LoRa, бюджет duty cycle 1 %), синтетичне місто з радіомоделлю, агенти (координаційний центр, комунікаційний агент, роботи зі стратегіями S1/S2/S3, пункти видачі, робот-ретранслятор), флот з аукціоном і DTN, десять транспортних сценаріїв, чотири нейромодулі (енергетичний ансамбль, нейрополітика під щитом, прогноз покриття, розбір команд оператора) і парні експерименти Монте-Карло. Пояснення в ноутбуці — українською; рисунки й код — англійською. Усі дані синтетичні.
+* 1.1.0: English edition of the notebook and documentation (MDPI style); code and results unchanged.
+* 1.0.0: first release with Ukrainian notebook text.
 
 ## Citation and license
 

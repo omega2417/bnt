@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "meshrtc"
-version = "1.0.0"
+version = "1.1.0"
 description = "Software agents for robotic transport platforms coordinated by short Meshtastic commands: synthetic digital twin, SFC controller, fleet market and neural modules"
 readme = "README.md"
 license = {text = "MIT"}

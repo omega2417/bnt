@@ -1,20 +1,49 @@
 {
-  "title": "MeshRTC-Agents: software agents for robotic transport platforms coordinated by short Meshtastic commands (synthetic digital twin, Colab notebook)",
+  "title": "MeshRTC-Agents: Software Agents for Robotic Transport Platforms Coordinated by Short Meshtastic Commands — Synthetic Digital Twin, Neural Modules and Google Colab Notebook (v1.1.0)",
   "upload_type": "software",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "publication_date": "2026-11-21",
   "license": "MIT",
   "access_right": "open",
-  "language": "ukr",
+  "language": "eng",
   "creators": [
-    {"name": "Prokopovych-Tkachenko, Dmytro", "affiliation": "University of Customs and Finance, Dnipro, Ukraine"}
+    {
+      "name": "Prokopovych-Tkachenko, Dmytro",
+      "affiliation": "University of Customs and Finance, Dnipro, Ukraine"
+    }
   ],
-  "description": "<p>Python package and Google Colab notebook with software agents for robotic transport platforms that deliver medicines and drinking water during deep power outages and are coordinated by short commands over a Meshtastic LoRa mesh.</p><p>Contents: (1) a compact command protocol (task contract, status, decision, blockage, receipt, site closure, request, auction bid, lease, recall, relay deployment, risk dial, reporting policy, hold) with text and binary/CRC-16 encodings, a deterministic validator, LoRa airtime (Semtech) and a 1 % duty-cycle budget model; (2) a synthetic riverside town with an Okumura-Hata radio model, cellular decay and repeaters; (3) agents: crisis-coordination orchestrator, comms steward, robot agents with Stop-on-loss, Fixed-route and the Supervisory Feasibility Controller (chance-constrained energy predicates, online calibration, localisation guard), recipient nodes and a relay UGV; (4) fleet logic with store-carry-forward and in-field auctions; (5) ten transport scenarios S01-S10; (6) four NumPy neural modules: a deep-ensemble energy predictor used inside the chance constraint, a behaviour-cloned supervisory policy under a runtime-assurance shield, a mesh-contact predictor and an operator intent parser that turns Ukrainian/English free text into validated short commands; (7) paired Monte-Carlo experiments, 39 figures and schematic diagrams. All data are synthetic; the town is only inspired by the planning grid of Verkhnodniprovsk, Ukraine, and is not a map of it.</p><p>Notebook text is in Ukrainian; code, figures and README are in English.</p>",
-  "keywords": ["Meshtastic", "LoRa", "ground delivery robot", "supervisory control", "multi-agent systems", "delay-tolerant networking", "chance constraints", "digital twin", "neural networks", "runtime assurance", "emergency logistics", "power outage", "Colab"],
+  "description": "<p>During prolonged power outages, ground robots that deliver medicines or drinking water may lose contact with their dispatcher mid-mission. This package provides software agents for such robotic transport platforms, coordinated through short commands over a Meshtastic LoRa mesh.</p><p>It contains: (1) a compact protocol of fifteen commands (task contract, status, decision, blockage, receipt, site closure, request, auction bid, lease, recall, relay deployment, risk dial, reporting policy, hold and acknowledgement) with text and binary (CRC-16) encodings, a deterministic validator, and models of LoRa airtime and the gateway's 1% duty-cycle budget; (2) a synthetic digital twin of a riverside town with an Okumura–Hata radio model, cellular coverage that fades with outage age, and solar repeaters; (3) agents: a crisis-coordination orchestrator, a comms steward, robot agents (stop-on-loss, fixed-route and a Supervisory Feasibility Controller with chance-constrained energy checks), recipient nodes and a relay UGV; (4) fleet logic with store-carry-forward exchange and in-field auctions; (5) ten transport scenarios; (6) four NumPy neural modules: an energy deep ensemble, a behaviour-cloned policy under a runtime-assurance shield, a mesh-coverage predictor and an operator intent parser that turns Ukrainian or English text into validated commands.</p><p>In 384 paired missions the controller stranded no robot, against 72% (stop-on-loss) and 34% (fixed-route). Without the shield, a faulty network lost 21 of 45 robots; with it, none. The executed Google Colab notebook (English) contains 39 figures and schematic diagrams. All data are synthetic; the town is inspired by, but is not a map of, Verkhnodniprovsk, Ukraine.</p><p>Version 1.1.0 is the English edition of version 1.0.0 (Ukrainian notebook text); code and results are unchanged.</p>",
+  "keywords": [
+    "Meshtastic",
+    "LoRa",
+    "ground delivery robot",
+    "supervisory control",
+    "multi-agent systems",
+    "delay-tolerant networking",
+    "chance constraints",
+    "digital twin",
+    "neural networks",
+    "runtime assurance",
+    "emergency logistics",
+    "power outage",
+    "Colab"
+  ],
   "notes": "Software supplement to the study 'Agentic Supervisory Control of a Robotic Transport Complex for Emergency Deliveries during Deep Blackouts: A Synthetic-Data Digital-Twin Study with Offline Maps and Meshtastic Backup Communication'. Related Zenodo records: 10.5281/zenodo.23460212 (BlackoutMesh-Twin), 10.5281/zenodo.23298497, 10.5281/zenodo.23298550.",
   "related_identifiers": [
-    {"identifier": "10.5281/zenodo.23460212", "relation": "references", "resource_type": "software"},
-    {"identifier": "10.5281/zenodo.23298497", "relation": "references", "resource_type": "dataset"},
-    {"identifier": "10.5281/zenodo.23298550", "relation": "references", "resource_type": "other"}
+    {
+      "identifier": "10.5281/zenodo.23460212",
+      "relation": "references",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.5281/zenodo.23298497",
+      "relation": "references",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "10.5281/zenodo.23298550",
+      "relation": "references",
+      "resource_type": "other"
+    }
   ]
 }
