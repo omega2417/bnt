@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "MeshRTC-Agents: software agents for robotic transport platforms coordinated by short Meshtastic commands"
+version: 1.0.0
+date-released: 2026-11-21
+license: MIT
+type: software
+authors:
+  - family-names: Prokopovych-Tkachenko
+    given-names: Dmytro
+    affiliation: "University of Customs and Finance, Dnipro, Ukraine"
+keywords:
+  - Meshtastic
+  - LoRa
+  - ground delivery robot
+  - supervisory control
+  - multi-agent systems
+  - delay-tolerant networking
+  - digital twin
+  - neural networks
+  - emergency logistics
+  - power outage
+# doi: 10.5281/zenodo.XXXXXXX   (add after publication)

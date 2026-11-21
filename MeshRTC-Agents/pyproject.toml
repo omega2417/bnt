@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "meshrtc"
+version = "1.0.0"
+description = "Software agents for robotic transport platforms coordinated by short Meshtastic commands: synthetic digital twin, SFC controller, fleet market and neural modules"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.24", "pandas>=1.5", "matplotlib>=3.6"]
+authors = [{name = "Dmytro Prokopovych-Tkachenko"}]
+keywords = ["Meshtastic", "LoRa", "ground delivery robot", "multi-agent systems", "supervisory control", "digital twin", "power outage"]
+
+[tool.setuptools]
+packages = ["meshrtc"]
