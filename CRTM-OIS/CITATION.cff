@@ -1,21 +1,16 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite both the software and the article."
-title: "CRTM-OIS: Staged Method and Agent-Oriented System for Computing the Integral Cyber Resilience of Critical Infrastructure Objects"
+title: "CRTM-OIS 1.0: Software, Data and Reproduction Scripts for the Staged Computation of the Integral Cyber Resilience of Critical Infrastructure Objects"
 version: 1.0.0
 date-released: 2026-11-22
 license: MIT
 type: software
 authors:
-  - family-names: "[Lastname]"
-    given-names: "[Firstname]"
-    affiliation: "Department of Cybersecurity and Information Technologies, University of Customs and Finance, Dnipro, Ukraine"
-    orcid: "https://orcid.org/0000-0000-0000-0000"
-  - family-names: "[Lastname]"
-    given-names: "[Firstname]"
-    affiliation: "Department of Cybersecurity and Information Technologies, University of Customs and Finance, Dnipro, Ukraine"
-  - family-names: "[Lastname]"
-    given-names: "[Firstname]"
-    affiliation: "[Department, Institution, City, Country]"
+  - family-names: "Prokopovych-Tkachenko"
+    given-names: "Dmytro"
+doi: 10.5281/zenodo.24446089
+url: "https://doi.org/10.5281/zenodo.24446089"
+repository-code: "https://github.com/omega2417/bnt/tree/claude/tender-bohr-b0i2zs/CRTM-OIS"
 keywords:
   - cyber resilience
   - critical infrastructure

@@ -1,5 +1,9 @@
 # CRTM-OIS 1.0 — agent-oriented system for the integral cyber resilience of critical infrastructure objects
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24446089.svg)](https://doi.org/10.5281/zenodo.24446089)
+
+Archived release: https://doi.org/10.5281/zenodo.24446089
+
 Software, data and reproduction scripts for the article *"A Staged Method and System for Computing the Integral Cyber
 Resilience of Critical Infrastructure Objects: A Systems Approach Based on a Set-Theoretic Tuple Metric Model"*
 (submitted to *Systems*, MDPI). CRTM-OIS stands for *cyber-resilience tuple model, object integral score*.
@@ -153,7 +157,13 @@ authentication, access control or persistent storage of the trace.
 
 ## How to cite
 
-Please cite the article and this software (see `CITATION.cff`), as well as the underlying model:
+Please cite the article and this software (see `CITATION.cff`):
+
+Prokopovych-Tkachenko, D. CRTM-OIS 1.0: Software, Data and Reproduction Scripts for the Staged Computation of the
+Integral Cyber Resilience of Critical Infrastructure Objects, version 1.0.0; Zenodo, 2026.
+https://doi.org/10.5281/zenodo.24446089
+
+and the underlying model:
 Korchenko, O. et al. A Set-Theoretic Tuple Model with Level-Consistent Normalization and Non-Compensatory Aggregation
 for Assessing the Cyber Resilience of Critical Infrastructure. *Information* 2026, 17, 1170.
 https://doi.org/10.3390/info17111170

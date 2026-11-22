@@ -1,5 +1,7 @@
 # CRTM-OIS — агентно-орієнтована система оцінювання інтегральної кіберстійкості об’єкта КІ
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24446089.svg)](https://doi.org/10.5281/zenodo.24446089)
+
 Програмний проєкт за рукописом *«A Staged Method and System for Computing the Integral Cyber Resilience of Critical
 Infrastructure Objects: A Systems Approach Based on a Set-Theoretic Tuple Metric Model»* (подання в *Systems*, MDPI).
 
