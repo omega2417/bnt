@@ -1,0 +1,32 @@
+{
+  "source": "Korchenko et al., Information 2026, 17, 1170 (Table 5 of the manuscript)",
+  "tolerance": 0.0005,
+  "state": "E1",
+  "actions": {
+    "UN.S1.A1": 0.856,
+    "UN.S2.A1": 0.67,
+    "CN.S1.A1": 0.588,
+    "CN.S2.A1": 0.599,
+    "RE.S1.A2": 0.719,
+    "TR.S1.A1": 0.682,
+    "TR.S2.A2": 0.753
+  },
+  "enclosure": {
+    "CN.S2.A1": [
+      0.539,
+      0.639
+    ]
+  },
+  "goals_mean": {
+    "ANT": 0.763,
+    "WITH": 0.594,
+    "REC": 0.719,
+    "AD": 0.718
+  },
+  "goals_min": {
+    "ANT": 0.67,
+    "WITH": 0.588,
+    "REC": 0.719,
+    "AD": 0.682
+  }
+}

@@ -1,4 +1,4 @@
-"""Build and execute notebooks/CRTM_OIS_demo.ipynb."""
+"""Build and execute the English demo notebook notebooks/CRTM_OIS_demo.ipynb."""
 from pathlib import Path
 
 import nbformat as nbf
@@ -18,36 +18,35 @@ def code(s):
 
 
 md("""
-# CRTM-OIS — демонстрація програмного проєкту
+# CRTM-OIS — demonstration notebook
 
-**Staged Method and System for Computing the Integral Cyber Resilience of Critical Infrastructure Objects**
-(рукопис для *Systems*, MDPI) — програмна реалізація, орієнтована на **агентів** і **нейрорішення**.
+Software for the manuscript **"A Staged Method and System for Computing the Integral Cyber Resilience of Critical
+Infrastructure Objects: A Systems Approach Based on a Set-Theoretic Tuple Metric Model"** (*Systems*, MDPI),
+extended with an **agent layer** and **neural components**.
 
-Ноутбук проходить увесь ланцюг статті і розширення проєкту:
-
-| § | Зміст | Звідки у статті |
+| § | Content | Manuscript |
 |---|---|---|
-| 1 | Сценарій BNK_PAY, кортежі метрик, таблиці класів | §2.1, §2.5, Table A1 |
-| 2 | Сім етапів методу на одному прогоні, шина за шиною | §2.2, Table 1, Table 6 |
-| 3 | Структурна модель B0–B8, CU, дев’ять шин | §2.3, Fig. 1–2, Tables 2–3 |
-| 4 | Перевірка відтворення 15 опублікованих значень | §3.1, Table 5 |
-| 5 | П’ять експериментів адекватності, розгортка t | §3.3, Table 7, Fig. 5–6 |
-| 6 | Робастність до ваг і контроль некомпенсації | §3.4, Fig. 7 |
-| 7 | **Агентний шар**: блоки як агенти на шині повідомлень | розширення |
-| 8 | **Нейросурогат** (монотонна MLP) проти точної системи | розширення |
-| 9 | **Цифровий двійник + мультиагентний центр**: телеметрія, автоенкодер, прогноз, сторож | розширення §4.2 |
-| 10 | **Агент-радник**: точний what-if і план покращення | розширення §4.1, §4.3 |
-| 11 | **LLM-аналітик** (інструменти для Claude) і офлайн-звіт | розширення |
-| 12 | **Калібрування ваг цілей** за експертними рівнями | майбутня робота §4.5 |
+| 1 | Scenario BNK_PAY, metric tuples, class tables | §2.1, §2.5, Table A1 |
+| 2 | The seven stages on one run, bus by bus | §2.2, Table 1, Table 6 |
+| 3 | Structural model: blocks B0–B8, control unit CU, nine buses | §2.3, Figs. 1–2, Tables 2–3 |
+| 4 | Reproduction of the 15 published reference values | §3.1, Table 5 |
+| 5 | Five adequacy experiments and the sweep of t | §3.3, Table 7, Figs. 5–6 |
+| 6 | Weight robustness and non-compensation control | §3.4, Fig. 7 |
+| 7 | **Agent layer**: blocks as agents on a message bus | extension |
+| 8 | **Neural surrogate** (monotone MLP) vs. the exact system | extension |
+| 9 | **Digital twin + multi-agent operations center**: telemetry, autoencoder, forecaster, watchdog | extension of §4.2 |
+| 10 | **Advisor agent**: exact what-if and improvement plan | extension of §4.1, §4.3 |
+| 11 | **LLM analyst** (tools for Claude) and offline report | extension |
+| 12 | **Calibration of goal weights** against expert levels | future work, §4.5 |
 
-> Дані сценарію — ілюстративні значення з CRTM [37], не польові вимірювання. Експерименти верифікують реалізацію, а не
-> валідність оцінок реальних об’єктів. Цифровий двійник і «експерти» в §9 і §12 — синтетичні.
+> The scenario data are the illustrative values of CRTM [37], not field measurements. The experiments verify the
+> implementation, not the validity of verdicts for real objects. The digital twin (§9) and the expert panel (§12) are synthetic.
 """)
 
 code("""
 import sys, time, json, warnings
 from pathlib import Path
-sys.path.insert(0, str(Path.cwd().parent))     # корінь проєкту CRTM-OIS
+sys.path.insert(0, str(Path.cwd().parent))     # project root
 warnings.filterwarnings("ignore")
 import numpy as np, pandas as pd
 import matplotlib.pyplot as plt
@@ -57,10 +56,10 @@ from crtm_ois import levels as lv, experiments as ex
 from crtm_ois.viz import charts, diagrams
 pd.set_option("display.width", 200); pd.set_option("display.max_columns", 30)
 cfg = bnk_pay()
-print(SOFTWARE_VERSION, "| конфігурація", cfg.version, "| метрик:", cfg.n_metrics, "| дій:", len(cfg.actions))
+print(SOFTWARE_VERSION, "| configuration", cfg.version, "| metrics:", cfg.n_metrics, "| basic actions:", len(cfg.actions))
 """)
 
-md("## 1. Сценарій і модель метрик\nКожна базова дія β має кортеж дескрипторів: таблиця класів ξ ∈ ℝ⁶, полярність σ, вага, ознака ключової метрики (*).")
+md("## 1. Scenario and metric model\nEach basic action β carries a tuple of metric descriptors: class table ξ ∈ ℝ⁶, polarity σ, weight and core flag (*).")
 code("""
 rows = []
 for a in cfg.actions:
@@ -70,17 +69,17 @@ for a in cfg.actions:
                      "discrete step": m.step, "E1": e1_values()[(a.code, m.code)]})
 pd.DataFrame(rows)
 """)
-md("Анкерована кусково-лінійна нормалізація (4) збігається з таблицею класів за побудовою; лінійне перемасштабування — ні:")
+md("The anchored piecewise-linear normalization (4) agrees with the class table by construction; min–max rescaling does not:")
 code("fig = charts.normalization_figure(cfg); plt.show()")
 
-md("## 2. Сім етапів на одному прогоні (стан E1)\nКерувальний блок `assess` викликає етапи по черзі; кожен етап повертає запис шини.")
+md("## 2. The seven stages on one run (state E1)\nThe control unit `assess` calls the stages in order; every stage returns the record of a bus.")
 code("""
 r = assess(cfg, e1_values(), n=200_000)
 print("trace:", " → ".join(f"{t['bus']}({t['block']})" for t in r.trace.records))
 print(f"R = {r.R['R']:.4f} ({r.R['level_name']}),  R_min = {r.R['R_min']:.4f},  [R_L, R_U] = [{r.R['R_L']:.4f}, {r.R['R_U']:.4f}]")
-print("стабільний щодо пропусків:", r.R["stable_missing"], "| найслабша ціль:", r.R["weakest_goal"], "| час:", round(r.elapsed_ms,1), "мс")
+print("stable w.r.t. missing data:", r.R["stable_missing"], "| weakest goal:", r.R["weakest_goal"], "| time:", round(r.elapsed_ms,1), "ms")
 """)
-md("Динамічний режим для дії UN.S1.A1 у станах E1 та E2 (Table 6 статті):")
+md("Dynamic mode for action UN.S1.A1 in states E1 and E2 (Table 6 of the manuscript):")
 code("""
 st = five_states(cfg)
 def table6(e):
@@ -95,23 +94,23 @@ def table6(e):
 pd.concat([table6("E1"), table6("E2")])
 """)
 
-md("## 3. Структурна модель системи")
+md("## 3. Structural model of the system")
 code("fig = diagrams.method_stages(); plt.show()\nfig = diagrams.structural_model(); plt.show()")
 code("""
 pd.DataFrame([{"bus": b, "from": s, "to": d, "quantities": q} for b, (s, d, q) in BUSES.items()])
 """)
 code("fig = diagrams.hierarchy(assess(cfg, e1_values(), robust=False)); plt.show()")
 
-md("## 4. Відтворення опублікованих значень CRTM (Table 5)\nДопуск 0.0005 — половина одиниці останнього опублікованого знака.")
+md("## 4. Reproduction of the published CRTM values (Table 5)\nTolerance 0.0005, half a unit of the last published decimal.")
 code("""
 rep = ex.reproduction(cfg)
 df = pd.DataFrame(rep["rows"]); df["system"] = df["system"].round(4); df["abs_diff"] = df["abs_diff"].round(5)
-print(f"відтворено {rep['n_ok']}/{rep['n']}, max |Δ| = {rep['max_abs_diff']:.5f}; оболонка CN.S2.A1: {rep['enclosure']['ok']}; "
-      f"інтегральний індекс vs ручний розрахунок: {rep['integral_system']:.4f} vs {rep['integral_hand']:.4f}")
+print(f"reproduced {rep['n_ok']}/{rep['n']}, max |Δ| = {rep['max_abs_diff']:.5f}; enclosure CN.S2.A1: {rep['enclosure']['ok']}; "
+      f"integral index vs. hand calculation: {rep['integral_system']:.4f} vs {rep['integral_hand']:.4f}")
 df
 """)
-md("Правило (12) проти опублікованої Table A1. Знайдено дві розбіжності (E2, UN.S1.A1, M3/M4: 102/142 у таблиці, 102.5/142.5 за правилом); "
-   "за замовчуванням використовується опублікована таблиця, вплив на R < 0.0002:")
+md("Rule (12) vs. the published Table A1. Two differences were found (E2, UN.S1.A1, M3/M4: 102/142 in the table, 102.5/142.5 by the rule); "
+   "the published table is used by default; the effect on R is below 0.0002:")
 code("""
 from crtm_ois.scenarios import compare_rule_with_table
 print(compare_rule_with_table(cfg))
@@ -119,7 +118,7 @@ rule = five_states(cfg, source="rule")
 print("R(E2) table vs rule:", round(assess(cfg, st["E2"], robust=False).index, 5), round(assess(cfg, rule["E2"], robust=False).index, 5))
 """)
 
-md("## 5. П’ять експериментів адекватності (Table 7, Fig. 5–6)")
+md("## 5. Five adequacy experiments (Table 7, Figs. 5–6)")
 code("""
 t0 = time.time(); adq = ex.adequacy(cfg, n=200_000); sw = ex.sweep(cfg)
 tab = pd.DataFrame([{ "exp": e, "t": adq[e]["t"], "goals ANT/WITH/REC/AD": " / ".join(f"{adq[e]['goals_mean'][g]:.3f}" for g in GOALS),
@@ -127,8 +126,8 @@ tab = pd.DataFrame([{ "exp": e, "t": adq[e]["t"], "goals ANT/WITH/REC/AD": " / "
     "[R_L, R_U]": f"[{adq[e]['R_L']:.3f}, {adq[e]['R_U']:.3f}]", "R̄ ± sd": f"{adq[e]['mc']['mean']:.3f} ± {adq[e]['mc']['sd']:.3f}",
     "shares": ", ".join(f"{k} {v:.1%}" for k, v in adq[e]["mc"]["shares"].items() if v > 0.0005), "vetoed": ", ".join(adq[e]["vetoed"]) or "—"}
     for e in ["E1", "E2", "E3", "E4", "E5"]])
-print("порядок E4<E2<E1<E3<E5:", adq["_order_ok"], "| монотонність R:", sw["monotone_R"], "| перетини меж:",
-      {k: round(v, 3) for k, v in sw["crossings"].items()}, f"| {time.time()-t0:.1f} c")
+print("order E4<E2<E1<E3<E5:", adq["_order_ok"], "| R monotone:", sw["monotone_R"], "| boundary crossings:",
+      {k: round(v, 3) for k, v in sw["crossings"].items()}, f"| {time.time()-t0:.1f} s")
 tab
 """)
 code("fig = charts.adequacy_figure(adq); plt.show()\nfig = charts.actions_and_sweep(adq, sw, cfg); plt.show()")
@@ -138,7 +137,7 @@ fig = charts.metric_heatmap(adq, cfg, norms); plt.show()
 fig = charts.goal_radar(adq); plt.show()
 """)
 
-md("## 6. Робастність до ваг і некомпенсація (Fig. 7)")
+md("## 6. Weight robustness and non-compensation (Fig. 7)")
 code("""
 nc = ex.non_compensation(cfg)
 fig = charts.robustness_and_noncomp(adq, nc); plt.show()
@@ -152,10 +151,10 @@ pd.DataFrame({op: [round(v, 3) for v in nc[op]["action"]] for op in ("additive",
 """)
 
 md("""
-## 7. Агентний шар: блоки B0–B8 і CU як агенти на шині повідомлень
-Кожен блок структурної моделі — агент, що підписаний на свої вхідні шини (топіки) і публікує вихідну шину.
-Блок спрацьовує, коли для одного прогону (correlation id) надійшли всі його входи. Результат команди агентів
-збігається з `assess` до 1e-12; відмова B2 зупиняє ланцюг (CU публікує `stop`).
+## 7. Agent layer: blocks B0–B8 and CU as agents on a message bus
+Every block of the structural model is an agent that subscribes to its input buses (topics) and publishes its output bus.
+A block fires when all its inputs for one run (correlation id) have arrived. The agent team agrees with `assess` to 1e-12;
+a failure in B2 stops the chain (CU publishes `stop`).
 """)
 code("""
 from crtm_ois.agents.bus import MessageBus
@@ -166,17 +165,18 @@ ref, cu, blocks = build_block_team(bus, cfg, mc_samples=20_000)
 for e, x in st.items():
     cu.start(x)
     print(e, f"agents R = {reports[-1]['R']:.6f}", f"| CU/assess R = {assess(cfg, x, robust=False).index:.6f}", "| level", reports[-1]["level_code"])
-c = cu.start({**e1_values(), ("UN.S1.A1", "M1"): None})       # ключова метрика відсутня
+c = cu.start({**e1_values(), ("UN.S1.A1", "M1"): None})       # core metric missing
 print("run", c, "→", cu.failures[c])
-print("повідомлень на шині:", len(bus.log), "| статуси прогону 1:", cu.status[1])
+print("messages on the bus:", len(bus.log), "| statuses of run 1:", cu.status[1])
 """)
 code("fig = diagrams.agent_topology(); plt.show()")
 
 md("""
-## 8. Нейросурогат: монотонна MLP проти необмеженої
-Мережа навчається відображенню «сирі вимірювання → (R, R_min)» на станах, згенерованих точною системою.
-У монотонній мережі всі ваги параметризовано як softplus(v) ≥ 0, тож R̂ не спадає за жодною метрикою — нейронний аналог
-критерію адекватності (iii). Сурогат лише дорадчий: на межі рівнів (E1 = 0.698) він помиляється, тому вердикт видає точна система.
+## 8. Neural surrogate: monotone vs. unconstrained MLP
+The network learns the map "raw measurements → (R, R_min)" on states labelled by the exact system. In the monotone
+network every weight is parameterised as softplus(v) ≥ 0, so R̂ is nondecreasing in every metric — the neural
+counterpart of adequacy criterion (iii). The surrogate is advisory: at a level boundary (E1 = 0.698) it errs, so the
+verdict is issued by the exact system.
 """)
 code("""
 from crtm_ois.neural.models import NeuralSurrogate
@@ -185,13 +185,13 @@ for name, mono in (("monotone", True), ("unconstrained", False)):
     t0 = time.time(); s = NeuralSurrogate(cfg, monotone=mono).fit(n=30_000, epochs=150)
     surs[name], nets[name], evals[name] = s, s.net, s.evaluate()
     print(f"{name:14s} params={s.net.n_params():5d}  MAE(R)={evals[name]['mae_R']:.4f}  MAE(R_min)={evals[name]['mae_Rmin']:.4f}  "
-          f"level acc={evals[name]['level_accuracy']:.1%}  monotonicity violations={evals[name]['monotone_violations']:.1%}  ({time.time()-t0:.0f} c)")
+          f"level acc={evals[name]['level_accuracy']:.1%}  monotonicity violations={evals[name]['monotone_violations']:.1%}  ({time.time()-t0:.0f} s)")
 for e in st:
     p = surs["monotone"].predict_sheet(st[e]); exact = assess(cfg, st[e], robust=False)
     print(e, f"neural R̂={p['R']:.3f} ({lv.code(p['level'])})  exact R={exact.index:.3f} ({exact.R['level_code']})")
 fig = charts.surrogate_figure(evals, nets); plt.show()
 """)
-md("Градієнт сурогату дає миттєву карту чутливості (∂R̂/∂позиція метрики) — використовується для швидкого відбору кандидатів перед точним what-if:")
+md("The gradient of the surrogate gives an instant sensitivity map (∂R̂/∂ metric position), used to pre-select candidates before the exact what-if:")
 code("""
 sens = surs["monotone"].sensitivity(e1_values())
 top = sorted(sens.items(), key=lambda kv: -kv[1])[:10]
@@ -201,18 +201,18 @@ ax.set_xlabel("∂R̂ / ∂(position)"); ax.set_title("Neural sensitivity at E1 
 """)
 
 md("""
-## 9. Цифровий двійник і мультиагентний центр стійкості
-Синтетичний двійник процесингового центру генерує телеметрію 39 метрик (інцидент фішингу, відмова постачальника TI,
-програма покращення) з вадами сенсорів (пропуски, сплески, «залиплі» значення).
+## 9. Digital twin and multi-agent resilience operations center
+A synthetic twin of the processing center emits telemetry of the 39 metrics (phishing incident, TI provider outage,
+improvement programme) with sensor defects (missing values, spikes, stuck readings).
 
-Агенти: **TEL** (телеметрія) → **DQ** (автоенкодер + правило персистентності для ключових метрик) → **CU/B0–B8** (точний вердикт)
-→ **FC** (нейропрогноз на 6 тактів) → **WD** (сторож з гістерезисом) → **ADV** (радник). **NN** дає нейронний nowcast паралельно.
+Agents: **TEL** (telemetry) → **DQ** (autoencoder + persistence rule for core metrics) → **CU/B0–B8** (exact verdict)
+→ **FC** (neural forecast, 6 ticks ahead) → **WD** (watchdog with hysteresis) → **ADV** (advisor). **NN** gives a neural nowcast in parallel.
 """)
 code("""
 from crtm_ois.agents.ops import ResilienceOperationsCenter, train_neural_agents
-t0 = time.time(); sur, ae, fc = train_neural_agents(cfg); print(f"навчання нейроагентів: {time.time()-t0:.0f} c")
+t0 = time.time(); sur, ae, fc = train_neural_agents(cfg); print(f"training of the neural agents: {time.time()-t0:.0f} s")
 oc = ResilienceOperationsCenter(cfg, seed=3, surrogate=sur, ae=ae, forecaster=fc)
-t0 = time.time(); h = oc.run(220); print(f"220 тактів: {time.time()-t0:.1f} c, повідомлень на шині: {len(oc.bus.log)}")
+t0 = time.time(); h = oc.run(220); print(f"220 ticks: {time.time()-t0:.1f} s, messages on the bus: {len(oc.bus.log)}")
 F, Fl = h["faults"] >= 2, h["flags"]
 print(f"DQ: recall={(F & Fl).sum()/F.sum():.0%}, precision={(F & Fl).sum()/Fl.sum():.0%} | "
       f"forecast MAE={np.nanmean(np.abs(h['forecast'][12:-6]-h['R'][18:])):.4f} | nowcast MAE={np.mean(np.abs(h['nowcast']-h['R'])):.4f}")
@@ -223,25 +223,25 @@ code("pd.DataFrame(h['advice'])")
 code("fig = diagrams.sequence_chart(oc.bus, corr=1, title='Dynamic mode on the bus: one assessment run (tick 0)'); plt.show()")
 
 md("""
-## 10. Агент-радник: точний what-if і план покращення
-Кандидати діють на **фізичні вимірювання**: спільне вимірювання AM-DA-1 одночасно змінює обидві дії цілі Withstand
-(горизонтальна залежність, §4.3). Мета плану — стійкий вердикт, тобто гарантований індекс R_L вище межі рівня.
+## 10. Advisor agent: exact what-if and improvement plan
+Candidates act on **physical measurements**: the shared measurement AM-DA-1 changes both actions of the goal Withstand at
+once (horizontal dependency, §4.3). The plan targets a stable verdict, i.e. the guaranteed index R_L above the level boundary.
 """)
 code("""
 from crtm_ois.agents.advisor import ImprovementAdvisor
 adv = ImprovementAdvisor(cfg)
 cands = adv.candidates(e1_values()); plan = adv.plan(e1_values())
 display(pd.DataFrame(cands)[["source", "from", "to", "dR", "dR_L", "dR_min"]].head(10).round(4))
-print("пропущене значення:", adv.missing_value_thresholds(e1_values()))
+print("unreported value:", adv.missing_value_thresholds(e1_values()))
 fig = charts.advisor_figure(cands, plan); plt.show()
 """)
 
 md("""
-## 11. LLM-аналітик: система як набір інструментів
-`ResilienceToolbox` надає шість інструментів з JSON-схемами (`load_state`, `assess_current`, `explain_action`, `what_if`,
-`recommend`, `get_trace`). `ClaudeAnalyst` запускає цикл tool use Claude API (SDK `tool_runner`, модель `claude-opus-5-5`,
-адаптивне мислення, серверні fallbacks), і кожне число у відповіді береться з інструментів, тобто з точної системи.
-`OfflineAnalyst` використовує ті самі інструменти без мережі.
+## 11. LLM analyst: the system as a set of tools
+`ResilienceToolbox` exposes six tools with JSON schemas (`load_state`, `assess_current`, `explain_action`, `what_if`,
+`recommend`, `get_trace`). `ClaudeAnalyst` runs the Claude API tool-use loop (SDK `tool_runner`, model `claude-opus-5-5`,
+adaptive thinking, server-side fallbacks); every number in its answer comes from the tools, i.e. from the exact system.
+`OfflineAnalyst` uses the same tools without network access.
 """)
 code("""
 from crtm_ois.agents.llm import ResilienceToolbox, OfflineAnalyst, ClaudeAnalyst
@@ -254,15 +254,15 @@ code("""
 import os
 if os.environ.get("ANTHROPIC_API_KEY"):
     analyst = ClaudeAnalyst(ResilienceToolbox(cfg))
-    print(analyst.ask("Оціни поточний стан E1 процесингового центру: чи стабільний вердикт і що покращити першочергово?"))
+    print(analyst.ask("Assess the current state E1 of the processing center: is the verdict stable and what should be improved first?"))
 else:
-    print("ANTHROPIC_API_KEY не задано — пропускаємо виклик Claude (див. OfflineAnalyst вище).")
+    print("ANTHROPIC_API_KEY is not set — skipping the Claude call (see OfflineAnalyst above).")
 """)
 
 md("""
-## 12. Калібрування ваг цілей за експертними рівнями (майбутня робота §4.5)
-Синтетична панель «експертів» оцінює 300 об’єктів, неявно зважуючи цілі як (0.15, 0.40, 0.30, 0.15).
-Диференційовна порядкова логістична модель відновлює ω; узгодженість вимірюємо квадратично зваженою каппою Коена.
+## 12. Calibration of goal weights against expert levels (future work, §4.5)
+A synthetic expert panel rates 300 objects, implicitly weighting the goals as (0.15, 0.40, 0.30, 0.15).
+A differentiable ordinal-logistic model recovers ω; agreement is measured by the quadratic-weighted Cohen kappa.
 """)
 code("""
 from crtm_ois.neural.models import GoalWeightCalibrator, synthetic_expert_panel, quadratic_kappa
@@ -274,13 +274,13 @@ fig = charts.calibration_figure(cal, (0.15, 0.40, 0.30, 0.15), G, expert, before
 """)
 
 md("""
-## 13. Підсумок і обмеження
-* Точна система відтворює 15/15 опублікованих значень CRTM у межах 0.0005, призначає очікувані рівні E1–E5 у правильному
-  порядку, монотонна вздовж розгортки, накладає вето у E4 і звітує про пропуски оболонкою; частки за вагами E1 — 54.4 % / 45.6 %.
-* Агентний шар реалізує структурну модель буквально (блоки = агенти, шини = топіки) і дає той самий результат.
-* Нейрорішення дорадчі: монотонний сурогат не має порушень монотонності, але на межі рівнів помиляється; автоенкодер і правило
-  персистентності відсіюють збої сенсорів до того, як вони спричинять хибне вето.
-* Двійник, збої сенсорів і експертна панель синтетичні; польова валідність не встановлена.
+## 13. Summary and limitations
+* The exact system reproduces 15/15 published CRTM values within 0.0005, assigns the expected levels to E1–E5 in the
+  expected order, is monotone along the sweep, vetoes in E4 and reports missing data by an enclosure; the weight shares of E1 are 54.4 % / 45.6 %.
+* The agent layer realises the structural model literally (blocks = agents, buses = topics) and gives the same result.
+* The neural components are advisory: the monotone surrogate has no monotonicity violations but errs at level boundaries;
+  the autoencoder and the persistence rule filter sensor faults before they cause a false veto.
+* The twin, the sensor faults and the expert panel are synthetic; field validity is not established.
 """)
 
 nb["cells"] = C

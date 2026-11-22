@@ -1,0 +1,35 @@
+{
+  "t": {
+    "E1": 0.0,
+    "E2": -0.5,
+    "E3": 0.5,
+    "E4": -1.0,
+    "E5": 1.0
+  },
+  "rule": "u' = u + |t| (eta* - u); discrete metrics rounded, ties to even",
+  "differences_rule_vs_table_A1": [
+    {
+      "state": "E2",
+      "action": "UN.S1.A1",
+      "metric": "M3",
+      "table": 102.0,
+      "rule": 102.5
+    },
+    {
+      "state": "E2",
+      "action": "UN.S1.A1",
+      "metric": "M4",
+      "table": 142.0,
+      "rule": 142.5
+    }
+  ],
+  "configuration_version": "cfg-c85ade5a0ea4",
+  "seed": 20261122,
+  "theta": 0.5,
+  "goal_weights": {
+    "ANT": 0.25,
+    "WITH": 0.25,
+    "REC": 0.25,
+    "AD": 0.25
+  }
+}

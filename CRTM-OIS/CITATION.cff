@@ -1,0 +1,54 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software and the article."
+title: "CRTM-OIS: Staged Method and Agent-Oriented System for Computing the Integral Cyber Resilience of Critical Infrastructure Objects"
+version: 1.0.0
+date-released: 2026-11-22
+license: MIT
+type: software
+authors:
+  - family-names: "[Lastname]"
+    given-names: "[Firstname]"
+    affiliation: "Department of Cybersecurity and Information Technologies, University of Customs and Finance, Dnipro, Ukraine"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: "[Lastname]"
+    given-names: "[Firstname]"
+    affiliation: "Department of Cybersecurity and Information Technologies, University of Customs and Finance, Dnipro, Ukraine"
+  - family-names: "[Lastname]"
+    given-names: "[Firstname]"
+    affiliation: "[Department, Institution, City, Country]"
+keywords:
+  - cyber resilience
+  - critical infrastructure
+  - systems engineering
+  - non-compensatory aggregation
+  - level-consistent normalization
+  - integral resilience index
+  - multi-agent system
+  - neural surrogate
+  - decision support system
+references:
+  - type: article
+    title: "A Set-Theoretic Tuple Model with Level-Consistent Normalization and Non-Compensatory Aggregation for Assessing the Cyber Resilience of Critical Infrastructure"
+    authors:
+      - family-names: Korchenko
+        given-names: O.
+      - family-names: Torstensson
+        given-names: O.
+      - family-names: Prokopovych-Tkachenko
+        given-names: D.
+      - family-names: Khokhlachova
+        given-names: Y.
+      - family-names: Svynarenko
+        given-names: D.
+    journal: Information
+    year: 2026
+    volume: 17
+    start: 1170
+    doi: 10.3390/info17111170
+  - type: software
+    title: "CRTM—Cyber-Resilience Tuple Model: Reference Implementation, Data and Reproduction Scripts, version 1.2.0"
+    authors:
+      - family-names: Korchenko
+        given-names: O.
+    year: 2026
+    doi: 10.5281/zenodo.23726825

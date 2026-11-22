@@ -1,0 +1,17 @@
+Data, figures and results of this archive (directories data/, results/,
+figures/ and the outputs stored in notebooks/) are licensed under the
+Creative Commons Attribution 4.0 International License (CC BY 4.0).
+
+Full legal text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+You are free to share and adapt the material for any purpose, provided that
+you give appropriate credit, provide a link to the license and indicate if
+changes were made.
+
+The scenario inputs (class tables, weights, core metrics and the values of
+state E1) originate from the CRTM reference implementation
+(Korchenko et al., Zenodo, https://doi.org/10.5281/zenodo.23726825) and the
+article Korchenko et al., Information 2026, 17, 1170,
+https://doi.org/10.3390/info17111170. Please cite those sources as well.
+
+Source code is licensed separately under the MIT License (see LICENSE).

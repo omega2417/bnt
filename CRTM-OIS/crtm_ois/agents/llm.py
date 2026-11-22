@@ -287,7 +287,7 @@ class ClaudeAnalyst:
 class OfflineAnalyst:
     """Deterministic analyst: same tools, templated report (no network)."""
 
-    def __init__(self, toolbox: ResilienceToolbox, lang: str = "ua"):
+    def __init__(self, toolbox: ResilienceToolbox, lang: str = "en"):
         self.tb = toolbox
         self.lang = lang
 
@@ -297,7 +297,8 @@ class OfflineAnalyst:
             tb.load_state(state)
         v = tb.assess_current()
         if "failure_code" in v:
-            return f"Оцінювання зупинено: {v['failure_code']} — {v['detail']}"
+            return (f"Оцінювання зупинено: {v['failure_code']} — {v['detail']}" if self.lang == "ua"
+                    else f"Assessment stopped: {v['failure_code']} — {v['detail']}")
         rec = tb.recommend()
         weak = tb.explain_action(v["weakest_action"])
         ua = self.lang == "ua"
@@ -330,10 +331,25 @@ class OfflineAnalyst:
             lines.append("\n_Дані сценарію ілюстративні; результат верифікує реалізацію, а не польову валідність._")
         else:
             lines.append(f"## Verdict: R = {v['R']:.3f} — level '{lname}' ({v['level']})")
-            lines.append(f"- Weakest link R_min = {v['R_min']:.3f} in {v['weakest_action']}; weakest goal {v['weakest_goal']}.")
+            lines.append(f"- Weakest link R_min = {v['R_min']:.3f} ({v['level_min']}) in {v['weakest_action']}; "
+                         f"weakest goal: {v['weakest_goal']}.")
             lines.append(f"- Missing-data enclosure [{L:.3f}, {U:.3f}] — "
-                         + ("stable." if v["stable_wrt_missing_data"] else "crosses a level boundary (not stable)."))
-            lines.append(f"- Weight robustness: {shares}.")
+                         + ("the verdict is stable." if v["stable_wrt_missing_data"]
+                            else "crosses a level boundary, the verdict is NOT stable."))
+            lines.append(f"- Weight robustness (Dirichlet ρ={v['robustness']['rho']}): {shares}.")
+            if v["vetoed_actions"]:
+                lines.append(f"- VETO: a core capability is lost in {', '.join(v['vetoed_actions'])}.")
+            lines.append(f"\n### Why {weak['action']} is the weakest action")
+            low = sorted([m for m in weak["metrics"] if m["m"] is not None], key=lambda m: m["m"])[:3]
+            for m in low:
+                lines.append(f"- {m['metric']} {m['name']}: x = {m['x']} {m['unit']} → m = {m['m']:.3f} ({m['level']})")
+            lines.append(f"\n### Improvement plan to level {rec['target_level']}"
+                         + (" (reached)" if rec["reached"] else " (not reached within the step limit)"))
             for s in rec["steps"][1:]:
-                lines.append(f"{s['step']}. improve {s['measurement']} -> {s['to']}: R = {s['R']:.3f}")
+                lines.append(f"{s['step']}. {s['measurement']} → {s['to']}: R = {s['R']:.3f}, R_L = {s['R_L']:.3f}")
+            for m in rec["missing_values"]:
+                lines.append(f"- Unreported metric {m['metric']}: once reported, R ∈ "
+                             f"[{m['R_if_critical']:.3f}, {m['R_if_ideal']:.3f}]; level {rec['target_level']} "
+                             f"requires a value ≥ {m['value_needed']}.")
+            lines.append("\n_Scenario data are illustrative; the result verifies the implementation, not field validity._")
         return "\n".join(lines)

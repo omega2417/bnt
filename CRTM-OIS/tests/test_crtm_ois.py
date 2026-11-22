@@ -131,7 +131,8 @@ def test_toolbox_and_offline_analyst(cfg):
     assert v["level"] == "A" and v["stable_wrt_missing_data"] is False
     w = tb.what_if("CN.S1.A1", "AM-DA-1", 90)
     assert "CN.S2.A1.AM-DA-1" in w["shared_with"]
-    assert "Вердикт" in OfflineAnalyst(tb).report("E2")
+    assert "Verdict" in OfflineAnalyst(tb).report("E2")
+    assert "Вердикт" in OfflineAnalyst(tb, lang="ua").report("E2")
     assert {s["name"] for s in tb.schemas()} == set(tb.TOOL_SPECS)
 
 

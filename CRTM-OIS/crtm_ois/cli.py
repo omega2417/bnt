@@ -19,8 +19,9 @@ def main(argv=None):
     a.add_argument("--samples", type=int, default=200_000)
     e = sub.add_parser("experiments", help="run all experiments of Section 3")
     e.add_argument("--out", default="results/results.json")
-    r = sub.add_parser("report", help="offline analyst report (Ukrainian)")
+    r = sub.add_parser("report", help="offline analyst report")
     r.add_argument("state", default="E1", nargs="?")
+    r.add_argument("--lang", default="en", choices=["en", "ua"])
     q = sub.add_parser("ask", help="ask the Claude analyst agent (needs anthropic + credentials)")
     q.add_argument("question")
     args = p.parse_args(argv)
@@ -45,7 +46,7 @@ def main(argv=None):
                           "levels": {e: res["adequacy"][e]["level_code"] for e in ("E1", "E2", "E3", "E4", "E5")}}))
     elif args.cmd == "report":
         from .agents.llm import OfflineAnalyst, ResilienceToolbox
-        print(OfflineAnalyst(ResilienceToolbox(cfg)).report(args.state))
+        print(OfflineAnalyst(ResilienceToolbox(cfg), lang=args.lang).report(args.state))
     elif args.cmd == "ask":
         from .agents.llm import ClaudeAnalyst, ResilienceToolbox
         print(ClaudeAnalyst(ResilienceToolbox(cfg)).ask(args.question))
