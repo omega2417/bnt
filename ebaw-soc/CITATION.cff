@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use this software or the EBAW-SOC-Synth dataset, please cite it as below."
+title: "ebaw-soc: evidence-bound action warrants for agentic security operations - simulation, reference gateway core and the EBAW-SOC-Synth dataset"
+version: 2.0.0
+date-released: 2026-10-08
+license: MIT
+type: software
+authors:
+  - family-names: Prokopovych-Tkachenko
+    given-names: Dmytro
+    orcid: "https://orcid.org/0000-0002-6590-3898"
+    affiliation: "University of Customs and Finance, Dnipro, Ukraine"
+keywords:
+  - agentic artificial intelligence
+  - security operations center
+  - autonomous incident response
+  - action authorization
+  - time-of-check to time-of-use
+  - calibrated confidence
+  - permissioned blockchain
+  - discrete-event simulation
+  - synthetic dataset
+abstract: >-
+  SimPy model of an agentic security operations center in which a deterministic gateway issues
+  evidence-bound action warrants, a reference implementation of the gateway core (Ed25519-signed
+  single-use expiring warrants, masking Byzantine quorum reads, enforcement point), and EBAW-SOC-Synth,
+  a synthetic dataset of 900 agentic response episodes and 6300 proposals with the record schema
+  proposed in the accompanying article submitted to Inventions (MDPI). Includes a self-contained
+  Google Colab notebook. Reproduces all results of the article. All data are synthetic.
+preferred-citation:
+  type: article
+  title: "Evidence-Bound Action Warrants for Agentic Security Operations: A Deterministic Gateway Enforcing Evidence Freshness, Calibrated Confidence, and Response Deadlines"
+  authors:
+    - family-names: Prokopovych-Tkachenko
+      given-names: Dmytro
+      orcid: "https://orcid.org/0000-0002-6590-3898"
+  journal: "Inventions"
+  year: 2026
+  notes: "Submitted"

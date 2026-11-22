@@ -1,0 +1,677 @@
+{
+ "name": "ebaw-soc-synth",
+ "title": "EBAW-SOC-Synth 1.0.0: synthetic agentic response episodes with evidence-bound action warrants",
+ "version": "1.0.0",
+ "licenses": [
+  {
+   "name": "CC-BY-4.0",
+   "path": "https://creativecommons.org/licenses/by/4.0/"
+  }
+ ],
+ "resources": [
+  {
+   "name": "episodes",
+   "path": "episodes.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "encoding": "utf-8",
+   "schema": {
+    "fields": [
+     {
+      "name": "episode_id",
+      "type": "string",
+      "description": "Episode identifier"
+     },
+     {
+      "name": "scenario_id",
+      "type": "string",
+      "description": "Scenario of Table 8 (D1-D8)"
+     },
+     {
+      "name": "scenario_name",
+      "type": "string",
+      "description": "Scenario name"
+     },
+     {
+      "name": "shift_id",
+      "type": "string",
+      "description": "Simulated SOC shift the episode belongs to"
+     },
+     {
+      "name": "techniques",
+      "type": "string",
+      "description": "MITRE ATT&CK / ATLAS technique identifiers (semicolon-separated)"
+     },
+     {
+      "name": "t_start",
+      "type": "number",
+      "description": "Phase start: first observation (incidents) or first adversarial proposal (s since shift start)"
+     },
+     {
+      "name": "t_end",
+      "type": "number",
+      "description": "Phase end: last proposal of the episode (s since shift start)"
+     },
+     {
+      "name": "label",
+      "type": "string",
+      "description": "malicious, benign (genuine proposals on benign activity) or adversarial (attack on the agent)"
+     },
+     {
+      "name": "n_proposals",
+      "type": "integer",
+      "description": "Number of agent proposals (6 on average; 24 in D8)"
+     },
+     {
+      "name": "n_adversarial",
+      "type": "integer",
+      "description": "Number of hallucinated, injected or tampered proposals"
+     },
+     {
+      "name": "split",
+      "type": "string",
+      "description": "Episode-level temporal split: train (60%), val (20%), test (20%)"
+     }
+    ]
+   }
+  },
+  {
+   "name": "observations",
+   "path": "observations.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "encoding": "utf-8",
+   "schema": {
+    "fields": [
+     {
+      "name": "evidence_id",
+      "type": "string",
+      "description": "Evidence identifier"
+     },
+     {
+      "name": "episode_id",
+      "type": "string",
+      "description": "Episode identifier"
+     },
+     {
+      "name": "asset_id",
+      "type": "string",
+      "description": "Pseudonymized asset identifier"
+     },
+     {
+      "name": "t_obs",
+      "type": "number",
+      "description": "Observation time (s since shift start)"
+     },
+     {
+      "name": "t_ingest",
+      "type": "number",
+      "description": "Time the observation became available in the SIEM"
+     },
+     {
+      "name": "sensor",
+      "type": "string",
+      "description": "Sensor that produced the observation"
+     },
+     {
+      "name": "ocsf_class_uid",
+      "type": "integer",
+      "description": "OCSF event class uid"
+     },
+     {
+      "name": "ocsf_class_name",
+      "type": "string",
+      "description": "OCSF event class name"
+     },
+     {
+      "name": "technique",
+      "type": "string",
+      "description": "ATT&CK/ATLAS technique of the scripted activity"
+     },
+     {
+      "name": "score",
+      "type": "number",
+      "description": "Analytical detection score s in [0, 1]"
+     },
+     {
+      "name": "raw_digest",
+      "type": "string",
+      "description": "SHA-256 digest of the raw event (payload kept off chain)"
+     },
+     {
+      "name": "record_digest",
+      "type": "string",
+      "description": "H(e): SHA-256 of the analytical record <raw, asset, t_obs, s, src>"
+     },
+     {
+      "name": "sensor_signature",
+      "type": "string",
+      "description": "Signature of the sensor over raw_digest (hex)"
+     },
+     {
+      "name": "tx_id",
+      "type": "string",
+      "description": "Ledger transaction anchoring H(e); empty if not anchored"
+     },
+     {
+      "name": "offchain_tampered",
+      "type": "boolean",
+      "description": "True if the off-chain record was forged (D7 / tampered proposals)"
+     }
+    ]
+   }
+  },
+  {
+   "name": "ledger_anchors",
+   "path": "ledger_anchors.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "encoding": "utf-8",
+   "schema": {
+    "fields": [
+     {
+      "name": "tx_id",
+      "type": "string",
+      "description": "Ledger transaction identifier"
+     },
+     {
+      "name": "evidence_id",
+      "type": "string",
+      "description": "Evidence record anchored"
+     },
+     {
+      "name": "record_digest",
+      "type": "string",
+      "description": "Digest stored on the ledger"
+     },
+     {
+      "name": "asset_id",
+      "type": "string",
+      "description": "Asset bound to the record on the ledger"
+     },
+     {
+      "name": "t_submit",
+      "type": "number",
+      "description": "Submission time of the anchoring transaction"
+     },
+     {
+      "name": "t_final",
+      "type": "number",
+      "description": "Time the record is final at a read quorum (confirmed-state visibility)"
+     },
+     {
+      "name": "Lc",
+      "type": "number",
+      "description": "Confirmed-state visibility latency t_final - t_submit (s)"
+     },
+     {
+      "name": "accept_v1",
+      "type": "number",
+      "description": "Acceptance time at validator 1 (empty: no response)"
+     },
+     {
+      "name": "accept_v2",
+      "type": "number",
+      "description": "Acceptance time at validator 2"
+     },
+     {
+      "name": "accept_v3",
+      "type": "number",
+      "description": "Acceptance time at validator 3"
+     },
+     {
+      "name": "accept_v4",
+      "type": "number",
+      "description": "Acceptance time at validator 4"
+     },
+     {
+      "name": "accept_v5",
+      "type": "number",
+      "description": "Acceptance time at validator 5 (empty during a validator outage)"
+     },
+     {
+      "name": "t_retract",
+      "type": "number",
+      "description": "Time of the retraction transaction (empty: never retracted)"
+     },
+     {
+      "name": "retraction_tx_id",
+      "type": "string",
+      "description": "Retraction transaction identifier"
+     }
+    ]
+   }
+  },
+  {
+   "name": "proposals",
+   "path": "proposals.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "encoding": "utf-8",
+   "schema": {
+    "fields": [
+     {
+      "name": "proposal_id",
+      "type": "string",
+      "description": "Proposal identifier"
+     },
+     {
+      "name": "episode_id",
+      "type": "string",
+      "description": "Episode identifier"
+     },
+     {
+      "name": "scenario_id",
+      "type": "string",
+      "description": "Scenario (D1-D8)"
+     },
+     {
+      "name": "action",
+      "type": "string",
+      "description": "Action class alpha"
+     },
+     {
+      "name": "tier",
+      "type": "string",
+      "description": "Risk tier rho"
+     },
+     {
+      "name": "target_asset",
+      "type": "string",
+      "description": "Target asset x named by the agent"
+     },
+     {
+      "name": "evidence_refs",
+      "type": "string",
+      "description": "Evidence references epsilon (semicolon-separated)"
+     },
+     {
+      "name": "claimed_conf",
+      "type": "number",
+      "description": "Confidence c_hat claimed by the agent (never used by the gateway)"
+     },
+     {
+      "name": "t_prop",
+      "type": "number",
+      "description": "Proposal time t_p"
+     },
+     {
+      "name": "rationale",
+      "type": "string",
+      "description": "Agent rationale (redacted)"
+     },
+     {
+      "name": "context_digest",
+      "type": "string",
+      "description": "SHA-256 of the agent context window"
+     },
+     {
+      "name": "injection_marker",
+      "type": "boolean",
+      "description": "True if the context contained an injected instruction"
+     },
+     {
+      "name": "kind",
+      "type": "string",
+      "description": "Ground truth: genuine, hallucinated, injected or tampered"
+     },
+     {
+      "name": "y_malicious",
+      "type": "integer",
+      "description": "Ground truth for genuine proposals: 1 malicious, 0 benign; -1 adversarial"
+     },
+     {
+      "name": "t_drift",
+      "type": "number",
+      "description": "Ground truth: time the target state drifts (empty: never)"
+     }
+    ]
+   }
+  },
+  {
+   "name": "policy_snapshots",
+   "path": "policy_snapshots.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "encoding": "utf-8",
+   "schema": {
+    "fields": [
+     {
+      "name": "partition",
+      "type": "string",
+      "description": "Policy partition (action class : asset)"
+     },
+     {
+      "name": "version",
+      "type": "integer",
+      "description": "Partition version v"
+     },
+     {
+      "name": "t_change",
+      "type": "number",
+      "description": "Time the version takes effect"
+     },
+     {
+      "name": "permit",
+      "type": "boolean",
+      "description": "Whether the version permits the action"
+     },
+     {
+      "name": "theta_auto",
+      "type": "number",
+      "description": "AUTO threshold of the tier"
+     },
+     {
+      "name": "theta_obs",
+      "type": "number",
+      "description": "OBSERVE threshold of the tier"
+     },
+     {
+      "name": "Phi",
+      "type": "number",
+      "description": "Freshness bound Phi_alpha (s)"
+     },
+     {
+      "name": "D",
+      "type": "number",
+      "description": "Response deadline D_alpha from t_obs (s)"
+     }
+    ]
+   }
+  },
+  {
+   "name": "gateway_verdicts",
+   "path": "gateway_verdicts.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "encoding": "utf-8",
+   "schema": {
+    "fields": [
+     {
+      "name": "proposal_id",
+      "type": "string",
+      "description": "Proposal identifier"
+     },
+     {
+      "name": "warrant_id",
+      "type": "string",
+      "description": "Warrant identifier (empty if no warrant was issued)"
+     },
+     {
+      "name": "outcome",
+      "type": "string",
+      "description": "Final outcome under the full EBAW contract (EB)"
+     },
+     {
+      "name": "g",
+      "type": "number",
+      "description": "Calibrated confidence g(s) computed by the gateway"
+     },
+     {
+      "name": "regime",
+      "type": "string",
+      "description": "AUTO, VERIFY or OBSERVE"
+     },
+     {
+      "name": "P1",
+      "type": "boolean",
+      "description": "Freshness at the first check"
+     },
+     {
+      "name": "P2",
+      "type": "boolean",
+      "description": "Calibrated confidence at the first check"
+     },
+     {
+      "name": "P3",
+      "type": "boolean",
+      "description": "Ledger quorum at the first check"
+     },
+     {
+      "name": "P4",
+      "type": "boolean",
+      "description": "Policy version at the first check"
+     },
+     {
+      "name": "P5",
+      "type": "boolean",
+      "description": "Deadline budget at the first check"
+     },
+     {
+      "name": "fails_first",
+      "type": "string",
+      "description": "Failing predicates at the first check (F C L V D; '-' none)"
+     },
+     {
+      "name": "fails_reval",
+      "type": "string",
+      "description": "Failing predicates at revalidation"
+     },
+     {
+      "name": "fails_all",
+      "type": "string",
+      "description": "Union of failing predicates over the lifecycle"
+     },
+     {
+      "name": "t_chk",
+      "type": "number",
+      "description": "Last admission check"
+     },
+     {
+      "name": "age_at_check",
+      "type": "number",
+      "description": "Evidence age at t_chk"
+     },
+     {
+      "name": "t_iss",
+      "type": "number",
+      "description": "Warrant issue time"
+     },
+     {
+      "name": "t_exp",
+      "type": "number",
+      "description": "Warrant expiry, Eq. (9)"
+     },
+     {
+      "name": "t_reval",
+      "type": "number",
+      "description": "Revalidation time"
+     },
+     {
+      "name": "reverified",
+      "type": "integer",
+      "description": "Number of fresh target-bound sensor queries"
+     },
+     {
+      "name": "reissued",
+      "type": "integer",
+      "description": "Number of re-issues after a policy change"
+     },
+     {
+      "name": "lc_timeout",
+      "type": "boolean",
+      "description": "Confirmation not obtained within the admissible wait"
+     },
+     {
+      "name": "nonce",
+      "type": "string",
+      "description": "Single-use nonce"
+     },
+     {
+      "name": "warrant_token",
+      "type": "string",
+      "description": "Compact signed warrant (header.claims.signature)"
+     }
+    ]
+   }
+  },
+  {
+   "name": "executions",
+   "path": "executions.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "encoding": "utf-8",
+   "schema": {
+    "fields": [
+     {
+      "name": "proposal_id",
+      "type": "string",
+      "description": "Proposal identifier"
+     },
+     {
+      "name": "enforcement_point",
+      "type": "string",
+      "description": "Enforcement point that executed the action"
+     },
+     {
+      "name": "mode",
+      "type": "string",
+      "description": "auto (warrant) or manual (human-attested warrant)"
+     },
+     {
+      "name": "t_disp",
+      "type": "number",
+      "description": "Dispatch to an orchestrator worker"
+     },
+     {
+      "name": "t_x",
+      "type": "number",
+      "description": "Execution instant"
+     },
+     {
+      "name": "t_done",
+      "type": "number",
+      "description": "Completion"
+     },
+     {
+      "name": "window",
+      "type": "number",
+      "description": "Check-to-act window t_x - t_last_check (s)"
+     },
+     {
+      "name": "unsafe",
+      "type": "boolean",
+      "description": "Executed on a benign, retracted, forbidden or drifted state, or adversarial"
+     },
+     {
+      "name": "violation",
+      "type": "boolean",
+      "description": "Contract violated at the execution instant (autonomous executions)"
+     },
+     {
+      "name": "viol_set",
+      "type": "string",
+      "description": "Violated predicates"
+     },
+     {
+      "name": "deadline_met",
+      "type": "boolean",
+      "description": "Malicious target contained within D_alpha"
+     }
+    ]
+   }
+  },
+  {
+   "name": "analyst_actions",
+   "path": "analyst_actions.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "encoding": "utf-8",
+   "schema": {
+    "fields": [
+     {
+      "name": "proposal_id",
+      "type": "string",
+      "description": "Proposal identifier"
+     },
+     {
+      "name": "t_escalated",
+      "type": "number",
+      "description": "Escalation time"
+     },
+     {
+      "name": "urgent",
+      "type": "boolean",
+      "description": "Urgent escalation (deadline predicate)"
+     },
+     {
+      "name": "handling_time",
+      "type": "number",
+      "description": "Analyst handling time (s)"
+     },
+     {
+      "name": "decision",
+      "type": "string",
+      "description": "approve or decline (an approved action may still be rejected at revalidation)"
+     },
+     {
+      "name": "correct",
+      "type": "boolean",
+      "description": "Whether the analyst decision matched the ground truth"
+     }
+    ]
+   }
+  },
+  {
+   "name": "policy_outcomes",
+   "path": "policy_outcomes.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "encoding": "utf-8",
+   "schema": {
+    "fields": [
+     {
+      "name": "proposal_id",
+      "type": "string",
+      "description": "Proposal identifier"
+     },
+     {
+      "name": "policy",
+      "type": "string",
+      "description": "AD, CO, RO, GN, EB or ET"
+     },
+     {
+      "name": "outcome",
+      "type": "string",
+      "description": "Final outcome"
+     },
+     {
+      "name": "executed",
+      "type": "boolean",
+      "description": "Action executed"
+     },
+     {
+      "name": "manual",
+      "type": "boolean",
+      "description": "Executed after escalation"
+     },
+     {
+      "name": "escalated",
+      "type": "boolean",
+      "description": "Escalated to an analyst"
+     },
+     {
+      "name": "unsafe",
+      "type": "boolean",
+      "description": "Unsafe execution"
+     },
+     {
+      "name": "violation",
+      "type": "boolean",
+      "description": "Contract violation (autonomous executions)"
+     },
+     {
+      "name": "deadline_met",
+      "type": "boolean",
+      "description": "Malicious target contained within its deadline (genuine malicious only)"
+     },
+     {
+      "name": "ttc",
+      "type": "number",
+      "description": "Time to containment t_done - t_obs (s)"
+     }
+    ]
+   }
+  }
+ ]
+}

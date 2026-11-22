@@ -1,0 +1,44 @@
+{
+ "calibration": {
+  "n_train": 3399,
+  "n_test": 1162,
+  "prevalence_train": 0.6631362165342748,
+  "prevalence_test": 0.6660929432013769,
+  "fitted": {
+   "ECE": 0.02043797695034756,
+   "Brier": 0.0476784977178195,
+   "conservative_bins": 1.0,
+   "overconfident_mass": 0.0
+  },
+  "article": {
+   "ECE": 0.019683046805575928,
+   "Brier": 0.04553284438145805,
+   "conservative_bins": 0.625,
+   "overconfident_mass": 0.0
+  }
+ },
+ "planning_test": {
+  "p_CO": 0.08904649330181244,
+  "p_EB": 0.015760441292356184,
+  "n_per_policy": 142.0,
+  "n_article": 354.0,
+  "n_adv_rule_of_three": 300.0,
+  "n_adv_available": 107.0
+ },
+ "planning_all": {
+  "p_CO": 0.10317460317460318,
+  "p_EB": 0.014920634920634921,
+  "n_per_policy": 109.0,
+  "n_article": 354.0,
+  "n_adv_rule_of_three": 300.0,
+  "n_adv_available": 615.0
+ }
+}
+           n     UER  UER_lo  UER_hi    CVR  n_auto    DMR   ESC  adv_exec  n_adv  adv_upper95     J
+policy                                                                                              
+AD      1269  404.26  377.58  431.51  55.63    1269   8.01  0.00       107    107       100.00  4.29
+CO      1269   89.05   74.59  105.98  15.41     740  13.31  9.22        86    107        86.79  1.39
+RO      1269  368.79  342.68  395.70  53.47    1210   8.53  1.89        72    107        75.45  3.97
+GN      1269   18.12   12.11   27.05   1.24     645  13.18  9.38         0    107         2.76  0.68
+EB      1269   15.76   10.23   24.22   0.00     644  13.18  9.38         0    107         2.76  0.65
+ET      1269   17.34   11.48   26.11   1.38     651  13.05  8.90         0    107         2.76  0.66

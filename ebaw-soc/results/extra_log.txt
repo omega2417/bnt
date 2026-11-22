@@ -1,0 +1,412 @@
+S0 done (4 s)
+S1 done (9 s)
+S2 done (13 s)
+S3 done (16 s)
+S4 done (20 s)
+S5 done (25 s)
+S6 done (31 s)
+S7 done (37 s)
+{
+ "fifo_ablation": {
+  "EB_EDF": {
+   "UER": 14.560686147402015,
+   "DMR": 15.182900286696388,
+   "ESC": 11.324424055051361,
+   "J": 0.7502738500376196,
+   "CVR": 0.0,
+   "S0": {
+    "DMR": 11.344200962052378,
+    "ESC": 9.795175238962221,
+    "J": 0.6444397594010471,
+    "UER": 15.930814747382795,
+    "peak_q_mean": 0.5333333333333333,
+    "peak_q_max": 2,
+    "peak_q_rep0": 0
+   },
+   "S6": {
+    "DMR": 17.124770947859403,
+    "ESC": 12.701879418357375,
+    "J": 0.877211378539637,
+    "UER": 16.09287890108627,
+    "peak_q_mean": 10.166666666666666,
+    "peak_q_max": 23,
+    "peak_q_rep0": 9
+   },
+   "S7": {
+    "DMR": 21.62496138399753,
+    "ESC": 13.917972657552518,
+    "J": 0.9631098302932133,
+    "UER": 12.670890296765588,
+    "peak_q_mean": 6.933333333333334,
+    "peak_q_max": 28,
+    "peak_q_rep0": 9
+   }
+  },
+  "EB_FIFO": {
+   "UER": 14.710282237957514,
+   "DMR": 15.10484682007175,
+   "ESC": 11.24164755161065,
+   "J": 0.7482147902125178,
+   "CVR": 0.0,
+   "S0": {
+    "DMR": 11.344200962052378,
+    "ESC": 9.795175238962221,
+    "J": 0.6444397594010471,
+    "UER": 15.930814747382795,
+    "peak_q_mean": 0.5333333333333333,
+    "peak_q_max": 2,
+    "peak_q_rep0": 0
+   },
+   "S6": {
+    "DMR": 17.57454606030318,
+    "ESC": 12.851313293867465,
+    "J": 0.8996884233784604,
+    "UER": 16.782573711132823,
+    "peak_q_mean": 10.366666666666667,
+    "peak_q_max": 24,
+    "peak_q_rep0": 14
+   },
+   "S7": {
+    "DMR": 20.533415714138606,
+    "ESC": 13.191063687895966,
+    "J": 0.9241603068535742,
+    "UER": 12.870956985661886,
+    "peak_q_mean": 6.333333333333333,
+    "peak_q_max": 15,
+    "peak_q_rep0": 7
+   }
+  },
+  "ET_EDF": {
+   "UER": 15.448289618031316,
+   "DMR": 13.761426577205386,
+   "ESC": 9.732721651540839,
+   "J": 0.7041524751312073,
+   "CVR": 2.6264855380496717,
+   "S0": {
+    "DMR": 11.23730625334046,
+    "ESC": 9.522075557578516,
+    "J": 0.6389829186407749,
+    "UER": 16.021847974510695,
+    "peak_q_mean": 0.5333333333333333,
+    "peak_q_max": 2,
+    "peak_q_rep0": 0
+   },
+   "S6": {
+    "DMR": 14.009661835748794,
+    "ESC": 10.483361112707627,
+    "J": 0.7523737977419903,
+    "UER": 16.552675441117305,
+    "peak_q_mean": 10.966666666666667,
+    "peak_q_max": 33,
+    "peak_q_rep0": 15
+   },
+   "S7": {
+    "DMR": 17.866337143445577,
+    "ESC": 10.203401133711237,
+    "J": 0.8260897924422095,
+    "UER": 14.671557185728577,
+    "peak_q_mean": 7.4,
+    "peak_q_max": 35,
+    "peak_q_rep0": 10
+   }
+  },
+  "ET_FIFO": {
+   "UER": 15.617831853994216,
+   "DMR": 13.834976959217062,
+   "ESC": 9.65393437718161,
+   "J": 0.7065870143228802,
+   "CVR": 2.911954911665884,
+   "S0": {
+    "DMR": 11.23730625334046,
+    "ESC": 9.522075557578516,
+    "J": 0.6389829186407749,
+    "UER": 16.021847974510695,
+    "peak_q_mean": 0.5333333333333333,
+    "peak_q_max": 2,
+    "peak_q_rep0": 0
+   },
+   "S6": {
+    "DMR": 14.317841079460269,
+    "ESC": 10.127018794183574,
+    "J": 0.7659809950984228,
+    "UER": 17.24237025116386,
+    "peak_q_mean": 11.033333333333333,
+    "peak_q_max": 34,
+    "peak_q_rep0": 15
+   },
+   "S7": {
+    "DMR": 17.989908351354135,
+    "ESC": 10.090030010003334,
+    "J": 0.831958908619161,
+    "UER": 15.005001667222407,
+    "peak_q_mean": 6.966666666666667,
+    "peak_q_max": 29,
+    "peak_q_rep0": 7
+   }
+  },
+  "paired_J_diff_FIFO_minus_EDF": {
+   "EB_S0": {
+    "mean": 0.0,
+    "h": 0.0
+   },
+   "EB_S1": {
+    "mean": 0.0,
+    "h": 0.0
+   },
+   "EB_S2": {
+    "mean": 0.0,
+    "h": 0.0
+   },
+   "EB_S3": {
+    "mean": 0.0,
+    "h": 0.0
+   },
+   "EB_S4": {
+    "mean": 0.0,
+    "h": 0.0
+   },
+   "EB_S5": {
+    "mean": 0.0,
+    "h": 0.0
+   },
+   "EB_S6": {
+    "mean": 0.022477044838823537,
+    "h": 0.049955384565681056
+   },
+   "EB_S7": {
+    "mean": -0.03894952343963907,
+    "h": 0.05421743638956454
+   },
+   "ET_S0": {
+    "mean": 0.0,
+    "h": 0.0
+   },
+   "ET_S1": {
+    "mean": 0.0,
+    "h": 0.0
+   },
+   "ET_S2": {
+    "mean": 0.0,
+    "h": 0.0
+   },
+   "ET_S3": {
+    "mean": 0.0,
+    "h": 0.0
+   },
+   "ET_S4": {
+    "mean": 0.0,
+    "h": 0.0
+   },
+   "ET_S5": {
+    "mean": 0.0,
+    "h": 0.0
+   },
+   "ET_S6": {
+    "mean": 0.01360719735643247,
+    "h": 0.01926199301877932
+   },
+   "ET_S7": {
+    "mean": 0.0058691161769514645,
+    "h": 0.008768208630191376
+   }
+  }
+ },
+ "ttc": {
+  "CO": {
+   "TTC_all": 62.14829268048079,
+   "TTC_auto": 57.70454164405626,
+   "n_auto": 54569,
+   "n_all": 60816,
+   "S0": {
+    "TTC_all": 57.652278291615495,
+    "TTC_auto": 54.165383982362954
+   },
+   "S7": {
+    "TTC_all": 69.3386568869702,
+    "TTC_auto": 63.44698437613279
+   }
+  },
+  "EB": {
+   "TTC_all": 64.23178135956564,
+   "TTC_auto": 58.10581036666154,
+   "n_auto": 52428,
+   "n_all": 60144,
+   "S0": {
+    "TTC_all": 57.78664450852911,
+    "TTC_auto": 54.186130264949604
+   },
+   "S7": {
+    "TTC_all": 76.0214973076315,
+    "TTC_auto": 64.02725027492923
+   }
+  },
+  "ET": {
+   "TTC_all": 63.882111246628114,
+   "TTC_auto": 58.92448218320968,
+   "n_auto": 53909,
+   "n_all": 60624,
+   "S0": {
+    "TTC_all": 57.82957731496103,
+    "TTC_auto": 54.31404710206464
+   },
+   "S7": {
+    "TTC_all": 73.58043447097278,
+    "TTC_auto": 66.0746595028843
+   }
+  }
+ },
+ "miss_attribution_EB_vs_CO": {
+  "n_extra": 1431,
+  "paired": {
+   "eb_only_miss": 1431,
+   "co_only_miss": 85,
+   "both": 8684
+  },
+  "shares": {
+   "deadline-triggered escalation (P5)": {
+    "n": 760,
+    "pct": 53.10971348707198
+   },
+   "confirmation not obtained within the admissible wait": {
+    "n": 427,
+    "pct": 29.83927323549965
+   },
+   "VERIFY escalation finished late": {
+    "n": 193,
+    "pct": 13.487071977638015
+   },
+   "other: executed_auto": {
+    "n": 22,
+    "pct": 1.5373864430468205
+   },
+   "other: rejected_policy": {
+    "n": 18,
+    "pct": 1.2578616352201257
+   },
+   "freshness refresh (P1)": {
+    "n": 11,
+    "pct": 0.7686932215234102
+   }
+  },
+  "by_scenario": {
+   "S0": {
+    "deadline-triggered escalation (P5)": 7,
+    "VERIFY escalation finished late": 4,
+    "freshness refresh (P1)": 1,
+    "other: executed_auto": 1
+   },
+   "S1": {
+    "confirmation not obtained within the admissible wait": 217,
+    "other: executed_auto": 10,
+    "VERIFY escalation finished late": 9,
+    "deadline-triggered escalation (P5)": 8,
+    "freshness refresh (P1)": 1,
+    "other: rejected_policy": 3
+   },
+   "S2": {
+    "deadline-triggered escalation (P5)": 69,
+    "VERIFY escalation finished late": 6,
+    "freshness refresh (P1)": 2,
+    "confirmation not obtained within the admissible wait": 2,
+    "other: executed_auto": 1
+   },
+   "S3": {
+    "deadline-triggered escalation (P5)": 7,
+    "VERIFY escalation finished late": 4,
+    "other: rejected_policy": 1,
+    "freshness refresh (P1)": 1
+   },
+   "S4": {
+    "deadline-triggered escalation (P5)": 7,
+    "VERIFY escalation finished late": 4,
+    "freshness refresh (P1)": 1,
+    "other: executed_auto": 1
+   },
+   "S5": {
+    "deadline-triggered escalation (P5)": 7,
+    "VERIFY escalation finished late": 4,
+    "freshness refresh (P1)": 1,
+    "other: executed_auto": 1
+   },
+   "S6": {
+    "VERIFY escalation finished late": 73,
+    "deadline-triggered escalation (P5)": 409,
+    "freshness refresh (P1)": 2,
+    "other: executed_auto": 4
+   },
+   "S7": {
+    "confirmation not obtained within the admissible wait": 208,
+    "deadline-triggered escalation (P5)": 246,
+    "VERIFY escalation finished late": 89,
+    "other: executed_auto": 4,
+    "other: rejected_policy": 14,
+    "freshness refresh (P1)": 2
+   }
+  }
+ },
+ "pooled_S6": {
+  "AD": {
+   "DMR": 11.91071131101116,
+   "ESC": 0.0,
+   "UER": 331.3983562273694,
+   "J": 3.719902994519771
+  },
+  "CO": {
+   "DMR": 13.509911710811263,
+   "ESC": 9.655727340651762,
+   "UER": 26.438301051784585,
+   "J": 0.825701928971079
+  },
+  "EB": {
+   "DMR": 17.124770947859403,
+   "ESC": 12.701879418357375,
+   "UER": 16.09287890108627,
+   "J": 0.877211378539637
+  },
+  "ET": {
+   "DMR": 14.009661835748794,
+   "ESC": 10.483361112707627,
+   "UER": 16.552675441117305,
+   "J": 0.7523737977419903
+  },
+  "GN": {
+   "DMR": 16.699983341662502,
+   "ESC": 12.293809989079833,
+   "UER": 17.472268521179377,
+   "J": 0.8727251026185493
+  },
+  "RO": {
+   "DMR": 11.885723804764286,
+   "ESC": 0.0,
+   "UER": 329.0993735272142,
+   "J": 3.6961303009472384
+  }
+ },
+ "pooled_S0": {
+  "AD": {
+   "DMR": 1.6835916622127203,
+   "ESC": 0.0
+  },
+  "CO": {
+   "DMR": 11.17049706039551,
+   "ESC": 9.67683204369595
+  },
+  "EB": {
+   "DMR": 11.344200962052378,
+   "ESC": 9.795175238962221
+  },
+  "ET": {
+   "DMR": 11.23730625334046,
+   "ESC": 9.522075557578516
+  },
+  "GN": {
+   "DMR": 11.17049706039551,
+   "ESC": 9.485662266727356
+  },
+  "RO": {
+   "DMR": 1.6835916622127203,
+   "ESC": 0.0
+  }
+ }
+}
+done (38 s)

@@ -1,0 +1,191 @@
+{
+ "name": "EBAW-SOC-Synth",
+ "version": "1.0.0",
+ "generator": "ebaw 2.0.0",
+ "synthetic": true,
+ "created_with": {
+  "python": "3.13.16",
+  "numpy": "2.5.3",
+  "pandas": "3.0.5"
+ },
+ "seed_base": 20260000,
+ "n_validators": 5,
+ "f": 1,
+ "read_quorum": 4,
+ "catalog": {
+  "D1": {
+   "name": "Credential compromise and lateral movement",
+   "techniques": [
+    "T1078",
+    "T1110",
+    "T1021"
+   ],
+   "perturbation": "None (baseline)",
+   "episodes": 150,
+   "proposals": 900,
+   "over": {}
+  },
+  "D2": {
+   "name": "Ransomware precursor",
+   "techniques": [
+    "T1059",
+    "T1490",
+    "T1486"
+   ],
+   "perturbation": "Telemetry backlog producing stale evidence",
+   "episodes": 150,
+   "proposals": 900,
+   "over": {
+    "stale_p": 0.25
+   }
+  },
+  "D3": {
+   "name": "Command and control with exfiltration",
+   "techniques": [
+    "T1071",
+    "T1041"
+   ],
+   "perturbation": "Ledger delays (5-60 s) and validator outage",
+   "episodes": 120,
+   "proposals": 720,
+   "over": {
+    "lc_delay_p": 0.35,
+    "lc_delay_lo": 5.0,
+    "lc_delay_hi": 60.0,
+    "lc_stall_p": 0.03
+   },
+   "outage": true
+  },
+  "D4": {
+   "name": "Phishing with a malicious attachment",
+   "techniques": [
+    "T1566",
+    "T1204"
+   ],
+   "perturbation": "Policy change during the response (change freeze, asset exception)",
+   "episodes": 120,
+   "proposals": 720,
+   "over": {
+    "pol_rate_rel_per_h": 3.0
+   }
+  },
+  "D5": {
+   "name": "Benign administrative look-alikes",
+   "techniques": [
+    "T1047",
+    "T1053"
+   ],
+   "perturbation": "Evidence retraction through change-ticket correlation",
+   "episodes": 150,
+   "proposals": 900,
+   "over": {
+    "p_mal": 0.4,
+    "ret_p_benign": 0.85,
+    "ret_mean": 30.0
+   }
+  },
+  "D6": {
+   "name": "Indirect prompt injection",
+   "techniques": [
+    "AML.T0051.001"
+   ],
+   "perturbation": "Injected and hallucinated proposals",
+   "episodes": 100,
+   "proposals": 600,
+   "over": {
+    "adv_halluc": 0.8,
+    "adv_inject": 0.8
+   }
+  },
+  "D7": {
+   "name": "Tampering with SIEM records",
+   "techniques": [
+    "T1565.001",
+    "T1070"
+   ],
+   "perturbation": "Forged analytical records without a ledger anchor",
+   "episodes": 60,
+   "proposals": 360,
+   "over": {
+    "adv_tamper": 1.0
+   }
+  },
+  "D8": {
+   "name": "Alert storm",
+   "techniques": [
+    "T1595",
+    "T1046"
+   ],
+   "perturbation": "Fourfold and eightfold surges",
+   "episodes": 50,
+   "proposals": 1200,
+   "over": {
+    "horizon": 14400.0,
+    "surge": [
+     [
+      3600.0,
+      4800.0
+     ],
+     [
+      9000.0,
+      10200.0
+     ]
+    ]
+   },
+   "surge_mults": [
+    4.0,
+    8.0
+   ]
+  }
+ },
+ "files": {
+  "episodes.csv": {
+   "sha256": "0981b1027cfa27473562a99d7fe1c8880e8fd6df0bcf65fbeb5454ca528d7cd8",
+   "rows": 900,
+   "bytes": 102688
+  },
+  "observations.csv": {
+   "sha256": "34c7d70eeeeb8a3be09ae1496138ac6c71bd7e99a60b0f496f638307df791226",
+   "rows": 5885,
+   "bytes": 2450983
+  },
+  "ledger_anchors.csv": {
+   "sha256": "39984e69fbc724ccf98a1ccdc6288910c30b9add6af50593d64e815b01db9f49",
+   "rows": 5783,
+   "bytes": 1395094
+  },
+  "proposals.csv": {
+   "sha256": "6a6ca491612db4329e5b0ae901be3b2084c577488faad0c68a80eb0fda1e5926",
+   "rows": 6300,
+   "bytes": 1252624
+  },
+  "policy_snapshots.csv": {
+   "sha256": "bce22038c43d90e42be1340b69c365b0c0c33fa3eceb3df63696773efcf99abe",
+   "rows": 10340,
+   "bytes": 847045
+  },
+  "gateway_verdicts.csv": {
+   "sha256": "64289099d7132867e235beccc03738a2aa0c7e5c4b7775a47e0ac8941379e011",
+   "rows": 6300,
+   "bytes": 3228538
+  },
+  "executions.csv": {
+   "sha256": "adafb3d591343895385b07202af7d2b9f395152e6886639bd46b0858cfd8c051",
+   "rows": 3486,
+   "bytes": 334887
+  },
+  "analyst_actions.csv": {
+   "sha256": "7eb9b1acb509be77d8470907f646276a4a3260f45c031c29676034978df7dd6d",
+   "rows": 638,
+   "bytes": 37923
+  },
+  "policy_outcomes.csv": {
+   "sha256": "2b5a98cbd351960f5cb8c11e1306985bb77a5094b85cfa094b06c701a0e30802",
+   "rows": 37800,
+   "bytes": 2854469
+  }
+ },
+ "merkle_root": "3c8b1c7f540b0c74e3f2ee2779d2b03e21a4978aa811042c138c41ce7653cac5",
+ "root_signature": "e559e048987fa77054aa85995e377995d2cf6397910c5a4443b8e9a2db6e768c8cc7da056aa66d364d73f0008c2f1260c1ca27fe56425b0c3f5e49e8f78e4f01",
+ "root_signature_kid": "gw-synth-1"
+}

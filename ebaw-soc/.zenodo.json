@@ -1,0 +1,38 @@
+{
+  "title": "ebaw-soc 2.0.0: evidence-bound action warrants for agentic security operations - simulation, reference gateway core and the EBAW-SOC-Synth dataset",
+  "upload_type": "software",
+  "version": "2.0.0",
+  "publication_date": "2026-10-08",
+  "description": "<p>Software and data accompanying the article <em>Evidence-Bound Action Warrants for Agentic Security Operations: A Deterministic Gateway Enforcing Evidence Freshness, Calibrated Confidence, and Response Deadlines</em> (submitted to Inventions, MDPI, 2026). Version 2.0.0 extends ebaw-sim 1.0.0 and contains:</p><ul><li><strong>Simulation</strong> (SimPy): an agentic security operations center with six admission policies, eight scenarios and 30 replications on synchronized common random numbers; it reproduces every number, table and data figure of the article bit for bit.</li><li><strong>Reference gateway core</strong>: the five-predicate contract (evidence freshness, calibrated confidence, ledger quorum, policy version, deadline budget) evaluated from authenticated inputs only; Ed25519-signed, single-use, expiring warrants; masking Byzantine quorum reads (n &ge; 4f + 1); and an enforcement point.</li><li><strong>EBAW-SOC-Synth 1.0.0</strong>: a synthetic dataset with the record schema and scenario catalog proposed in Section 6.1 of the article. It contains 900 episodes and 6300 agent proposals, 615 of them hallucinated, injected or tampered, in eight linked tables plus outcomes under six policies. It ships with SHA-256 digests, sensor signatures, signed warrant tokens, a signed manifest, a Frictionless data package and a datasheet, and has episode-level temporal 60/20/20 splits.</li><li><strong>Self-contained Google Colab notebook</strong> embedding the full package, benchmark tasks (calibration, thresholds, admission policies, sample-size planning) and 48 property tests.</li></ul><p>All data are synthetic; they are not measurements of a real security operations center. Code: MIT License. Dataset: CC BY 4.0.</p>",
+  "creators": [
+    {
+      "name": "Prokopovych-Tkachenko, Dmytro",
+      "affiliation": "University of Customs and Finance, Dnipro, Ukraine",
+      "orcid": "0000-0002-6590-3898"
+    }
+  ],
+  "keywords": [
+    "agentic artificial intelligence",
+    "security operations center",
+    "autonomous incident response",
+    "action authorization",
+    "time-of-check to time-of-use",
+    "calibrated confidence",
+    "permissioned blockchain",
+    "discrete-event simulation",
+    "synthetic dataset",
+    "Google Colab"
+  ],
+  "license": "MIT",
+  "access_right": "open",
+  "language": "eng",
+  "notes": "Dataset files under data/ebaw-soc-synth-1.0.0/ are licensed under CC BY 4.0 (see LICENSE-DATA). Quick start: open notebooks/EBAW_Colab.ipynb in Google Colab, or run bash run_all.sh.",
+  "related_identifiers": [
+    {
+      "identifier": "10.3390/s26092797",
+      "relation": "references",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    }
+  ]
+}

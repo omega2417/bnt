@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ebaw"
+version = "2.0.0"
+description = "Evidence-bound action warrants for agentic security operations: discrete-event simulation, reference gateway core and the EBAW-SOC-Synth dataset"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Dmytro Prokopovych-Tkachenko", email = "omega2417@umsf.edu.ua" }]
+keywords = ["agentic AI", "security operations center", "action authorization", "TOCTOU", "calibrated confidence", "permissioned blockchain", "discrete-event simulation"]
+dependencies = ["simpy>=4.1", "numpy>=1.26", "scipy>=1.11", "pandas>=2.1", "matplotlib>=3.8"]
+classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License", "Topic :: Security", "Topic :: Scientific/Engineering"]
+
+[project.optional-dependencies]
+crypto = ["cryptography>=41"]
+dev = ["pytest", "nbformat", "nbconvert", "ipykernel"]
+
+[tool.setuptools]
+packages = ["ebaw"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

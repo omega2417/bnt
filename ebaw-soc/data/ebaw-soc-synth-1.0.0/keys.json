@@ -1,0 +1,37 @@
+{
+ "gateway": {
+  "kid": "gw-synth-1",
+  "alg": "EdDSA",
+  "public_key": "914228b2f32c485e36d0ead1cc69d088ff98edf2bc4b1c727aa0cc418a9920a1"
+ },
+ "sensors": {
+  "suricata": {
+   "alg": "EdDSA",
+   "public_key": "67a42b463d8fa90ca615c96d0d2bbc37d00bc4abe833367a9f6a9579d157fb1f"
+  },
+  "sysmon": {
+   "alg": "EdDSA",
+   "public_key": "9cc582a41d3aeaa80b15a3aa531a843e95bf69ce34412c5e678a6b7c0b0fd64c"
+  },
+  "wazuh-fim": {
+   "alg": "EdDSA",
+   "public_key": "05aa6697f3f6750249c3637d31ad64b91d1d7d7ba33e6070e88387004d9b0326"
+  },
+  "keycloak": {
+   "alg": "EdDSA",
+   "public_key": "998f4653b37b08e13596f764457604cd1c2ef1edb4a1e91f9261ec8c05f8578f"
+  },
+  "ad-dc": {
+   "alg": "EdDSA",
+   "public_key": "fadcaba3b0e627d4dd8dec2b1a294724b2950846e8b15df7e385692b0c14e012"
+  },
+  "velociraptor": {
+   "alg": "EdDSA",
+   "public_key": "53a049b14117ce86f4e982095f4b1f74be41e3d09cc9216033e35517b0dc91dc"
+  },
+  "wazuh": {
+   "alg": "EdDSA",
+   "public_key": "8754308f2cb37fd39f615ae6b0caf79049d907502a8f2385f86a173163200e19"
+  }
+ }
+}

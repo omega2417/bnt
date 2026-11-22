@@ -1,0 +1,43 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "name": "ebaw-soc",
+  "version": "2.0.0",
+  "description": "Evidence-bound action warrants for agentic security operations: discrete-event simulation, reference gateway core and the EBAW-SOC-Synth dataset.",
+  "license": "https://spdx.org/licenses/MIT",
+  "programmingLanguage": "Python",
+  "dateCreated": "2026-10-08",
+  "datePublished": "2026-10-08",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Dmytro",
+      "familyName": "Prokopovych-Tkachenko",
+      "@id": "https://orcid.org/0000-0002-6590-3898",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "University of Customs and Finance, Dnipro, Ukraine"
+      }
+    }
+  ],
+  "softwareRequirements": [
+    "simpy",
+    "numpy",
+    "scipy",
+    "pandas",
+    "matplotlib",
+    "cryptography (optional)"
+  ],
+  "keywords": [
+    "agentic artificial intelligence",
+    "security operations center",
+    "autonomous incident response",
+    "action authorization",
+    "time-of-check to time-of-use",
+    "calibrated confidence",
+    "permissioned blockchain",
+    "discrete-event simulation",
+    "synthetic dataset",
+    "Google Colab"
+  ]
+}

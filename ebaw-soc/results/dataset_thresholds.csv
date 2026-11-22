@@ -1,0 +1,5 @@
+tier,n_val,theta_article,theta_selected,cost_selected,cost_at_article,precision_selected
+low,261,0.8,0.71,0.4215,0.4215,0.9938
+medium,506,0.88,0.89,0.6008,0.6047,0.9835
+high,300,0.93,0.71,0.4967,0.6533,0.9938
+critical,57,0.97,0.5,0.2982,0.5088,1.0

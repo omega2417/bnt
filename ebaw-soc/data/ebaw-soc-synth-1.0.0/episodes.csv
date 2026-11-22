@@ -1,0 +1,901 @@
+episode_id,scenario_id,scenario_name,shift_id,techniques,t_start,t_end,label,n_proposals,n_adversarial,split
+D1-EP0000,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,8.251427,322.338579,malicious,7,0,train
+D1-EP0001,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,11.810619,2226.529309,benign,6,0,train
+D1-EP0002,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,392.418833,801.883154,malicious,6,0,train
+D1-EP0003,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,882.613155,1199.153979,malicious,6,0,train
+D1-EP0004,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,1281.240842,1701.282316,malicious,6,0,train
+D1-EP0005,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,1655.205694,25929.953734,adversarial,5,5,train
+D1-EP0006,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,1743.585084,2099.747334,malicious,6,0,train
+D1-EP0007,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,2151.993651,2887.296326,malicious,6,0,train
+D1-EP0008,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,2255.060365,2988.061401,benign,6,0,train
+D1-EP0009,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,2930.428748,3496.567345,malicious,6,0,train
+D1-EP0010,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,3002.509202,4420.136995,benign,6,0,train
+D1-EP0011,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,3730.025508,4453.802737,malicious,6,0,train
+D1-EP0012,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,4458.435173,5053.356160,benign,6,0,train
+D1-EP0013,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,4481.330693,5286.391226,malicious,6,0,train
+D1-EP0014,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,5318.966930,8100.931054,benign,6,0,train
+D1-EP0015,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,5388.007640,6083.177889,malicious,6,0,train
+D1-EP0016,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,6069.890715,6906.789466,malicious,6,0,train
+D1-EP0017,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,6992.163473,7530.287735,malicious,6,0,train
+D1-EP0018,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,7523.302705,8042.412691,malicious,6,0,train
+D1-EP0019,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,8135.026701,8635.177307,malicious,6,0,train
+D1-EP0020,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,8381.924184,9554.777949,benign,6,0,train
+D1-EP0021,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,8698.585058,9674.949341,malicious,6,0,train
+D1-EP0022,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,9765.109212,10527.928057,malicious,6,0,train
+D1-EP0023,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,10061.992249,10977.629161,benign,6,0,train
+D1-EP0024,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,10648.679062,11710.140170,malicious,6,0,train
+D1-EP0025,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,11322.457210,13214.189518,benign,6,0,train
+D1-EP0026,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,11847.872472,12831.104101,malicious,6,0,train
+D1-EP0027,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,12821.045878,13347.108124,malicious,6,0,train
+D1-EP0028,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,13419.689710,14222.738768,benign,6,0,train
+D1-EP0029,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,13488.424361,14071.591686,malicious,6,0,train
+D1-EP0030,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,14170.861554,14376.387940,malicious,6,0,train
+D1-EP0031,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,14278.478228,15878.225541,benign,6,0,train
+D1-EP0032,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,14382.059834,15098.895571,malicious,6,0,train
+D1-EP0033,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,15297.921738,15572.184527,malicious,6,0,train
+D1-EP0034,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,15559.649061,16096.932999,malicious,6,0,train
+D1-EP0035,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,15866.995543,18024.798733,benign,6,0,train
+D1-EP0036,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,16212.915088,16884.072387,malicious,6,0,train
+D1-EP0037,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,16885.444986,17847.844061,malicious,6,0,train
+D1-EP0038,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,17854.132918,18353.216764,malicious,6,0,train
+D1-EP0039,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,18449.363294,19379.287120,benign,6,0,train
+D1-EP0040,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,18562.782508,18822.505093,malicious,6,0,train
+D1-EP0041,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,19299.401925,20528.477472,malicious,6,0,train
+D1-EP0042,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,19422.761556,21664.118790,benign,6,0,train
+D1-EP0043,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,20515.233906,21202.159864,malicious,6,0,train
+D1-EP0044,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,21233.685565,21979.815295,malicious,6,0,train
+D1-EP0045,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,21855.136090,24038.207299,benign,6,0,train
+D1-EP0046,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,21993.156199,22954.519533,malicious,6,0,train
+D1-EP0047,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,22925.098275,23309.720973,malicious,6,0,train
+D1-EP0048,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,23459.755145,24030.590362,malicious,6,0,train
+D1-EP0049,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,24046.516088,24433.790046,malicious,6,0,train
+D1-EP0050,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,24462.601377,25550.377473,malicious,6,0,train
+D1-EP0051,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,25027.092512,26290.570581,benign,6,0,train
+D1-EP0052,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,25721.199856,26156.614007,malicious,6,0,train
+D1-EP0053,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,26154.002340,26876.837591,malicious,6,0,train
+D1-EP0054,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,27014.261448,27353.028524,malicious,6,0,train
+D1-EP0055,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,27339.470041,27934.429287,malicious,6,0,train
+D1-EP0056,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,27396.000636,28478.432329,benign,6,0,train
+D1-EP0057,D1,Credential compromise and lateral movement,D1-shift00,T1078;T1110;T1021,27937.667389,28370.256233,malicious,6,0,train
+D1-EP0058,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,15.835508,390.960113,malicious,7,0,train
+D1-EP0059,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,413.001278,980.466925,malicious,7,0,train
+D1-EP0060,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,447.237266,2149.384289,benign,6,0,train
+D1-EP0061,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,989.567274,2304.760328,malicious,7,0,train
+D1-EP0062,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,1641.778878,14125.252942,adversarial,5,5,train
+D1-EP0063,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,2245.745355,4203.248560,benign,6,0,train
+D1-EP0064,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,2372.656750,3801.751797,malicious,6,0,train
+D1-EP0065,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,3837.988870,4798.880560,malicious,6,0,train
+D1-EP0066,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,4229.700330,5737.224303,benign,6,0,train
+D1-EP0067,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,4857.209141,5578.761793,malicious,6,0,train
+D1-EP0068,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,5684.511601,6356.145066,malicious,6,0,train
+D1-EP0069,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,6063.953927,7198.144361,benign,6,0,train
+D1-EP0070,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,6419.258188,6693.324881,malicious,6,0,train
+D1-EP0071,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,6717.360032,7092.503377,malicious,6,0,train
+D1-EP0072,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,7161.739886,7845.637902,malicious,6,0,train
+D1-EP0073,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,7467.373408,8738.047395,benign,6,0,train
+D1-EP0074,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,7945.969936,8572.896610,malicious,6,0,train
+D1-EP0075,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,8642.029801,9214.919118,malicious,6,0,train
+D1-EP0076,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,8726.069479,9669.212623,benign,6,0,train
+D1-EP0077,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,9289.822037,9787.166039,malicious,6,0,train
+D1-EP0078,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,9833.882782,10203.681534,malicious,6,0,train
+D1-EP0079,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,10090.844646,11204.498195,benign,6,0,train
+D1-EP0080,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,10297.449478,11108.450910,malicious,6,0,train
+D1-EP0081,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,11089.527950,11544.479677,malicious,6,0,train
+D1-EP0082,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,11528.651196,12871.091756,benign,6,0,train
+D1-EP0083,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,11764.916215,11988.084850,malicious,6,0,train
+D1-EP0084,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,12129.959033,12682.757870,malicious,6,0,train
+D1-EP0085,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,12690.829467,13154.703744,malicious,6,0,train
+D1-EP0086,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,12956.841743,15032.746937,benign,6,0,train
+D1-EP0087,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,13456.444778,13982.483351,malicious,6,0,train
+D1-EP0088,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,13956.137003,14590.745708,malicious,6,0,train
+D1-EP0089,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,14565.767761,14994.883022,malicious,6,0,train
+D1-EP0090,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,15103.731422,16393.141541,benign,6,0,val
+D1-EP0091,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,15177.058306,16268.532417,malicious,6,0,val
+D1-EP0092,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,16262.189561,17271.407829,malicious,6,0,val
+D1-EP0093,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,16532.571884,18765.240410,benign,6,0,val
+D1-EP0094,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,17257.042386,17614.637799,malicious,6,0,val
+D1-EP0095,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,17837.427243,18373.136687,malicious,6,0,val
+D1-EP0096,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,18897.949548,19298.175578,malicious,6,0,val
+D1-EP0097,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,18921.214105,19764.707980,benign,6,0,val
+D1-EP0098,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,19318.710703,19855.964706,malicious,6,0,val
+D1-EP0099,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,19909.179431,20608.459479,malicious,6,0,val
+D1-EP0100,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,20006.665112,21254.335098,benign,6,0,val
+D1-EP0101,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,20667.520790,21651.405008,malicious,6,0,val
+D1-EP0102,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,21264.265610,22294.258542,benign,6,0,val
+D1-EP0103,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,21746.501000,22375.823233,malicious,6,0,val
+D1-EP0104,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,22445.316932,23774.507783,malicious,6,0,val
+D1-EP0105,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,22487.859566,23568.400826,benign,6,0,val
+D1-EP0106,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,23753.553200,25338.439207,benign,6,0,val
+D1-EP0107,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,23886.187147,24673.832226,malicious,6,0,val
+D1-EP0108,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,24970.985129,25358.258740,malicious,6,0,val
+D1-EP0109,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,25385.409045,27569.958451,benign,5,0,val
+D1-EP0110,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,25460.348414,25799.257416,malicious,6,0,val
+D1-EP0111,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,25962.947136,26399.992045,malicious,6,0,val
+D1-EP0112,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,26633.364960,27177.575823,malicious,6,0,val
+D1-EP0113,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,27143.469072,27762.055231,malicious,6,0,val
+D1-EP0114,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,27662.385550,28328.773048,benign,5,0,val
+D1-EP0115,D1,Credential compromise and lateral movement,D1-shift01,T1078;T1110;T1021,27733.495982,28218.702392,malicious,6,0,val
+D1-EP0116,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,13.673435,451.722348,malicious,7,0,val
+D1-EP0117,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,248.012629,13364.870707,adversarial,4,4,val
+D1-EP0118,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,515.680464,1502.968274,benign,7,0,val
+D1-EP0119,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,549.220662,942.605273,malicious,6,0,val
+D1-EP0120,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,1006.578444,1532.610475,malicious,6,0,test
+D1-EP0121,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,1501.336093,2642.345042,benign,6,0,test
+D1-EP0122,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,1514.656928,2098.312727,malicious,6,0,test
+D1-EP0123,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,2324.086984,2545.155998,malicious,6,0,test
+D1-EP0124,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,2582.165322,3073.499502,malicious,6,0,test
+D1-EP0125,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,2792.386113,3534.053147,benign,6,0,test
+D1-EP0126,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,3148.471621,3711.207904,malicious,6,0,test
+D1-EP0127,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,3677.168092,4182.490693,benign,6,0,test
+D1-EP0128,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,3782.883368,4705.393864,malicious,6,0,test
+D1-EP0129,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,4489.812925,5282.294689,benign,6,0,test
+D1-EP0130,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,4979.465274,5324.324851,malicious,6,0,test
+D1-EP0131,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,5267.669028,7028.351677,benign,6,0,test
+D1-EP0132,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,5414.843866,5699.865779,malicious,6,0,test
+D1-EP0133,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,6030.191012,6220.787446,malicious,6,0,test
+D1-EP0134,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,6326.307743,6590.582772,malicious,6,0,test
+D1-EP0135,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,6588.050652,6904.168950,malicious,6,0,test
+D1-EP0136,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,6909.898055,7419.850534,malicious,6,0,test
+D1-EP0137,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,7007.386476,7618.041533,benign,6,0,test
+D1-EP0138,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,7453.685194,7744.957158,malicious,6,0,test
+D1-EP0139,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,7758.482779,8424.761520,malicious,6,0,test
+D1-EP0140,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,8505.851818,9400.754656,malicious,6,0,test
+D1-EP0141,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,8584.636319,11054.069252,benign,6,0,test
+D1-EP0142,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,9521.216183,10347.363335,malicious,6,0,test
+D1-EP0143,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,10331.082286,11510.443894,malicious,6,0,test
+D1-EP0144,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,11062.041131,13051.227672,benign,6,0,test
+D1-EP0145,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,11652.964683,12232.352901,malicious,6,0,test
+D1-EP0146,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,12280.408011,12594.314365,malicious,6,0,test
+D1-EP0147,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,12780.909340,13449.860012,malicious,6,0,test
+D1-EP0148,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,13068.192029,14025.654984,benign,6,0,test
+D1-EP0149,D1,Credential compromise and lateral movement,D1-shift02,T1078;T1110;T1021,13890.539813,14688.729601,malicious,6,0,test
+D2-EP0000,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,242.797607,715.175004,malicious,7,0,train
+D2-EP0001,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,499.541218,2247.695146,benign,6,0,train
+D2-EP0002,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,844.767833,1379.734733,malicious,7,0,train
+D2-EP0003,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,1333.248690,1938.739867,malicious,6,0,train
+D2-EP0004,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,1659.489845,2598.611927,malicious,6,0,train
+D2-EP0005,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,2016.185364,3029.886458,benign,6,0,train
+D2-EP0006,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,2613.377259,3206.601871,malicious,6,0,train
+D2-EP0007,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,3028.319229,5285.658637,benign,6,0,train
+D2-EP0008,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,3223.550517,4088.475411,malicious,6,0,train
+D2-EP0009,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,4170.807070,4946.150290,malicious,6,0,train
+D2-EP0010,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,4938.114899,24090.759141,adversarial,7,7,train
+D2-EP0011,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,5011.563230,5981.478143,malicious,6,0,train
+D2-EP0012,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,5459.668963,5803.896884,benign,6,0,train
+D2-EP0013,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,5742.128145,6509.640918,malicious,6,0,train
+D2-EP0014,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,5960.935137,7878.235783,benign,6,0,train
+D2-EP0015,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,6651.731859,7437.840382,malicious,6,0,train
+D2-EP0016,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,7811.521596,8554.667280,malicious,6,0,train
+D2-EP0017,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,7890.258636,9371.299676,benign,6,0,train
+D2-EP0018,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,8556.377276,8987.877507,malicious,6,0,train
+D2-EP0019,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,8694.196585,9750.096735,malicious,6,0,train
+D2-EP0020,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,9513.217990,10519.277912,malicious,6,0,train
+D2-EP0021,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,9638.256615,10735.172707,benign,6,0,train
+D2-EP0022,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,10161.877082,11250.830515,malicious,6,0,train
+D2-EP0023,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,11153.643755,11787.937865,malicious,6,0,train
+D2-EP0024,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,11185.801934,11859.743983,benign,6,0,train
+D2-EP0025,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,11526.565429,12278.415056,malicious,6,0,train
+D2-EP0026,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,12009.240008,13911.800162,benign,6,0,train
+D2-EP0027,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,12514.281310,13072.378618,malicious,6,0,train
+D2-EP0028,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,13081.374923,13549.620538,malicious,6,0,train
+D2-EP0029,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,13248.312273,14324.041261,malicious,6,0,train
+D2-EP0030,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,14372.719567,15236.456519,malicious,6,0,train
+D2-EP0031,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,14746.244873,15845.918487,benign,6,0,train
+D2-EP0032,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,15278.866246,15589.832425,malicious,6,0,train
+D2-EP0033,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,15584.990267,16158.542349,malicious,6,0,train
+D2-EP0034,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,15884.771322,17046.523294,benign,6,0,train
+D2-EP0035,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,16262.570700,17339.515830,malicious,6,0,train
+D2-EP0036,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,16651.743340,17630.515648,benign,6,0,train
+D2-EP0037,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,17239.884275,18122.326207,malicious,6,0,train
+D2-EP0038,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,17769.257182,19085.860909,benign,6,0,train
+D2-EP0039,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,17913.766599,18989.276338,malicious,6,0,train
+D2-EP0040,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,18880.767534,19634.704861,malicious,6,0,train
+D2-EP0041,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,19280.214759,20985.219357,benign,6,0,train
+D2-EP0042,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,19626.572245,20075.604893,malicious,6,0,train
+D2-EP0043,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,20351.038097,20995.740364,malicious,6,0,train
+D2-EP0044,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,21056.273483,21433.057314,malicious,6,0,train
+D2-EP0045,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,21132.781718,21858.429572,malicious,6,0,train
+D2-EP0046,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,21164.038798,22032.957225,benign,6,0,train
+D2-EP0047,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,21892.383128,22464.231828,malicious,6,0,train
+D2-EP0048,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,22257.232295,22901.938066,malicious,6,0,train
+D2-EP0049,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,22499.174621,25110.955966,benign,6,0,train
+D2-EP0050,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,23002.900113,23567.064946,malicious,6,0,train
+D2-EP0051,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,23500.677513,24283.012103,malicious,6,0,train
+D2-EP0052,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,24364.199036,25059.499252,malicious,6,0,train
+D2-EP0053,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,24899.615423,26306.172578,malicious,6,0,train
+D2-EP0054,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,25240.443016,26173.180441,benign,5,0,train
+D2-EP0055,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,26325.514180,26723.953840,malicious,6,0,train
+D2-EP0056,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,26605.420827,27137.875534,benign,5,0,train
+D2-EP0057,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,26853.868643,27467.028980,malicious,6,0,train
+D2-EP0058,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,27176.175828,28640.001257,benign,5,0,train
+D2-EP0059,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,27353.961021,28110.019691,malicious,6,0,train
+D2-EP0060,D2,Ransomware precursor,D2-shift00,T1059;T1490;T1486,28320.769785,28736.778738,malicious,6,0,train
+D2-EP0061,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,112.043640,446.413795,malicious,6,0,train
+D2-EP0062,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,194.664967,2512.585701,benign,7,0,train
+D2-EP0063,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,520.111728,1632.237985,malicious,6,0,train
+D2-EP0064,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,1735.097268,2621.749999,malicious,6,0,train
+D2-EP0065,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,2474.837406,2912.225564,malicious,6,0,train
+D2-EP0066,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,2580.418940,28641.386286,adversarial,3,3,train
+D2-EP0067,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,2645.938222,4047.317774,benign,7,0,train
+D2-EP0068,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,2893.243025,3413.110088,malicious,6,0,train
+D2-EP0069,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,3350.152885,3799.546471,malicious,6,0,train
+D2-EP0070,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,3611.322370,4275.296494,malicious,6,0,train
+D2-EP0071,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,4324.889326,4694.967103,malicious,6,0,train
+D2-EP0072,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,4540.059444,6285.309257,benign,7,0,train
+D2-EP0073,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,4763.973220,5124.049050,malicious,6,0,train
+D2-EP0074,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,5190.515197,5656.417810,malicious,6,0,train
+D2-EP0075,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,6218.242657,6646.415101,malicious,6,0,train
+D2-EP0076,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,6533.065916,7480.472350,benign,6,0,train
+D2-EP0077,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,6729.931228,7654.212751,malicious,6,0,train
+D2-EP0078,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,7294.816583,9067.495632,benign,6,0,train
+D2-EP0079,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,7700.330905,8150.094229,malicious,6,0,train
+D2-EP0080,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,8202.319930,8590.227957,malicious,6,0,train
+D2-EP0081,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,8322.749027,9007.551638,malicious,6,0,train
+D2-EP0082,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,9050.500741,9917.151884,malicious,6,0,train
+D2-EP0083,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,9578.391478,11754.524650,benign,6,0,train
+D2-EP0084,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,9782.619537,10663.573241,malicious,6,0,train
+D2-EP0085,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,10607.036054,11264.084147,malicious,6,0,train
+D2-EP0086,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,11305.044103,12288.599368,malicious,6,0,train
+D2-EP0087,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,11828.087194,13909.672657,benign,6,0,train
+D2-EP0088,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,12490.944013,12925.070145,malicious,6,0,train
+D2-EP0089,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,13072.803418,13554.354769,malicious,6,0,train
+D2-EP0090,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,13637.687579,13947.158252,malicious,6,0,val
+D2-EP0091,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,14102.245706,14720.808623,malicious,6,0,val
+D2-EP0092,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,14457.578107,16450.718777,benign,6,0,val
+D2-EP0093,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,14770.531837,15983.686087,malicious,6,0,val
+D2-EP0094,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,15812.940714,16704.969320,malicious,6,0,val
+D2-EP0095,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,16293.692370,17674.819111,benign,6,0,val
+D2-EP0096,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,16505.140992,17599.044361,malicious,6,0,val
+D2-EP0097,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,17349.475673,18418.592014,benign,6,0,val
+D2-EP0098,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,17615.966739,18277.206052,malicious,6,0,val
+D2-EP0099,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,18154.844420,19874.087972,benign,6,0,val
+D2-EP0100,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,18287.678387,18618.280688,malicious,6,0,val
+D2-EP0101,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,18668.136578,19218.808834,malicious,6,0,val
+D2-EP0102,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,19204.017316,20023.682982,malicious,6,0,val
+D2-EP0103,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,19881.437103,20321.410779,malicious,6,0,val
+D2-EP0104,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,20245.243120,20856.914998,malicious,6,0,val
+D2-EP0105,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,20356.152988,22068.406569,benign,6,0,val
+D2-EP0106,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,20574.975795,21759.913498,malicious,6,0,val
+D2-EP0107,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,21865.126174,22308.366395,malicious,6,0,val
+D2-EP0108,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,22193.846732,23250.473824,benign,6,0,val
+D2-EP0109,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,22354.834319,22813.323107,malicious,6,0,val
+D2-EP0110,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,22712.802437,23659.172364,malicious,6,0,val
+D2-EP0111,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,23073.451470,24167.472137,benign,6,0,val
+D2-EP0112,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,23732.737039,24140.007105,malicious,6,0,val
+D2-EP0113,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,23792.115566,25204.582591,malicious,6,0,val
+D2-EP0114,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,24421.348229,26339.883999,benign,6,0,val
+D2-EP0115,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,24965.352739,26162.535281,malicious,6,0,val
+D2-EP0116,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,26342.747998,26621.234332,malicious,6,0,val
+D2-EP0117,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,26468.521420,27531.615306,malicious,6,0,val
+D2-EP0118,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,26709.666235,28175.948639,benign,6,0,val
+D2-EP0119,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,27578.781476,28136.344294,malicious,6,0,val
+D2-EP0120,D2,Ransomware precursor,D2-shift01,T1059;T1490;T1486,28363.649657,28708.287190,malicious,6,0,test
+D2-EP0121,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,37.835488,851.163377,malicious,6,0,test
+D2-EP0122,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,141.930780,1355.076520,benign,7,0,test
+D2-EP0123,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,910.690559,2233.606132,malicious,6,0,test
+D2-EP0124,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,1390.216722,3076.187751,benign,7,0,test
+D2-EP0125,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,1820.520589,14980.565719,adversarial,4,4,test
+D2-EP0126,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,2105.206409,2796.784361,malicious,6,0,test
+D2-EP0127,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,2974.314152,5557.351010,benign,6,0,test
+D2-EP0128,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,3083.529374,3630.812650,malicious,6,0,test
+D2-EP0129,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,3317.167082,4331.496902,malicious,6,0,test
+D2-EP0130,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,4217.017750,4948.187157,malicious,6,0,test
+D2-EP0131,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,5127.137870,5568.419090,malicious,6,0,test
+D2-EP0132,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,5668.884107,7323.454891,benign,6,0,test
+D2-EP0133,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,5686.943986,6199.186443,malicious,6,0,test
+D2-EP0134,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,6264.162952,6672.799074,malicious,6,0,test
+D2-EP0135,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,6572.368046,7666.528833,malicious,6,0,test
+D2-EP0136,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,7501.289436,9619.310667,benign,6,0,test
+D2-EP0137,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,7791.593672,8436.510322,malicious,6,0,test
+D2-EP0138,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,8542.173616,9562.410779,malicious,6,0,test
+D2-EP0139,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,9587.311338,10393.718059,malicious,6,0,test
+D2-EP0140,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,9850.312047,10725.240172,benign,6,0,test
+D2-EP0141,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,10412.711071,10784.376127,malicious,6,0,test
+D2-EP0142,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,10662.246620,11882.979199,benign,6,0,test
+D2-EP0143,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,10795.271927,11151.756415,malicious,6,0,test
+D2-EP0144,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,11162.708308,12261.775780,malicious,6,0,test
+D2-EP0145,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,11917.151038,14039.882348,benign,6,0,test
+D2-EP0146,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,12299.459650,13113.856248,malicious,6,0,test
+D2-EP0147,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,13114.448406,13526.003230,malicious,6,0,test
+D2-EP0148,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,13467.932014,14060.363200,malicious,6,0,test
+D2-EP0149,D2,Ransomware precursor,D2-shift02,T1059;T1490;T1486,14198.873577,14982.143442,malicious,6,0,test
+D3-EP0000,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,97.875924,922.338695,malicious,7,0,train
+D3-EP0001,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,925.899166,1802.378904,benign,6,0,train
+D3-EP0002,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,931.856231,1448.991587,malicious,6,0,train
+D3-EP0003,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,1017.320937,18688.256137,adversarial,7,7,train
+D3-EP0004,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,1470.425575,1881.802581,malicious,6,0,train
+D3-EP0005,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,1852.206192,2502.366147,malicious,6,0,train
+D3-EP0006,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,2519.688341,3017.152744,malicious,6,0,train
+D3-EP0007,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,2607.091146,3716.905057,benign,6,0,train
+D3-EP0008,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,3027.082974,3988.034126,malicious,6,0,train
+D3-EP0009,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,3706.900888,4713.315003,benign,6,0,train
+D3-EP0010,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,4002.159021,4811.963470,malicious,6,0,train
+D3-EP0011,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,4723.470289,5834.718841,benign,6,0,train
+D3-EP0012,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,4927.986754,5613.620879,malicious,6,0,train
+D3-EP0013,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,5882.605137,6948.869343,benign,6,0,train
+D3-EP0014,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,6022.490414,6570.749865,malicious,6,0,train
+D3-EP0015,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,6734.009902,7115.006096,malicious,6,0,train
+D3-EP0016,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,7142.724997,7489.215614,malicious,6,0,train
+D3-EP0017,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,7178.133843,8791.394474,benign,6,0,train
+D3-EP0018,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,7720.811226,8362.119371,malicious,6,0,train
+D3-EP0019,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,8366.108044,8968.013370,malicious,6,0,train
+D3-EP0020,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,8813.142848,10268.677633,benign,6,0,train
+D3-EP0021,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,9269.634089,9726.035643,malicious,6,0,train
+D3-EP0022,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,9734.965254,10527.923649,malicious,6,0,train
+D3-EP0023,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,10313.646674,11480.274351,benign,6,0,train
+D3-EP0024,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,10629.417149,11446.360445,malicious,6,0,train
+D3-EP0025,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,11510.865818,12151.610152,malicious,6,0,train
+D3-EP0026,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,11770.646117,12418.622573,benign,6,0,train
+D3-EP0027,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,12302.264182,12709.157748,malicious,6,0,train
+D3-EP0028,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,12445.980631,14184.204670,benign,6,0,train
+D3-EP0029,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,12758.003993,13424.802093,malicious,6,0,train
+D3-EP0030,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,13405.267610,13816.314046,malicious,6,0,train
+D3-EP0031,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,13869.436682,14323.889637,malicious,6,0,train
+D3-EP0032,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,14370.776333,14880.822675,malicious,6,0,train
+D3-EP0033,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,14398.737207,15224.493793,benign,6,0,train
+D3-EP0034,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,14906.271545,15836.581454,malicious,6,0,train
+D3-EP0035,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,15850.236775,16429.969900,malicious,6,0,train
+D3-EP0036,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,15991.140699,17326.757803,benign,6,0,train
+D3-EP0037,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,16525.357698,17312.419744,malicious,6,0,train
+D3-EP0038,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,17399.694688,18459.921815,malicious,6,0,train
+D3-EP0039,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,18284.949083,19533.322729,benign,6,0,train
+D3-EP0040,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,18528.066120,19274.296669,malicious,6,0,train
+D3-EP0041,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,19257.078361,19811.448714,malicious,6,0,train
+D3-EP0042,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,19596.077820,21530.931951,benign,6,0,train
+D3-EP0043,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,19911.517341,20118.528168,malicious,6,0,train
+D3-EP0044,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,20136.803683,20642.572365,malicious,6,0,train
+D3-EP0045,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,20696.173872,21087.016988,malicious,6,0,train
+D3-EP0046,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,21104.396458,21993.302621,malicious,6,0,train
+D3-EP0047,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,21609.694244,22576.558007,benign,6,0,train
+D3-EP0048,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,22037.163715,22485.666701,malicious,6,0,train
+D3-EP0049,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,22618.325420,23094.907509,malicious,6,0,train
+D3-EP0050,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,23003.703798,24017.253753,benign,6,0,train
+D3-EP0051,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,23193.739106,23281.737059,malicious,6,0,train
+D3-EP0052,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,23384.814142,24066.961663,malicious,6,0,train
+D3-EP0053,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,24078.649518,24690.694054,malicious,6,0,train
+D3-EP0054,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,24173.157204,26419.091290,benign,5,0,train
+D3-EP0055,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,24772.165233,25722.929132,malicious,6,0,train
+D3-EP0056,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,25762.962665,26613.473775,malicious,6,0,train
+D3-EP0057,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,26652.270705,27140.619238,malicious,6,0,train
+D3-EP0058,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,26925.292886,28221.548326,benign,5,0,train
+D3-EP0059,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,27224.293967,27673.738758,malicious,6,0,train
+D3-EP0060,D3,Command and control with exfiltration,D3-shift00,T1071;T1041,27734.067129,28468.443629,malicious,6,0,train
+D3-EP0061,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,93.211590,716.666403,malicious,7,0,train
+D3-EP0062,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,170.934678,1721.313778,benign,7,0,train
+D3-EP0063,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,728.358164,1273.440175,malicious,6,0,train
+D3-EP0064,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,1319.812428,1681.034213,malicious,6,0,train
+D3-EP0065,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,1759.278027,2512.438436,benign,7,0,train
+D3-EP0066,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,1912.898580,2934.253396,malicious,6,0,train
+D3-EP0067,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,2554.213020,3728.240157,benign,7,0,train
+D3-EP0068,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,3375.625185,4198.294933,malicious,6,0,train
+D3-EP0069,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,4191.377838,4583.390699,malicious,6,0,train
+D3-EP0070,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,4297.289034,6032.803872,benign,6,0,train
+D3-EP0071,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,4627.730238,5750.293758,malicious,6,0,train
+D3-EP0072,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,5758.840316,6991.403474,malicious,6,0,val
+D3-EP0073,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,6284.713610,8142.164931,benign,6,0,val
+D3-EP0074,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,7069.384014,7955.438534,malicious,6,0,val
+D3-EP0075,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,8297.640112,8949.493710,malicious,6,0,val
+D3-EP0076,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,8550.269986,10205.356734,benign,6,0,val
+D3-EP0077,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,8978.632975,9487.903686,malicious,6,0,val
+D3-EP0078,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,9505.015603,9861.022835,malicious,6,0,val
+D3-EP0079,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,9913.633646,11283.234874,malicious,6,0,val
+D3-EP0080,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,10365.423199,11721.864231,benign,6,0,val
+D3-EP0081,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,11427.976092,12003.012580,malicious,6,0,val
+D3-EP0082,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,11816.361692,13370.455263,benign,6,0,val
+D3-EP0083,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,11999.720277,12527.193796,malicious,6,0,val
+D3-EP0084,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,12677.419208,12999.520728,malicious,6,0,val
+D3-EP0085,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,13011.799532,13159.677513,malicious,6,0,val
+D3-EP0086,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,13264.376494,13587.113207,malicious,6,0,val
+D3-EP0087,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,13582.258950,14300.824847,malicious,6,0,val
+D3-EP0088,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,13625.769286,14432.224070,benign,6,0,val
+D3-EP0089,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,14311.784550,15152.891634,malicious,6,0,val
+D3-EP0090,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,14445.713410,15975.316548,benign,6,0,val
+D3-EP0091,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,15137.620705,15926.409469,malicious,6,0,val
+D3-EP0092,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,15912.401884,16280.192676,malicious,6,0,val
+D3-EP0093,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,16378.322129,17024.140974,malicious,6,0,val
+D3-EP0094,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,16660.867790,27637.197547,adversarial,2,2,val
+D3-EP0095,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,16818.247350,18429.628772,benign,6,0,val
+D3-EP0096,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,17029.114721,17540.810026,malicious,6,0,test
+D3-EP0097,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,17647.409920,18203.147508,malicious,6,0,test
+D3-EP0098,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,18221.978992,18760.880300,malicious,6,0,test
+D3-EP0099,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,18694.158530,20036.670730,benign,6,0,test
+D3-EP0100,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,18810.401444,19701.188415,malicious,6,0,test
+D3-EP0101,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,19687.590513,20899.521054,malicious,6,0,test
+D3-EP0102,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,20288.207545,21959.107522,benign,6,0,test
+D3-EP0103,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,21079.170572,21749.644050,malicious,6,0,test
+D3-EP0104,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,21815.349628,22406.078806,malicious,6,0,test
+D3-EP0105,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,22255.955708,22980.634319,benign,6,0,test
+D3-EP0106,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,22493.953777,23088.399572,malicious,6,0,test
+D3-EP0107,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,23155.411369,23533.786484,malicious,6,0,test
+D3-EP0108,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,23235.192221,23932.137218,benign,6,0,test
+D3-EP0109,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,23530.690389,23968.263086,malicious,6,0,test
+D3-EP0110,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,23929.719476,24685.794299,benign,6,0,test
+D3-EP0111,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,24064.544555,24466.085565,malicious,6,0,test
+D3-EP0112,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,24496.294467,25383.560166,malicious,6,0,test
+D3-EP0113,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,24746.124904,26576.940531,benign,6,0,test
+D3-EP0114,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,25391.768206,25848.017648,malicious,6,0,test
+D3-EP0115,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,25845.892959,26336.249013,malicious,6,0,test
+D3-EP0116,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,26459.389301,26863.247933,malicious,6,0,test
+D3-EP0117,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,26954.493793,27784.545746,malicious,6,0,test
+D3-EP0118,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,27324.446560,27909.035083,benign,6,0,test
+D3-EP0119,D3,Command and control with exfiltration,D3-shift01,T1071;T1041,27839.873419,28138.179661,malicious,6,0,test
+D4-EP0000,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,44.062856,581.727620,benign,7,0,train
+D4-EP0001,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,316.274049,650.443980,malicious,6,0,train
+D4-EP0002,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,710.676540,1147.878548,malicious,6,0,train
+D4-EP0003,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,811.058630,2746.279405,benign,6,0,train
+D4-EP0004,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,1229.968574,1703.847523,malicious,6,0,train
+D4-EP0005,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,1708.404664,2567.394974,malicious,6,0,train
+D4-EP0006,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,1881.872325,27002.056091,adversarial,6,6,train
+D4-EP0007,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,2560.269220,3086.864343,malicious,6,0,train
+D4-EP0008,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,3214.168102,3846.226314,malicious,6,0,train
+D4-EP0009,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,3296.048365,4087.704723,benign,6,0,train
+D4-EP0010,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,3856.323247,4956.148905,malicious,6,0,train
+D4-EP0011,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,4104.148183,5929.856495,benign,6,0,train
+D4-EP0012,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,4934.778359,5482.472329,malicious,6,0,train
+D4-EP0013,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,5467.725030,6040.805298,malicious,6,0,train
+D4-EP0014,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,6082.574677,7131.033080,malicious,6,0,train
+D4-EP0015,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,6235.161812,7475.927852,benign,6,0,train
+D4-EP0016,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,7132.717648,7579.120553,malicious,6,0,train
+D4-EP0017,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,7471.079078,8588.906534,benign,6,0,train
+D4-EP0018,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,7620.710162,7964.541910,malicious,6,0,train
+D4-EP0019,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,8026.805918,8363.292745,malicious,6,0,train
+D4-EP0020,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,8568.442682,8768.398033,malicious,6,0,train
+D4-EP0021,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,8769.629901,9085.714525,malicious,6,0,train
+D4-EP0022,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,8838.717784,10075.750138,benign,6,0,train
+D4-EP0023,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,9150.633536,9663.509495,malicious,6,0,train
+D4-EP0024,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,9739.623969,10432.604270,malicious,6,0,train
+D4-EP0025,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,10314.254568,13045.453151,benign,6,0,train
+D4-EP0026,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,10418.621783,11368.865563,malicious,6,0,train
+D4-EP0027,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,11494.590287,12106.531433,malicious,6,0,train
+D4-EP0028,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,12230.382683,12637.609204,malicious,6,0,train
+D4-EP0029,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,12652.815738,13157.317017,malicious,6,0,train
+D4-EP0030,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,13178.321575,13787.977545,malicious,6,0,train
+D4-EP0031,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,13672.829931,15728.930002,benign,6,0,train
+D4-EP0032,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,13813.875987,14363.267723,malicious,6,0,train
+D4-EP0033,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,14405.648908,15428.743465,malicious,6,0,train
+D4-EP0034,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,15466.868557,16038.826358,malicious,6,0,train
+D4-EP0035,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,16085.144996,16686.135540,malicious,6,0,train
+D4-EP0036,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,16342.032249,17928.747307,benign,6,0,train
+D4-EP0037,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,16695.858768,17118.676773,malicious,6,0,train
+D4-EP0038,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,17214.231554,17531.342353,malicious,6,0,train
+D4-EP0039,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,17776.003065,18452.271807,malicious,6,0,train
+D4-EP0040,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,18055.459002,19310.338161,benign,6,0,train
+D4-EP0041,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,18771.042716,19348.209970,malicious,6,0,train
+D4-EP0042,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,19331.038774,19914.008438,benign,6,0,train
+D4-EP0043,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,19451.977067,19728.535477,malicious,6,0,train
+D4-EP0044,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,19760.750955,20041.240605,malicious,6,0,train
+D4-EP0045,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,20015.005012,20427.043187,malicious,6,0,train
+D4-EP0046,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,20130.156607,21608.828125,benign,6,0,train
+D4-EP0047,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,20572.484519,20909.395058,malicious,6,0,train
+D4-EP0048,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,20967.143337,21661.176302,malicious,6,0,train
+D4-EP0049,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,21695.735284,22594.715197,malicious,6,0,train
+D4-EP0050,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,21883.874526,23025.892766,benign,6,0,train
+D4-EP0051,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,22612.736061,23034.818135,malicious,6,0,train
+D4-EP0052,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,23053.202060,23677.630119,malicious,6,0,train
+D4-EP0053,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,23586.209977,24712.639125,benign,6,0,train
+D4-EP0054,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,23908.753878,25007.686706,malicious,6,0,train
+D4-EP0055,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,24777.561140,26262.833319,benign,6,0,train
+D4-EP0056,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,25034.773053,25865.553774,malicious,6,0,train
+D4-EP0057,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,25914.616325,26788.157358,malicious,6,0,train
+D4-EP0058,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,26613.311480,27305.270721,benign,6,0,train
+D4-EP0059,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,26810.475229,27238.133715,malicious,6,0,train
+D4-EP0060,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,27333.252010,28282.479874,benign,6,0,train
+D4-EP0061,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,27370.711050,27795.101947,malicious,6,0,train
+D4-EP0062,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,27788.143484,28448.761020,malicious,6,0,train
+D4-EP0063,D4,Phishing with a malicious attachment,D4-shift00,T1566;T1204,28472.709049,28712.547764,malicious,5,0,train
+D4-EP0064,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,43.298854,3275.170035,benign,7,0,train
+D4-EP0065,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,126.699526,1405.136218,malicious,7,0,train
+D4-EP0066,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,1456.827125,2132.309716,malicious,7,0,train
+D4-EP0067,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,2189.813528,23785.234013,adversarial,3,3,train
+D4-EP0068,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,2288.789527,2964.189893,malicious,6,0,train
+D4-EP0069,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,3020.933559,3689.344037,malicious,6,0,train
+D4-EP0070,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,3454.714572,5316.667066,benign,6,0,train
+D4-EP0071,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,3707.546173,4323.010807,malicious,6,0,train
+D4-EP0072,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,4553.069565,5571.502768,malicious,6,0,val
+D4-EP0073,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,5538.692648,6612.270902,benign,6,0,val
+D4-EP0074,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,5594.040328,6351.601120,malicious,6,0,val
+D4-EP0075,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,6353.101284,6772.147595,malicious,6,0,val
+D4-EP0076,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,6752.420157,7588.729345,benign,6,0,val
+D4-EP0077,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,6823.424039,7386.202462,malicious,6,0,val
+D4-EP0078,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,7597.612371,7777.970421,malicious,6,0,val
+D4-EP0079,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,7710.802096,9226.172042,benign,6,0,val
+D4-EP0080,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,7927.241666,8764.442448,malicious,6,0,val
+D4-EP0081,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,8740.762231,9167.963012,malicious,6,0,val
+D4-EP0082,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,9157.057881,9658.776003,malicious,6,0,val
+D4-EP0083,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,9408.747373,11000.431835,benign,6,0,val
+D4-EP0084,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,9789.516687,10276.708307,malicious,6,0,val
+D4-EP0085,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,10368.399133,10989.958093,malicious,6,0,val
+D4-EP0086,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,10991.593335,12062.342066,malicious,6,0,val
+D4-EP0087,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,11209.761510,12317.255111,benign,6,0,val
+D4-EP0088,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,12104.343011,12483.057527,malicious,6,0,val
+D4-EP0089,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,12456.819099,13825.999837,benign,6,0,val
+D4-EP0090,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,12580.487228,13468.332805,malicious,6,0,val
+D4-EP0091,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,13432.775537,13875.934892,malicious,6,0,val
+D4-EP0092,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,13966.964315,15145.574007,malicious,6,0,val
+D4-EP0093,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,14546.172928,15084.612416,benign,6,0,val
+D4-EP0094,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,15103.248555,16686.874578,benign,6,0,val
+D4-EP0095,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,15280.790196,15840.227121,malicious,6,0,val
+D4-EP0096,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,15947.204937,16467.984887,malicious,6,0,test
+D4-EP0097,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,16472.937189,17143.922459,malicious,6,0,test
+D4-EP0098,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,16767.575512,18624.583180,benign,6,0,test
+D4-EP0099,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,17143.339616,17533.940424,malicious,6,0,test
+D4-EP0100,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,17868.870715,18263.059017,malicious,6,0,test
+D4-EP0101,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,18450.646094,18922.225255,malicious,6,0,test
+D4-EP0102,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,18687.971232,19966.702270,benign,6,0,test
+D4-EP0103,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,19062.440004,19665.179983,malicious,6,0,test
+D4-EP0104,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,19924.417014,21048.967306,malicious,6,0,test
+D4-EP0105,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,20260.572415,21429.308289,benign,6,0,test
+D4-EP0106,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,21098.576954,21361.162492,malicious,6,0,test
+D4-EP0107,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,21495.209456,21945.113857,malicious,6,0,test
+D4-EP0108,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,21542.140151,22985.319331,benign,6,0,test
+D4-EP0109,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,22267.837525,22833.432086,malicious,6,0,test
+D4-EP0110,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,22861.209902,24084.469518,malicious,6,0,test
+D4-EP0111,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,23044.316650,24976.524863,benign,6,0,test
+D4-EP0112,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,24075.057106,24635.648484,malicious,6,0,test
+D4-EP0113,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,24692.097372,25321.872377,malicious,6,0,test
+D4-EP0114,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,25387.687704,26428.247739,benign,6,0,test
+D4-EP0115,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,25463.168702,26173.506913,malicious,6,0,test
+D4-EP0116,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,26286.607632,26841.513870,malicious,6,0,test
+D4-EP0117,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,26515.721072,28347.253560,benign,6,0,test
+D4-EP0118,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,26835.130468,27331.399842,malicious,6,0,test
+D4-EP0119,D4,Phishing with a malicious attachment,D4-shift01,T1566;T1204,27567.479129,28522.944815,malicious,6,0,test
+D5-EP0000,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,182.613846,765.266204,benign,6,0,train
+D5-EP0001,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,195.595881,965.701766,malicious,7,0,train
+D5-EP0002,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,207.209153,13821.756753,adversarial,5,5,train
+D5-EP0003,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,975.202248,2025.196829,malicious,7,0,train
+D5-EP0004,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,1017.466126,1483.225096,benign,6,0,train
+D5-EP0005,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,1487.011356,2006.146852,benign,6,0,train
+D5-EP0006,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,2047.719211,2989.018336,benign,6,0,train
+D5-EP0007,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,2136.357647,3137.234794,malicious,6,0,train
+D5-EP0008,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,3202.451316,4094.627261,malicious,6,0,train
+D5-EP0009,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,3417.801158,4461.283299,benign,6,0,train
+D5-EP0010,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,4147.011192,5285.256687,malicious,6,0,train
+D5-EP0011,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,4704.869466,5256.978130,benign,6,0,train
+D5-EP0012,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,5231.825304,5835.160374,benign,6,0,train
+D5-EP0013,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,5298.115261,6653.172972,malicious,6,0,train
+D5-EP0014,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,5905.329035,6209.890950,benign,6,0,train
+D5-EP0015,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,6331.532408,7221.050384,benign,6,0,train
+D5-EP0016,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,7292.663678,7764.294731,benign,6,0,train
+D5-EP0017,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,7374.658719,8101.729816,malicious,6,0,train
+D5-EP0018,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,7765.979907,7974.279029,benign,6,0,train
+D5-EP0019,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,7999.397096,8800.009108,benign,6,0,train
+D5-EP0020,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,8228.921398,9679.421008,malicious,6,0,train
+D5-EP0021,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,8943.810190,9417.239852,benign,6,0,train
+D5-EP0022,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,9430.046349,9998.038487,benign,6,0,train
+D5-EP0023,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,9866.995158,10562.948351,malicious,6,0,train
+D5-EP0024,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,10099.780672,10992.067785,benign,6,0,train
+D5-EP0025,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,10760.560662,11330.426834,malicious,6,0,train
+D5-EP0026,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,11050.294531,12124.916367,benign,6,0,train
+D5-EP0027,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,11330.818969,12543.089195,malicious,6,0,train
+D5-EP0028,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,12188.043033,12972.397871,benign,6,0,train
+D5-EP0029,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,12942.150473,13617.481240,malicious,6,0,train
+D5-EP0030,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,13020.863187,13347.147829,benign,6,0,train
+D5-EP0031,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,13431.414615,13814.710011,benign,6,0,train
+D5-EP0032,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,13644.201911,14114.953668,malicious,6,0,train
+D5-EP0033,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,13801.657599,15080.430990,benign,6,0,train
+D5-EP0034,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,14792.351737,15324.574628,malicious,6,0,train
+D5-EP0035,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,15033.828387,16094.095269,benign,6,0,train
+D5-EP0036,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,15335.413533,16993.852637,malicious,6,0,train
+D5-EP0037,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,16172.319515,16712.448773,benign,6,0,train
+D5-EP0038,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,16781.287779,17653.557978,benign,6,0,train
+D5-EP0039,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,17093.156345,17758.696767,malicious,6,0,train
+D5-EP0040,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,17712.961620,18146.604594,benign,6,0,train
+D5-EP0041,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,17847.506895,18799.801339,malicious,6,0,train
+D5-EP0042,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,18719.154901,19030.851461,benign,6,0,train
+D5-EP0043,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,19105.729712,20630.619539,malicious,6,0,train
+D5-EP0044,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,19496.343511,20395.981259,benign,6,0,train
+D5-EP0045,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,20649.103158,21541.558630,benign,6,0,train
+D5-EP0046,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,20917.524621,21492.679028,malicious,6,0,train
+D5-EP0047,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,21598.283476,22919.818158,malicious,6,0,train
+D5-EP0048,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,21784.966115,22444.174088,benign,6,0,train
+D5-EP0049,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,22672.035603,23164.447911,benign,6,0,train
+D5-EP0050,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,23318.778967,24340.301098,benign,6,0,train
+D5-EP0051,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,23337.092048,24624.498212,malicious,6,0,train
+D5-EP0052,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,24351.395171,24813.189361,benign,6,0,train
+D5-EP0053,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,24719.349173,26392.574909,malicious,6,0,train
+D5-EP0054,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,24796.950760,25726.592192,benign,6,0,train
+D5-EP0055,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,25769.029955,27177.194497,benign,6,0,train
+D5-EP0056,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,26634.724915,27734.324441,malicious,6,0,train
+D5-EP0057,D5,Benign administrative look-alikes,D5-shift00,T1047;T1053,27206.338509,27878.600027,benign,5,0,train
+D5-EP0058,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,88.837349,639.350585,malicious,6,0,train
+D5-EP0059,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,163.794662,877.445123,benign,7,0,train
+D5-EP0060,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,635.736394,1059.023795,malicious,6,0,train
+D5-EP0061,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,954.912749,1480.621755,benign,6,0,train
+D5-EP0062,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,1119.820375,1678.890654,malicious,6,0,train
+D5-EP0063,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,1712.048178,3253.181190,benign,6,0,train
+D5-EP0064,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,1984.835454,3130.949641,malicious,6,0,train
+D5-EP0065,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,3303.704020,3984.402392,malicious,6,0,train
+D5-EP0066,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,3344.290982,4129.533575,benign,6,0,train
+D5-EP0067,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,4169.543040,5217.817048,benign,6,0,train
+D5-EP0068,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,4178.596580,5328.511859,malicious,6,0,train
+D5-EP0069,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,5204.938421,5838.667825,benign,6,0,train
+D5-EP0070,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,5364.199232,6391.115097,malicious,6,0,train
+D5-EP0071,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,6041.007231,7817.983264,benign,6,0,train
+D5-EP0072,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,6469.166145,27181.759229,adversarial,7,7,train
+D5-EP0073,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,6480.585386,7266.301066,malicious,6,0,train
+D5-EP0074,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,7279.654504,8166.888077,malicious,6,0,train
+D5-EP0075,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,7832.023847,8301.068018,benign,6,0,train
+D5-EP0076,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,8399.918119,8891.327775,benign,6,0,train
+D5-EP0077,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,8498.612620,9103.774517,malicious,6,0,train
+D5-EP0078,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,8870.638730,9622.035187,benign,6,0,train
+D5-EP0079,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,9202.602173,10474.754246,malicious,6,0,train
+D5-EP0080,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,10075.613851,11108.670028,benign,6,0,train
+D5-EP0081,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,10839.467904,11652.714945,malicious,6,0,train
+D5-EP0082,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,11793.614568,12136.291505,malicious,6,0,train
+D5-EP0083,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,11876.341139,12390.457558,benign,6,0,train
+D5-EP0084,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,12182.739274,12699.228938,malicious,6,0,train
+D5-EP0085,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,12446.461986,13294.822647,benign,6,0,train
+D5-EP0086,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,12770.703881,13604.162013,malicious,6,0,train
+D5-EP0087,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,13260.236693,14420.970575,benign,6,0,train
+D5-EP0088,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,13707.994818,14774.088486,malicious,6,0,train
+D5-EP0089,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,14418.148159,15170.746705,benign,6,0,train
+D5-EP0090,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,14931.221479,16100.611232,malicious,6,0,val
+D5-EP0091,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,15344.031865,15714.951559,benign,6,0,val
+D5-EP0092,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,15898.860826,16911.931424,benign,6,0,val
+D5-EP0093,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,16112.683378,18175.299668,malicious,6,0,val
+D5-EP0094,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,17113.048282,17588.029717,benign,6,0,val
+D5-EP0095,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,17572.173173,18368.890129,benign,6,0,val
+D5-EP0096,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,18390.317911,19268.667947,benign,6,0,val
+D5-EP0097,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,18682.977691,19246.045957,malicious,6,0,val
+D5-EP0098,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,19391.119201,19754.356170,benign,6,0,val
+D5-EP0099,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,19690.674977,21431.973633,malicious,6,0,val
+D5-EP0100,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,19888.365786,20621.320948,benign,6,0,val
+D5-EP0101,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,20630.759080,20966.768387,benign,6,0,val
+D5-EP0102,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,20956.741938,21885.359962,benign,6,0,val
+D5-EP0103,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,21627.808561,23279.916781,malicious,6,0,val
+D5-EP0104,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,21996.793603,22717.027509,benign,6,0,val
+D5-EP0105,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,22884.379152,23600.502366,benign,6,0,val
+D5-EP0106,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,23336.022339,24165.368529,malicious,6,0,val
+D5-EP0107,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,23575.554096,24160.470355,benign,6,0,val
+D5-EP0108,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,24263.886516,24739.170379,malicious,6,0,val
+D5-EP0109,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,24586.712845,25283.393029,benign,6,0,val
+D5-EP0110,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,24748.068403,26166.650790,malicious,6,0,val
+D5-EP0111,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,25343.481466,25964.087688,benign,6,0,val
+D5-EP0112,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,25948.403904,26354.649346,benign,6,0,val
+D5-EP0113,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,26246.008878,26866.706309,malicious,6,0,val
+D5-EP0114,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,26763.620263,27319.462975,benign,6,0,val
+D5-EP0115,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,27338.710833,27776.935137,malicious,5,0,val
+D5-EP0116,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,27374.402562,28141.228837,benign,6,0,val
+D5-EP0117,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,27876.796312,28709.254831,malicious,5,0,val
+D5-EP0118,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,28190.209233,28419.706970,benign,6,0,val
+D5-EP0119,D5,Benign administrative look-alikes,D5-shift01,T1047;T1053,28383.478879,28768.392369,benign,6,0,val
+D5-EP0120,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,53.119933,594.660407,benign,7,0,test
+D5-EP0121,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,206.275597,1443.276326,malicious,6,0,test
+D5-EP0122,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,590.129295,1335.821114,benign,7,0,test
+D5-EP0123,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,1390.990974,2277.042805,benign,7,0,test
+D5-EP0124,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,1432.861236,2945.638060,malicious,6,0,test
+D5-EP0125,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,2502.578227,3438.162287,benign,7,0,test
+D5-EP0126,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,3036.914797,3754.432677,malicious,6,0,test
+D5-EP0127,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,3462.998137,4737.469591,benign,6,0,test
+D5-EP0128,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,3823.794228,4451.633657,malicious,6,0,test
+D5-EP0129,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,4559.099382,5598.137540,malicious,6,0,test
+D5-EP0130,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,4817.818218,5707.855173,benign,6,0,test
+D5-EP0131,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,5779.801017,6730.788188,benign,6,0,test
+D5-EP0132,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,5830.176518,6508.338104,malicious,6,0,test
+D5-EP0133,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,6787.267714,8997.077518,malicious,6,0,test
+D5-EP0134,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,6995.994562,7292.592308,benign,6,0,test
+D5-EP0135,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,7444.831447,8069.533717,benign,6,0,test
+D5-EP0136,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,7596.425333,11787.548002,adversarial,3,3,test
+D5-EP0137,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,8188.642064,9602.104088,benign,6,0,test
+D5-EP0138,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,9222.955513,9611.742014,malicious,6,0,test
+D5-EP0139,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,9569.998890,10381.455833,benign,6,0,test
+D5-EP0140,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,9616.902944,10302.107176,malicious,6,0,test
+D5-EP0141,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,10308.669642,11332.365701,malicious,6,0,test
+D5-EP0142,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,10724.267035,11470.234417,benign,6,0,test
+D5-EP0143,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,11377.184913,12381.057043,malicious,6,0,test
+D5-EP0144,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,11596.241855,12308.866178,benign,6,0,test
+D5-EP0145,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,12385.598565,13441.358630,malicious,6,0,test
+D5-EP0146,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,12392.933135,13298.020176,benign,6,0,test
+D5-EP0147,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,13384.763014,13952.248191,benign,6,0,test
+D5-EP0148,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,13466.967381,14105.987940,malicious,5,0,test
+D5-EP0149,D5,Benign administrative look-alikes,D5-shift02,T1047;T1053,13979.038850,14456.893826,benign,6,0,test
+D6-EP0000,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,7.566780,387.558104,malicious,7,0,train
+D6-EP0001,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,14.309575,1136.513250,benign,6,0,train
+D6-EP0002,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,82.553804,256.218733,adversarial,6,6,train
+D6-EP0003,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,282.271963,519.894139,adversarial,6,6,train
+D6-EP0004,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,503.590535,1266.633810,malicious,7,0,train
+D6-EP0005,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,623.213055,812.287211,adversarial,6,6,train
+D6-EP0006,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,814.319849,1158.369751,adversarial,6,6,train
+D6-EP0007,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,1236.055905,3053.824975,benign,6,0,train
+D6-EP0008,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,1240.309547,1590.657135,adversarial,6,6,train
+D6-EP0009,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,1276.754425,1596.511169,malicious,6,0,train
+D6-EP0010,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,1616.607640,1803.269351,adversarial,6,6,train
+D6-EP0011,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,1715.179330,2582.926104,malicious,6,0,train
+D6-EP0012,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,1811.712202,2113.142043,adversarial,6,6,train
+D6-EP0013,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,2145.299916,2391.119235,adversarial,6,6,train
+D6-EP0014,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,2537.349360,2644.347250,adversarial,6,6,train
+D6-EP0015,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,2717.328431,3218.256174,malicious,6,0,train
+D6-EP0016,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,2728.405236,3018.433729,adversarial,6,6,train
+D6-EP0017,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,3028.168427,3267.918968,adversarial,6,6,train
+D6-EP0018,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,3098.967036,4644.081110,benign,6,0,train
+D6-EP0019,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,3233.834595,3756.628493,malicious,6,0,train
+D6-EP0020,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,3282.252253,3668.671202,adversarial,6,6,train
+D6-EP0021,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,3669.829541,3934.141576,adversarial,6,6,train
+D6-EP0022,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,4011.841798,4213.122067,adversarial,6,6,train
+D6-EP0023,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,4032.697718,4845.914627,malicious,6,0,train
+D6-EP0024,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,4240.793795,4448.929216,adversarial,6,6,train
+D6-EP0025,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,4460.449632,4585.726002,adversarial,6,6,train
+D6-EP0026,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,4591.214989,5231.967271,adversarial,6,6,train
+D6-EP0027,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,4663.693323,5284.780301,benign,6,0,train
+D6-EP0028,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,4872.184632,5404.622299,malicious,6,0,train
+D6-EP0029,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,5281.360156,5802.120241,adversarial,6,6,train
+D6-EP0030,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,5575.290635,6776.272053,benign,6,0,train
+D6-EP0031,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,5744.189843,6262.693592,malicious,6,0,train
+D6-EP0032,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,6055.690548,6225.375613,adversarial,6,6,train
+D6-EP0033,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,6244.897640,6579.737042,adversarial,6,6,train
+D6-EP0034,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,6625.262216,6968.141071,malicious,6,0,train
+D6-EP0035,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,6662.596471,7012.715851,adversarial,6,6,train
+D6-EP0036,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,6997.456586,7622.098443,malicious,6,0,train
+D6-EP0037,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,7065.176271,7273.833883,adversarial,6,6,train
+D6-EP0038,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,7233.587528,8790.010710,benign,6,0,train
+D6-EP0039,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,7292.433750,7713.874665,adversarial,6,6,train
+D6-EP0040,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,7740.884604,7897.941191,adversarial,6,6,train
+D6-EP0041,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,7770.783859,8638.420272,malicious,6,0,train
+D6-EP0042,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,8040.284915,8298.863888,adversarial,6,6,train
+D6-EP0043,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,8308.738794,8568.003501,adversarial,6,6,train
+D6-EP0044,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,8598.204068,8866.302259,adversarial,6,6,train
+D6-EP0045,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,8833.529346,10246.593777,benign,6,0,train
+D6-EP0046,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,8920.530093,9053.819055,adversarial,6,6,train
+D6-EP0047,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,8982.447868,9302.209986,malicious,6,0,train
+D6-EP0048,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,9103.216871,9335.804735,adversarial,6,6,train
+D6-EP0049,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,9315.448503,10011.438235,malicious,6,0,train
+D6-EP0050,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,9444.182047,9906.870675,adversarial,6,6,train
+D6-EP0051,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,9989.521390,10336.695177,adversarial,6,6,train
+D6-EP0052,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,10001.930196,11160.203000,malicious,6,0,train
+D6-EP0053,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,10370.845695,10637.987305,adversarial,6,6,train
+D6-EP0054,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,10426.575279,13898.125741,benign,6,0,train
+D6-EP0055,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,10727.842984,10928.282342,adversarial,6,6,train
+D6-EP0056,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,10948.680499,11105.612675,adversarial,6,6,train
+D6-EP0057,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,11129.067362,11256.590141,adversarial,6,6,train
+D6-EP0058,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,11203.750953,11518.305999,malicious,6,0,train
+D6-EP0059,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,11285.450198,11461.760043,adversarial,6,6,train
+D6-EP0060,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,11523.794231,12203.478612,malicious,6,0,val
+D6-EP0061,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,11621.854058,11737.798353,adversarial,6,6,val
+D6-EP0062,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,11833.100651,12031.029650,adversarial,6,6,val
+D6-EP0063,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,12062.923353,12448.061496,adversarial,6,6,val
+D6-EP0064,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,12247.299629,12982.536245,malicious,6,0,val
+D6-EP0065,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,12558.506727,12837.599356,adversarial,6,6,val
+D6-EP0066,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,12959.236413,13187.085643,adversarial,6,6,val
+D6-EP0067,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,13003.550244,13587.710743,malicious,6,0,val
+D6-EP0068,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,13191.999365,13425.697609,adversarial,6,6,val
+D6-EP0069,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,13429.130678,13830.987338,adversarial,6,6,val
+D6-EP0070,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,13698.688336,14193.409276,malicious,6,0,val
+D6-EP0071,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,13909.806448,14065.412966,adversarial,6,6,val
+D6-EP0072,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,14073.617136,14851.536676,benign,6,0,val
+D6-EP0073,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,14096.868074,14260.288456,adversarial,6,6,val
+D6-EP0074,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,14191.091650,14338.034793,malicious,6,0,val
+D6-EP0075,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,14375.198162,14572.087015,adversarial,6,6,val
+D6-EP0076,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,14515.496752,14865.905348,malicious,6,0,val
+D6-EP0077,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,14614.239892,14835.354342,adversarial,6,6,val
+D6-EP0078,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,14837.745432,15175.941100,malicious,6,0,val
+D6-EP0079,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,14840.974695,17006.334199,benign,6,0,val
+D6-EP0080,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,14848.144821,14989.066006,adversarial,6,6,test
+D6-EP0081,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,15043.976050,15397.697493,adversarial,6,6,test
+D6-EP0082,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,15410.308851,15993.679675,malicious,6,0,test
+D6-EP0083,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,15414.796137,15669.354784,adversarial,6,6,test
+D6-EP0084,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,15695.396798,15872.166534,adversarial,6,6,test
+D6-EP0085,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,15874.201863,16244.540858,adversarial,6,6,test
+D6-EP0086,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,16069.152737,16590.528787,malicious,6,0,test
+D6-EP0087,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,16586.026743,17059.827531,malicious,6,0,test
+D6-EP0088,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,16593.157879,16716.293871,adversarial,6,6,test
+D6-EP0089,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,16780.898514,16946.460527,adversarial,6,6,test
+D6-EP0090,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,16957.186759,17138.386750,adversarial,6,6,test
+D6-EP0091,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,17088.812573,18016.027104,benign,6,0,test
+D6-EP0092,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,17130.435233,17380.427121,malicious,6,0,test
+D6-EP0093,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,17252.336504,17391.969723,adversarial,6,6,test
+D6-EP0094,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,17430.074769,18065.700321,adversarial,6,6,test
+D6-EP0095,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,17454.309602,17757.232121,malicious,6,0,test
+D6-EP0096,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,17854.731393,18298.462653,malicious,6,0,test
+D6-EP0097,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,18094.955199,18294.401494,adversarial,5,5,test
+D6-EP0098,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,18278.031010,18495.306955,malicious,6,0,test
+D6-EP0099,D6,Indirect prompt injection,D6-shift00,AML.T0051.001,18335.112845,18494.560288,adversarial,5,5,test
+D7-EP0000,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,11.616036,765.370065,malicious,6,0,train
+D7-EP0001,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,183.865326,489.732683,adversarial,7,7,train
+D7-EP0002,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,438.338355,2953.480497,benign,6,0,train
+D7-EP0003,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,589.013045,844.821443,adversarial,7,7,train
+D7-EP0004,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,905.587529,1393.124732,adversarial,7,7,train
+D7-EP0005,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,926.758702,1185.626878,malicious,6,0,train
+D7-EP0006,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,1334.264332,1768.801474,malicious,6,0,train
+D7-EP0007,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,1515.277621,1755.030096,adversarial,6,6,train
+D7-EP0008,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,1767.595068,2564.089880,malicious,6,0,train
+D7-EP0009,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,1867.286416,2392.761868,adversarial,6,6,train
+D7-EP0010,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,2455.625911,2668.292339,adversarial,6,6,train
+D7-EP0011,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,2647.094372,2982.298326,malicious,6,0,train
+D7-EP0012,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,2694.219541,2807.756125,adversarial,6,6,train
+D7-EP0013,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,2943.105607,3396.162448,adversarial,6,6,train
+D7-EP0014,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,2965.818546,3864.764294,benign,6,0,train
+D7-EP0015,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,3147.842609,3571.938420,malicious,6,0,train
+D7-EP0016,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,3415.525564,3817.467416,adversarial,6,6,train
+D7-EP0017,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,3692.637285,4639.901663,malicious,6,0,train
+D7-EP0018,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,3980.174565,5967.073861,benign,6,0,train
+D7-EP0019,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,4043.472891,4411.988536,adversarial,6,6,train
+D7-EP0020,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,4514.165101,4934.834003,adversarial,6,6,train
+D7-EP0021,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,4777.056979,5427.684616,malicious,6,0,train
+D7-EP0022,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,5105.175075,5908.395120,adversarial,6,6,train
+D7-EP0023,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,5533.197337,6227.144628,malicious,6,0,train
+D7-EP0024,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,5964.864140,6370.151768,adversarial,6,6,train
+D7-EP0025,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,5988.322926,7036.571077,benign,6,0,train
+D7-EP0026,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,6268.624409,6834.360353,malicious,6,0,train
+D7-EP0027,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,6411.049210,6829.709765,adversarial,6,6,train
+D7-EP0028,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,6851.654795,7089.520827,adversarial,6,6,train
+D7-EP0029,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,6970.321678,7651.736039,malicious,6,0,train
+D7-EP0030,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,7103.302002,7531.847673,adversarial,6,6,train
+D7-EP0031,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,7126.657500,8020.858908,benign,6,0,train
+D7-EP0032,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,7583.425321,8116.707067,adversarial,6,6,train
+D7-EP0033,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,7755.889853,8009.151683,malicious,6,0,train
+D7-EP0034,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,8062.457799,8740.829156,malicious,6,0,train
+D7-EP0035,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,8200.752194,8331.731699,adversarial,6,6,train
+D7-EP0036,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,8445.432929,8656.268282,adversarial,6,6,val
+D7-EP0037,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,8656.940952,8930.094287,adversarial,6,6,val
+D7-EP0038,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,8757.138914,10185.538417,benign,6,0,val
+D7-EP0039,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,8957.788754,9509.128663,malicious,6,0,val
+D7-EP0040,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,9007.306991,9581.653951,adversarial,6,6,val
+D7-EP0041,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,9584.189820,9807.112853,adversarial,6,6,val
+D7-EP0042,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,9898.399991,11190.487155,malicious,6,0,val
+D7-EP0043,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,9942.265111,10249.269139,adversarial,6,6,val
+D7-EP0044,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,10231.054115,11046.505195,benign,6,0,val
+D7-EP0045,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,10275.184940,10571.854630,adversarial,6,6,val
+D7-EP0046,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,10597.651919,10849.667521,adversarial,6,6,val
+D7-EP0047,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,10950.764689,11136.199854,adversarial,6,6,val
+D7-EP0048,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,11088.775377,11969.580246,benign,5,0,test
+D7-EP0049,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,11152.134069,11898.602842,adversarial,6,6,test
+D7-EP0050,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,11256.696185,12252.737503,malicious,6,0,test
+D7-EP0051,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,11915.034634,12485.986309,adversarial,6,6,test
+D7-EP0052,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,12244.798050,12877.778811,malicious,6,0,test
+D7-EP0053,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,12301.738096,12972.571105,benign,5,0,test
+D7-EP0054,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,12700.142673,13229.468662,adversarial,6,6,test
+D7-EP0055,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,12871.767823,13379.858738,malicious,6,0,test
+D7-EP0056,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,12965.383194,14330.548623,benign,5,0,test
+D7-EP0057,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,13254.363409,13558.342877,adversarial,6,6,test
+D7-EP0058,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,13519.828744,14306.701380,malicious,6,0,test
+D7-EP0059,D7,Tampering with SIEM records,D7-shift00,T1565.001;T1070,13701.144806,14307.453878,adversarial,6,6,test
+D8-EP0000,D8,Alert storm,D8-shift00,T1595;T1046,152.393326,3734.589829,malicious,28,0,train
+D8-EP0001,D8,Alert storm,D8-shift00,T1595;T1046,220.044671,4633.803610,benign,24,0,train
+D8-EP0002,D8,Alert storm,D8-shift00,T1595;T1046,3756.186680,4799.143087,malicious,28,0,train
+D8-EP0003,D8,Alert storm,D8-shift00,T1595;T1046,4653.010199,9880.275817,benign,24,0,train
+D8-EP0004,D8,Alert storm,D8-shift00,T1595;T1046,4913.601549,7348.142983,malicious,28,0,train
+D8-EP0005,D8,Alert storm,D8-shift00,T1595;T1046,7337.114962,7595.435821,adversarial,2,2,train
+D8-EP0006,D8,Alert storm,D8-shift00,T1595;T1046,7551.540856,9486.929714,malicious,28,0,train
+D8-EP0007,D8,Alert storm,D8-shift00,T1595;T1046,9495.298350,10958.435931,malicious,28,0,train
+D8-EP0008,D8,Alert storm,D8-shift00,T1595;T1046,9915.741081,14045.783043,benign,23,0,train
+D8-EP0009,D8,Alert storm,D8-shift00,T1595;T1046,11098.401102,14232.253635,malicious,27,0,train
+D8-EP0010,D8,Alert storm,D8-shift01,T1595;T1046,168.434435,4344.453913,benign,29,0,train
+D8-EP0011,D8,Alert storm,D8-shift01,T1595;T1046,233.200908,3251.214279,malicious,25,0,train
+D8-EP0012,D8,Alert storm,D8-shift01,T1595;T1046,3241.491953,3927.945504,malicious,25,0,train
+D8-EP0013,D8,Alert storm,D8-shift01,T1595;T1046,3911.186757,4249.565216,malicious,25,0,train
+D8-EP0014,D8,Alert storm,D8-shift01,T1595;T1046,4222.634821,4717.747820,malicious,25,0,train
+D8-EP0015,D8,Alert storm,D8-shift01,T1595;T1046,4448.605448,8714.050243,benign,28,0,train
+D8-EP0016,D8,Alert storm,D8-shift01,T1595;T1046,4712.767105,7086.914516,malicious,24,0,train
+D8-EP0017,D8,Alert storm,D8-shift01,T1595;T1046,7208.187826,9164.879534,malicious,24,0,train
+D8-EP0018,D8,Alert storm,D8-shift01,T1595;T1046,7763.965060,8142.842402,adversarial,3,3,train
+D8-EP0019,D8,Alert storm,D8-shift01,T1595;T1046,8739.192154,9768.343781,benign,28,0,train
+D8-EP0020,D8,Alert storm,D8-shift01,T1595;T1046,9153.396587,9557.220966,malicious,24,0,train
+D8-EP0021,D8,Alert storm,D8-shift01,T1595;T1046,9521.565041,9919.054259,malicious,24,0,train
+D8-EP0022,D8,Alert storm,D8-shift01,T1595;T1046,9862.180685,13552.533399,benign,28,0,train
+D8-EP0023,D8,Alert storm,D8-shift01,T1595;T1046,9960.868466,10947.301341,malicious,24,0,train
+D8-EP0024,D8,Alert storm,D8-shift01,T1595;T1046,11203.841919,14085.007931,malicious,24,0,train
+D8-EP0025,D8,Alert storm,D8-shift02,T1595;T1046,18.223145,2411.374127,malicious,26,0,train
+D8-EP0026,D8,Alert storm,D8-shift02,T1595;T1046,434.334383,8201.922373,adversarial,5,5,train
+D8-EP0027,D8,Alert storm,D8-shift02,T1595;T1046,848.049561,7276.598370,benign,28,0,train
+D8-EP0028,D8,Alert storm,D8-shift02,T1595;T1046,2447.949786,4053.090423,malicious,26,0,train
+D8-EP0029,D8,Alert storm,D8-shift02,T1595;T1046,4038.501689,4676.578638,malicious,26,0,train
+D8-EP0030,D8,Alert storm,D8-shift02,T1595;T1046,4673.164331,7847.574581,malicious,26,0,val
+D8-EP0031,D8,Alert storm,D8-shift02,T1595;T1046,7553.440654,12125.096511,benign,27,0,val
+D8-EP0032,D8,Alert storm,D8-shift02,T1595;T1046,8164.512831,9283.197314,malicious,26,0,val
+D8-EP0033,D8,Alert storm,D8-shift02,T1595;T1046,9273.263577,9947.869333,malicious,25,0,val
+D8-EP0034,D8,Alert storm,D8-shift02,T1595;T1046,9952.305015,12311.864579,malicious,25,0,val
+D8-EP0035,D8,Alert storm,D8-shift03,T1595;T1046,5.455228,2721.151713,malicious,26,0,val
+D8-EP0036,D8,Alert storm,D8-shift03,T1595;T1046,530.148457,4039.200663,benign,27,0,val
+D8-EP0037,D8,Alert storm,D8-shift03,T1595;T1046,1862.911720,9728.555594,adversarial,3,3,val
+D8-EP0038,D8,Alert storm,D8-shift03,T1595;T1046,2832.017069,3856.501919,malicious,25,0,val
+D8-EP0039,D8,Alert storm,D8-shift03,T1595;T1046,3841.613904,4264.478199,malicious,25,0,val
+D8-EP0040,D8,Alert storm,D8-shift03,T1595;T1046,4020.358833,7254.198096,benign,27,0,test
+D8-EP0041,D8,Alert storm,D8-shift03,T1595;T1046,4258.837829,4651.557175,malicious,25,0,test
+D8-EP0042,D8,Alert storm,D8-shift03,T1595;T1046,4674.927612,6245.972284,malicious,25,0,test
+D8-EP0043,D8,Alert storm,D8-shift03,T1595;T1046,6329.607270,9019.993978,malicious,25,0,test
+D8-EP0044,D8,Alert storm,D8-shift03,T1595;T1046,7455.751756,9704.211468,benign,26,0,test
+D8-EP0045,D8,Alert storm,D8-shift03,T1595;T1046,9025.274617,9349.714349,malicious,25,0,test
+D8-EP0046,D8,Alert storm,D8-shift03,T1595;T1046,9327.707492,9769.799321,malicious,25,0,test
+D8-EP0047,D8,Alert storm,D8-shift03,T1595;T1046,9705.217863,12749.905029,benign,26,0,test
+D8-EP0048,D8,Alert storm,D8-shift03,T1595;T1046,9758.205008,10180.873972,malicious,25,0,test
+D8-EP0049,D8,Alert storm,D8-shift03,T1595;T1046,10187.108171,13297.096077,malicious,25,0,test
