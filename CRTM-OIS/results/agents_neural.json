@@ -1,0 +1,270 @@
+{
+  "surrogate": {
+    "monotone": {
+      "mae_R": 0.012865660313234991,
+      "rmse_R": 0.017189631973465486,
+      "mae_Rmin": 0.042761706518685466,
+      "level_accuracy": 0.9468,
+      "monotone_violations": 0.0
+    },
+    "unconstrained": {
+      "mae_R": 0.010558902807008032,
+      "rmse_R": 0.013684256770914869,
+      "mae_Rmin": 0.025067450726739538,
+      "level_accuracy": 0.9572,
+      "monotone_violations": 0.034
+    }
+  },
+  "surrogate_E1": {
+    "R": 0.701191737444175,
+    "R_min": 0.5494195389758578,
+    "level": 4
+  },
+  "twin": {
+    "ticks": 220,
+    "alerts": [
+      {
+        "tick": 0,
+        "kind": "weights",
+        "text": "verdict sensitive to weights (top share 61%)",
+        "severity": "warning"
+      },
+      {
+        "tick": 1,
+        "kind": "unstable",
+        "text": "missing-data enclosure crosses a level boundary",
+        "severity": "warning"
+      },
+      {
+        "tick": 11,
+        "kind": "level_rise",
+        "text": "level A -> AA",
+        "severity": "info"
+      },
+      {
+        "tick": 15,
+        "kind": "weights",
+        "text": "verdict sensitive to weights (top share 57%)",
+        "severity": "warning"
+      },
+      {
+        "tick": 16,
+        "kind": "unstable",
+        "text": "missing-data enclosure crosses a level boundary",
+        "severity": "warning"
+      },
+      {
+        "tick": 17,
+        "kind": "forecast_drop",
+        "text": "forecast R=0.698 in 6 ticks (level A)",
+        "severity": "warning"
+      },
+      {
+        "tick": 18,
+        "kind": "level_drop",
+        "text": "level AA -> A",
+        "severity": "serious"
+      },
+      {
+        "tick": 30,
+        "kind": "weights",
+        "text": "verdict sensitive to weights (top share 67%)",
+        "severity": "warning"
+      },
+      {
+        "tick": 31,
+        "kind": "unstable",
+        "text": "missing-data enclosure crosses a level boundary",
+        "severity": "warning"
+      },
+      {
+        "tick": 45,
+        "kind": "weights",
+        "text": "verdict sensitive to weights (top share 63%)",
+        "severity": "warning"
+      },
+      {
+        "tick": 47,
+        "kind": "unstable",
+        "text": "missing-data enclosure crosses a level boundary",
+        "severity": "warning"
+      },
+      {
+        "tick": 60,
+        "kind": "weights",
+        "text": "verdict sensitive to weights (top share 65%)",
+        "severity": "warning"
+      },
+      {
+        "tick": 63,
+        "kind": "unstable",
+        "text": "missing-data enclosure crosses a level boundary",
+        "severity": "warning"
+      },
+      {
+        "tick": 77,
+        "kind": "weights",
+        "text": "verdict sensitive to weights (top share 75%)",
+        "severity": "warning"
+      },
+      {
+        "tick": 86,
+        "kind": "unstable",
+        "text": "missing-data enclosure crosses a level boundary",
+        "severity": "warning"
+      },
+      {
+        "tick": 92,
+        "kind": "weights",
+        "text": "verdict sensitive to weights (top share 68%)",
+        "severity": "warning"
+      },
+      {
+        "tick": 103,
+        "kind": "unstable",
+        "text": "missing-data enclosure crosses a level boundary",
+        "severity": "warning"
+      },
+      {
+        "tick": 107,
+        "kind": "weights",
+        "text": "verdict sensitive to weights (top share 55%)",
+        "severity": "warning"
+      },
+      {
+        "tick": 112,
+        "kind": "level_rise",
+        "text": "level A -> AA",
+        "severity": "info"
+      },
+      {
+        "tick": 117,
+        "kind": "forecast_drop",
+        "text": "forecast R=0.648 in 6 ticks (level A)",
+        "severity": "warning"
+      },
+      {
+        "tick": 119,
+        "kind": "level_drop",
+        "text": "level AA -> A",
+        "severity": "serious"
+      },
+      {
+        "tick": 120,
+        "kind": "veto",
+        "text": "core capability lost in UN.S1.A1",
+        "severity": "critical",
+        "action": "UN.S1.A1"
+      },
+      {
+        "tick": 130,
+        "kind": "weights",
+        "text": "verdict sensitive to weights (top share 60%)",
+        "severity": "warning"
+      },
+      {
+        "tick": 131,
+        "kind": "unstable",
+        "text": "missing-data enclosure crosses a level boundary",
+        "severity": "warning"
+      },
+      {
+        "tick": 145,
+        "kind": "weights",
+        "text": "verdict sensitive to weights (top share 59%)",
+        "severity": "warning"
+      },
+      {
+        "tick": 147,
+        "kind": "unstable",
+        "text": "missing-data enclosure crosses a level boundary",
+        "severity": "warning"
+      },
+      {
+        "tick": 151,
+        "kind": "level_rise",
+        "text": "level A -> AA",
+        "severity": "info"
+      },
+      {
+        "tick": 211,
+        "kind": "unstable",
+        "text": "missing-data enclosure crosses a level boundary",
+        "severity": "warning"
+      }
+    ],
+    "advice": [
+      {
+        "tick": 18,
+        "trigger": "level_drop",
+        "top": [
+          [
+            "RE.S1.A2.CS-S1-A1-2",
+            0.0125
+          ],
+          [
+            "RE.S1.A2.RE-S1-A1-2",
+            0.0116
+          ],
+          [
+            "TR.S2.A2.M2",
+            0.0115
+          ]
+        ]
+      },
+      {
+        "tick": 119,
+        "trigger": "level_drop",
+        "top": [
+          [
+            "UN.S1.A1.M1",
+            0.0351
+          ],
+          [
+            "RE.S1.A2.CS-S1-A1-2",
+            0.0125
+          ],
+          [
+            "TR.S2.A2.M1",
+            0.0097
+          ]
+        ]
+      },
+      {
+        "tick": 120,
+        "trigger": "veto",
+        "top": [
+          [
+            "UN.S1.A1.M1",
+            0.05
+          ],
+          [
+            "RE.S1.A2.CS-S1-A1-2",
+            0.0125
+          ],
+          [
+            "TR.S2.A2.M2",
+            0.0121
+          ]
+        ]
+      }
+    ],
+    "dq_recall": 0.873015873015873,
+    "dq_precision": 0.6962025316455697,
+    "forecast_mae": 0.018188746966960774
+  },
+  "calibration": {
+    "omega": [
+      0.13617057299144886,
+      0.411031908095347,
+      0.29601079945503944,
+      0.15678671945816464
+    ],
+    "true": [
+      0.15,
+      0.4,
+      0.3,
+      0.15
+    ]
+  }
+}
