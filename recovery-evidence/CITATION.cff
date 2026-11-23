@@ -1,0 +1,52 @@
+cff-version: 1.2.0
+message: "If you use this software or its data, please cite the article and the archived software."
+title: "recovery-evidence: simulation and analysis code for prioritizing recovery-evidence verification under limited audit capacity"
+abstract: >-
+  Reproduction package for a paired simulation study of four deterministic
+  policies that choose which recovery-evidence record to verify next when
+  services share dependencies and the audit budget is fixed. Contains the
+  generator (NumPy PCG64, five separated streams), the operator, test-module
+  and evaluator separation, the 13 experimental conditions, byte-reproducible
+  primary logs, an analysis that does not import the simulator, 27
+  implementation checks, figure code and a claim-to-evidence register. All
+  results are synthetic model output about the correctness of readiness
+  records; they are not measurements of recovery time, loss or compliance.
+type: software
+version: "1.0.0"
+date-released: "2026-11-23"
+license: MIT
+repository-code: "https://github.com/omega2417/bnt"
+authors:
+  - family-names: "Torstensson"
+    given-names: "Olga"
+  - family-names: "Prokopovych-Tkachenko"
+    given-names: "Dmytro"
+    orcid: "https://orcid.org/0000-0002-6590-3898"
+    affiliation: >-
+      Department of Cybersecurity and Information Technologies,
+      University of Customs and Finance, Dnipro 49000, Ukraine
+  - family-names: "Khokhlachova"
+    given-names: "Yuliia"
+keywords:
+  - cyber resilience
+  - security assurance
+  - recovery readiness
+  - evidence verification
+  - service dependencies
+  - security audit
+  - simulation study
+  - reproducible research
+preferred-citation:
+  type: article
+  title: "Prioritizing Recovery Evidence Verification across Shared Service Dependencies under Limited Audit Capacity"
+  authors:
+    - family-names: "Torstensson"
+      given-names: "Olga"
+    - family-names: "Prokopovych-Tkachenko"
+      given-names: "Dmytro"
+      orcid: "https://orcid.org/0000-0002-6590-3898"
+    - family-names: "Khokhlachova"
+      given-names: "Yuliia"
+  journal: "Computers & Security"
+  year: 2026
+  status: submitted

@@ -1,0 +1,21 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "name": "recovery-evidence",
+  "version": "1.0.0",
+  "description": "Simulation and analysis code for prioritizing recovery-evidence verification across shared service dependencies under limited audit capacity.",
+  "license": "https://spdx.org/licenses/MIT",
+  "codeRepository": "https://github.com/omega2417/bnt",
+  "programmingLanguage": "Python",
+  "runtimePlatform": "Python >= 3.9",
+  "softwareRequirements": ["numpy >= 1.22", "matplotlib >= 3.5 (figures only)", "pytest >= 7 (tests only)"],
+  "operatingSystem": "Linux, macOS, Windows",
+  "dateCreated": "2026-11-23",
+  "datePublished": "2026-11-23",
+  "keywords": ["cyber resilience", "security assurance", "recovery readiness", "evidence verification", "service dependencies", "security audit"],
+  "author": [
+    {"@type": "Person", "givenName": "Olga", "familyName": "Torstensson"},
+    {"@type": "Person", "givenName": "Dmytro", "familyName": "Prokopovych-Tkachenko", "@id": "https://orcid.org/0000-0002-6590-3898"},
+    {"@type": "Person", "givenName": "Yuliia", "familyName": "Khokhlachova"}
+  ]
+}

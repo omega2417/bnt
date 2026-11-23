@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "recovery-evidence"
+version = "1.0.0"
+description = "Simulation and analysis code for prioritizing recovery-evidence verification across shared service dependencies under limited audit capacity"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+authors = [
+    { name = "Olga Torstensson" },
+    { name = "Dmytro Prokopovych-Tkachenko" },
+    { name = "Yuliia Khokhlachova" },
+]
+keywords = [
+    "cyber resilience",
+    "security assurance",
+    "recovery readiness",
+    "evidence verification",
+    "service dependencies",
+    "security audit",
+    "simulation study",
+    "reproducible research",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = ["numpy>=1.22"]
+
+[project.optional-dependencies]
+figures = ["matplotlib>=3.5", "pillow>=9"]
+dev = ["pytest>=7.0", "matplotlib>=3.5", "pillow>=9"]
+
+[project.urls]
+Repository = "https://github.com/omega2417/bnt"
+
+[project.scripts]
+recovery-evidence = "recovery_evidence.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+recovery_evidence = ["data/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
+markers = ["slow: regenerates all twelve secondary conditions (about one minute)"]

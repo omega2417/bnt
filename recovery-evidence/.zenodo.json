@@ -1,0 +1,32 @@
+{
+  "title": "recovery-evidence: simulation code, primary logs and analysis for prioritizing recovery-evidence verification across shared service dependencies under limited audit capacity",
+  "version": "1.0.0",
+  "upload_type": "software",
+  "license": "MIT",
+  "language": "eng",
+  "publication_date": "2026-11-23",
+  "access_right": "open",
+  "creators": [
+    {"name": "Torstensson, Olga"},
+    {
+      "name": "Prokopovych-Tkachenko, Dmytro",
+      "affiliation": "Department of Cybersecurity and Information Technologies, University of Customs and Finance, Dnipro 49000, Ukraine",
+      "orcid": "0000-0002-6590-3898"
+    },
+    {"name": "Khokhlachova, Yuliia"}
+  ],
+  "description": "<p>Reproduction package for the article <em>Prioritizing Recovery Evidence Verification across Shared Service Dependencies under Limited Audit Capacity</em> (submitted to Computers &amp; Security).</p><p><strong>Contents.</strong> A Python package that (i) generates hidden component states and change notices with NumPy's PCG64 generator in five separated streams, (ii) replays four deterministic verification policies (age, event-driven, static structural importance, current influence) on identical trajectories while the operator sees only past check results and delivered notices, (iii) evaluates service readiness verdicts against the hidden states, and (iv) recomputes every outcome from the primary logs with an analysis module that does not import the simulator. Included are the configuration of the 13 conditions, the complete primary logs (hidden states, notices, checks, verdicts), per-trajectory summaries, Tables 5&ndash;8 as CSV and Markdown, Figures 1&ndash;5 (PDF, TIFF, PNG), 27 implementation checks, 100 automated tests, a dependency-free script for the worked example, a claim-to-evidence register and SHA-256 digests of all 95 output files.</p><p><strong>Reproducibility.</strong> <code>recovery-evidence reproduce --check</code> regenerates all outputs in under a minute and compares them byte for byte with the released digests.</p><p><strong>Scope.</strong> All results are synthetic model output about the correctness of binary readiness records under exact, equal-cost checks. They are not measurements of recovery time, breach losses, incident prevention or regulatory compliance. No personal or confidential data are used.</p><p>Code: MIT licence. Generated data, tables and figures: CC BY 4.0.</p>",
+  "keywords": [
+    "cyber resilience",
+    "security assurance",
+    "recovery readiness",
+    "evidence verification",
+    "service dependencies",
+    "security audit",
+    "Birnbaum importance",
+    "simulation study",
+    "reproducible research",
+    "synthetic data"
+  ],
+  "notes": "All reported results are synthetic model output. Generated data, tables and figures are licensed CC BY 4.0; source code is licensed MIT."
+}

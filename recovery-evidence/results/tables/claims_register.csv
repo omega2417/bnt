@@ -1,0 +1,411 @@
+id,location,quantity,manuscript_draft,package,difference,difference_in_mcse,status,source
+R001,Table 5,C0 P0 FASD mean,10.15,10.15,+0.00,+0.0,identical,results/tables/policy_summary.csv
+R002,Table 5,C0 P0 FASD MCSE,0.17,0.17,+0.00,,identical,results/tables/policy_summary.csv
+R003,Table 5,C0 P0 FUSD mean,9.69,9.69,+0.00,-0.0,identical,results/tables/policy_summary.csv
+R004,Table 5,C0 P0 FUSD MCSE,0.19,0.19,+0.00,,identical,results/tables/policy_summary.csv
+R005,Table 5,C0 P0 TOTAL mean,19.84,19.84,+0.00,-0.0,identical,results/tables/policy_summary.csv
+R006,Table 5,C0 P0 TOTAL MCSE,0.28,0.28,+0.00,,identical,results/tables/policy_summary.csv
+R007,Table 5,"C0 P0 share of assurances false, %",13.7,13.7,+0.0,,identical,results/tables/policy_summary.csv
+R008,Table 5,"C0 P0 mean false-assurance spell, days",2.74,2.74,+0.00,,identical,results/tables/policy_summary.csv
+R009,Table 5,C0 P0 censored spells,95,95,+0,,identical,results/tables/policy_summary.csv
+R010,Table 5,C0 P1 FASD mean,5.85,5.85,+0.00,-0.0,identical,results/tables/policy_summary.csv
+R011,Table 5,C0 P1 FASD MCSE,0.12,0.12,+0.00,,identical,results/tables/policy_summary.csv
+R012,Table 5,C0 P1 FUSD mean,6.36,6.47,+0.11,+0.8,differs,results/tables/policy_summary.csv
+R013,Table 5,C0 P1 FUSD MCSE,0.13,0.14,+0.01,,differs,results/tables/policy_summary.csv
+R014,Table 5,C0 P1 TOTAL mean,12.21,12.32,+0.11,+0.6,differs,results/tables/policy_summary.csv
+R015,Table 5,C0 P1 TOTAL MCSE,0.19,0.20,+0.01,,differs,results/tables/policy_summary.csv
+R016,Table 5,"C0 P1 share of assurances false, %",8.0,8.0,+0.0,,identical,results/tables/policy_summary.csv
+R017,Table 5,"C0 P1 mean false-assurance spell, days",1.82,1.86,+0.04,,differs,results/tables/policy_summary.csv
+R018,Table 5,C0 P1 censored spells,48,54,+6,,differs,results/tables/policy_summary.csv
+R019,Table 5,C0 P2 FASD mean,5.43,5.42,-0.01,-0.1,differs,results/tables/policy_summary.csv
+R020,Table 5,C0 P2 FASD MCSE,0.11,0.11,+0.00,,identical,results/tables/policy_summary.csv
+R021,Table 5,C0 P2 FUSD mean,6.14,6.25,+0.11,+0.9,differs,results/tables/policy_summary.csv
+R022,Table 5,C0 P2 FUSD MCSE,0.13,0.12,-0.01,,differs,results/tables/policy_summary.csv
+R023,Table 5,C0 P2 TOTAL mean,11.57,11.68,+0.11,+0.6,differs,results/tables/policy_summary.csv
+R024,Table 5,C0 P2 TOTAL MCSE,0.18,0.17,-0.01,,differs,results/tables/policy_summary.csv
+R025,Table 5,"C0 P2 share of assurances false, %",7.4,7.4,+0.0,,identical,results/tables/policy_summary.csv
+R026,Table 5,"C0 P2 mean false-assurance spell, days",1.77,1.78,+0.01,,differs,results/tables/policy_summary.csv
+R027,Table 5,C0 P2 censored spells,47,48,+1,,differs,results/tables/policy_summary.csv
+R028,Table 5,C0 P3 FASD mean,5.31,5.43,+0.12,+1.3,differs,results/tables/policy_summary.csv
+R029,Table 5,C0 P3 FASD MCSE,0.09,0.10,+0.01,,differs,results/tables/policy_summary.csv
+R030,Table 5,C0 P3 FUSD mean,4.39,4.35,-0.04,-0.5,differs,results/tables/policy_summary.csv
+R031,Table 5,C0 P3 FUSD MCSE,0.09,0.08,-0.01,,differs,results/tables/policy_summary.csv
+R032,Table 5,C0 P3 TOTAL mean,9.70,9.78,+0.08,+0.6,differs,results/tables/policy_summary.csv
+R033,Table 5,C0 P3 TOTAL MCSE,0.14,0.14,+0.00,,identical,results/tables/policy_summary.csv
+R034,Table 5,"C0 P3 share of assurances false, %",7.1,7.2,+0.1,,differs,results/tables/policy_summary.csv
+R035,Table 5,"C0 P3 mean false-assurance spell, days",1.68,1.73,+0.05,,differs,results/tables/policy_summary.csv
+R036,Table 5,C0 P3 censored spells,47,36,-11,,differs,results/tables/policy_summary.csv
+R037,Table 6,C0 P3-P1:FASD mean,-0.54,-0.42,+0.12,+1.3,differs,results/tables/paired_results.csv
+R038,Table 6,C0 P3-P1:FASD ci_low,-0.72,-0.60,+0.12,,differs,results/tables/paired_results.csv
+R039,Table 6,C0 P3-P1:FASD ci_high,-0.35,-0.24,+0.11,,differs,results/tables/paired_results.csv
+R040,Table 6,C0 P3-P1:FASD sd,1.63,1.60,-0.03,,differs,results/tables/paired_results.csv
+R041,Table 6,C0 P3-P1:FASD median,-0.37,-0.19,+0.18,,differs,results/tables/paired_results.csv
+R042,Table 6,C0 P3-P1:FASD mcse,0.094,0.092,-0.002,,differs,results/tables/paired_results.csv
+R043,Table 6,"C0 P3-P1:FASD share_negative, %",56,54,-2,,differs,results/tables/paired_results.csv
+R044,Table 6,"C0 P3-P1:FASD share_zero, %",3,4,+1,,differs,results/tables/paired_results.csv
+R045,Table 6,"C0 P3-P1:FASD share_positive, %",41,42,+1,,differs,results/tables/paired_results.csv
+R046,Table 6,C0 P3-P1:FUSD mean,-1.97,-2.12,-0.15,-1.3,differs,results/tables/paired_results.csv
+R047,Table 6,C0 P3-P1:FUSD ci_low,-2.19,-2.35,-0.16,,differs,results/tables/paired_results.csv
+R048,Table 6,C0 P3-P1:FUSD ci_high,-1.75,-1.90,-0.15,,differs,results/tables/paired_results.csv
+R049,Table 6,C0 P3-P1:FUSD sd,1.94,1.99,+0.05,,differs,results/tables/paired_results.csv
+R050,Table 6,C0 P3-P1:FUSD median,-1.85,-2.04,-0.19,,differs,results/tables/paired_results.csv
+R051,Table 6,C0 P3-P1:FUSD mcse,0.112,0.115,+0.003,,differs,results/tables/paired_results.csv
+R052,Table 6,"C0 P3-P1:FUSD share_negative, %",84,83,-1,,differs,results/tables/paired_results.csv
+R053,Table 6,"C0 P3-P1:FUSD share_zero, %",3,2,-1,,differs,results/tables/paired_results.csv
+R054,Table 6,"C0 P3-P1:FUSD share_positive, %",12,14,+2,,differs,results/tables/paired_results.csv
+R055,Table 6,C0 P3-P1:TOTAL mean,-2.51,-2.54,-0.03,-0.2,differs,results/tables/paired_results.csv
+R056,Table 6,C0 P3-P1:TOTAL ci_low,-2.78,-2.83,-0.05,,differs,results/tables/paired_results.csv
+R057,Table 6,C0 P3-P1:TOTAL ci_high,-2.24,-2.26,-0.02,,differs,results/tables/paired_results.csv
+R058,Table 6,C0 P3-P1:TOTAL sd,2.33,2.50,+0.17,,differs,results/tables/paired_results.csv
+R059,Table 6,C0 P3-P1:TOTAL median,-2.22,-2.59,-0.37,,differs,results/tables/paired_results.csv
+R060,Table 6,C0 P3-P1:TOTAL mcse,0.135,0.144,+0.009,,differs,results/tables/paired_results.csv
+R061,Table 6,"C0 P3-P1:TOTAL share_negative, %",87,84,-3,,differs,results/tables/paired_results.csv
+R062,Table 6,"C0 P3-P1:TOTAL share_zero, %",2,1,-1,,differs,results/tables/paired_results.csv
+R063,Table 6,"C0 P3-P1:TOTAL share_positive, %",11,15,+4,,differs,results/tables/paired_results.csv
+R064,Table 6,C0 P3-P2:FASD mean,-0.12,0.01,+0.13,+1.5,differs,results/tables/paired_results.csv
+R065,Table 6,C0 P3-P2:FASD ci_low,-0.29,-0.16,+0.13,,differs,results/tables/paired_results.csv
+R066,Table 6,C0 P3-P2:FASD ci_high,0.05,0.17,+0.12,,differs,results/tables/paired_results.csv
+R067,Table 6,C0 P3-P2:FASD sd,1.50,1.43,-0.07,,differs,results/tables/paired_results.csv
+R068,Table 6,C0 P3-P2:FASD median,0.00,0.00,+0.00,,identical,results/tables/paired_results.csv
+R069,Table 6,C0 P3-P2:FASD mcse,0.087,0.082,-0.005,,differs,results/tables/paired_results.csv
+R070,Table 6,"C0 P3-P2:FASD share_negative, %",48,44,-4,,differs,results/tables/paired_results.csv
+R071,Table 6,"C0 P3-P2:FASD share_zero, %",6,7,+1,,differs,results/tables/paired_results.csv
+R072,Table 6,"C0 P3-P2:FASD share_positive, %",46,49,+3,,differs,results/tables/paired_results.csv
+R073,Table 6,C0 P3-P2:FUSD mean,-1.74,-1.90,-0.16,-1.5,differs,results/tables/paired_results.csv
+R074,Table 6,C0 P3-P2:FUSD ci_low,-1.96,-2.11,-0.15,,differs,results/tables/paired_results.csv
+R075,Table 6,C0 P3-P2:FUSD ci_high,-1.52,-1.69,-0.17,,differs,results/tables/paired_results.csv
+R076,Table 6,C0 P3-P2:FUSD sd,1.94,1.85,-0.09,,differs,results/tables/paired_results.csv
+R077,Table 6,C0 P3-P2:FUSD median,-1.48,-1.85,-0.37,,differs,results/tables/paired_results.csv
+R078,Table 6,C0 P3-P2:FUSD mcse,0.112,0.107,-0.005,,differs,results/tables/paired_results.csv
+R079,Table 6,"C0 P3-P2:FUSD share_negative, %",80,84,+4,,differs,results/tables/paired_results.csv
+R080,Table 6,"C0 P3-P2:FUSD share_zero, %",3,4,+1,,differs,results/tables/paired_results.csv
+R081,Table 6,"C0 P3-P2:FUSD share_positive, %",17,11,-6,,differs,results/tables/paired_results.csv
+R082,Table 6,C0 P3-P2:TOTAL mean,-1.86,-1.90,-0.04,-0.3,differs,results/tables/paired_results.csv
+R083,Table 6,C0 P3-P2:TOTAL ci_low,-2.13,-2.13,+0.00,,identical,results/tables/paired_results.csv
+R084,Table 6,C0 P3-P2:TOTAL ci_high,-1.61,-1.67,-0.06,,differs,results/tables/paired_results.csv
+R085,Table 6,C0 P3-P2:TOTAL sd,2.28,2.06,-0.22,,differs,results/tables/paired_results.csv
+R086,Table 6,C0 P3-P2:TOTAL median,-1.67,-1.67,+0.00,,identical,results/tables/paired_results.csv
+R087,Table 6,C0 P3-P2:TOTAL mcse,0.131,0.119,-0.012,,differs,results/tables/paired_results.csv
+R088,Table 6,"C0 P3-P2:TOTAL share_negative, %",79,81,+2,,differs,results/tables/paired_results.csv
+R089,Table 6,"C0 P3-P2:TOTAL share_zero, %",2,4,+2,,differs,results/tables/paired_results.csv
+R090,Table 6,"C0 P3-P2:TOTAL share_positive, %",19,15,-4,,differs,results/tables/paired_results.csv
+R091,Table 6,C0 P2-P1:FASD mean,-0.42,-0.42,+0.00,-0.1,identical,results/tables/paired_results.csv
+R092,Table 6,C0 P2-P1:FASD ci_low,-0.59,-0.59,+0.00,,identical,results/tables/paired_results.csv
+R093,Table 6,C0 P2-P1:FASD ci_high,-0.25,-0.26,-0.01,,differs,results/tables/paired_results.csv
+R094,Table 6,C0 P2-P1:FASD sd,1.46,1.49,+0.03,,differs,results/tables/paired_results.csv
+R095,Table 6,C0 P2-P1:FASD median,-0.37,-0.37,+0.00,,identical,results/tables/paired_results.csv
+R096,Table 6,C0 P2-P1:FASD mcse,0.084,0.086,+0.002,,differs,results/tables/paired_results.csv
+R097,Table 6,"C0 P2-P1:FASD share_negative, %",57,58,+1,,differs,results/tables/paired_results.csv
+R098,Table 6,"C0 P2-P1:FASD share_zero, %",3,2,-1,,differs,results/tables/paired_results.csv
+R099,Table 6,"C0 P2-P1:FASD share_positive, %",40,40,+0,,identical,results/tables/paired_results.csv
+R100,Table 6,C0 P2-P1:FUSD mean,-0.23,-0.22,+0.01,+0.1,differs,results/tables/paired_results.csv
+R101,Table 6,C0 P2-P1:FUSD ci_low,-0.41,-0.42,-0.01,,differs,results/tables/paired_results.csv
+R102,Table 6,C0 P2-P1:FUSD ci_high,-0.04,-0.02,+0.02,,differs,results/tables/paired_results.csv
+R103,Table 6,C0 P2-P1:FUSD sd,1.61,1.81,+0.20,,differs,results/tables/paired_results.csv
+R104,Table 6,C0 P2-P1:FUSD median,-0.19,-0.19,+0.00,,identical,results/tables/paired_results.csv
+R105,Table 6,C0 P2-P1:FUSD mcse,0.093,0.104,+0.011,,differs,results/tables/paired_results.csv
+R106,Table 6,"C0 P2-P1:FUSD share_negative, %",55,51,-4,,differs,results/tables/paired_results.csv
+R107,Table 6,"C0 P2-P1:FUSD share_zero, %",5,4,-1,,differs,results/tables/paired_results.csv
+R108,Table 6,"C0 P2-P1:FUSD share_positive, %",40,45,+5,,differs,results/tables/paired_results.csv
+R109,Table 6,C0 P2-P1:TOTAL mean,-0.64,-0.64,+0.00,-0.0,identical,results/tables/paired_results.csv
+R110,Table 6,C0 P2-P1:TOTAL ci_low,-0.86,-0.89,-0.03,,differs,results/tables/paired_results.csv
+R111,Table 6,C0 P2-P1:TOTAL ci_high,-0.43,-0.41,+0.02,,differs,results/tables/paired_results.csv
+R112,Table 6,C0 P2-P1:TOTAL sd,1.87,2.12,+0.25,,differs,results/tables/paired_results.csv
+R113,Table 6,C0 P2-P1:TOTAL median,-0.56,-0.56,+0.00,,identical,results/tables/paired_results.csv
+R114,Table 6,C0 P2-P1:TOTAL mcse,0.108,0.122,+0.014,,differs,results/tables/paired_results.csv
+R115,Table 6,"C0 P2-P1:TOTAL share_negative, %",62,59,-3,,differs,results/tables/paired_results.csv
+R116,Table 6,"C0 P2-P1:TOTAL share_zero, %",6,5,-1,,differs,results/tables/paired_results.csv
+R117,Table 6,"C0 P2-P1:TOTAL share_positive, %",32,36,+4,,differs,results/tables/paired_results.csv
+R118,Table 6,C0 P1-P0:FASD mean,-4.30,-4.30,+0.00,-0.0,identical,results/tables/paired_results.csv
+R119,Table 6,C0 P1-P0:FASD ci_low,-4.62,-4.60,+0.02,,differs,results/tables/paired_results.csv
+R120,Table 6,C0 P1-P0:FASD ci_high,-3.99,-4.01,-0.02,,differs,results/tables/paired_results.csv
+R121,Table 6,C0 P1-P0:FASD sd,2.76,2.61,-0.15,,differs,results/tables/paired_results.csv
+R122,Table 6,C0 P1-P0:FASD median,-4.07,-4.07,+0.00,,identical,results/tables/paired_results.csv
+R123,Table 6,C0 P1-P0:FASD mcse,0.160,0.150,-0.010,,differs,results/tables/paired_results.csv
+R124,Table 6,"C0 P1-P0:FASD share_negative, %",95,97,+2,,differs,results/tables/paired_results.csv
+R125,Table 6,"C0 P1-P0:FASD share_zero, %",1,0,-1,,differs,results/tables/paired_results.csv
+R126,Table 6,"C0 P1-P0:FASD share_positive, %",5,3,-2,,differs,results/tables/paired_results.csv
+R127,Table 6,C0 P1-P0:FUSD mean,-3.33,-3.22,+0.11,+0.6,differs,results/tables/paired_results.csv
+R128,Table 6,C0 P1-P0:FUSD ci_low,-3.70,-3.60,+0.10,,differs,results/tables/paired_results.csv
+R129,Table 6,C0 P1-P0:FUSD ci_high,-2.95,-2.83,+0.12,,differs,results/tables/paired_results.csv
+R130,Table 6,C0 P1-P0:FUSD sd,3.38,3.39,+0.01,,differs,results/tables/paired_results.csv
+R131,Table 6,C0 P1-P0:FUSD median,-3.33,-2.96,+0.37,,differs,results/tables/paired_results.csv
+R132,Table 6,C0 P1-P0:FUSD mcse,0.195,0.196,+0.001,,differs,results/tables/paired_results.csv
+R133,Table 6,"C0 P1-P0:FUSD share_negative, %",84,84,+0,,identical,results/tables/paired_results.csv
+R134,Table 6,"C0 P1-P0:FUSD share_zero, %",1,2,+1,,differs,results/tables/paired_results.csv
+R135,Table 6,"C0 P1-P0:FUSD share_positive, %",15,14,-1,,differs,results/tables/paired_results.csv
+R136,Table 6,C0 P1-P0:TOTAL mean,-7.63,-7.52,+0.11,+0.5,differs,results/tables/paired_results.csv
+R137,Table 6,C0 P1-P0:TOTAL ci_low,-8.09,-7.96,+0.13,,differs,results/tables/paired_results.csv
+R138,Table 6,C0 P1-P0:TOTAL ci_high,-7.18,-7.08,+0.10,,differs,results/tables/paired_results.csv
+R139,Table 6,C0 P1-P0:TOTAL sd,4.04,3.91,-0.13,,differs,results/tables/paired_results.csv
+R140,Table 6,C0 P1-P0:TOTAL median,-7.41,-7.04,+0.37,,differs,results/tables/paired_results.csv
+R141,Table 6,C0 P1-P0:TOTAL mcse,0.233,0.226,-0.007,,differs,results/tables/paired_results.csv
+R142,Table 6,"C0 P1-P0:TOTAL share_negative, %",97,98,+1,,differs,results/tables/paired_results.csv
+R143,Table 6,"C0 P1-P0:TOTAL share_zero, %",1,0,-1,,differs,results/tables/paired_results.csv
+R144,Table 6,"C0 P1-P0:TOTAL share_positive, %",2,2,+0,,identical,results/tables/paired_results.csv
+R145,Table 7,C0 P0 checks of A per trajectory,23.0,23.0,+0.0,,identical,results/tables/allocation.csv
+R146,Table 7,C0 P0 mean evidence age at check of A,7.7,7.7,+0.0,,identical,results/tables/allocation.csv
+R147,Table 7,C0 P1 checks of A per trajectory,23.0,23.0,+0.0,,identical,results/tables/allocation.csv
+R148,Table 7,C0 P1 mean evidence age at check of A,7.7,7.7,+0.0,,identical,results/tables/allocation.csv
+R149,Table 7,C0 P2 checks of A per trajectory,28.8,28.8,+0.0,,identical,results/tables/allocation.csv
+R150,Table 7,C0 P2 mean evidence age at check of A,6.1,6.1,+0.0,,identical,results/tables/allocation.csv
+R151,Table 7,C0 P3 checks of A per trajectory,40.9,40.8,-0.1,,differs,results/tables/allocation.csv
+R152,Table 7,C0 P3 mean evidence age at check of A,4.4,4.4,+0.0,,identical,results/tables/allocation.csv
+R153,Table 7,C0 P0 checks of B per trajectory,23.0,23.0,+0.0,,identical,results/tables/allocation.csv
+R154,Table 7,C0 P0 mean evidence age at check of B,7.7,7.7,+0.0,,identical,results/tables/allocation.csv
+R155,Table 7,C0 P1 checks of B per trajectory,22.9,22.9,+0.0,,identical,results/tables/allocation.csv
+R156,Table 7,C0 P1 mean evidence age at check of B,7.7,7.7,+0.0,,identical,results/tables/allocation.csv
+R157,Table 7,C0 P2 checks of B per trajectory,21.3,21.2,-0.1,,differs,results/tables/allocation.csv
+R158,Table 7,C0 P2 mean evidence age at check of B,8.3,8.3,+0.0,,identical,results/tables/allocation.csv
+R159,Table 7,C0 P3 checks of B per trajectory,21.0,21.0,+0.0,,identical,results/tables/allocation.csv
+R160,Table 7,C0 P3 mean evidence age at check of B,8.4,8.4,+0.0,,identical,results/tables/allocation.csv
+R161,Table 7,C0 P0 checks of C per trajectory,23.0,23.0,+0.0,,identical,results/tables/allocation.csv
+R162,Table 7,C0 P0 mean evidence age at check of C,7.8,7.8,+0.0,,identical,results/tables/allocation.csv
+R163,Table 7,C0 P1 checks of C per trajectory,22.6,22.7,+0.1,,differs,results/tables/allocation.csv
+R164,Table 7,C0 P1 mean evidence age at check of C,7.8,7.8,+0.0,,identical,results/tables/allocation.csv
+R165,Table 7,C0 P2 checks of C per trajectory,21.1,21.1,+0.0,,identical,results/tables/allocation.csv
+R166,Table 7,C0 P2 mean evidence age at check of C,8.3,8.3,+0.0,,identical,results/tables/allocation.csv
+R167,Table 7,C0 P3 checks of C per trajectory,20.8,20.7,-0.1,,differs,results/tables/allocation.csv
+R168,Table 7,C0 P3 mean evidence age at check of C,8.5,8.5,+0.0,,identical,results/tables/allocation.csv
+R169,Table 7,C0 P0 checks of D per trajectory,23.0,23.0,+0.0,,identical,results/tables/allocation.csv
+R170,Table 7,C0 P0 mean evidence age at check of D,7.8,7.8,+0.0,,identical,results/tables/allocation.csv
+R171,Table 7,C0 P1 checks of D per trajectory,22.7,22.7,+0.0,,identical,results/tables/allocation.csv
+R172,Table 7,C0 P1 mean evidence age at check of D,7.8,7.8,+0.0,,identical,results/tables/allocation.csv
+R173,Table 7,C0 P2 checks of D per trajectory,20.6,20.7,+0.1,,differs,results/tables/allocation.csv
+R174,Table 7,C0 P2 mean evidence age at check of D,8.5,8.5,+0.0,,identical,results/tables/allocation.csv
+R175,Table 7,C0 P3 checks of D per trajectory,13.4,13.5,+0.1,,differs,results/tables/allocation.csv
+R176,Table 7,C0 P3 mean evidence age at check of D,12.9,12.9,+0.0,,identical,results/tables/allocation.csv
+R177,Table 7,C0 P0 checks of E per trajectory,22.0,22.0,+0.0,,identical,results/tables/allocation.csv
+R178,Table 7,C0 P0 mean evidence age at check of E,7.9,7.9,+0.0,,identical,results/tables/allocation.csv
+R179,Table 7,C0 P1 checks of E per trajectory,22.3,22.3,+0.0,,identical,results/tables/allocation.csv
+R180,Table 7,C0 P1 mean evidence age at check of E,7.9,7.9,+0.0,,identical,results/tables/allocation.csv
+R181,Table 7,C0 P2 checks of E per trajectory,20.4,20.4,+0.0,,identical,results/tables/allocation.csv
+R182,Table 7,C0 P2 mean evidence age at check of E,8.6,8.6,+0.0,,identical,results/tables/allocation.csv
+R183,Table 7,C0 P3 checks of E per trajectory,13.4,13.3,-0.1,,differs,results/tables/allocation.csv
+R184,Table 7,C0 P3 mean evidence age at check of E,13.0,13.1,+0.1,,differs,results/tables/allocation.csv
+R185,Table 7,C0 P0 checks of F per trajectory,22.0,22.0,+0.0,,identical,results/tables/allocation.csv
+R186,Table 7,C0 P0 mean evidence age at check of F,7.9,7.9,+0.0,,identical,results/tables/allocation.csv
+R187,Table 7,C0 P1 checks of F per trajectory,22.2,22.2,+0.0,,identical,results/tables/allocation.csv
+R188,Table 7,C0 P1 mean evidence age at check of F,8.0,8.0,+0.0,,identical,results/tables/allocation.csv
+R189,Table 7,C0 P2 checks of F per trajectory,23.7,23.7,+0.0,,identical,results/tables/allocation.csv
+R190,Table 7,C0 P2 mean evidence age at check of F,7.4,7.4,+0.0,,identical,results/tables/allocation.csv
+R191,Table 7,C0 P3 checks of F per trajectory,29.6,29.8,+0.2,,differs,results/tables/allocation.csv
+R192,Table 7,C0 P3 mean evidence age at check of F,6.0,5.9,-0.1,,differs,results/tables/allocation.csv
+R193,Table 7,C0 P0 checks of G per trajectory,22.0,22.0,+0.0,,identical,results/tables/allocation.csv
+R194,Table 7,C0 P0 mean evidence age at check of G,8.0,8.0,+0.0,,identical,results/tables/allocation.csv
+R195,Table 7,C0 P1 checks of G per trajectory,22.1,22.1,+0.0,,identical,results/tables/allocation.csv
+R196,Table 7,C0 P1 mean evidence age at check of G,8.0,8.0,+0.0,,identical,results/tables/allocation.csv
+R197,Table 7,C0 P2 checks of G per trajectory,22.0,22.0,+0.0,,identical,results/tables/allocation.csv
+R198,Table 7,C0 P2 mean evidence age at check of G,8.0,8.0,+0.0,,identical,results/tables/allocation.csv
+R199,Table 7,C0 P3 checks of G per trajectory,20.6,20.5,-0.1,,differs,results/tables/allocation.csv
+R200,Table 7,C0 P3 mean evidence age at check of G,8.5,8.6,+0.1,,differs,results/tables/allocation.csv
+R201,Table 7,C0 P0 checks of H per trajectory,22.0,22.0,+0.0,,identical,results/tables/allocation.csv
+R202,Table 7,C0 P0 mean evidence age at check of H,8.0,8.0,+0.0,,identical,results/tables/allocation.csv
+R203,Table 7,C0 P1 checks of H per trajectory,22.1,22.1,+0.0,,identical,results/tables/allocation.csv
+R204,Table 7,C0 P1 mean evidence age at check of H,8.0,8.0,+0.0,,identical,results/tables/allocation.csv
+R205,Table 7,C0 P2 checks of H per trajectory,22.0,22.0,+0.0,,identical,results/tables/allocation.csv
+R206,Table 7,C0 P2 mean evidence age at check of H,8.0,8.0,+0.0,,identical,results/tables/allocation.csv
+R207,Table 7,C0 P3 checks of H per trajectory,20.3,20.4,+0.1,,differs,results/tables/allocation.csv
+R208,Table 7,C0 P3 mean evidence age at check of H,8.7,8.6,-0.1,,differs,results/tables/allocation.csv
+R209,Section 5.3,C0 P0 days from failed check to next check,8.00,8.00,+0.00,,identical,results/tables/recheck_delay.csv
+R210,Section 5.3,C0 P1 days from failed check to next check,6.01,6.00,-0.01,,differs,results/tables/recheck_delay.csv
+R211,Section 5.3,C0 P3 days from failed check to next check,5.59,5.55,-0.04,,differs,results/tables/recheck_delay.csv
+R212,Table 8,C0 P1 FASD mean,5.85,5.85,+0.00,-0.0,identical,results/tables/policy_summary.csv
+R213,Table 8,C0 P2 FASD mean,5.43,5.42,-0.01,-0.1,differs,results/tables/policy_summary.csv
+R214,Table 8,C0 P3 FASD mean,5.31,5.43,+0.12,+1.3,differs,results/tables/policy_summary.csv
+R215,Table 8,C0 P3-P1:FASD mean,-0.54,-0.42,+0.12,+1.3,differs,results/tables/paired_results.csv
+R216,Table 8,C0 P3-P1:FASD ci_low,-0.72,-0.60,+0.12,,differs,results/tables/paired_results.csv
+R217,Table 8,C0 P3-P1:FASD ci_high,-0.35,-0.24,+0.11,,differs,results/tables/paired_results.csv
+R218,Table 8,C0 P3-P2:FASD mean,-0.12,0.01,+0.13,+1.5,differs,results/tables/paired_results.csv
+R219,Table 8,C0 P3-P2:FASD ci_low,-0.29,-0.16,+0.13,,differs,results/tables/paired_results.csv
+R220,Table 8,C0 P3-P2:FASD ci_high,0.05,0.17,+0.12,,differs,results/tables/paired_results.csv
+R221,Table 8,C0 P3-P1:FUSD mean,-1.97,-2.12,-0.15,-1.3,differs,results/tables/paired_results.csv
+R222,Table 8,C0 P3-P1:FUSD ci_low,-2.19,-2.35,-0.16,,differs,results/tables/paired_results.csv
+R223,Table 8,C0 P3-P1:FUSD ci_high,-1.75,-1.90,-0.15,,differs,results/tables/paired_results.csv
+R224,Table 8,C0 P3-P1:TOTAL mean,-2.51,-2.54,-0.03,-0.2,differs,results/tables/paired_results.csv
+R225,Table 8,C0 P3-P1:TOTAL ci_low,-2.78,-2.83,-0.05,,differs,results/tables/paired_results.csv
+R226,Table 8,C0 P3-P1:TOTAL ci_high,-2.24,-2.26,-0.02,,differs,results/tables/paired_results.csv
+R227,Table 8,C1 P1 FASD mean,24.76,24.76,+0.00,-0.0,identical,results/tables/policy_summary.csv
+R228,Table 8,C1 P2 FASD mean,24.76,24.76,+0.00,-0.0,identical,results/tables/policy_summary.csv
+R229,Table 8,C1 P3 FASD mean,24.76,24.76,+0.00,-0.0,identical,results/tables/policy_summary.csv
+R230,Table 8,C1 P3-P1:FASD mean,0.00,0.00,+0.00,,identical,results/tables/paired_results.csv
+R231,Table 8,C1 P3-P1:FASD ci_low,0.00,0.00,+0.00,,identical,results/tables/paired_results.csv
+R232,Table 8,C1 P3-P1:FASD ci_high,0.00,0.00,+0.00,,identical,results/tables/paired_results.csv
+R233,Table 8,C1 P3-P2:FASD mean,0.00,0.00,+0.00,,identical,results/tables/paired_results.csv
+R234,Table 8,C1 P3-P2:FASD ci_low,0.00,0.00,+0.00,,identical,results/tables/paired_results.csv
+R235,Table 8,C1 P3-P2:FASD ci_high,0.00,0.00,+0.00,,identical,results/tables/paired_results.csv
+R236,Table 8,C1 P3-P1:FUSD mean,0.00,0.00,+0.00,,identical,results/tables/paired_results.csv
+R237,Table 8,C1 P3-P1:FUSD ci_low,0.00,0.00,+0.00,,identical,results/tables/paired_results.csv
+R238,Table 8,C1 P3-P1:FUSD ci_high,0.00,0.00,+0.00,,identical,results/tables/paired_results.csv
+R239,Table 8,C1 P3-P1:TOTAL mean,0.00,0.00,+0.00,,identical,results/tables/paired_results.csv
+R240,Table 8,C1 P3-P1:TOTAL ci_low,0.00,0.00,+0.00,,identical,results/tables/paired_results.csv
+R241,Table 8,C1 P3-P1:TOTAL ci_high,0.00,0.00,+0.00,,identical,results/tables/paired_results.csv
+R242,Table 8,C2 P1 FASD mean,3.59,3.63,+0.04,+0.5,differs,results/tables/policy_summary.csv
+R243,Table 8,C2 P2 FASD mean,3.50,3.41,-0.09,-1.2,differs,results/tables/policy_summary.csv
+R244,Table 8,C2 P3 FASD mean,3.03,2.98,-0.05,-0.8,differs,results/tables/policy_summary.csv
+R245,Table 8,C2 P3-P1:FASD mean,-0.57,-0.64,-0.07,-1.1,differs,results/tables/paired_results.csv
+R246,Table 8,C2 P3-P1:FASD ci_low,-0.70,-0.78,-0.08,,differs,results/tables/paired_results.csv
+R247,Table 8,C2 P3-P1:FASD ci_high,-0.44,-0.51,-0.07,,differs,results/tables/paired_results.csv
+R248,Table 8,C2 P3-P2:FASD mean,-0.47,-0.43,+0.04,+0.6,differs,results/tables/paired_results.csv
+R249,Table 8,C2 P3-P2:FASD ci_low,-0.59,-0.56,+0.03,,differs,results/tables/paired_results.csv
+R250,Table 8,C2 P3-P2:FASD ci_high,-0.34,-0.29,+0.05,,differs,results/tables/paired_results.csv
+R251,Table 8,C2 P3-P1:FUSD mean,-1.73,-1.66,+0.07,+1.0,differs,results/tables/paired_results.csv
+R252,Table 8,C2 P3-P1:FUSD ci_low,-1.87,-1.80,+0.07,,differs,results/tables/paired_results.csv
+R253,Table 8,C2 P3-P1:FUSD ci_high,-1.60,-1.52,+0.08,,differs,results/tables/paired_results.csv
+R254,Table 8,C2 P3-P1:TOTAL mean,-2.30,-2.31,-0.01,-0.1,differs,results/tables/paired_results.csv
+R255,Table 8,C2 P3-P1:TOTAL ci_low,-2.51,-2.50,+0.01,,differs,results/tables/paired_results.csv
+R256,Table 8,C2 P3-P1:TOTAL ci_high,-2.10,-2.12,-0.02,,differs,results/tables/paired_results.csv
+R257,Table 8,C3 P1 FASD mean,1.72,1.72,+0.00,-0.0,identical,results/tables/policy_summary.csv
+R258,Table 8,C3 P2 FASD mean,1.72,1.71,-0.01,-0.2,differs,results/tables/policy_summary.csv
+R259,Table 8,C3 P3 FASD mean,1.07,1.08,+0.01,+0.2,differs,results/tables/policy_summary.csv
+R260,Table 8,C3 P3-P1:FASD mean,-0.65,-0.64,+0.01,+0.1,differs,results/tables/paired_results.csv
+R261,Table 8,C3 P3-P1:FASD ci_low,-0.74,-0.73,+0.01,,differs,results/tables/paired_results.csv
+R262,Table 8,C3 P3-P1:FASD ci_high,-0.56,-0.56,+0.00,,identical,results/tables/paired_results.csv
+R263,Table 8,C3 P3-P2:FASD mean,-0.65,-0.64,+0.01,+0.3,differs,results/tables/paired_results.csv
+R264,Table 8,C3 P3-P2:FASD ci_low,-0.74,-0.72,+0.02,,differs,results/tables/paired_results.csv
+R265,Table 8,C3 P3-P2:FASD ci_high,-0.55,-0.55,+0.00,,identical,results/tables/paired_results.csv
+R266,Table 8,C3 P3-P1:FUSD mean,-1.01,-0.98,+0.03,+0.6,differs,results/tables/paired_results.csv
+R267,Table 8,C3 P3-P1:FUSD ci_low,-1.09,-1.06,+0.03,,differs,results/tables/paired_results.csv
+R268,Table 8,C3 P3-P1:FUSD ci_high,-0.94,-0.90,+0.04,,differs,results/tables/paired_results.csv
+R269,Table 8,C3 P3-P1:TOTAL mean,-1.66,-1.63,+0.03,+0.5,differs,results/tables/paired_results.csv
+R270,Table 8,C3 P3-P1:TOTAL ci_low,-1.78,-1.74,+0.04,,differs,results/tables/paired_results.csv
+R271,Table 8,C3 P3-P1:TOTAL ci_high,-1.54,-1.51,+0.03,,differs,results/tables/paired_results.csv
+R272,Table 8,C4 P1 FASD mean,8.45,8.41,-0.04,-0.3,differs,results/tables/policy_summary.csv
+R273,Table 8,C4 P2 FASD mean,7.95,8.02,+0.07,+0.5,differs,results/tables/policy_summary.csv
+R274,Table 8,C4 P3 FASD mean,7.56,7.59,+0.03,+0.2,differs,results/tables/policy_summary.csv
+R275,Table 8,C4 P3-P1:FASD mean,-0.89,-0.82,+0.07,+0.5,differs,results/tables/paired_results.csv
+R276,Table 8,C4 P3-P1:FASD ci_low,-1.14,-1.10,+0.04,,differs,results/tables/paired_results.csv
+R277,Table 8,C4 P3-P1:FASD ci_high,-0.64,-0.54,+0.10,,differs,results/tables/paired_results.csv
+R278,Table 8,C4 P3-P2:FASD mean,-0.39,-0.43,-0.04,-0.3,differs,results/tables/paired_results.csv
+R279,Table 8,C4 P3-P2:FASD ci_low,-0.65,-0.68,-0.03,,differs,results/tables/paired_results.csv
+R280,Table 8,C4 P3-P2:FASD ci_high,-0.14,-0.17,-0.03,,differs,results/tables/paired_results.csv
+R281,Table 8,C4 P3-P1:FUSD mean,-3.35,-3.55,-0.20,-1.2,differs,results/tables/paired_results.csv
+R282,Table 8,C4 P3-P1:FUSD ci_low,-3.66,-3.87,-0.21,,differs,results/tables/paired_results.csv
+R283,Table 8,C4 P3-P1:FUSD ci_high,-3.03,-3.23,-0.20,,differs,results/tables/paired_results.csv
+R284,Table 8,C4 P3-P1:TOTAL mean,-4.23,-4.36,-0.13,-0.7,differs,results/tables/paired_results.csv
+R285,Table 8,C4 P3-P1:TOTAL ci_low,-4.61,-4.75,-0.14,,differs,results/tables/paired_results.csv
+R286,Table 8,C4 P3-P1:TOTAL ci_high,-3.86,-4.00,-0.14,,differs,results/tables/paired_results.csv
+R287,Table 8,C5 P1 FASD mean,4.40,4.43,+0.03,+0.3,differs,results/tables/policy_summary.csv
+R288,Table 8,C5 P2 FASD mean,4.24,4.22,-0.02,-0.2,differs,results/tables/policy_summary.csv
+R289,Table 8,C5 P3 FASD mean,4.22,4.19,-0.03,-0.4,differs,results/tables/policy_summary.csv
+R290,Table 8,C5 P3-P1:FASD mean,-0.18,-0.24,-0.06,-0.8,differs,results/tables/paired_results.csv
+R291,Table 8,C5 P3-P1:FASD ci_low,-0.30,-0.37,-0.07,,differs,results/tables/paired_results.csv
+R292,Table 8,C5 P3-P1:FASD ci_high,-0.07,-0.11,-0.04,,differs,results/tables/paired_results.csv
+R293,Table 8,C5 P3-P2:FASD mean,-0.02,-0.04,-0.02,-0.3,differs,results/tables/paired_results.csv
+R294,Table 8,C5 P3-P2:FASD ci_low,-0.13,-0.16,-0.03,,differs,results/tables/paired_results.csv
+R295,Table 8,C5 P3-P2:FASD ci_high,0.10,0.08,-0.02,,differs,results/tables/paired_results.csv
+R296,Table 8,C5 P3-P1:FUSD mean,-1.50,-1.50,+0.00,+0.0,identical,results/tables/paired_results.csv
+R297,Table 8,C5 P3-P1:FUSD ci_low,-1.66,-1.64,+0.02,,differs,results/tables/paired_results.csv
+R298,Table 8,C5 P3-P1:FUSD ci_high,-1.34,-1.36,-0.02,,differs,results/tables/paired_results.csv
+R299,Table 8,C5 P3-P1:TOTAL mean,-1.68,-1.73,-0.05,-0.6,differs,results/tables/paired_results.csv
+R300,Table 8,C5 P3-P1:TOTAL ci_low,-1.87,-1.92,-0.05,,differs,results/tables/paired_results.csv
+R301,Table 8,C5 P3-P1:TOTAL ci_high,-1.49,-1.55,-0.06,,differs,results/tables/paired_results.csv
+R302,Table 8,C6 P1 FASD mean,7.59,7.52,-0.07,-0.4,differs,results/tables/policy_summary.csv
+R303,Table 8,C6 P2 FASD mean,7.11,6.95,-0.16,-1.2,differs,results/tables/policy_summary.csv
+R304,Table 8,C6 P3 FASD mean,6.62,6.51,-0.11,-0.9,differs,results/tables/policy_summary.csv
+R305,Table 8,C6 P3-P1:FASD mean,-0.98,-1.02,-0.04,-0.3,differs,results/tables/paired_results.csv
+R306,Table 8,C6 P3-P1:FASD ci_low,-1.22,-1.28,-0.06,,differs,results/tables/paired_results.csv
+R307,Table 8,C6 P3-P1:FASD ci_high,-0.74,-0.77,-0.03,,differs,results/tables/paired_results.csv
+R308,Table 8,C6 P3-P2:FASD mean,-0.50,-0.44,+0.06,+0.5,differs,results/tables/paired_results.csv
+R309,Table 8,C6 P3-P2:FASD ci_low,-0.72,-0.66,+0.06,,differs,results/tables/paired_results.csv
+R310,Table 8,C6 P3-P2:FASD ci_high,-0.27,-0.22,+0.05,,differs,results/tables/paired_results.csv
+R311,Table 8,C6 P3-P1:FUSD mean,-3.15,-3.36,-0.21,-1.2,differs,results/tables/paired_results.csv
+R312,Table 8,C6 P3-P1:FUSD ci_low,-3.49,-3.71,-0.22,,differs,results/tables/paired_results.csv
+R313,Table 8,C6 P3-P1:FUSD ci_high,-2.82,-3.01,-0.19,,differs,results/tables/paired_results.csv
+R314,Table 8,C6 P3-P1:TOTAL mean,-4.13,-4.38,-0.25,-1.2,differs,results/tables/paired_results.csv
+R315,Table 8,C6 P3-P1:TOTAL ci_low,-4.50,-4.79,-0.29,,differs,results/tables/paired_results.csv
+R316,Table 8,C6 P3-P1:TOTAL ci_high,-3.76,-3.97,-0.21,,differs,results/tables/paired_results.csv
+R317,Table 8,C7 P1 FASD mean,5.95,5.94,-0.01,-0.1,differs,results/tables/policy_summary.csv
+R318,Table 8,C7 P2 FASD mean,5.84,5.87,+0.03,+0.3,differs,results/tables/policy_summary.csv
+R319,Table 8,C7 P3 FASD mean,5.78,5.69,-0.09,-0.9,differs,results/tables/policy_summary.csv
+R320,Table 8,C7 P3-P1:FASD mean,-0.17,-0.25,-0.08,-0.9,differs,results/tables/paired_results.csv
+R321,Table 8,C7 P3-P1:FASD ci_low,-0.34,-0.41,-0.07,,differs,results/tables/paired_results.csv
+R322,Table 8,C7 P3-P1:FASD ci_high,-0.00,-0.09,-0.09,,differs,results/tables/paired_results.csv
+R323,Table 8,C7 P3-P2:FASD mean,-0.06,-0.18,-0.12,-1.4,differs,results/tables/paired_results.csv
+R324,Table 8,C7 P3-P2:FASD ci_low,-0.26,-0.36,-0.10,,differs,results/tables/paired_results.csv
+R325,Table 8,C7 P3-P2:FASD ci_high,0.11,-0.01,-0.12,,differs,results/tables/paired_results.csv
+R326,Table 8,C7 P3-P1:FUSD mean,-2.28,-2.32,-0.04,-0.4,differs,results/tables/paired_results.csv
+R327,Table 8,C7 P3-P1:FUSD ci_low,-2.52,-2.57,-0.05,,differs,results/tables/paired_results.csv
+R328,Table 8,C7 P3-P1:FUSD ci_high,-2.04,-2.09,-0.05,,differs,results/tables/paired_results.csv
+R329,Table 8,C7 P3-P1:TOTAL mean,-2.45,-2.57,-0.12,-0.9,differs,results/tables/paired_results.csv
+R330,Table 8,C7 P3-P1:TOTAL ci_low,-2.73,-2.85,-0.12,,differs,results/tables/paired_results.csv
+R331,Table 8,C7 P3-P1:TOTAL ci_high,-2.18,-2.30,-0.12,,differs,results/tables/paired_results.csv
+R332,Table 8,C8 P1 FASD mean,7.45,7.54,+0.09,+0.6,differs,results/tables/policy_summary.csv
+R333,Table 8,C8 P2 FASD mean,7.31,7.25,-0.06,-0.4,differs,results/tables/policy_summary.csv
+R334,Table 8,C8 P3 FASD mean,7.03,7.14,+0.11,+0.8,differs,results/tables/policy_summary.csv
+R335,Table 8,C8 P3-P1:FASD mean,-0.42,-0.40,+0.02,+0.3,differs,results/tables/paired_results.csv
+R336,Table 8,C8 P3-P1:FASD ci_low,-0.59,-0.56,+0.03,,differs,results/tables/paired_results.csv
+R337,Table 8,C8 P3-P1:FASD ci_high,-0.25,-0.24,+0.01,,differs,results/tables/paired_results.csv
+R338,Table 8,C8 P3-P2:FASD mean,-0.28,-0.11,+0.17,+2.3,differs,results/tables/paired_results.csv
+R339,Table 8,C8 P3-P2:FASD ci_low,-0.44,-0.25,+0.19,,differs,results/tables/paired_results.csv
+R340,Table 8,C8 P3-P2:FASD ci_high,-0.13,0.04,+0.17,,differs,results/tables/paired_results.csv
+R341,Table 8,C8 P3-P1:FUSD mean,-1.85,-1.90,-0.05,-0.5,differs,results/tables/paired_results.csv
+R342,Table 8,C8 P3-P1:FUSD ci_low,-2.08,-2.10,-0.02,,differs,results/tables/paired_results.csv
+R343,Table 8,C8 P3-P1:FUSD ci_high,-1.63,-1.70,-0.07,,differs,results/tables/paired_results.csv
+R344,Table 8,C8 P3-P1:TOTAL mean,-2.27,-2.30,-0.03,-0.2,differs,results/tables/paired_results.csv
+R345,Table 8,C8 P3-P1:TOTAL ci_low,-2.56,-2.55,+0.01,,differs,results/tables/paired_results.csv
+R346,Table 8,C8 P3-P1:TOTAL ci_high,-1.99,-2.05,-0.06,,differs,results/tables/paired_results.csv
+R347,Table 8,C9 P1 FASD mean,7.14,7.00,-0.14,-1.4,differs,results/tables/policy_summary.csv
+R348,Table 8,C9 P2 FASD mean,7.00,7.05,+0.05,+0.5,differs,results/tables/policy_summary.csv
+R349,Table 8,C9 P3 FASD mean,6.59,6.55,-0.04,-0.4,differs,results/tables/policy_summary.csv
+R350,Table 8,C9 P3-P1:FASD mean,-0.55,-0.45,+0.10,+1.2,differs,results/tables/paired_results.csv
+R351,Table 8,C9 P3-P1:FASD ci_low,-0.72,-0.61,+0.11,,differs,results/tables/paired_results.csv
+R352,Table 8,C9 P3-P1:FASD ci_high,-0.37,-0.29,+0.08,,differs,results/tables/paired_results.csv
+R353,Table 8,C9 P3-P2:FASD mean,-0.41,-0.51,-0.10,-1.1,differs,results/tables/paired_results.csv
+R354,Table 8,C9 P3-P2:FASD ci_low,-0.59,-0.67,-0.08,,differs,results/tables/paired_results.csv
+R355,Table 8,C9 P3-P2:FASD ci_high,-0.22,-0.33,-0.11,,differs,results/tables/paired_results.csv
+R356,Table 8,C9 P3-P1:FUSD mean,-2.87,-2.89,-0.02,-0.1,differs,results/tables/paired_results.csv
+R357,Table 8,C9 P3-P1:FUSD ci_low,-3.13,-3.15,-0.02,,differs,results/tables/paired_results.csv
+R358,Table 8,C9 P3-P1:FUSD ci_high,-2.61,-2.62,-0.01,,differs,results/tables/paired_results.csv
+R359,Table 8,C9 P3-P1:TOTAL mean,-3.41,-3.33,+0.08,+0.5,differs,results/tables/paired_results.csv
+R360,Table 8,C9 P3-P1:TOTAL ci_low,-3.70,-3.60,+0.10,,differs,results/tables/paired_results.csv
+R361,Table 8,C9 P3-P1:TOTAL ci_high,-3.13,-3.06,+0.07,,differs,results/tables/paired_results.csv
+R362,Table 8,C10 P1 FASD mean,10.11,10.11,+0.00,+0.0,identical,results/tables/policy_summary.csv
+R363,Table 8,C10 P2 FASD mean,9.78,9.78,+0.00,-0.0,identical,results/tables/policy_summary.csv
+R364,Table 8,C10 P3 FASD mean,9.07,9.07,+0.00,-0.0,identical,results/tables/policy_summary.csv
+R365,Table 8,C10 P3-P1:FASD mean,-1.05,-1.05,+0.00,+0.0,identical,results/tables/paired_results.csv
+R366,Table 8,C10 P3-P1:FASD ci_low,-1.32,-1.32,+0.00,,identical,results/tables/paired_results.csv
+R367,Table 8,C10 P3-P1:FASD ci_high,-0.77,-0.78,-0.01,,differs,results/tables/paired_results.csv
+R368,Table 8,C10 P3-P2:FASD mean,-0.71,-0.71,+0.00,-0.0,identical,results/tables/paired_results.csv
+R369,Table 8,C10 P3-P2:FASD ci_low,-0.99,-0.99,+0.00,,identical,results/tables/paired_results.csv
+R370,Table 8,C10 P3-P2:FASD ci_high,-0.43,-0.44,-0.01,,differs,results/tables/paired_results.csv
+R371,Table 8,C10 P3-P1:FUSD mean,-3.85,-3.85,+0.00,+0.0,identical,results/tables/paired_results.csv
+R372,Table 8,C10 P3-P1:FUSD ci_low,-4.20,-4.20,+0.00,,identical,results/tables/paired_results.csv
+R373,Table 8,C10 P3-P1:FUSD ci_high,-3.49,-3.50,-0.01,,differs,results/tables/paired_results.csv
+R374,Table 8,C10 P3-P1:TOTAL mean,-4.90,-4.90,+0.00,+0.0,identical,results/tables/paired_results.csv
+R375,Table 8,C10 P3-P1:TOTAL ci_low,-5.32,-5.31,+0.01,,differs,results/tables/paired_results.csv
+R376,Table 8,C10 P3-P1:TOTAL ci_high,-4.47,-4.49,-0.02,,differs,results/tables/paired_results.csv
+R377,Table 8,C11 P1 FASD mean,7.96,7.88,-0.08,-0.6,differs,results/tables/policy_summary.csv
+R378,Table 8,C11 P2 FASD mean,7.19,7.30,+0.11,+0.8,differs,results/tables/policy_summary.csv
+R379,Table 8,C11 P3 FASD mean,6.81,6.65,-0.16,-1.5,differs,results/tables/policy_summary.csv
+R380,Table 8,C11 P3-P1:FASD mean,-1.15,-1.23,-0.08,-0.6,differs,results/tables/paired_results.csv
+R381,Table 8,C11 P3-P1:FASD ci_low,-1.41,-1.47,-0.06,,differs,results/tables/paired_results.csv
+R382,Table 8,C11 P3-P1:FASD ci_high,-0.90,-0.98,-0.08,,differs,results/tables/paired_results.csv
+R383,Table 8,C11 P3-P2:FASD mean,-0.38,-0.65,-0.27,-2.2,differs,results/tables/paired_results.csv
+R384,Table 8,C11 P3-P2:FASD ci_low,-0.61,-0.88,-0.27,,differs,results/tables/paired_results.csv
+R385,Table 8,C11 P3-P2:FASD ci_high,-0.15,-0.42,-0.27,,differs,results/tables/paired_results.csv
+R386,Table 8,C11 P3-P1:FUSD mean,-3.80,-3.52,+0.28,+1.8,differs,results/tables/paired_results.csv
+R387,Table 8,C11 P3-P1:FUSD ci_low,-4.12,-3.83,+0.29,,differs,results/tables/paired_results.csv
+R388,Table 8,C11 P3-P1:FUSD ci_high,-3.48,-3.20,+0.28,,differs,results/tables/paired_results.csv
+R389,Table 8,C11 P3-P1:TOTAL mean,-4.95,-4.75,+0.20,+1.1,differs,results/tables/paired_results.csv
+R390,Table 8,C11 P3-P1:TOTAL ci_low,-5.31,-5.11,+0.20,,differs,results/tables/paired_results.csv
+R391,Table 8,C11 P3-P1:TOTAL ci_high,-4.58,-4.37,+0.21,,differs,results/tables/paired_results.csv
+R392,Table 8,C12 P1 FASD mean,5.38,5.30,-0.08,-0.8,differs,results/tables/policy_summary.csv
+R393,Table 8,C12 P2 FASD mean,5.19,5.14,-0.05,-0.5,differs,results/tables/policy_summary.csv
+R394,Table 8,C12 P3 FASD mean,4.94,4.91,-0.03,-0.3,differs,results/tables/policy_summary.csv
+R395,Table 8,C12 P3-P1:FASD mean,-0.44,-0.38,+0.06,+0.7,differs,results/tables/paired_results.csv
+R396,Table 8,C12 P3-P1:FASD ci_low,-0.60,-0.54,+0.06,,differs,results/tables/paired_results.csv
+R397,Table 8,C12 P3-P1:FASD ci_high,-0.29,-0.23,+0.06,,differs,results/tables/paired_results.csv
+R398,Table 8,C12 P3-P2:FASD mean,-0.25,-0.23,+0.02,+0.3,differs,results/tables/paired_results.csv
+R399,Table 8,C12 P3-P2:FASD ci_low,-0.41,-0.37,+0.04,,differs,results/tables/paired_results.csv
+R400,Table 8,C12 P3-P2:FASD ci_high,-0.11,-0.09,+0.02,,differs,results/tables/paired_results.csv
+R401,Table 8,C12 P3-P1:FUSD mean,-1.68,-1.79,-0.11,-0.9,differs,results/tables/paired_results.csv
+R402,Table 8,C12 P3-P1:FUSD ci_low,-1.90,-2.00,-0.10,,differs,results/tables/paired_results.csv
+R403,Table 8,C12 P3-P1:FUSD ci_high,-1.46,-1.57,-0.11,,differs,results/tables/paired_results.csv
+R404,Table 8,C12 P3-P1:TOTAL mean,-2.12,-2.17,-0.05,-0.4,differs,results/tables/paired_results.csv
+R405,Table 8,C12 P3-P1:TOTAL ci_low,-2.37,-2.41,-0.04,,differs,results/tables/paired_results.csv
+R406,Table 8,C12 P3-P1:TOTAL ci_high,-1.88,-1.92,-0.04,,differs,results/tables/paired_results.csv
+R407,Section 5.6,"C0 shortest of the four longest spells, days",10,9,-1,,differs,results/tables/policy_summary.csv
+R408,Section 5.6,"C0 longest false-assurance spell, days",15,15,+0,,identical,results/tables/policy_summary.csv
+R409,Section 5.6,"C8 shortest of the four longest spells, days",34,34,+0,,identical,results/tables/policy_summary.csv
+R410,Section 5.6,"C8 longest false-assurance spell, days",35,34,-1,,differs,results/tables/policy_summary.csv

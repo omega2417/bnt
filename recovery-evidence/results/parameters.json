@@ -1,0 +1,372 @@
+{
+  "schema": "recovery-evidence/conditions/1",
+  "conditions": [
+    {
+      "id": 0,
+      "name": "C0",
+      "label": "Baseline",
+      "question": "Primary effect",
+      "T": 180,
+      "R": 300,
+      "b": 1,
+      "p_fail": 0.02,
+      "p_rec": 0.2,
+      "p_report": 0.8,
+      "delay_values": [
+        0,
+        1,
+        2
+      ],
+      "p_nonsubstantive": 0.01,
+      "w": 7,
+      "evaluator_map": "reference",
+      "operator_map": "reference",
+      "suppressed_components": [],
+      "p_joint": 0.0,
+      "joint_components": [
+        "D",
+        "E"
+      ],
+      "root_entropy": 20261123
+    },
+    {
+      "id": 1,
+      "name": "C1",
+      "label": "b=0",
+      "question": "Effect of budget",
+      "T": 180,
+      "R": 300,
+      "b": 0,
+      "p_fail": 0.02,
+      "p_rec": 0.2,
+      "p_report": 0.8,
+      "delay_values": [
+        0,
+        1,
+        2
+      ],
+      "p_nonsubstantive": 0.01,
+      "w": 7,
+      "evaluator_map": "reference",
+      "operator_map": "reference",
+      "suppressed_components": [],
+      "p_joint": 0.0,
+      "joint_components": [
+        "D",
+        "E"
+      ],
+      "root_entropy": 20261123
+    },
+    {
+      "id": 2,
+      "name": "C2",
+      "label": "b=2",
+      "question": "Effect of budget",
+      "T": 180,
+      "R": 300,
+      "b": 2,
+      "p_fail": 0.02,
+      "p_rec": 0.2,
+      "p_report": 0.8,
+      "delay_values": [
+        0,
+        1,
+        2
+      ],
+      "p_nonsubstantive": 0.01,
+      "w": 7,
+      "evaluator_map": "reference",
+      "operator_map": "reference",
+      "suppressed_components": [],
+      "p_joint": 0.0,
+      "joint_components": [
+        "D",
+        "E"
+      ],
+      "root_entropy": 20261123
+    },
+    {
+      "id": 3,
+      "name": "C3",
+      "label": "b=4",
+      "question": "Effect of budget",
+      "T": 180,
+      "R": 300,
+      "b": 4,
+      "p_fail": 0.02,
+      "p_rec": 0.2,
+      "p_report": 0.8,
+      "delay_values": [
+        0,
+        1,
+        2
+      ],
+      "p_nonsubstantive": 0.01,
+      "w": 7,
+      "evaluator_map": "reference",
+      "operator_map": "reference",
+      "suppressed_components": [],
+      "p_joint": 0.0,
+      "joint_components": [
+        "D",
+        "E"
+      ],
+      "root_entropy": 20261123
+    },
+    {
+      "id": 4,
+      "name": "C4",
+      "label": "p_report=0.3",
+      "question": "Completeness of notices",
+      "T": 180,
+      "R": 300,
+      "b": 1,
+      "p_fail": 0.02,
+      "p_rec": 0.2,
+      "p_report": 0.3,
+      "delay_values": [
+        0,
+        1,
+        2
+      ],
+      "p_nonsubstantive": 0.01,
+      "w": 7,
+      "evaluator_map": "reference",
+      "operator_map": "reference",
+      "suppressed_components": [],
+      "p_joint": 0.0,
+      "joint_components": [
+        "D",
+        "E"
+      ],
+      "root_entropy": 20261123
+    },
+    {
+      "id": 5,
+      "name": "C5",
+      "label": "p_report=1.0",
+      "question": "Completeness of notices",
+      "T": 180,
+      "R": 300,
+      "b": 1,
+      "p_fail": 0.02,
+      "p_rec": 0.2,
+      "p_report": 1.0,
+      "delay_values": [
+        0,
+        1,
+        2
+      ],
+      "p_nonsubstantive": 0.01,
+      "w": 7,
+      "evaluator_map": "reference",
+      "operator_map": "reference",
+      "suppressed_components": [],
+      "p_joint": 0.0,
+      "joint_components": [
+        "D",
+        "E"
+      ],
+      "root_entropy": 20261123
+    },
+    {
+      "id": 6,
+      "name": "C6",
+      "label": "No notices for A and H",
+      "question": "Suppression of notices for critical components",
+      "T": 180,
+      "R": 300,
+      "b": 1,
+      "p_fail": 0.02,
+      "p_rec": 0.2,
+      "p_report": 0.8,
+      "delay_values": [
+        0,
+        1,
+        2
+      ],
+      "p_nonsubstantive": 0.01,
+      "w": 7,
+      "evaluator_map": "reference",
+      "operator_map": "reference",
+      "suppressed_components": [
+        "A",
+        "H"
+      ],
+      "p_joint": 0.0,
+      "joint_components": [
+        "D",
+        "E"
+      ],
+      "root_entropy": 20261123
+    },
+    {
+      "id": 7,
+      "name": "C7",
+      "label": "Joint degradation of D and E (p=0.005/day)",
+      "question": "Loss of redundancy",
+      "T": 180,
+      "R": 300,
+      "b": 1,
+      "p_fail": 0.02,
+      "p_rec": 0.2,
+      "p_report": 0.8,
+      "delay_values": [
+        0,
+        1,
+        2
+      ],
+      "p_nonsubstantive": 0.01,
+      "w": 7,
+      "evaluator_map": "reference",
+      "operator_map": "reference",
+      "suppressed_components": [],
+      "p_joint": 0.005,
+      "joint_components": [
+        "D",
+        "E"
+      ],
+      "root_entropy": 20261123
+    },
+    {
+      "id": 8,
+      "name": "C8",
+      "label": "Operator map omits F from S2",
+      "question": "Incomplete dependency map",
+      "T": 180,
+      "R": 300,
+      "b": 1,
+      "p_fail": 0.02,
+      "p_rec": 0.2,
+      "p_report": 0.8,
+      "delay_values": [
+        0,
+        1,
+        2
+      ],
+      "p_nonsubstantive": 0.01,
+      "w": 7,
+      "evaluator_map": "reference",
+      "operator_map": "c8_operator_omits_F_from_S2",
+      "suppressed_components": [],
+      "p_joint": 0.0,
+      "joint_components": [
+        "D",
+        "E"
+      ],
+      "root_entropy": 20261123
+    },
+    {
+      "id": 9,
+      "name": "C9",
+      "label": "Dedicated A2, F2 for S2 (m=10)",
+      "question": "Less sharing",
+      "T": 180,
+      "R": 300,
+      "b": 1,
+      "p_fail": 0.02,
+      "p_rec": 0.2,
+      "p_report": 0.8,
+      "delay_values": [
+        0,
+        1,
+        2
+      ],
+      "p_nonsubstantive": 0.01,
+      "w": 7,
+      "evaluator_map": "c9_dedicated_A2_F2",
+      "operator_map": "c9_dedicated_A2_F2",
+      "suppressed_components": [],
+      "p_joint": 0.0,
+      "joint_components": [
+        "D",
+        "E"
+      ],
+      "root_entropy": 20261123
+    },
+    {
+      "id": 10,
+      "name": "C10",
+      "label": "Notice weight 0",
+      "question": "Sensitivity to the notice weight",
+      "T": 180,
+      "R": 300,
+      "b": 1,
+      "p_fail": 0.02,
+      "p_rec": 0.2,
+      "p_report": 0.8,
+      "delay_values": [
+        0,
+        1,
+        2
+      ],
+      "p_nonsubstantive": 0.01,
+      "w": 0,
+      "evaluator_map": "reference",
+      "operator_map": "reference",
+      "suppressed_components": [],
+      "p_joint": 0.0,
+      "joint_components": [
+        "D",
+        "E"
+      ],
+      "root_entropy": 20261123
+    },
+    {
+      "id": 11,
+      "name": "C11",
+      "label": "Notice weight 3",
+      "question": "Sensitivity to the notice weight",
+      "T": 180,
+      "R": 300,
+      "b": 1,
+      "p_fail": 0.02,
+      "p_rec": 0.2,
+      "p_report": 0.8,
+      "delay_values": [
+        0,
+        1,
+        2
+      ],
+      "p_nonsubstantive": 0.01,
+      "w": 3,
+      "evaluator_map": "reference",
+      "operator_map": "reference",
+      "suppressed_components": [],
+      "p_joint": 0.0,
+      "joint_components": [
+        "D",
+        "E"
+      ],
+      "root_entropy": 20261123
+    },
+    {
+      "id": 12,
+      "name": "C12",
+      "label": "Notice weight 14",
+      "question": "Sensitivity to the notice weight",
+      "T": 180,
+      "R": 300,
+      "b": 1,
+      "p_fail": 0.02,
+      "p_rec": 0.2,
+      "p_report": 0.8,
+      "delay_values": [
+        0,
+        1,
+        2
+      ],
+      "p_nonsubstantive": 0.01,
+      "w": 14,
+      "evaluator_map": "reference",
+      "operator_map": "reference",
+      "suppressed_components": [],
+      "p_joint": 0.0,
+      "joint_components": [
+        "D",
+        "E"
+      ],
+      "root_entropy": 20261123
+    }
+  ]
+}

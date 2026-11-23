@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+build/
+/dist/*/
+results/run_manifest.json
+# Bulky primary logs of the twelve secondary conditions are regenerated in
+# about 40 s by `recovery-evidence reproduce --check` and verified against
+# results/SHA256SUMS.txt.  They are part of the archived release (Zenodo).
+results/logs/C[1-9]/*.csv.gz
+results/logs/C1[0-2]/*.csv.gz
+dist/recovery-evidence-*.zip

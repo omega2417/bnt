@@ -1,0 +1,30 @@
+Independent re-computation of the evaluator's outcome counts
+
+C0: verdict rows recomputed for 1200 trajectories x policies; mismatches with trace_summary.csv: 0; trajectories without 540 service-days: 0; key/label problems: 0 -> AGREE
+C0: pooled FASD from confusion-matrix sums equals mean of trajectory FASD: AGREE
+C1: verdict rows recomputed for 1200 trajectories x policies; mismatches with trace_summary.csv: 0; trajectories without 540 service-days: 0; key/label problems: 0 -> AGREE
+C1: pooled FASD from confusion-matrix sums equals mean of trajectory FASD: AGREE
+C2: verdict rows recomputed for 1200 trajectories x policies; mismatches with trace_summary.csv: 0; trajectories without 540 service-days: 0; key/label problems: 0 -> AGREE
+C2: pooled FASD from confusion-matrix sums equals mean of trajectory FASD: AGREE
+C3: verdict rows recomputed for 1200 trajectories x policies; mismatches with trace_summary.csv: 0; trajectories without 540 service-days: 0; key/label problems: 0 -> AGREE
+C3: pooled FASD from confusion-matrix sums equals mean of trajectory FASD: AGREE
+C4: verdict rows recomputed for 1200 trajectories x policies; mismatches with trace_summary.csv: 0; trajectories without 540 service-days: 0; key/label problems: 0 -> AGREE
+C4: pooled FASD from confusion-matrix sums equals mean of trajectory FASD: AGREE
+C5: verdict rows recomputed for 1200 trajectories x policies; mismatches with trace_summary.csv: 0; trajectories without 540 service-days: 0; key/label problems: 0 -> AGREE
+C5: pooled FASD from confusion-matrix sums equals mean of trajectory FASD: AGREE
+C6: verdict rows recomputed for 1200 trajectories x policies; mismatches with trace_summary.csv: 0; trajectories without 540 service-days: 0; key/label problems: 0 -> AGREE
+C6: pooled FASD from confusion-matrix sums equals mean of trajectory FASD: AGREE
+C7: verdict rows recomputed for 1200 trajectories x policies; mismatches with trace_summary.csv: 0; trajectories without 540 service-days: 0; key/label problems: 0 -> AGREE
+C7: pooled FASD from confusion-matrix sums equals mean of trajectory FASD: AGREE
+C8: verdict rows recomputed for 1200 trajectories x policies; mismatches with trace_summary.csv: 0; trajectories without 540 service-days: 0; key/label problems: 0 -> AGREE
+C8: pooled FASD from confusion-matrix sums equals mean of trajectory FASD: AGREE
+C9: verdict rows recomputed for 1200 trajectories x policies; mismatches with trace_summary.csv: 0; trajectories without 540 service-days: 0; key/label problems: 0 -> AGREE
+C9: pooled FASD from confusion-matrix sums equals mean of trajectory FASD: AGREE
+C10: verdict rows recomputed for 1200 trajectories x policies; mismatches with trace_summary.csv: 0; trajectories without 540 service-days: 0; key/label problems: 0 -> AGREE
+C10: pooled FASD from confusion-matrix sums equals mean of trajectory FASD: AGREE
+C11: verdict rows recomputed for 1200 trajectories x policies; mismatches with trace_summary.csv: 0; trajectories without 540 service-days: 0; key/label problems: 0 -> AGREE
+C11: pooled FASD from confusion-matrix sums equals mean of trajectory FASD: AGREE
+C12: verdict rows recomputed for 1200 trajectories x policies; mismatches with trace_summary.csv: 0; trajectories without 540 service-days: 0; key/label problems: 0 -> AGREE
+C12: pooled FASD from confusion-matrix sums equals mean of trajectory FASD: AGREE
+
+Result: ALL COMPARISONS AGREED (13 conditions; 0 without a verdict log)

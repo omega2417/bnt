@@ -1,0 +1,59 @@
+Implementation checks (Section 4.6)
+====================================
+
+[01] PASS  Worked example: urgency u = (4, 11, 5, 9, 10, 2, 3, 10)
+            u = (4, 11, 5, 9, 10, 2, 3, 10)
+[02] PASS  Worked example: current influence D(z) = (3, 1, 1, 0, 2, 2, 1, 1)
+            D = (3, 1, 1, 0, 2, 2, 1, 1)
+[03] PASS  Static importance c = (0.625, 0.1875, 0.1875, 0.125, 0.125, 0.375, 0.25, 0.25), exact fractions
+            c = (5/8, 3/16, 3/16, 1/8, 1/8, 3/8, 1/4, 1/4)
+[04] PASS  Worked example: P3 priorities = (16, 22, 10, 9, 30, 6, 6, 20)
+            P3 priorities = (16, 22, 10, 9, 30, 6, 6, 20)
+[05] PASS  Worked example: P2 priorities B = 13.0625, E = 11.25, H = 12.5
+            B = 13.0625, E = 11.25, H = 12.5
+[06] PASS  Worked example: selections P0, P1, P2, P3 = B, B, B, E
+            selections = B, B, B, E
+[07] PASS  Audit case I: hidden E = 0 -> truth (0,0,1); falsely assured P1 / P3 = 2 / 0; difference -66.67
+            truth (0, 0, 1); P1 record (1, 1, 1); P3 record (0, 0, 1); d = -66.67
+[08] PASS  Audit case II: hidden B = 0 -> truth (0,1,1); falsely assured P1 / P3 = 0 / 1; difference +33.33
+            truth (0, 1, 1); P1 record (0, 1, 1); P3 record (1, 1, 1); d = +33.33
+[09] PASS  All 256 states: readiness g equals the closed-form products of Section 3.2
+            256 states compared
+[10] PASS  All 256 states: D_j equals an independent bit-flip count on the closed form
+            256 x 8 influence values compared
+[11] PASS  Static importance equals the summed Birnbaum structural importance (exact fractions)
+            closed-form sums match for A..H
+[12] PASS  b = m with a correct map: zero false assurances and zero false rejections
+            5 replicates x 4 policies, 0 errors
+[13] PASS  No transitions (p_fail = 0): every verdict is correct for every policy
+            540 of 540 service-days correct for P0-P3
+[14] PASS  b = 0: no checks, no test-module queries, records unchanged
+            0 checks; records stay (1,...,1)
+[15] PASS  Outcome classes (false assurance, false rejection, correct) sum to S x T
+            3 replicates x 4 policies: sum = 540
+[16] PASS  Exactly min(b, m) distinct components are checked on every day
+            b in {1, 2, 4, 8, 11}: min(b, 8) distinct checks per day
+[17] PASS  Test module is queried only for the selected component on the current day
+            query log equals check log for P0-P3
+[18] PASS  No look-ahead: inverting hidden states from day 100 on leaves decisions of days 1-99 unchanged
+            checks and verdicts of days 1-99 identical for P0-P3
+[19] PASS  Notice filter: a notice about a change on or before the last check does not set the flag
+            occurred <= tau ignored; occurred > tau sets n; check clears n
+[20] PASS  Notices: delays in {0,1,2}; late deliveries flagged; substantive notices only on changed days
+            20 replicates checked; 9 notice(s) beyond the horizon kept in the log only
+[21] PASS  C6: no notice of any kind reaches the operator for A or H
+            285 generated notices for A/H withheld in 20 replicates
+[22] PASS  Deterministic C7 variant: joint failure on day 60 sets D = E = 0
+            states[60][D] = states[60][E] = 0
+[23] PASS  Deterministic C7 variant: at most one notice per component per day (start/end comparison)
+            30 replicates: one notice iff the state changed over the step
+[24] PASS  C8: operator map omits F from S2 (c_F = 0.1875); evaluator map keeps it
+            F down: operator verdict (0,1,1), reference (0,0,1)
+[25] PASS  C9: ten components in alphabetical order; A2 and F2 serve S2 only
+            m = 10; users(A) = S1, S3; users(A2) = users(F2) = S2
+[26] PASS  Stream separation: changing p_report or p_nonsubstantive leaves hidden states unchanged
+            states identical; substantive notices unaffected by the non-substantive rate
+[27] PASS  Repeated runs write byte-identical logs and summary tables
+            5 files x 2 runs: SHA-256 identical
+
+27 of 27 checks passed.
