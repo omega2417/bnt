@@ -8,36 +8,47 @@ instructions; check them against the journal's current Guide for Authors before 
 
 | Submission item | Provided by | Open point for the authors |
 | --- | --- | --- |
-| Research data / software in a repository with a persistent identifier | `make release` → `dist/recovery-evidence-1.0.0.zip`; `.zenodo.json`, `CITATION.cff`, `codemeta.json` | deposit, mint the DOI, insert it in the data statement, `CITATION.cff` and the reference list |
-| Data availability statement | section 2 below | insert DOI |
-| Data/software citation in the reference list | section 3 | insert DOI |
+| Research data / software in a repository with a persistent identifier | `make release` → `dist/recovery-evidence-1.0.0.zip`; `.zenodo.json`, `CITATION.cff`, `codemeta.json` | done: 10.5281/zenodo.24466768 (complete archive), 10.5281/zenodo.24466855 (S1) |
+| Data availability statement | section 2 below | inserted in manuscript revision 1 |
+| Data/software citation in the reference list | section 3 | inserted in manuscript revision 1 |
 | Supplementary material (e-component) | `make supplement` → `dist/Supplementary_Material_S1.zip` | upload as "Supplementary material"; cite as "Supplementary Material S1" in the text |
 | Figures as separate files | `results/figures/Figure1…5.{pdf,tif}` | upload PDF (vector) or TIFF; do not embed in the manuscript only |
 | Figure captions and table descriptions | sections 5 and 6 | — |
 | Highlights (3–5 bullets, at most 85 characters each) | section 7 | — |
 | Declarations (competing interest, funding, CRediT, generative AI) | manuscript | still placeholders in the draft |
 | Author details | manuscript title page | affiliations and ORCID of two authors are placeholders; add them to `CITATION.cff` and `.zenodo.json` too |
-| Agreement between article and archive | `results/tables/manuscript_alignment.md` | **replace the listed numbers in Tables 5–8 and in the text**; reword the three statements in `REPRODUCIBILITY.md` |
+| Agreement between article and archive | `results/tables/manuscript_alignment.md` | done in manuscript revision 1 (`manuscript/CHANGES_rev1.md`) |
 
 ## 2. Data availability statement
 
-> The simulation and analysis code, the configuration of all conditions, the primary logs
-> (hidden states, notices, checks and verdicts), the summary tables, the figures, the 27
-> implementation checks and a register that links every reported number to its source file
-> are openly available in Zenodo at https://doi.org/10.5281/zenodo.XXXXXXX (version 1.0.0;
-> code under the MIT licence, generated data under CC BY 4.0). The command
+> The simulation and analysis code, the configuration of all 13 conditions, the complete
+> primary logs (hidden states, notices, checks and verdicts), the summary tables, the figures,
+> the 27 implementation checks and a register that links every reported number to its source
+> file are openly available in Zenodo at https://doi.org/10.5281/zenodo.24466768
+> (recovery-evidence, version 1.0.0). A compact version containing the code, the logs of the
+> primary condition, all tables and the figures is deposited as Supplementary Material S1 at
+> https://doi.org/10.5281/zenodo.24466855 and accompanies this article. Code is released under
+> the MIT licence and generated data, tables and figures under CC BY 4.0. The command
 > `recovery-evidence reproduce --check` regenerates all outputs and compares them with the
-> published SHA-256 digests. The study uses no personal or confidential data.
+> published SHA-256 digests. The experiment requires no personal data.
 
-## 3. Reference-list entry
+## 3. Reference-list entries
 
-> [dataset] Torstensson, O., Prokopovych-Tkachenko, D., Khokhlachova, Y., 2026.
-> recovery-evidence: simulation code, primary logs and analysis for prioritizing
-> recovery-evidence verification under limited audit capacity, version 1.0.0. Zenodo.
-> https://doi.org/10.5281/zenodo.XXXXXXX
+> [dataset] Prokopovych-Tkachenko, D., 2026a. recovery-evidence: simulation code, primary logs
+> and analysis for prioritizing recovery-evidence verification across shared service
+> dependencies under limited audit capacity, version 1.0.0. Zenodo.
+> https://doi.org/10.5281/zenodo.24466768
+>
+> [dataset] Prokopovych-Tkachenko, D., 2026b. Supplementary Material S1 for "Prioritizing
+> Recovery Evidence Verification across Shared Service Dependencies under Limited Audit
+> Capacity": code, primary-condition logs, tables and figures. Zenodo.
+> https://doi.org/10.5281/zenodo.24466855
 
-Cite it where the code is first mentioned (Section 1, contribution iv) and in Section 4.6.
-The `[dataset]` tag is removed by the publisher at typesetting.
+The creator list follows the Zenodo records as published (one creator). If co-authors are
+added to the records, change the entries and the in-text citations accordingly. A third record,
+10.5281/zenodo.24466670, carries the title of the complete archive but the file of
+Supplementary Material S1; it is not cited. The `[dataset]` tag is removed by the publisher at
+typesetting.
 
 ## 4. Statements in the article that refer to the package
 

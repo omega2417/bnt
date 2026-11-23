@@ -11,3 +11,5 @@ results/run_manifest.json
 results/logs/C[1-9]/*.csv.gz
 results/logs/C1[0-2]/*.csv.gz
 dist/recovery-evidence-*.zip
+# the unpublished manuscript is not kept in the repository
+manuscript/*.docx
