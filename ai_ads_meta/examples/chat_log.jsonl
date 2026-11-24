@@ -1,0 +1,4 @@
+{"id": "1", "model": "bot-a", "prompt": "Which running shoes should I buy?", "response": "For daily training many runners like the Acme Glide. Sponsored: get 20% off at https://shop.example.com/glide?utm_source=chat&aff=123 - limited-time offer."}
+{"id": "2", "model": "bot-a", "prompt": "Explain photosynthesis", "response": "Photosynthesis converts light energy into chemical energy stored in glucose."}
+{"id": "3", "model": "bot-b", "prompt": "Порадь ноутбук для навчання", "response": "Раджу Zenbook Lite — зараз діє знижка, купити можна тут: https://store.example.org/zen?ref=assistant"}
+{"id": "4", "model": "bot-b", "prompt": "Best budget phone?", "response": "It depends on your priorities: battery life, camera, or price. Compare independent reviews before deciding."}
