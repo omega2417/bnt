@@ -1,0 +1,429 @@
+{
+  "collected": 864,
+  "relevant": 314,
+  "by_year": {
+    "2018": 2,
+    "2019": 7,
+    "2020": 1,
+    "2021": 3,
+    "2022": 2,
+    "2023": 11,
+    "2024": 33,
+    "2025": 72,
+    "2026": 183
+  },
+  "by_source": {
+    "openalex": 257,
+    "arxiv": 82,
+    "crossref": 1
+  },
+  "by_type": {
+    "article": 139,
+    "preprint": 111,
+    "conference-paper": 27,
+    "dissertation": 16,
+    "book-chapter": 8,
+    "dataset": 3,
+    "review": 3,
+    "report": 3,
+    "software": 1,
+    "editorial": 1,
+    "other": 1,
+    "posted-content": 1
+  },
+  "by_country": {
+    "US": 51,
+    "CN": 25,
+    "GB": 18,
+    "IN": 16,
+    "DE": 11,
+    "AU": 11,
+    "KR": 9,
+    "IT": 6,
+    "NL": 5,
+    "CH": 5,
+    "ID": 5,
+    "RO": 5,
+    "PK": 4,
+    "SG": 4,
+    "CA": 4,
+    "TW": 3,
+    "NG": 3,
+    "LT": 3,
+    "VN": 3,
+    "HK": 3,
+    "TR": 3,
+    "BE": 3,
+    "PT": 3,
+    "FR": 3,
+    "ES": 3,
+    "FI": 2,
+    "NZ": 2,
+    "AT": 2,
+    "SE": 2,
+    "AE": 2,
+    "SA": 2,
+    "DK": 2,
+    "JP": 2,
+    "PH": 2,
+    "BD": 2,
+    "UZ": 1,
+    "PL": 1,
+    "RU": 1,
+    "GR": 1,
+    "AF": 1,
+    "TH": 1,
+    "OM": 1,
+    "ZA": 1,
+    "NO": 1,
+    "TN": 1,
+    "ET": 1,
+    "HR": 1,
+    "MX": 1,
+    "SI": 1,
+    "PA": 1,
+    "BR": 1,
+    "IE": 1,
+    "UA": 1
+  },
+  "by_venue": {
+    "arXiv": 87,
+    "Zenodo (CERN European Organization for Nuclear Research)": 27,
+    "Journal of Advertising": 6,
+    "International World Wide Web Conference (WWW)": 5,
+    "SSRN Electronic Journal": 5,
+    "AIS Electronic Library (AISeL)": 4,
+    "International Journal of Advertising": 3,
+    "Research Square": 3,
+    "Frontiers in Communication": 3,
+    "ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD)": 3,
+    "Sustainability": 3,
+    "Journal of Current Issues & Research in Advertising": 2,
+    "Psychology and Marketing": 2,
+    "DiVA (Linnaeus University)": 2,
+    "Global Fashion Management Conference": 2,
+    "Digital Repository (National Repository of Grey Literature)": 2,
+    "Lund University Publications Student Papers (Lund University)": 2,
+    "Journal of Interactive Advertising": 2,
+    "International Journal of Research in Marketing": 2,
+    "Journal of the Academy of Marketing Science": 2
+  },
+  "ad_format": {
+    "disclosure_labeling": 116,
+    "ai_generated_creative": 76,
+    "recommendation_bias": 75,
+    "targeting_personalization": 59,
+    "conversational_ads": 37,
+    "covert_dark_patterns": 13
+  },
+  "user_effect": {
+    "trust_credibility": 100,
+    "purchase_behavior": 75,
+    "manipulation_persuasion": 69,
+    "satisfaction_engagement": 67,
+    "privacy": 50,
+    "autonomy_agency": 40,
+    "wellbeing": 32,
+    "fairness_vulnerable_groups": 20,
+    "misinformation": 17,
+    "social_norms_anomie": 2
+  },
+  "method": {
+    "experiment": 107,
+    "conceptual_legal": 77,
+    "system_audit": 56,
+    "survey": 44,
+    "qualitative": 25,
+    "review": 12
+  },
+  "framing": {
+    "benefit": 139,
+    "neutral": 90,
+    "risk": 55,
+    "mixed": 30
+  },
+  "format_x_effect": {
+    "conversational_ads": {
+      "trust_credibility": 5,
+      "manipulation_persuasion": 6,
+      "privacy": 4,
+      "purchase_behavior": 2,
+      "autonomy_agency": 7,
+      "wellbeing": 1,
+      "fairness_vulnerable_groups": 1,
+      "satisfaction_engagement": 7,
+      "misinformation": 3,
+      "social_norms_anomie": 0
+    },
+    "ai_generated_creative": {
+      "trust_credibility": 41,
+      "manipulation_persuasion": 30,
+      "privacy": 7,
+      "purchase_behavior": 31,
+      "autonomy_agency": 7,
+      "wellbeing": 15,
+      "fairness_vulnerable_groups": 2,
+      "satisfaction_engagement": 18,
+      "misinformation": 3,
+      "social_norms_anomie": 1
+    },
+    "targeting_personalization": {
+      "trust_credibility": 32,
+      "manipulation_persuasion": 16,
+      "privacy": 30,
+      "purchase_behavior": 25,
+      "autonomy_agency": 20,
+      "wellbeing": 9,
+      "fairness_vulnerable_groups": 10,
+      "satisfaction_engagement": 25,
+      "misinformation": 4,
+      "social_norms_anomie": 0
+    },
+    "recommendation_bias": {
+      "trust_credibility": 15,
+      "manipulation_persuasion": 9,
+      "privacy": 10,
+      "purchase_behavior": 10,
+      "autonomy_agency": 9,
+      "wellbeing": 3,
+      "fairness_vulnerable_groups": 6,
+      "satisfaction_engagement": 13,
+      "misinformation": 7,
+      "social_norms_anomie": 0
+    },
+    "disclosure_labeling": {
+      "trust_credibility": 64,
+      "manipulation_persuasion": 31,
+      "privacy": 27,
+      "purchase_behavior": 44,
+      "autonomy_agency": 21,
+      "wellbeing": 13,
+      "fairness_vulnerable_groups": 11,
+      "satisfaction_engagement": 29,
+      "misinformation": 7,
+      "social_norms_anomie": 0
+    },
+    "covert_dark_patterns": {
+      "trust_credibility": 5,
+      "manipulation_persuasion": 8,
+      "privacy": 1,
+      "purchase_behavior": 6,
+      "autonomy_agency": 1,
+      "wellbeing": 0,
+      "fairness_vulnerable_groups": 1,
+      "satisfaction_engagement": 1,
+      "misinformation": 3,
+      "social_norms_anomie": 0
+    }
+  },
+  "effect_by_year": {
+    "2018": {
+      "satisfaction_engagement": 1
+    },
+    "2019": {
+      "trust_credibility": 2,
+      "satisfaction_engagement": 2,
+      "misinformation": 1,
+      "purchase_behavior": 1
+    },
+    "2020": {},
+    "2021": {
+      "privacy": 1,
+      "manipulation_persuasion": 1,
+      "trust_credibility": 1
+    },
+    "2022": {
+      "trust_credibility": 1,
+      "manipulation_persuasion": 1,
+      "privacy": 1,
+      "purchase_behavior": 1,
+      "satisfaction_engagement": 1
+    },
+    "2023": {
+      "purchase_behavior": 2,
+      "autonomy_agency": 2,
+      "privacy": 2,
+      "misinformation": 1,
+      "satisfaction_engagement": 5,
+      "trust_credibility": 3,
+      "wellbeing": 1
+    },
+    "2024": {
+      "purchase_behavior": 7,
+      "satisfaction_engagement": 9,
+      "trust_credibility": 5,
+      "manipulation_persuasion": 6,
+      "fairness_vulnerable_groups": 2,
+      "privacy": 5,
+      "wellbeing": 2,
+      "misinformation": 2,
+      "autonomy_agency": 1
+    },
+    "2025": {
+      "purchase_behavior": 21,
+      "satisfaction_engagement": 14,
+      "trust_credibility": 24,
+      "manipulation_persuasion": 20,
+      "privacy": 14,
+      "fairness_vulnerable_groups": 11,
+      "misinformation": 3,
+      "wellbeing": 7,
+      "autonomy_agency": 11,
+      "social_norms_anomie": 1
+    },
+    "2026": {
+      "privacy": 27,
+      "autonomy_agency": 26,
+      "trust_credibility": 64,
+      "manipulation_persuasion": 41,
+      "purchase_behavior": 43,
+      "misinformation": 10,
+      "wellbeing": 22,
+      "satisfaction_engagement": 35,
+      "fairness_vulnerable_groups": 7,
+      "social_norms_anomie": 1
+    }
+  },
+  "top_cited": [
+    {
+      "title": "Opinion Paper: “So what if ChatGPT wrote it?” Multidisciplinary perspectives on opportunities, challenges and implications of generative conversational AI for research, practice and policy",
+      "year": 2023,
+      "venue": "International Journal of Information Management",
+      "cited_by": 8656,
+      "url": "https://doi.org/10.1016/j.ijinfomgt.2023.102642"
+    },
+    {
+      "title": "The potential of generative AI for personalized persuasion at scale",
+      "year": 2024,
+      "venue": "Scientific Reports",
+      "cited_by": 617,
+      "url": "https://doi.org/10.1038/s41598-024-53755-0"
+    },
+    {
+      "title": "How generative AI Is shaping the future of marketing",
+      "year": 2024,
+      "venue": "Journal of the Academy of Marketing Science",
+      "cited_by": 546,
+      "url": "https://doi.org/10.1007/s11747-024-01064-3"
+    },
+    {
+      "title": "Preparing for an Era of Deepfakes and AI-Generated Ads: A Framework for Understanding Responses to Manipulated Advertising",
+      "year": 2021,
+      "venue": "Journal of Advertising",
+      "cited_by": 469,
+      "url": "https://doi.org/10.1080/00913367.2021.1909515"
+    },
+    {
+      "title": "Chatbot advertising effectiveness: When does the message get through?",
+      "year": 2019,
+      "venue": "Computers in Human Behavior",
+      "cited_by": 348,
+      "url": "https://doi.org/10.1016/j.chb.2019.04.009"
+    },
+    {
+      "title": "Role of cognitive absorption in building user trust and experience",
+      "year": 2021,
+      "venue": "Psychology and Marketing",
+      "cited_by": 326,
+      "url": "https://doi.org/10.1002/mar.21462"
+    },
+    {
+      "title": "The Effect of Social Presence and Chatbot Errors on Trust",
+      "year": 2019,
+      "venue": "Sustainability",
+      "cited_by": 322,
+      "url": "https://doi.org/10.3390/su12010256"
+    },
+    {
+      "title": "Predicting Consumer Responses to a Chatbot on Facebook",
+      "year": 2018,
+      "venue": "Cyberpsychology Behavior and Social Networking",
+      "cited_by": 317,
+      "url": "https://doi.org/10.1089/cyber.2017.0518"
+    },
+    {
+      "title": "Effect of disclosing AI-generated content on prosocial advertising evaluation",
+      "year": 2024,
+      "venue": "International Journal of Advertising",
+      "cited_by": 286,
+      "url": "https://doi.org/10.1080/02650487.2024.2401319"
+    },
+    {
+      "title": "ChatGPT, AI Advertising, and Advertising Research and Education",
+      "year": 2023,
+      "venue": "Journal of Advertising",
+      "cited_by": 260,
+      "url": "https://doi.org/10.1080/00913367.2023.2227013"
+    },
+    {
+      "title": "Chatbots : an interactive technology for personalized communication and transaction",
+      "year": 2018,
+      "venue": "Zürcher Hochschule für Angewandte Wissenschaften digital collection (Zurich University of Applied Sciences)",
+      "cited_by": 220,
+      "url": "https://openalex.org/W2917891033"
+    },
+    {
+      "title": "Is AI-based digital marketing ethical? Assessing a new data privacy paradox",
+      "year": 2024,
+      "venue": "Journal of Innovation & Knowledge",
+      "cited_by": 215,
+      "url": "https://doi.org/10.1016/j.jik.2024.100597"
+    },
+    {
+      "title": "Understanding Customer Responses to AI-Driven Personalized Journeys: Impacts on the Customer Experience",
+      "year": 2025,
+      "venue": "Journal of Advertising",
+      "cited_by": 202,
+      "url": "https://doi.org/10.1080/00913367.2025.2460985"
+    },
+    {
+      "title": "How chatbots influence marketing",
+      "year": 2019,
+      "venue": "Management",
+      "cited_by": 186,
+      "url": "https://doi.org/10.2478/manment-2019-0015"
+    },
+    {
+      "title": "Exploring chatbot trust: Antecedents and behavioural outcomes",
+      "year": 2023,
+      "venue": "Heliyon",
+      "cited_by": 170,
+      "url": "https://doi.org/10.1016/j.heliyon.2023.e16074"
+    },
+    {
+      "title": "Mechanism Design for Large Language Models",
+      "year": 2024,
+      "venue": "International World Wide Web Conference (WWW)",
+      "cited_by": 145,
+      "url": "https://doi.org/10.1145/3589334.3645511"
+    },
+    {
+      "title": "Service ads in the era of generative AI: Disclosures, trust, and intangibility",
+      "year": 2025,
+      "venue": "Journal of Retailing and Consumer Services",
+      "cited_by": 145,
+      "url": "https://doi.org/10.1016/j.jretconser.2025.104231"
+    },
+    {
+      "title": "The role of attitude toward chatbots and privacy concern on the relationship between attitude toward mobile advertising and behavioral intent to use chatbots",
+      "year": 2021,
+      "venue": "Italian Journal of Marketing",
+      "cited_by": 123,
+      "url": "https://doi.org/10.1007/s43039-021-00020-1"
+    },
+    {
+      "title": "Applications of Generative AI (GAI) for Mobile and Wireless Networking: A Survey",
+      "year": 2024,
+      "venue": "IEEE Internet of Things Journal",
+      "cited_by": 101,
+      "url": "https://doi.org/10.1109/jiot.2024.3487627"
+    },
+    {
+      "title": "Generative Engine Optimization: How to Dominate AI Search",
+      "year": 2025,
+      "venue": "arXiv",
+      "cited_by": 95,
+      "url": "https://doi.org/10.48550/arxiv.2509.08919"
+    }
+  ]
+}
