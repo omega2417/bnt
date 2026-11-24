@@ -70,3 +70,8 @@ python -m unittest discover -s ai_ads_meta/tests -t .
 ```
 
 Тести працюють без мережі (відповіді API підставні).
+
+## Ноутбук
+
+`collect_data.ipynb` виконує той самий збір у Jupyter і завантажує результат у
+таблиці `pandas` для подальшого аналізу (потрібен `pandas`).
