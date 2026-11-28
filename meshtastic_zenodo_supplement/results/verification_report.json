@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-28",
+  "version": "1.1.0",
+  "scope": "Software behaviour only. No experiment has been performed; no hardware, field data, calibration or deployment validation exists.",
+  "unit_integration_suite": {
+    "command": "python -m unittest discover -s tests -v",
+    "tests": 12,
+    "result": "PASS",
+    "log": "results/test_output.txt"
+  },
+  "regeneration": {
+    "command": "python run_demo.py --output <new folder>",
+    "identical_to_release_1.0.0": [
+      "data/synthetic_training.csv",
+      "data/inference_examples.csv",
+      "models/heldout_predictions.csv",
+      "models/training_history.csv",
+      "models/split_manifest.csv"
+    ],
+    "synthetic_holdout_self_consistency_roc_auc": {
+      "neural": 0.8855132046547278,
+      "logistic_baseline": 0.8918309990012311
+    },
+    "note": "These scores are not predictive accuracy; labels come from the invented formula in mesh_decision/demo.py."
+  },
+  "example_predictions": "2 neural scores and 6 explicit guard outcomes",
+  "unverified": [
+    "No hardware-in-the-loop trial",
+    "No measured field dataset",
+    "No independent calibration or deployment validation",
+    "The three-node experiment of the protocol has not been carried out",
+    "Original manuscript economic and figure scripts absent"
+  ]
+}

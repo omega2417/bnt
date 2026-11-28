@@ -1,0 +1,1 @@
+run_id,event_id,sender,recipient,event_type,created_at,radio_handoff_at,received_at,accepted_at,completed_at,deadline_at,rssi_dbm,snr_db,supply_voltage_v,supply_current_a,restart_counter,notes

@@ -1,0 +1,38 @@
+[
+  {
+    "file": "docs/Meshtastic_Experiment_Preparation_MDPI_EN.docx",
+    "source_filename": "Meshtastic_Experiment_Preparation_MDPI_EN.docx",
+    "status": "Preparation protocol produced in this conversation; corrected in 1.1.0 (no trial has been carried out)",
+    "sha256": "244ed2b20e40ad4972b30448a3ee243c0865ba71b017a5548fdc58f1db473b8f"
+  },
+  {
+    "file": "docs/Meshtastic_Experiment_Preparation_MDPI_EN.pdf",
+    "source_filename": "Meshtastic_Experiment_Preparation_MDPI_EN.pdf",
+    "status": "PDF export of preparation protocol; corrected in 1.1.0 (no trial has been carried out)",
+    "sha256": "402733ed87c68f0c6dd1169b6fd2081d648323edb6adfc6afc27e914f43d2590"
+  },
+  {
+    "file": "reference_materials/Heltec_Characteristics_Photos_UA.pdf",
+    "source_filename": "Heltec_WiFi_LoRa_32_V3_Characteristics_Photos_UA(4).pdf",
+    "status": "User-supplied technical reference; third-party photos",
+    "sha256": "a633cf040b65f5cda4b22355668935f44bd4c6823a8f7c3eb6ef8833a036467d"
+  },
+  {
+    "file": "reference_materials/Heltec_V3_2_Official_Datasheet.pdf",
+    "source_filename": "Heltec_WiFi_LoRa_32_V3_2_Official_Datasheet(4).pdf",
+    "status": "Manufacturer PDF supplied by user; original rights retained",
+    "sha256": "768c61d6ba083e82e0aae42c7801f494852849ea61c4d1a469646484ea0b60fb"
+  },
+  {
+    "file": "docs/testbed_diagram.png",
+    "source_filename": "testbed_diagram.png",
+    "status": "Original conceptual diagram; not measured topology",
+    "sha256": "acd2737d2f8a829f069864c37b0f552430639f588bf21b8f9d5f10614b298ffd"
+  },
+  {
+    "removed_in_1.1.0": [
+      "reference_materials/Meshtastic_Three_Node_Blackout_Experiment_UA.pdf (falsely stated that an experiment was conducted)",
+      "manuscript/Manuscript_Meshtastic_Authors_Declarations.docx (stale pre-revision snapshot)"
+    ]
+  }
+]

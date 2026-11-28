@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use the supplementary software, cite this release. Do not cite version 1.0.0 (see README)."
+type: software
+title: "Meshtastic Logistics Continuity Supplement: Three-Node Experiment Preparation and Neural Decision Support"
+version: "1.1.0"
+date-released: "2026-11-28"
+license: MIT
+abstract: "Prospective experiment protocol and exploratory decision-support prototype trained on synthetic data only. No experiment has been performed; no measured data; no measured predictive accuracy."
+authors:
+  - family-names: "Prokopovych-Tkachenko"
+    given-names: "Dmytro"
+    orcid: "https://orcid.org/0000-0002-6590-3898"
+    affiliation: "University of Customs and Finance, Dnipro, Ukraine; Institute of Information, Security and Law of the National Academy of Legal Sciences of Ukraine, Kyiv, Ukraine"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23798128
+    description: "Version 1.0.0 (superseded). The DOI of version 1.1.0 is assigned by Zenodo at deposit."

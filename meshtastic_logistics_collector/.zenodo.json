@@ -1,0 +1,53 @@
+{
+  "upload_type": "software",
+  "title": "Meshtastic Logistics Metadata Collector: Open-Source Software for Measuring the Operational Autonomy of SME Logistics over LoRa Mesh Networks",
+  "version": "1.1.0",
+  "publication_date": "2026-11-28",
+  "description": "<p>Python software for a private Meshtastic LoRa mesh network used as a backup channel for critical logistics operations of small and medium-sized enterprises (SMEs). It accompanies the manuscript <em>Strengthening Operational Autonomy in Small and Medium-Sized Enterprise Logistics with Meshtastic Mesh Networks: Reference Architecture and Ex-Ante Model-Based Assessment</em> and defines how the quantities predicted by that model would be recorded and computed in a field experiment.</p><p><strong>Evidence status:</strong> no experiment has been performed with this software. It has never been connected to a Meshtastic radio and has been run only on an invented replay log in which radio values are pseudo-random or hand-set constants and event outcomes are scripted. No number produced by this package is a measurement, and none confirms any value in the accompanying article, whose numbers are ex-ante model predictions obtained with separate scripts. Every result of <code>kpi.py</code> carries a provenance block that marks generated input as &quot;not a measurement&quot;.</p><ul><li><code>collector.py</code> – gateway collector (USB/TCP, untested on hardware, or offline replay) that stores packet, device and logistics-event metadata in a local SQLite database and registers the data origin of every run;</li><li><code>logi_proto.py</code> – 24-byte binary frame with CRC-16/CCITT for EVENT/ACCEPT/DONE/REJECT messages on PRIVATE_APP (port 256);</li><li><code>kpi.py</code> – channel utilisation and relay airtime as reported by nodes, position delivery ratio, age of information, on-time completion of delivered critical events (upper bound of efficacy η), operational autonomy A<sub>op</sub> and its loss-weighted form, each with sample size and 95 % interval;</li><li><code>make_replay.py</code>, <code>import_plan.py</code>, <code>run_demo.sh</code>, <code>tests/</code> – deterministic software check on generated input;</li><li><code>notebooks/meshtastic_logistics_analysis.ipynb</code> – walk-through that reproduces the airtime column of Table A2 and checks the algebra of Equation (3).</li></ul><p>Version 1.1.0 renames and redefines several indicators; see CHANGELOG.md. Known limitations are listed in README.md.</p>",
+  "creators": [
+    {
+      "name": "Prokopovych-Tkachenko, Dmytro",
+      "orcid": "0000-0002-6590-3898",
+      "affiliation": "Department of Cybersecurity and Information Technologies, University of Customs and Finance, Dnipro, Ukraine"
+    }
+  ],
+  "access_right": "open",
+  "license": "mit",
+  "language": "eng",
+  "keywords": [
+    "Meshtastic",
+    "LoRa",
+    "mesh network",
+    "SME logistics",
+    "supply chain resilience",
+    "business continuity",
+    "operational autonomy",
+    "age of information",
+    "metadata collection",
+    "SQLite",
+    "Jupyter notebook"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.1109/INFCOM.2012.6195689",
+      "relation": "references",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.3390/electronics14122465",
+      "relation": "references",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://python.meshtastic.org/",
+      "relation": "requires",
+      "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.23796017",
+      "relation": "isNewVersionOf",
+      "scheme": "doi"
+    }
+  ],
+  "notes": "Generated (synthetic) test input only; no field measurements; not tested on radio hardware. After the article is published, add its DOI as related identifier with relation 'isSupplementTo'."
+}

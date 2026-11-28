@@ -1,0 +1,68 @@
+{
+ "provenance": {
+  "data_origin": "synthetic",
+  "sessions": {
+   "synthetic": 1
+  },
+  "is_measurement": false,
+  "note": "NOT A MEASUREMENT. Indicators are computed from generated or unlabelled input and show only that the software works; they say nothing about the performance of a Meshtastic network."
+ },
+ "window_s": [
+  1800000000.0,
+  1800021600.0
+ ],
+ "warnings": [
+  "channel utilisation rests on 1 telemetry record(s)",
+  "A_op rests on 4 planned operations; see the confidence interval"
+ ],
+ "rx_total": 128,
+ "rx_duplicates": 27,
+ "flood_overhead": 0.267,
+ "snr_mean_db": -2.47,
+ "hops_mean": 1.594,
+ "channel_util_max_pct": 4.2,
+ "relay_airtime_max_pct": 1.3,
+ "telemetry_records": 1,
+ "position_interval_s": 600.0,
+ "position_delivery_ratio": {
+  "11": 0.75,
+  "12": 0.889,
+  "13": 0.833
+ },
+ "aoi_mean_min": {
+  "11": 7.77,
+  "12": 6.11,
+  "13": 7.5
+ },
+ "aoi_max_min": {
+  "11": 30.0,
+  "12": 20.0,
+  "13": 40.0
+ },
+ "stale_nodes": [
+  13
+ ],
+ "events_total": 4,
+ "events_critical": 4,
+ "event_latency_median_s": 1.0,
+ "accept_ratio": 1.0,
+ "eta_actionability": 0.5,
+ "eta_actionability_n": [
+  2,
+  4
+ ],
+ "eta_actionability_ci95": [
+  0.15,
+  0.85
+ ],
+ "A_op": 0.5,
+ "A_op_n": [
+  2,
+  4
+ ],
+ "A_op_ci95": [
+  0.15,
+  0.85
+ ],
+ "on_time_share_loss_weighted": 0.5
+}

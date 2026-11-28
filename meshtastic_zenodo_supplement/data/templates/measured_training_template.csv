@@ -1,0 +1,1 @@
+event_id,group_id,run_id,node_id,scenario,provenance,decision_time,feature_window_end,rssi_dbm,snr_db,pdr_5m,latency_p95_5m_s,aoi_s,battery_pct,backup_minutes,queue_depth,hop_count,terminal_available,s0_available,external_connectivity,deadline_remaining_s,completed_on_time,outcome_observed_at

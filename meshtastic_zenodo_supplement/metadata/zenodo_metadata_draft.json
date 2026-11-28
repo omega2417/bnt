@@ -1,0 +1,63 @@
+{
+  "draft_only": true,
+  "not_an_api_payload": true,
+  "prepared_on": "2026-11-28",
+  "record_fields": {
+    "title": "Meshtastic Logistics Continuity Supplement: Three-Node Experiment Preparation and Neural Decision Support",
+    "resource_type": "software",
+    "version": "1.1.0",
+    "language": "eng",
+    "creators": [
+      {
+        "name": "Prokopovych-Tkachenko, Dmytro",
+        "given_name": "Dmytro",
+        "family_name": "Prokopovych-Tkachenko",
+        "orcid": "0000-0002-6590-3898",
+        "affiliation": "University of Customs and Finance, Dnipro, Ukraine; Institute of Information, Security and Law of the National Academy of Legal Sciences of Ukraine, Kyiv, Ukraine"
+      }
+    ],
+    "description": "<p>Supplement [59] to the manuscript <em>Strengthening Operational Autonomy in Small and Medium-Sized Enterprise Logistics with Meshtastic Mesh Networks: Reference Architecture and Ex-Ante Model-Based Assessment</em>. <strong>No experiment has been performed and the bundle contains no measured data.</strong> It contains a prospective protocol for a three-node Meshtastic experiment that has not been carried out, input-data templates, and an exploratory decision-support prototype (13-16-8-1 multilayer perceptron) trained exclusively on 3600 synthetic observations generated from assumed distributions. The prototype has no measured predictive accuracy and produced no result of the article; its synthetic hold-out scores are a software self-consistency check only. <strong>Correction:</strong> version 1.0.0 contained a document that wrongly stated that a three-node field experiment had been conducted; that document has been removed and version 1.0.0 should not be used. The article's economic-model and plotting scripts are not included. Manufacturer documents retain their original rights.</p>",
+    "keywords": [
+      "Meshtastic",
+      "LoRa",
+      "SME logistics",
+      "business continuity",
+      "power outage",
+      "neural network",
+      "decision support",
+      "synthetic data",
+      "reproducibility"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "10.5281/zenodo.23798128",
+        "relation": "isNewVersionOf",
+        "scheme": "doi"
+      }
+    ],
+    "notes": "Synthetic data only; no experiment performed; corrects false statement in version 1.0.0."
+  },
+  "related_publication": {
+    "title": "Strengthening Operational Autonomy in Small and Medium-Sized Enterprise Logistics with Meshtastic Mesh Networks: Reference Architecture and Ex-Ante Model-Based Assessment",
+    "doi": null,
+    "suggested_relation": "isSupplementTo"
+  },
+  "supplement_doi": null,
+  "licence": {
+    "status": "mixed file rights; uploader must select the record licence after reviewing LICENSING.md",
+    "software": "MIT",
+    "new_documentation": "CC-BY-4.0",
+    "third_party": "original rights retained"
+  },
+  "correspondence": [
+    "olga.torstensson@hh.se",
+    "omega2417@umsf.edu.ua"
+  ],
+  "acknowledgment_from_manuscript": "The authors thank Halmstad University for its institutional support for payment of the article processing charge (APC).",
+  "before_publication": [
+    "Verify creators and their acceptance of the supplementary release.",
+    "Determine public reuse rights for third-party material or replace it with links.",
+    "Reserve a new supplement DOI and add the actual article relation when available.",
+    "Do not describe synthetic demonstration metrics as measured field results."
+  ]
+}

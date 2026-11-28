@@ -1,0 +1,35 @@
+{
+  "format_version": 1,
+  "features": [
+    "rssi_dbm",
+    "snr_db",
+    "pdr_5m",
+    "latency_p95_5m_s",
+    "aoi_s",
+    "battery_pct",
+    "backup_minutes",
+    "queue_depth",
+    "hop_count",
+    "terminal_available",
+    "s0_available",
+    "external_connectivity",
+    "deadline_remaining_s"
+  ],
+  "architecture": [
+    13,
+    16,
+    8,
+    1
+  ],
+  "target": "completed_on_time",
+  "seed": 42,
+  "training_provenance": "synthetic",
+  "score_status": "uncalibrated research score; synthetic models are demonstration only",
+  "best_epoch": 13,
+  "data_sha256": "92b1f710b9b7d8b52ed2fdf15bb429087d4c152b37d30682ef46c53cef5de277",
+  "versions": {
+    "python": "3.13.18",
+    "numpy": "2.3.5",
+    "scikit_learn": "1.8.0"
+  }
+}

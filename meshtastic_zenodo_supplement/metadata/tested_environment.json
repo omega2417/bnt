@@ -1,0 +1,12 @@
+{
+  "python": "3.13.18",
+  "platform": "Linux-6.18.44-fc-v880-x86_64-with-glibc2.39",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0",
+    "joblib": "1.5.3",
+    "threadpoolctl": "3.6.0"
+  },
+  "date": "2026-11-28"
+}

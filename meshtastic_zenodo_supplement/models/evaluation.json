@@ -1,0 +1,207 @@
+{
+  "status": "synthetic demonstration",
+  "evidence_status": "SOFTWARE SELF-CONSISTENCY CHECK ON SYNTHETIC DATA. The scores below show how well the networks recover the invented formula in mesh_decision/demo.py that generated the labels. They are NOT predictive accuracy for any real Meshtastic network; no such accuracy has been measured.",
+  "metadata": {
+    "format_version": 1,
+    "features": [
+      "rssi_dbm",
+      "snr_db",
+      "pdr_5m",
+      "latency_p95_5m_s",
+      "aoi_s",
+      "battery_pct",
+      "backup_minutes",
+      "queue_depth",
+      "hop_count",
+      "terminal_available",
+      "s0_available",
+      "external_connectivity",
+      "deadline_remaining_s"
+    ],
+    "architecture": [
+      13,
+      16,
+      8,
+      1
+    ],
+    "target": "completed_on_time",
+    "seed": 42,
+    "training_provenance": "synthetic",
+    "score_status": "uncalibrated research score; synthetic models are demonstration only",
+    "best_epoch": 13,
+    "data_sha256": "92b1f710b9b7d8b52ed2fdf15bb429087d4c152b37d30682ef46c53cef5de277",
+    "versions": {
+      "python": "3.13.18",
+      "numpy": "2.3.5",
+      "scikit_learn": "1.8.0"
+    }
+  },
+  "split_rows": {
+    "train": 2160,
+    "validation": 720,
+    "test": 720
+  },
+  "split_groups": {
+    "train": [
+      "sim-group-001",
+      "sim-group-002",
+      "sim-group-003",
+      "sim-group-005",
+      "sim-group-006",
+      "sim-group-009",
+      "sim-group-011",
+      "sim-group-013",
+      "sim-group-014",
+      "sim-group-015",
+      "sim-group-016",
+      "sim-group-021",
+      "sim-group-023",
+      "sim-group-027",
+      "sim-group-029",
+      "sim-group-030",
+      "sim-group-031",
+      "sim-group-032",
+      "sim-group-033",
+      "sim-group-036",
+      "sim-group-037",
+      "sim-group-041",
+      "sim-group-042",
+      "sim-group-043",
+      "sim-group-045",
+      "sim-group-046",
+      "sim-group-047",
+      "sim-group-048",
+      "sim-group-049",
+      "sim-group-052",
+      "sim-group-053",
+      "sim-group-054",
+      "sim-group-057",
+      "sim-group-059",
+      "sim-group-060",
+      "sim-group-061",
+      "sim-group-062",
+      "sim-group-063",
+      "sim-group-064",
+      "sim-group-066",
+      "sim-group-068",
+      "sim-group-069",
+      "sim-group-071",
+      "sim-group-072",
+      "sim-group-074",
+      "sim-group-075",
+      "sim-group-076",
+      "sim-group-077",
+      "sim-group-080",
+      "sim-group-082",
+      "sim-group-083",
+      "sim-group-085",
+      "sim-group-087",
+      "sim-group-089"
+    ],
+    "validation": [
+      "sim-group-007",
+      "sim-group-008",
+      "sim-group-017",
+      "sim-group-019",
+      "sim-group-020",
+      "sim-group-024",
+      "sim-group-025",
+      "sim-group-034",
+      "sim-group-038",
+      "sim-group-050",
+      "sim-group-051",
+      "sim-group-058",
+      "sim-group-067",
+      "sim-group-073",
+      "sim-group-078",
+      "sim-group-079",
+      "sim-group-084",
+      "sim-group-088"
+    ],
+    "test": [
+      "sim-group-000",
+      "sim-group-004",
+      "sim-group-010",
+      "sim-group-012",
+      "sim-group-018",
+      "sim-group-022",
+      "sim-group-026",
+      "sim-group-028",
+      "sim-group-035",
+      "sim-group-039",
+      "sim-group-040",
+      "sim-group-044",
+      "sim-group-055",
+      "sim-group-056",
+      "sim-group-065",
+      "sim-group-070",
+      "sim-group-081",
+      "sim-group-086"
+    ]
+  },
+  "neural_test": {
+    "n": 720,
+    "accuracy": 0.8041666666666667,
+    "balanced_accuracy": 0.8053678024760179,
+    "brier_score": 0.13760232552362048,
+    "log_loss": 0.42690702433250766,
+    "roc_auc": 0.8855132046547278,
+    "confusion_matrix_rows_true_0_1": [
+      [
+        299,
+        82
+      ],
+      [
+        59,
+        280
+      ]
+    ]
+  },
+  "logistic_baseline_test": {
+    "n": 720,
+    "accuracy": 0.7986111111111112,
+    "balanced_accuracy": 0.7988177362785405,
+    "brier_score": 0.1343781021478346,
+    "log_loss": 0.41455616594730393,
+    "roc_auc": 0.8918309990012311,
+    "confusion_matrix_rows_true_0_1": [
+      [
+        303,
+        78
+      ],
+      [
+        67,
+        272
+      ]
+    ]
+  },
+  "constant_prevalence_baseline_test": {
+    "n": 720,
+    "accuracy": 0.5291666666666667,
+    "balanced_accuracy": 0.5,
+    "brier_score": 0.24956425754458159,
+    "log_loss": 0.692280919834684,
+    "roc_auc": 0.5,
+    "confusion_matrix_rows_true_0_1": [
+      [
+        381,
+        0
+      ],
+      [
+        339,
+        0
+      ]
+    ]
+  },
+  "export_max_abs_error": 2.220446049250313e-16,
+  "epochs_run": 38,
+  "threshold_for_metrics": 0.5,
+  "advice_threshold": 0.75,
+  "limitations": [
+    "Test scores are not evidence of field performance when trained on synthetic data.",
+    "On synthetic data the labels come from a logistic formula, so a logistic baseline is expected to do at least as well as the network.",
+    "Scores are not calibrated probabilities.",
+    "Random group split does not test future deployments.",
+    "This package does not reproduce the manuscript economic and propagation models."
+  ]
+}

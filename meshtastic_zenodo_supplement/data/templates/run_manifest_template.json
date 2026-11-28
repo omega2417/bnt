@@ -1,0 +1,26 @@
+{
+  "template_only": true,
+  "run_id": null,
+  "group_id": null,
+  "date": null,
+  "location": null,
+  "scenario": null,
+  "firmware_version": null,
+  "modem_preset": null,
+  "frequency_mhz": null,
+  "tx_power_dbm": null,
+  "hop_limit": null,
+  "node_roles": {
+    "M1": null,
+    "M2": null,
+    "S0": null
+  },
+  "antennas": null,
+  "power_sources": null,
+  "terminal_connection": null,
+  "clock_uncertainty_ms": null,
+  "instruments": null,
+  "feature_aggregation_method": null,
+  "operator": null,
+  "notes": "Exclude pre-shared keys and channel QR codes."
+}

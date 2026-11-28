@@ -1,0 +1,9 @@
+event_id,group_id,run_id,node_id,scenario,provenance,decision_time,feature_window_end,rssi_dbm,snr_db,pdr_5m,latency_p95_5m_s,aoi_s,battery_pct,backup_minutes,queue_depth,hop_count,terminal_available,s0_available,external_connectivity,deadline_remaining_s
+example-healthy,examples,examples,M2,E0,synthetic,2026-10-01T00:00:00+00:00,2026-10-01T00:00:00+00:00,-90,10,0.98,15,10,90,120,0,1,1,1,1.0,290
+example-terminal_off,examples,examples,M2,E0,synthetic,2026-10-01T00:00:00+00:00,2026-10-01T00:00:00+00:00,-90,10,0.98,15,10,90,120,0,1,0,1,1.0,290
+example-radio_off,examples,examples,M2,E0,synthetic,2026-10-01T00:00:00+00:00,2026-10-01T00:00:00+00:00,-90,10,0.98,15,10,90,120,0,1,1,0,1.0,290
+example-power_low,examples,examples,M2,E0,synthetic,2026-10-01T00:00:00+00:00,2026-10-01T00:00:00+00:00,-90,10,0.98,15,10,90,2,0,1,1,1,1.0,290
+example-stale,examples,examples,M2,E0,synthetic,2026-10-01T00:00:00+00:00,2026-10-01T00:00:00+00:00,-90,10,0.98,15,200,90,120,0,1,1,1,1.0,290
+example-expired,examples,examples,M2,E0,synthetic,2026-10-01T00:00:00+00:00,2026-10-01T00:00:00+00:00,-90,10,0.98,15,10,90,120,0,1,1,1,1.0,0
+example-weak_link,examples,examples,M2,E0,synthetic,2026-10-01T00:00:00+00:00,2026-10-01T00:00:00+00:00,-130,-15,0.1,90,10,90,120,0,1,1,1,1.0,290
+example-missing_input,examples,examples,M2,E0,synthetic,2026-10-01T00:00:00+00:00,2026-10-01T00:00:00+00:00,,10,0.98,15,10,90,120,0,1,1,1,1.0,290
